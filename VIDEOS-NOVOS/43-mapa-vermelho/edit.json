@@ -1,0 +1,1300 @@
+{
+ "version": 1,
+ "name": "43 - MAPA VERMELHO - Por que o Estreito de Ormuz assusta o mundo",
+ "estilo": "43-mapa-vermelho",
+ "grupo": "ESTILOS NOVOS",
+ "referencia": {
+  "canal": "Ticket To Know",
+  "canal_url": "https://www.youtube.com/@TicketToKnow",
+  "video": "https://www.youtube.com/watch?v=udtVdDmSSoo",
+  "titulo": "The Strait of Hormuz Explained",
+  "canal_2": "Himfact",
+  "video_2": "https://www.youtube.com/watch?v=4vRtXY-iFnc",
+  "titulo_2": "Why is the Red Sea so Important?",
+  "nota": "estrutura clonada: zoom no estreito, rótulos no mapa, rotas/setas, país destacado em bloco de cor, número gigante; paleta levada ao gênero mapa vermelho (fundo escuro, vermelho alerta)"
+ },
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#05070a"
+ },
+ "duration": 66.2,
+ "template": "local",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Anton": "fonts/Anton-Regular.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.22,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 0.3,
+    "volume": 0.35,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 15.05,
+    "volume": 0.35,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 30.35,
+    "volume": 0.35,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 38.6,
+    "volume": 0.35,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 48.15,
+    "volume": 0.35,
+    "label": "whoosh"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 57.55,
+    "volume": 0.35,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "visual",
+   "name": "Mapa / cenas"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "hud",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "HUD alerta",
+   "start": 0,
+   "dur": 66.2,
+   "props": {
+    "scene": "hud",
+    "params": {
+     "alerta": "ALERTA · ROTA CRÍTICA",
+     "coord": "26°34'N · 56°15'E"
+    }
+   }
+  },
+  {
+   "id": "c0",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: hormuz x1.4",
+   "start": 0,
+   "dur": 1.2,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "hormuz",
+     "zoom": 1.4,
+     "transicao": 1.2,
+     "corte": true
+    }
+   }
+  },
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: hormuz x110",
+   "start": 0.35,
+   "dur": 2.2,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "hormuz",
+     "zoom": 110,
+     "transicao": 2.2,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "n40",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: < 40 KM",
+   "start": 0.56,
+   "dur": 5.39,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "< 40 KM",
+     "legenda": "NO PONTO MAIS ESTREITO",
+     "fonte": "≈ 39 km (21 milhas náuticas)",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "med1",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: medida",
+   "start": 2.6,
+   "dur": 8.2,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "medida",
+     "cor": "#ffffff",
+     "largura": 4,
+     "seta": false,
+     "desenho": 0.9
+    }
+   }
+  },
+  {
+   "id": "p1",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Pulso: hormuz",
+   "start": 2.7,
+   "dur": 3.5,
+   "props": {
+    "scene": "pulso",
+    "params": {
+     "ponto": "hormuz",
+     "tamanho": 1
+    }
+   }
+  },
+  {
+   "id": "l_orm",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: ESTREITO DE ORMUZ",
+   "start": 3.6,
+   "dur": 2.65,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "ESTREITO DE ORMUZ",
+     "ponto": "hormuz",
+     "estilo": "box",
+     "dx": 0,
+     "dy": -110
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: hormuz x36",
+   "start": 6.3,
+   "dur": 1.2,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "hormuz",
+     "zoom": 36,
+     "transicao": 1.2,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "n20",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: 20%",
+   "start": 7.82,
+   "dur": 3.03,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "20%",
+     "legenda": "DO PETRÓLEO CONSUMIDO NO PLANETA",
+     "fonte": "FONTE: EIA (2024)",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "p2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Pulso: hormuz",
+   "start": 7.6,
+   "dur": 3.25,
+   "props": {
+    "scene": "pulso",
+    "params": {
+     "ponto": "hormuz",
+     "tamanho": 1.2
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: vista_io x15",
+   "start": 10.9,
+   "dur": 1.0,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "vista_io",
+     "zoom": 15,
+     "transicao": 1.0,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_io",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: IRN,OMN",
+   "start": 12.0,
+   "dur": 3.1,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "IRN,OMN",
+     "tempos": [
+      12.0,
+      13.9
+     ],
+     "cor": "#e3121b",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "l_irn",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: IRÃ",
+   "start": 12.1,
+   "dur": 2.95,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "IRÃ",
+     "ponto": "iran",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "l_omn",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: OMÃ",
+   "start": 13.95,
+   "dur": 1.1,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "OMÃ",
+     "ponto": "oman",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "c4",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: vista_golfo x20",
+   "start": 15.1,
+   "dur": 1.0,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "vista_golfo",
+     "zoom": 20,
+     "transicao": 1.0,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "l_golfo",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: GOLFO PÉRSICO",
+   "start": 16.9,
+   "dur": 2.35,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "GOLFO PÉRSICO",
+     "ponto": "golfo",
+     "estilo": "mar",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "saida",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: saida",
+   "start": 16.95,
+   "dur": 2.3,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "saida",
+     "cor": "#ff2a36",
+     "largura": 5,
+     "desenho": 1.3
+    }
+   }
+  },
+  {
+   "id": "l_oma",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: GOLFO DE OMÃ",
+   "start": 18.1,
+   "dur": 1.15,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "GOLFO DE OMÃ",
+     "ponto": "golfo_oma",
+     "estilo": "mar",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "c5",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: vista_exp x10",
+   "start": 19.3,
+   "dur": 1.0,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "vista_exp",
+     "zoom": 10,
+     "transicao": 1.0,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_exp",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: SAU,IRQ,KWT,ARE,QAT",
+   "start": 19.56,
+   "dur": 4.84,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "SAU,IRQ,KWT,ARE,QAT",
+     "tempos": [
+      19.56,
+      20.76,
+      21.42,
+      22.14,
+      22.84
+     ],
+     "cor": "#e3121b",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "l_sau",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: ARÁBIA SAUDITA",
+   "start": 20.3,
+   "dur": 4.05,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "ARÁBIA SAUDITA",
+     "ponto": "sau",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "l_irq",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: IRAQUE",
+   "start": 20.76,
+   "dur": 3.59,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "IRAQUE",
+     "ponto": "irq",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "l_kwt",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: KUWAIT",
+   "start": 21.42,
+   "dur": 2.93,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "KUWAIT",
+     "ponto": "kwt",
+     "estilo": "red",
+     "dx": 40,
+     "dy": -34
+    }
+   }
+  },
+  {
+   "id": "l_are",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: EMIRADOS",
+   "start": 22.14,
+   "dur": 2.21,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "EMIRADOS",
+     "ponto": "are",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 10
+    }
+   }
+  },
+  {
+   "id": "l_qat",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: CATAR",
+   "start": 22.84,
+   "dur": 1.51,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "CATAR",
+     "ponto": "qat",
+     "estilo": "red",
+     "dx": -90,
+     "dy": -6
+    }
+   }
+  },
+  {
+   "id": "c6",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: qat x26",
+   "start": 24.4,
+   "dur": 1.0,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "qat",
+     "zoom": 26,
+     "transicao": 1.0,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_qat",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: QAT",
+   "start": 24.5,
+   "dur": 5.85,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "QAT",
+     "tempos": [
+      24.5
+     ],
+     "cor": "#e3121b",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "p3",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Pulso: qat",
+   "start": 25.4,
+   "dur": 4.9,
+   "props": {
+    "scene": "pulso",
+    "params": {
+     "ponto": "qat",
+     "tamanho": 1
+    }
+   }
+  },
+  {
+   "id": "n15",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: 1/5",
+   "start": 25.9,
+   "dur": 4.45,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "1/5",
+     "legenda": "DO GÁS NATURAL LIQUEFEITO NEGOCIADO NO MUNDO",
+     "fonte": "FONTE: EIA (2024)",
+     "lado": "dir"
+    }
+   }
+  },
+  {
+   "id": "c7",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: hormuz x130",
+   "start": 30.4,
+   "dur": 1.4,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "hormuz",
+     "zoom": 130,
+     "transicao": 1.4,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_io2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: IRN,OMN",
+   "start": 31.8,
+   "dur": 6.7,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "IRN,OMN",
+     "tempos": [
+      31.8,
+      31.8
+     ],
+     "cor": "#7a0b12",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "fin",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: faixa_in",
+   "start": 32.6,
+   "dur": 5.9,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "faixa_in",
+     "cor": "#ff2a36",
+     "largura": 6,
+     "fluxo": true,
+     "seta": false
+    }
+   }
+  },
+  {
+   "id": "fout",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: faixa_out",
+   "start": 32.9,
+   "dur": 5.6,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "faixa_out",
+     "cor": "#ffffff",
+     "largura": 6,
+     "fluxo": true,
+     "seta": false
+    }
+   }
+  },
+  {
+   "id": "l_irn2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: IRÃ",
+   "start": 32.0,
+   "dur": 6.45,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "IRÃ",
+     "ponto": "iran_costa",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "l_omn2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: OMÃ",
+   "start": 32.3,
+   "dur": 6.15,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "OMÃ",
+     "ponto": "musandam",
+     "estilo": "red",
+     "dx": -60,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "n4",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: < 4 KM",
+   "start": 34.94,
+   "dur": 3.56,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "< 4 KM",
+     "legenda": "LARGURA DE CADA FAIXA DE NAVEGAÇÃO",
+     "fonte": "2 milhas náuticas ≈ 3,7 km por sentido",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "l_in",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: ENTRADA →",
+   "start": 36.5,
+   "dur": 1.95,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "ENTRADA →",
+     "ponto": "lane_in",
+     "estilo": "box",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "l_out",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: ← SAÍDA",
+   "start": 37.1,
+   "dur": 1.35,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "← SAÍDA",
+     "ponto": "lane_out",
+     "estilo": "box",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "tt1",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Título: rotas alternativas",
+   "start": 38.6,
+   "dur": 2.95,
+   "props": {
+    "scene": "titulo",
+    "params": {
+     "texto": "ROTAS ALTERNATIVAS?",
+     "sub": "POUCAS.",
+     "sub_em": 1.9
+    }
+   }
+  },
+  {
+   "id": "c8",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: vista_oleo x13",
+   "start": 38.7,
+   "dur": 1.6,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "vista_oleo",
+     "zoom": 13,
+     "transicao": 1.6,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_ol",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: SAU,ARE",
+   "start": 42.1,
+   "dur": 6.0,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "SAU,ARE",
+     "tempos": [
+      42.1,
+      43.06
+     ],
+     "cor": "#7a0b12",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "ol_sau",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: oleo_sau",
+   "start": 42.12,
+   "dur": 5.98,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "oleo_sau",
+     "cor": "#ffffff",
+     "largura": 5,
+     "desenho": 1.4
+    }
+   }
+  },
+  {
+   "id": "ol_are",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: oleo_are",
+   "start": 43.06,
+   "dur": 5.04,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "oleo_are",
+     "cor": "#ffffff",
+     "largura": 5,
+     "desenho": 0.9
+    }
+   }
+  },
+  {
+   "id": "l_ols",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: OLEODUTO SAUDITA",
+   "start": 42.6,
+   "dur": 5.45,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "OLEODUTO SAUDITA",
+     "ponto": "oleo_sau_lab",
+     "estilo": "box",
+     "dx": 0,
+     "dy": -44
+    }
+   }
+  },
+  {
+   "id": "l_ola",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: OLEODUTO DOS EMIRADOS",
+   "start": 43.5,
+   "dur": 4.55,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "OLEODUTO DOS EMIRADOS",
+     "ponto": "oleo_are_lab",
+     "estilo": "box",
+     "dx": -30,
+     "dy": 70
+    }
+   }
+  },
+  {
+   "id": "n_ins",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: INSUFICIENTE",
+   "start": 45.44,
+   "dur": 2.66,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "INSUFICIENTE",
+     "legenda": "PARA DESVIAR TODO O VOLUME",
+     "fonte": "FONTE: EIA",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "c9",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: vista_asia x3.2",
+   "start": 48.2,
+   "dur": 1.6,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "vista_asia",
+     "zoom": 3.2,
+     "transicao": 1.6,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "r_india",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: r_india",
+   "start": 49.0,
+   "dur": 8.4,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "r_india",
+     "cor": "#ff2a36",
+     "largura": 4,
+     "desenho": 1.8,
+     "seta_px": 18
+    }
+   }
+  },
+  {
+   "id": "r_china",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: r_china",
+   "start": 49.25,
+   "dur": 8.15,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "r_china",
+     "cor": "#ff2a36",
+     "largura": 4,
+     "desenho": 1.8,
+     "seta_px": 18
+    }
+   }
+  },
+  {
+   "id": "r_japao",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: r_japao",
+   "start": 49.5,
+   "dur": 7.9,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "r_japao",
+     "cor": "#ff2a36",
+     "largura": 4,
+     "desenho": 1.8,
+     "seta_px": 18
+    }
+   }
+  },
+  {
+   "id": "r_coreia",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: r_coreia",
+   "start": 49.75,
+   "dur": 7.65,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "r_coreia",
+     "cor": "#ff2a36",
+     "largura": 4,
+     "desenho": 1.8,
+     "seta_px": 18
+    }
+   }
+  },
+  {
+   "id": "n84",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: 84%",
+   "start": 48.76,
+   "dur": 4.09,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "84%",
+     "legenda": "DO PETRÓLEO BRUTO QUE CRUZA ORMUZ VAI PARA A ÁSIA",
+     "fonte": "FONTE: EIA (2024)",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "pa_as",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: CHN,IND,JPN,KOR",
+   "start": 50.6,
+   "dur": 6.85,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "CHN,IND,JPN,KOR",
+     "tempos": [
+      50.6,
+      50.6,
+      50.6,
+      50.6
+     ],
+     "cor": "#7a0b12",
+     "fim": "base"
+    }
+   }
+  },
+  {
+   "id": "l_asia",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: ÁSIA",
+   "start": 51.2,
+   "dur": 1.65,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "ÁSIA",
+     "ponto": "asia",
+     "estilo": "red",
+     "dx": 0,
+     "dy": 0
+    }
+   }
+  },
+  {
+   "id": "p4",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Pulso: hormuz",
+   "start": 52.9,
+   "dur": 4.5,
+   "props": {
+    "scene": "pulso",
+    "params": {
+     "ponto": "hormuz",
+     "tamanho": 1.3
+    }
+   }
+  },
+  {
+   "id": "l_ten",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: TENSÃO AQUI",
+   "start": 52.95,
+   "dur": 4.45,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "TENSÃO AQUI",
+     "ponto": "hormuz",
+     "estilo": "box",
+     "dx": 0,
+     "dy": -70
+    }
+   }
+  },
+  {
+   "id": "l_pre",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Rótulo: PREÇO DO COMBUSTÍVEL",
+   "start": 54.6,
+   "dur": 2.8,
+   "props": {
+    "scene": "rotulo",
+    "params": {
+     "texto": "PREÇO DO COMBUSTÍVEL",
+     "ponto": "japao",
+     "estilo": "box",
+     "dx": -60,
+     "dy": -60
+    }
+   }
+  },
+  {
+   "id": "fl1",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Flash vermelho",
+   "start": 57.6,
+   "dur": 0.3,
+   "props": {
+    "scene": "flash",
+    "params": {
+     "forca": 0.45
+    }
+   }
+  },
+  {
+   "id": "c10",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Câmera: hormuz x110",
+   "start": 57.6,
+   "dur": 1.0,
+   "props": {
+    "scene": "camera",
+    "params": {
+     "alvo": "hormuz",
+     "zoom": 110,
+     "transicao": 1.0,
+     "corte": false
+    }
+   }
+  },
+  {
+   "id": "pa_fim",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Países: IRN,OMN",
+   "start": 57.7,
+   "dur": 4.5,
+   "props": {
+    "scene": "paises",
+    "params": {
+     "codigos": "IRN,OMN",
+     "tempos": [
+      57.7,
+      57.7
+     ],
+     "cor": "#7a0b12",
+     "fim": "manter"
+    }
+   }
+  },
+  {
+   "id": "med2",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Linha: medida",
+   "start": 58.4,
+   "dur": 3.8,
+   "props": {
+    "scene": "linha",
+    "params": {
+     "linha": "medida",
+     "cor": "#ffffff",
+     "largura": 4,
+     "seta": false,
+     "desenho": 0.8
+    }
+   }
+  },
+  {
+   "id": "p5",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Pulso: hormuz",
+   "start": 58.3,
+   "dur": 3.9,
+   "props": {
+    "scene": "pulso",
+    "params": {
+     "ponto": "hormuz",
+     "tamanho": 1.2
+    }
+   }
+  },
+  {
+   "id": "n40b",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "Número: < 40 KM",
+   "start": 58.12,
+   "dur": 4.08,
+   "props": {
+    "scene": "numero",
+    "params": {
+     "valor": "< 40 KM",
+     "legenda": "E O MUNDO INTEIRO DE OLHO",
+     "fonte": "",
+     "lado": "esq"
+    }
+   }
+  },
+  {
+   "id": "cta",
+   "type": "scene",
+   "track": "visual",
+   "by": "template",
+   "label": "CTA inscreva-se",
+   "start": 62.2,
+   "dur": 4.0,
+   "props": {
+    "scene": "cta",
+    "params": {
+     "texto": "INSCREVA-SE",
+     "sub": "MAIS MAPAS QUE EXPLICAM O MUNDO"
+    }
+   }
+  },
+  {
+   "id": "cor_destaque",
+   "type": "param",
+   "label": "Cor de destaque",
+   "props": {
+    "value": "#e3121b"
+   }
+  },
+  {
+   "id": "cor_terra",
+   "type": "param",
+   "label": "Cor da terra",
+   "props": {
+    "value": "#1e222a"
+   }
+  }
+ ]
+}

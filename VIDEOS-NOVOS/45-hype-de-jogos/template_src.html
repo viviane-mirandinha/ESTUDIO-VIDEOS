@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#0636c9;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#0636c9;}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;}
+.shot svg,#over svg,#cap svg{position:absolute;left:0;top:0;}
+#over,#cap{position:absolute;left:0;top:0;width:1280px;height:720px;pointer-events:none;}
+text{font-family:'Anton',sans-serif;}
+.mb{font-family:'Montserrat Black','Anton',sans-serif;font-weight:900;}
+.cw{position:absolute;left:0;width:1280px;text-align:center;opacity:0;font-family:'Montserrat Black',sans-serif;font-weight:900;font-style:italic;
+  letter-spacing:1px;-webkit-text-stroke:9px #000;paint-order:stroke fill;text-transform:uppercase;line-height:1;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f6bff"/><stop offset=".55" stop-color="#0636c9"/><stop offset="1" stop-color="#03146b"/></linearGradient>
+<linearGradient id="gRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3b3b"/><stop offset=".55" stop-color="#a5101c"/><stop offset="1" stop-color="#3a0208"/></linearGradient>
+<linearGradient id="gPurple" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a3bff"/><stop offset=".55" stop-color="#2a12a8"/><stop offset="1" stop-color="#0a0640"/></linearGradient>
+<linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9773e"/><stop offset="1" stop-color="#6e3d17"/></linearGradient>
+<linearGradient id="gGray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e9ee"/><stop offset="1" stop-color="#b7b8c2"/></linearGradient>
+<linearGradient id="gCard" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6ecff"/></linearGradient>
+<radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+<radialGradient id="glowG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7dffb0"/><stop offset="1" stop-color="#0a3a1e"/></radialGradient>
+<pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64,0 H0 V64" stroke="#ffffff" stroke-width="1.2" fill="none" opacity=".10"/></pattern>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".18"/></pattern>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".45"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs></svg>
+<div id="stage"></div>
+<div id="over"></div>
+<div id="cap"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__; gsap.defaults({smoothOrigin:false});
+const PINK='#ff2bd6', CY='#00e5ff', YEL='#ffe14d', INK='#0b0f2a', GREEN='#2bff88', ORANGE='#ff9d1c';
+const stage=document.getElementById('stage');
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function rng(seed){ let s=seed; return ()=>{ s=(s*16807)%2147483647; return (s-1)/2147483646; }; }
+
+/* ---------- fundo: gradiente + grade + partículas ---------- */
+function bg(id,grad,seed){ const r=rng(seed||7); let p='';
+  for(let k=0;k<34;k++){ const x=r()*1280,y=r()*720,s=1.5+r()*3.5; p+=`<rect class="pt" x="${x}" y="${y}" width="${s}" height="${s}" fill="#fff" opacity="${.15+r()*.45}" transform="rotate(45 ${x} ${y})"/>`; }
+  return `<rect width="1280" height="720" fill="url(#${grad})"/><g id="${id}gr"><rect x="-64" y="-64" width="1408" height="848" fill="url(#grid)"/></g>
+  <g id="${id}pt">${p}</g><path d="M-100,560 L1380,260" stroke="#fff" stroke-width="120" opacity=".05"/><path d="M-100,700 L1380,420" stroke="#fff" stroke-width="40" opacity=".05"/>`; }
+function mk(it,grad,cont,seed){ const i=it.id+'_'; const S=+it.start, D=+it.dur;
+  const d=document.createElement('div'); d.className='shot'; d.id=i+'shot';
+  d.innerHTML=`<svg viewBox="0 0 1280 720" width="1280" height="720">${bg(i,grad,seed)}<g id="${i}cam">${cont}</g><rect width="1280" height="720" fill="url(#vig)"/><rect width="1280" height="720" fill="url(#scan)" opacity=".5"/></svg>`;
+  stage.appendChild(d);
+  tl.set('#'+i+'shot',{opacity:1},S); tl.set('#'+i+'shot',{opacity:0},S+D);
+  tl.fromTo(`#${i}gr`,{x:0,y:0},{x:-64,y:-64,duration:D,ease:'none'},S);
+  tl.fromTo(`#${i}pt`,{y:20},{y:-40,duration:D,ease:'none'},S);
+  tl.fromTo(`#${i}cam`,{scale:1.06},{scale:1,duration:.45,ease:'power3.out',svgOrigin:'640 360'},S);
+  tl.to(`#${i}cam`,{scale:1.05,duration:Math.max(.1,D-.45),ease:'none',svgOrigin:'640 360'},S+.45);
+  // flash branco no corte
+  tl.fromTo('#flash',{opacity:.55},{opacity:0,duration:.25,ease:'power2.out'},S);
+}
+/* ---------- texto com glitch RGB ---------- */
+function gt(id,txt,x,y,size,opt){ opt=opt||{}; const col=opt.color||'#fff', anc=opt.anchor||'middle', f=opt.font||'Anton', st=opt.stroke||INK;
+  const t=(c,cls,extra)=>`<text class="${cls}" x="${x}" y="${y}" text-anchor="${anc}" font-family="'${f}'" font-size="${size}" fill="${c}" ${extra||''}>${esc(txt)}</text>`;
+  return `<g id="${id}" opacity="0">${t(CY,'gc','opacity=".85"')}${t(PINK,'gm','opacity=".85"')}${t(col,'gw',`stroke="${st}" stroke-width="${Math.round(size/14)}" paint-order="stroke"`)}</g>`; }
+function glitchIn(id,t,every,until){ const r=rng(id.length*97+Math.round(t*10));
+  tl.fromTo('#'+id,{opacity:0,scale:1.35},{opacity:1,scale:1,duration:.28,ease:'back.out(2)',transformOrigin:'50% 50%'},t);
+  const burst=(t0)=>{ for(let k=0;k<6;k++){ const a=(r()-.5)*26, b=(r()-.5)*10;
+      tl.set(`#${id} .gc`,{x:a,y:b},t0+k*.04); tl.set(`#${id} .gm`,{x:-a,y:-b},t0+k*.04); tl.set(`#${id} .gw`,{x:(r()-.5)*6},t0+k*.04); }
+    tl.set(`#${id} .gc`,{x:-3,y:0},t0+.26); tl.set(`#${id} .gm`,{x:3,y:0},t0+.26); tl.set(`#${id} .gw`,{x:0},t0+.26); };
+  burst(t); if(every&&until){ for(let tt=t+every; tt<until-.3; tt+=every) burst(tt); } }
+function pop(sel,t,d){ tl.fromTo(sel,{opacity:0,scale:.55},{opacity:1,scale:1,duration:d||.35,ease:'back.out(2.2)',transformOrigin:'50% 50%'},t); }
+function slide(sel,t,dx){ tl.fromTo(sel,{opacity:0,x:dx||-80},{opacity:1,x:0,duration:.35,ease:'power3.out'},t); }
+function pill(id,txt,x,y,o){ o=o||{}; const sz=o.size||40, w=o.w||Math.round(txt.length*sz*.62+60), h=sz+28, bgc=o.bg||PINK, c=o.color||'#fff';
+  return `<g id="${id}" opacity="0" filter="url(#sh)"><rect x="${x-w/2}" y="${y-h/2}" width="${w}" height="${h}" rx="${h/2}" fill="${bgc}" stroke="#fff" stroke-width="4"/>
+  <text x="${x}" y="${y+sz*.36}" text-anchor="middle" class="mb" font-family="'Montserrat Black'" font-weight="900" font-size="${sz}" fill="${c}">${esc(txt)}</text></g>`; }
+/* card de "data de lançamento" */
+function dateCard(id,head,big,sub,x,y,o){ o=o||{}; const w=o.w||420,h=o.h||250, hc=o.hc||PINK;
+  return `<g id="${id}" opacity="0" filter="url(#sh)"><g transform="translate(${x},${y}) rotate(${o.rot||-3})">
+  <rect x="${-w/2}" y="${-h/2}" width="${w}" height="${h}" rx="22" fill="url(#gCard)" stroke="#fff" stroke-width="6"/>
+  <path d="M${-w/2},${-h/2+22} a22,22 0 0 1 22,-22 h${w-44} a22,22 0 0 1 22,22 v34 h${-w} z" fill="${hc}"/>
+  <text x="0" y="${-h/2+44}" text-anchor="middle" font-family="'Montserrat Black'" font-weight="900" font-size="24" fill="#fff" letter-spacing="2">${esc(head)}</text>
+  <text id="${id}big" x="0" y="${o.bigY||40}" text-anchor="middle" font-family="'Anton'" font-size="${o.bigSize||120}" fill="${INK}">${esc(big)}</text>
+  ${sub?`<text x="0" y="${h/2-24}" text-anchor="middle" font-family="'Montserrat Black'" font-weight="900" font-size="${o.subSize||26}" fill="#3a3f63">${esc(sub)}</text>`:''}</g></g>`; }
+/* card de imagem: moldura branca arredondada */
+function frame(id,x,y,w,h,inner,o){ o=o||{}; return `<g id="${id}" opacity="0" filter="url(#sh)"><g transform="translate(${x},${y}) rotate(${o.rot||0})">
+  <rect x="${-w/2-8}" y="${-h/2-8}" width="${w+16}" height="${h+16}" rx="24" fill="#fff"/>
+  <svg x="${-w/2}" y="${-h/2}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect width="${w}" height="${h}" rx="18" fill="${o.fill||'#0b1440'}"/>${inner}</svg></g></g>`; }
+/* barra rumor x confirmado */
+function bar(id,tag,txt,x,y,col,pct){ const W=640;
+  return `<g id="${id}" opacity="0" filter="url(#sh)"><rect x="${x}" y="${y}" width="${W}" height="86" rx="16" fill="#0b0f2a" stroke="#fff" stroke-width="4"/>
+  <rect x="${x+14}" y="${y+14}" width="170" height="58" rx="10" fill="${col}"/><text x="${x+99}" y="${y+55}" text-anchor="middle" font-family="'Montserrat Black'" font-weight="900" font-size="26" fill="${INK}">${esc(tag)}</text>
+  <text x="${x+204}" y="${y+40}" font-family="'Montserrat Black'" font-weight="900" font-size="22" fill="#fff">${esc(txt)}</text>
+  <rect x="${x+204}" y="${y+54}" width="${W-224}" height="16" rx="8" fill="#ffffff22"/><rect id="${id}f" x="${x+204}" y="${y+54}" width="${(W-224)*pct}" height="16" rx="8" fill="${col}"/></g>`; }
+function fillBar(id,t){ tl.fromTo(`#${id}f`,{scaleX:0},{scaleX:1,duration:.7,ease:'power2.out',transformOrigin:'0% 50%'},t); }
+
+/* ---------- objetos desenhados (genéricos, sem marca) ---------- */
+function oscilo(i){ return `<g transform="translate(640,370)"><rect x="-250" y="-150" width="500" height="300" rx="20" fill="#8a8f9c" stroke="${INK}" stroke-width="6"/>
+  <rect x="-230" y="-130" width="300" height="260" rx="14" fill="#1b2030"/><circle cx="-80" cy="0" r="112" fill="url(#glowG)" opacity=".9"/>
+  <g stroke="#0a3a1e" stroke-width="1.5" opacity=".6">${[-60,-30,0,30,60].map(v=>`<path d="M-190,${v} H30 M${-80+v},-110 V110"/>`).join('')}</g>
+  <path d="M-180,60 H20 M-80,60 V25" stroke="#d6ffe6" stroke-width="5" filter="url(#glow)"/>
+  <circle id="${i}ball" cx="-160" cy="50" r="7" fill="#fff" filter="url(#glow)"/>
+  ${[0,1,2,3].map(k=>`<circle cx="${130+ (k%2)*70}" cy="${-70+Math.floor(k/2)*80}" r="24" fill="#3a3f4f" stroke="${INK}" stroke-width="4"/><path d="M${130+(k%2)*70},${-70+Math.floor(k/2)*80} l12,-14" stroke="#fff" stroke-width="4"/>`).join('')}
+  <rect x="110" y="90" width="110" height="26" rx="6" fill="#3a3f4f"/></g>`; }
+function woodConsole(){ return `<g><rect x="-170" y="-40" width="340" height="90" rx="10" fill="url(#gWood)" stroke="${INK}" stroke-width="5"/>
+  <rect x="-170" y="-40" width="340" height="34" rx="8" fill="#1d1d22" stroke="${INK}" stroke-width="5"/>
+  ${[0,1,2,3,4,5].map(k=>`<path d="M${-150+k*55},12 h40" stroke="#4a2810" stroke-width="3" opacity=".6"/>`).join('')}
+  <rect x="-255" y="-10" width="70" height="56" rx="6" fill="#1d1d22" stroke="${INK}" stroke-width="4"/><circle cx="-220" cy="18" r="12" fill="#c9c9cf"/>
+  <rect x="185" y="-10" width="70" height="56" rx="6" fill="#1d1d22" stroke="${INK}" stroke-width="4"/><circle cx="220" cy="18" r="12" fill="#c9c9cf"/></g>`; }
+function arcade(i){ return `<g><path d="M-120,-230 H120 L135,-170 V230 H-135 V-170 Z" fill="#20243d" stroke="${INK}" stroke-width="6"/>
+  <rect x="-110" y="-215" width="220" height="44" rx="6" fill="${YEL}"/><text x="0" y="-182" text-anchor="middle" font-family="'Anton'" font-size="30" fill="${INK}">ARCADE</text>
+  <rect x="-100" y="-155" width="200" height="160" rx="10" fill="#000" stroke="#555" stroke-width="5"/>
+  <path d="M0,-148 V-2" stroke="#fff" stroke-width="3" stroke-dasharray="8 8" opacity=".7"/>
+  <rect id="${i}p1" x="-88" y="-100" width="8" height="40" fill="#fff"/><rect id="${i}p2" x="80" y="-80" width="8" height="40" fill="#fff"/>
+  <rect id="${i}pb" x="-72" y="-80" width="10" height="10" fill="#fff"/>
+  <path d="M-135,30 H135 L120,90 H-120Z" fill="#2c3156" stroke="${INK}" stroke-width="5"/><circle cx="-50" cy="56" r="13" fill="${PINK}"/><circle cx="50" cy="56" r="13" fill="${CY}"/></g>`; }
+function cartucho(x,y,r,c){ return `<g transform="translate(${x},${y}) rotate(${r})"><rect x="-55" y="-38" width="110" height="76" rx="6" fill="${c}" stroke="${INK}" stroke-width="4"/><rect x="-40" y="-26" width="80" height="40" rx="3" fill="#fff" opacity=".8"/><text x="0" y="4" text-anchor="middle" font-family="'Anton'" font-size="26" fill="${INK}">???</text></g>`; }
+function boxConsole(){ return `<g><rect x="-200" y="-70" width="400" height="140" rx="10" fill="url(#gGray)" stroke="${INK}" stroke-width="6"/>
+  <rect x="-200" y="-70" width="400" height="44" rx="8" fill="#5b5d68" stroke="${INK}" stroke-width="6"/><rect x="-150" y="-60" width="300" height="20" rx="4" fill="#2e3038"/>
+  <rect x="-170" y="10" width="44" height="18" rx="4" fill="#c8243a"/><rect x="-110" y="10" width="44" height="18" rx="4" fill="#5b5d68"/>
+  <path d="M60,0 h120 M60,22 h120 M60,44 h120" stroke="#8b8d98" stroke-width="5"/>
+  <g transform="translate(300,40)"><rect x="-75" y="-34" width="150" height="68" rx="8" fill="#e3e3ea" stroke="${INK}" stroke-width="5"/>
+  <path d="M-52,0 h28 M-38,-14 v28" stroke="${INK}" stroke-width="9"/><circle cx="32" cy="6" r="10" fill="#c8243a"/><circle cx="56" cy="-6" r="10" fill="#c8243a"/></g></g>`; }
+function handheld(i){ return `<g><rect x="-120" y="-200" width="240" height="400" rx="26" fill="url(#gGray)" stroke="${INK}" stroke-width="6"/>
+  <rect x="-95" y="-170" width="190" height="170" rx="12" fill="#3d4256"/><rect x="-72" y="-150" width="144" height="128" fill="#9bbc0f"/>
+  <g id="${i}blk" fill="#306230">${[[-40,-140],[-20,-140],[0,-140],[0,-120]].map(p=>`<rect x="${p[0]}" y="${p[1]}" width="18" height="18"/>`).join('')}</g>
+  <g fill="#306230">${[[-72,-40],[-54,-40],[-36,-40],[-18,-40],[36,-40],[54,-40],[-72,-58],[54,-58]].map(p=>`<rect x="${p[0]}" y="${p[1]}" width="18" height="18"/>`).join('')}</g>
+  <path d="M-70,80 h50 M-45,55 v50" stroke="${INK}" stroke-width="16" stroke-linecap="round"/><circle cx="45" cy="90" r="17" fill="#a2124d"/><circle cx="85" cy="68" r="17" fill="#a2124d"/>
+  <path d="M-30,150 l20,-8 M20,150 l20,-8" stroke="#8b8d98" stroke-width="7" stroke-linecap="round"/></g>`; }
+function discConsole(i){ return `<g><rect x="-220" y="-60" width="440" height="120" rx="14" fill="url(#gGray)" stroke="${INK}" stroke-width="6"/>
+  <circle cx="-40" cy="0" r="62" fill="#d0d1da" stroke="${INK}" stroke-width="4"/><g id="${i}cd"><circle cx="-40" cy="0" r="54" fill="#c9d6ff" opacity=".9"/>
+  <path d="M-40,-54 A54,54 0 0 1 14,0 L-28,0 A12,12 0 0 0 -40,-12Z" fill="${PINK}" opacity=".45"/><path d="M-40,54 A54,54 0 0 1 -94,0 L-52,0 A12,12 0 0 0 -40,12Z" fill="${CY}" opacity=".45"/>
+  <circle cx="-40" cy="0" r="12" fill="#e9e9ee" stroke="${INK}" stroke-width="3"/></g>
+  <rect x="80" y="-20" width="34" height="18" rx="5" fill="#5b5d68"/><rect x="130" y="-20" width="34" height="18" rx="5" fill="#5b5d68"/><circle cx="185" cy="30" r="7" fill="${GREEN}"/></g>`; }
+function iconGlobe(){ return `<circle r="70" fill="none" stroke="#fff" stroke-width="8"/><ellipse rx="30" ry="70" fill="none" stroke="#fff" stroke-width="6"/><path d="M-70,0 H70 M-60,-36 H60 M-60,36 H60" stroke="#fff" stroke-width="6"/>`; }
+function iconPhone(){ return `<rect x="-46" y="-80" width="92" height="160" rx="16" fill="none" stroke="#fff" stroke-width="8"/><rect x="-32" y="-60" width="64" height="104" rx="4" fill="#ffffff33"/><circle cy="62" r="7" fill="#fff"/>`; }
+function iconPad(){ return `<path d="M-80,-20 Q-80,-50 -50,-50 H50 Q80,-50 80,-20 L92,40 Q96,66 72,60 L40,30 H-40 L-72,60 Q-96,66 -92,40Z" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M-50,-12 h28 M-36,-26 v28" stroke="#fff" stroke-width="8"/><circle cx="36" cy="-20" r="7" fill="#fff"/><circle cx="54" cy="-4" r="7" fill="#fff"/>
+  <path d="M-30,-82 Q0,-104 30,-82 M-18,-70 Q0,-82 18,-70" stroke="${GREEN}" stroke-width="7" fill="none" stroke-linecap="round"/>`; }
+/* cubo low-poly girando (projeção simples, função do tempo) */
+function cubeSVG(i){ return `<g id="${i}cube" transform="translate(640,380)">${[...Array(12)].map((_,k)=>`<line id="${i}e${k}" stroke="${CY}" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>`).join('')}${[...Array(8)].map((_,k)=>`<circle id="${i}v${k}" r="7" fill="#fff"/>`).join('')}</g>`; }
+function cubeAnim(i,S,D,size){ const V=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+  const E=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+  const els=E.map((_,k)=>document.getElementById(i+'e'+k)), vs=V.map((_,k)=>document.getElementById(i+'v'+k));
+  const st={a:0}; const draw=()=>{ const a=st.a, b=a*.7; const P=V.map(([x,y,z])=>{ let X=x*Math.cos(a)-z*Math.sin(a), Z=x*Math.sin(a)+z*Math.cos(a); let Y=y*Math.cos(b)-Z*Math.sin(b); Z=y*Math.sin(b)+Z*Math.cos(b); const f=size/(1+Z*.18); return [X*f,Y*f]; });
+    E.forEach(([p,q],k)=>{ els[k].setAttribute('x1',P[p][0]);els[k].setAttribute('y1',P[p][1]);els[k].setAttribute('x2',P[q][0]);els[k].setAttribute('y2',P[q][1]); });
+    P.forEach((p,k)=>{ vs[k].setAttribute('cx',p[0]); vs[k].setAttribute('cy',p[1]); }); };
+  draw(); tl.fromTo(st,{a:0},{a:Math.PI*1.6,duration:D,ease:'none',onUpdate:draw},S); }
+
+const SH={};
+/* intro */
+SH.intro=(it,P_,S,D,i)=>{
+  const cont=pill(i+'tag',P_.tag,640,150,{bg:'#ffffff',color:INK,size:30})+gt(i+'l1',P_.l1,640,300,92)+gt(i+'l2',P_.l2,640,440,170,{color:YEL})+pill(i+'pl',P_.pill,640,530,{size:40});
+  mk(it,'gBlue',cont,3);
+  pop(`#${i}tag`,S+.05); glitchIn(i+'l1',S+.2); glitchIn(i+'l2',S+(+P_.t_l2),1.0,S+D); pop(`#${i}pl`,S+(+P_.t_pill));
+};
+/* contagem regressiva */
+SH.contagem=(it,P_,S,D,i)=>{
+  let c=`<circle id="${i}ring" cx="640" cy="330" r="190" fill="none" stroke="#fff" stroke-width="14" opacity=".9" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" transform="rotate(-90 640 330)"/>`;
+  P_.n.forEach((n,k)=>{ c+=gt(i+'n'+k,n,640,420,260,{color:k===2?YEL:'#fff'}); });
+  c+=gt(i+'fim',P_.fim,640,410,190,{color:GREEN});
+  mk(it,'gPurple',c,11);
+  P_.n.forEach((n,k)=>{ const t=S+(+P_.tn[k]); glitchIn(i+'n'+k,t); tl.set(`#${i}n${k}`,{opacity:0},t+.48);
+    tl.fromTo(`#${i}ring`,{strokeDashoffset:0},{strokeDashoffset:1,duration:.46,ease:'none'},t); });
+  tl.set(`#${i}ring`,{opacity:0},S+(+P_.t_fim)); glitchIn(i+'fim',S+(+P_.t_fim),.7,S+D);
+};
+/* 1958 */
+SH.osc=(it,P_,S,D,i)=>{
+  const cont=dateCard(i+'dc',"DATA DE LANÇAMENTO",P_.ano,P_.sub,250,190,{w:380,h:230,bigSize:110})+frame(i+'fr',760,330,600,380,`<g transform="translate(300,190) scale(.95) translate(-640,-370)">${oscilo(i)}</g>`,{rot:2,fill:'#151a33'})
+    +pill(i+'nm',P_.nome,760,560,{size:40,bg:YEL,color:INK})+pill(i+'nt',P_.nota,330,420,{size:22,bg:'#0b0f2a'});
+  mk(it,'gBlue',cont,5);
+  pop(`#${i}dc`,S+.1); pop(`#${i}fr`,S+1.4); pop(`#${i}nm`,S+(+P_.t_nome)); slide(`#${i}nt`,S+(+P_.t_nota));
+  // bola em arco (tênis): vai e volta
+  const B=`#${i}ball`; for(let k=0;k<8;k++){ const t=S+1.6+k*.75, dir=k%2?-1:1, x0=dir>0?-160:0, x1=dir>0?0:-160;
+    tl.fromTo(B,{attr:{cx:x0}},{attr:{cx:x1},duration:.75,ease:'none'},t);
+    tl.fromTo(B,{attr:{cy:50}},{attr:{cy:-60},duration:.375,ease:'power1.out'},t); tl.to(B,{attr:{cy:50},duration:.375,ease:'power1.in'},t+.375); }
+};
+/* 1972 */
+SH.odyssey=(it,P_,S,D,i)=>{
+  const cont=dateCard(i+'dc',"DATA DE LANÇAMENTO",P_.ano,'',640,200,{w:380,h:200,bigSize:110,bigY:62})
+   +`<g id="${i}c1" opacity="0"><g transform="translate(330,440)">${woodConsole()}</g></g>`+pill(i+'c1t',P_.c1,330,530,{size:30,bg:'#fff',color:INK})+pill(i+'c1s',P_.c1s,330,592,{size:22})
+   +`<g id="${i}c2" opacity="0"><g transform="translate(950,420) scale(.85)">${arcade(i)}</g></g>`+pill(i+'c2t',P_.c2,950,590,{size:34,bg:YEL,color:INK})+pill(i+'c2s',P_.c2s,950,140,{size:22,bg:'#0b0f2a'})
+   +gt(i+'fim',P_.fim,640,420,200,{color:ORANGE});
+  mk(it,'gBlue',cont,9);
+  pop(`#${i}dc`,S+.1); tl.to(`#${i}dc`,{opacity:0,duration:.2},S+(+P_.t_c1)-.1);
+  pop(`#${i}c1`,S+(+P_.t_c1)); pop(`#${i}c1t`,S+(+P_.t_c1)+.3); pop(`#${i}c1s`,S+(+P_.t_c1)+1.4);
+  pop(`#${i}c2`,S+(+P_.t_c2)); pop(`#${i}c2t`,S+(+P_.t_c2)+.6); slide(`#${i}c2s`,S+(+P_.t_c2)+.8,80);
+  const t2=S+(+P_.t_c2)+.3; for(let k=0;k<6;k++){ const t=t2+k*.5; tl.fromTo(`#${i}pb`,{x:k%2?136:0,y:k%2?60:0},{x:k%2?0:136,y:k%2?0:60,duration:.5,ease:'none'},t); }
+  tl.fromTo(`#${i}p1`,{y:0},{y:50,duration:.5,yoyo:true,repeat:5,ease:'sine.inOut'},t2); tl.fromTo(`#${i}p2`,{y:20},{y:-30,duration:.5,yoyo:true,repeat:5,ease:'sine.inOut'},t2);
+  const tf=S+(+P_.t_fim); tl.to([`#${i}c1`,`#${i}c1t`,`#${i}c1s`,`#${i}c2`,`#${i}c2t`,`#${i}c2s`],{opacity:.25,duration:.2},tf-.05); glitchIn(i+'fim',tf,.5,S+D);
+};
+/* 1983 crash */
+SH.crash=(it,P_,S,D,i)=>{
+  const r=rng(31); let pile=''; const cols=['#5b7cff','#ff5b8a','#ffd34d','#38d39f','#b07cff'];
+  for(let k=0;k<14;k++) pile+=cartucho(80+r()*420,430+r()*170,(r()-.5)*70,cols[k%5]);
+  const chart=`<g id="${i}ch" opacity="0" filter="url(#sh)"><rect x="700" y="250" width="500" height="320" rx="20" fill="#0b0f2a" stroke="#fff" stroke-width="5"/>
+   <text x="730" y="292" font-family="'Montserrat Black'" font-weight="900" font-size="24" fill="#fff">${esc(P_.g)}</text>
+   <path d="M730,520 H1170 M730,310 V520" stroke="#ffffff55" stroke-width="3"/>
+   <path id="${i}ln" pathLength="1" d="M740,330 L820,320 L880,350 L950,420 L1010,470 L1080,500 L1160,512" stroke="#ff3b3b" stroke-width="9" fill="none" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="${i}ar" d="M1160,512 l-26,-6 l14,-22z" fill="#ff3b3b" opacity="0"/></g>`;
+  const cont=dateCard(i+'dc',"ANO",P_.ano,'',640,170,{w:300,h:190,bigSize:100,bigY:58,hc:'#0b0f2a'})+`<g id="${i}pile" opacity="0">${pile}</g>`+chart
+    +gt(i+'tit',P_.titulo,640,330,230,{color:'#fff',stroke:'#3a0208'})+bar(i+'rm','RUMOR',P_.rumor,320,90,ORANGE,.85);
+  mk(it,'gRed',cont,13);
+  pop(`#${i}dc`,S+.1); glitchIn(i+'tit',S+(+P_.t_tit),.45,S+(+P_.t_g)+.2); tl.to(`#${i}dc`,{opacity:0,duration:.15},S+(+P_.t_tit)-.05);
+  tl.to(`#${i}tit`,{opacity:0,scale:.6,duration:.25,transformOrigin:'50% 50%'},S+(+P_.t_g));
+  tl.fromTo(`#${i}pile`,{opacity:0,y:-300},{opacity:1,y:0,duration:.6,ease:'bounce.out'},S+(+P_.t_g));
+  const tc=S+(+P_.t_g)+2.2; pop(`#${i}ch`,tc-.3); tl.to(`#${i}ln`,{strokeDashoffset:0,duration:1.2,ease:'power1.in'},tc); tl.to(`#${i}ar`,{opacity:1,duration:.1},tc+1.15);
+  tl.to(`#${i}cam`,{x:6,duration:.05,yoyo:true,repeat:9},S+(+P_.t_tit));
+  slide(`#${i}rm`,S+(+P_.t_rumor),-120); fillBar(i+'rm',S+(+P_.t_rumor)+.3);
+};
+/* 1985 NES */
+SH.nes=(it,P_,S,D,i)=>{
+  const stamp=`<g id="${i}st" opacity="0"><g transform="translate(640,250) rotate(-10)"><rect x="-260" y="-80" width="520" height="160" rx="16" fill="none" stroke="#ff2e3f" stroke-width="12"/>
+    <text x="0" y="52" text-anchor="middle" font-family="'Anton'" font-size="150" fill="#ff2e3f">${esc(P_.carimbo)}</text></g></g>`;
+  const cont=bar(i+'rm','RUMOR',P_.rumor,320,200,ORANGE,.85)+stamp
+   +`<g id="${i}cx" opacity="0"><g transform="translate(560,470)">${boxConsole()}</g></g>`+dateCard(i+'dc',"LANÇAMENTO · EUA",P_.ano,'',1060,190,{w:330,h:200,bigSize:100,bigY:58,rot:3})
+   +pill(i+'nm',P_.nome,560,590,{size:34,bg:YEL,color:INK})+bar(i+'cf','CONFIRMADO',P_.conf,200,250,GREEN,1);
+  mk(it,'gBlue',cont,17);
+  tl.set(`#${i}rm`,{opacity:1},S); tl.fromTo(`#${i}st`,{opacity:0,scale:2.2},{opacity:1,scale:1,duration:.25,ease:'power4.in',transformOrigin:'50% 50%'},S+.1);
+  tl.to(`#${i}cam`,{y:8,duration:.05,yoyo:true,repeat:5},S+.35);
+  const ta=S+(+P_.t_ano); tl.to([`#${i}st`,`#${i}rm`],{opacity:0,duration:.25},ta-.1); pop(`#${i}dc`,ta);
+  pop(`#${i}cx`,S+(+P_.t_nome)-.2); pop(`#${i}nm`,S+(+P_.t_nome)+.1);
+  slide(`#${i}cf`,S+(+P_.t_conf)); fillBar(i+'cf',S+(+P_.t_conf)+.25);
+};
+/* 1989 portátil */
+SH.bolso=(it,P_,S,D,i)=>{
+  const cont=dateCard(i+'dc',"DATA DE LANÇAMENTO",P_.ano,'',300,250,{w:360,h:210,bigSize:110,bigY:60})
+   +`<g id="${i}hh" opacity="0"><g transform="translate(860,370) rotate(6)">${handheld(i)}</g></g>`+pill(i+'nm',P_.nome,300,430,{size:40,bg:YEL,color:INK})+pill(i+'sb',P_.sub,300,520,{size:30});
+  mk(it,'gPurple',cont,19);
+  pop(`#${i}dc`,S+.1); tl.fromTo(`#${i}hh`,{opacity:0,y:300},{opacity:1,y:0,duration:.5,ease:'back.out(1.6)'},S+.5);
+  pop(`#${i}nm`,S+(+P_.t_nome)); pop(`#${i}sb`,S+(+P_.t_sub));
+  tl.fromTo(`#${i}blk`,{y:0},{y:72,duration:2.4,ease:'steps(4)'},S+.8);
+};
+/* 94/95 disco + 3D */
+SH.disco=(it,P_,S,D,i)=>{
+  const cont=dateCard(i+'d1',P_.l1,P_.d1,'',330,200,{w:380,h:200,bigSize:84,bigY:56,hc:PINK,rot:-4})+dateCard(i+'d2',P_.l2,P_.d2,'',950,200,{w:330,h:200,bigSize:100,bigY:58,hc:CY,rot:4})
+   +`<g id="${i}cs" opacity="0"><g transform="translate(400,470)">${discConsole(i)}</g></g>`+pill(i+'nm',P_.nome,400,595,{size:34,bg:'#fff',color:INK})
+   +`<g id="${i}cb" opacity="0">${cubeSVG(i)}</g>`.replace('translate(640,380)','translate(960,470)')
+   +pill(i+'a',P_.a,880,595,{size:40,bg:CY,color:INK,w:120})+pill(i+'b',P_.b,1040,595,{size:40,bg:PINK,w:120});
+  mk(it,'gBlue',cont,23);
+  pop(`#${i}d1`,S+.4); pop(`#${i}d2`,S+(+P_.t_d2));
+  const tn=S+(+P_.t_nome); tl.to([`#${i}d1`,`#${i}d2`],{opacity:.0,y:-40,duration:.3},tn+.6);
+  pop(`#${i}cs`,tn-.3); pop(`#${i}nm`,tn); tl.fromTo(`#${i}cd`,{rotation:0},{rotation:720,duration:D,ease:'none',svgOrigin:'-40 0'},S);
+  pop(`#${i}cb`,S+(+P_.t_a)-.2); cubeAnim(i,S,D,70); pop(`#${i}a`,S+(+P_.t_a)); pop(`#${i}b`,S+(+P_.t_b));
+};
+/* internet / celular / online */
+SH.online=(it,P_,S,D,i)=>{
+  const xs=[260,640,1020], ic=[iconGlobe(),iconPhone(),iconPad()], tx=[P_.a,P_.b,P_.c];
+  let c=''; xs.forEach((x,k)=>{ c+=`<g id="${i}k${k}" opacity="0" filter="url(#sh)"><g transform="translate(${x},330) rotate(${(k-1)*3})"><rect x="-150" y="-170" width="300" height="340" rx="28" fill="${[PINK,'#0b0f2a',CY][k]}" stroke="#fff" stroke-width="6"/>
+    <g transform="translate(0,-40)">${ic[k]}</g><text x="0" y="130" text-anchor="middle" font-family="'Anton'" font-size="56" fill="#fff" stroke="${INK}" stroke-width="5" paint-order="stroke">${esc(tx[k])}</text></g></g>`; });
+  mk(it,'gBlue',c,29);
+  [P_.ta,P_.tb,P_.tc].forEach((t,k)=>{ tl.fromTo(`#${i}k${k}`,{opacity:0,y:200,rotation:(k-1)*12},{opacity:1,y:0,rotation:0,duration:.4,ease:'back.out(1.8)',transformOrigin:'50% 50%'},S+(+t)); });
+};
+/* bilhões */
+SH.bilhoes=(it,P_,S,D,i)=>{
+  const r=rng(41); let dots=''; for(let k=0;k<160;k++){ const x=60+r()*1160, y=60+r()*600; dots+=`<circle class="${i}dt" cx="${x}" cy="${y}" r="${3+r()*4}" fill="${[YEL,CY,PINK,'#fff'][k%4]}" opacity="0"/>`; }
+  const cont=`<g>${dots}</g>`+pill(i+'tg',P_.tag,640,170,{size:34,bg:'#fff',color:INK})+gt(i+'bg',P_.big,640,420,210,{color:YEL})+pill(i+'sb',P_.sub,640,520,{size:32});
+  mk(it,'gPurple',cont,37);
+  pop(`#${i}tg`,S+.05); tl.to(`.${i}dt`,{opacity:.85,duration:.15,stagger:{each:.012,from:'center'}},S+.2);
+  glitchIn(i+'bg',S+(+P_.t_big),.8,S+D); pop(`#${i}sb`,S+(+P_.t_big)+.6);
+};
+/* próxima fase + CTA */
+SH.proxima=(it,P_,S,D,i)=>{
+  const cont=gt(i+'tt',P_.titulo,640,190,120,{color:'#fff'})
+   +dateCard(i+'dc',P_.card,P_.data,'',640,370,{w:560,h:220,bigSize:110,bigY:62,rot:-2})
+   +pill(i+'stt',P_.status,640,500,{size:30,bg:ORANGE,color:INK})
+   +`<g id="${i}cta" opacity="0" filter="url(#sh)"><rect x="240" y="440" width="800" height="150" rx="26" fill="#0b0f2a" stroke="${YEL}" stroke-width="6"/>
+     <rect x="270" y="462" width="230" height="46" rx="23" fill="${PINK}"/><text x="385" y="495" text-anchor="middle" font-family="'Montserrat Black'" font-weight="900" font-size="24" fill="#fff">${esc(P_.cta_tag)}</text>
+     <text x="640" y="566" text-anchor="middle" font-family="'Anton'" font-size="58" fill="${YEL}">${esc(P_.cta)}</text>
+     <g transform="translate(980,480)"><path d="M-28,-16 h56 a10,10 0 0 1 10,10 v28 a10,10 0 0 1 -10,10 h-30 l-16,14 v-14 h-10 a10,10 0 0 1 -10,-10 v-28 a10,10 0 0 1 10,-10z" fill="${YEL}"/></g></g>`;
+  mk(it,'gPurple',cont,43);
+  glitchIn(i+'tt',S+.1,1.1,S+D); pop(`#${i}dc`,S+.5);
+  const r=rng(53), digs='0123456789'; const big=document.getElementById(i+'dcbig');
+  // "??/??/????" piscando com glitch
+  for(let k=0;k<10;k++){ tl.set(`#${i}dcbig`,{opacity:k%2?1:.35,x:(r()-.5)*14},S+(+P_.t_card)+k*.08); } tl.set(`#${i}dcbig`,{opacity:1,x:0},S+(+P_.t_card)+.85);
+  pop(`#${i}stt`,S+(+P_.t_card)+.4);
+  const tc=S+(+P_.t_cta); tl.to([`#${i}stt`],{opacity:0,duration:.2},tc-.1); tl.to(`#${i}dc`,{y:-20,scale:.8,duration:.4,transformOrigin:'50% 50%'},tc-.1);
+  tl.fromTo(`#${i}cta`,{opacity:0,y:120},{opacity:1,y:0,duration:.45,ease:'back.out(1.7)'},tc);
+};
+
+/* flash de corte */
+const fl=document.createElement('div'); fl.id='flash'; fl.style.cssText='position:absolute;left:0;top:0;width:1280px;height:720px;background:#fff;opacity:0;pointer-events:none;'; stage.after(fl);
+
+/* ---------- montar cenas ---------- */
+for(const it of EDIT.items){ if(it.hidden||it.type!=='scene'||it.by!=='template') continue; const p=it.props||{}; const f=SH[p.scene]; if(f) f(it,p.params||{},+it.start,+it.dur,it.id+'_'); }
+
+/* ---------- HUD: barra de carregamento com anos ---------- */
+const H=EDIT.items.find(x=>x.id==='hud');
+if(H && !H.hidden){ const pr=H.props.params, anos=pr.anos, tempos=pr.tempos; const x0=330,x1=1220,y=40;
+  let s=`<g id="hud" opacity="0"><rect x="16" y="18" width="1248" height="46" rx="23" fill="#0b0f2acc" stroke="#ffffff55" stroke-width="2"/>
+   <text x="40" y="49" font-family="'Montserrat Black'" font-weight="900" font-size="18" fill="#fff" letter-spacing="1.5">${esc(pr.rotulo)}</text>
+   <rect x="${x0}" y="${y-5}" width="${x1-x0}" height="10" rx="5" fill="#ffffff22"/><rect id="hudf" x="${x0}" y="${y-5}" width="${x1-x0}" height="10" rx="5" fill="${YEL}"/>`;
+  anos.forEach((a,k)=>{ const x=x0+(x1-x0)*k/(anos.length-1); s+=`<circle id="hd${k}" cx="${x}" cy="${y}" r="9" fill="#0b0f2a" stroke="#fff" stroke-width="3"/>`; });
+  s+=`</g><g id="hudy" opacity="0">`; anos.forEach((a,k)=>{ const x=x0+(x1-x0)*k/(anos.length-1); s+=`<text id="hy${k}" x="${x}" y="86" text-anchor="middle" font-family="'Anton'" font-size="22" fill="#fff" opacity=".35" stroke="${INK}" stroke-width="4" paint-order="stroke">${esc(a)}</text>`; }); s+='</g>';
+  document.getElementById('over').innerHTML=`<svg viewBox="0 0 1280 720" width="1280" height="720">${s}</svg>`;
+  tl.to(['#hud','#hudy'],{opacity:1,duration:.3},+H.start); tl.to(['#hud','#hudy'],{opacity:0,duration:.3},+H.start+(+H.dur)-.3);
+  tl.set('#hudf',{scaleX:0,transformOrigin:'0% 50%'},0);
+  let prev=0; anos.forEach((a,k)=>{ const t=+tempos[k], f=k/(anos.length-1);
+    tl.to('#hudf',{scaleX:Math.max(.001,f),duration:.5,ease:'power2.out',transformOrigin:'0% 50%'},t);
+    tl.to(`#hd${k}`,{attr:{fill:YEL},duration:.1},t+.4); tl.to(`#hy${k}`,{opacity:1,attr:{'font-size':26},duration:.2},t+.35); });
+}
+
+/* ---------- legenda amarela palavra a palavra (estilo hype) ---------- */
+const L=EDIT.items.find(x=>x.id==='leg');
+if(L && !L.hidden){ const pr=L.props.params, W=pr.words||[], cap=document.getElementById('cap'); const S0=+L.start, E0=S0+(+L.dur);
+  W.forEach((w,k)=>{ const e=document.createElement('div'); e.className='cw'; e.id='cw'+k; e.textContent=String(w.w).replace(/[,.;:!?]+$/,'');
+    e.style.top=(+pr.y-(+pr.size)/2)+'px'; e.style.fontSize=pr.size+'px'; e.style.color=pr.cor; cap.appendChild(e);
+    const s=Math.max(S0,+w.s), nx=k+1<W.length?Math.min(+W[k+1].s, +w.e+0.6):+w.e+0.6, end=Math.min(E0,nx);
+    if(end<=s) return;
+    tl.set('#cw'+k,{opacity:1},s); tl.fromTo('#cw'+k,{scale:1.25},{scale:1,duration:.12,ease:'power2.out',immediateRender:false},s); tl.set('#cw'+k,{opacity:0},end); });
+}
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

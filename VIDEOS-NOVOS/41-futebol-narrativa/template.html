@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+:root{--paper:#e8eae3;--grid:#c7d2d4;--navy:#1d2541;--red:#b8463a;--yel:#f2c94c;--ink:#23262e;--green:#2f6b45;}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:var(--paper);}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:var(--paper);}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;overflow:hidden;}
+.paper{background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(rgba(29,37,65,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(29,37,65,.18) 1px,transparent 1px);background-size:24px 24px,24px 24px,120px 120px,120px 120px;}
+.cam{position:absolute;inset:0;}
+.shot svg{position:absolute;left:0;top:0;}
+.bb{font-family:'Bebas Neue',sans-serif;letter-spacing:1px;line-height:.9;}
+.os{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;}
+.hw{font-family:'Caveat',cursive;font-weight:700;}
+.abs{position:absolute;}
+.frame{position:absolute;background:#fff;padding:12px;box-shadow:6px 8px 0 rgba(29,37,65,.25);outline:3px dashed var(--ink);outline-offset:12px;}
+.frame img{display:block;width:100%;height:100%;object-fit:cover;}
+.tape{position:absolute;width:120px;height:34px;background:rgba(242,201,76,.75);}
+.chip{position:absolute;background:var(--navy);color:var(--yel);padding:8px 18px;}
+.card{position:absolute;background:#fff;border:4px solid var(--navy);box-shadow:8px 8px 0 var(--navy);text-align:center;}
+#over,#lts{position:absolute;left:0;top:0;width:1280px;height:720px;pointer-events:none;}
+.lt{position:absolute;left:0;bottom:46px;background:var(--navy);color:var(--yel);font-family:'Oswald',sans-serif;font-weight:700;font-size:34px;padding:10px 34px 10px 40px;text-transform:uppercase;opacity:0;border-left:12px solid var(--red);}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<div style="display:none"><img src="img/retrato_duo.jpg"><img src="img/corruira.jpg"><img src="img/fas_crop.jpg"><img src="img/estadio_brasilia.jpg"></div>
+<div id="stage"></div>
+<div id="over"></div>
+<div id="lts"></div>
+<svg class="grain" width="1280" height="720"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="5"/><feColorMatrix values="0 0 0 0 .3 0 0 0 0 .3 0 0 0 0 .3 0 0 0 .22 0"/></filter><rect width="1280" height="720" filter="url(#gr)"/></svg>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__;
+const N='#1d2541',R='#b8463a',Y='#f2c94c',K='#23262e',G='#2f6b45';
+const M=s=>/^(https?:|data:|m\/)/.test(s)?s:'m/'+s;
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const stage=document.getElementById('stage');
+function shot(id,S,D,html,cls='paper',zoom=.04){
+  const d=document.createElement('div'); d.className='shot '+cls; d.id=id; d.innerHTML=`<div class="cam">${html}</div>`; stage.appendChild(d);
+  tl.set(d,{opacity:1},S); if(S+D<DUR-.05) tl.set(d,{opacity:0},S+D);
+  tl.fromTo(d.querySelector('.cam'),{scale:1},{scale:1+zoom,duration:D,ease:'none'},S);
+  return d; }
+function pop(sel,t,d=.45){ tl.fromTo(sel,{opacity:0,scale:.5},{opacity:1,scale:1,duration:d,ease:'back.out(1.8)'},t); }
+function up(sel,t,d=.45){ tl.fromTo(sel,{opacity:0,y:40},{opacity:1,y:0,duration:d,ease:'power3.out'},t); }
+function left(sel,t,d=.5){ tl.fromTo(sel,{opacity:0,x:-120},{opacity:1,x:0,duration:d,ease:'power3.out'},t); }
+function draw(sel,t,d=.6){ gsap.set(sel,{strokeDasharray:1,strokeDashoffset:1}); tl.to(sel,{strokeDashoffset:0,duration:d,ease:'power1.inOut'},t); }
+function hide(sel){ gsap.set(sel,{opacity:0}); }
+const arrowHead=(id,c)=>`<marker id="${id}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${c}"/></marker>`;
+
+const SH={
+abertura(it,P,S,D,i){
+  shot(i,S,D,`
+  <svg width="1280" height="720" viewBox="0 0 1280 720"><defs>${arrowHead(i+'ah',K)}</defs>
+   <path id="${i}ax" pathLength="1" d="M120,640 H1180 M120,640 V90" stroke="${K}" stroke-width="3" fill="none"/>
+   <path id="${i}cv" pathLength="1" d="M130,620 C330,600 420,180 640,150 S 980,420 1170,600" stroke="${K}" stroke-width="4" stroke-dasharray="1" fill="none" stroke-linecap="round"/>
+   <path id="${i}a1" pathLength="1" d="M265,215 C300,230 330,250 360,270" stroke="${R}" stroke-width="4" fill="none" marker-end="url(#${i}ah)"/>
+   <path id="${i}a2" pathLength="1" d="M1010,470 C980,440 950,420 920,410" stroke="${R}" stroke-width="4" fill="none" marker-end="url(#${i}ah)"/>
+  </svg>
+  <div class="frame" id="${i}f" style="left:395px;top:160px;width:490px;height:284px;transform:rotate(-2deg)"><img src="${M(P.foto)}"></div>
+  <div class="abs hw" id="${i}r1" style="left:130px;top:160px;font-size:50px;color:${R}">${esc(P.rot1)}</div>
+  <div class="abs hw" id="${i}r2" style="left:960px;top:470px;font-size:50px;color:${R}">${esc(P.rot2)}</div>
+  <div class="abs bb" id="${i}t1" style="left:0;width:1280px;top:478px;text-align:center;font-size:64px;color:${N}">${esc(P.titulo1)}</div>
+  <div class="abs bb" id="${i}t2" style="left:0;width:1280px;top:534px;text-align:center;font-size:150px;color:${R};text-shadow:6px 6px 0 ${N}">${esc(P.titulo2)}</div>`);
+  hide(`#${i}r1,#${i}r2,#${i}t1,#${i}t2`);
+  draw(`#${i}ax`,S,.6); pop(`#${i}f`,S+.2,.6);
+  left(`#${i}r1`,S+(+P.t_rot1)); draw(`#${i}a1`,S+(+P.t_rot1)+.15,.35);
+  left(`#${i}r2`,S+(+P.t_rot2)); draw(`#${i}a2`,S+(+P.t_rot2)+.15,.35);
+  gsap.set(`#${i}cv`,{opacity:0}); tl.set(`#${i}cv`,{opacity:1},S+(+P.t_curva)); draw(`#${i}cv`,S+(+P.t_curva),2.2);
+  tl.to(`#${i}f`,{y:-70,scale:.82,duration:.6,ease:'power2.inOut'},S+(+P.t_titulo)-.3);
+  tl.to(`#${i}r1,#${i}r2,#${i}a1,#${i}a2`,{opacity:0,duration:.3},S+(+P.t_titulo)-.3);
+  up(`#${i}t1`,S+(+P.t_titulo)); pop(`#${i}t2`,S+(+P.t_nome),.5);
+},
+capitulo(it,P,S,D,i){
+  shot(i,S,D,`
+  <div id="${i}st" class="abs" style="left:-200px;top:-200px;width:1680px;height:1120px;background:repeating-linear-gradient(135deg,${P.c1} 0 70px,${P.c2} 70px 140px)"></div>
+  <div class="abs os" id="${i}n" style="left:110px;top:200px;font-size:44px;background:#fff;color:${N};padding:6px 22px">${esc(P.num)}</div>
+  <div class="abs bb" id="${i}t" style="left:100px;top:280px;font-size:220px;color:${Y};text-shadow:10px 10px 0 ${N};white-space:nowrap">${esc(P.titulo)}</div>`,'',0);
+  tl.fromTo(`#${i}st`,{x:0},{x:198,duration:D,ease:'none'},S);
+  left(`#${i}n`,S+.05,.4); tl.fromTo(`#${i}t`,{opacity:0,x:-260},{opacity:1,x:0,duration:.55,ease:'power4.out'},S+.2);
+},
+nasce(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="chip os" id="${i}n" style="left:90px;top:120px;font-size:40px">${esc(P.nome)}</div>
+  <div class="abs bb" id="${i}a" style="left:80px;top:220px;font-size:300px;color:${N};text-shadow:10px 10px 0 ${Y}">${esc(P.ano)}</div>
+  <svg width="1280" height="720"><g id="${i}pin"><path d="M960,250 C960,200 1040,200 1040,250 C1040,290 1000,330 1000,370 C1000,330 960,290 960,250 Z" fill="${R}" stroke="${K}" stroke-width="4"/><circle cx="1000" cy="250" r="14" fill="#fff"/></g>
+   <path id="${i}ln" pathLength="1" d="M1000,390 C960,440 900,470 830,480" stroke="${K}" stroke-width="3" stroke-dasharray="1" fill="none"/></svg>
+  <div class="abs os" id="${i}l" style="left:760px;top:480px;font-size:44px;color:${N};background:#fff;border:4px solid ${N};padding:8px 20px">${esc(P.local)}</div>`);
+  hide(`#${i}a,#${i}pin,#${i}l`);
+  left(`#${i}n`,S+(+P.t_nome)); pop(`#${i}a`,S+(+P.t_ano),.5);
+  tl.fromTo(`#${i}pin`,{opacity:0,y:-80},{opacity:1,y:0,duration:.45,ease:'bounce.out'},S+(+P.t_local)-.3);
+  draw(`#${i}ln`,S+(+P.t_local),.4); up(`#${i}l`,S+(+P.t_local)+.2);
+},
+pernas(it,P,S,D,i){
+  shot(i,S,D,`
+  <svg width="1280" height="720"><defs>${arrowHead(i+'ah',R)}</defs>
+   <rect x="520" y="120" width="250" height="120" rx="18" fill="${N}"/>
+   <path id="${i}la" pathLength="1" d="M575,230 C570,330 640,380 625,470 S 600,560 615,610" stroke="#a0704e" stroke-width="44" fill="none" stroke-linecap="round"/>
+   <path id="${i}lb" pathLength="1" d="M715,230 C720,320 790,370 795,450 S 770,540 778,566" stroke="#a0704e" stroke-width="44" fill="none" stroke-linecap="round"/>
+   <ellipse id="${i}fa" cx="640" cy="622" rx="46" ry="18" fill="#fff" stroke="${K}" stroke-width="4"/>
+   <ellipse id="${i}fb" cx="762" cy="578" rx="46" ry="18" fill="#fff" stroke="${K}" stroke-width="4"/>
+   <path id="${i}aa" pathLength="1" d="M420,430 C480,420 540,420 600,430" stroke="${R}" stroke-width="4" fill="none" marker-end="url(#${i}ah)"/>
+   <path id="${i}ab" pathLength="1" d="M1000,330 C930,340 880,360 830,390" stroke="${R}" stroke-width="4" fill="none" marker-end="url(#${i}ah)"/>
+   <g id="${i}m"><path d="M830,640 H960 M830,598 H960" stroke="${K}" stroke-width="3" stroke-dasharray="8 6"/><path d="M930,600 V638" stroke="${R}" stroke-width="5" marker-start="url(#${i}ah)" marker-end="url(#${i}ah)"/></g>
+  </svg>
+  <div class="abs hw" id="${i}ta" style="left:200px;top:380px;font-size:56px;color:${R}">${esc(P.rot_a)}</div>
+  <div class="abs hw" id="${i}tb" style="left:1000px;top:270px;font-size:56px;color:${R}">${esc(P.rot_b)}</div>
+  <div class="card bb" id="${i}c" style="left:985px;top:540px;width:200px;padding:6px 0;font-size:84px;color:${R}">${esc(P.medida)}<div class="hw" style="font-size:34px;color:${K};letter-spacing:0">${esc(P.rot_medida)}</div></div>`);
+  draw(`#${i}la,#${i}lb`,S+.1,.8); hide(`#${i}fa,#${i}fb,#${i}ta,#${i}tb,#${i}m,#${i}c`); pop(`#${i}fa,#${i}fb`,S+.8,.3);
+  left(`#${i}ta`,S+(+P.t_a)); draw(`#${i}aa`,S+(+P.t_a)+.1,.35);
+  up(`#${i}tb`,S+(+P.t_b)); draw(`#${i}ab`,S+(+P.t_b)+.1,.35);
+  tl.fromTo(`#${i}m`,{opacity:0},{opacity:1,duration:.3},S+(+P.t_medida)-.2); pop(`#${i}c`,S+(+P.t_medida));
+},
+passaro(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="frame" id="${i}f" style="left:150px;top:110px;width:560px;height:440px;transform:rotate(-3deg)"><img src="${M(P.foto)}"></div>
+  <div class="tape" style="left:370px;top:96px;transform:rotate(4deg)"></div>
+  <div class="abs bb" id="${i}n" style="left:760px;top:220px;font-size:118px;color:${N};text-shadow:5px 5px 0 ${Y}">${esc(P.nome)}</div>
+  <div class="abs hw" id="${i}s" style="left:770px;top:340px;font-size:54px;color:${R};width:470px">${esc(P.sub)}</div>`);
+  hide(`#${i}n,#${i}s`); pop(`#${i}f`,S+.1,.5); left(`#${i}n`,S+(+P.t_nome)); up(`#${i}s`,S+(+P.t_sub));
+},
+clube(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="abs" style="right:0;top:0;width:520px;height:720px;background:repeating-linear-gradient(90deg,#111 0 52px,#f4f4f4 52px 104px)"></div>
+  <div class="abs bb" id="${i}a" style="left:90px;top:120px;font-size:300px;color:${N};text-shadow:10px 10px 0 ${Y}">${esc(P.ano)}</div>
+  <div class="chip os" id="${i}c" style="left:100px;top:440px;font-size:70px;padding:6px 26px">${esc(P.clube)}</div>`);
+  hide(`#${i}a,#${i}c`); pop(`#${i}a`,S+(+P.t_ano)); left(`#${i}c`,S+(+P.t_clube));
+},
+campo(it,P,S,D,i){
+  let stripes=''; for(let k=0;k<10;k++) stripes+=`<rect x="${140+k*100}" y="110" width="50" height="500" fill="#2a6a3f"/>`;
+  shot(i,S,D,`
+  <svg width="1280" height="720"><defs>${arrowHead(i+'ah',Y)}${arrowHead(i+'ar',R)}</defs>
+   <rect x="140" y="110" width="1000" height="500" fill="#327a49" rx="6"/>${stripes}
+   <g fill="none" stroke="#eef3ea" stroke-width="4">
+    <path id="${i}l1" pathLength="1" d="M140,110 H1140 V610 H140 Z"/><path id="${i}l2" pathLength="1" d="M640,110 V610"/>
+    <circle id="${i}l3" pathLength="1" cx="640" cy="360" r="80"/><path id="${i}l4" pathLength="1" d="M1140,210 H980 V510 H1140"/>
+    <path id="${i}l5" pathLength="1" d="M1140,290 H1080 V430 H1140"/></g>
+   <path id="${i}af" pathLength="1" d="M700,430 C720,390 735,360 760,330" stroke="${Y}" stroke-width="5" stroke-dasharray="1" fill="none" marker-end="url(#${i}ah)"/>
+   <path id="${i}ar2" pathLength="1" d="M770,330 C840,330 860,470 920,480 S 1010,450 1040,420" stroke="${R}" stroke-width="7" fill="none" marker-end="url(#${i}ar)"/>
+   <g id="${i}d"><circle cx="0" cy="0" r="24" fill="#fff" stroke="${K}" stroke-width="4"/></g>
+   <g id="${i}p"><circle cx="0" cy="0" r="26" fill="${Y}" stroke="${K}" stroke-width="4"/><text x="0" y="12" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="32" fill="${K}">${esc(P.rot_jog)}</text></g>
+  </svg>
+  <div class="abs hw" id="${i}tf" style="left:640px;top:250px;font-size:46px;color:${Y};text-shadow:2px 2px 0 ${K}">${esc(P.rot_finta)}</div>
+  <div class="abs hw" id="${i}ta" style="left:900px;top:490px;font-size:46px;color:#fff;text-shadow:2px 2px 0 ${K}">${esc(P.rot_arranque)}</div>
+  <div class="abs os" id="${i}c" style="left:330px;top:60px;font-size:64px;color:${R};border:6px solid ${R};padding:2px 20px;background:rgba(232,234,227,.92);transform:rotate(-6deg)">${esc(P.carimbo)}</div>`);
+  ['l1','l2','l3','l4','l5'].forEach((k,n)=>draw(`#${i}${k}`,S+.05+n*.08,.5));
+  gsap.set(`#${i}p`,{x:680,y:440}); gsap.set(`#${i}d`,{x:820,y:380}); hide(`#${i}tf,#${i}ta,#${i}c,#${i}af,#${i}ar2`);
+  const tf=S+(+P.t_finta), ta=S+(+P.t_arranque);
+  tl.set(`#${i}af`,{opacity:1},tf); draw(`#${i}af`,tf,.4); left(`#${i}tf`,tf+.1,.3);
+  tl.to(`#${i}p`,{x:740,y:350,duration:.5,ease:'power2.out'},tf+.3); tl.to(`#${i}d`,{x:790,y:330,duration:.5,ease:'power2.out'},tf+.45);
+  tl.set(`#${i}ar2`,{opacity:1},ta); draw(`#${i}ar2`,ta,.8); up(`#${i}ta`,ta+.5,.3);
+  tl.to(`#${i}p`,{keyframes:[{x:850,y:440,duration:.35},{x:930,y:478,duration:.3},{x:1030,y:425,duration:.35}],ease:'none'},ta+.1);
+  tl.to(`#${i}d`,{x:830,y:300,rotation:0,duration:.5,ease:'power1.out'},ta+.3);
+  tl.fromTo(`#${i}c`,{opacity:0,scale:1.8},{opacity:1,scale:1,duration:.3,ease:'power4.in'},S+(+P.t_carimbo));
+},
+copas(it,P,S,D,i){
+  const star=(x,y)=>`<path d="M${x},${y-34} L${x+10},${y-10} L${x+34},${y-10} L${x+14},${y+5} L${x+22},${y+30} L${x},${y+15} L${x-22},${y+30} L${x-14},${y+5} L${x-34},${y-10} L${x-10},${y-10} Z" fill="${Y}" stroke="${K}" stroke-width="3"/>`;
+  const card=(k,a,s,x)=>`<div class="card" id="${i}c${k}" style="left:${x}px;top:150px;width:400px;height:400px"><svg width="400" height="90" style="position:relative">${star(200,52)}</svg><div class="bb" style="font-size:170px;color:${N}">${esc(a)}</div><div class="os" style="font-size:34px;color:${R}">${esc(P.rot)}</div><div class="hw" style="font-size:40px;color:${K}">${esc(s)}</div></div>`;
+  shot(i,S,D,card(1,P.a1,P.s1,150)+card(2,P.a2,P.s2,730));
+  hide(`#${i}c1,#${i}c2`); pop(`#${i}c1`,S+(+P.t1),.5); pop(`#${i}c2`,S+(+P.t2),.5);
+},
+melhor(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="frame" id="${i}f" style="left:110px;top:110px;width:560px;height:440px;transform:rotate(2deg)"><img src="${M(P.foto)}"></div>
+  <div class="abs hw" style="left:130px;top:590px;font-size:30px;color:${K}">${esc(P.leg)}</div>
+  <div class="abs bb" id="${i}a" style="left:760px;top:100px;font-size:190px;color:${N};text-shadow:8px 8px 0 ${Y}">${esc(P.ano)}</div>
+  <div class="card os" id="${i}c" style="left:760px;top:320px;padding:12px 24px;font-size:44px;color:${N};transform:rotate(-3deg)">${esc(P.card)}</div>
+  <div class="abs os" id="${i}r" style="left:700px;top:450px;width:560px;background:${R};color:#fff;font-size:40px;padding:14px 20px;text-align:center;box-shadow:6px 6px 0 ${N}">${esc(P.fita)}</div>`);
+  hide(`#${i}a,#${i}c,#${i}r`); pop(`#${i}f`,S+.1,.5); up(`#${i}a`,S+.3); pop(`#${i}c`,S+(+P.t_card));
+  tl.fromTo(`#${i}r`,{opacity:0,clipPath:'inset(0 100% 0 0)'},{opacity:1,clipPath:'inset(0 0% 0 0)',duration:.5,ease:'power2.out'},S+(+P.t_fita));
+},
+juntos(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="chip bb" id="${i}a" style="left:170px;top:150px;font-size:110px;padding:8px 30px">${esc(P.a)}</div>
+  <div class="abs bb" id="${i}p" style="left:690px;top:150px;font-size:110px;color:${N};padding:8px 0">+</div>
+  <div class="chip bb" id="${i}b" style="left:770px;top:150px;font-size:110px;padding:8px 30px;background:${R};color:#fff">${esc(P.b)}</div>
+  <div class="abs bb" id="${i}n" style="left:0;width:1280px;top:310px;text-align:center;font-size:260px;color:${R};text-shadow:10px 10px 0 ${N}">${esc(P.num)} <span style="font-size:130px;color:${N};text-shadow:none">${esc(P.rot)}</span></div>`);
+  hide(`#${i}n`); tl.fromTo(`#${i}a`,{opacity:0,x:-300},{opacity:1,x:0,duration:.5,ease:'power3.out'},S+(+P.t_ab));
+  tl.fromTo(`#${i}b`,{opacity:0,x:300},{opacity:1,x:0,duration:.5,ease:'power3.out'},S+(+P.t_ab)+.15); pop(`#${i}p`,S+(+P.t_ab)+.4,.3);
+  pop(`#${i}n`,S+(+P.t_num),.5);
+},
+queda(it,P,S,D,i){
+  shot(i,S,D,`
+  <svg width="1280" height="720"><defs>${arrowHead(i+'ah',R)}</defs>
+   <path d="M140,600 H1160 M140,600 V100" stroke="${K}" stroke-width="3" fill="none"/>
+   <path id="${i}c1" pathLength="1" d="M150,580 C300,560 380,200 560,170" stroke="${N}" stroke-width="7" fill="none" stroke-linecap="round"/>
+   <path id="${i}c2" pathLength="1" d="M560,170 C700,150 760,330 860,420 S 1060,560 1120,575" stroke="${R}" stroke-width="7" fill="none" stroke-linecap="round"/>
+   <circle id="${i}pk" cx="560" cy="170" r="12" fill="${Y}" stroke="${K}" stroke-width="4"/>
+   <circle id="${i}en" cx="1120" cy="575" r="14" fill="${R}" stroke="${K}" stroke-width="4"/>
+  </svg>
+  <div class="abs hw" style="left:60px;top:90px;font-size:38px;color:${K};transform:rotate(-90deg);transform-origin:left top;top:360px">${esc(P.eixo_y)}</div>
+  <div class="abs hw" style="left:1090px;top:606px;font-size:38px;color:${K}">${esc(P.eixo_x)}</div>
+  <div class="abs hw" id="${i}pkl" style="left:470px;top:95px;font-size:46px;color:${N}">${esc(P.pico)}</div>
+  <div class="abs hw" id="${i}r1" style="left:790px;top:250px;font-size:50px;color:${R}">${esc(P.rot1)}</div>
+  <div class="abs hw" id="${i}r2" style="left:900px;top:380px;font-size:50px;color:${R}">${esc(P.rot2)}</div>
+  <div class="abs bb" id="${i}f" style="left:1050px;top:470px;font-size:80px;color:${R}">${esc(P.fim)}</div>
+  <div class="card bb" id="${i}k" style="left:250px;top:330px;padding:10px 34px;font-size:120px;color:${N}">${esc(P.card)}</div>`);
+  hide(`#${i}pk,#${i}en,#${i}pkl,#${i}r1,#${i}r2,#${i}f,#${i}k`);
+  draw(`#${i}c1`,S,.5); pop(`#${i}pk`,S+.45,.3); up(`#${i}pkl`,S+.45,.3);
+  draw(`#${i}c2`,S+(+P.t_rot1),(+P.t_fim)-(+P.t_rot1)); left(`#${i}r1`,S+(+P.t_rot1)+.1); left(`#${i}r2`,S+(+P.t_rot2));
+  pop(`#${i}en`,S+(+P.t_fim),.3); up(`#${i}f`,S+(+P.t_fim)); pop(`#${i}k`,S+(+P.t_card),.5);
+},
+estadio(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="frame" id="${i}f" style="left:170px;top:90px;width:940px;height:460px;transform:rotate(-1.5deg)"><img src="${M(P.foto)}"></div>
+  <div class="chip os" id="${i}l" style="left:200px;top:590px;font-size:34px">${esc(P.leg)}</div>`);
+  hide(`#${i}l`); pop(`#${i}f`,S+.05,.5); left(`#${i}l`,S+.5);
+},
+epitafio(it,P,S,D,i){
+  shot(i,S,D,`
+  <div class="abs hw" id="${i}m" style="left:0;width:1280px;top:120px;text-align:center;font-size:52px;color:${Y}">${esc(P.local)}</div>
+  <div class="abs os" id="${i}a" style="left:0;width:1280px;top:220px;text-align:center;font-size:64px;color:#fff">“${esc(P.l1)}</div>
+  <div class="abs bb" id="${i}b" style="left:0;width:1280px;top:310px;text-align:center;font-size:200px;color:${Y};text-shadow:10px 10px 0 ${R}">${esc(P.l2)}”</div>`,'',.05);
+  document.getElementById(i).style.background=N;
+  hide(`#${i}m,#${i}a,#${i}b`); up(`#${i}m`,S+.1); up(`#${i}a`,S+.3); pop(`#${i}b`,S+(+P.t_l2),.6);
+  tl.to(`#${i} .cam`,{opacity:0,duration:.8},DUR-.9);
+},
+};
+for(const it of EDIT.items){ if(it.hidden||it.type!=='scene') continue; const p=it.props||{}; const f=SH[p.scene]; if(f) f(it,p.params||{},+it.start,+it.dur,it.id+'_'); }
+
+/* linha do tempo da carreira (topo) */
+const TL=EDIT.items.find(x=>x.id==='regua');
+if(TL && !TL.hidden){ const pr=TL.props.params; const anos=pr.anos,tempos=pr.tempos; const x0=330,x1=950,y=44;
+  let s=`<g id="rg" opacity="0"><rect x="${x0-50}" y="${y-28}" width="${x1-x0+100}" height="56" fill="${N}"/><path d="M${x0},${y+6} H${x1}" stroke="#fff" stroke-width="3"/>`;
+  anos.forEach((a,k)=>{ const x=x0+(x1-x0)*k/(anos.length-1); s+=`<circle id="rgd${k}" cx="${x}" cy="${y+6}" r="6" fill="${N}" stroke="#fff" stroke-width="3"/><text id="rgt${k}" x="${x}" y="${y-6}" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="17" fill="#9aa3bd">${a}</text>`; });
+  s+=`<g id="rgm" transform="translate(${x0},${y+6})"><circle r="10" fill="${Y}" stroke="#fff" stroke-width="3"/></g></g>`;
+  document.getElementById('over').innerHTML=`<svg viewBox="0 0 1280 720" width="1280" height="720">${s}</svg>`;
+  const A=+TL.start, B=A+(+TL.dur);
+  tl.to('#rg',{opacity:1,duration:.4},A); tl.to('#rg',{opacity:0,duration:.4},B-.4);
+  // esconde durante cartelas de capítulo
+  EDIT.items.filter(x=>x.props&&x.props.scene==='capitulo'&&!x.hidden&&+x.start>A&&+x.start<B).forEach(c=>{ tl.to('#rg',{opacity:0,duration:.2},+c.start); tl.to('#rg',{opacity:1,duration:.3},+c.start+(+c.dur)); });
+  anos.forEach((a,k)=>{ const x=x0+(x1-x0)*k/(anos.length-1), t=+tempos[k];
+    tl.to('#rgm',{x:x,duration:.5,ease:'power2.inOut'},t); tl.to(`#rgd${k}`,{attr:{fill:Y},duration:.1},t+.4); tl.to(`#rgt${k}`,{attr:{fill:'#ffffff','font-size':22},duration:.2},t+.4); }); }
+
+/* faixas de legenda (lower-thirds) */
+const LB=document.getElementById('lts');
+EDIT.items.filter(x=>x.type==='text'&&x.by==='template'&&!x.hidden).forEach(x=>{
+  const d=document.createElement('div'); d.className='lt'; d.id='lt_'+x.id; d.textContent=x.props.text; LB.appendChild(d);
+  const a=+x.start,b=a+(+x.dur);
+  tl.fromTo(d,{opacity:0,x:-80},{opacity:1,x:0,duration:.35,ease:'power3.out'},a); tl.to(d,{opacity:0,x:-40,duration:.25},b-.25); });
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

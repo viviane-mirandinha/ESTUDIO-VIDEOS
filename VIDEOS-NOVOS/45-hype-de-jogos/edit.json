@@ -1,0 +1,1178 @@
+{
+ "version": 1,
+ "name": "45 - 24-10-2026 - HYPE DE JOGOS - A historia dos videogames em 60 segundos",
+ "estilo": "45-hype-de-jogos",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0636c9"
+ },
+ "duration": 70.6,
+ "template": "local",
+ "fonts": {
+  "Anton": "fonts/Anton-Regular.ttf",
+  "Montserrat Black": "fonts/Montserrat-Black.ttf"
+ },
+ "referencia": {
+  "canal": "Hazard",
+  "canal_url": "https://www.youtube.com/channel/UCI1-J45WXprOQQ_m9pmfW9A",
+  "video": "https://youtu.be/BQvC8KDhgqw",
+  "titulo": "GTA 6: EVERYTHING We Know So Far... (The ULTIMATE Breakdown)",
+  "canais": [
+   "Hazard",
+   "TGG"
+  ],
+  "videos": [
+   "https://youtu.be/BQvC8KDhgqw",
+   "https://youtu.be/FV93IVwJP_4"
+  ],
+  "nota": "vídeo de hype/notícia de game: fundo azul-royal em gradiente, cards arredondados com borda branca que pulam na tela, pílula rosa de destaque, palavra gigante amarela com contorno preto por cima, cortes rápidos; aqui tudo redesenhado em código (sem footage, logo ou personagem de jogo real)"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.wav",
+   "volume": 0.16,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 4.35,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 7.75,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 15.65,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 25.75,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 36.65,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 43.85,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w6",
+    "src": "sfx/whoosh.wav",
+    "start": 48.15,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w7",
+    "src": "sfx/whoosh.wav",
+    "start": 55.15,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w8",
+    "src": "sfx/whoosh.wav",
+    "start": 59.35,
+    "volume": 0.2,
+    "label": "whoosh"
+   },
+   {
+    "id": "w9",
+    "src": "sfx/whoosh.wav",
+    "start": 62.55,
+    "volume": 0.2,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas"
+  },
+  {
+   "id": "visual",
+   "name": "HUD"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Intro: título glitch",
+   "start": 0,
+   "dur": 4.4,
+   "by": "template",
+   "props": {
+    "scene": "intro",
+    "params": {
+     "tag": "TUDO QUE SABEMOS",
+     "l1": "A HISTÓRIA DOS",
+     "l2": "VIDEOGAMES",
+     "pill": "EM 60 SEGUNDOS",
+     "t_l2": 1.4,
+     "t_pill": 2.5
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Contagem regressiva",
+   "start": 4.4,
+   "dur": 3.4,
+   "by": "template",
+   "props": {
+    "scene": "contagem",
+    "params": {
+     "n": [
+      "3",
+      "2",
+      "1"
+     ],
+     "tn": [
+      0.05,
+      0.55,
+      1.05
+     ],
+     "fim": "VALENDO!",
+     "t_fim": 1.5
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1958 - Tennis for Two",
+   "start": 7.8,
+   "dur": 7.9,
+   "by": "template",
+   "props": {
+    "scene": "osc",
+    "params": {
+     "ano": "1958",
+     "sub": "FÍSICO + OSCILOSCÓPIO",
+     "nome": "TENNIS FOR TWO",
+     "nota": "um dos primeiros jogos eletrônicos",
+     "t_nome": 3.9,
+     "t_nota": 4.85
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1972 - Odyssey e Pong",
+   "start": 15.7,
+   "dur": 10.1,
+   "by": "template",
+   "props": {
+    "scene": "odyssey",
+    "params": {
+     "ano": "1972",
+     "c1": "MAGNAVOX ODYSSEY",
+     "c1s": "1º CONSOLE DE CASA",
+     "c2": "PONG",
+     "c2s": "ATARI · FLIPERAMAS",
+     "fim": "EXPLODE",
+     "t_c1": 1.9,
+     "t_c2": 5.5,
+     "t_fim": 8.8
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1983 - Crash",
+   "start": 25.8,
+   "dur": 10.9,
+   "by": "template",
+   "props": {
+    "scene": "crash",
+    "params": {
+     "ano": "1983",
+     "titulo": "CRASH",
+     "g": "MERCADO DOS EUA",
+     "rumor": "VIDEOGAME É MODA PASSAGEIRA",
+     "t_tit": 2.05,
+     "t_g": 3.0,
+     "t_rumor": 7.5
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1985 - NES nos EUA",
+   "start": 36.7,
+   "dur": 7.2,
+   "by": "template",
+   "props": {
+    "scene": "nes",
+    "params": {
+     "carimbo": "ERRADO",
+     "ano": "1985",
+     "nome": "NES CHEGA AOS EUA",
+     "conf": "A INDÚSTRIA RESSUSCITA",
+     "rumor": "MODA PASSAGEIRA",
+     "t_ano": 1.4,
+     "t_nome": 3.3,
+     "t_conf": 4.9
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1989 - Game Boy",
+   "start": 43.9,
+   "dur": 4.3,
+   "by": "template",
+   "props": {
+    "scene": "bolso",
+    "params": {
+     "ano": "1989",
+     "nome": "GAME BOY",
+     "sub": "O JOGO NO BOLSO",
+     "t_nome": 1.9,
+     "t_sub": 3.2
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "94/95 - PlayStation",
+   "start": 48.2,
+   "dur": 7.0,
+   "by": "template",
+   "props": {
+    "scene": "disco",
+    "params": {
+     "d1": "FIM DE 1994",
+     "l1": "JAPÃO",
+     "d2": "1995",
+     "l2": "EUA",
+     "nome": "PLAYSTATION",
+     "a": "3D",
+     "b": "CD",
+     "t_d2": 2.3,
+     "t_nome": 4.1,
+     "t_a": 5.3,
+     "t_b": 5.9
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Internet, celular, online",
+   "start": 55.2,
+   "dur": 4.2,
+   "by": "template",
+   "props": {
+    "scene": "online",
+    "params": {
+     "a": "INTERNET",
+     "b": "CELULAR",
+     "c": "ONLINE",
+     "ta": 1.25,
+     "tb": 2.1,
+     "tc": 3.05
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Hoje: bilhões jogam",
+   "start": 59.4,
+   "dur": 3.2,
+   "by": "template",
+   "props": {
+    "scene": "bilhoes",
+    "params": {
+     "tag": "HOJE",
+     "big": "BILHÕES",
+     "sub": "de pessoas jogam",
+     "t_big": 0.75
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Próxima fase + CTA",
+   "start": 62.6,
+   "dur": 8.0,
+   "by": "template",
+   "props": {
+    "scene": "proxima",
+    "params": {
+     "titulo": "PRÓXIMA FASE?",
+     "card": "DATA DE LANÇAMENTO",
+     "data": "??/??/????",
+     "status": "SEM DATA",
+     "cta": "QUAL FOI SEU 1º CONSOLE?",
+     "cta_tag": "COMENTA AÍ",
+     "t_card": 2.5,
+     "t_cta": 4.4
+    }
+   }
+  },
+  {
+   "id": "hud",
+   "type": "scene",
+   "track": "visual",
+   "label": "HUD: barra de carregamento + anos",
+   "start": 0.3,
+   "dur": 70.0,
+   "by": "template",
+   "props": {
+    "scene": "hud",
+    "params": {
+     "rotulo": "CARREGANDO HISTÓRIA",
+     "anos": [
+      "1958",
+      "1972",
+      "1983",
+      "1985",
+      "1989",
+      "1994",
+      "HOJE"
+     ],
+     "tempos": [
+      7.9,
+      15.8,
+      26.4,
+      38.1,
+      44.2,
+      48.9,
+      59.6
+     ]
+    }
+   }
+  },
+  {
+   "id": "leg",
+   "type": "scene",
+   "track": "legenda",
+   "label": "Legenda amarela palavra a palavra",
+   "start": 0,
+   "dur": 70.6,
+   "by": "template",
+   "props": {
+    "scene": "legenda",
+    "params": {
+     "cor": "#ffe14d",
+     "y": 668,
+     "size": 54,
+     "words": [
+      {
+       "w": "Tudo",
+       "s": 0.0,
+       "e": 0.36
+      },
+      {
+       "w": "que",
+       "s": 0.36,
+       "e": 0.56
+      },
+      {
+       "w": "sabemos",
+       "s": 0.56,
+       "e": 0.86
+      },
+      {
+       "w": "sobre",
+       "s": 0.86,
+       "e": 1.14
+      },
+      {
+       "w": "a",
+       "s": 1.14,
+       "e": 1.32
+      },
+      {
+       "w": "história",
+       "s": 1.32,
+       "e": 1.48
+      },
+      {
+       "w": "dos",
+       "s": 1.48,
+       "e": 1.76
+      },
+      {
+       "w": "videogames,",
+       "s": 1.76,
+       "e": 2.36
+      },
+      {
+       "w": "em",
+       "s": 2.56,
+       "e": 2.66
+      },
+      {
+       "w": "60",
+       "s": 2.66,
+       "e": 3.08
+      },
+      {
+       "w": "segundos.",
+       "s": 3.08,
+       "e": 3.76
+      },
+      {
+       "w": "Contagem",
+       "s": 4.5,
+       "e": 4.98
+      },
+      {
+       "w": "regressiva...",
+       "s": 4.98,
+       "e": 5.7
+      },
+      {
+       "w": "valendo!",
+       "s": 5.94,
+       "e": 6.48
+      },
+      {
+       "w": "1958.",
+       "s": 7.94,
+       "e": 8.62
+      },
+      {
+       "w": "Um",
+       "s": 9.6,
+       "e": 9.6
+      },
+      {
+       "w": "físico",
+       "s": 9.6,
+       "e": 9.96
+      },
+      {
+       "w": "americano",
+       "s": 9.96,
+       "e": 10.42
+      },
+      {
+       "w": "usa",
+       "s": 10.42,
+       "e": 10.7
+      },
+      {
+       "w": "um",
+       "s": 10.7,
+       "e": 10.88
+      },
+      {
+       "w": "osciloscópio",
+       "s": 10.88,
+       "e": 11.48
+      },
+      {
+       "w": "e",
+       "s": 11.48,
+       "e": 11.6
+      },
+      {
+       "w": "cria",
+       "s": 11.6,
+       "e": 11.74
+      },
+      {
+       "w": "Tennis",
+       "s": 11.74,
+       "e": 12.08
+      },
+      {
+       "w": "for Two,",
+       "s": 12.08,
+       "e": 12.44
+      },
+      {
+       "w": "um",
+       "s": 12.66,
+       "e": 12.84
+      },
+      {
+       "w": "dos",
+       "s": 12.84,
+       "e": 12.98
+      },
+      {
+       "w": "primeiros",
+       "s": 12.98,
+       "e": 13.32
+      },
+      {
+       "w": "jogos",
+       "s": 13.32,
+       "e": 13.66
+      },
+      {
+       "w": "eletrônicos.",
+       "s": 13.66,
+       "e": 14.36
+      },
+      {
+       "w": "1972.",
+       "s": 15.86,
+       "e": 16.54
+      },
+      {
+       "w": "Chega",
+       "s": 17.58,
+       "e": 17.76
+      },
+      {
+       "w": "o",
+       "s": 17.76,
+       "e": 17.88
+      },
+      {
+       "w": "Magnavox",
+       "s": 17.88,
+       "e": 18.4
+      },
+      {
+       "w": "Odyssey,",
+       "s": 18.4,
+       "e": 18.82
+      },
+      {
+       "w": "o",
+       "s": 19.1,
+       "e": 19.3
+      },
+      {
+       "w": "primeiro",
+       "s": 19.3,
+       "e": 19.5
+      },
+      {
+       "w": "console",
+       "s": 19.5,
+       "e": 19.9
+      },
+      {
+       "w": "de",
+       "s": 19.9,
+       "e": 20.16
+      },
+      {
+       "w": "casa.",
+       "s": 20.16,
+       "e": 20.44
+      },
+      {
+       "w": "No",
+       "s": 21.18,
+       "e": 21.34
+      },
+      {
+       "w": "mesmo",
+       "s": 21.34,
+       "e": 21.64
+      },
+      {
+       "w": "ano,",
+       "s": 21.64,
+       "e": 21.92
+      },
+      {
+       "w": "a",
+       "s": 22.1,
+       "e": 22.22
+      },
+      {
+       "w": "Atari",
+       "s": 22.22,
+       "e": 22.46
+      },
+      {
+       "w": "lança",
+       "s": 22.46,
+       "e": 22.8
+      },
+      {
+       "w": "Pong nos",
+       "s": 22.8,
+       "e": 23.14
+      },
+      {
+       "w": "fliperamas.",
+       "s": 23.14,
+       "e": 23.72
+      },
+      {
+       "w": "E",
+       "s": 24.5,
+       "e": 24.84
+      },
+      {
+       "w": "explode.",
+       "s": 24.84,
+       "e": 25.1
+      },
+      {
+       "w": "Mas",
+       "s": 25.98,
+       "e": 26.16
+      },
+      {
+       "w": "em",
+       "s": 26.16,
+       "e": 26.44
+      },
+      {
+       "w": "1983...",
+       "s": 26.44,
+       "e": 27.46
+      },
+      {
+       "w": "crash.",
+       "s": 27.9,
+       "e": 28.24
+      },
+      {
+       "w": "Lojas",
+       "s": 28.84,
+       "e": 29.44
+      },
+      {
+       "w": "lotadas",
+       "s": 29.44,
+       "e": 29.88
+      },
+      {
+       "w": "de",
+       "s": 29.88,
+       "e": 30.04
+      },
+      {
+       "w": "jogos",
+       "s": 30.04,
+       "e": 30.34
+      },
+      {
+       "w": "ruins,",
+       "s": 30.34,
+       "e": 30.66
+      },
+      {
+       "w": "e",
+       "s": 31.0,
+       "e": 31.08
+      },
+      {
+       "w": "o",
+       "s": 31.08,
+       "e": 31.24
+      },
+      {
+       "w": "mercado",
+       "s": 31.24,
+       "e": 31.46
+      },
+      {
+       "w": "americano",
+       "s": 31.46,
+       "e": 31.98
+      },
+      {
+       "w": "desaba.",
+       "s": 31.98,
+       "e": 32.74
+      },
+      {
+       "w": "O",
+       "s": 33.32,
+       "e": 33.44
+      },
+      {
+       "w": "boato",
+       "s": 33.44,
+       "e": 33.7
+      },
+      {
+       "w": "da",
+       "s": 33.7,
+       "e": 33.86
+      },
+      {
+       "w": "época,",
+       "s": 33.86,
+       "e": 34.2
+      },
+      {
+       "w": "videogame",
+       "s": 34.62,
+       "e": 34.98
+      },
+      {
+       "w": "era",
+       "s": 34.98,
+       "e": 35.14
+      },
+      {
+       "w": "moda",
+       "s": 35.14,
+       "e": 35.46
+      },
+      {
+       "w": "passageira.",
+       "s": 35.46,
+       "e": 36.14
+      },
+      {
+       "w": "Errado.",
+       "s": 36.82,
+       "e": 37.24
+      },
+      {
+       "w": "Em",
+       "s": 38.06,
+       "e": 38.14
+      },
+      {
+       "w": "1985,",
+       "s": 38.14,
+       "e": 39.26
+      },
+      {
+       "w": "o",
+       "s": 39.82,
+       "e": 40.04
+      },
+      {
+       "w": "NES",
+       "s": 40.04,
+       "e": 40.32
+      },
+      {
+       "w": "chega",
+       "s": 40.32,
+       "e": 40.62
+      },
+      {
+       "w": "aos",
+       "s": 40.62,
+       "e": 40.82
+      },
+      {
+       "w": "Estados",
+       "s": 40.82,
+       "e": 41.16
+      },
+      {
+       "w": "Unidos",
+       "s": 41.16,
+       "e": 41.46
+      },
+      {
+       "w": "e",
+       "s": 41.46,
+       "e": 41.64
+      },
+      {
+       "w": "ressuscita",
+       "s": 41.64,
+       "e": 42.08
+      },
+      {
+       "w": "a",
+       "s": 42.08,
+       "e": 42.26
+      },
+      {
+       "w": "indústria.",
+       "s": 42.26,
+       "e": 43.18
+      },
+      {
+       "w": "1989.",
+       "s": 44.18,
+       "e": 44.78
+      },
+      {
+       "w": "O",
+       "s": 45.74,
+       "e": 45.94
+      },
+      {
+       "w": "Game",
+       "s": 45.94,
+       "e": 46.2
+      },
+      {
+       "w": "Boy",
+       "s": 46.2,
+       "e": 46.32
+      },
+      {
+       "w": "coloca",
+       "s": 46.32,
+       "e": 46.72
+      },
+      {
+       "w": "o",
+       "s": 46.72,
+       "e": 46.92
+      },
+      {
+       "w": "jogo",
+       "s": 46.92,
+       "e": 47.08
+      },
+      {
+       "w": "no",
+       "s": 47.08,
+       "e": 47.24
+      },
+      {
+       "w": "bolso.",
+       "s": 47.24,
+       "e": 48.14
+      },
+      {
+       "w": "No",
+       "s": 48.38,
+       "e": 48.52
+      },
+      {
+       "w": "fim",
+       "s": 48.52,
+       "e": 48.72
+      },
+      {
+       "w": "de",
+       "s": 48.72,
+       "e": 48.9
+      },
+      {
+       "w": "94",
+       "s": 48.9,
+       "e": 49.32
+      },
+      {
+       "w": "no",
+       "s": 49.32,
+       "e": 49.56
+      },
+      {
+       "w": "Japão,",
+       "s": 49.56,
+       "e": 50.0
+      },
+      {
+       "w": "e",
+       "s": 50.2,
+       "e": 50.34
+      },
+      {
+       "w": "em",
+       "s": 50.34,
+       "e": 50.5
+      },
+      {
+       "w": "95",
+       "s": 50.5,
+       "e": 50.94
+      },
+      {
+       "w": "nos",
+       "s": 50.94,
+       "e": 51.14
+      },
+      {
+       "w": "Estados",
+       "s": 51.14,
+       "e": 51.54
+      },
+      {
+       "w": "Unidos,",
+       "s": 51.54,
+       "e": 51.9
+      },
+      {
+       "w": "o",
+       "s": 52.22,
+       "e": 52.32
+      },
+      {
+       "w": "PlayStation",
+       "s": 52.32,
+       "e": 52.76
+      },
+      {
+       "w": "populariza",
+       "s": 52.76,
+       "e": 53.28
+      },
+      {
+       "w": "o",
+       "s": 53.28,
+       "e": 53.48
+      },
+      {
+       "w": "3D",
+       "s": 53.48,
+       "e": 53.82
+      },
+      {
+       "w": "e",
+       "s": 53.82,
+       "e": 53.98
+      },
+      {
+       "w": "o",
+       "s": 53.98,
+       "e": 54.08
+      },
+      {
+       "w": "CD",
+       "s": 54.08,
+       "e": 54.26
+      },
+      {
+       "w": "na",
+       "s": 54.26,
+       "e": 54.48
+      },
+      {
+       "w": "sala.",
+       "s": 54.48,
+       "e": 54.74
+      },
+      {
+       "w": "Depois",
+       "s": 55.34,
+       "e": 55.9
+      },
+      {
+       "w": "vieram",
+       "s": 55.9,
+       "e": 56.32
+      },
+      {
+       "w": "a",
+       "s": 56.32,
+       "e": 56.46
+      },
+      {
+       "w": "internet,",
+       "s": 56.46,
+       "e": 56.84
+      },
+      {
+       "w": "o",
+       "s": 57.22,
+       "e": 57.34
+      },
+      {
+       "w": "celular",
+       "s": 57.34,
+       "e": 57.62
+      },
+      {
+       "w": "e",
+       "s": 57.62,
+       "e": 57.78
+      },
+      {
+       "w": "as",
+       "s": 57.78,
+       "e": 57.94
+      },
+      {
+       "w": "partidas",
+       "s": 57.94,
+       "e": 58.28
+      },
+      {
+       "w": "online.",
+       "s": 58.28,
+       "e": 58.68
+      },
+      {
+       "w": "Hoje,",
+       "s": 59.6,
+       "e": 59.9
+      },
+      {
+       "w": "bilhões",
+       "s": 60.2,
+       "e": 60.46
+      },
+      {
+       "w": "de",
+       "s": 60.46,
+       "e": 60.66
+      },
+      {
+       "w": "pessoas",
+       "s": 60.66,
+       "e": 61.02
+      },
+      {
+       "w": "jogam",
+       "s": 61.02,
+       "e": 61.3
+      },
+      {
+       "w": "no",
+       "s": 61.3,
+       "e": 61.5
+      },
+      {
+       "w": "mundo",
+       "s": 61.5,
+       "e": 61.72
+      },
+      {
+       "w": "todo.",
+       "s": 61.72,
+       "e": 62.06
+      },
+      {
+       "w": "E",
+       "s": 62.78,
+       "e": 62.94
+      },
+      {
+       "w": "a",
+       "s": 62.94,
+       "e": 63.1
+      },
+      {
+       "w": "próxima",
+       "s": 63.1,
+       "e": 63.4
+      },
+      {
+       "w": "fase?",
+       "s": 63.4,
+       "e": 63.7
+      },
+      {
+       "w": "Ainda",
+       "s": 64.6,
+       "e": 64.88
+      },
+      {
+       "w": "sem",
+       "s": 64.88,
+       "e": 65.12
+      },
+      {
+       "w": "data",
+       "s": 65.12,
+       "e": 65.34
+      },
+      {
+       "w": "de",
+       "s": 65.34,
+       "e": 65.56
+      },
+      {
+       "w": "lançamento.",
+       "s": 65.56,
+       "e": 65.84
+      },
+      {
+       "w": "Comenta",
+       "s": 67.0,
+       "e": 67.26
+      },
+      {
+       "w": "aí,",
+       "s": 67.26,
+       "e": 67.6
+      },
+      {
+       "w": "qual",
+       "s": 67.8,
+       "e": 67.9
+      },
+      {
+       "w": "foi",
+       "s": 67.9,
+       "e": 68.12
+      },
+      {
+       "w": "o",
+       "s": 68.12,
+       "e": 68.22
+      },
+      {
+       "w": "seu",
+       "s": 68.22,
+       "e": 68.34
+      },
+      {
+       "w": "primeiro",
+       "s": 68.34,
+       "e": 68.64
+      },
+      {
+       "w": "console?",
+       "s": 68.64,
+       "e": 69.08
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

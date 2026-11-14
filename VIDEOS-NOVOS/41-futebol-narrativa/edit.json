@@ -1,0 +1,490 @@
+{
+ "version": 1,
+ "name": "41 - 24-10-2026 - FUTEBOL NARRATIVA - A historia de Garrincha em 1 minuto",
+ "estilo": "41-futebol-narrativa",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#e8eae3"
+ },
+ "duration": 70.5,
+ "template": "local",
+ "fonts": {
+  "Bebas Neue": "fonts/BebasNeue-Regular.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf",
+  "Caveat": "fonts/Caveat.ttf"
+ },
+ "referencia": {
+  "canal": "Tifo Football by The Athletic",
+  "canal_url": "https://www.youtube.com/@Tifo",
+  "video": "https://www.youtube.com/watch?v=B7zPPImyTxI",
+  "titulo": "The Rise & Fall of Ronaldinho",
+  "secundaria": {
+   "canal": "Number 9",
+   "video": "https://www.youtube.com/watch?v=ifodIYxyUtg",
+   "titulo": "The Magician Who Brought Street Football to the World's Biggest Stadiums"
+  },
+  "nota": "documentário de jogador ilustrado: papel quadriculado, recorte de foto com moldura branca e pontilhado, cartelas de capítulo em listras diagonais, faixas de legenda azul-marinho com amarelo condensado, gráfico de trajetória da carreira, campo tático desenhado"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.wav",
+   "volume": 0.09,
+   "start": 0,
+   "fade_out": 2.5,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 8.55,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 26.05,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 37.55,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 54.35,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 66.65,
+    "volume": 0.16,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas"
+  },
+  {
+   "id": "visual",
+   "name": "Linha do tempo"
+  },
+  {
+   "id": "textos",
+   "name": "Faixas de legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Abertura - retrato + curva",
+   "start": 0.0,
+   "dur": 8.6,
+   "by": "template",
+   "props": {
+    "scene": "abertura",
+    "params": {
+     "foto": "img/retrato_duo.jpg",
+     "rot1": "coluna torta",
+     "rot2": "pernas tortas",
+     "titulo1": "A HISTÓRIA DE",
+     "titulo2": "GARRINCHA",
+     "t_rot1": 1.0,
+     "t_rot2": 1.84,
+     "t_curva": 3.4,
+     "t_titulo": 6.48,
+     "t_nome": 7.32
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Capítulo 1",
+   "start": 8.6,
+   "dur": 2.2,
+   "by": "template",
+   "props": {
+    "scene": "capitulo",
+    "params": {
+     "num": "CAPÍTULO 1",
+     "titulo": "O PASSARINHO",
+     "c1": "#1d2541",
+     "c2": "#b8463a"
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1933 - Pau Grande",
+   "start": 10.8,
+   "dur": 6.2,
+   "by": "template",
+   "props": {
+    "scene": "nasce",
+    "params": {
+     "nome": "MANUEL FRANCISCO DOS SANTOS",
+     "ano": "1933",
+     "local": "PAU GRANDE · RJ",
+     "t_nome": 0.1,
+     "t_ano": 2.36,
+     "t_local": 3.9
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Pernas - diagrama",
+   "start": 17.0,
+   "dur": 5.4,
+   "by": "template",
+   "props": {
+    "scene": "pernas",
+    "params": {
+     "rot_a": "para dentro",
+     "rot_b": "para fora",
+     "medida": "6 CM",
+     "rot_medida": "mais curta",
+     "t_a": 1.2,
+     "t_b": 2.4,
+     "t_medida": 3.4
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Apelido - passarinho",
+   "start": 22.4,
+   "dur": 3.7,
+   "by": "template",
+   "props": {
+    "scene": "passaro",
+    "params": {
+     "foto": "img/corruira.jpg",
+     "nome": "GARRINCHA",
+     "sub": "= nome de um passarinho",
+     "t_nome": 1.2,
+     "t_sub": 1.7
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Capítulo 2",
+   "start": 26.1,
+   "dur": 2.3,
+   "by": "template",
+   "props": {
+    "scene": "capitulo",
+    "params": {
+     "num": "CAPÍTULO 2",
+     "titulo": "O DRIBLE",
+     "c1": "#2f6b45",
+     "c2": "#1d2541"
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1953 - Botafogo",
+   "start": 28.4,
+   "dur": 3.4,
+   "by": "template",
+   "props": {
+    "scene": "clube",
+    "params": {
+     "ano": "1953",
+     "clube": "BOTAFOGO",
+     "t_ano": 0.28,
+     "t_clube": 2.2
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Campo tático - o drible",
+   "start": 31.8,
+   "dur": 5.8,
+   "by": "template",
+   "props": {
+    "scene": "campo",
+    "params": {
+     "rot_finta": "finta",
+     "rot_arranque": "arrancada",
+     "rot_jog": "G",
+     "t_finta": 0.4,
+     "t_arranque": 1.6,
+     "t_carimbo": 3.9,
+     "carimbo": "NINGUÉM PARAVA"
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Capítulo 3",
+   "start": 37.6,
+   "dur": 2.7,
+   "by": "template",
+   "props": {
+    "scene": "capitulo",
+    "params": {
+     "num": "CAPÍTULO 3",
+     "titulo": "AS COPAS",
+     "c1": "#c99a1e",
+     "c2": "#2f6b45"
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1958 e 1962 - cards",
+   "start": 40.3,
+   "dur": 4.7,
+   "by": "template",
+   "props": {
+    "scene": "copas",
+    "params": {
+     "a1": "1958",
+     "s1": "SUÉCIA",
+     "a2": "1962",
+     "s2": "CHILE",
+     "rot": "CAMPEÃO DO MUNDO",
+     "t1": 0.3,
+     "t2": 2.5
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1962 - melhor da Copa",
+   "start": 45.0,
+   "dur": 5.2,
+   "by": "template",
+   "props": {
+    "scene": "melhor",
+    "params": {
+     "foto": "img/fas_crop.jpg",
+     "leg": "Garrincha com fãs, anos 60",
+     "ano": "1962",
+     "card": "PELÉ MACHUCADO",
+     "fita": "ELEITO O MELHOR DA COPA",
+     "t_card": 1.4,
+     "t_fita": 3.9
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Garrincha + Pelé = 0 derrotas",
+   "start": 50.2,
+   "dur": 4.2,
+   "by": "template",
+   "props": {
+    "scene": "juntos",
+    "params": {
+     "a": "GARRINCHA",
+     "b": "PELÉ",
+     "num": "0",
+     "rot": "DERROTAS",
+     "t_ab": 0.3,
+     "t_num": 2.5
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Capítulo 4",
+   "start": 54.4,
+   "dur": 2.3,
+   "by": "template",
+   "props": {
+    "scene": "capitulo",
+    "params": {
+     "num": "CAPÍTULO 4",
+     "titulo": "A QUEDA",
+     "c1": "#3a1f24",
+     "c2": "#b8463a"
+    }
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Curva da carreira - queda",
+   "start": 56.7,
+   "dur": 7.4,
+   "by": "template",
+   "props": {
+    "scene": "queda",
+    "params": {
+     "eixo_y": "talento",
+     "eixo_x": "tempo",
+     "pico": "auge · 1962",
+     "rot1": "lesões no joelho",
+     "rot2": "alcoolismo",
+     "fim": "1983",
+     "card": "49 ANOS",
+     "t_rot1": 0.5,
+     "t_rot2": 1.7,
+     "t_fim": 4.16,
+     "t_card": 5.8
+    }
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Estádio Mané Garrincha",
+   "start": 64.1,
+   "dur": 2.6,
+   "by": "template",
+   "props": {
+    "scene": "estadio",
+    "params": {
+     "foto": "img/estadio_brasilia.jpg",
+     "leg": "Estádio Nacional Mané Garrincha · Brasília"
+    }
+   }
+  },
+  {
+   "id": "s16",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Epitáfio - Alegria do Povo",
+   "start": 66.7,
+   "dur": 3.8,
+   "by": "template",
+   "props": {
+    "scene": "epitafio",
+    "params": {
+     "local": "Magé, RJ",
+     "l1": "AQUI DESCANSA A",
+     "l2": "ALEGRIA DO POVO",
+     "t_l2": 0.9
+    }
+   }
+  },
+  {
+   "id": "regua",
+   "type": "scene",
+   "track": "visual",
+   "label": "Linha do tempo da carreira",
+   "start": 10.8,
+   "dur": 53.3,
+   "by": "template",
+   "props": {
+    "scene": "regua",
+    "params": {
+     "anos": [
+      "1933",
+      "1953",
+      "1958",
+      "1962",
+      "1983"
+     ],
+     "tempos": [
+      13.16,
+      28.68,
+      41.32,
+      42.8,
+      60.86
+     ]
+    }
+   }
+  },
+  {
+   "id": "lt1",
+   "type": "text",
+   "track": "textos",
+   "label": "Faixa: UM DOS MAIORES DRIBLADOR",
+   "start": 3.4,
+   "dur": 2.9,
+   "by": "template",
+   "props": {
+    "text": "UM DOS MAIORES DRIBLADORES DA HISTÓRIA"
+   }
+  },
+  {
+   "id": "lt2",
+   "type": "text",
+   "track": "textos",
+   "label": "Faixa: APELIDO DADO PELA IRMÃ",
+   "start": 22.6,
+   "dur": 3.4,
+   "by": "template",
+   "props": {
+    "text": "APELIDO DADO PELA IRMÃ"
+   }
+  },
+  {
+   "id": "lt3",
+   "type": "text",
+   "track": "textos",
+   "label": "Faixa: O DRIBLE ERA QUASE SEMPR",
+   "start": 31.9,
+   "dur": 3.7,
+   "by": "template",
+   "props": {
+    "text": "O DRIBLE ERA QUASE SEMPRE O MESMO"
+   }
+  },
+  {
+   "id": "lt5",
+   "type": "text",
+   "track": "textos",
+   "label": "Faixa: JUNTOS EM CAMPO",
+   "start": 50.3,
+   "dur": 2.1,
+   "by": "template",
+   "props": {
+    "text": "JUNTOS EM CAMPO"
+   }
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "pele": {
+  "arquivo": "File:Pele con brasil (cropped).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Pele_con_brasil_(cropped).jpg",
+  "licenca": "Public domain",
+  "autor": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+ },
+ "jair": {
+  "arquivo": "File:Jairzinho México 70.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Jairzinho_M%C3%A9xico_70.jpg",
+  "licenca": "Public domain",
+  "autor": "<a rel=\"mw:WikiLink/Interwiki\" href=\"https://en.wikipedia.org/wiki/Panini%20Group\" title=\"en:Panini Group\" class=\"extiw\">Panini</a>"
+ },
+ "jair2": {
+  "arquivo": "File:Jairzinho 1970s.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Jairzinho_1970s.jpg",
+  "licenca": "Public domain",
+  "autor": "Unknown author<span style=\"display: none;\">Unknown author</span>"
+ },
+ "ca": {
+  "arquivo": "File:Carlos Alberto (1970).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Carlos_Alberto_(1970).jpg",
+  "licenca": "Public domain",
+  "autor": "<a href=\"https://en.wikipedia.org/wiki/Panini_Group\" class=\"extiw\" title=\"en:Panini Group\">Panini</a>"
+ },
+ "zag": {
+  "arquivo": "File:Zagalo, Fundo Correio da Manhã - 3.tif",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Zagalo,_Fundo_Correio_da_Manh%C3%A3_-_3.tif",
+  "licenca": "Public domain",
+  "autor": "<div class=\"fn value\">\nUnknown<span style=\"display: none;\">Unknown </span></div>"
+ },
+ "time": {
+  "arquivo": "File:Brazil national team 1970.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Brazil_national_team_1970.jpg",
+  "licenca": "Public domain",
+  "autor": "<i>El Gráfico</i>"
+ }
+}

@@ -1,0 +1,11 @@
+# 42 - FUTEBOL TV RETRO - A Copa de 1970 e o maior time da história
+- Ref: Classic Football ("Football's Greatest International Teams .. Brazil 1970", 1,87 mi views) + Beyond Football ("The Greatest Eras In Football History Explained in 58 Minutes"). Medido em ref/ESTILO-MEDIDO.md: ~21 cortes/min, plano médio 2,8 s, só voz (sem trilha alta), texto na tela só em títulos (5% dos quadros), paleta de arquivo amarelado.
+- Gênero: história de futebol antigo contada como se fosse uma fita VHS passando numa TV de tubo.
+- Camada TV (por cima de tudo): tela com cantos arredondados + vinheta de tubo + reflexo de vidro, linhas de varredura, barra de rolagem clara, aberração cromática (filtro SVG separa R/B 2 px), grão de ruído sempre ligado (7%), OSD de fita em VT323 (PLAY ► piscando, CH 03, contador SP 0:00:SS, data de câmera JUN. 21 1970).
+- Entre cenas: chiado (ruído cheio + faixa de tracking + tela tremendo 0,28 s) com chiado.wav gerado por ffmpeg. Liga a TV no começo (linha que abre) e desliga no fim (linha → ponto).
+- Cenas (13, todas em código): barras de cor → "1970" com sol 70s; campo P&B que vira colorido em "cores"; foto da seleção; página de TELETEXTO (campanha 6 jogos); fotos com tarja 70s (laranja/marrom, Righteous) + chips amarelos; prancheta de giz com números; estádio ilustrado (Azteca genérico); PLACAR DE LÂMPADAS que muda na palavra falada; jogada do 4º gol desenhada a giz; sunburst + 3 estrelas + taça genérica; pergunta + CTA de comentário.
+- Fontes (Google Fonts, OFL): VT323 (OSD/teletexto/placar), Righteous (títulos anos 70), Anton (data da final).
+- Fotos: Wikimedia Commons domínio público (retratos/figurinha/foto posada; nenhuma imagem de partida ou transmissão) - créditos em img/creditos.json.
+- Voz edge-tts pt-BR-AntonioNeural +8%; tempos faster-whisper medium GPU (words.json); cada texto/gol entra na palavra.
+- Áudio: pad retrô + chiado de fita gerado por ffmpeg (musica.wav, duck), chiado.wav nos cortes, whoosh.wav 2x. Sem impact/pop.
+- Editável: edit.json (textos, tempos, resultados, eventos do placar, data do OSD, lista de tempos do chiado). Fotos novas: pôr o arquivo em img/ e também no bloco <img> escondido do template_src.html (o builder só espelha o que aparece em src=). Regerar: python make_edit.py.

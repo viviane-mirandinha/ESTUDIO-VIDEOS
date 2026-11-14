@@ -1,0 +1,25 @@
+{
+ "estilo": "43-mapa-vermelho",
+ "titulo": "Por que o Estreito de Ormuz assusta o mundo",
+ "voz": "edge-tts pt-BR-AntonioNeural +6%",
+ "tempos": "faster-whisper large-v3 (GPU) -> words.json",
+ "mapa": "Natural Earth countries50m.geojson (ESTUDIO-VIDEOS/recursos/mapas), projeção Mercator, paths SVG",
+ "fontes_tipograficas": ["Anton (Google Fonts, OFL)", "Inter (Google Fonts, OFL)"],
+ "audio": ["voz.mp3", "musica.mp3 = drone gerado no ffmpeg", "sfx/whoosh.wav"],
+ "fatos": [
+  {"fala": "menos de quarenta quilômetros de largura no ponto mais apertado", "fonte": "Wikipedia 'Strait of Hormuz' (largura mínima 21 milhas náuticas ≈ 39 km)", "url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz"},
+  {"fala": "cerca de 20% de todo o petróleo consumido no planeta", "fonte": "EIA, 'Amid regional conflict, the Strait of Hormuz remains critical oil chokepoint' (16/06/2025): 20 milhões b/d em 2024, ~20% do consumo mundial de líquidos de petróleo; mais de 1/4 do comércio marítimo de petróleo", "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"},
+  {"fala": "ao norte o Irã, ao sul Omã", "fonte": "Wikipedia (costa norte Irã; sul = península de Musandam, Omã)", "url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz"},
+  {"fala": "Arábia Saudita, Iraque, Kuwait, Emirados e Catar dependem da passagem", "fonte": "EIA (mesmo artigo de 2025)", "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"},
+  {"fala": "cerca de um quinto do GNL negociado no mundo", "fonte": "EIA 2025: 'around one-fifth of global LNG trade also transited the Strait of Hormuz in 2024'", "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"},
+  {"fala": "faixas de menos de 4 km, uma para entrar e outra para sair", "fonte": "Wikipedia: esquema de separação de tráfego, cada faixa com 2 milhas náuticas (3,7 km)", "url": "https://en.wikipedia.org/wiki/Strait_of_Hormuz"},
+  {"fala": "Arábia Saudita e Emirados têm oleodutos que desviam, mas não dão conta de todo o volume", "fonte": "EIA 2025: oleoduto Leste-Oeste da Aramco (Abqaiq→Yanbu) e oleoduto dos EAU até Fujairah; capacidade disponível bem abaixo dos 20 mi b/d", "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"},
+  {"fala": "84% desse petróleo segue para a Ásia", "fonte": "EIA 2025: 84% do petróleo bruto e condensado que passou por Ormuz em 2024 foi para mercados asiáticos", "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504"}
+ ],
+ "nota_fatos": "A EIA dá ~20% do CONSUMO mundial (não do petróleo marítimo; no marítimo é >25%). O roteiro usa a formulação do consumo, que é a da fonte. Largura: fontes variam entre ~33 e ~39 km, por isso 'menos de 40 km'. Rotas no mapa e faixas de navegação são ilustrativas (traçado aproximado).",
+ "referencias": [
+  {"canal": "Ticket To Know", "video": "https://www.youtube.com/watch?v=udtVdDmSSoo", "views": 4120591},
+  {"canal": "Himfact", "video": "https://www.youtube.com/watch?v=4vRtXY-iFnc", "views": 533013}
+ ],
+ "medicao_ref": "ref/ESTILO-MEDIDO.md (6,5 cortes/min, plano médio 8,8 s, só voz, -24 LUFS)"
+}
