@@ -1,0 +1,14 @@
+<!--params {"titulo":"CAPÍTULO 1","sub":"O começo de tudo","cor":"#ff3b30","fundo":"#0b0c10"}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:{{p.fundo}};display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Inter,Arial,sans-serif">
+  <div class="bar" style="width:0;height:6px;background:{{p.cor}};margin-bottom:28px"></div>
+  <h1 style="margin:0;color:#fff;font-size:calc({{H}}px*0.11);font-weight:900;letter-spacing:-.02em">{{p.titulo}}</h1>
+  <p style="margin:12px 0 0;color:#bbb;font-size:calc({{H}}px*0.045)">{{p.sub}}</p>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  tl.fromTo("#{{id}} .bar",{width:0},{width:"30%",duration:.6,ease:"power3.out",immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} h1",{opacity:0,y:40},{opacity:1,y:0,duration:.6,ease:"power3.out",immediateRender:false},S+.15);
+  tl.fromTo("#{{id}} p",{opacity:0},{opacity:1,duration:.5,immediateRender:false},S+.45);
+  tl.set("#{{id}} h1,#{{id}} p",{opacity:0},0); tl.set("#{{id}} .bar",{width:0},0);
+})(window.__timelines.main, {{json}});
+</script>

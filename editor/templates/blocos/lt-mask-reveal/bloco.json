@@ -1,0 +1,29 @@
+{
+  "name": "lt-mask-reveal",
+  "titulo": "Nome na tela — revelação",
+  "categoria": "Lower third",
+  "descricao": "Uma faixa de cor atravessa e revela o nome.",
+  "title_en": "Lower Third — Mask Reveal",
+  "description_en": "Cardless lower third: an accent sweep crosses and clip-path-reveals a heavy name, role fades up; for footage",
+  "duration": 4.8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "lower-third",
+    "overlay",
+    "podcast",
+    "interview",
+    "bold"
+  ],
+  "variables": [],
+  "files": [
+    "lt-mask-reveal.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/lt-mask-reveal",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Dr. Maya Chen",
+    "Host · Neuroscientist"
+  ]
+}

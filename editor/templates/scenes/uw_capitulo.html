@@ -1,0 +1,15 @@
+<!--params {"n":"CAPÍTULO 01","titulo":"LA TAPA"}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+ <div class="band" style="position:absolute;left:0;right:0;top:50%;height:132px;margin-top:-66px;background:rgba(10,14,22,.86);display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <div class="n" style="font:800 24px 'Montserrat',sans-serif;color:#f5c518;letter-spacing:.22em">{{p.n}}</div>
+  <div class="t" style="font:900 56px/1.05 'Montserrat',sans-serif;color:#fff;letter-spacing:.04em;margin-top:6px;text-transform:uppercase">{{p.titulo}}</div>
+ </div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}";
+ tl.fromTo(id+" .band",{scaleY:0},{scaleY:1,duration:.45,ease:"power3.out",immediateRender:true},S+.1);
+ tl.fromTo(id+" .n",{opacity:0,letterSpacing:"0.5em"},{opacity:1,letterSpacing:"0.22em",duration:.8,immediateRender:true},S+.4);
+ tl.fromTo(id+" .t",{opacity:0,y:10},{opacity:1,y:0,duration:.6,immediateRender:true},S+.55);
+ tl.to(id+" .band",{opacity:0,duration:.4},S+D-.4);
+})(window.__timelines.main,{{json}});
+</script>

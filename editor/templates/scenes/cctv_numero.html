@@ -1,0 +1,16 @@
+<!--params {"n":"5","titulo":"O CORREDOR VAZIO","cor":"#e8101a","fundo":"#000000"}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:{{p.fundo}};overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc({{H}}px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 {{p.cor}}">{{p.n}}</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:{{p.cor}};transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc({{H}}px*0.085);letter-spacing:.04em;text-transform:uppercase">{{p.titulo}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  tl.set("#{{id}} .num",{opacity:0,scale:1.6},0); tl.set("#{{id}} .tt",{opacity:0,y:30},0); tl.set("#{{id}} .bar",{width:0},0);
+  tl.fromTo("#{{id}} .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#{{id}} .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#{{id}} .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#{{id}} .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {{json}});
+</script>

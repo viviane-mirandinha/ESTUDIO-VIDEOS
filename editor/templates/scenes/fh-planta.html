@@ -1,0 +1,65 @@
+<!--params {"titulo":"Leppings Lane · Hillsborough","rot_gramado":"GRAMADO","rot_tunel":"TÚNEL","rot_portao":"PORTÃO C","rot_fora":"FILA LÁ FORA","rot_rua":"LEPPINGS LANE","rot_setores":"SETORES 3 e 4","rot_lotados":"LOTADOS","rot_grades":"GRADES","t_portao":1.2,"t_tunel":3.5,"t_setores":5.9,"t_grades":8.6}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#1b1a18 0%,#070707 75%,#000 100%)">
+<svg viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0;font-family:'Playfair Display','EB Garamond',Georgia,serif">
+  <defs><marker id="{{id}}_ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e3a63c"/></marker></defs>
+  <text class="tt" x="640" y="64" text-anchor="middle" fill="#f2ede4" font-size="48">{{p.titulo}}</text>
+  <g class="ln" fill="none" stroke="#e9e1d3" stroke-width="2.2">
+    <rect x="240" y="95" width="800" height="150"/>
+    <rect x="480" y="175" width="320" height="70"/>
+    <rect x="585" y="226" width="110" height="19"/>
+    <rect x="240" y="270" width="800" height="130"/>
+    <path d="M480,270 V400 M640,270 V400 M800,270 V400 M880,270 V400"/>
+    <path d="M615,400 V485 M665,400 V485"/>
+    <path d="M300,485 H615 M665,485 H1000 V590 H930 M860,590 H300 V485"/>
+  </g>
+  <rect class="hl" x="481" y="271" width="318" height="128" fill="#b0281c" opacity="0"/>
+  <line class="fence" x1="240" y1="262" x2="1040" y2="262" stroke="#e9e1d3" stroke-width="2" stroke-dasharray="6 6"/>
+  <line class="gate" x1="860" y1="590" x2="930" y2="590" stroke="#e9e1d3" stroke-width="6"/>
+  <g class="lb" fill="#bdb4a5" font-size="26" text-anchor="middle">
+    <text x="640" y="150" font-size="30" letter-spacing="4">{{p.rot_gramado}}</text>
+    <text x="360" y="390">1-2</text><text x="560" y="390">3</text><text x="720" y="390">4</text><text x="840" y="390">5</text><text x="960" y="390">6-7</text>
+    <text x="595" y="452" text-anchor="end">{{p.rot_tunel}}</text>
+    <text x="300" y="668" text-anchor="start" letter-spacing="3">{{p.rot_rua}}</text>
+    <text x="1180" y="708" text-anchor="end">{{p.rot_fora}}</text>
+  </g>
+  <text class="lgate" x="895" y="565" text-anchor="middle" fill="#e3a63c" font-size="28" opacity="0">{{p.rot_portao}}</text>
+  <path class="arrow" d="M1040,652 L895,600 L640,505 L640,318" fill="none" stroke="#e3a63c" stroke-width="4" stroke-dasharray="14 10" marker-end="url(#{{id}}_ah)" opacity="0"/>
+  <g class="lset" fill="#e8796b" font-size="28" opacity="0"><text x="1058" y="330">{{p.rot_setores}}</text><text x="1058" y="364" font-size="26">{{p.rot_lotados}}</text></g>
+  <text class="lgr" x="1058" y="272" fill="#ff5a47" font-size="32" opacity="0">{{p.rot_grades}}</text>
+  <g class="xs" fill="#ff5a47" font-size="34" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700"><text x="530" y="273" opacity="0">✕</text><text x="610" y="273" opacity="0">✕</text><text x="690" y="273" opacity="0">✕</text><text x="770" y="273" opacity="0">✕</text></g>
+  <g class="pen"></g><g class="mov"></g>
+</svg>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", NS="http://www.w3.org/2000/svg";
+  const root=document.querySelector(id); let seed=9;
+  const rnd=()=>{ seed=(seed*16807)%2147483647; return (seed-1)/2147483646; };
+  const mk=(g,x,y,c)=>{ const e=document.createElementNS(NS,"circle"); e.setAttribute("cx",x); e.setAttribute("cy",y); e.setAttribute("r",4.6); e.setAttribute("fill",c); root.querySelector(g).appendChild(e); return e; };
+  const tp=S+Number(P.t_portao), tt=S+Number(P.t_tunel), ts=S+Number(P.t_setores), tg=S+Number(P.t_grades);
+  // linhas: draw-on
+  root.querySelectorAll(".ln rect,.ln path").forEach((el,i)=>{ const L=el.getTotalLength?el.getTotalLength():2000;
+    el.style.strokeDasharray=L; tl.set(el,{strokeDashoffset:L},0);
+    tl.to(el,{strokeDashoffset:0,duration:1.1,ease:"power1.inOut"},S+.15+i*.08); });
+  tl.set(id,{opacity:0},0); tl.to(id,{opacity:1,duration:.5},S);
+  tl.set(id+" .tt,"+id+" .lb,"+id+" .fence,"+id+" .gate",{opacity:0},0);
+  tl.to(id+" .tt",{opacity:1,duration:.7},S+.1); tl.to(id+" .lb,"+id+" .fence,"+id+" .gate",{opacity:1,duration:.7},S+.8);
+  // setores ja lotados
+  const pen=[]; for(let i=0;i<48;i++){ const x=490+rnd()*300, y=282+rnd()*96; pen.push([mk(".pen",x,y,"#e9e1d3"),x,y]); }
+  pen.forEach(([e],i)=>{ tl.set(e,{opacity:0},0); tl.to(e,{opacity:.85,duration:.4},S+1+i*.01); });
+  // fila la fora -> portao C -> tunel -> setores 3/4
+  const mv=[]; for(let i=0;i<64;i++){ const x=720+rnd()*460, y=612+rnd()*72; mv.push([mk(".mov",x,y,"#f2ede4"),x,y]); }
+  mv.forEach(([e],i)=>{ tl.set(e,{opacity:0},0); tl.to(e,{opacity:.95,duration:.4},S+.9+i*.008); });
+  tl.to(id+" .gate",{stroke:"#e3a63c",duration:.3},tp); tl.to(id+" .gate",{attr:{x2:862},duration:.6,ease:"power2.out"},tp+.3);
+  tl.to(id+" .lgate",{opacity:1,duration:.5},tp);
+  tl.to(id+" .arrow",{opacity:1,duration:.4},tt-.4); tl.fromTo(id+" .arrow",{strokeDashoffset:600},{strokeDashoffset:0,duration:3.2,ease:"none",immediateRender:false},tt-.4);
+  mv.forEach(([e,x,y],i)=>{ const fx=488+rnd()*304, fy=280+rnd()*100, t0=tp+.7+i*.045;
+    tl.to(e,{keyframes:[{attr:{cx:880+rnd()*30,cy:596},duration:.8,ease:"power1.in"},{attr:{cx:635+rnd()*10,cy:492},duration:.9,ease:"none"},{attr:{cx:632+rnd()*16,cy:405},duration:.45,ease:"none"},{attr:{cx:fx,cy:fy},duration:.6,ease:"power1.out"}]},t0);
+    pen.push([e,fx,fy]); });
+  tl.to(id+" .hl",{opacity:.42,duration:.8},ts); tl.to(id+" .lset",{opacity:1,duration:.6},ts+.1);
+  tl.to(id+" .fence",{stroke:"#ff5a47",strokeWidth:6,strokeDasharray:"0 0",duration:.5},tg);
+  tl.to(id+" .lgr",{opacity:1,duration:.5},tg+.1);
+  root.querySelectorAll(".xs text").forEach((e,i)=>tl.to(e,{opacity:1,duration:.35},tg+.7+i*.25));
+  pen.forEach(([e,x,y])=>{ const ny=Math.max(276,y-22-(y-280)*0.15); tl.to(e,{attr:{cy:ny},duration:1.2,ease:"power2.out"},tg+.3); });
+  tl.to(id,{opacity:0,duration:.5},S+D-.5);
+})(window.__timelines.main, {{json}});
+</script>

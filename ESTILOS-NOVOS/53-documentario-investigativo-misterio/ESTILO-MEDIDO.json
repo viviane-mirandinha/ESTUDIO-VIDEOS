@@ -1,0 +1,96 @@
+{
+ "arquivo": "hookdoc.mp4",
+ "video": {
+  "duracao_s": 34.0,
+  "largura": 1280,
+  "altura": 720,
+  "fps": 30.0,
+  "tem_audio": false
+ },
+ "proporcao": "16:9",
+ "cortes": {
+  "n": 9,
+  "tempos_s": [
+   4.2,
+   6.6,
+   8.7,
+   12.7,
+   14.233,
+   18.7,
+   21.7,
+   22.4,
+   27.533
+  ],
+  "por_minuto": 15.9,
+  "plano_medio_s": 3.4,
+  "plano_mediana_s": 3.5,
+  "plano_min_s": 0.7,
+  "plano_max_s": 6.47,
+  "transicoes": {
+   "seco": 9,
+   "dissolve": 0,
+   "fade_preto": 0
+  }
+ },
+ "imagem": {
+  "paleta": [
+   {
+    "hex": "#292f30",
+    "peso_pct": 30.8
+   },
+   {
+    "hex": "#d2dedf",
+    "peso_pct": 19.3
+   },
+   {
+    "hex": "#838d91",
+    "peso_pct": 17.5
+   },
+   {
+    "hex": "#596166",
+    "peso_pct": 17.0
+   },
+   {
+    "hex": "#b2b9b3",
+    "peso_pct": 15.4
+   }
+  ],
+  "cor_destaque": "#e8ed30",
+  "brilho_medio": 125.2,
+  "contraste": 49.2,
+  "saturacao_media": 0.178
+ },
+ "texto": {
+  "central": 14.7,
+  "inferior": 17.6,
+  "altura_faixa_pct_tela": 4.8
+ },
+ "loudness": {
+  "integrado_lufs": null,
+  "faixa_lra_lu": null,
+  "pico_dbfs": null
+ },
+ "audio": {
+  "tipo": "sem áudio",
+  "tem_musica": false
+ },
+ "recomendacao": {
+  "canvas": "1280x720",
+  "plano_alvo_s": 3.4,
+  "cortes_por_minuto_alvo": 15.9,
+  "fonte_google": "Montserrat 800",
+  "fonte_porque": "neutro",
+  "cor_fundo": "#292f30",
+  "cor_destaque": "#e8ed30",
+  "transicao": "corte seco (sem transição); whoosh suave só em troca de capítulo",
+  "legenda": {
+   "posicao": "inferior",
+   "y": 576,
+   "size": 40,
+   "pct_quadros_com_texto": 17.6
+  },
+  "musica": false,
+  "loudness_alvo_lufs": -14.0
+ },
+ "sheet": "sheet-medido.jpg"
+}

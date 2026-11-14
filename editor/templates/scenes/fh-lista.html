@@ -1,0 +1,23 @@
+<!--params {"titulo":"O que o painel provou","item1":"","item2":"","item3":"","t1":0.6,"t2":2.5,"t3":4.3,"bg":"","bg_opacidade":0.2}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:#000;overflow:hidden;font-family:'Playfair Display','EB Garamond',Georgia,'Times New Roman',serif;color:#f2ede4">
+  <div class="bgimg" style="position:absolute;inset:-4%;background:url('{{p.bg}}') center/cover no-repeat;filter:grayscale(1) blur(4px);opacity:{{p.bg_opacidade}}"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 40% 50%,rgba(0,0,0,.2) 0%,rgba(0,0,0,.9) 85%)"></div>
+  <div style="position:absolute;left:150px;right:120px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center">
+    <div class="tt" style="font-size:54px;margin-bottom:10px">{{p.titulo}}</div>
+    <div class="rule" style="width:0;height:1px;background:#b9ad98;margin:6px 0 34px"></div>
+    <div class="it i1" style="font-size:38px;line-height:1.3;margin:0 0 22px;display:flex;gap:22px"><span style="color:#c0392b">—</span><span>{{p.item1}}</span></div>
+    <div class="it i2" style="font-size:38px;line-height:1.3;margin:0 0 22px;display:flex;gap:22px"><span style="color:#c0392b">—</span><span>{{p.item2}}</span></div>
+    <div class="it i3" style="font-size:38px;line-height:1.3;margin:0;display:flex;gap:22px"><span style="color:#c0392b">—</span><span>{{p.item3}}</span></div>
+  </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  tl.set(id+" .tt,"+id+" .it",{opacity:0},0); tl.set(id+" .rule",{width:0},0); tl.set(id,{opacity:0},0);
+  tl.to(id,{opacity:1,duration:.5},S);
+  tl.fromTo(id+" .bgimg",{scale:1},{scale:1.06,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo(id+" .tt",{opacity:0,x:-14},{opacity:1,x:0,duration:.8,ease:"power2.out",immediateRender:false},S+.1);
+  tl.fromTo(id+" .rule",{width:0},{width:360,duration:.9,ease:"power2.inOut",immediateRender:false},S+.3);
+  [["i1","t1"],["i2","t2"],["i3","t3"]].forEach(([c,t])=>{ if(P["item"+c[1]]) tl.fromTo(id+" ."+c,{opacity:0,x:-16},{opacity:1,x:0,duration:.7,ease:"power2.out",immediateRender:false},S+Number(P[t])); });
+  tl.to(id,{opacity:0,duration:.5,ease:"power1.in"},S+D-.5);
+})(window.__timelines.main, {{json}});
+</script>

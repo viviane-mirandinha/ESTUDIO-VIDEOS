@@ -1,0 +1,27 @@
+<!--params {"titulo":"LONDRES, 1888","city":"CITY OF LONDON","whitechapel":"WHITECHAPEL","rio":"RIO TÂMISA","nota":"Mitre Square: jurisdição da City"}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:#050505;overflow:hidden;font-family:'Oswald',Arial Narrow,sans-serif">
+<svg width="1280" height="720" viewBox="0 0 1280 720" style="position:absolute;inset:0">
+<g stroke="#161616" stroke-width="1"><line x1='0' y1='0' x2='0' y2='720'/><line x1='80' y1='0' x2='80' y2='720'/><line x1='160' y1='0' x2='160' y2='720'/><line x1='240' y1='0' x2='240' y2='720'/><line x1='320' y1='0' x2='320' y2='720'/><line x1='400' y1='0' x2='400' y2='720'/><line x1='480' y1='0' x2='480' y2='720'/><line x1='560' y1='0' x2='560' y2='720'/><line x1='640' y1='0' x2='640' y2='720'/><line x1='720' y1='0' x2='720' y2='720'/><line x1='800' y1='0' x2='800' y2='720'/><line x1='880' y1='0' x2='880' y2='720'/><line x1='960' y1='0' x2='960' y2='720'/><line x1='1040' y1='0' x2='1040' y2='720'/><line x1='1120' y1='0' x2='1120' y2='720'/><line x1='1200' y1='0' x2='1200' y2='720'/><line x1='1280' y1='0' x2='1280' y2='720'/><line x1='0' y1='0' x2='1280' y2='0'/><line x1='0' y1='80' x2='1280' y2='80'/><line x1='0' y1='160' x2='1280' y2='160'/><line x1='0' y1='240' x2='1280' y2='240'/><line x1='0' y1='320' x2='1280' y2='320'/><line x1='0' y1='400' x2='1280' y2='400'/><line x1='0' y1='480' x2='1280' y2='480'/><line x1='0' y1='560' x2='1280' y2='560'/><line x1='0' y1='640' x2='1280' y2='640'/><line x1='0' y1='720' x2='1280' y2='720'/></g>
+<path class="rio" d="M0,648 L40,621 L83,494 L166,436 L265,440 L384,463 L477,475 L576,504 L635,524 L730,545 L832,555 L934,514 L1037,473 L1126,463 L1190,555 L1216,658 L1280,720" fill="none" stroke="#1d2730" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="city" d="M179,422 L179,257 L333,226 L486,196 L589,216 L646,339 L627,463 L477,469 L265,434 L179,422" fill="rgba(255,255,255,.04)" stroke="#d9d9d9" stroke-width="3" stroke-dasharray="12 9"/>
+<g class='dot' transform='translate(835,220)'><circle class='pulse' r='10' fill='none' stroke='#e01b24' stroke-width='3'/><circle r='9' fill='#e01b24'/></g><g class='dot' transform='translate(678,216)'><circle class='pulse' r='10' fill='none' stroke='#e01b24' stroke-width='3'/><circle r='9' fill='#e01b24'/></g><g class='dot' transform='translate(762,360)'><circle class='pulse' r='10' fill='none' stroke='#e01b24' stroke-width='3'/><circle r='9' fill='#e01b24'/></g><g class='dot' transform='translate(599,360)'><circle class='pulse' r='10' fill='none' stroke='#e01b24' stroke-width='3'/><circle r='9' fill='#e01b24'/></g><g class='dot' transform='translate(646,257)'><circle class='pulse' r='10' fill='none' stroke='#e01b24' stroke-width='3'/><circle r='9' fill='#e01b24'/></g>
+</svg>
+<div class="lb" style="position:absolute;left:214px;top:279px;width:340px;text-align:center;color:#e8e8e8;font-size:34px;font-weight:700;letter-spacing:.06em">{{p.city}}</div>
+<div class="lb" style="position:absolute;left:842px;top:264px;color:#ff2a33;font-size:48px;font-weight:700;letter-spacing:.06em">{{p.whitechapel}}</div>
+<div class="lb" style="position:absolute;left:149px;top:544px;color:#5d7282;font-size:28px;letter-spacing:.2em">{{p.rio}}</div>
+<div class="nt" style="position:absolute;left:179px;top:420px;width:400px;text-align:right;color:#fff;font-size:28px;font-weight:700">{{p.nota}}</div>
+<div class="tt" style="position:absolute;left:0;right:0;top:40px;text-align:center;color:#fff;font-size:56px;font-weight:700;letter-spacing:.08em">{{p.titulo}}</div>
+<div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 100%)"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}} ";
+  tl.set(R+".lb,"+R+".nt,"+R+".tt,"+R+".dot",{opacity:0},0); tl.set(R+".city",{strokeDashoffset:600,opacity:0},0);
+  tl.fromTo(R+"svg",{scale:1.08},{scale:1,duration:D,ease:"none",immediateRender:false},S);
+  tl.to(R+".tt",{opacity:1,duration:.4,immediateRender:false},S+.1);
+  tl.to(R+".city",{opacity:1,strokeDashoffset:0,duration:1.4,ease:"power1.inOut",immediateRender:false},S+.3);
+  tl.to(R+".lb",{opacity:1,duration:.5,stagger:.25,immediateRender:false},S+.6);
+  tl.to(R+".dot",{opacity:1,duration:.25,stagger:.3,immediateRender:false},S+1.4);
+  tl.fromTo(R+".pulse",{attr:{r:10},opacity:1},{attr:{r:34},opacity:0,duration:1.1,repeat:Math.max(1,Math.floor((D-1.5)/1.1)),ease:"power1.out",immediateRender:false},S+1.5);
+  tl.to(R+".nt",{opacity:1,duration:.4,immediateRender:false},S+3.0);
+})(window.__timelines.main, {{json}});
+</script>

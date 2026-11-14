@@ -1,0 +1,33 @@
+<!--params {"img":"","zoom":0.05,"shake":0,"speedlines":0,"marca":"","pos":"50% 50%"}-->
+<div id="{{id}}" class="aq" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="{{p.img}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:{{p.pos}};transform-origin:50% 45%">
+ <svg class="sl" viewBox="0 0 1280 720" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></svg>
+ <svg class="mk" viewBox="0 0 120 120" style="position:absolute;right:70px;top:60px;width:120px;height:120px;opacity:0"></svg>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", NS="http://www.w3.org/2000/svg";
+  const root=document.querySelector(id);
+  tl.fromTo(id+" .ph",{scale:1},{scale:1+(+P.zoom||0),duration:D,ease:"none",immediateRender:true},S);
+  // shake leve (deterministico): rajada curta no inicio do plano
+  const a=+P.shake||0;
+  if(a>0){ let t=S; for(let i=0;i<10;i++){ const k=1-i/10; tl.to(id+" .ph",{x:Math.sin(i*2.3)*a*k,y:Math.cos(i*1.7)*a*.6*k,duration:.05,ease:"none"},t); t+=.05; }
+           tl.to(id+" .ph",{x:0,y:0,duration:.08},t); }
+  // speedlines de manga (3 grupos alternando a cada 0,1 s)
+  const sl=root.querySelector(".sl"); const n=+P.speedlines||0;
+  if(n>0){ let seed=7; const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+    const G=[0,1,2].map(()=>{const g=document.createElementNS(NS,"g");g.setAttribute("opacity","0");sl.appendChild(g);return g;});
+    for(let i=0;i<n*3;i++){ const ang=rnd()*Math.PI*2, r1=330+rnd()*170, r2=900, w=1.5+rnd()*4;
+      const cx=640,cy=360, x1=cx+Math.cos(ang)*r1, y1=cy+Math.sin(ang)*r1*.75, x2=cx+Math.cos(ang)*r2, y2=cy+Math.sin(ang)*r2*.75;
+      const px=-Math.sin(ang)*w, py=Math.cos(ang)*w;
+      const p=document.createElementNS(NS,"polygon"); p.setAttribute("points",x1+","+y1+" "+(x2+px)+","+(y2+py)+" "+(x2-px)+","+(y2-py));
+      p.setAttribute("fill","#ffffff"); p.setAttribute("opacity",(0.25+rnd()*0.45).toFixed(2)); G[i%3].appendChild(p); }
+    for(let t=0,k=0;t<D-0.05;t+=0.1,k++){ G.forEach((g,j)=>tl.set(g,{attr:{opacity:(k%3===j)?1:0}},S+t)); }
+    tl.set(G,{attr:{opacity:0}},S+D-0.01);
+  }
+  // marca certo / errado (sem som)
+  const mk=root.querySelector(".mk");
+  if(P.marca==="x"){ mk.innerHTML='<circle cx="60" cy="60" r="52" fill="none" stroke="#ff3b3b" stroke-width="8"/><path d="M38 38 L82 82 M82 38 L38 82" stroke="#ff3b3b" stroke-width="10" stroke-linecap="round"/>'; }
+  else if(P.marca==="ok"){ mk.innerHTML='<circle cx="60" cy="60" r="52" fill="none" stroke="#39e26a" stroke-width="8"/><path d="M34 62 L53 80 L88 42" fill="none" stroke="#39e26a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>'; }
+  if(P.marca){ tl.fromTo(mk,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.35,ease:"back.out(2)",immediateRender:true},S+.25); }
+})(window.__timelines.main, {{json}});
+</script>

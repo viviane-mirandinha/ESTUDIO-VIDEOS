@@ -1,0 +1,8 @@
+Canal 1: Kings and Generals — https://www.youtube.com/channel/UCMmaBzfCCwZ2KqaBJjkj0fw
+  Vídeo analisado: Six-Day War (1967) - Third Arab–Israeli War DOCUMENTARY — https://youtu.be/hHqJ6pgdE-c (videoId hHqJ6pgdE-c, ~12,5 mi views, 16 min)
+Canal 2: Real Time History — https://www.youtube.com/channel/UCB1eDEd1AYG3YrRIJSZzMOQ
+  Vídeo analisado: Arab-Israeli War 1967 (Six-Day War Documentary) — https://youtu.be/h7wiiKSYrv8 (videoId h7wiiKSYrv8, ~1,9 mi views, 23 min)
+Busca usada: "war dispatch history documentary", "telegram style history video", "day by day war documentary" (yt-dlp ytsearch15, flat)
+Trechos baixados: 0-40 s, meio (40 s) e últimos 40 s de cada vídeo, 360p (só para medir; não entram no vídeo final)
+Prints: sheet-kingsandgenerals-hHqJ6pgdE-c.jpg, sheet-realtimehistory-h7wiiKSYrv8.jpg (1 quadro a cada 4 s)
+Exemplo nosso: VIDEOS-NOVOS/40-despacho-de-guerra ("Dia D: as primeiras 24 horas", PT-BR, ~79 s)

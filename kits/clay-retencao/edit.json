@@ -1,0 +1,1006 @@
+{
+ "version": 1,
+ "name": "Clay 3D — Retenção (canal dark)",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#141518"
+ },
+ "duration": 42.5,
+ "template": "local",
+ "fonts": {
+  "InterL": "fonts/Inter.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 7.45,
+    "volume": 0.18,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 14,
+    "volume": 0.18,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 27.45,
+    "volume": 0.18,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 36.35,
+    "volume": 0.18,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas / mídia"
+  },
+  {
+   "id": "topo",
+   "name": "Capítulo / selos"
+  },
+  {
+   "id": "setas",
+   "name": "Setas 3D"
+  },
+  {
+   "id": "carimbos",
+   "name": "Carimbos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  },
+  {
+   "id": "cta",
+   "name": "Final"
+  },
+  {
+   "id": "textos",
+   "name": "Textos extras"
+  }
+ ],
+ "items": [
+  {
+   "id": "tag0",
+   "type": "text",
+   "track": "topo",
+   "label": "Capítulo: O MITO",
+   "start": 0,
+   "dur": 7.6,
+   "props": {
+    "text": "O MITO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "tag1",
+   "type": "text",
+   "track": "topo",
+   "label": "Capítulo: O ALGORITMO",
+   "start": 7.6,
+   "dur": 6.5,
+   "props": {
+    "text": "O ALGORITMO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "tag2",
+   "type": "text",
+   "track": "topo",
+   "label": "Capítulo: RETENÇÃO",
+   "start": 14.1,
+   "dur": 13.5,
+   "props": {
+    "text": "RETENÇÃO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "tag3",
+   "type": "text",
+   "track": "topo",
+   "label": "Capítulo: CORRIGIR",
+   "start": 27.6,
+   "dur": 7.3,
+   "props": {
+    "text": "CORRIGIR"
+   },
+   "by": "template"
+  },
+  {
+   "id": "tag4",
+   "type": "text",
+   "track": "topo",
+   "label": "Capítulo: O QUE CONTA",
+   "start": 34.9,
+   "dur": 7.6,
+   "props": {
+    "text": "O QUE CONTA"
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip0",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: POSTANDO",
+   "start": 0.3,
+   "dur": 7.15,
+   "props": {
+    "text": "POSTANDO",
+    "sub": "todo dia",
+    "icone": "◫",
+    "laranja": false
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip1",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: O ALGORITMO",
+   "start": 7.6,
+   "dur": 2.75,
+   "props": {
+    "text": "O ALGORITMO",
+    "sub": "não conta posts",
+    "icone": "✕",
+    "laranja": false
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip2",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: ELE MEDE",
+   "start": 10.4,
+   "dur": 3.65,
+   "props": {
+    "text": "ELE MEDE",
+    "sub": "tempo assistido",
+    "icone": "◷",
+    "laranja": true
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip3",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: SAIU NO COMEÇO",
+   "start": 14.15,
+   "dur": 5.45,
+   "props": {
+    "text": "SAIU NO COMEÇO",
+    "sub": "para de mostrar",
+    "icone": "↘",
+    "laranja": false
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip4",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: ASSISTIU ATÉ O FIM",
+   "start": 19.7,
+   "dur": 7.85,
+   "props": {
+    "text": "ASSISTIU ATÉ O FIM",
+    "sub": "mostra pra mais",
+    "icone": "↗",
+    "laranja": true
+   },
+   "by": "template"
+  },
+  {
+   "id": "chip5",
+   "type": "text",
+   "track": "topo",
+   "label": "Selo: ABRE O GRÁFICO",
+   "start": 27.65,
+   "dur": 7.1,
+   "props": {
+    "text": "ABRE O GRÁFICO",
+    "sub": "retenção",
+    "icone": "⌇",
+    "laranja": true
+   },
+   "by": "template"
+  },
+  {
+   "id": "fonte0",
+   "type": "text",
+   "track": "topo",
+   "label": "Fonte: Ajuda do YouTube",
+   "start": 10.4,
+   "dur": 17.15,
+   "props": {
+    "text": "Ajuda do YouTube",
+    "sub": "· como o YouTube recomenda vídeos"
+   },
+   "by": "template"
+  },
+  {
+   "id": "fonte1",
+   "type": "text",
+   "track": "topo",
+   "label": "Fonte: YouTube Studio",
+   "start": 27.65,
+   "dur": 7.1,
+   "props": {
+    "text": "YouTube Studio",
+    "sub": "· relatório de retenção de público"
+   },
+   "by": "template"
+  },
+  {
+   "id": "st0",
+   "type": "text",
+   "track": "carimbos",
+   "label": "Carimbo: MITO",
+   "start": 1.45,
+   "dur": 1.65,
+   "props": {
+    "text": "MITO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "st1",
+   "type": "text",
+   "track": "carimbos",
+   "label": "Carimbo: SEGURA GENTE",
+   "start": 24.45,
+   "dur": 1.75,
+   "props": {
+    "text": "EDITADO NO PAINEL"
+   },
+   "by": "template"
+  },
+  {
+   "id": "st2",
+   "type": "text",
+   "track": "carimbos",
+   "label": "Carimbo: TEMPO > VOLUME",
+   "start": 35,
+   "dur": 1.6,
+   "props": {
+    "text": "TEMPO > VOLUME"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab0",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: UM VÍDEO ATRÁS DO OUTRO",
+   "start": 4.6,
+   "dur": 2.7,
+   "props": {
+    "text": "UM VÍDEO ATRÁS DO OUTRO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab1",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: QUANTIDADE",
+   "start": 8.3,
+   "dur": 2,
+   "props": {
+    "text": "QUANTIDADE"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab2",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: TEMPO ASSISTIDO",
+   "start": 11.9,
+   "dur": 2.05,
+   "props": {
+    "text": "TEMPO ASSISTIDO"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab3",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: PRIMEIROS SEGUNDOS",
+   "start": 15,
+   "dur": 4.5,
+   "props": {
+    "text": "PRIMEIROS SEGUNDOS"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab4",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: ATÉ O FIM",
+   "start": 20.6,
+   "dur": 3.7,
+   "props": {
+    "text": "ATÉ O FIM"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab5",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: MAIS PESSOAS",
+   "start": 26.3,
+   "dur": 1.3,
+   "props": {
+    "text": "MAIS PESSOAS"
+   },
+   "by": "template"
+  },
+  {
+   "id": "lab6",
+   "type": "text",
+   "track": "setas",
+   "label": "Seta: A LINHA CAI",
+   "start": 31.5,
+   "dur": 3.1,
+   "props": {
+    "text": "A LINHA CAI"
+   },
+   "by": "template"
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 42.5,
+   "props": {
+    "words": [
+     {
+      "w": "Postar",
+      "s": 0.58,
+      "e": 1.02
+     },
+     {
+      "w": "todo",
+      "s": 1.02,
+      "e": 1.28
+     },
+     {
+      "w": "dia",
+      "s": 1.28,
+      "e": 1.44
+     },
+     {
+      "w": "não",
+      "s": 1.44,
+      "e": 1.58
+     },
+     {
+      "w": "vai",
+      "s": 1.58,
+      "e": 1.74
+     },
+     {
+      "w": "fazer",
+      "s": 1.74,
+      "e": 1.96
+     },
+     {
+      "w": "seu",
+      "s": 1.96,
+      "e": 2.06
+     },
+     {
+      "w": "canal",
+      "s": 2.06,
+      "e": 2.3
+     },
+     {
+      "w": "dark",
+      "s": 2.3,
+      "e": 2.64
+     },
+     {
+      "w": "crescer,",
+      "s": 2.64,
+      "e": 3.08
+     },
+     {
+      "w": "parece",
+      "s": 3.22,
+      "e": 3.4
+     },
+     {
+      "w": "trabalho,",
+      "s": 3.4,
+      "e": 3.92
+     },
+     {
+      "w": "né?",
+      "s": 3.96,
+      "e": 4.24
+     },
+     {
+      "w": "Calendário",
+      "s": 4.88,
+      "e": 5.32
+     },
+     {
+      "w": "cheio,",
+      "s": 5.32,
+      "e": 5.76
+     },
+     {
+      "w": "um",
+      "s": 5.94,
+      "e": 6.06
+     },
+     {
+      "w": "vídeo",
+      "s": 6.06,
+      "e": 6.26
+     },
+     {
+      "w": "atrás",
+      "s": 6.26,
+      "e": 6.48
+     },
+     {
+      "w": "do",
+      "s": 6.48,
+      "e": 6.76
+     },
+     {
+      "w": "outro.",
+      "s": 6.76,
+      "e": 7.06
+     },
+     {
+      "w": "Mas",
+      "s": 7.7,
+      "e": 7.76
+     },
+     {
+      "w": "o",
+      "s": 7.76,
+      "e": 7.96
+     },
+     {
+      "w": "algoritmo",
+      "s": 7.96,
+      "e": 8.44
+     },
+     {
+      "w": "não",
+      "s": 8.44,
+      "e": 8.62
+     },
+     {
+      "w": "conta",
+      "s": 8.62,
+      "e": 8.88
+     },
+     {
+      "w": "quantos",
+      "s": 8.88,
+      "e": 9.16
+     },
+     {
+      "w": "vídeos",
+      "s": 9.16,
+      "e": 9.4
+     },
+     {
+      "w": "você",
+      "s": 9.4,
+      "e": 9.74
+     },
+     {
+      "w": "posta,",
+      "s": 9.74,
+      "e": 10.24
+     },
+     {
+      "w": "ele",
+      "s": 10.44,
+      "e": 10.62
+     },
+     {
+      "w": "mede",
+      "s": 10.62,
+      "e": 10.88
+     },
+     {
+      "w": "outra",
+      "s": 10.88,
+      "e": 11.12
+     },
+     {
+      "w": "coisa.",
+      "s": 11.12,
+      "e": 11.62
+     },
+     {
+      "w": "Quanto",
+      "s": 11.96,
+      "e": 12.22
+     },
+     {
+      "w": "tempo",
+      "s": 12.22,
+      "e": 12.44
+     },
+     {
+      "w": "a",
+      "s": 12.44,
+      "e": 12.56
+     },
+     {
+      "w": "pessoa",
+      "s": 12.56,
+      "e": 12.84
+     },
+     {
+      "w": "fica",
+      "s": 12.84,
+      "e": 13.12
+     },
+     {
+      "w": "assistindo?",
+      "s": 13.12,
+      "e": 13.86
+     },
+     {
+      "w": "Se",
+      "s": 14.24,
+      "e": 14.38
+     },
+     {
+      "w": "ela",
+      "s": 14.38,
+      "e": 14.54
+     },
+     {
+      "w": "sai",
+      "s": 14.54,
+      "e": 14.68
+     },
+     {
+      "w": "nos",
+      "s": 14.68,
+      "e": 14.84
+     },
+     {
+      "w": "primeiros",
+      "s": 14.84,
+      "e": 15.26
+     },
+     {
+      "w": "segundos,",
+      "s": 15.26,
+      "e": 15.78
+     },
+     {
+      "w": "o",
+      "s": 16.16,
+      "e": 16.28
+     },
+     {
+      "w": "YouTube",
+      "s": 16.28,
+      "e": 16.52
+     },
+     {
+      "w": "entende",
+      "s": 16.52,
+      "e": 16.98
+     },
+     {
+      "w": "que",
+      "s": 16.98,
+      "e": 17.12
+     },
+     {
+      "w": "o",
+      "s": 17.12,
+      "e": 17.18
+     },
+     {
+      "w": "vídeo",
+      "s": 17.18,
+      "e": 17.38
+     },
+     {
+      "w": "não",
+      "s": 17.38,
+      "e": 17.64
+     },
+     {
+      "w": "entregou,",
+      "s": 17.64,
+      "e": 18.18
+     },
+     {
+      "w": "e",
+      "s": 18.36,
+      "e": 18.52
+     },
+     {
+      "w": "para",
+      "s": 18.52,
+      "e": 18.64
+     },
+     {
+      "w": "de",
+      "s": 18.64,
+      "e": 18.84
+     },
+     {
+      "w": "mostrar.",
+      "s": 18.84,
+      "e": 19.24
+     },
+     {
+      "w": "Agora,",
+      "s": 19.72,
+      "e": 19.92
+     },
+     {
+      "w": "se",
+      "s": 19.94,
+      "e": 20.1
+     },
+     {
+      "w": "ela",
+      "s": 20.1,
+      "e": 20.32
+     },
+     {
+      "w": "assiste",
+      "s": 20.32,
+      "e": 20.54
+     },
+     {
+      "w": "até",
+      "s": 20.54,
+      "e": 20.72
+     },
+     {
+      "w": "o",
+      "s": 20.72,
+      "e": 20.9
+     },
+     {
+      "w": "fim,",
+      "s": 20.9,
+      "e": 21.1
+     },
+     {
+      "w": "e",
+      "s": 21.44,
+      "e": 21.52
+     },
+     {
+      "w": "ainda",
+      "s": 21.52,
+      "e": 21.76
+     },
+     {
+      "w": "clica",
+      "s": 21.76,
+      "e": 21.92
+     },
+     {
+      "w": "no",
+      "s": 21.92,
+      "e": 22.14
+     },
+     {
+      "w": "próximo,",
+      "s": 22.14,
+      "e": 22.5
+     },
+     {
+      "w": "o",
+      "s": 22.74,
+      "e": 22.9
+     },
+     {
+      "w": "sinal",
+      "s": 22.9,
+      "e": 23.1
+     },
+     {
+      "w": "é",
+      "s": 23.1,
+      "e": 23.22
+     },
+     {
+      "w": "o",
+      "s": 23.22,
+      "e": 23.5
+     },
+     {
+      "w": "contrário.",
+      "s": 23.5,
+      "e": 23.98
+     },
+     {
+      "w": "Esse",
+      "s": 24.46,
+      "e": 24.7
+     },
+     {
+      "w": "vídeo",
+      "s": 24.7,
+      "e": 24.96
+     },
+     {
+      "w": "segura",
+      "s": 24.96,
+      "e": 25.3
+     },
+     {
+      "w": "a",
+      "s": 25.3,
+      "e": 25.4
+     },
+     {
+      "w": "gente,",
+      "s": 25.4,
+      "e": 25.74
+     },
+     {
+      "w": "e",
+      "s": 26.16,
+      "e": 26.28
+     },
+     {
+      "w": "ele",
+      "s": 26.28,
+      "e": 26.46
+     },
+     {
+      "w": "mostra",
+      "s": 26.46,
+      "e": 26.68
+     },
+     {
+      "w": "pra",
+      "s": 26.68,
+      "e": 26.92
+     },
+     {
+      "w": "mais",
+      "s": 26.92,
+      "e": 27.08
+     },
+     {
+      "w": "pessoas.",
+      "s": 27.08,
+      "e": 27.7
+     },
+     {
+      "w": "Então,",
+      "s": 27.7,
+      "e": 28.36
+     },
+     {
+      "w": "antes",
+      "s": 28.72,
+      "e": 28.86
+     },
+     {
+      "w": "de",
+      "s": 28.86,
+      "e": 29.02
+     },
+     {
+      "w": "postar",
+      "s": 29.02,
+      "e": 29.3
+     },
+     {
+      "w": "mais",
+      "s": 29.3,
+      "e": 29.5
+     },
+     {
+      "w": "um,",
+      "s": 29.5,
+      "e": 29.78
+     },
+     {
+      "w": "abre",
+      "s": 29.92,
+      "e": 30.04
+     },
+     {
+      "w": "o",
+      "s": 30.04,
+      "e": 30.22
+     },
+     {
+      "w": "gráfico",
+      "s": 30.22,
+      "e": 30.5
+     },
+     {
+      "w": "de",
+      "s": 30.5,
+      "e": 30.68
+     },
+     {
+      "w": "retenção.",
+      "s": 30.68,
+      "e": 31.22
+     },
+     {
+      "w": "Onde",
+      "s": 31.6,
+      "e": 31.74
+     },
+     {
+      "w": "a",
+      "s": 31.74,
+      "e": 31.86
+     },
+     {
+      "w": "linha",
+      "s": 31.86,
+      "e": 31.98
+     },
+     {
+      "w": "cai,",
+      "s": 31.98,
+      "e": 32.38
+     },
+     {
+      "w": "é",
+      "s": 32.58,
+      "e": 32.64
+     },
+     {
+      "w": "ali",
+      "s": 32.64,
+      "e": 32.74
+     },
+     {
+      "w": "que",
+      "s": 32.74,
+      "e": 32.9
+     },
+     {
+      "w": "você",
+      "s": 32.9,
+      "e": 33.18
+     },
+     {
+      "w": "corrige,",
+      "s": 33.18,
+      "e": 33.48
+     },
+     {
+      "w": "não",
+      "s": 33.54,
+      "e": 33.66
+     },
+     {
+      "w": "é",
+      "s": 33.66,
+      "e": 33.78
+     },
+     {
+      "w": "quantidade.",
+      "s": 33.78,
+      "e": 34.28
+     },
+     {
+      "w": "É",
+      "s": 35.06,
+      "e": 35.18
+     },
+     {
+      "w": "quanto",
+      "s": 35.18,
+      "e": 35.4
+     },
+     {
+      "w": "tempo",
+      "s": 35.4,
+      "e": 35.6
+     },
+     {
+      "w": "te",
+      "s": 35.6,
+      "e": 35.8
+     },
+     {
+      "w": "assistem.",
+      "s": 35.8,
+      "e": 36.5
+     },
+     {
+      "w": "Comenta",
+      "s": 36.8,
+      "e": 37.04
+     },
+     {
+      "w": "RETENÇÃO",
+      "s": 37.18,
+      "e": 37.58
+     },
+     {
+      "w": "aqui",
+      "s": 37.58,
+      "e": 37.78
+     },
+     {
+      "w": "embaixo.",
+      "s": 37.78,
+      "e": 38.18
+     }
+    ],
+    "keywords": [
+     "RETEN"
+    ]
+   },
+   "by": "template"
+  },
+  {
+   "id": "cta",
+   "type": "text",
+   "track": "cta",
+   "label": "Final: chamada",
+   "start": 36.55,
+   "dur": 5.95,
+   "props": {
+    "text": "Você olha isso no seu canal?",
+    "palavra": "RETENÇÃO",
+    "comenta": "Comenta",
+    "rodape_forte": "Siga o SEU CANAL",
+    "rodape": "pra mais\nestratégia de canal dark."
+   },
+   "by": "template"
+  },
+  {
+   "id": "marca",
+   "type": "param",
+   "label": "Marca (canto superior)",
+   "props": {
+    "value": "SEU CANAL · CANAL DARK"
+   }
+  }
+ ],
+ "estilo": "Clay 3D (reels)"
+}

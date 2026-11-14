@@ -1,0 +1,99 @@
+{
+ "arquivo": "navalpower.mp4",
+ "video": {
+  "duracao_s": 78.5,
+  "largura": 1280,
+  "altura": 720,
+  "fps": 30.0,
+  "tem_audio": false
+ },
+ "proporcao": "16:9",
+ "cortes": {
+  "n": 12,
+  "tempos_s": [
+   4.5,
+   8.0,
+   8.7,
+   13.0,
+   18.0,
+   22.5,
+   44.0,
+   49.5,
+   60.5,
+   65.0,
+   70.0,
+   74.5
+  ],
+  "por_minuto": 9.2,
+  "plano_medio_s": 6.04,
+  "plano_mediana_s": 4.5,
+  "plano_min_s": 0.7,
+  "plano_max_s": 21.5,
+  "transicoes": {
+   "seco": 9,
+   "dissolve": 0,
+   "fade_preto": 3
+  }
+ },
+ "imagem": {
+  "paleta": [
+   {
+    "hex": "#0e1928",
+    "peso_pct": 55.1
+   },
+   {
+    "hex": "#2f3854",
+    "peso_pct": 26.5
+   },
+   {
+    "hex": "#7f87a8",
+    "peso_pct": 11.7
+   },
+   {
+    "hex": "#d4dde0",
+    "peso_pct": 5.6
+   },
+   {
+    "hex": "#a14f37",
+    "peso_pct": 1.1
+   }
+  ],
+  "cor_destaque": "#604adb",
+  "brilho_medio": 61.8,
+  "contraste": 35.0,
+  "saturacao_media": 0.467
+ },
+ "texto": {
+  "central": 3.8,
+  "inferior": 0.0,
+  "altura_faixa_pct_tela": 6.3
+ },
+ "loudness": {
+  "integrado_lufs": null,
+  "faixa_lra_lu": null,
+  "pico_dbfs": null
+ },
+ "audio": {
+  "tipo": "sem áudio",
+  "tem_musica": false
+ },
+ "recomendacao": {
+  "canvas": "1280x720",
+  "plano_alvo_s": 6.04,
+  "cortes_por_minuto_alvo": 9.2,
+  "fonte_google": "Oswald (títulos) + Inter (legenda)",
+  "fonte_porque": "tom escuro e ritmo calmo — documental/sério",
+  "cor_fundo": "#0e1928",
+  "cor_destaque": "#604adb",
+  "transicao": "corte seco (sem transição); whoosh suave só em troca de capítulo",
+  "legenda": {
+   "posicao": "central",
+   "y": 360,
+   "size": 40,
+   "pct_quadros_com_texto": 3.8
+  },
+  "musica": false,
+  "loudness_alvo_lufs": -14.0
+ },
+ "sheet": "sheet-medido.jpg"
+}

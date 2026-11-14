@@ -1,0 +1,13 @@
+<!--params {"pergunta":"¿90% SIN MAPEAR?","carimbo":"NO EXACTAMENTE","cor":"#e8323c","ang":-6}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#16263b,#0b1420 75%);display:flex;flex-direction:column;align-items:center;justify-content:center">
+ <div class="q" style="font:900 58px 'Montserrat',sans-serif;color:#fff;letter-spacing:.02em;text-transform:uppercase;text-align:center;max-width:1100px">{{p.pergunta}}</div>
+ <div class="st" style="margin-top:34px;padding:12px 40px;border:7px solid var(--c);border-radius:10px;font:900 64px 'Montserrat',sans-serif;color:var(--c);letter-spacing:.06em;text-transform:uppercase;transform:rotate(var(--a));opacity:.92">{{p.carimbo}}</div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id);
+ R.style.setProperty("--c",P.cor||"#e8323c"); R.style.setProperty("--a",(+P.ang||-6)+"deg");
+ tl.fromTo(id,{opacity:0},{opacity:1,duration:.3,immediateRender:true},S);
+ tl.fromTo(id+" .q",{opacity:0,y:16},{opacity:1,y:0,duration:.5,immediateRender:true},S+.1);
+ tl.fromTo(id+" .st",{opacity:0,scale:1.6},{opacity:.92,scale:1,duration:.35,ease:"power4.in",immediateRender:true},S+Math.min(1.2,D*.35));
+})(window.__timelines.main,{{json}});
+</script>

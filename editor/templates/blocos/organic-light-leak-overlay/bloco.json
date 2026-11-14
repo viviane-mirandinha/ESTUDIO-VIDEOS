@@ -1,0 +1,27 @@
+{
+  "name": "organic-light-leak-overlay",
+  "titulo": "Vazamento de luz (filme)",
+  "categoria": "Transição",
+  "descricao": "Luz quente de filme passando por cima da cena.",
+  "title_en": "Organic Light Leak Overlay",
+  "description_en": "Finite CSS light-leak overlay for memory beats and motivated transitions",
+  "duration": 4,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "light-leak",
+    "film",
+    "memory",
+    "transition",
+    "overlay",
+    "media-treatment-overlay"
+  ],
+  "variables": [],
+  "files": [
+    "organic-light-leak-overlay.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/organic-light-leak-overlay",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": []
+}

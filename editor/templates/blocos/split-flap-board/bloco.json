@@ -1,0 +1,72 @@
+{
+  "name": "split-flap-board",
+  "titulo": "Painel de aeroporto",
+  "categoria": "Título",
+  "descricao": "Letras viram como painel de embarque até formar a frase.",
+  "title_en": "Split-Flap Board",
+  "description_en": "Solari-style departure board: every cell walks its drum forward through the intervening characters of a fixed alphabet until it lands on its target, so the text resolves as a mechanical cascade instead of a fade.",
+  "duration": 3.5,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "text",
+    "kinetic",
+    "mechanical",
+    "split-flap",
+    "solari",
+    "departure-board",
+    "reveal"
+  ],
+  "variables": [
+    {
+      "id": "boardText",
+      "type": "string",
+      "label": "Board text",
+      "default": "NOW BOARDING",
+      "maxLength": 24
+    },
+    {
+      "id": "flapAlphabet",
+      "type": "string",
+      "label": "Flap alphabet (drum order)",
+      "default": " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,'",
+      "maxLength": 64
+    },
+    {
+      "id": "flipDuration",
+      "type": "number",
+      "label": "Seconds per flap",
+      "default": 0.09,
+      "min": 0.03,
+      "max": 1.2,
+      "step": 0.01,
+      "unit": "s"
+    },
+    {
+      "id": "cellStagger",
+      "type": "number",
+      "label": "Per-cell start stagger",
+      "default": 0.05,
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "unit": "s"
+    },
+    {
+      "id": "cellCount",
+      "type": "number",
+      "label": "Cells on the board",
+      "default": 12,
+      "min": 1,
+      "max": 24,
+      "step": 1
+    }
+  ],
+  "files": [
+    "split-flap-board.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/split-flap-board",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": []
+}

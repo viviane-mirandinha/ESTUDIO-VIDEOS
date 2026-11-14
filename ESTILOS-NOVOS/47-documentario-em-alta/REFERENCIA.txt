@@ -1,0 +1,15 @@
+ESTILO 47 — Documentário em alta: pinturas clássicas + cartões serifados
+Pesquisa: 24/10/2026, busca do YouTube filtrada "este mês" (mystery / history / dark history / ancient mystery documentary), yt-dlp flat + approximate_date.
+
+REFERÊNCIA PRINCIPAL (estilo clonado)
+Canal: Deep Dive History — https://www.youtube.com/channel/UCnTb3--OJOzlPYdmRGmxQdA
+Vídeo: 6. THE BOOK OF ENOCH - The Entire Story — https://youtu.be/DTGFWd2WKdg (videoId DTGFWd2WKdg)
+  2,5 mi views em ~28 dias (~3.700 views/h), 1h30.
+Outro do canal: 5. THE EPIC OF GILGAMESH - The Entire Story — https://youtu.be/BrIoPtoWims — 1,1 mi views em ~2 meses.
+Trechos medidos: 0-40 s, 45:00-46:30, 89:40-90:20 (ref/ref.mp4 na pasta do vídeo).
+
+DESCARTADOS (já cobertos ou não replicáveis)
+- fern "The Strangest Place on the Internet" 4 mi — já é o estilo 08.
+- FORGOTTEN HISTORY "The Black Legion" 526k (UCJ5kKhnQUbZmABUeJJvj9aw) — fotos de arquivo, perto do 09.
+- Uncharted Mysteries "What Melted These Ancient Ruins" 424k (UCtrFDttZdb4QxBpQc3fi1Cg) — drone/stock, perto do 27.
+- National Geographic / HISTORY / 48 Hours — canais de TV, não faceless.

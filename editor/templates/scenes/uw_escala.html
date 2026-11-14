@@ -1,0 +1,22 @@
+<!--params {"n":5.7,"valor":"4,757 M DE HIELO","burj":"BURJ KHALIFA · 828 M","altura_m":4757}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:linear-gradient(180deg,#9fc3e0 0%,#d6e6f2 70%,#e9f1f7 100%);overflow:hidden">
+ <svg class="sv" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0"></svg>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id),sv=R.querySelector(".sv");
+ const NS="http://www.w3.org/2000/svg", el=(t,a,par)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||sv).appendChild(e);return e;};
+ const lab=(x,y,s)=>{const g=el("g",{transform:`translate(${x},${y})`});const w=s.length*16.5+28; el("rect",{x:-14,y:-30,width:w,height:42,fill:"rgba(8,12,20,.88)"},g); el("rect",{x:-14,y:-30,width:5,height:42,fill:"#f5c518"},g);
+   const t=el("text",{x:0,y:0,fill:"#fff","font-family":"Montserrat","font-weight":800,"font-size":26},g); t.textContent=s; return g;};
+ const base=680, top=90, n=+P.n||5, H=(base-top), hb=H/n*(Math.min(n,Math.ceil(n))/n<1?1:1);
+ const unit=H/n; el("rect",{x:0,y:base,width:1280,height:40,fill:"#5b4330"});
+ const col=el("rect",{x:820,y:top,width:220,height:H,fill:"#e9f4fb",stroke:"#7fb1d6","stroke-width":3}); tl.fromTo(col,{scaleY:0,transformOrigin:"50% 100%"},{scaleY:1,duration:1.4,ease:"power2.out",immediateRender:true},S+.3);
+ const L=lab(860,top-24,P.valor); tl.fromTo(L,{opacity:0},{opacity:1,duration:.5,immediateRender:true},S+1.5);
+ const burj=(y,h,g)=>{const w=h*.16, x=420; const d=`M${x-w/2} ${y+h} L${x-w*.42} ${y+h*.55} L${x-w*.3} ${y+h*.35} L${x-w*.18} ${y+h*.18} L${x-w*.06} ${y+h*.06} L${x} ${y} L${x+w*.06} ${y+h*.06} L${x+w*.18} ${y+h*.18} L${x+w*.3} ${y+h*.35} L${x+w*.42} ${y+h*.55} L${x+w/2} ${y+h} Z`;
+   return el("path",{d,fill:"#3d5872",stroke:"#1e3247","stroke-width":2},g);};
+ const k=Math.ceil(n); for(let i=0;i<k;i++){ const g=el("g",{}); const yb=base-unit*(i+1); burj(yb,unit,g);
+   if(i===k-1&&n<k){ const cp=el("clipPath",{id:"cp{{id}}"}); el("rect",{x:0,y:base-H,width:1280,height:H},cp); g.setAttribute("clip-path","url(#cp{{id}})"); }
+   tl.fromTo(g,{opacity:0,y:-30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:true},S+.6+i*Math.min(.45,(D-2)/k)); }
+ const B=lab(470,base-unit*.5,P.burj); tl.fromTo(B,{opacity:0},{opacity:1,duration:.5,immediateRender:true},S+.9);
+ tl.fromTo(id,{opacity:0},{opacity:1,duration:.3,immediateRender:true},S); tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main,{{json}});
+</script>

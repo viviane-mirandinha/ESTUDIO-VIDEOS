@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="pt-BR">
+<script>try{var q=(location.search.match(/tema=(light|dark)/)||[])[1];var t=q||localStorage.getItem("tema")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=t}catch(e){}</script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Editor de Vídeos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<!-- ====================== NAVEGAÇÃO (Início / Estilos / Copiar) ====================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+  <symbol id="i-rss" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.13-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.13a.5.5 0 0 1 .96 0L14.06 8.5a2 2 0 0 0 1.44 1.44l6.13 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 8.7 5 8.7-5"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.8"/><path d="M12 17.2v.1"/></symbol>
+
+  <symbol id="i-checkc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></symbol>
+  <symbol id="i-xc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8"/><path d="M7 3v5h8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4v16l14-8z"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+</defs></svg>
+<header id="topnav" class="tnav hidden">
+  <button class="tbrand" data-inicio="1" title="Início"><span class="tlogo"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10 9.5v5l4.5-2.5z" class="fill"/></svg></span><span><b>Estúdio de Vídeos</b><small>editor local <i class="assinTop">por @cotidiano.explicado</i></small></span></button>
+  <nav>
+    <button data-tab="inicio" data-inicio="1">Início</button>
+    <button data-tab="home" data-meus="1" id="tnMeus">Meus vídeos <span class="tn" id="tnMeusN"></span><span class="tn run" id="tnFilaN" title="Trabalhos rodando agora"></span></button>
+    <div class="tdrop" id="tnCriarBox">
+      <button id="tnCriar" class="tdropBtn" aria-haspopup="true">Criar <svg class="ic car"><use href="#i-chev"/></svg></button>
+      <div class="tmenu hidden" role="menu">
+        <div class="tmGrp">Fazer vídeo</div>
+        <button data-tab="vimg" id="tnVimg"><svg class="ic mi"><use href="#i-image"/></svg><b>Vídeo com imagens</b><small>Texto ou narração → vídeo longo com fotos e clipes</small></button>
+        <button data-tab="shorts" id="tnShorts"><svg class="ic mi"><use href="#i-phone"/></svg><b>Fábrica de Shorts</b><small>Uma ideia → short em pé, com voz e legenda</small></button>
+        <button data-tab="stickman" id="tnStick"><svg class="ic mi"><use href="#i-user"/></svg><b>Stickman Studio</b><small>Roteiro → vídeo de bonequinhos de palito animados</small></button>
+        <button data-tab="cortes" id="tnCortes"><svg class="ic mi"><use href="#i-scissors"/></svg><b>Fábrica de cortes</b><small>Podcast, live ou vídeo longo → vários cortes em pé</small></button>
+        <button data-tab="falado" id="tnFalado"><svg class="ic mi"><use href="#i-wave"/></svg><b>Editor de vídeo falado</b><small>Sua gravação → sem silêncios, sem erros, com legenda</small></button>
+      </div>
+    </div>
+    <div class="tdrop" id="tnEstilosBox">
+      <button id="tnEstilosBtn" class="tdropBtn" aria-haspopup="true">Estilos <svg class="ic car"><use href="#i-chev"/></svg></button>
+      <div class="tmenu hidden" role="menu">
+        <div class="tmGrp">Escolher um estilo</div>
+        <button data-tab="galeria" id="tnEstilos"><svg class="ic mi"><use href="#i-grid"/></svg><b>Estilos prontos <span class="tn" id="tnEstN"></span></b><small>Veja os exemplos e faça um vídeo igual</small></button>
+        <button data-tab="skillsia" id="tnSkills"><svg class="ic mi"><use href="#i-spark"/></svg><b>Estilos IA (Claude)</b><small>Moldura Pop, Jarvis, Kinetic, Mascote… edição premium, em lote</small></button>
+        <div class="tmGrp">Copiar de um vídeo</div>
+        <button data-tab="copiar" id="tnCopiar"><svg class="ic mi"><use href="#i-copy"/></svg><b>Copiar estilo</b><small>De um vídeo que você gostou: aproximado (grátis) ou clonar igualzinho</small></button>
+        <button data-tab="clonarguia" id="tnClonarGuia"><svg class="ic mi"><use href="#i-layers"/></svg><b>Quero clonar um vídeo</b><small>Passo a passo: cole o link e o painel diz qual ferramenta usar</small></button>
+        <div class="tmGrp">Mais</div>
+        <button data-tab="extras" id="tnExtras"><svg class="ic mi"><use href="#i-box"/></svg><b>Extras</b><small>Estilos prontos pra instalar</small></button>
+        <button data-tab="ranking" id="tnRanking"><svg class="ic mi"><use href="#i-bars"/></svg><b>Ranking de velocidade</b><small>Do estilo mais rápido ao mais pesado de fazer</small></button>
+      </div>
+    </div>
+    <div class="tdrop" id="tnIdeaBox">
+      <button id="tnIdea" class="tdropBtn" aria-haspopup="true">Ideação <svg class="ic car"><use href="#i-chev"/></svg></button>
+      <div class="tmenu hidden" role="menu">
+        <div class="tmGrp">O que está em alta</div>
+        <button data-tab="emalta" id="tnEmAlta"><svg class="ic mi"><use href="#i-flame"/></svg><b>Vídeos em alta agora</b><small>Vídeos sem rosto que mais ganham views por hora</small></button>
+        <button data-tab="bombando" id="tnBomb"><svg class="ic mi"><use href="#i-trend"/></svg><b>Estilos em alta</b><small>Ranking: quais estilos dão mais views por hora</small></button>
+        <div class="tmGrp">Achar o assunto</div>
+        <button data-tab="feeds" id="tnFeeds"><svg class="ic mi"><use href="#i-rss"/></svg><b>Meus Feeds</b><small>Vídeos novos do seu nicho, do que mais cresce pro menos</small></button>
+        <button data-tab="ideias" data-sub="cacar" id="tnIdeias"><svg class="ic mi"><use href="#i-search"/></svg><b>Caçador de nicho</b><small>Uma palavra → canais e vídeos com mais views por hora</small></button>
+        <button data-tab="ideias" data-sub="saturado" id="tnIdSat"><svg class="ic mi"><use href="#i-thermo"/></svg><b>Nicho saturado?</b><small>Nota de 0 (livre) a 10 (lotado), com o porquê</small></button>
+        <button data-tab="ideias" data-sub="publico" id="tnIdPub"><svg class="ic mi"><use href="#i-msg"/></svg><b>O que o público pede</b><small>Lê os comentários e resume pedidos e reclamações</small></button>
+        <button data-tab="ideias" data-sub="placar" id="tnIdPlacar"><svg class="ic mi"><use href="#i-trophy"/></svg><b>Placar de ideias</b><small>Nota pras suas ideias + views reais depois</small></button>
+        <div class="tmGrp">Texto e voz</div>
+        <button data-tab="roteiro" id="tnRoteiro"><svg class="ic mi"><use href="#i-pen"/></svg><b>Roteiro pronto</b><small>Copia a estrutura de um vídeo que deu certo e escreve o seu</small></button>
+        <button data-tab="vozes" id="tnVozes"><svg class="ic mi"><use href="#i-mic"/></svg><b>Minhas vozes</b><small>Ouvir as vozes, clonar a sua e escolher a padrão</small></button>
+        <div class="tmGrp">Seu canal</div>
+        <button data-tab="autopilot" id="tnAutopilot"><svg class="ic mi"><use href="#i-gauge"/></svg><b>Piloto automático</b><small>Rastreia o seu canal: views vs mediana e o que funciona</small></button>
+      </div>
+    </div>
+  </nav>
+  <div class="grow"></div>
+  <button class="tghost" id="tnAjustes" data-tab="ajustes" title="Ajustes: IA, voz, pasta, chaves"><svg class="ic"><use href="#i-sliders"/></svg><span class="tlbl">Ajustes</span></button>
+  <button class="tghost ticon" id="tnTema" title="Tema claro / escuro"><svg class="ic"><use href="#i-moon"/></svg></button>
+  <button class="tghost" id="tnAjuda"><svg class="ic"><use href="#i-help"/></svg><span class="tlbl">Como funciona</span></button>
+  <button class="tghost ticon" id="tnMenu" aria-label="Abrir o menu" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+</header>
+
+<!-- ====================== INÍCIO (boas-vindas) ====================== -->
+<section id="inicio" class="hidden">
+  <div class="wlHero">
+    <div class="wlMosaic" id="wlMosaic" aria-hidden="true"></div>
+    <div class="wlHeroIn">
+      <div class="wlEyebrow"><span class="dot"></span>Editor de vídeos · roda no seu computador</div>
+      <h1 class="wlTit">Estúdio de Vídeos <em>Automáticos</em></h1>
+      <p class="wlSub">Escolha um estilo pronto ou copie o estilo de um vídeo que você gostou.</p>
+      <div class="wlStats" id="wlStats"></div>
+    </div>
+  </div>
+  <div class="wlBig">
+    <button class="wlCard ca" id="wlEstilos">
+      <div class="wlPrev fan" id="wlFan"></div>
+      <div class="wlTx">
+        <span class="k"><i>01</i>Estilo pronto</span>
+        <span class="t">Usar um estilo pronto</span>
+        <span class="d">Assista ao exemplo, escolha o estilo e escreva o tema do seu vídeo.</span>
+        <span class="go" id="wlEstGo">Ver os estilos<svg viewBox="0 0 24 24" class="ic"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </button>
+    <button class="wlCard cb" id="wlCopiar">
+      <div class="wlPrev pair" id="wlPair"></div>
+      <div class="wlTx">
+        <span class="k"><i>02</i>Link de um vídeo</span>
+        <span class="t">Copiar o estilo de um vídeo</span>
+        <span class="d">Cole o link do YouTube, Instagram ou TikTok. A gente prepara um vídeo no mesmo jeito.</span>
+        <span class="go">Colar um link<svg viewBox="0 0 24 24" class="ic"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </button>
+  </div>
+  <div class="wlComece" id="wlComece"></div>
+  <div class="wlCheck" id="wlCheck"></div>
+  <div class="wlFoot">
+    <button class="tghost hidden" id="wlComeceVer"><svg class="ic"><use href="#i-compass"/></svg>Comece aqui</button>
+    <button class="tghost" id="wlNovidades" title="O que mudou na última atualização do painel"><svg class="ic"><use href="#i-spark"/></svg>O que mudou</button>
+    <button class="tghost" id="wlClonar" style="font-weight:700"><svg class="ic"><use href="#i-layers"/></svg>Quero clonar um vídeo</button>
+    <button class="tghost" id="wlBomb"><svg class="ic"><use href="#i-trend"/></svg>Estilos em alta</button>
+    <button class="tghost" id="wlVimg"><svg class="ic"><use href="#i-image"/></svg>Vídeo com imagens</button>
+    <button class="tghost" id="wlShorts"><svg class="ic"><use href="#i-phone"/></svg>Fábrica de Shorts</button>
+    <button class="tghost" id="wlCortes"><svg class="ic"><use href="#i-scissors"/></svg>Fábrica de cortes</button>
+    <button class="tghost" id="wlFalado"><svg class="ic"><use href="#i-wave"/></svg>Vídeo falado</button>
+    <button class="tghost" id="wlIdeias"><svg class="ic"><use href="#i-bulb"/></svg>Ideias</button>
+    <button class="tghost" id="wlRoteiro"><svg class="ic"><use href="#i-pen"/></svg>Roteiro pronto</button>
+    <button class="tghost" id="wlDiag" title="Confere se Python, Node, ffmpeg, Claude, Ollama e as chaves estão ok"><svg class="ic"><use href="#i-pulse"/></svg>Diagnóstico</button>
+    <button class="tghost" id="wlCel" title="QR code pra abrir o painel no celular (mesmo Wi-Fi)"><svg class="ic"><use href="#i-phone"/></svg>Abrir no celular</button>
+    <button class="tghost" id="wlMeus"><svg viewBox="0 0 24 24" class="ic"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Meus vídeos <span class="tn" id="wlMeusN"></span></button>
+    <button class="tghost" id="wlAjuda"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.8"/><path d="M12 17.2v.1"/></svg>Como funciona</button>
+  </div>
+</section>
+
+<!-- ====================== ⚡ RANKING DE VELOCIDADE ====================== -->
+<section id="ranking" class="hidden">
+  <div class="sect"><h3>⚡ Ranking de Velocidade</h3><span>Tudo que o Estúdio faz, do mais rápido ao mais demorado. Quanto mais leve, mais rápido.</span></div>
+  <div class="rkFiltros" id="rkFiltros">
+    <button class="btn mini on" data-rkf="todos">Todos</button>
+    <button class="btn mini" data-rkf="short">📱 Shorts</button>
+    <button class="btn mini" data-rkf="longo">🎬 Longos</button>
+    <button class="btn mini" data-rkf="estilo">🎨 Estilos</button>
+    <button class="btn mini" data-rkf="roteiro">✍️ Roteiro</button>
+  </div>
+  <div id="rkGrid"></div>
+</section>
+
+<!-- ====================== GALERIA DE ESTILOS ====================== -->
+<section id="galeria" class="hidden">
+  <div class="sect"><h3>Estilos prontos</h3><span id="galSub">Cada estilo tem um vídeo de exemplo feito aqui. Assista ao exemplo e faça o seu.</span></div>
+  <div class="galTop">
+    <div class="origbar" id="galFiltro"></div>
+    <input type="text" id="galBusca" placeholder="🔎 Procurar estilo (ex.: mapa, terror, 3D, reddit…)" />
+  </div>
+  <p class="galHelp"><span class="gtag auto">Automático</span> o computador faz o vídeo inteiro sozinho, sem gastar nada <span class="gsep"></span><span class="gtag cla">Com Claude</span> a gente prepara o pedido e o Claude monta o vídeo</p>
+  <div id="galGrid"><div class="card">Carregando estilos…</div></div>
+</section>
+
+<!-- ====================== 🧬 QUERO CLONAR UM VÍDEO (passo a passo guiado) ====================== -->
+<section id="clonarguia" class="hidden">
+  <div class="sect"><h3>🧬 Quero clonar um vídeo</h3><span>Cole o link e responda 2 perguntas (3 passos). O painel diz qual ferramenta usar, por quê, e o passo a passo até o vídeo pronto. Não precisa de chave nenhuma.</span></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Cole o link do vídeo que você quer clonar</h3>
+    <div class="row"><label>Link</label><input type="text" id="cgUrl" placeholder="https://www.youtube.com/... ou Instagram / TikTok" /></div>
+    <p class="mu" id="cgTipo"></p>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> Quanto parecido tem que ficar?</h3>
+    <div class="modos" id="cgQuanto">
+      <button class="modo on" data-cg="jeito"><b>🎨 Mesmo jeito</b><small>Mesmo ritmo de cortes, cores e legenda. Meu tema, meu texto.</small></button>
+      <button class="modo" data-cg="igual"><b>🧬 Igualzinho</b><small>Mesmas animações, gráficos, fontes e efeitos, quadro a quadro.</small></button>
+    </div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">3</span> Você tem o Claude (Pro ou Max) instalado no PC?</h3>
+    <div class="modos" id="cgClaude">
+      <button class="modo on" data-cl="nao"><b>Não / não sei</b><small>Tudo bem: dá pra fazer grátis, no seu PC.</small></button>
+      <button class="modo" data-cl="sim"><b>Sim, tenho</b><small>Libera o modo que copia igualzinho.</small></button>
+    </div>
+  </div>
+  <div class="card" id="cgRec"></div>
+</section>
+
+<!-- ====================== COPIAR ESTILO DE UM VÍDEO ====================== -->
+<section id="copiar" class="hidden">
+  <div class="sect"><h3>🎨 Copiar estilo de edição</h3><span>Gostou da edição de um vídeo? Escolha como copiar.</span></div>
+  <div class="modos" id="cpModos">
+    <button class="modo on" data-cm="rapido"><b>⚡ Aproximado <span class="selo free">grátis</span></b><small>O seu PC mede o ritmo dos cortes, as cores e a legenda e salva um estilo na hora, pronto pra usar.</small></button>
+    <button class="modo" data-cm="fiel"><b>🧬 Clonar igualzinho <span class="selo paid" title="Usa a sua assinatura do Claude (sem cobrança por vídeo)">com Claude ⓘ</span></b><small>O Claude assiste o vídeo inteiro, acha (ou baixa) a ferramenta certa e refaz com as mesmas edições: cortes, legenda, zooms, efeitos. Sozinho, você só acompanha.</small></button>
+  </div>
+  <div id="cpRapido">
+    <div class="card pstep">
+      <h3><span class="num">1</span> Qual vídeo tem a edição que você quer?</h3>
+      <div class="modos" id="crFonte"><button class="modo on" data-cf="link"><b>🔗 Link</b><small>YouTube, Instagram ou TikTok</small></button><button class="modo" data-cf="pc"><b>📁 Do meu PC</b><small>Um vídeo salvo no computador</small></button></div>
+      <div class="row" data-cf="link"><label>Link do vídeo</label><input type="text" id="crUrl" placeholder="https://youtu.be/XXXXXXXX" /></div>
+      <div class="row hidden" data-cf="pc"><label>Vídeo</label><div class="upl"><input type="file" id="crArq" accept="video/*,.mp4,.mov,.mkv,.webm" /><span id="crArqInfo" class="mu"></span></div></div>
+      <div class="row"><label>Nome do estilo</label><input type="text" id="crNome" placeholder="Ex.: Documentário rápido amarelo" /></div>
+      <p class="help">⚡ O PC assiste os primeiros 3 minutos e descobre <b>o ritmo dos cortes</b>, <b>as cores</b>, <b>a legenda</b> e <b>as peças na tela</b> (título, etiquetas de nome, caixinhas de número, crédito das fotos). Depois mostra lado a lado: o vídeo de referência × como o seu vai ficar. Não copia imagem, logo nem texto. Leva uns 2 minutos.</p>
+      <div class="prontoBox hidden" id="crPronto"></div>
+      <div class="row"><label></label><button class="btn big go" id="crFazer">⚡ Analisar e salvar estilo</button></div>
+    </div>
+    <div id="crRes"></div>
+    <div class="card" id="crMeus"></div>
+  </div>
+  <div id="cpFiel" class="hidden">
+  <div class="card pstep">
+    <h3><span class="num">1</span> Qual vídeo você quer copiar?</h3>
+    <p class="help">Abra o vídeo no YouTube, Instagram ou TikTok, copie o link (endereço) e cole aqui.</p>
+    <div class="row"><label>Link do vídeo</label><input type="text" id="cVideo" placeholder="https://youtu.be/XXXXXXXX" /><button class="btn" id="cVerVideo">👁 Ver</button></div>
+    <div class="row"><label>Link do canal <small>(se souber)</small></label><input type="text" id="cCanalUrl" placeholder="https://www.youtube.com/@canal" /><button class="btn" id="cVerCanal">👁 Ver</button></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> E o seu vídeo?</h3>
+    <div class="row"><label>Tema / assunto</label><input type="text" id="cTema" placeholder="Ex.: Por que o Egito construiu pirâmides" /></div>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="cCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Marca d'água <small>(opcional)</small></label><input type="text" id="cMarca" placeholder="Texto pequeno e discreto por cima do vídeo (vazio = sem marca)" maxlength="60" autocomplete="off" /></div>
+    <div class="row"><label>Formato</label><div class="durs" id="cFmt">
+      <button class="btn on" data-fmt="longo">🎬 Vídeo longo (deitado)</button><button class="btn" data-fmt="short">📱 Short / Reels (em pé)</button>
+    </div></div>
+    <div class="row"><label>Duração</label><div class="durs" id="cDurs"></div></div>
+    <div class="row"><label>Voz</label><select id="cVoz" class="selVoz" data-padrao="1"><option value="">Padrão (a dos Ajustes)</option></select><button class="btn" type="button" data-ouvir="#cVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span></div>
+    <p class="help durNota hidden" id="cDurNota">⏳ Vídeo longo: o computador pode levar horas pra montar. Pode deixar rodando.</p>
+    <div class="prontoBox hidden" id="cfPronto"></div>
+    <div class="row"><label></label><button class="btn big go" id="cComecar">🚀 Começar</button></div>
+  </div>
+  </div>
+</section>
+
+<!-- ====================== VÍDEO COM IMAGENS ====================== -->
+<section id="vimg" class="hidden tool">
+  <div class="sect"><h3>Vídeo com imagens</h3><span>Do texto (ou da sua narração) para um vídeo deitado com fotos e clipes que combinam com cada frase. Roda no seu PC, sem gastar nada.</span></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> De onde vem o texto?</h3>
+    <div class="modos" id="viModos">
+      <button class="modo on" data-modo="tema"><b>💡 Só tenho o tema</b><small>A IA do seu PC escreve o roteiro</small></button>
+      <button class="modo" data-modo="roteiro"><b>📝 Tenho o roteiro</b><small>Cole o texto que a voz vai ler</small></button>
+      <button class="modo" data-modo="audio"><b>🎙 Tenho a narração</b><small>Suba o áudio (mp3, wav ou m4a)</small></button>
+    </div>
+    <div class="row" data-m="tema"><label>Tema do vídeo</label><input type="text" id="viTema" placeholder="Ex.: Por que a Torre Eiffel quase foi demolida" /></div>
+    <p class="combina hidden" id="viCombina"></p>
+    <div class="row hidden" data-m="roteiro"><label>Roteiro</label><textarea id="viRoteiro" rows="8" placeholder="Cole aqui o texto completo da narração"></textarea></div>
+    <div class="row hidden" data-m="audio"><label>Narração</label><div class="upl"><input type="file" id="viAudio" accept=".mp3,.wav,.m4a,.aac,.ogg,.flac,audio/*" /><span id="viAudioInfo" class="mu"></span></div></div>
+    <div class="row hidden" data-m="audio"><label>Tema <small>(opcional)</small></label><input type="text" id="viTemaAudio" placeholder="Ajuda a achar imagens melhores. Ex.: história do café" /></div>
+    <div class="row hidden" data-m="audio"><label>Roteiro <small>(opcional)</small></label><textarea id="viRoteiroRef" rows="4" placeholder="Cole o texto que a voz leu (o mesmo que você mandou pra outra IA). Ajuda a achar imagens e corrige nomes na legenda — os tempos saem do próprio áudio."></textarea></div>
+    <div class="motor" data-m="tema"><span class="selo free">A IA do seu PC escreve o roteiro — de graça</span><span class="mu">Quer o roteiro final revisado pelo Claude? Gere aqui e use “Revisar com o Claude” no <a href="#" id="viIrRoteiro">Roteiro pronto</a>.</span></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> Escolha o estilo</h3>
+    <div id="viEstilos" class="viEstilos"><div class="mu">Carregando estilos…</div></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">3</span> Detalhes</h3>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="viCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Marca d'água <small>(opcional)</small></label><input type="text" id="viMarca" placeholder="Texto pequeno e discreto por cima do vídeo (vazio = sem marca)" maxlength="60" autocomplete="off" /></div>
+    <div class="row"><label>Título <small>(opcional)</small></label><input type="text" id="viTitulo" placeholder="Se deixar vazio, a IA cria um" /></div>
+    <div class="row" data-m="tema"><label>Duração</label><div class="durs" id="viDurs"></div></div>
+    <div data-m="tema">
+    <p class="help durNota hidden" id="viDurNota">⏳ Vídeo longo: o computador pode levar horas pra montar. Pode deixar rodando e fazer outra coisa.</p>
+    </div>
+    <div class="row vzRow" data-m="tema roteiro"><label>Narração</label><div class="vzSlot" id="viVz"></div></div>
+    <div class="row soPc" data-m="tema roteiro"><label>Voz do PC</label><select id="viVoz" class="selVoz"></select><button class="btn" id="viOuvir" type="button" data-ouvir="#viVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="viConferir" checked /> 🖼 Deixar eu conferir as imagens antes de montar o vídeo <small class="mu">(recomendado)</small></label></div>
+    <div class="row"><label>Na tela <span class="dica" title="Coisas que aparecem por cima das imagens. Pode deixar como está.">ⓘ</span></label><div class="chkCol"><label class="chk" title="Quando a narração fala um ano, preço ou número, ele aparece numa caixinha colorida."><input type="checkbox" id="viNumeros" checked /> 🔢 Caixinha com datas e números</label><label class="chk" title="Letrinha no canto dizendo de onde veio cada imagem (Wikimedia, Pexels…). Ajuda a evitar problema de direitos."><input type="checkbox" id="viCredito" checked /> 📷 Crédito das fotos no canto</label></div></div>
+    <div class="prontoBox hidden" id="viPronto"></div>
+    <div class="row soPc"><label></label><button class="btn big go" id="viFazer">🎬 Fazer vídeo</button></div>
+    <p class="help soPc" id="viResumo"></p>
+  </div>
+</section>
+
+<!-- ====================== CONFERIR IMAGENS ====================== -->
+<section id="conferir" class="hidden tool">
+  <div class="sect cfTop">
+    <div><h3>Conferir imagens</h3><span id="cfSub">Cada quadro é um pedaço da narração. Se a imagem não combina, clique numa opção de baixo, suba uma do seu PC ou procure com outra palavra.</span></div>
+    <div class="cfAcoes"><button class="btn" id="cfMeus">📂 Meus vídeos</button><button class="btn" id="cfAmostra" title="Monta só os primeiros 20 segundos pra você ver como fica antes do vídeo inteiro">🎞 Ver amostra de 20 s</button><button class="btn big go" id="cfRender">▶ Fazer o vídeo</button></div>
+  </div>
+  <div id="cfGrid" class="cfGrid"></div>
+  <div class="cfFim"><button class="btn big go" id="cfRender2">▶ Tudo certo — fazer o vídeo</button></div>
+  <input type="file" id="cfFile" class="hidden" accept="image/*,video/mp4,video/quicktime,video/webm" />
+</section>
+
+<!-- ====================== ROTEIRO PRONTO ====================== -->
+<section id="roteiro" class="hidden tool">
+  <div class="sect"><h3>Roteiro pronto</h3><span>Copiar e melhorar roteiros: pegue o texto de um vídeo que funciona, veja a estrutura, escreva um roteiro novo nesse formato ou melhore o seu.</span></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> O que você quer fazer?</h3>
+    <div class="modos m4" id="rtAcoes">
+      <button class="modo" data-acao="transcrever"><b>📄 Pegar o roteiro deste vídeo</b><small>Texto corrido do vídeo, pra ler ou copiar</small></button>
+      <button class="modo" data-acao="estrutura"><b>🧩 Ver a estrutura</b><small>Gancho, blocos, viradas e CTA, com tempos</small></button>
+      <button class="modo on" data-acao="escrever"><b>✍️ Escrever um roteiro novo nesse formato</b><small>No seu tema, mesmo ritmo, sem copiar frases</small></button>
+      <button class="modo" data-acao="melhorar"><b>✨ Melhorar meu roteiro</b><small>Cole o seu e veja antes × depois</small></button>
+    </div>
+    <div class="row" data-a="transcrever estrutura escrever"><label>Link do vídeo</label><input type="text" id="rtUrl" placeholder="https://youtu.be/XXXXXXXX" /><button class="btn" id="rtVer">👁 Ver</button></div>
+    <div class="row" data-a="escrever"><label>Tema do SEU vídeo</label><input type="text" id="rtTema" placeholder="Ex.: A queda do império dos Medici" /></div>
+    <div class="row" data-a="escrever"><label>Duração</label><div class="durs" id="rtDurs"></div></div>
+    <div class="row hidden" data-a="melhorar"><label>Seu roteiro</label><textarea id="rtTexto" rows="9" placeholder="Cole aqui o roteiro que você quer melhorar"></textarea></div>
+    <div class="row hidden" data-a="melhorar"><label>Tema <small>(opcional)</small></label><input type="text" id="rtTemaM" placeholder="Ajuda a criar títulos e tags" /></div>
+    <div class="row" data-a="escrever melhorar"><label>Observações <small>(opcional)</small></label><input type="text" id="rtNotas" placeholder="Ex.: tom mais sério, público iniciante" /></div>
+    <div class="motor"><span class="selo free">A IA do seu PC escreve o roteiro — de graça</span><span class="selo paid">Revisar com o Claude (melhor qualidade, pra vídeo final)</span><span class="mu">O Claude aparece depois, no resultado.</span></div>
+    <div class="row"><label></label><button class="btn big go" id="rtFazer">✍️ Escrever roteiro</button></div>
+    <div class="rtProg hidden" id="rtProg"><div class="pbar"><div id="rtBar"></div></div><p id="rtMsg" class="mu"></p><button class="btn" id="rtCancelar">✖ Cancelar</button></div>
+  </div>
+  <div id="rtRes"></div>
+  <div class="card rtHist hidden" id="rtHist"></div>
+</section>
+
+<!-- ====================== FÁBRICA DE SHORTS ====================== -->
+<section id="shorts" class="hidden tool">
+  <div class="sect"><h3>📱 Fábrica de Shorts</h3><span>Uma ideia vira um short em pé (9:16) sem rosto: roteiro curto com gancho, voz, uma imagem por frase, legenda grande no centro e título no topo. Roda no seu PC, sem gastar nada.</span></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Qual é a ideia?</h3>
+    <div class="modos" id="shModos">
+      <button class="modo on" data-sm="tema"><b>💡 Só tenho a ideia</b><small>A IA do seu PC escreve um roteiro curto com gancho</small></button>
+      <button class="modo" data-sm="roteiro"><b>📝 Tenho o texto</b><small>Cole o que a voz vai ler (até ~90 s)</small></button>
+    </div>
+    <div class="row" data-sm="tema"><label>Ideia / tema</label><input type="text" id="shTema" placeholder="Ex.: Por que os flamingos são cor-de-rosa" /></div>
+    <p class="combina hidden" id="shCombina"></p>
+    <div class="row hidden" data-sm="roteiro"><label>Texto</label><textarea id="shRoteiro" rows="6" placeholder="Primeira frase = gancho (curta e surpreendente)."></textarea></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> Estilo do short</h3>
+    <div id="shEstilos" class="viEstilos"><div class="mu">Carregando estilos…</div></div>
+    <p class="help">Os shorts de teste em 3D e de rankings são feitos sob medida (precisam do Claude). Pra copiar um short que você gostou, use <a href="#" id="shIrCopiar">🎨 Copiar estilo de edição</a> com um vídeo em pé.</p>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">3</span> Detalhes</h3>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="shCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Marca d'água <small>(opcional)</small></label><input type="text" id="shMarca" placeholder="Texto pequeno e discreto por cima do vídeo (vazio = sem marca)" maxlength="60" autocomplete="off" /></div>
+    <div class="row"><label>Título no topo <small>(opcional)</small></label><input type="text" id="shTitulo" placeholder="Se deixar vazio, a IA cria um" /></div>
+    <div class="row" data-sm="tema"><label>Duração</label><div class="durs" id="shDurs"></div></div>
+    <div class="row vzRow" id="shVzRow"><label>Narração</label><div class="vzSlot" id="shVz"></div></div>
+    <div class="row hidden" id="shAudioRow"><label>Narração</label><div class="vzOk"><span id="shAudioInfo"></span><button class="btn mini" id="shAudioTirar">✖ Trocar pela voz do PC</button></div></div>
+    <div class="row soPc soVoz"><label>Voz do PC</label><select id="shVoz" class="selVoz"></select><button class="btn" id="shOuvir" type="button" data-ouvir="#shVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="shConferir" checked /> 🖼 Conferir as imagens antes (dá pra ver uma amostra de 20 s)</label></div>
+    <div class="row"><label>Na tela <span class="dica" title="Coisas que aparecem por cima das imagens. Pode deixar como está.">ⓘ</span></label><div class="chkCol"><label class="chk" title="Quando a narração fala um ano, preço ou número, ele aparece numa caixinha colorida."><input type="checkbox" id="shNumeros" checked /> 🔢 Caixinha com datas e números</label><label class="chk" title="Letrinha no canto dizendo de onde veio cada imagem (Wikimedia, Pexels…). Ajuda a evitar problema de direitos."><input type="checkbox" id="shCredito" checked /> 📷 Crédito das fotos no canto</label></div></div>
+    <div class="prontoBox hidden" id="shPronto"></div>
+    <div class="row soPc"><label></label><button class="btn big go" id="shFazer">📱 Fazer short</button></div>
+    <p class="help soPc" id="shResumo"></p>
+  </div>
+</section>
+
+<!-- ====================== 🤖 ESTILOS IA (skills do Claude Code) ====================== -->
+<section id="skillsia" class="hidden tool">
+  <div class="sect cfTop"><div><h3>🤖 Estilos IA <small class="mu">edição premium feita pelo Claude</small></h3><span>Escolha o estilo, mande seu vídeo ou só o texto e clique em Fazer. O Claude monta o vídeo sozinho (1 por vez) e ele aparece em 📂 Meus vídeos — dá pra abrir no editor depois.</span></div>
+    <div class="cfAcoes iaStatus" id="iaStatus"></div></div>
+  <details class="card iaComo" id="iaComo"><summary><b>🚀 Primeira vez? Como funciona (4 passos)</b></summary>
+    <ol>
+      <li><b>Instale as skills</b> — botão ⬇ Instalar skills ali em cima (uma vez só). Precisa do app do Claude no PC (aba Code) com plano Pro ou superior.</li>
+      <li><b>Escolha o estilo</b> — passe o mouse nos vídeos pra ver como fica. Em dúvida? Responda as 2 perguntas logo abaixo.</li>
+      <li><b>Mande o material</b> — 🎥 seu vídeo falando pra câmera, ou ✍️ só o tema/texto. Quer copiar um vídeo que viralizou? Cole o link dele.</li>
+      <li><b>Clique em Fazer</b> — acompanhe em 📂 Meus vídeos. Na 1ª vez de cada estilo o Claude instala o que falta (ffmpeg, Blender…) e demora mais.</li>
+    </ol>
+    <p class="help">📦 <b>Escalar:</b> marque “Lote” e escreva vários temas (um por linha) ou envie vários vídeos → sai um vídeo pra cada. <b>Versões</b> faz 2-5 versões do mesmo tema com ganchos diferentes pra testar qual pega.</p>
+  </details>
+  <div class="card rcBar" id="iaRc"></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Qual estilo?</h3>
+    <div class="iaQuiz" id="iaQuiz"></div>
+    <div id="iaFavs" class="iaFavs hidden"></div>
+    <div id="iaLista" class="iaLista"><div class="mu">Carregando…</div></div>
+  </div>
+  <div class="card pstep hidden" id="iaForm">
+    <h3><span class="num">2</span> <span id="iaEscolhido"></span></h3>
+    <div class="row" id="iaVidRow"><label>Seu vídeo <small id="iaVidObrig"></small></label><div class="iaVidBox"><input type="file" id="iaArq" accept="video/*" multiple /><div class="iaArqs" id="iaArqs"></div></div></div>
+    <div class="row"><label>Copiar um vídeo <small>(opcional)</small></label><input type="text" id="iaRef" placeholder="Cole o link de um Reels/TikTok/Short que deu certo — a gente sugere temas parecidos e copia o gancho e o ritmo" /></div>
+    <div class="row"><label>💡 Ideias pra você</label><div class="iaIdeiasBox">
+      <div class="iaIdBar"><input type="text" id="iaNicho" placeholder="Seu nicho (opcional) — ex.: finanças, IA, fitness, curiosidades" /><button class="btn" id="iaIdNovas">💡 Ideias novas</button><button class="btn" id="iaIdParecidas" title="Usa o link do campo acima">🔗 Parecidas com o link</button></div>
+      <div id="iaIdeias" class="iaIdeias"></div></div></div>
+    <div class="row" id="iaAudRow"><label>🎙 Sua narração <small>(opcional — voz já gravada, ex.: ElevenLabs)</small></label><div class="iaVidBox"><input type="file" id="iaAud" accept="audio/*" /><div class="iaArqs" id="iaAudInfo"></div></div></div>
+    <div class="row"><label id="iaTxtLbl">Tema ou copy</label><textarea id="iaTexto" rows="5"></textarea><button type="button" class="btn sugerirBtn" id="iaSugerir">💡 Sugerir ideia</button></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="iaLote" /> 📦 Lote: cada linha vira um vídeo diferente</label></div>
+    <div class="row"><label>Versões de cada</label><select id="iaVersoes"><option value="1">1 (normal)</option><option value="2">2 versões (ganchos diferentes)</option><option value="3">3 versões</option><option value="5">5 versões</option></select></div>
+    <div class="row"><label>Formato</label><select id="iaFmt"><option value="">Do estilo (recomendado)</option><option value="short">📱 Em pé 9:16 (Reels/TikTok/Shorts)</option><option value="longo">🎬 Deitado 16:9 (YouTube)</option></select></div>
+    <div class="row" id="iaVozRow"><label>Voz <small>(se não mandar narração)</small></label><select id="iaVoz" class="selVoz" data-padrao="1"><option value="">Padrão (a dos Ajustes)</option></select><button class="btn" type="button" data-ouvir="#iaVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span></div>
+    <div class="row"><label>Duração</label><select id="iaDur"><option value="30">30 s</option><option value="45" selected>45 s</option><option value="60">1 min</option><option value="90">1 min 30</option><option value="120">2 min</option><option value="150">2 min 30</option><option value="180">3 min</option></select></div>
+    <div class="row"><label>Seu @ (marca d'água)</label><input type="text" id="iaMarca" placeholder="@seuperfil (vazio = sem marca)" /></div>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="iaCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Observações <small>(opcional)</small></label><input type="text" id="iaObs" placeholder="Ex.: paleta azul, mascote ASTRO, CTA pra comentar “EU QUERO”" /></div>
+    <div class="row"><label></label><div class="iaBtns"><button class="btn big go" id="iaFazer">🤖 Fazer agora</button><span class="dica" title="Usa a sua assinatura do Claude (sem cobrança por vídeo)">ⓘ</span><button class="btn big hidden" id="iaPrevia" title="A IA do seu PC escreve a narração em segundos; você lê, muda o que quiser e aprova. O Claude usa o texto aprovado sem reescrever.">📝 Ver roteiro primeiro (grátis)</button></div></div>
+    <p class="help" id="iaResumo"></p>
+  </div>
+</section>
+
+<!-- ====================== FÁBRICA DE CORTES ====================== -->
+<section id="cortes" class="hidden tool">
+  <div class="sect cfTop"><div><h3>✂ Fábrica de cortes</h3><span>Pegue um podcast, live ou vídeo falado longo e saia com vários cortes em pé (9:16), com legenda grande e título. A IA do seu PC escolhe os melhores momentos.</span></div>
+    <div class="cfAcoes"><select id="ctAnteriores" class="selAnt"><option value="">📂 Cortes anteriores…</option></select></div></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Qual vídeo?</h3>
+    <div class="modos" id="ctFonte"><button class="modo on" data-ctf="pc"><b>📁 Do meu PC</b><small>mp4, mov, mkv (pode ser grande)</small></button><button class="modo" data-ctf="link"><b>🔗 Link</b><small>YouTube e outros (o PC baixa)</small></button></div>
+    <div class="row" data-ctf="pc"><label>Vídeo</label><div class="upl"><input type="file" id="ctArq" accept="video/*,.mp4,.mov,.mkv,.webm" /><span id="ctArqInfo" class="mu"></span></div></div>
+    <div class="row hidden" data-ctf="link"><label>Link</label><input type="text" id="ctUrl" placeholder="https://youtu.be/XXXXXXXX" /></div>
+    <div class="row hidden" data-ctf="link"><label>Só um pedaço <small>(opcional)</small></label><input type="text" id="ctDe" class="curto" placeholder="de 10:00" /><input type="text" id="ctAte" class="curto" placeholder="até 25:00" /><span class="mu">deixe vazio pra usar o vídeo todo</span></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> Como você quer os cortes?</h3>
+    <div class="row"><label>Quantos cortes</label><div class="durs" id="ctN"></div></div>
+    <div class="row"><label>Tamanho de cada corte</label><div class="durs" id="ctDur"></div></div>
+    <div class="row"><label>Quem escolhe os momentos</label><div class="modos m2" id="ctModo">
+      <button class="modo on" data-ctm="ia"><b>🤖 IA do seu PC</b><small>Lê tudo e dá nota pro gancho, ideia completa e final (grátis)</small></button>
+      <button class="modo" data-ctm="regras"><b>📏 Regras simples</b><small>Picos de energia da voz + perguntas e números. Mais rápido</small></button></div></div>
+    <div class="row"><label>Enquadramento</label><div class="modos m2" id="ctEnq">
+      <button class="modo on" data-cte="desfocado"><b>🔲 Vídeo inteiro + fundo desfocado</b><small>Ninguém fica cortado (bom pra 2 pessoas)</small></button>
+      <button class="modo" data-cte="centro"><b>📱 Tela cheia</b><small>Corta as laterais e mostra o centro</small></button></div></div>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="ctCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="ctIntro" /> 🎬 Também fazer uma intro com os 3 melhores momentos (3-5 s cada)</label></div>
+    <div class="row hidden" id="ctProgRow"><label>Nome do programa</label><input type="text" id="ctPrograma" placeholder="Título da intro (ex.: OS MELHORES MOMENTOS)" /></div>
+    <div class="row"><label></label><button class="btn big go" id="ctFazer">✂ Fazer cortes</button></div>
+    <p class="help">⏳ Leva uns 2-4 min de máquina por corte (ouvir o vídeo + montar o corte), 1 trabalho por vez. Roda no seu PC, de graça.</p>
+  </div>
+  <div id="ctRes"></div>
+</section>
+
+<!-- ====================== EDITOR DE VÍDEO FALADO ====================== -->
+<section id="falado" class="hidden tool">
+  <div class="sect"><h3>🎙 Editor de vídeo falado</h3><span>Suba a gravação de você (ou alguém) falando. O PC tira os silêncios longos e as frases repetidas, põe legenda e, se quiser, imagens por cima. Depois dá pra ajustar cada corte no editor.</span></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Sua gravação</h3>
+    <div class="row"><label>Vídeo</label><div class="upl"><input type="file" id="faArq" accept="video/*,.mp4,.mov,.mkv,.webm" /><span id="faArqInfo" class="mu"></span></div></div>
+    <div class="row"><label>Título <small>(opcional)</small></label><input type="text" id="faTitulo" placeholder="Aparece no começo (no vertical fica no topo)" /></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> O que fazer</h3>
+    <div class="row"><label>Formato</label><div class="durs" id="faSaida">
+      <button class="btn pill on" data-fs="16:9">🎬 Deitado (16:9)</button><button class="btn pill" data-fs="9:16">📱 Em pé (9:16)</button><button class="btn pill" data-fs="ambos">🎬+📱 Os dois</button></div></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="faSil" checked /> ✂ Tirar silêncios longos <small class="mu">(respiros curtos ficam, pra não ficar robótico)</small></label></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="faRet" checked /> 🔁 Tirar frases repetidas <small class="mu">(quando você errou e falou de novo, fica só a última)</small></label></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="faLeg" checked /> 💬 Legenda grande</label></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="faBroll" /> 🖼 Imagens por cima (b-roll) quando você citar algo concreto</label><select id="faNBroll" class="curto"><option value="3">3 imagens</option><option value="5" selected>5 imagens</option><option value="8">8 imagens</option></select></div>
+    <div class="row"><label></label><button class="btn big go" id="faFazer">🎙 Editar meu vídeo</button></div>
+    <p class="help">Depois de pronto, “✏ Abrir no editor” mostra cada trecho mantido como um bloco na linha do tempo — dá pra esticar, encurtar ou apagar.</p>
+  </div>
+  <div id="faRes"></div>
+</section>
+
+<!-- ====================== IDEIAS ====================== -->
+<section id="ideias" class="hidden tool">
+  <div class="sect"><h3>💡 Ideias</h3><span>Antes de gravar: ache um nicho, veja se está lotado, descubra o que o público pede e dê nota pras suas ideias. Usa só páginas públicas do YouTube + a IA do seu PC (grátis).</span></div>
+  <div class="subtabs" id="idTabs">
+    <button class="chip on" data-it="cacar">🔎 Caçador de nicho</button>
+    <button class="chip" data-it="saturado">🌡 Nicho tá saturado?</button>
+    <button class="chip" data-it="publico">💬 O que o público pede</button>
+    <button class="chip" data-it="placar">🏆 Placar de ideias</button>
+  </div>
+  <div class="origbar" id="idIdioma" title="Idioma das ideias, títulos e resumos — e do roteiro/voz quando você clicar em 🎬 Fazer vídeo"></div>
+  <div class="card pstep" data-ip="cacar">
+    <p class="help">Escreva uma palavra-chave. A gente busca no YouTube e mostra os canais e vídeos com mais <b>views por hora</b>, os <b>vídeos fora da curva</b> (bem acima da média do canal) e <b>views por inscrito</b>.</p>
+    <div class="row"><label>Palavra-chave</label><input type="text" id="idKw" placeholder="Ex.: curiosidades" /><select id="idFmt" class="curto"><option value="todos">Tudo</option><option value="shorts">Só shorts</option><option value="longos">Só longos (20 min+)</option></select><button class="btn go" id="idCacar">🔎 Caçar</button></div>
+    <div id="idCacarRes"></div>
+  </div>
+  <div class="card pstep hidden" data-ip="saturado">
+    <p class="help">Cole o link de um vídeo ou canal (ou escreva o tema). A gente descobre o nicho, mede a concorrência e dá uma nota de 0 (livre) a 10 (lotado), explicando o porquê.</p>
+    <div class="row"><label>Link ou tema</label><input type="text" id="idSat" placeholder="https://www.youtube.com/@canal  ou  curiosidades sobre animais" /><button class="btn go" id="idSatBtn">🌡 Medir</button></div>
+    <div id="idSatRes"></div>
+  </div>
+  <div class="card pstep hidden" data-ip="publico">
+    <p class="help">Cole o link de um vídeo que foi bem. A gente lê os comentários mais curtidos e a IA do seu PC resume: o que pedem, do que reclamam e ideias de vídeo novas.</p>
+    <div class="row"><label>Link do vídeo</label><input type="text" id="idPubUrl" placeholder="https://youtu.be/XXXXXXXX" /><select id="idPubLim" class="curto"><option value="100">100 comentários</option><option value="300">300</option><option value="500" selected>500</option></select><button class="btn go" id="idPubBtn">💬 Ler comentários</button></div>
+    <div id="idPubRes"></div>
+  </div>
+  <div class="card pstep hidden" data-ip="placar">
+    <p class="help">Escreva suas ideias (uma por linha). A IA do seu PC dá nota de 0 a 10 e sugere um título. Depois de publicar, anote as views reais e veja se as notas acertaram.</p>
+    <div class="row"><label>Ideias</label><textarea id="idPlIdeias" rows="4" placeholder="Por que o mar é salgado&#10;O animal mais rápido do mundo&#10;..."></textarea></div>
+    <div class="row"><label>Nicho <small>(opcional)</small></label><input type="text" id="idPlNicho" placeholder="Ex.: curiosidades de ciência" /><button class="btn go" id="idPlBtn">🏆 Dar nota</button></div>
+    <div id="idPlRes"></div>
+  </div>
+</section>
+
+<!-- ====================== EXTRAS ====================== -->
+<section id="extras" class="hidden tool">
+  <div class="sect cfTop"><div><h3>🧩 Extras</h3><span>Estilos prontos que você pode instalar no Estúdio (eles aparecem no Vídeo com imagens ou na Fábrica de Shorts). Tudo fica no seu PC — nada é baixado da internet.</span></div>
+    <div class="cfAcoes"><button class="btn" id="exAbrir">📂 Abrir pasta Extras</button><button class="btn" id="exRecarregar">↻ Atualizar</button></div></div>
+  <div id="exLista" class="exLista"></div>
+  <div class="card exComo">
+    <b>Como adicionar um extra:</b> coloque a pasta do estilo (com <code>estilo.json</code> e, se tiver, <code>preview.mp4</code>) dentro da pasta Extras e clique em ↻ Atualizar. Estilos que você copiou em 🎨 Copiar estilo podem ser mandados pra cá com “🧩 Exportar pros Extras”.
+    <p class="mu">🔜 Em breve: compartilhar estilos com amigos.</p>
+  </div>
+</section>
+
+<!-- ====================== 📡 MEUS FEEDS ====================== -->
+<section id="feeds" class="hidden tool">
+  <div class="sect cfTop"><div><h3>📡 Meus Feeds</h3><span>Um “algoritmo” só seu: escolha o nicho e veja os vídeos <b>novos</b> que mais estão crescendo (views por hora). O selo 🔥 marca o vídeo que está indo bem acima do normal do próprio canal.</span></div>
+    <div class="cfAcoes"><button class="btn go" id="fdNovo">➕ Novo feed</button></div></div>
+  <div class="fdChips" id="fdChips"></div>
+  <div class="card pstep hidden" id="fdForm">
+    <h3><span class="num">1</span> <span id="fdFormTit">Novo feed</span></h3>
+    <div class="row"><label>Nome do feed</label><input type="text" id="fdNome" placeholder="Ex.: Curiosidades" /></div>
+    <div class="row"><label>Palavras-chave</label><input type="text" id="fdPal" placeholder="curiosidades, fatos incríveis, você sabia" /><small class="mu">separe por vírgula (até 8)</small></div>
+    <div class="row"><label>Canais de referência <i class="mu">(opcional)</i></label><textarea id="fdCanais" rows="2" placeholder="@canal1&#10;https://www.youtube.com/@canal2"></textarea></div>
+    <div class="row"><label>Formato</label><div class="durs" id="fdFmt"></div></div>
+    <div class="row"><label>Vídeos de</label><div class="durs" id="fdPer"></div></div>
+    <div class="row"><label></label><button class="btn big ok" id="fdSalvar">💾 Salvar e puxar os vídeos</button><button class="btn" id="fdCancelar">Cancelar</button></div>
+  </div>
+  <div id="fdTopo" class="fdTopo"></div>
+  <div id="fdGrid" class="fdGrid"></div>
+</section>
+
+<!-- ====================== 🎙 MINHAS VOZES ====================== -->
+<section id="vozes" class="hidden tool">
+  <div class="sect cfTop"><div><h3>🎙 Minhas vozes</h3><span>Ouça as vozes, clone a sua e escolha a <b>voz padrão</b>. A voz escolhida aparece em Vídeo com imagens, Fábrica de Shorts, Roteiro pronto e Stickman Studio.</span></div>
+    <div class="cfAcoes"><button class="btn go" id="vzNovo">➕ Clonar minha voz</button></div></div>
+  <div id="vzAviso"></div>
+  <div class="row vzTesteRow"><label>Frase pra testar</label><input type="text" id="vzFrase" placeholder="Escreva uma frase e clique em ▶ numa voz (vazio = frase padrão)" /></div>
+  <div class="card pstep hidden" id="vzForm">
+    <h3><span class="num">1</span> Clonar minha voz</h3>
+    <p class="help">Mande <b>10 a 30 segundos</b> de você falando normal, sem música e sem barulho (pode ser áudio do WhatsApp, gravação do celular ou um vídeo seu). A gente corta numa pausa, transcreve e cria a voz no seu PC — nada vai pra internet.</p>
+    <div class="row"><label>Nome da voz</label><input type="text" id="vzNome" placeholder="Ex.: Minha voz" /></div>
+    <div class="row"><label>Áudio</label><div class="upl" id="vzDrop"><input type="file" id="vzArq" accept="audio/*,video/*,.mp3,.wav,.m4a,.ogg,.opus,.mp4,.mov" /><span id="vzArqInfo" class="mu">arraste aqui ou clique</span></div></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="vzOk" /> A voz é minha (ou de quem me autorizou por escrito).</label></div>
+    <div class="row"><label></label><button class="btn big ok" id="vzClonar">🎙 Criar a voz</button><button class="btn" id="vzCancelar">Cancelar</button></div>
+  </div>
+  <h4 class="grp">🎙 Vozes clonadas <span id="vzClN"></span></h4>
+  <div id="vzClones" class="vzGrid"></div>
+  <h4 class="grp">🔊 Vozes prontas <span id="vzPrN"></span></h4>
+  <div id="vzProntas" class="vzGrid"></div>
+  <details class="card vzVs" id="vzVsBox"><summary>📚 Vozes do VoiceStudio <span id="vzVsN" class="mu"></span> — ouvir e trazer pro Estúdio</summary>
+    <div class="row"><input type="text" id="vzVsBusca" placeholder="Buscar pelo nome…" /></div>
+    <div id="vzVs" class="vzGrid"></div></details>
+</section>
+
+<!-- ====================== 🖍 STICKMAN STUDIO ====================== -->
+<section id="stickman" class="hidden tool">
+  <div class="sect"><h3>🖍 Stickman Studio</h3><span>Vídeo de <b>bonequinhos de palito</b> desenhados pelo computador: cada frase da narração vira uma cena com pose (parado, andando, apontando, pensando, surpreso, comemorando), balão de fala, cenário de linha e o texto-chave grande. Tudo no seu PC, grátis — e depois dá pra mexer em cada cena no editor.</span></div>
+  <div class="skPoses" id="skPoses"></div>
+  <div class="card pstep">
+    <h3><span class="num">1</span> Sobre o que é o vídeo?</h3>
+    <div class="modos m2" id="skModo">
+      <button class="modo on" data-skm="tema"><b>💡 Tenho só o tema</b><small>A IA do seu PC escreve o roteiro</small></button>
+      <button class="modo" data-skm="roteiro"><b>📝 Já tenho o roteiro</b><small>Cole o texto e a gente narra</small></button>
+    </div>
+    <div class="row" data-skr="tema"><label>Tema</label><input type="text" id="skTema" placeholder="Ex.: Por que o céu é azul" /></div>
+    <div class="row hidden" data-skr="roteiro"><label>Roteiro</label><textarea id="skRoteiro" rows="6" placeholder="Cole aqui o texto que vai ser narrado…"></textarea></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num">2</span> Formato, duração e voz</h3>
+    <div class="row"><label>Formato</label><div class="durs" id="skFmt"></div></div>
+    <div class="row" data-skr="tema"><label>Duração</label><div class="durs" id="skDurs"></div></div>
+    <div class="row"><label>Voz</label><select id="skVoz" class="selVoz"></select><button class="btn" type="button" data-ouvir="#skVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span><button class="btn" id="skVozes" title="Ouvir e clonar vozes">🎙 Ouvir / clonar vozes</button></div>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="skCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Marca d'água <small>(opcional)</small></label><input type="text" id="skMarca" placeholder="Texto pequeno e discreto por cima do vídeo (vazio = sem marca)" maxlength="60" autocomplete="off" /></div>
+    <div class="row"><label></label><button class="btn big go" id="skFazer">🖍 Fazer o vídeo</button><span class="mu" id="skNota">Uns 3–6 min pra 1 min de vídeo (voz → legenda → cenas → render).</span></div>
+  </div>
+  <h4 class="grp">🎞 Seus vídeos de stickman <span id="skN"></span></h4>
+  <div id="skLista" class="gridIn"></div>
+</section>
+
+<!-- ====================== AJUSTES ====================== -->
+<section id="ajustes" class="hidden tool">
+  <div class="sect"><h3>Ajustes</h3><span>Configure uma vez. Tudo fica salvo no seu PC. Clique em “Testar” pra ver se cada coisa está funcionando.</span></div>
+  <div class="card ajCard">
+    <p class="motorNota">Tudo aqui já vem pronto. Só troque se quiser. A IA do seu PC é grátis; o Claude usa a sua assinatura (sem cobrança por vídeo).</p>
+    <h4 class="ajSec">Geração</h4>
+    <div class="aj" data-item="ollama"><div class="ajL"><b><svg class="ic ajI"><use href="#i-gear"/></svg>IA que escreve os roteiros</b><small>Roda no seu PC, de graça. Deixe a que já vem escolhida (qwen2.5:7b).</small></div>
+      <select id="ajModelo"></select><button class="btn" data-testar="ollama">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="claude"><div class="ajL"><b><svg class="ic ajI"><use href="#i-spark"/></svg>Modelo do Claude nos pedidos</b><small>Qual Claude monta os vídeos pedidos. Sonnet gasta bem menos; Opus é o mais forte (e gasta mais). Vale pro próximo pedido.</small></div>
+      <select id="ajModeloClaude"><option value="sonnet">Sonnet (o mais novo) — recomendado</option><option value="opus">Opus (o mais novo)</option><option value="haiku">Haiku (o mais barato)</option></select><span class="ajR"></span></div>
+    <div class="aj" data-item="voz"><div class="ajL"><b><svg class="ic ajI"><use href="#i-mic"/></svg>Voz padrão</b><small>Usada quando você não escolhe outra. Clique em Testar pra ouvir.</small></div>
+      <select id="ajVoz" class="selVoz"></select><button class="btn" data-testar="voz">Testar (ouvir)</button><span class="ajR"></span></div>
+    <h4 class="ajSec">Arquivos</h4>
+    <div class="aj" data-item="pasta"><div class="ajL"><b><svg class="ic ajI"><use href="#i-folder"/></svg>Onde salvar os vídeos</b><small id="ajPastaNome">—</small></div>
+      <button class="btn" id="ajPasta">Escolher pasta…</button><button class="btn" data-testar="pasta">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="idioma"><div class="ajL"><b><svg class="ic ajI"><use href="#i-compass"/></svg>Idioma dos vídeos</b><small>Roteiro, voz e legendas saem nesse idioma.</small></div>
+      <select id="ajIdioma"></select><button class="btn" data-testar="idioma">Testar</button><span class="ajR"></span></div>
+    <h4 class="ajSec">Integrações</h4>
+    <details class="ajAvanc" id="ajAvanc"><summary>Chaves de sites extras (não precisa mexer)</summary>
+    <p class="mu" style="margin:6px 0 10px">O painel já funciona 100% sem nada disso: as imagens e clipes vêm de bancos livres (Wikimedia, Openverse, Archive.org) e a voz é grátis. Só use se um dia quiser algo extra.</p>
+    <h4 class="grp" id="ajChaves" style="display:none"></h4>
+    <div class="aj" data-item="gemini"><div class="ajL"><b>Google Gemini <i>(opcional)</i></b><small>Só pro Stickman Diretor (imagens por IA). Grátis no Google AI Studio. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajGemini" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="gemini">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="pexels"><div class="ajL"><b>Pexels <i>(opcional)</i></b><small>Mais fotos e clipes de vídeo grátis. <a href="https://www.pexels.com/api/" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajPexels" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="pexels">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="pixabay"><div class="ajL"><b>Pixabay <i>(opcional)</i></b><small>Outro banco grátis de fotos e vídeos. <a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajPixabay" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="pixabay">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="fish"><div class="ajL"><b>Fish Audio <i>(opcional)</i></b><small>Suas vozes do Fish Audio (clonadas ou da biblioteca) aparecem na lista de vozes. Gasta o crédito da sua conta. <a href="https://fish.audio/go-api/api-keys" target="_blank" rel="noopener">Pegar chave</a></small></div>
+      <input type="password" id="ajFish" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="fish">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="fishmodelo"><div class="ajL"><b>Modelo do Fish Audio</b><small>Qual modelo gera a voz. Use o mesmo que você escolhe no site do Fish (Drama 3 = entonação melhor, perguntas e emoção).</small></div>
+      <select id="ajFishModelo"><option value="drama-3">Drama 3 (recomendado)</option><option value="s2.1-pro">S2.1 Pro</option><option value="s2-pro">S2 Pro</option><option value="s1">S1 (antigo, será desligado em 31/12/2026)</option></select></div>
+    <div class="aj" data-item="elevenlabs"><div class="ajL"><b>ElevenLabs <i>(opcional)</i></b><small>Vozes bem mais naturais (Maquete Viva e outros estilos). Plano grátis todo mês. <a href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajEleven" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="elevenlabs">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="serper"><div class="ajL"><b>Serper (busca do Google) <i>(opcional)</i></b><small>Acha referências, fatos e imagens na internet. 2.500 buscas grátis. <a href="https://serper.dev/api-keys" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajSerper" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="serper">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="youtube"><div class="ajL"><b>YouTube Data API <i>(opcional)</i></b><small>Ler canais e vídeos do YouTube com mais precisão. Grátis (cota diária). <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajYoutube" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="youtube">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="europeana"><div class="ajL"><b>Europeana <i>(opcional)</i></b><small>Fotos históricas e de museus, livres. Grátis. <a href="https://pro.europeana.eu/pages/get-api" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajEuropeana" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="europeana">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="vimeo"><div class="ajL"><b>Vimeo <i>(opcional)</i></b><small>Mais clipes de vídeo de fundo. Grátis (crie um app e gere o token). <a href="https://developer.vimeo.com/apps" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajVimeo" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="vimeo">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="serpapi"><div class="ajL"><b>SerpAPI <i>(opcional)</i></b><small>Outra busca do Google (reserva do Serper). 100 grátis/mês. <a href="https://serpapi.com/manage-api-key" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajSerpapi" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="serpapi">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="hf"><div class="ajL"><b>Hugging Face <i>(opcional)</i></b><small>Baixar modelos de IA abertos (recorte, transcrição). Grátis. <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener">Pegar chave grátis</a></small></div>
+      <input type="password" id="ajHf" placeholder="cole a chave aqui" autocomplete="off" /><button class="btn" data-testar="hf">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="anthropic"><div class="ajL"><b>Chave do Claude <i>(opcional)</i></b><small>Só pro botão “Revisar com o Claude” chamar direto. <span class="warnTok">A chave é cobrada pela Anthropic conforme o uso — sem ela, o resto funciona igual.</span></small></div>
+      <input type="password" id="ajAnthropic" placeholder="sk-ant-… (opcional)" autocomplete="off" /><button class="btn" data-testar="anthropic">Testar</button><span class="ajR"></span></div>
+    </details>
+    <details class="ajAvanc" id="ajRede"><summary>Downloads do YouTube (só se der erro)</summary>
+    <p class="mu" style="margin:6px 0 10px">Pode pular. Só mexa aqui se o YouTube travar os downloads (aparece “confirme que não é um robô” ou os clipes saem borrados). Sem nada aqui, o Estúdio baixa normal.</p>
+    <div class="aj"><div class="ajL"><b>Entrar com uma conta do YouTube</b><small>Resolve o “não é um robô”. Use uma conta Google <b>reserva</b> (nunca a do seu canal): entre no youtube.com com ela, salve o arquivo <b>cookies.txt</b> com a extensão “Get cookies.txt LOCALLY” e escolha o arquivo aqui.</small></div>
+      <button class="btn" data-rlogin="0" title="Abre uma janela pra escolher o arquivo cookies.txt">Escolher cookies.txt…</button><button class="btn" data-rtirar="0" title="Volta a baixar sem conta">Tirar</button><span class="ajR" id="rGeral"></span></div>
+    <details class="ajAvanc" style="margin-top:8px"><summary>conexões extras (proxy) pra baixar mais rápido</summary>
+    <div class="aj" style="align-items:flex-start"><div class="ajL"><b>Conexões extras (até 10)</b><small>Cole 1 por linha, do jeito que o vendedor do proxy te passou (ex.: <code>http://usuário:senha@endereço:porta</code>). Use proxy de IP fixo; o que troca de IP toda hora não funciona. Cada conexão precisa do seu próprio arquivo cookies.txt, de outra conta reserva.</small></div>
+      <textarea id="rLista" rows="5" spellcheck="false" style="flex:1;min-width:260px;font-family:monospace;font-size:12px" placeholder="http://usuario:senha@endereco:porta"></textarea></div>
+    <div class="ajBtns"><button class="btn ok" id="rSalvar">Salvar conexões</button><button class="btn" id="rTestar" title="Confere se cada conexão consegue abrir o YouTube">Testar todas</button><span class="mu" id="rMsg"></span></div>
+    <div id="rLanes"></div>
+    </details>
+    </details>
+    <h4 class="ajSec">Vozes extras (opcional)</h4>
+    <div class="aj" id="ajVS"><div class="ajL"><b><svg class="ic ajI"><use href="#i-phone"/></svg>VoiceStudio — clonar voz e dublar</b><small id="ajVSinfo">Verificando…</small></div>
+      <button class="btn" id="ajVSinst">⬇ Baixar e instalar</button><button class="btn hidden" id="ajVSabrir">▶ Abrir</button><button class="btn" id="ajVSajuda">🤖 Pedir ajuda ao Claude</button><span class="ajR" id="ajVSr"></span></div>
+    <div class="aj" data-item="ollama_url"><div class="ajL"><b><svg class="ic ajI"><use href="#i-phone"/></svg>Ollama em outro PC (roteiro pela placa de vídeo)</b><small>Deixe vazio para usar o deste PC. Ou o endereço do outro pelo Tailscale, ex.: http://100.107.205.27:11434 — depois salve, recarregue Ajustes e escolha o modelo de lá em “IA que escreve os roteiros”.</small></div>
+      <input type="text" id="ajOllUrl" placeholder="http://100.x.x.x:11434" autocomplete="off" /><button class="btn" data-testar="ollama_url">Testar</button><span class="ajR"></span></div>
+    <div class="aj" data-item="vsremoto"><div class="ajL"><b><svg class="ic ajI"><use href="#i-phone"/></svg>VoiceStudio em outro PC (placa de vídeo)</b><small>Endereço do outro PC pelo Tailscale, ex.: http://100.107.205.27:3900 — depois salve e escolha a voz “VoiceStudio no outro PC”.</small></div>
+      <input type="text" id="ajVSurl" placeholder="http://100.x.x.x:3900" autocomplete="off" /><button class="btn" data-testar="vsremoto">Testar</button><span class="ajR"></span></div>
+    <h4 class="ajSec">Avisos e celular</h4>
+    <div class="aj"><div class="ajL"><b><svg class="ic ajI"><use href="#i-bulb"/></svg>Avisar quando o vídeo ficar pronto</b><small>Som + notificação do Windows + título da aba piscando, mesmo com o painel minimizado.</small></div>
+      <button class="btn" data-aviso="aj">Ativar avisos</button><button class="btn" id="ajSomTeste">Testar som</button><span class="ajR"></span></div>
+    <div class="aj"><div class="ajL"><b><svg class="ic ajI"><use href="#i-phone"/></svg>Abrir no celular</b><small>QR code pra acompanhar a fila pelo celular (mesmo Wi-Fi).</small></div>
+      <button class="btn" id="ajCel"><svg class="ic"><use href="#i-phone"/></svg>Abrir no celular</button><span class="ajR"></span></div>
+    <details class="ajAvanc" style="margin-top:8px"><summary>pra quem grava aula</summary>
+    <div class="aj"><div class="ajL"><b>Ver o “Comece aqui” como aluno novo</b><small>Mostra o Início como se o PC fosse novo, com os 4 passos desmarcados. Não apaga nada.</small></div><button class="btn" id="ajComeceNovo"><svg class="ic"><use href="#i-eye"/></svg>Ver como aluno novo</button></div>
+    </details>
+    <div class="ajBtns"><button class="btn big ok" id="ajSalvar"><svg class="ic"><use href="#i-save"/></svg>Salvar ajustes</button><button class="btn big" id="ajTudo"><svg class="ic"><use href="#i-checkc"/></svg>Testar tudo</button><button class="btn big" id="ajDiag"><svg class="ic"><use href="#i-pulse"/></svg>Diagnóstico completo</button></div>
+  </div>
+</section>
+
+<!-- ====================== 🔥 BOMBANDO AGORA (vídeos faceless em alta, dados nossos via yt-dlp) ====================== -->
+<section id="emalta" class="hidden tool">
+  <div class="sect cfTop"><div><h3>🔥 Bombando agora</h3><span>Vídeos sem rosto que mais ganham views por hora nos últimos 7 dias — coletados por nós (busca do YouTube por nicho + canais do catálogo), sem baixar vídeo. <b id="emMedido"></b></span></div>
+    <div class="cfAcoes"><button class="btn" id="emAtualizar" title="Busca de novo (roda em segundo plano, uns 5-8 min)">🔄 Atualizar</button></div></div>
+  <div id="emFiltros" class="bbFiltros"></div>
+  <div id="emLista" class="emGrid"></div>
+</section>
+
+<!-- ====================== 📈 ESTILOS EM ALTA (ranking) ====================== -->
+<section id="bombando" class="hidden tool">
+  <div class="sect cfTop"><div><h3>📈 Estilos em alta</h3><span>Ranking dos estilos de edição: quem dá mais views por hora × facilidade de fazer aqui. <b id="bbMedido"></b></span></div>
+    <div class="cfAcoes"><button class="btn" id="bbAtualizar" title="Mede de novo as views/hora das referências (roda em segundo plano)">🔄 Atualizar números</button></div></div>
+  <div class="modos" id="bbVisao"><button class="modo on" data-bv="nicho"><b>📊 Por nicho</b><small>Qual assunto está dando mais views agora e o estilo certo pra ele</small></button><button class="modo" data-bv="todos"><b>🎨 Todos os estilos</b><small>A lista completa dos estilos de edição</small></button></div>
+  <div id="bbNichos"><div id="bbNFiltros" class="bbFiltros"></div><div id="bbNLista" class="nzGrid"></div></div>
+  <div id="bbTodos" class="hidden"><div id="bbFiltros" class="bbFiltros"></div>
+  <div id="bbLista" class="bbLista"></div></div>
+</section>
+
+<!-- ====================== PILOTO AUTOMÁTICO (fatia a: rastrear + aprender) ====================== -->
+<section id="autopilot" class="hidden tool">
+  <h2>🤖 Piloto automático do canal</h2>
+  <p class="sub">Rastreia o seu canal do YouTube (leitura pública, sem login) e aprende o que dá mais views. <b>Nunca posta nem entra na sua conta.</b></p>
+  <div class="row"><label>Seu canal</label>
+    <input type="text" id="apCanal" placeholder="https://youtube.com/@seucanal" style="flex:1" />
+    <button class="btn big go" id="apRastrear">🔄 Rastrear agora</button></div>
+  <p class="help" id="apStatus">Cole o link do seu canal e clique em <b>Rastrear agora</b>.</p>
+  <div id="apResumo" class="card hidden"></div>
+  <div class="row" style="align-items:center">
+    <label>Dados do YouTube Studio</label>
+    <input type="file" id="apCsv" accept=".csv" style="flex:1" />
+    <button class="btn" id="apCsvBtn">⬆ Importar CSV</button>
+  </div>
+  <p class="help" id="apCsvStatus">Opcional. Exporte a tabela <b>Conteúdo</b> do YouTube Studio (CSV) pra ter impressões, CTR e retenção no “por quê”. <b>Sem o CSV, a análise usa só as views públicas.</b></p>
+  <div id="apTabela"></div>
+
+  <hr class="apsep" />
+  <h3>🎬 Vídeo do dia</h3>
+  <p class="sub">Pega um assunto em alta do seu nicho, cria uma ideia faceless nova (<b>sem copiar o título</b>) e monta o vídeo pronto pra baixar. Não posta nada no YouTube.</p>
+  <div class="row"><label>Feed do nicho</label><select id="apFeed" style="flex:1"></select></div>
+  <div class="row"><label>Estilo faceless</label><select id="apEstilo" style="flex:1"></select></div>
+  <div class="row"><label></label><label class="chk"><input type="checkbox" id="apForcar" /> Fazer mesmo que o vídeo de hoje já esteja feito</label></div>
+  <div class="row"><label></label><button class="btn big go" id="apLoop">🎬 Fazer o vídeo de hoje</button></div>
+  <div id="apProds"></div>
+</section>
+
+<!-- ====================== LISTA ====================== -->
+<section id="home" class="hidden">
+  <header class="bar">
+    <button class="btn" data-inicio="1">🏠 Início</button>
+    <h1>📂 Meus vídeos</h1>
+    <div class="grow"></div>
+    <button class="btn big go" id="btnPedir">➕ Pedir vídeo</button>
+    <button class="btn hidden" data-aviso="topo" title="Notificação do Windows + som quando cada vídeo terminar">🔔 Avisar quando terminar</button>
+    <button class="btn" id="btnReload">↻ Atualizar</button>
+    <button class="btn" id="btnFolders">📁 Pastas</button>
+  </header>
+  <div id="folderBox" class="card hidden">
+    <p>Pastas onde eu procuro vídeos. Vídeos feitos aqui abrem no editor. Vídeos de fora aparecem como "🎞 só vídeo" — clique em 📥 Importar pra poder editar.</p>
+    <div id="folderList"></div>
+    <button class="btn big ok" id="btnAddFolder">➕ Adicionar pasta…</button>
+  </div>
+  <div id="filaBox" class="filaBox hidden"></div>
+  <div id="origBar" class="origbar"></div>
+  <div id="grid"></div>
+</section>
+
+<!-- ====================== PEDIR VÍDEO ====================== -->
+<section id="pedido" class="hidden">
+  <header class="bar">
+    <button class="btn" id="btnPedidoBack">← Voltar</button>
+    <button class="btn" data-inicio="1">🏠 Início</button>
+    <h2>➕ Pedir vídeo</h2>
+    <div class="grow"></div>
+  </header>
+  <div class="card rcBar" id="pRc"></div>
+  <div class="card pEsc hidden" id="pEsc"></div>
+  <div class="card pstep" id="pStep1">
+    <h3><span class="num">1</span> Qual vídeo você quer copiar?</h3>
+    <p class="help">Cole o link do canal e do vídeo que serviu de inspiração. Isso fica guardado junto com o seu vídeo.</p>
+    <div class="row"><label>Link do canal</label><input type="text" id="pRefCanal" placeholder="https://www.youtube.com/@canal" /><button class="btn" id="pVerCanal">👁 Ver</button></div>
+    <div class="row"><label>Link do vídeo</label><input type="text" id="pRefVideo" placeholder="https://youtu.be/XXXXXXXX" /><button class="btn" id="pVerVideo">👁 Ver</button></div>
+  </div>
+  <div class="card pstep" id="pStep2">
+    <h3><span class="num">2</span> Escolha o estilo do vídeo</h3>
+    <p class="help">⚡ <b>Automático</b> = o computador faz tudo sozinho, sem gastar nada. <b>Com Claude</b> = o Claude faz o vídeo sozinho pelo painel (precisa do app do Claude instalado). 🔜 <b>Em breve</b> = ainda não está pronto.</p>
+    <div id="estGrid"><div class="card">Carregando estilos…</div></div>
+  </div>
+  <div class="card pstep">
+    <h3><span class="num" id="pNum3">3</span> Sobre o que é o vídeo?</h3>
+    <div class="row"><label>Tema / título</label><input type="text" id="pTema" placeholder="Ex.: Como surgiu a primeira moeda do mundo" /></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="pTemRoteiro" /> Tenho meu próprio roteiro (texto da narração)</label></div>
+    <div class="row hidden" id="pClaudeRow"><label>Terceirizar pro Claude <small>(opcional)</small></label><div class="pClaude">
+      <label class="chk"><input type="checkbox" id="pClRot" /> ✍️ O Claude escreve o roteiro <small>(mais rápido e melhor que a IA do PC)</small></label>
+      <label class="chk"><input type="checkbox" id="pClBusca" /> 🖼 O Claude escolhe as buscas de imagem</label>
+      <p class="help" id="pClCusto"></p>
+    </div></div>
+    <div class="row hidden" id="pRoteiroRow"><label>Roteiro</label><textarea id="pRoteiro" rows="7" placeholder="Cole aqui o texto completo que a voz vai narrar"></textarea></div>
+    <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="pCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label>Marca d'água <small>(opcional)</small></label><input type="text" id="pMarca" placeholder="Texto pequeno e discreto por cima do vídeo (vazio = sem marca)" maxlength="60" autocomplete="off" /></div>
+    <div class="row" id="pFmtRow"><label>Formato</label><div class="durs" id="pFmt"><button class="btn" data-pf="longo">🎬 Vídeo longo (deitado 16:9)</button><button class="btn" data-pf="short">📱 Short / Reels / TikTok (em pé 9:16)</button></div></div>
+    <div class="row"><label>Duração</label><div class="durs" id="pDurs"></div></div>
+    <p class="help durNota hidden" id="pDurNota">⏳ Vídeo longo: o computador pode levar horas pra montar. Pode deixar rodando.</p>
+    <div class="row"><label>Suas regras</label><div class="durs" id="pRegras">
+      <button class="btn pill" type="button" data-reg="broll">🎬 B-roll primeiro</button>
+      <button class="btn pill" type="button" data-reg="pouca">🧊 Pouca animação</button>
+      <button class="btn pill" type="button" data-reg="sem">🚫 Sem animações</button>
+    </div></div>
+    <p class="help">Opcional. Segura o excesso de gráfico/animação já no 1º render. Legenda e footage nunca são mexidos. Dá pra ajustar depois no editor (🧮 Densidade).</p>
+    <div class="row"><label>🎵 Música de fundo</label><div class="durs" id="pMus">
+      <button class="btn pill on" type="button" data-mus="nenhuma">🚫 Nenhuma</button>
+      <button class="btn pill" type="button" data-mus="auto">🤖 Automática</button>
+      <button class="btn pill" type="button" data-mus="minha">📁 Escolher a minha</button>
+    </div></div>
+    <div class="row hidden" id="pMusAutoRow"><label></label><div class="musBox">
+      <div id="pMusSug" class="help">Escolho a música que combina com o assunto, o roteiro e o estilo do vídeo.</div>
+      <audio id="pMusAudio" controls preload="none" class="hidden"></audio>
+    </div></div>
+    <div class="row hidden" id="pMusMinhaRow"><label></label><div class="musBox">
+      <input type="file" id="pMusArq" accept="audio/*,.mp3,.wav,.m4a,.ogg,.flac,.aac" />
+      <span id="pMusArqInfo" class="help"></span>
+    </div></div>
+    <div class="row hidden" id="pMusNivelRow"><label>Volume da música</label><div class="musBox">
+      <div class="durs" id="pMusNivel">
+        <button class="btn pill on" type="button" data-nivel="baixa">🔉 Bem baixinha</button>
+        <button class="btn pill" type="button" data-nivel="presente">🔊 Presente, sem atrapalhar</button>
+      </div>
+      <label class="chk hidden" id="pMusDuckLbl"><input type="checkbox" id="pMusDuck" checked /> Abaixar a música quando o narrador fala <small>(recomendado)</small></label>
+      <p class="help" id="pMusNivelAjuda">Quase imperceptível: fica por baixo da voz o tempo todo e abaixa ainda mais quando o narrador fala.</p>
+    </div></div>
+    <div class="row vzRow"><label>Narração</label><div class="vzSlot" id="pVz"></div></div>
+    <div class="row soPc"><label>Voz do PC</label><select id="pVoz" class="selVoz" data-padrao="1"><option value="">Padrão (a dos Ajustes)</option></select><button class="btn" type="button" data-ouvir="#pVoz" title="Ouvir esta voz">🔊 Ouvir</button><span class="ouvirR"></span></div>
+    <div class="row soPc"><label></label><div class="iaBtns"><button class="btn big go" id="pFazer">🎬 Fazer vídeo</button><button class="btn big hidden" id="pPrevia" title="A IA do seu PC escreve a narração em segundos; você lê, muda o que quiser e aprova. O Claude usa o texto aprovado sem reescrever.">📝 Ver roteiro primeiro (grátis)</button></div></div>
+    <p class="help soPc" id="pResumo"></p>
+  </div>
+</section>
+
+<!-- ====================== EDITOR ====================== -->
+<section id="editor" class="hidden">
+  <header class="bar">
+    <button class="btn" id="btnBack">← Voltar</button>
+    <h2 id="projName">—</h2>
+    <span id="projEstilo" class="projEstilo"></span>
+    <span id="dirty" class="hidden">● não salvo</span>
+    <div class="grow"></div>
+    <button class="btn" id="btnUndo" title="Ctrl+Z">↶ Desfazer</button>
+    <button class="btn" id="btnRedo" title="Ctrl+Y">↷ Refazer</button>
+    <button class="btn ok" id="btnSave" title="Ctrl+S">💾 Salvar</button>
+    <button class="btn big go" id="btnRender" title="Junta tudo e gera o arquivo .mp4 pronto pra postar">▶ Gerar vídeo final</button>
+    <button class="btn" id="btnDens" title="Suas regras: medir e segurar o excesso de gráfico/animação">🧮 Densidade</button>
+    <button class="btn" id="btnFolder">📂 Pasta</button>
+    <button class="btn" id="btnRel">📊 Relatório</button>
+    <button class="btn" id="btnRef">📺 Referência</button>
+    <button class="btn cmpBtn" id="btnCmp" title="Ver a referência e o nosso vídeo lado a lado">Comparar com o original</button>
+  </header>
+  <div id="main">
+    <div id="stageWrap">
+      <div id="stage"><iframe id="frameA"></iframe><iframe id="frameB"></iframe><div id="loading">carregando…</div></div>
+      <div id="transport">
+        <button class="btn big" id="btnPlay" title="Tocar / pausar (Espaço ou K)">▶ Play</button>
+        <button class="btn nav hidden" id="btnHome" title="Ir para o início do vídeo (Home)">⏮</button>
+        <button class="btn nav hidden" id="btnPrevBlk" title="Bloco anterior (tecla [ ou PageUp)">◀</button>
+        <button class="btn nav hidden" id="btnNextBlk" title="Próximo bloco (tecla ] ou PageDown)">▶</button>
+        <button class="btn nav hidden" id="btnEnd" title="Ir para o fim do vídeo (End)">⏭</button>
+        <button class="btn nav" id="btnLoop" title="Repetir: toca de novo o bloco selecionado (ou o vídeo inteiro se nada estiver selecionado)">🔁</button>
+        <button class="btn big" id="btnSpeed" title="Velocidade da prévia (não muda o vídeo final)">⏩ 1x</button>
+        <span id="tcur" title="Tempo atual em minutos:segundos.quadros — clique para ver em segundos">00:00.00</span><span class="tsep">/</span><span id="tdur" title="Duração total">00:00.00</span>
+        <input type="range" id="scrub" min="0" max="1000" value="0" title="Arraste para andar no vídeo" />
+        <span id="volbox" title="Volume da prévia (não muda o vídeo final)"><button class="btn nav" id="btnMute" title="Mudo: liga/desliga o som da prévia (M)">🔊</button><input type="range" id="vol" min="0" max="100" value="100" /><span id="volTxt">100%</span></span>
+        <button class="btn nav" id="btnFull" title="Tela cheia da prévia (F) — Esc sai">⛶</button>
+      </div>
+      <div id="transport2">
+        <button class="btn mini hidden" id="btnVolDown">−</button><button class="btn mini hidden" id="btnVolUp">+</button>
+        <span class="lbl" title="Só na prévia: quanto da voz você ouve aqui (não muda o vídeo final)">🎙 Voz</span>
+        <input type="range" id="volVoice" class="small" min="0" max="100" value="100" title="Só na prévia: quanto da voz você ouve aqui (não muda o vídeo final)" />
+        <span class="lbl" title="Só na prévia: quanto da música você ouve aqui (não muda o vídeo final)">🎵 Música</span>
+        <input type="range" id="volMusic" class="small" min="0" max="100" value="100" title="Só na prévia: quanto da música você ouve aqui (não muda o vídeo final)" />
+        <div class="grow"></div>
+        <button class="btn" id="btnCapture" title="Salva uma foto (PNG) do quadro que está aparecendo na prévia">📷 Capturar quadro</button>
+        <button class="btn" id="btnKeys" title="Lista de todas as teclas de atalho (tecla ?)">⌨ Atalhos</button>
+      </div>
+      <div class="hint">Dica: clique num texto do vídeo para selecionar · arraste para mover · arraste uma foto/vídeo do computador aqui para adicionar</div>
+    </div>
+    <aside id="props"></aside>
+  </div>
+  <div id="tlTools">
+    <button class="btn" id="btnAddText">+ Texto</button>
+    <button class="btn" id="btnAddMedia">+ Foto / Vídeo</button>
+    <button class="btn" id="btnAddBloco" title="Animações prontas: nome na tela, títulos, gráficos, contadores, transições">✨ Animações prontas</button>
+    <button class="btn" id="btnAddMusic">+ Música</button>
+    <button class="btn" id="btnAddSfx">+ Som</button>
+    <button class="btn" id="btnSplit" title="Tecla S">✂ Cortar</button>
+    <button class="btn" id="btnDup">⧉ Duplicar</button>
+    <button class="btn ok" id="btnMagnet" title="Gruda nas bordas">🧲 Ímã</button>
+    <button class="btn danger" id="btnDel">🗑 Apagar</button>
+    <div class="grow"></div>
+    <span title="Zoom da linha do tempo">Zoom</span>
+    <button class="btn mini" id="btnZoomOut" title="Afastar a linha do tempo (ver mais tempo)">−</button>
+    <input type="range" id="zoom" min="5" max="300" step="any" value="30" title="Zoom da linha do tempo" />
+    <button class="btn mini" id="btnZoomIn" title="Aproximar a linha do tempo (ver mais detalhe)">+</button>
+    <button class="btn mini" id="btnZoomFit" title="Mostrar o vídeo inteiro na linha do tempo">⤢ Ver tudo</button>
+    <input type="file" id="fileIn" class="hidden" accept="image/*,video/*,audio/*" />
+  </div>
+  <div id="timeline"><div id="tlInner"><div id="ruler"></div><div id="tracks"></div><div id="playhead"></div></div></div>
+</section>
+
+<!-- ====================== COMPARAR ====================== -->
+<section id="comparar" class="hidden">
+  <header class="bar">
+    <button class="btn big" id="cmpBack">← Voltar</button>
+    <h2 id="cmpName">—</h2>
+    <span id="cmpEstilo"></span>
+    <div class="grow"></div>
+    <button class="btn big" id="cmpPrev" title="Comparar o vídeo anterior da lista">◀ anterior</button>
+    <span id="cmpPos"></span>
+    <button class="btn big" id="cmpNext" title="Comparar o próximo vídeo da lista">próximo ▶</button>
+  </header>
+  <div id="cmpStage">
+    <div class="cmpBox" id="cmpBoxRef"><video id="cmpRef" playsinline preload="auto"></video><span class="cmpTag ref">Referência</span><button class="cmpMute" data-m="ref" title="Liga/desliga o som da referência">🔇</button><div class="cmpMsg hidden"></div></div>
+    <div class="cmpBox" id="cmpBoxOur"><video id="cmpOur" playsinline preload="auto"></video><span class="cmpTag our">Nosso vídeo</span><button class="cmpMute" data-m="our" title="Liga/desliga o som do nosso vídeo">🔊</button><div class="cmpMsg hidden"></div></div>
+  </div>
+  <div id="cmpCtl">
+    <button class="btn big go" id="cmpPlay" title="Toca / pausa os dois juntos (Espaço)">▶ Tocar os dois</button>
+    <span id="cmpTime">0:00 / 0:00</span>
+    <input type="range" id="cmpScrub" min="0" max="1000" value="0" step="1" title="Arraste para andar nos dois vídeos" />
+    <span class="cmpSpeeds" id="cmpSpeeds" title="Velocidade dos dois vídeos"></span>
+    <button class="btn big" id="cmpMuteAll" title="Mudo geral: desliga o som dos dois (M)">🔊 Som</button>
+    <button class="btn big" id="cmpFull" title="Tela cheia dos dois vídeos (F) — Esc sai">⛶ Tela cheia</button>
+  </div>
+  <div id="cmpCtl2">
+    <label for="cmpIni">Referência começa em</label>
+    <button class="btn" id="cmpIniMinus" title="Referência 1 segundo mais cedo">− 1 s</button>
+    <input type="number" id="cmpIni" min="0" step="0.5" value="0" title="Em que segundo da referência começar (pra alinhar o trecho parecido)" />
+    <span>s</span>
+    <button class="btn" id="cmpIniPlus" title="Referência 1 segundo mais tarde">+ 1 s</button>
+    <span id="cmpIniOk" class="cmpOk"></span>
+    <div class="grow"></div>
+    <a class="btn" id="cmpYt" target="_blank" rel="noopener">📺 abrir no YouTube</a>
+    <a class="btn" id="cmpCanal" target="_blank" rel="noopener">📡 canal</a>
+  </div>
+</section>
+
+<!-- ====================== MODAL ====================== -->
+<div id="modal" class="hidden"><div class="mbox">
+  <h3 id="mTitle">Montando o vídeo…</h3>
+  <div class="pbar"><div id="mBar"></div></div>
+  <p id="mMsg"></p>
+  <div id="mBtns"></div>
+</div></div>
+<div id="blocosModal" class="hidden"><div class="mbox blocosBox">
+  <div class="blocosTop"><h3>✨ Animações prontas</h3><div class="grow"></div><button class="btn" id="blocosClose">✕ Fechar</button></div>
+  <p class="note">Escolha uma animação e clique em <b>Inserir na cena</b>: ela entra no ponto vermelho da linha do tempo. Depois troque os textos no painel da direita.</p>
+  <div id="blocosCats" class="blocosCats"></div>
+  <div id="blocosGrid" class="blocosGrid"></div>
+  <p class="note">Animações do registry oficial do HyperFrames (licença Apache-2.0) — lista em templates/blocos/LICENCAS-TERCEIROS.md</p>
+</div></div>
+<div id="kbModal" class="hidden"><div class="mbox">
+  <h3>⌨ Teclas de atalho</h3>
+  <table class="kb">
+    <tr><td><kbd>Espaço</kbd> ou <kbd>K</kbd></td><td>Tocar / pausar</td></tr>
+    <tr><td><kbd>J</kbd> / <kbd>L</kbd></td><td>Voltar / avançar 10 segundos</td></tr>
+    <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>1 quadro para trás / para frente</td></tr>
+    <tr><td><kbd>,</kbd> / <kbd>.</kbd></td><td>1 quadro para trás / para frente</td></tr>
+    <tr><td><kbd>Shift</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td><td>5 segundos para trás / para frente</td></tr>
+    <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>Início / fim do vídeo</td></tr>
+    <tr><td><kbd>[</kbd> / <kbd>]</kbd> (ou <kbd>PageUp</kbd> / <kbd>PageDown</kbd>)</td><td>Bloco anterior / próximo (e seleciona)</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Mudo (som da prévia)</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Tela cheia da prévia (<kbd>Esc</kbd> sai)</td></tr>
+    <tr><td><kbd>S</kbd></td><td>Cortar o bloco selecionado na linha vermelha</td></tr>
+    <tr><td><kbd>Delete</kbd></td><td>Apagar o selecionado</td></tr>
+    <tr><td><kbd>Ctrl</kbd> + <kbd>Z</kbd> / <kbd>Y</kbd></td><td>Desfazer / refazer</td></tr>
+    <tr><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td><td>Salvar</td></tr>
+    <tr><td><kbd>?</kbd></td><td>Abrir esta lista</td></tr>
+  </table>
+  <p class="note">As teclas não funcionam enquanto você está digitando numa caixa de texto.</p>
+  <div class="mbtns"><button class="btn big" id="btnKeysClose">Fechar</button></div>
+</div></div>
+<div id="vidModal" class="hidden"><div class="mbox vbox">
+  <h3 id="vTitle">▶ Exemplo</h3>
+  <p class="vEstilo" id="vEstilo"></p>
+  <video id="vPlayer" controls playsinline preload="auto"></video>
+  <div class="mbtns"><button class="btn big go" id="vFazer">✨ Fazer um vídeo neste estilo</button><button class="btn big" id="vEditor">✏ Abrir no editor</button><button class="btn big" id="vClose">Fechar</button></div>
+</div></div>
+<div id="helpModal" class="hidden"><div class="mbox hbox">
+  <h3>❓ Como funciona</h3>
+  <ol class="passos">
+    <li><span class="e">🎨</span><div><b>Escolha um estilo</b><br>Veja os exemplos e escolha o jeito de vídeo que você quer (ou cole o link de um vídeo que você gostou).</div></li>
+    <li><span class="e">✍️</span><div><b>Escreva o tema</b><br>Diga sobre o que é o vídeo, o nome do seu canal e quanto tempo ele deve ter.</div></li>
+    <li><span class="e">🤖</span><div><b>O computador faz o resto</b><br>Ele escreve o texto, grava a voz, procura as imagens e monta a edição.</div></li>
+    <li><span class="e">✏️</span><div><b>Confira e ajuste</b><br>Abra o vídeo no editor: troque um texto, uma imagem ou uma música se quiser.</div></li>
+    <li><span class="e">🚀</span><div><b>Gere o vídeo e poste</b><br>Clique em ▶ Gerar vídeo final, pegue o arquivo pronto e poste no seu canal.</div></li>
+  </ol>
+  <p class="motorNota">Tudo aqui já vem pronto. Só troque se quiser. A IA do seu PC é grátis; o Claude usa a sua assinatura (sem cobrança por vídeo).</p>
+  <div class="mbtns"><button class="btn big go" id="helpClose">Entendi!</button></div>
+</div></div>
+<div id="toast" class="hidden"></div>
+<!-- ====================== BALÃO "Quer mudar alguma coisa?" + assinatura ====================== -->
+<button id="chatBolha" class="chatBolha" title="Quer mudar alguma coisa?"><svg viewBox="0 0 24 24" class="ic"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg><span>Quer mudar alguma coisa?</span></button>
+<div id="chatPainel" class="chatPainel hidden" role="dialog" aria-label="Pedir mudança">
+  <div class="chatHead"><b>💬 Quer mudar alguma coisa?</b><button id="chatFechar" title="Fechar">✕</button></div>
+  <p class="chatTx">Qualquer alteração ou correção no painel ou nos vídeos: abra o Claude e escreva o que você quer, em português normal. Ex.: “muda a cor do título do vídeo 03”, “o botão X não funciona”.</p>
+  <textarea id="chatTexto" rows="4" placeholder="Escreva aqui o que você quer mudar…"></textarea>
+  <p class="chatCtx" id="chatCtx"></p>
+  <button class="btn go" id="chatCopiar">📋 Copiar pro Claude</button>
+</div>
+<a id="assinatura" class="assinatura" href="https://instagram.com/cotidiano.explicado" target="_blank" rel="noopener">@cotidiano.explicado</a>
+<audio id="audTeste" class="hidden"></audio>
+<script src="/static/app.js"></script>
+<script src="/static/rede.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Canal 1: Hazard — https://www.youtube.com/channel/UCI1-J45WXprOQQ_m9pmfW9A
+  Vídeo analisado: GTA 6: EVERYTHING We Know So Far... (The ULTIMATE Breakdown) — https://youtu.be/BQvC8KDhgqw (videoId BQvC8KDhgqw, ~325 mil views, ~3 h)
+Canal 2: TGG — https://www.youtube.com/channel/UC72PuhDwKtZ5MikpGNhPAtA
+  Vídeo analisado: GTA 6 Launch Trailer: Everything New YOU MISSED — https://youtu.be/FV93IVwJP_4 (videoId FV93IVwJP_4, ~1,6 mi views, 18 min)
+Busca: yt-dlp ytsearch15 "everything we know about game trailer breakdown" / "gaming news hype video" (24/10/2026)
+Trechos medidos: Hazard 0:00-0:40; TGG 8:40-9:20 e 17:55-18:35 -> VIDEOS-NOVOS/45-hype-de-jogos/ref/ref.mp4
+Prints: sheet-referencia.jpg (1 quadro a cada 6 s do ref.mp4)
+Exemplo nosso: VIDEOS-NOVOS/45-hype-de-jogos (A história dos videogames em 60 segundos, PT-BR, ~70 s)

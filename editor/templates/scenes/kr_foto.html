@@ -1,0 +1,22 @@
+<!--params {"src":"","pos":"50% 50%","amount":0.07,"tom":0.7,"tag":"","t_tag":0.2,"kicker":"","titulo":"","t_titulo":0.4,"numero":"","t_num":1.5,"sub":"","t_sub":2.5}-->
+<div id="{{id}}" class="kr-ft" style="position:absolute;inset:0;overflow:hidden;background:#0d1623">
+ <img class="ph" src="{{p.src}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{p.pos}};transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(8,12,20,0) 45%,rgba(8,12,20,.7) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:330px;background:linear-gradient(0deg,rgba(10,16,26,.92),rgba(10,16,26,0))"></div>
+ <div style="position:absolute;inset:20px;border:1px solid rgba(217,166,58,.4)"></div>
+ <div class="tg" style="position:absolute;left:46px;top:42px;font:24px Consolas,monospace;letter-spacing:.12em;color:#e6b54a;background:rgba(10,16,26,.85);padding:6px 14px;border-left:3px solid #d9a63a">{{p.tag}}</div>
+ <div style="position:absolute;left:56px;bottom:48px;right:56px">
+  <div class="kk" style="font:24px Consolas,monospace;letter-spacing:.14em;color:#c9d3dc;margin-bottom:6px">{{p.kicker}}</div>
+  <div style="font-family:'Barlow',sans-serif;font-weight:700;line-height:1;white-space:nowrap"><span class="tt" style="display:inline-block;font-size:90px;color:#d9a63a;letter-spacing:.01em">{{p.titulo}}</span><span class="nm" style="display:inline-block;font-size:90px;color:#f2efe6">&nbsp;<span style="color:#d9a63a">·</span> {{p.numero}}</span></div>
+  <div class="sb" style="font-family:'Barlow',sans-serif;font-weight:700;font-size:42px;color:#f2efe6;margin-top:10px;letter-spacing:.03em">{{p.sub}}</div>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const tom=+P.tom; document.querySelector(id+" .ph").style.filter=`sepia(${tom}) saturate(${1-tom*0.55}) contrast(1.08) brightness(.82)`;
+  const a=+P.amount||0.07; tl.fromTo(id+" .ph",{scale:1},{scale:1+a,duration:D,ease:"none",immediateRender:true},S);
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.45,immediateRender:true},S);
+  const show=(sel,t,on)=>{ if(on) tl.fromTo(id+" "+sel,{opacity:0,y:14},{opacity:1,y:0,duration:.5,immediateRender:true},S+(+t)); else tl.set(id+" "+sel,{display:"none"},S); };
+  show(".tg",P.t_tag,P.tag); show(".kk",P.t_titulo,P.kicker); show(".tt",P.t_titulo,P.titulo); show(".nm",P.t_num,P.numero); show(".sb",P.t_sub,P.sub);
+})(window.__timelines.main, {{json}});
+</script>

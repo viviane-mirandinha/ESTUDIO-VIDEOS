@@ -1,0 +1,59 @@
+[
+ {
+  "video": {
+   "id": "18gEjxdSuxc",
+   "title": "The Biggest War Between Species on Planet Earth",
+   "views": 983589,
+   "dur": 946,
+   "upload": "20260915",
+   "channel": "SwarmTheory",
+   "channel_id": "UCnQGQTq_hH7h7v84eApwcUA",
+   "subs": 174,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCnQGQTq_hH7h7v84eApwcUA",
+   "name": "SwarmTheory",
+   "n": 12,
+   "median_views": 34500.0,
+   "med_vph_45d": 358.0,
+   "best_vph": 7807,
+   "med_dur": 1038.5,
+   "videos": [
+    {
+     "id": "rCUogZuR_7I",
+     "title": "Why Wasps are Terrified of Dragonflies",
+     "views": 2300000,
+     "dur": 990,
+     "upload": "20261010",
+     "hours": 295,
+     "vph": 7807,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "o7MfAhEOKU8",
+     "title": "Spiders are Terrifying... Here's Why",
+     "views": 17000,
+     "dur": 1722,
+     "upload": "20261021",
+     "hours": 15,
+     "vph": 1163,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "UZA7jsYIlDU",
+     "title": "Why Wasps are Terrified of Praying Mantises",
+     "views": 356000,
+     "dur": 825,
+     "upload": "20261008",
+     "hours": 343,
+     "vph": 1039,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ }
+]

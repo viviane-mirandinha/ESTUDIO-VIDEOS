@@ -1,0 +1,33 @@
+<!--params {"rotulo":"","termo":"TERMO MÉDICO","expansao":"o que significa em palavras simples","nota":"","cor":"#ffffff","cor_exp":"#5bc0eb","fundo":"rgba(17,17,20,0)","pos":"baixo","t_termo":0.15,"t_exp":0.6,"t_nota":1.2}-->
+<div id="{{id}}" class="ct" style="position:absolute;inset:0;background:{{p.fundo}};font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot">{{p.rotulo}}</div>
+    <div class="ct-termo" style="color:{{p.cor}}">{{p.termo}}</div>
+    <div class="ct-exp" style="color:{{p.cor_exp}}">{{p.expansao}}</div>
+    <div class="ct-nota">{{p.nota}}</div>
+  </div>
+</div>
+<style>
+#{{id}} .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#{{id}} .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#{{id}}.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#{{id}}.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#{{id}} .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#{{id}} .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#{{id}} .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#{{id}} .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const r=document.getElementById("{{id}}"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#{{id}} .ct-rot,#{{id}} .ct-termo,#{{id}} .ct-exp,#{{id}} .ct-nota,#{{id}} .ct-grad",{opacity:0},0);
+  tl.fromTo("#{{id}} .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#{{id}} .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#{{id}} .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#{{id}} .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {{json}});
+</script>

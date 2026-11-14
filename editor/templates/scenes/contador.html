@@ -1,0 +1,12 @@
+<!--params {"numero":1000000,"prefixo":"","sufixo":"","legenda":"pessoas","cor":"#ffd400","fundo":"#0b0c10"}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:{{p.fundo}};display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Inter,Arial,sans-serif">
+  <div class="n" style="color:{{p.cor}};font-size:calc({{H}}px*0.16);font-weight:900;font-variant-numeric:tabular-nums">0</div>
+  <div style="color:#ddd;font-size:calc({{H}}px*0.05);margin-top:8px">{{p.legenda}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const el=document.querySelector("#{{id}} .n"); const o={v:0};
+  const f=()=>{el.textContent=(P.prefixo||"")+Math.round(o.v).toLocaleString("pt-BR")+(P.sufixo||"");};
+  tl.fromTo(o,{v:0},{v:+P.numero||0,duration:Math.max(.5,D*.6),ease:"power2.out",onUpdate:f,immediateRender:false},S+.1);
+  tl.set(o,{v:0,onComplete:f},0);
+})(window.__timelines.main, {{json}});
+</script>

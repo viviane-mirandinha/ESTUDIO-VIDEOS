@@ -1,0 +1,32 @@
+<!--params {"titulo":"TÍTULO","sub":"","t_tit":0,"quadros":[{"x":540,"y":840,"w":960,"h":800}],"borda":"#F5C518","tags":[{"txt":"","t":0}],"aspas":"","t_aspas":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">{{p.titulo}}</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">{{p.sub}}</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {{json}});
+</script>

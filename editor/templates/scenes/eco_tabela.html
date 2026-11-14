@@ -1,0 +1,27 @@
+<!--params {"titulo":"Título","colunas":["Item","Valor"],"linhas":[["A","1"],["B","2"]],"tempos":[],"destaque":1,"t_destaque":0,"fundo":"rgba(6,9,12,.74)"}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff">
+  <div class="ov" style="position:absolute;inset:0;background:{{p.fundo}}"></div>
+  <div class="bx" style="position:absolute;left:250px;width:780px;top:150px">
+    <div class="hd" style="text-align:center;font-family:'Barlow Condensed',Inter;font-weight:700;font-size:60px;color:#efe08f;margin-bottom:26px">{{p.titulo}}</div>
+    <div class="th" style="display:flex;font-size:26px;font-weight:700;color:#d9d9d9;border-bottom:2px solid #efe08f;padding:0 24px 10px"></div>
+    <div class="rows"></div>
+  </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const th=document.querySelector(id+" .th"), rows=document.querySelector(id+" .rows");
+  P.colunas.forEach((c,i)=>{const d=document.createElement("div");d.textContent=c;d.style.cssText="flex:"+(i?2:3)+";white-space:nowrap;text-align:"+(i?"right":"left");th.appendChild(d);});
+  P.linhas.forEach((l,r)=>{const row=document.createElement("div");row.style.cssText="position:relative;display:flex;font-size:44px;font-weight:700;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.15)";
+    const hl=document.createElement("div");hl.style.cssText="position:absolute;inset:4px 0;background:#efe08f;transform-origin:0 50%;z-index:0";row.appendChild(hl);
+    l.forEach((c,i)=>{const d=document.createElement("div");d.textContent=c;d.style.cssText="position:relative;z-index:1;flex:"+(i?2:3)+";white-space:nowrap;text-align:"+(i?"right":"left");row.appendChild(d);});
+    rows.appendChild(row);
+    const t=(P.tempos[r]!=null?P.tempos[r]:S+.6+r*.4);
+    tl.set(row,{opacity:0},0); tl.fromTo(row,{opacity:0,x:-30},{opacity:1,x:0,duration:.4,ease:"power2.out",immediateRender:false},t);
+    tl.set(hl,{scaleX:0},0);
+    if(r===P.destaque&&P.t_destaque){tl.to(hl,{scaleX:1,duration:.45,ease:"power2.inOut"},P.t_destaque);tl.to(row,{color:"#111",duration:.2},P.t_destaque+.15);}
+  });
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo(id+" .hd",{opacity:0,y:-20},{opacity:1,y:0,duration:.5,immediateRender:false},S+.1); tl.set(id+" .hd",{opacity:0},0);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

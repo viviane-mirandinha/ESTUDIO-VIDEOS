@@ -1,0 +1,38 @@
+{
+  "name": "news-ticker",
+  "titulo": "Faixa de notícias (ticker)",
+  "categoria": "Lower third",
+  "descricao": "Faixa estilo telejornal com selo AO VIVO, manchete e letreiro correndo.",
+  "title_en": "News Ticker",
+  "description_en": "Premium broadcast-style lower-third ticker with live label, headline ribbon, and scrolling news crawl.",
+  "duration": 7,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "lower-third",
+    "overlay",
+    "news",
+    "ticker"
+  ],
+  "variables": [],
+  "files": [
+    "news-ticker.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/news-ticker",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Live",
+    "Global Desk",
+    "AI video tools move from",
+    "prototype",
+    "to production",
+    "09:41 UTC",
+    "Breaking",
+    "Creator teams shorten launch cycles by",
+    "Rendering queues clear in under",
+    "2 min",
+    "New catalog blocks trending across product demos",
+    "Studio editors adopt HTML-first motion systems"
+  ]
+}

@@ -1,0 +1,64 @@
+<!--params {"modo":"drone","hora":"06:00","rotulo":"SETOR NORTE","sinal":"REC","cor":"#9dff7a"}-->
+<div id="{{id}}" class="hudd" data-modo="{{p.modo}}" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:{{p.cor}};text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="{{p.cor}}" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="{{p.cor}}" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="{{id}}_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#{{id}}_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px">{{p.rotulo}}</div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">{{p.hora}}</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> {{p.sinal}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const R=document.getElementById("{{id}}");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {{json}});
+</script>

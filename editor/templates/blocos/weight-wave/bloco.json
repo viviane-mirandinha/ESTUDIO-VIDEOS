@@ -1,0 +1,112 @@
+{
+  "name": "weight-wave",
+  "titulo": "Título onda de peso",
+  "categoria": "Título",
+  "descricao": "As letras engordam e afinam em onda (fonte variável).",
+  "title_en": "Weight Wave",
+  "description_en": "A crest of thickness travels along a headline: each character swells from light to black and leans forward as the wave passes, driven by the wght and slnt variable-font axes rather than by transforms.",
+  "duration": 6,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "typography",
+    "kinetic-type",
+    "title",
+    "variable-font",
+    "text"
+  ],
+  "variables": [
+    {
+      "id": "text",
+      "type": "string",
+      "label": "Headline",
+      "default": "PRESSURE MOVES THROUGH TYPE",
+      "maxLength": 64
+    },
+    {
+      "id": "color",
+      "type": "color",
+      "label": "Text color",
+      "default": "#f5f5f7"
+    },
+    {
+      "id": "background",
+      "type": "color",
+      "label": "Background",
+      "default": "#0b0b0d"
+    },
+    {
+      "id": "weightFrom",
+      "type": "number",
+      "label": "Weight (rest)",
+      "default": 400,
+      "min": 300,
+      "max": 1000,
+      "step": 10
+    },
+    {
+      "id": "weightTo",
+      "type": "number",
+      "label": "Weight (crest)",
+      "default": 1000,
+      "min": 300,
+      "max": 1000,
+      "step": 10
+    },
+    {
+      "id": "crestWidth",
+      "type": "number",
+      "label": "Crest width",
+      "default": 4,
+      "min": 1,
+      "max": 24,
+      "step": 0.5,
+      "unit": "chars"
+    },
+    {
+      "id": "sweepSpeed",
+      "type": "number",
+      "label": "Sweep speed",
+      "default": 0.5,
+      "min": 0.05,
+      "max": 3,
+      "step": 0.05,
+      "unit": "passes/s"
+    },
+    {
+      "id": "slant",
+      "type": "number",
+      "label": "Slant at crest",
+      "default": -12,
+      "min": -15,
+      "max": 0,
+      "step": 0.5,
+      "unit": "deg"
+    },
+    {
+      "id": "direction",
+      "type": "enum",
+      "label": "Direction",
+      "default": "ltr",
+      "options": [
+        {
+          "value": "ltr",
+          "label": "Left to right"
+        },
+        {
+          "value": "rtl",
+          "label": "Right to left"
+        }
+      ]
+    }
+  ],
+  "files": [
+    "weight-wave.html",
+    "assets/fonts/Recursive-wght-slnt-latin.woff2",
+    "assets/fonts/OFL.txt"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/weight-wave",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": []
+}

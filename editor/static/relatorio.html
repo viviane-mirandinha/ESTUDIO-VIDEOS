@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Relatório do vídeo</title>
+<link rel="stylesheet" href="/static/style.css" />
+<style>
+  body{padding:0 0 40px}
+  .wrap{max-width:1100px;margin:0 auto;padding:16px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0}
+  .kpi{background:var(--pn);border-radius:14px;padding:16px}
+  .kpi .v{font-size:34px;font-weight:900;color:var(--ac)}
+  .kpi .l{color:var(--mu);font-size:13px;margin-top:4px}
+  .kpi.ok .v{color:var(--ok)}
+  h2{font-size:20px;margin:22px 0 8px}
+  .obs{background:var(--pn);border-radius:14px;padding:14px;line-height:1.5;white-space:pre-wrap}
+  .calc{background:var(--pn);border-radius:14px;padding:18px}
+  .calc .big{font-size:44px;font-weight:900;text-align:center;margin:6px 0 10px}
+  .calc input[type=range]{width:100%;height:36px}
+  .calc .marks{display:flex;justify-content:space-between;color:var(--mu);font-size:12px;margin-top:-4px}
+  .calc .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:14px}
+  .calc .res div{background:#101114;border-radius:10px;padding:12px;text-align:center}
+  .calc .res b{display:block;font-size:26px;color:var(--ac)}
+  .calc .res span{color:var(--mu);font-size:12px}
+  .ajustes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px}
+  .ajustes label{display:block;color:var(--mu);font-size:12px;margin-bottom:4px}
+  table{width:100%;border-collapse:collapse;background:var(--pn);border-radius:14px;overflow:hidden}
+  td,th{padding:9px 12px;text-align:left;border-bottom:1px solid #2b2d35;font-size:14px}
+  th{color:var(--mu);font-weight:600}
+  tr.me td{background:#2a2410}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .chips button{cursor:pointer}
+/* 07/11: esconder dinheiro/token da tela */
+.res>div:has(#rTok),.res>div:has(#rUsd),.ajustes>div:has(#aTok),.ajustes>div:has(#aUsd),.ajustes>div:has(#aCambio),p.note{display:none!important}
+table th:nth-child(6),table td:nth-child(6),table th:nth-child(7),table td:nth-child(7){display:none}
+</style>
+</head>
+<body>
+<header class="bar"><h1 id="titulo">📊 Relatório</h1><div class="grow"></div><button class="btn" onclick="window.close()">Fechar</button></header>
+<div class="wrap">
+  <div id="estilo" style="color:var(--ac);font-weight:800;text-transform:uppercase;letter-spacing:.03em"></div>
+  <div class="kpis" id="kpis"></div>
+  <h2>Como foi feito</h2>
+  <div class="obs" id="obs">—</div>
+
+  <h2>🧮 Calculadora: quanto tempo leva um vídeo maior?</h2>
+  <div class="calc">
+    <div class="big"><span id="cMin">30</span> min de vídeo</div>
+    <input type="range" id="slider" min="1" max="180" value="30" />
+    <div class="marks"><span>1 min</span><span>30 min</span><span>1 h</span><span>1h30</span><span>2 h</span><span>2h30</span><span>3 h</span></div>
+    <div class="chips">
+      <button class="btn" data-m="1">1 min</button><button class="btn" data-m="10">10 min</button><button class="btn" data-m="30">30 min</button>
+      <button class="btn" data-m="60">1 hora</button><button class="btn" data-m="120">2 horas</button><button class="btn" data-m="180">3 horas</button>
+    </div>
+    <div class="res">
+      <div><b id="rTempo">—</b><span>tempo pra fazer (Claude)</span></div>
+      <div><b id="rRender">—</b><span>tempo de render no PC</span></div>
+      <div><b id="rTok">—</b><span>tokens estimados</span></div>
+      <div><b id="rUsd">—</b><span>custo estimado (R$)</span></div>
+    </div>
+    <div class="ajustes">
+      <div><label>Minutos de trabalho por 1 min de vídeo (base: <span id="bTempo">—</span>)</label><input type="number" step="0.1" id="aTempo"/></div>
+      <div><label>Segundos de render por 1 min de vídeo (base: <span id="bRender">—</span>)</label><input type="number" step="1" id="aRender"/></div>
+      <div><label>Tokens por 1 min de vídeo (base: <span id="bTok">—</span>)</label><input type="number" step="1000" id="aTok"/></div>
+      <div><label>R$ por 1 min de vídeo (base: <span id="bUsd">—</span>)</label><input type="number" step="0.1" id="aUsd"/></div>
+      <div><label>Câmbio: 1 US$ = R$</label><input type="number" step="0.01" id="aCambio"/></div>
+    </div>
+    <p class="note" style="color:var(--mu);font-size:12px;margin:10px 0 0">Os valores "base" vêm deste vídeo (ou da média dos vídeos quando este não registrou). Custo = preço da API (Opus 5.5) registrado por vídeo, convertido pelo câmbio que você digitar (padrão 5,50). Você pode mudar qualquer número base pra simular.</p>
+  </div>
+
+  <h2>Comparação com os outros vídeos</h2>
+  <table><thead><tr><th>Vídeo</th><th>Estilo</th><th>Duração</th><th>Tempo pra fazer</th><th>Render</th><th>Tokens</th><th>Custo (R$)</th><th>min trabalho / min vídeo</th></tr></thead><tbody id="tab"></tbody></table>
+</div>
+<script>
+const $ = (s) => document.querySelector(s);
+const pid = new URLSearchParams(location.search).get("pid");
+const fmtMin = (m) => { if (m == null || isNaN(m)) return "—"; if (m < 60) return m.toFixed(m < 10 ? 1 : 0) + " min"; const h = Math.floor(m / 60); return h + "h" + String(Math.round(m - h * 60)).padStart(2, "0"); };
+const fmtSec = (s) => { if (s == null || isNaN(s)) return "—"; if (s < 90) return Math.round(s) + " s"; return fmtMin(s / 60); };
+const fmtTok = (t) => (t == null || isNaN(t)) ? "—" : t >= 1e6 ? (t / 1e6).toFixed(2) + " M" : Math.round(t / 1000) + " k";
+const CAMBIO = () => { try { return +(localStorage.getItem("cambio") || 5.5); } catch (e) { return 5.5; } };
+const brl = (usd) => (usd == null || isNaN(usd)) ? "—" : "R$ " + (usd * CAMBIO()).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const LS = (k, d) => { try { const v = localStorage.getItem("calc_" + k); return v == null ? d : +v; } catch (e) { return d; } };
+(async () => {
+  const all = await fetch("/api/relatorios").then((r) => r.json());
+  const me = all.find((x) => x.id === pid) || {};
+  document.title = "Relatório — " + (me.name || "");
+  $("#titulo").textContent = "📊 " + (me.name || "Relatório");
+  $("#estilo").textContent = me.estilo ? "🎨 " + me.estilo : "";
+  const durMin = (me.dur || 0) / 60;
+  const kp = me.local ? [   // vídeo feito pelas ferramentas do PC (Ollama/Whisper/ffmpeg): não tem Claude nem token
+    ["ok", fmtMin(me.minutos), "tempo de máquina (tudo no seu PC)"],
+    ["", fmtSec(me.render_segundos), "tempo de render no seu PC"],
+    ["", me.dur ? fmtMin(durMin) : "—", "duração do vídeo"],
+    ["ok", "0", "tokens gastos (feito no seu PC, sem Claude)"],
+  ] : [
+    ["ok", fmtMin(me.minutos), "tempo que o Claude levou pra fazer"],
+    ["", fmtSec(me.render_segundos), "tempo de render no seu PC"],
+    ["", me.dur ? fmtMin(durMin) : "—", "duração do vídeo"],
+    ["", fmtTok(me.tokens), "tokens gastos (total, com cache)" + (me.tokens ? "" : " — não registrado")],
+    ["", me.tokens_detalhe ? fmtTok(me.tokens_detalhe.novos) + " / " + fmtTok(me.tokens_detalhe.saida) : "—", "tokens novos / de saída"],
+  ];
+  kp.push(
+    ["ok", me.local ? "R$ 0,00" : brl(me.custo_usd), "custo deste vídeo" + (me.local ? " (grátis)" : me.custo_usd != null ? " (US$ " + (+me.custo_usd).toFixed(2) + ")" : "")],
+    ["", me.tamanho_mb != null ? me.tamanho_mb + " MB" : "—", "tamanho do arquivo final"]);
+  // 07/11: sem dinheiro nem token na tela (aluno achava que pagava por vídeo) — os números continuam no RELATORIO.json
+  $("#kpis").innerHTML = kp.filter(([, , l]) => !/token|custo/i.test(l)).map(([c, v, l]) => `<div class="kpi ${c}"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+  $("#obs").textContent = [me.observacoes, me.inicio ? "Começou: " + me.inicio.replace("T", " ").slice(0, 16) : "", me.fim ? "Terminou: " + me.fim.replace("T", " ").slice(0, 16) : ""].filter(Boolean).join("\n\n") || "Sem relatório gravado para este vídeo.";
+  // bases por minuto de vídeo
+  const rate = (x, k) => (x.dur && x[k] != null && !isNaN(+x[k])) ? +x[k] / (x.dur / 60) : null;
+  const avg = (k) => { const v = all.map((x) => rate(x, k)).filter((v) => v != null && isFinite(v)); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null; };
+  const base = { tempo: rate(me, "minutos") ?? avg("minutos") ?? 25, render: rate(me, "render_segundos") ?? avg("render_segundos") ?? 75, tok: rate(me, "tokens") ?? avg("tokens") ?? 4000000, usd: rate(me, "custo_usd") ?? avg("custo_usd") ?? 2 };
+  $("#aCambio").value = CAMBIO(); $("#bUsd").textContent = (base.usd * CAMBIO()).toFixed(2);
+  $("#bTempo").textContent = base.tempo.toFixed(1); $("#bRender").textContent = Math.round(base.render); $("#bTok").textContent = fmtTok(base.tok);
+  $("#aTempo").value = base.tempo.toFixed(1); $("#aRender").value = Math.round(base.render); $("#aTok").value = Math.round(base.tok); $("#aUsd").value = (base.usd * CAMBIO()).toFixed(2);
+  const calc = () => {
+    const m = +$("#slider").value; $("#cMin").textContent = m;
+    const tempo = m * +$("#aTempo").value, rend = m * +$("#aRender").value, tok = m * +$("#aTok").value, usd = m * +$("#aUsd").value;
+    $("#rTempo").textContent = fmtMin(tempo); $("#rRender").textContent = fmtSec(rend); $("#rTok").textContent = fmtTok(tok); $("#rUsd").textContent = "R$ " + usd.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+  ["slider", "aTempo", "aRender", "aTok", "aUsd"].forEach((id) => ($("#" + id).oninput = calc));
+  $("#aCambio").oninput = () => { try { localStorage.setItem("cambio", $("#aCambio").value); } catch (e) {} $("#aUsd").value = (base.usd * CAMBIO()).toFixed(2); $("#bUsd").textContent = $("#aUsd").value; calc(); };
+  document.querySelectorAll("[data-m]").forEach((b) => (b.onclick = () => { $("#slider").value = b.dataset.m; calc(); }));
+  calc();
+  $("#tab").innerHTML = all.map((x) => `<tr class="${x.id === pid ? "me" : ""}"><td>${x.name || ""}</td><td>${x.estilo || ""}</td><td>${x.dur ? fmtMin(x.dur / 60) : "—"}</td><td>${fmtMin(x.minutos)}</td><td>${fmtSec(x.render_segundos)}</td><td>${fmtTok(x.tokens)}</td><td>${brl(x.custo_usd)}</td><td>${rate(x, "minutos") != null ? rate(x, "minutos").toFixed(1) : "—"}</td></tr>`).join("");
+})();
+</script>
+</body>
+</html>

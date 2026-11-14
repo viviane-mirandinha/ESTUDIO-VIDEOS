@@ -1,0 +1,17 @@
+<!--params {"numero":"PRIMEIRO","texto":"A JURISDIÇÃO","cor":"#b3121a","fonte":"Anton"}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'{{p.fonte}}',Impact,sans-serif;text-transform:uppercase">
+  <svg width="0" height="0" style="position:absolute"><filter id="{{id}}_rough"><feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></svg>
+  <div class="jit" style="filter:url(#{{id}}_rough);text-align:center">
+    <div class="num" style="color:{{p.cor}};font-size:52px;letter-spacing:.12em;margin-bottom:6px">{{p.numero}}</div>
+    <div class="tx" style="color:{{p.cor}};font-size:112px;line-height:1.02;letter-spacing:.02em;max-width:1150px;text-shadow:0 0 22px rgba(179,18,26,.35)">{{p.texto}}</div>
+  </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  tl.set("#{{id}} .jit",{opacity:0},0);
+  tl.fromTo("#{{id}} .jit",{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.35,ease:"power2.out",immediateRender:false},S+.05);
+  for(let k=0;k*0.07<D;k++){ const a=Math.sin(k*12.9898)*43758.5453, b=Math.sin(k*78.233)*12345.678;
+    tl.set("#{{id}} .jit",{x:((a-Math.floor(a))-.5)*4,y:((b-Math.floor(b))-.5)*4},S+k*0.07); }
+  tl.to("#{{id}} .jit",{opacity:0,duration:.3,immediateRender:false},S+D-.32);
+})(window.__timelines.main, {{json}});
+</script>

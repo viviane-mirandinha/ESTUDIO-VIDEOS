@@ -1,0 +1,33 @@
+{
+  "name": "camcorder-hud",
+  "titulo": "Filmadora (REC)",
+  "categoria": "Efeito",
+  "descricao": "Moldura de filmadora antiga: REC, bateria, data e contador.",
+  "title_en": "Camcorder HUD",
+  "description_en": "Responsive REC, battery, editable date placeholder, and timeline-driven counter overlay for creator-camera and camcorder treatments",
+  "duration": 4,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "camcorder",
+    "camera",
+    "recording",
+    "hud",
+    "overlay",
+    "creator",
+    "media-treatment-overlay"
+  ],
+  "variables": [],
+  "files": [
+    "camcorder-hud.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/camcorder-hud",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "REC",
+    "JAN 01 2000",
+    "12:00 AM",
+    "SP · 16:9"
+  ]
+}

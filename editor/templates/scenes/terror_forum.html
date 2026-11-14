@@ -1,0 +1,26 @@
+<!--params {"usuario":"u/anonimo_rural","data":"postado às 03:12","sub":"r/relatosreais","titulo":"Três noites numa casa no fim da estrada","texto":"Cheguei na sexta, cansado, achando que o silêncio ia curar a insônia.","votos":"4,1 mil","t_cursor":1.2}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;font-family:Inter,'Segoe UI',Arial,sans-serif">
+ <div style="position:absolute;inset:0;background:rgba(3,5,10,.72)"></div>
+ <div class="card" style="position:absolute;left:50%;top:50%;width:920px;transform:translate(-50%,-50%);background:#101317;border:1px solid #262b33;border-radius:14px;padding:30px 40px 34px 92px;box-shadow:0 20px 70px rgba(0,0,0,.8)">
+  <div style="position:absolute;left:26px;top:30px;width:44px;text-align:center;color:#7d8590;font-size:24px;font-weight:700;line-height:1.3">▲<br><span style="font-size:24px;color:#c9ced6">{{p.votos}}</span><br>▼</div>
+  <div style="display:flex;align-items:center;gap:14px;color:#8b939e;font-size:24px">
+   <div style="width:40px;height:40px;border-radius:50%;background:#2a3038;display:flex;align-items:center;justify-content:center;color:#59616c;font-size:24px">?</div>
+   <span style="color:#c9ced6;font-weight:700">{{p.sub}}</span><span>· {{p.usuario}} · {{p.data}}</span>
+  </div>
+  <div class="tt" style="color:#f1efe9;font-size:40px;font-weight:800;line-height:1.2;margin:18px 0 14px">{{p.titulo}}</div>
+  <div class="tx" style="color:#c7ccd3;font-size:32px;line-height:1.45">{{p.texto}}</div>
+ </div>
+ <svg class="cur" width="34" height="46" viewBox="0 0 17 23" style="position:absolute;left:0;top:0"><path d="M1 1 L1 18 L5.5 13.5 L8.5 21 L11.5 19.8 L8.5 12.5 L14.5 12.5 Z" fill="#fff" stroke="#000" stroke-width="1.2"/></svg>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}";
+  tl.set(R,{opacity:0},0);
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.5,ease:"none",immediateRender:false},S);
+  tl.fromTo(R+" .card",{y:30},{y:-30,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo(R+" .tx",{opacity:0},{opacity:1,duration:.9,ease:"none",immediateRender:false},S+.6);
+  const tc=+P.t_cursor||1.2;
+  tl.fromTo(R+" .cur",{x:1010,y:640},{x:780,y:470,duration:1.6,ease:"sine.inOut",immediateRender:false},S+tc);
+  tl.to(R+" .cur",{x:640,y:430,duration:D-tc-1.8,ease:"sine.inOut"},S+tc+1.7);
+  tl.to(R,{opacity:0,duration:.4,ease:"none",immediateRender:false},S+D-.4);
+})(window.__timelines.main, {{json}});
+</script>

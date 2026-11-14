@@ -1,0 +1,15 @@
+<!--params {"texto":"","sub":"","canto":"bl"}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+ <div class="rot" style="position:absolute;display:flex;align-items:stretch;background:rgba(8,12,20,.84);padding:8px 18px 8px 0;max-width:900px">
+  <span style="width:6px;background:#f5c518;margin-right:14px;flex:none"></span>
+  <span><span style="display:block;font:800 28px/1.15 'Montserrat',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.03em">{{p.texto}}</span><span class="sb" style="display:block;font:700 24px/1.2 'Montserrat',sans-serif;color:#c9d3e0;margin-top:2px">{{p.sub}}</span></span>
+ </div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id);
+ const r=R.querySelector(".rot"), c=P.canto||"bl"; r.style[c[0]==="t"?"top":"bottom"]=(c[0]==="t"?40:48)+"px"; if(c[1]==="l")r.style.left="48px"; else if(c[1]==="r")r.style.right="48px"; else {r.style.left="50%";r.style.transform="translateX(-50%)";}
+ if(!P.sub) R.querySelector(".sb").style.display="none";
+ tl.fromTo(id+" .rot",{opacity:0,x:-16},{opacity:1,x:0,duration:.5,ease:"power2.out",immediateRender:true},S+.1);
+ tl.to(id+" .rot",{opacity:0,duration:.35},S+D-.35);
+})(window.__timelines.main,{{json}});
+</script>

@@ -1,0 +1,29 @@
+{
+  "name": "lt-bold-block",
+  "titulo": "Nome na tela — bloco forte",
+  "categoria": "Lower third",
+  "descricao": "Bloco escuro entra limpando a tela, nome em caixa alta.",
+  "title_en": "Lower Third — Bold Block",
+  "description_en": "High-energy podcast lower third: solid dark block wipes in, uppercase name slams up, accent tag pops",
+  "duration": 4.8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "lower-third",
+    "overlay",
+    "podcast",
+    "interview",
+    "bold"
+  ],
+  "variables": [],
+  "files": [
+    "lt-bold-block.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/lt-bold-block",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Maya Chen",
+    "Host · Neuroscientist"
+  ]
+}

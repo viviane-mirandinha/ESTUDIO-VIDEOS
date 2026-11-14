@@ -1,0 +1,8 @@
+Canal 1: Built On You — https://www.youtube.com/@BuiltonYou/videos
+  Vídeo analisado: The ENTIRE History of Amazon in 20 Minutes — https://youtu.be/jOo8wSIeGus (videoId jOo8wSIeGus, ~204 mil views, 20 min)
+  Outros do canal: Microsoft (8oGSERdqoUI), Toyota (bOc-RUVrLSo), Walmart (EtNH4mzw7AM), Nintendo (N6_TsQ655m8)
+Canal 2: CEOzoned — https://www.youtube.com/@CEOzoned/videos
+  Vídeo analisado: The ENTIRE History of SpaceX in 9 Minutes — https://youtu.be/TZIOfwN7bVI (videoId TZIOfwN7bVI, ~176 mil views)
+  Outros do canal: Elon Musk (idTq9ArggVc), NVIDIA (tBhMUTp4FVc), ChatGPT (ITdjQVhTua8)
+Prints: sheet-builtonyou-jOo8wSIeGus.jpg, sheet-ceozoned-TZIOfwN7bVI.jpg (trecho 0:20-1:50, 1 quadro a cada 3 s)
+Exemplo nosso: VIDEOS-NOVOS/37-historia-empresa-ilustrada (Nintendo, PT-BR, ~70 s)

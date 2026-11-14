@@ -1,0 +1,20 @@
+<!--params {"src":"","legenda":"","x":640,"y":340,"w":520,"h":340,"rot":-4,"t_in":0,"pos":"50% 50%"}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="{{p.src}}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">{{p.legenda}}</div>
+  </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

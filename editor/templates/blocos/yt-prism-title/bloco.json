@@ -1,0 +1,26 @@
+{
+  "name": "yt-prism-title",
+  "titulo": "Título prisma (YouTube)",
+  "categoria": "Título",
+  "descricao": "Título cinético com camadas coloridas, estilo abertura de canal.",
+  "title_en": "Chromatic Fringe Title",
+  "description_en": "Display title on a transparent root: blur-focus entrance, red/blue fringe that settles then breathes, perspective bow, slow scale drift",
+  "duration": 6,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "typography",
+    "title-card",
+    "creator"
+  ],
+  "variables": [],
+  "files": [
+    "yt-prism-title.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/yt-prism-title",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "yt-prism"
+  ]
+}

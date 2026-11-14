@@ -1,0 +1,27 @@
+{
+  "name": "mk-callout-highlight",
+  "titulo": "Frase com destaque karaokê",
+  "categoria": "Legenda",
+  "descricao": "Frase em que as palavras acendem uma a uma, com destaque.",
+  "title_en": "Word-Sweep Highlight",
+  "description_en": "A sentence whose word-by-word emphasis is driven by a single scalar — tween it to sync the highlight with a voiceover",
+  "duration": 8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "typography",
+    "karaoke",
+    "captions",
+    "minimal"
+  ],
+  "variables": [],
+  "files": [
+    "mk-callout-highlight.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/mk-callout-highlight",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Functionality was our goal from the very beginning"
+  ]
+}

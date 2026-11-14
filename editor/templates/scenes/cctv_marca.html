@@ -1,0 +1,34 @@
+<!--params {"tipo":"seta","x":640,"y":360,"ang":-135,"r":70,"label":"","cor":"#e8101a"}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="{{W}}" height="{{H}}" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:{{p.cor}};padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#{{id}} .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#{{id}} .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min({{W}}-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min({{H}}-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {{json}});
+</script>

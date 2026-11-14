@@ -1,0 +1,29 @@
+lang=pt dur=83.2 words=245 wpm=177
+[0.0] Por que quem ganha salário mínimo no Brasil trabalha quase 5 meses para comprar um iPhone
+[4.7] e, nos Estados Unidos, menos de 3 semanas?
+[7.5] Vamos fazer a conta certa, em horas de trabalho.
+[10.1] No Brasil, o mínimo de R$1.621 dá R$7,37 por hora.
+[15.9] Nos Estados Unidos, o menor mínimo do país é de R$7,25 por hora.
+[20.6] Quase o mesmo número, só que um é real e o outro é dólar.
+[24.0] Agora os preços.
+[25.0] O iPhone custa R$7.999 aqui e R$799 lá.
+[31.2] São cerca de 1.085 horas de trabalho no Brasil contra 110 nos Estados Unidos.
+[36.4] Quase 10 vezes mais.
+[38.2] Um Big Mac.
+[39.3] Aqui mais de 3 horas de trabalho.
+[41.4] Lá, uns 50 minutos.
+[43.2] Encher um tanque de 50 litros.
+[45.1] Aqui, umas 45 horas.
+[47.1] Lá, umas 8, mesmo com a gasolina de lá mais cara que o normal.
+[50.8] E o carro zero mais barato.
+[52.4] Aqui, 4 anos de salário mínimo.
+[54.4] Lá, cerca de 1 ano e meio.
+[56.4] E repara, isso usando o salário mais baixo dos Estados Unidos.
+[60.0] Na Califórnia, o mínimo é de R$16,90, o mais que o dobro.
+[64.3] Agora, o lado B.
+[65.8] Lá, não tem SUS.
+[67.2] Uma ida ao pronto-socorro sem plano pode passar de mil dólares.
+[70.7] Faculdade é cara e a lei não garante férias pagas nem décimo terceiro.
+[74.8] Então o americano compra coisas mais rápido, mas paga caro por outras.
+[78.8] E aí, você trocaria?
+[80.3] Comenta, Brasil ou Estados Unidos?

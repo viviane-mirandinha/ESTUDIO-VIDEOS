@@ -1,0 +1,28 @@
+{
+  "name": "editorial-flash-overlay",
+  "titulo": "Flash editorial",
+  "categoria": "Transição",
+  "descricao": "Clarão rápido por cima — bom para trocar de cena.",
+  "title_en": "Editorial Flash Overlay",
+  "description_en": "Finite neutral-warm light layers for a seek-safe camera-flash cut or social reveal",
+  "duration": 4,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "flash",
+    "editorial",
+    "social",
+    "light",
+    "transition",
+    "overlay",
+    "media-treatment-overlay"
+  ],
+  "variables": [],
+  "files": [
+    "editorial-flash-overlay.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/editorial-flash-overlay",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": []
+}

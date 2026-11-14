@@ -1,0 +1,38 @@
+<!--params {"src":"","motion":"zoom_in","amount":0.07,"pos":"50% 50%","bw":0,"moldura":0,"centro":"","nome":"","sub":"","credito":"","fade_in":0.5,"fade_out":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="bg" src="{{p.src}}" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.32) saturate(.7);display:none">
+ <div class="box" style="position:absolute;inset:0;overflow:hidden">
+  <img class="ph" src="{{p.src}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{p.pos}};transform-origin:50% 50%;filter:contrast(1.05) saturate(.88) brightness(.95)">
+ </div>
+ <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 58%,rgba(0,0,0,.5) 100%)"></div>
+ <div class="ct" style="position:absolute;left:60px;right:60px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:60px;line-height:1.1;text-shadow:0 3px 18px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.8)">{{p.centro}}</div>
+ <div class="lb" style="position:absolute;left:0;right:0;bottom:64px;text-align:center;color:#fff;font-family:'Barlow',sans-serif;text-shadow:0 3px 16px rgba(0,0,0,.95),0 0 3px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:54px;font-weight:700;line-height:1.05">{{p.nome}}</div>
+  <div class="sb" style="font-size:30px;font-weight:700;color:#e9e9e9;margin-top:2px">{{p.sub}}</div>
+ </div>
+ <div class="cr" style="position:absolute;right:26px;bottom:14px;color:rgba(255,255,255,.62);font-family:'Barlow',sans-serif;font-weight:700;font-size:24px;text-shadow:0 2px 8px rgba(0,0,0,.9)">{{p.credito}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", el=document.querySelector(id);
+  const a=+P.amount||0.07, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(+P.bw) el.querySelector(".ph").style.filter="grayscale(1) contrast(1.12) brightness(.95)";
+  if(+P.moldura){ const b=el.querySelector(".box"); el.querySelector(".bg").style.display="block";
+    Object.assign(b.style,{inset:"auto",left:"150px",top:"72px",width:"980px",height:"576px",boxShadow:"0 0 0 2px rgba(255,255,255,.22),0 20px 60px rgba(0,0,0,.8)"});
+    el.querySelector(".lb").style.bottom="18px"; el.querySelector(".vg").style.display="none"; }
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.centro) el.querySelector(".ct").style.display="none";
+  if(!P.nome) el.querySelector(".nm").style.display="none";
+  if(!P.sub) el.querySelector(".sb").style.display="none";
+  if(!P.credito) el.querySelector(".cr").style.display="none";
+  const d0=Math.min(0.5,D*.15);
+  tl.fromTo(id+" .ct",{opacity:0},{opacity:1,duration:.6,ease:"sine.out",immediateRender:true},S+d0);
+  tl.fromTo(id+" .lb",{opacity:0},{opacity:1,duration:.6,ease:"sine.out",immediateRender:true},S+d0);
+  tl.to([id+" .ct",id+" .lb"],{opacity:0,duration:.4},S+D-.6);
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,24 @@
+<!--params {"topo":"","esq":{"titulo":"A","sub":"","t":0.2,"ts":1},"dir":{"titulo":"B","sub":"","t":2,"ts":3}}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif">
+ <div class="topo" style="position:absolute;top:138px;left:0;right:0;text-align:center;font-size:38px;font-weight:700;color:#e9ecf1;text-shadow:0 3px 12px rgba(0,0,0,.8)"></div>
+ <div style="position:absolute;left:80px;right:80px;top:220px;bottom:70px;display:flex;gap:40px">
+  <div class="L" style="flex:1;border-radius:20px;background:rgba(20,24,34,.9);border:3px solid #ff6b5b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px"></div>
+  <div class="Rr" style="flex:1;border-radius:20px;background:rgba(20,24,34,.9);border:3px solid #3ddc84;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px"></div>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}"; const root=document.querySelector(R);
+  const esc=s=>String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  root.querySelector(".topo").textContent=P.topo||"";
+  [["L",P.esq,"#ff6b5b"],["Rr",P.dir,"#3ddc84"]].forEach(([c,o,cor])=>{ root.querySelector("."+c).innerHTML=
+    '<div class="t" style="font-family:Anton,Impact,sans-serif;font-size:64px;line-height:1.05;color:#fff;text-align:center">'+esc(o.titulo)+'</div>'+
+    '<div class="s" style="font-size:42px;font-weight:800;color:'+cor+';text-align:center">'+esc(o.sub)+'</div>'; });
+  tl.set(R,{opacity:0},0);
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.35,ease:"none",immediateRender:false},S);
+  if(P.topo) tl.fromTo(R+" .topo",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.05);
+  [["L",P.esq],["Rr",P.dir]].forEach(([c,o])=>{
+    tl.fromTo(R+" ."+c,{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+(+o.t||0));
+    tl.fromTo(R+" ."+c+" .s",{opacity:0,scale:.85},{opacity:1,scale:1,duration:.4,ease:"power2.out",immediateRender:false},S+(+o.ts||0)); });
+  tl.to(R,{opacity:0,duration:.3,ease:"none"},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

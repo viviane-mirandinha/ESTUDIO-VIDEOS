@@ -1,0 +1,34 @@
+<!--params {"rotulo":"PACIENTE","iniciais":"M.","idade":"36 anos","sexo":"masculino","queixa":"","img":"","t_idade":1.2,"t_sexo":2.6,"fundo":"#111114"}-->
+<div id="{{id}}" class="pc" style="position:absolute;inset:0;background:{{p.fundo}};font-family:Oswald,Inter,sans-serif;overflow:hidden">
+  <div class="pc-img"><img src="{{p.img}}"></div>
+  <div class="pc-in">
+    <div class="pc-rot">{{p.rotulo}}</div>
+    <div class="pc-ini">{{p.iniciais}}</div>
+    <div class="pc-l pc-idade"><span>IDADE</span>{{p.idade}}</div>
+    <div class="pc-l pc-sexo"><span>SEXO</span>{{p.sexo}}</div>
+    <div class="pc-q">{{p.queixa}}</div>
+  </div>
+</div>
+<style>
+#{{id}} .pc-img{position:absolute;right:0;top:0;width:55%;height:100%;-webkit-mask-image:linear-gradient(to right,transparent,#000 40%);mask-image:linear-gradient(to right,transparent,#000 40%)}
+#{{id}} .pc-img img{width:100%;height:100%;object-fit:cover;opacity:.9}
+#{{id}} .pc-in{position:absolute;left:100px;top:50%;transform:translateY(-50%);width:620px}
+#{{id}} .pc-rot{font:700 28px Inter,sans-serif;letter-spacing:.3em;color:#5bc0eb}
+#{{id}} .pc-ini{font-weight:700;font-size:150px;line-height:1;color:#fff;margin:6px 0 18px}
+#{{id}} .pc-l{font:600 48px Inter,sans-serif;color:#fff;border-top:2px solid #2a2a31;padding:10px 0;text-transform:uppercase}
+#{{id}} .pc-l span{display:inline-block;width:150px;font:600 24px Inter,sans-serif;letter-spacing:.2em;color:#8d909a;vertical-align:middle}
+#{{id}} .pc-q{font:500 30px Inter,sans-serif;color:#e3342f;margin-top:12px}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  if(!P.img) document.querySelector("#{{id}} .pc-img").style.display="none";
+  if(!P.queixa) document.querySelector("#{{id}} .pc-q").style.display="none";
+  tl.set("#{{id}} .pc-rot,#{{id}} .pc-ini,#{{id}} .pc-l,#{{id}} .pc-q",{opacity:0},0);
+  tl.fromTo("#{{id}} .pc-img img",{scale:1.12},{scale:1,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo("#{{id}} .pc-rot",{opacity:0},{opacity:1,duration:.35,immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} .pc-ini",{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:"power3.out",immediateRender:false},S+.25);
+  tl.fromTo("#{{id}} .pc-idade",{opacity:0,y:20},{opacity:1,y:0,duration:.4,immediateRender:false},S+(+P.t_idade||1));
+  tl.fromTo("#{{id}} .pc-sexo",{opacity:0,y:20},{opacity:1,y:0,duration:.4,immediateRender:false},S+(+P.t_sexo||2));
+  tl.fromTo("#{{id}} .pc-q",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_sexo||2)+.5);
+})(window.__timelines.main, {{json}});
+</script>

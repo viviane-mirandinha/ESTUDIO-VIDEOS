@@ -1,0 +1,59 @@
+[
+ {
+  "video": {
+   "id": "bs0qWWztyP8",
+   "title": "We Can Finally Talk To Animals",
+   "views": 532480,
+   "dur": 1035,
+   "upload": "20261016",
+   "channel": "There's An AI For That",
+   "channel_id": "UCHCCGSnjLpHwL2bv-d4yz7g",
+   "subs": 63300,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCHCCGSnjLpHwL2bv-d4yz7g",
+   "name": "There's An AI For That",
+   "n": 15,
+   "median_views": 30000,
+   "med_vph_45d": 479,
+   "best_vph": 4219,
+   "med_dur": 962,
+   "videos": [
+    {
+     "id": "bs0qWWztyP8",
+     "title": "We Can Finally Talk To Animals",
+     "views": 532000,
+     "dur": 1035,
+     "upload": "20261017",
+     "hours": 126,
+     "vph": 4219,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "fXmIIKqqxWw",
+     "title": "The First Brain Was Just Uploaded To A Computer",
+     "views": 1300000,
+     "dur": 1006,
+     "upload": "20261009",
+     "hours": 318,
+     "vph": 4087,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "dQYKcjvXhIY",
+     "title": "Please Don't Die In The Next 5 Years",
+     "views": 946000,
+     "dur": 1206,
+     "upload": "20260922",
+     "hours": 726,
+     "vph": 1303,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ }
+]

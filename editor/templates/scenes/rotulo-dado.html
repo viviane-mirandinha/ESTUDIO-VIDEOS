@@ -1,0 +1,17 @@
+<!--params {"texto":"$30,000 DÓLARES","cor":"amarelo","pos":"esq","y":610,"size":46}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none"><div class="rd-box"></div></div>
+<style>
+#{{id}} .rd-box{position:absolute;padding:10px 22px 8px;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  const b=document.querySelector("#{{id}} .rd-box"); const az=(P.cor||"").toLowerCase().startsWith("az");
+  b.textContent=P.texto||""; b.style.background=az?"#1565c0":"#ffd400"; b.style.color=az?"#ffffff":"#0a0a0a";
+  b.style.fontSize=(+P.size||46)+"px"; b.style.top=((+P.y||610)-(+P.size||46)*0.62)+"px";
+  if((P.pos||"esq")==="dir"){b.style.right="56px";} else {b.style.left="56px";}
+  const dx=(P.pos==="dir")?60:-60;
+  tl.set(b,{opacity:0,x:dx,clipPath:"inset(0 100% 0 0)"},0);
+  tl.fromTo(b,{opacity:0,x:dx,clipPath:"inset(0 100% 0 0)"},{opacity:1,x:0,clipPath:"inset(0 0% 0 0)",duration:.32,ease:"power3.out",immediateRender:false},S+.05);
+  tl.to(b,{opacity:0,duration:.2,immediateRender:false},S+D-.22);
+})(window.__timelines.main, {{json}});
+</script>

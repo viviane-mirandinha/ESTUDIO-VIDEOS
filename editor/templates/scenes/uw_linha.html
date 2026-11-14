@@ -1,0 +1,18 @@
+<!--params {"titulo":"","itens":[{"ano":"1959","txt":"12 PAÍSES FIRMAN"},{"ano":"1991","txt":"SE PROHÍBE LA MINERÍA"}],"src":""}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#16263b,#0b1420 75%);overflow:hidden">
+ <img class="bg" src="{{p.src}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22">
+ <div class="ti" style="position:absolute;top:70px;left:0;right:0;text-align:center;font:900 52px 'Montserrat',sans-serif;color:#fff;text-transform:uppercase">{{p.titulo}}</div>
+ <div class="ln" style="position:absolute;left:110px;right:110px;top:380px;height:5px;background:#f5c518;transform-origin:0 50%"></div>
+ <div class="nd" style="position:absolute;left:110px;right:110px;top:380px"></div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id),N=R.querySelector(".nd"),its=P.itens||[];
+ if(!P.titulo) R.querySelector(".ti").style.display="none"; if(!P.src) R.querySelector(".bg").style.display="none";
+ tl.fromTo(id,{opacity:0},{opacity:1,duration:.3,immediateRender:true},S); tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:Math.min(1.5,D*.3),ease:"power2.inOut",immediateRender:true},S+.2);
+ its.forEach((t,i)=>{ const x=its.length===1?50:i/(its.length-1)*100; const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${x}%;top:0;transform:translateX(-50%);text-align:center;width:340px`;
+  d.innerHTML=`<div style="width:22px;height:22px;border-radius:50%;background:#f5c518;margin:-8px auto 0;box-shadow:0 0 16px #f5c518"></div><div style="font:900 56px 'Montserrat',sans-serif;color:#f5c518;margin-top:18px">${t.ano}</div><div style="font:800 26px/1.2 'Montserrat',sans-serif;color:#fff;margin-top:6px;text-transform:uppercase">${t.txt||""}</div>`;
+  N.appendChild(d); tl.fromTo(d,{opacity:0,y:20},{opacity:1,y:0,duration:.5,immediateRender:true},S+.6+i*Math.max(.6,(D-1.5)/Math.max(1,its.length))); });
+ tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main,{{json}});
+</script>

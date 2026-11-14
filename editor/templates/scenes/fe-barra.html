@@ -1,0 +1,36 @@
+<!--params {"titulo":"FRAÇÃO DE EJEÇÃO","sub":"6 meses sem estimulantes","de":35,"para":50,"normal_min":55,"normal_max":70,"rot_de":"internação","rot_para":"6 meses depois","t_sobe":2.0,"fundo":"#111114"}-->
+<div id="{{id}}" class="fe" style="position:absolute;inset:0;background:{{p.fundo}};font-family:Oswald,Inter,sans-serif">
+  <div class="fe-h"><div class="fe-t">{{p.titulo}}</div><div class="fe-s">{{p.sub}}</div></div>
+  <div class="fe-num"><span class="fe-v">0</span>%</div>
+  <div class="fe-bar"><div class="fe-norm"><span>NORMAL</span></div><div class="fe-fill"></div><div class="fe-mk fe-mk0"><b></b><i>{{p.rot_de}}</i></div></div>
+  <div class="fe-esc"><span>0%</span><span>100%</span></div>
+</div>
+<style>
+#{{id}} .fe-h{position:absolute;left:100px;top:60px}
+#{{id}} .fe-t{font-weight:700;font-size:64px;color:#fff}
+#{{id}} .fe-s{font:500 30px Inter,sans-serif;color:#5bc0eb;margin-top:2px}
+#{{id}} .fe-num{position:absolute;right:100px;top:60px;font-weight:700;font-size:150px;line-height:1;color:#e3342f}
+#{{id}} .fe-bar{position:absolute;left:100px;right:100px;top:400px;height:70px;background:#1f1f25;border-radius:10px}
+#{{id}} .fe-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:#e3342f;border-radius:10px}
+#{{id}} .fe-norm{position:absolute;top:-14px;bottom:-14px;border:3px dashed #5bc0eb;border-radius:10px}
+#{{id}} .fe-norm span{position:absolute;top:-44px;left:0;right:0;text-align:center;font:700 26px Inter,sans-serif;color:#5bc0eb;letter-spacing:.15em}
+#{{id}} .fe-mk{position:absolute;top:84px;transform:translateX(-50%);text-align:center}
+#{{id}} .fe-mk b{display:block;margin:0 auto;width:4px;height:30px;background:#e3342f}
+#{{id}} .fe-mk i{display:block;font:500 26px Inter,sans-serif;font-style:normal;color:#c9ccd4;white-space:nowrap;margin-top:4px}
+#{{id}} .fe-esc{position:absolute;left:100px;right:100px;top:560px;display:flex;justify-content:space-between;font:500 24px Inter,sans-serif;color:#6d707a}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const q=s=>document.querySelector("#{{id}} "+s);
+  const de=+P.de, pa=+P.para; q(".fe-norm").style.left=P.normal_min+"%"; q(".fe-norm").style.width=(P.normal_max-P.normal_min)+"%";
+  q(".fe-mk0").style.left=de+"%";
+  const o={v:0}; const upd=()=>{ q(".fe-v").textContent=Math.round(o.v); q(".fe-fill").style.width=o.v+"%";
+    const t=Math.max(0,Math.min(1,(o.v-de)/Math.max(1,pa-de))); const c=t<1?"#e3342f":"#f2a33a"; q(".fe-fill").style.background=o.v>de+0.5?"linear-gradient(90deg,#e3342f "+(de/o.v*100)+"%,#f2a33a)":"#e3342f"; q(".fe-num").style.color=o.v>de+0.5?"#f2a33a":"#e3342f"; };
+  tl.set("#{{id}} .fe-t,#{{id}} .fe-s,#{{id}} .fe-norm,#{{id}} .fe-mk0",{opacity:0},0);
+  tl.fromTo("#{{id}} .fe-t",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} .fe-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.3);
+  tl.fromTo("#{{id}} .fe-norm",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.4);
+  tl.fromTo(o,{v:0},{v:de,duration:.9,ease:"power2.out",onUpdate:upd,immediateRender:false},S+.3);
+  tl.fromTo("#{{id}} .fe-mk0",{opacity:0},{opacity:1,duration:.3,immediateRender:false},S+1.2);
+  tl.fromTo(o,{v:de},{v:pa,duration:1.4,ease:"power1.inOut",onUpdate:upd,immediateRender:false},S+(+P.t_sobe||2));
+})(window.__timelines.main, {{json}});
+</script>

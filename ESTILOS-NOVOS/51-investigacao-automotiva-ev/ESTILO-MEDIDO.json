@@ -1,0 +1,95 @@
+{
+ "arquivo": "carinvest.mp4",
+ "video": {
+  "duracao_s": 56.0,
+  "largura": 1280,
+  "altura": 720,
+  "fps": 30.0,
+  "tem_audio": false
+ },
+ "proporcao": "16:9",
+ "cortes": {
+  "n": 8,
+  "tempos_s": [
+   1.6,
+   3.833,
+   4.0,
+   7.533,
+   20.5,
+   25.0,
+   34.0,
+   38.0
+  ],
+  "por_minuto": 8.6,
+  "plano_medio_s": 6.22,
+  "plano_mediana_s": 4.0,
+  "plano_min_s": 0.17,
+  "plano_max_s": 18.0,
+  "transicoes": {
+   "seco": 5,
+   "dissolve": 0,
+   "fade_preto": 3
+  }
+ },
+ "imagem": {
+  "paleta": [
+   {
+    "hex": "#0d0a0a",
+    "peso_pct": 62.6
+   },
+   {
+    "hex": "#393e3e",
+    "peso_pct": 14.7
+   },
+   {
+    "hex": "#858381",
+    "peso_pct": 10.0
+   },
+   {
+    "hex": "#57110f",
+    "peso_pct": 9.1
+   },
+   {
+    "hex": "#e5e0da",
+    "peso_pct": 3.6
+   }
+  ],
+  "cor_destaque": "#ba2e38",
+  "brilho_medio": 40.8,
+  "contraste": 37.6,
+  "saturacao_media": 0.327
+ },
+ "texto": {
+  "central": 7.1,
+  "inferior": 0.0,
+  "altura_faixa_pct_tela": 3.5
+ },
+ "loudness": {
+  "integrado_lufs": null,
+  "faixa_lra_lu": null,
+  "pico_dbfs": null
+ },
+ "audio": {
+  "tipo": "sem áudio",
+  "tem_musica": false
+ },
+ "recomendacao": {
+  "canvas": "1280x720",
+  "plano_alvo_s": 6.22,
+  "cortes_por_minuto_alvo": 8.6,
+  "fonte_google": "Oswald (títulos) + Inter (legenda)",
+  "fonte_porque": "tom escuro e ritmo calmo — documental/sério",
+  "cor_fundo": "#0d0a0a",
+  "cor_destaque": "#ba2e38",
+  "transicao": "fade para preto (0,4–0,6 s) entre blocos",
+  "legenda": {
+   "posicao": "central",
+   "y": 360,
+   "size": 40,
+   "pct_quadros_com_texto": 7.1
+  },
+  "musica": false,
+  "loudness_alvo_lufs": -14.0
+ },
+ "sheet": "sheet-medido.jpg"
+}

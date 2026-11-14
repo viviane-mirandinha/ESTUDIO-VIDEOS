@@ -1,0 +1,41 @@
+<!--params {"rotulo":"O PRINT QUE VIRALIZOU","nome":"Perfil Fictício","handle":"@perfil","data":"há 2 h","texto":"Texto do post","t_texto":0.8,"destaques":[{"p":"post","t":2}],"resposta":null,"selo":"","t_selo":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif">
+ <div style="position:absolute;inset:0;background:rgba(4,6,12,.45)"></div>
+ <div class="pilha" style="position:absolute;left:50%;top:124px;width:900px;margin-left:-450px">
+  <div class="rot" style="color:#ffd84d;font-size:30px;font-weight:800;letter-spacing:2px;margin:0 0 12px 6px;text-shadow:0 2px 8px rgba(0,0,0,.8)"></div>
+  <div class="c1"></div><div class="c2" style="margin-top:16px"></div>
+ </div>
+ <div class="selo" style="position:absolute;right:60px;bottom:50px;transform:rotate(-6deg);border:5px solid #ff4d4d;color:#ff4d4d;font-family:Anton,Impact,sans-serif;font-size:54px;padding:4px 22px;background:rgba(10,10,14,.88);opacity:0"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}"; const root=document.querySelector(R);
+  const esc=s=>String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const cores=["#5b6cff","#ff7a45","#20b486","#c04dff","#e0a100"];
+  let k=0; const hls=[];
+  function mark(txt,ds){ let h=esc(txt); (ds||[]).forEach(d=>{ const p=esc(d.p), i=h.indexOf(p); if(i<0) return;
+      const id="hl"+(k++); hls.push([id,+d.t]);
+      h=h.slice(0,i)+'<span class="'+id+'" style="background:linear-gradient(#ffe14d,#ffe14d) no-repeat 0 85%/0% 78%;border-radius:4px;padding:0 2px">'+p+'</span>'+h.slice(i+p.length); }); return h; }
+  function card(c,resp){ const ini=(c.nome||"?").split(" ").map(w=>w[0]).slice(0,2).join("").toUpperCase();
+    const cor=cores[(c.nome||"").length%cores.length];
+    return '<div style="background:#fff;border-radius:18px;padding:22px 30px 22px;box-shadow:0 18px 60px rgba(0,0,0,.65)">'+
+     (resp?'<div style="color:#6b7280;font-size:24px;margin-bottom:8px">Respondendo a '+esc(resp)+'</div>':'')+
+     '<div style="display:flex;align-items:center;gap:16px"><div style="width:58px;height:58px;border-radius:50%;background:'+cor+';color:#fff;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center">'+ini+'</div>'+
+     '<div style="line-height:1.15"><div style="font-size:28px;font-weight:800;color:#0f1419">'+esc(c.nome)+'</div><div style="font-size:24px;color:#6b7280">'+esc(c.handle)+' · '+esc(c.data||"")+'</div></div></div>'+
+     '<div class="tx" style="font-size:'+(c.tam||38)+'px;line-height:1.36;color:#0f1419;margin-top:12px;font-weight:500">'+mark(c.texto,c.destaques)+'</div>'+
+     '<div style="display:flex;gap:46px;color:#8b95a1;font-size:24px;margin-top:12px"><span>💬</span><span>🔁</span><span>♡</span><span>↗</span></div></div>'; }
+  root.querySelector(".rot").textContent=P.rotulo||"";
+  root.querySelector(".c1").innerHTML=card(P,null);
+  if(P.resposta) root.querySelector(".c2").innerHTML=card(P.resposta,P.handle);
+  const selo=root.querySelector(".selo"); selo.textContent=P.selo||""; if(!P.selo) selo.style.display="none";
+  tl.set(R,{opacity:0},0);
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.45,ease:"none",immediateRender:false},S);
+  tl.fromTo(R+" .c1",{y:40,opacity:0},{y:0,opacity:1,duration:.6,ease:"power2.out",immediateRender:false},S+.1);
+  tl.fromTo(R+" .c1 .tx",{opacity:0},{opacity:1,duration:.6,ease:"none",immediateRender:false},S+(+P.t_texto||.8));
+  tl.fromTo(R+" .pilha",{y:20},{y:-20,duration:D,ease:"none",immediateRender:false},S);
+  if(P.resposta){ const tr=+P.resposta.t||2;
+    tl.fromTo(R+" .c2",{y:40,opacity:0},{y:0,opacity:1,duration:.6,ease:"power2.out",immediateRender:false},S+tr); }
+  hls.forEach(([id,t])=>tl.fromTo(R+" ."+id,{backgroundSize:"0% 78%"},{backgroundSize:"100% 78%",duration:.55,ease:"power1.inOut",immediateRender:false},S+t));
+  if(P.selo) tl.fromTo(R+" .selo",{opacity:0,scale:1.25},{opacity:1,scale:1,duration:.35,ease:"power2.out",immediateRender:false},S+(+P.t_selo||1));
+  tl.to(R,{opacity:0,duration:.35,ease:"none"},S+D-.35);
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,9 @@
+﻿Perfis de referência (Instagram):
+https://www.instagram.com/peraexplica/
+https://www.instagram.com/explicandodireito.br/
+https://www.instagram.com/garagemexplicativa/
+https://www.instagram.com/thingsopened/
+https://www.instagram.com/oclaud1n/
+
+Download (24/10/2026): yt-dlp --flat-playlist em /peraexplica/reels/ e /garagemexplicativa/reels/ retornou vazio (Instagram exige login). Nenhum vídeo baixado, ref/ vazio.
+Estilo replicado a partir dos prints enviados pelo usuário: fundo escuro, objeto 3D central, pílulas de rótulo ("0 BATERIA", "CORTADA"), legenda branca com palavra colorida, cabeçalho "@perfil · TEMA".

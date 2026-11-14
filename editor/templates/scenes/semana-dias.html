@@ -1,0 +1,15 @@
+<!--params {"dias":"D,S,T,Q,Q,S,S","marcados":"1,4","rotulo":"2x por semana"}-->
+<div id="{{id}}" class="sd" style="position:absolute;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Inter',sans-serif">
+ <div class="row" style="display:flex;gap:26px"></div>
+ <div class="r" style="font-size:52px;font-weight:400;margin-top:48px">{{p.rotulo}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const row=document.querySelector(id+" .row"); const dias=String(P.dias).split(","), mk=String(P.marcados).split(",").map(Number);
+  dias.forEach((d,i)=>{ const c=document.createElement("div"); c.className="c c"+i; c.textContent=d.trim();
+    c.style.cssText="width:96px;height:96px;border-radius:50%;border:3px solid #fff;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:400;color:#fff;background:#000";
+    row.appendChild(c); tl.fromTo(c,{opacity:0,y:14},{opacity:1,y:0,duration:.3,immediateRender:true},S+.05+i*.06); });
+  mk.forEach((k,j)=>{ const c=row.querySelector(".c"+k); if(c) tl.to(c,{backgroundColor:"#ffffff",color:"#000000",duration:.25},S+.75+j*.4); });
+  tl.fromTo(id+" .r",{opacity:0},{opacity:1,duration:.4,immediateRender:true},S+.5);
+})(window.__timelines.main, {{json}});
+</script>

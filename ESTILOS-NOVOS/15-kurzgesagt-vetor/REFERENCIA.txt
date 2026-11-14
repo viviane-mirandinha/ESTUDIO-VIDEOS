@@ -1,0 +1,14 @@
+# 15-kurzgesagt-vetor — referências (minerado 22/10/2026 via yt-dlp, views/hora = views ÷ horas desde upload; mediana = 15 últimos vídeos longos)
+
+## kurzgesagt [EN] — https://www.youtube.com/@kurzgesagt
+   mediana views (15 últimos longos): 7.400.000 · mediana views/hora (45 d): 30.264 · melhor views/hora: 61.605
+   - ujkD4SxPKOI | https://youtu.be/ujkD4SxPKOI | 61.605 views/h | 21.000.000 views | 341 h | 21 min | AI Just Crossed the Terrifying Line - Now What?
+   - _y9JuojAIg0 | https://youtu.be/_y9JuojAIg0 | 31.558 views/h | 10.000.000 views | 317 h | 17 min | We Finally Know More About Humanity’s First Civilization
+
+## RealScience [EN] — https://www.youtube.com/@RealScience
+   mediana views (15 últimos longos): 1.400.000 · mediana views/hora (45 d): 0 · melhor views/hora: 388
+   - Z5rCogD4e2k | https://youtu.be/Z5rCogD4e2k | 388 views/h | 3.400.000 views | 8765 h | 39 min | The Insane Biology of: The Saltwater Crocodile
+
+## MinuteEarth [EN] — https://www.youtube.com/@MinuteEarth
+   mediana views (15 últimos longos): 229.000 · mediana views/hora (45 d): 0 · melhor views/hora: 144
+   - uvwqhtuOr3I | https://youtu.be/uvwqhtuOr3I | 144 views/h | 319.000 views | 2213 h | 10 min | ALL THE APES. EXPLAINED 🦍🦧🚶‍♂️‍➡️

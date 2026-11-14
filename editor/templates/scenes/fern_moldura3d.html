@@ -1,0 +1,61 @@
+<!--params {"src":"","legenda":"LEGENDA","sub":"","lado":"esq","ang":-20,"cor":"#e8a33d","larg":560,"t_txt":0.4}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 40% 55%,#132231 0%,#070a0e 62%,#030405 100%)">
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div class="floor" style="position:absolute;left:-20%;right:-20%;bottom:-6%;height:46%;background:repeating-linear-gradient(90deg,rgba(120,160,200,.07) 0 1px,transparent 1px 80px),repeating-linear-gradient(0deg,rgba(120,160,200,.07) 0 1px,transparent 1px 80px);transform:perspective(600px) rotateX(62deg);transform-origin:50% 0;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 60%)"></div>
+ <div class="stage" style="position:absolute;inset:0;perspective:1500px">
+  <div class="fr" style="position:absolute;top:50%;width:{{p.larg}}px;transform-style:preserve-3d">
+   <div class="pic" style="position:relative;border:5px solid #dfe3e8;border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.8),0 0 60px rgba(120,170,220,.18);-webkit-box-reflect:below 14px linear-gradient(transparent 62%,rgba(255,255,255,.22))">
+    <img src="{{p.src}}" style="display:block;width:100%;height:auto;filter:contrast(1.05) saturate(.9)">
+    <div class="sh" style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.28) 48%,rgba(255,255,255,0) 60%);background-size:300% 100%"></div>
+   </div>
+  </div>
+ </div>
+ <div class="txt" style="position:absolute;top:50%;transform:translateY(-50%);width:520px">
+  <div class="bar" style="width:70px;height:6px;background:{{p.cor}};margin-bottom:22px"></div>
+  <h2 style="margin:0;font:800 56px/1.06 Inter,'Helvetica Neue',Arial,sans-serif;color:#fff;letter-spacing:.03em;text-shadow:0 0 26px rgba(160,200,255,.25)">{{p.legenda}}</h2>
+  <p style="margin:16px 0 0;font:500 30px/1.3 Inter,'Helvetica Neue',Arial,sans-serif;color:#a9b4c0">{{p.sub}}</p>
+ </div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)"></div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+if(!window.FERN){window.FERN=(function(){
+ function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+ const noise={};
+ function grainTile(seed){ if(noise[seed]) return noise[seed]; const c=document.createElement("canvas");c.width=c.height=256;const x=c.getContext("2d");const d=x.createImageData(256,256);const r=rng(seed);
+  for(let i=0;i<d.data.length;i+=4){const v=r()*255;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=255;} x.putImageData(d,0,0); return noise[seed]=c; }
+ function mk(el,W,H){ const c=document.createElement("canvas");c.width=W;c.height=H;c.style.cssText="position:absolute;inset:0;width:100%;height:100%;pointer-events:none";el.appendChild(c);return c; }
+ // nevoa + poeira volumetrica, deterministica em t
+ function fog(c,t,seed,cor,dens){ const x=c.getContext("2d"),W=c.width,H=c.height; x.clearRect(0,0,W,H); const r=rng(seed); dens=dens||1;
+  x.globalCompositeOperation="lighter";
+  for(let i=0;i<14*dens;i++){ const bx=r()*W,by=H*(.35+r()*.7),rad=180+r()*260,sp=8+r()*14,ph=r()*6.28;
+   const px=(bx+t*sp*(r()>.5?1:-1)+Math.sin(t*.2+ph)*40)%(W+400)-200, py=by+Math.sin(t*.15+ph)*20;
+   const g=x.createRadialGradient(px,py,0,px,py,rad); g.addColorStop(0,cor.replace("A",(.05+r()*.05).toFixed(3))); g.addColorStop(1,cor.replace("A","0"));
+   x.fillStyle=g; x.fillRect(px-rad,py-rad,rad*2,rad*2); }
+  for(let i=0;i<60*dens;i++){ const bx=r()*W,by=r()*H,sz=.6+r()*1.8,vx=(r()-.5)*12,vy=-4-r()*10,ph=r()*6.28;
+   const px=((bx+vx*t)%W+W)%W, py=((by+vy*t)%H+H)%H, a=.15+.35*(.5+.5*Math.sin(t*1.3+ph));
+   x.fillStyle="rgba(210,225,240,"+a.toFixed(3)+")"; x.beginPath(); x.arc(px,py,sz,0,6.283); x.fill(); }
+  x.globalCompositeOperation="source-over"; }
+ function grain(c,t,amt){ const x=c.getContext("2d"),W=c.width,H=c.height; x.clearRect(0,0,W,H); const f=Math.floor(t*24); const tile=grainTile(7);
+  x.globalAlpha=amt||.07; const ox=(f*97)%256, oy=(f*57)%256; for(let yy=-oy;yy<H;yy+=256)for(let xx=-ox;xx<W;xx+=256)x.drawImage(tile,xx,yy); x.globalAlpha=1; }
+ // driver: objeto com setter -> GSAP chama draw a cada seek (nao depende de onUpdate)
+ function drive(tl,S,D,fn){ const o={_t:0}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;fn(v)}}); tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:false},S); }
+ return {rng,mk,fog,grain,drive};
+})();}
+
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const fr=R.querySelector(".fr"), tx=R.querySelector(".txt"), a=+P.ang, L=+P.larg;
+  if(P.lado==="dir"){ fr.style.left=(W*0.70-L/2)+"px"; tx.style.left="80px"; }
+  else if(P.lado==="centro"){ fr.style.left=(W/2-L/2)+"px"; tx.style.left="0"; tx.style.width=W+"px"; tx.style.top="86%"; tx.style.textAlign="center"; R.querySelector(".bar").style.margin="0 auto 14px"; R.querySelector("p").style.display="none"; R.querySelector("h2").style.fontSize="52px"; }
+  else { fr.style.left=(W*0.32-L/2)+"px"; tx.style.left=(W*0.32+L/2+70)+"px"; tx.style.width=(W-(W*0.32+L/2+70)-50)+"px"; }
+  const aa=P.lado==="dir"?-a:a, cy=P.lado==="centro"?-58:0;
+  tl.fromTo(fr,{rotationY:aa*1.5,rotationX:6,z:-420,yPercent:-50,y:cy+30,opacity:0},{rotationY:aa,rotationX:3,z:0,yPercent:-50,y:cy,opacity:1,duration:1.2,ease:"power3.out",immediateRender:false},S);
+  tl.to(fr,{rotationY:aa*0.45,z:60,duration:Math.max(.5,D-1.2),ease:"sine.inOut"},S+1.2);
+  tl.fromTo(R.querySelector(".sh"),{backgroundPosition:"130% 0"},{backgroundPosition:"-30% 0",duration:2.2,ease:"sine.inOut",immediateRender:false},S+.7);
+  tl.fromTo(tx.children,{opacity:0,x:-24},{opacity:1,x:0,duration:.6,stagger:.18,ease:"power2.out",immediateRender:false},S+(+P.t_txt)); tl.set(tx.children,{opacity:0},0);
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,t=>{ FERN.fog(fc,t,41,"rgba(140,175,210,A)",.8); FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>

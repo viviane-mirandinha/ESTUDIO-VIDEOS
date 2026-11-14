@@ -1,0 +1,34 @@
+{
+  "name": "mk-line-graph",
+  "titulo": "Gráfico de linha",
+  "categoria": "Gráfico",
+  "descricao": "Uma ou duas linhas se desenham com pontos e valores.",
+  "title_en": "Minimal Line Graph",
+  "description_en": "One or two SVG series draw on with dots popping and value labels riding the draw front; dim baseline axis, x-labels, color-dot legend",
+  "duration": 7,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "data-viz",
+    "chart",
+    "graph",
+    "minimal"
+  ],
+  "variables": [],
+  "files": [
+    "mk-line-graph.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/mk-line-graph",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Renders",
+    "Projects",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+  ]
+}

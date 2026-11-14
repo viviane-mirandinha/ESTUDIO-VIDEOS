@@ -1,0 +1,30 @@
+<!--params {"titulo":"Título","xlabels":["A","B"],"ymin":0,"ymax":10,"valores":[2,8],"rotulos":["2","8"],"tempos":[],"cor":"#efe08f","fundo":"rgba(6,9,12,.8)"}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff">
+  <div style="position:absolute;inset:0;background:{{p.fundo}}"></div>
+  <div class="hd" style="position:absolute;left:0;right:0;top:40px;text-align:center;font-family:'Barlow Condensed',Inter;font-size:60px;font-weight:700;color:#efe08f">{{p.titulo}}</div>
+  <svg class="ch" width="1280" height="720" style="position:absolute;inset:0;overflow:visible"></svg>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", NS="http://www.w3.org/2000/svg";
+  const svg=document.querySelector(id+" .ch"), X0=240, X1=1040, Y0=600, Y1=200, n=P.valores.length;
+  const mk=(t,a,par)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||svg).appendChild(e);return e;};
+  const xs=i=>X0+(X1-X0)*i/(n-1), ys=v=>Y0-(Y0-Y1)*(v-P.ymin)/(P.ymax-P.ymin);
+  for(let k=0;k<=4;k++){const y=Y0-(Y0-Y1)*k/4;mk("line",{x1:X0-40,x2:X1+40,y1:y,y2:y,stroke:"#fff",opacity:k?0.1:0.35,"stroke-width":k?1:2});}
+  const T=P.valores.map((v,i)=>(P.tempos&&P.tempos[i]!=null)?P.tempos[i]:S+.6+i*1.2);
+  P.xlabels.forEach((l,i)=>{const t=mk("text",{x:xs(i),y:Y0+48,fill:"#e3e6ea","font-size":30,"font-weight":700,"text-anchor":"middle"});t.textContent=l;tl.set(t,{opacity:0},0);tl.to(t,{opacity:1,duration:.3},Math.min(T[i],S+.4));});
+  const pts=P.valores.map((v,i)=>[xs(i),ys(v)]);
+  const ar=mk("path",{d:"M"+pts.map(p=>p.join(",")).join(" L")+" L"+X1+","+Y0+" L"+X0+","+Y0+" Z",fill:P.cor,opacity:0});
+  const ln=mk("path",{d:"M"+pts.map(p=>p.join(",")).join(" L"),fill:"none",stroke:P.cor,"stroke-width":7,"stroke-linecap":"round","stroke-linejoin":"round"});
+  const L=ln.getTotalLength(); ln.style.strokeDasharray=L; tl.set(ln,{strokeDashoffset:L},0);
+  let acc=0; const seg=[0]; for(let i=1;i<n;i++){acc+=Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]);seg.push(acc);}
+  for(let i=1;i<n;i++){const a=Math.max(T[i-1]+.05,T[i]-1.0);tl.to(ln,{strokeDashoffset:L-seg[i],duration:T[i]-a,ease:"power1.inOut"},a);}
+  tl.to(ar,{opacity:.16,duration:.6},T[n-1]);
+  pts.forEach((p,i)=>{const c=mk("circle",{cx:p[0],cy:p[1],r:11,fill:"#0b0e12",stroke:P.cor,"stroke-width":5});
+    const tx=(P.rotulos&&P.rotulos[i])||""; const w=tx.length*21+36, bx=Math.min(Math.max(p[0]-w/2,40),1240-w), by=p[1]-84;
+    const r=mk("rect",{x:bx,y:by,width:w,height:56,rx:8,fill:P.cor}); const t=mk("text",{x:bx+w/2,y:by+40,"font-size":38,"font-weight":800,fill:"#111","text-anchor":"middle"});t.textContent=tx;
+    [c,r,t].forEach(e=>{tl.set(e,{opacity:0},0);tl.to(e,{opacity:1,duration:.3},T[i]);});
+    if(i===n-1){tl.fromTo(c,{attr:{r:11}},{attr:{r:17},duration:.5,repeat:3,yoyo:true,immediateRender:false},T[i]+.3);}});
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

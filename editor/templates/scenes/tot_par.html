@@ -1,0 +1,45 @@
+<!--params {"titulo":"Isso ou aquilo?","n":"1/19","isso":"Isso","aquilo":"Aquilo","a_img":"","a_rot":"","b_img":"","b_rot":"","escolha":"a","t_resp":1.5,"detalhe":"","cor":"#c8102e"}-->
+<div id="{{id}}" class="tot" style="position:absolute;inset:0;pointer-events:none;font-family:Montserrat,Arial,sans-serif;color:#1d1d1f">
+  <div class="tt" style="position:absolute;left:100px;right:100px;top:28px;text-align:center;font-weight:800;font-size:54px;line-height:1.1;white-space:nowrap">{{p.titulo}}</div>
+  <div class="nn" style="position:absolute;right:34px;top:30px;font-weight:700;font-size:26px;color:#8a8580">{{p.n}}</div>
+  <div class="lt la" style="position:absolute;left:200px;width:360px;top:122px;text-align:center;font-weight:700;font-size:34px">{{p.isso}}</div>
+  <div class="lt lb" style="position:absolute;left:720px;width:360px;top:122px;text-align:center;font-weight:700;font-size:34px">{{p.aquilo}}</div>
+  <div class="cd ca" style="position:absolute;left:200px;top:178px;width:360px;height:360px;border-radius:30px;background:#fff;box-shadow:0 14px 34px rgba(80,40,30,.18);overflow:visible">
+    <div style="position:absolute;inset:0;border-radius:30px;overflow:hidden"><img class="im" src="{{p.a_img}}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="ring" style="position:absolute;inset:-7px;border:7px solid {{p.cor}};border-radius:36px;opacity:0"></div>
+    <div class="ok" style="position:absolute;right:-22px;top:-22px;width:64px;height:64px;border-radius:50%;background:{{p.cor}};opacity:0;box-shadow:0 6px 14px rgba(0,0,0,.25)"><svg viewBox="0 0 64 64" width="64" height="64"><path d="M18 33 L28 43 L47 22" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  </div>
+  <div class="cd cb" style="position:absolute;left:720px;top:178px;width:360px;height:360px;border-radius:30px;background:#fff;box-shadow:0 14px 34px rgba(80,40,30,.18);overflow:visible">
+    <div style="position:absolute;inset:0;border-radius:30px;overflow:hidden"><img class="im" src="{{p.b_img}}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="ring" style="position:absolute;inset:-7px;border:7px solid {{p.cor}};border-radius:36px;opacity:0"></div>
+    <div class="ok" style="position:absolute;right:-22px;top:-22px;width:64px;height:64px;border-radius:50%;background:{{p.cor}};opacity:0;box-shadow:0 6px 14px rgba(0,0,0,.25)"><svg viewBox="0 0 64 64" width="64" height="64"><path d="M18 33 L28 43 L47 22" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  </div>
+  <div class="ou" style="position:absolute;left:590px;width:100px;top:330px;text-align:center;font-weight:800;font-size:46px">ou</div>
+  <div class="rt ra" style="position:absolute;left:160px;width:440px;top:556px;text-align:center;font-weight:800;font-size:36px">{{p.a_rot}}</div>
+  <div class="rt rb" style="position:absolute;left:680px;width:440px;top:556px;text-align:center;font-weight:800;font-size:36px">{{p.b_rot}}</div>
+  <div class="dt" style="position:absolute;left:70px;width:620px;top:612px;text-align:center;font-family:GeorgiaBI,Georgia,serif;font-style:italic;font-weight:700;font-size:38px;color:{{p.cor}};opacity:0">{{p.detalhe}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}"; const q=s=>document.querySelector(id+" "+s);
+  const root=document.querySelector(id), A=P.escolha==="b"?"b":"a", B=A==="a"?"b":"a";
+  const win=q(".c"+A), lose=q(".c"+B), dt=q(".dt");
+  if(A==="b"){ dt.style.left="590px"; }
+  if(!P.detalhe) dt.style.display="none";
+  const tt=q(".tt"); tt.style.fontSize=Math.max(48,Math.min(56,Math.floor(1060/(String(P.titulo).length*0.62))))+"px";
+  tl.set(root,{opacity:0},0); tl.set(root,{opacity:1},S);
+  tl.fromTo(q(".tt"),{opacity:0,y:-18},{opacity:1,y:0,duration:.3,ease:"power2.out",immediateRender:false},S);
+  tl.fromTo(q(".ca"),{opacity:0,x:-70},{opacity:1,x:0,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.fromTo(q(".cb"),{opacity:0,x:70},{opacity:1,x:0,duration:.35,ease:"power3.out",immediateRender:false},S+.06);
+  tl.fromTo([q(".la"),q(".lb"),q(".ou"),q(".ra"),q(".rb")],{opacity:0},{opacity:1,duration:.3,immediateRender:false},S+.1);
+  tl.fromTo(document.querySelectorAll(id+" .im"),{scale:1},{scale:1.06,duration:Math.max(.5,D),ease:"none",immediateRender:false},S);
+  const T=S+(P.t_resp||1.5);
+  tl.to(win,{scale:1.07,duration:.3,ease:"back.out(2)"},T);
+  tl.to(win.querySelector(".ring"),{opacity:1,duration:.2},T);
+  tl.fromTo(win.querySelector(".ok"),{opacity:0,scale:.3},{opacity:1,scale:1,duration:.3,ease:"back.out(2.5)",immediateRender:false},T+.05);
+  tl.to(lose,{opacity:.55,scale:.93,filter:"grayscale(1)",duration:.3},T);
+  tl.to(q(".r"+B),{opacity:.5,duration:.3},T);
+  tl.fromTo(q(".r"+A),{color:"#1d1d1f"},{color:P.cor,duration:.2,immediateRender:false},T);
+  tl.fromTo(dt,{opacity:0,y:14},{opacity:1,y:0,duration:.3,ease:"power2.out",immediateRender:false},T+.25);
+  tl.to(root,{opacity:0,duration:.15},S+D-.15);
+})(window.__timelines.main, {{json}});
+</script>

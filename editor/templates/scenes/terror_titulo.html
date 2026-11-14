@@ -1,0 +1,21 @@
+<!--params {"numero":"RELATO 1","titulo":"Título do relato","cor":"#c1121f","fundo":"escuro","y":50,"tam":88,"tam_tit":52,"t_tit":0.7}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+ <div class="bg" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,.8) 100%)"></div>
+ <svg width="0" height="0" style="position:absolute"><filter id="{{id}}_r"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></svg>
+ <div class="box" style="position:absolute;left:0;right:0;top:{{p.y}}%;transform:translateY(-50%);text-align:center;text-transform:uppercase">
+  <div class="num" style="font-family:Anton,Impact,sans-serif;color:{{p.cor}};font-size:{{p.tam}}px;letter-spacing:.08em;line-height:1;filter:url(#{{id}}_r);text-shadow:0 0 26px rgba(193,18,31,.45)">{{p.numero}}</div>
+  <div class="tit" style="font-family:Oswald,'Arial Narrow',sans-serif;font-weight:700;color:#e9e6e1;font-size:{{p.tam_tit}}px;letter-spacing:.06em;margin-top:14px;text-shadow:0 2px 14px #000">{{p.titulo}}</div>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}";
+  if(P.fundo!=="escuro") tl.set(R+" .bg",{opacity:0},0);
+  tl.set(R,{opacity:0},0);
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.9,ease:"sine.out",immediateRender:false},S);
+  tl.fromTo(R+" .num",{opacity:0,letterSpacing:".22em"},{opacity:1,letterSpacing:".08em",duration:1.4,ease:"power2.out",immediateRender:false},S+.1);
+  tl.fromTo(R+" .tit",{opacity:0,y:18},{opacity:1,y:0,duration:1.0,ease:"sine.out",immediateRender:false},S+(+P.t_tit||.7));
+  for(let k=0;k*0.09<D;k++){ const a=Math.sin(k*12.9898)*43758.5453; const v=a-Math.floor(a);
+    tl.set(R+" .num",{x:(v-.5)*3, opacity:(k*0.09>1.4? (v>.93?.55:1):undefined)},S+k*0.09); }
+  tl.to(R,{opacity:0,duration:.8,ease:"sine.in",immediateRender:false},S+D-.8);
+})(window.__timelines.main, {{json}});
+</script>

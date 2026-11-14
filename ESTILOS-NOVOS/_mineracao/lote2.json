@@ -1,0 +1,1831 @@
+{
+ "canais": [
+  {
+   "key": "@onesmallif",
+   "nota": "avatar animado (consistencia)",
+   "name": null,
+   "channel_id": null,
+   "n": 7,
+   "n_long": 7,
+   "median_views": 38000,
+   "med_vph_45d": 319,
+   "best_vph": 1911,
+   "med_dur": 341,
+   "videos": [
+    {
+     "id": "KzdIyAqm15c",
+     "title": "What If You Doubled in Size Every Hour?",
+     "views": 102000,
+     "dur": 509,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 1911,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "6YYKFxKPmxo",
+     "title": "What If You Could Teleport?",
+     "views": 23000,
+     "dur": 521,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 783,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "YiEkNET2uBo",
+     "title": "What If You Were 1,000 Times Faster?",
+     "views": 48000,
+     "dur": 237,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 383,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "GS7M5ep7OgY",
+     "title": "What If You Reacted 100 Times Faster?",
+     "views": 63000,
+     "dur": 341,
+     "upload": "20261014",
+     "hours": 197,
+     "vph": 319,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "-yfgmtaDBKk",
+     "title": "What If You Bought the New Flying Tesla?",
+     "views": 29000,
+     "dur": 417,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 286,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@GlenPritchardBuilds",
+   "nota": "avatar, pode ser evergreen",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 7400,
+   "med_vph_45d": 27,
+   "best_vph": 1602,
+   "med_dur": 1141,
+   "videos": [
+    {
+     "id": "6XF_ZY0RSdI",
+     "title": "This $200 Salt Battery Powers Any Home for 30 Years. Why Is It Hidden?",
+     "views": 547000,
+     "dur": 1348,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 1602,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "yhhW0i2CjDw",
+     "title": "this diy solar trick powers your home for free why is it illegal",
+     "views": 3400,
+     "dur": 1146,
+     "upload": "20261021",
+     "hours": 20,
+     "vph": 167,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "UVPK-h-vK3Q",
+     "title": "This $20 PVC PIPE Becomes A FREE Power Generator. Build it in one weekend!!",
+     "views": 19000,
+     "dur": 1083,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 56,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "rJpH49pw1ZY",
+     "title": "How a Forgotten 1944 Technique Generates 149°F HEAT WITHOUT ELECTRICITY — Why Is No One Building It?",
+     "views": 10000,
+     "dur": 1081,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 45,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "bt_Atwnp9NU",
+     "title": "Built & Tested: 5 DIY Solar Air Heaters",
+     "views": 5300,
+     "dur": 1105,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 42,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@nomadedigitalraiam",
+   "nota": "vlog normal; mesmos assuntos, edicao simples",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 68000,
+   "med_vph_45d": 1157,
+   "best_vph": 5888,
+   "med_dur": 1208,
+   "videos": [
+    {
+     "id": "69XnYWZCg8M",
+     "title": "ABOUT THE PROBLEM IN FRANCE",
+     "views": 114000,
+     "dur": 1064,
+     "upload": "20261021",
+     "hours": 19,
+     "vph": 5888,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "kts5t7cuBR8",
+     "title": "ABOUT LULA AND THE DEBATE",
+     "views": 152000,
+     "dur": 1461,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 5177,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "QsGGCD_mvkA",
+     "title": "HOW TO GET RICH IN 2027",
+     "views": 56000,
+     "dur": 1366,
+     "upload": "20261021",
+     "hours": 14,
+     "vph": 3899,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "9C7uBkZpMlc",
+     "title": "VOTE NO LULA = SEXUAL BISHOP",
+     "views": 66000,
+     "dur": 1133,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 2248,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "-AOsJYFrQQc",
+     "title": "THE 5x2 SCALE PROBLEM",
+     "views": 135000,
+     "dur": 1211,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 1745,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@PeoplePatternsPsych",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 881,
+   "med_vph_45d": 44.0,
+   "best_vph": 1293,
+   "med_dur": 455,
+   "videos": [
+    {
+     "id": "wEN2CfbDWwo",
+     "title": "The Psychology of Men Who Never Beg For Love",
+     "views": 69000,
+     "dur": 416,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 1293,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "6MtY3fBXOMo",
+     "title": "Psychology of Men Who Let Women Go",
+     "views": 283000,
+     "dur": 464,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 1278,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "eG9qIXXQZx0",
+     "title": "Why More Men Are Quietly Choosing to Stay Single ?",
+     "views": 50000,
+     "dur": 573,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 98,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "DpMzAEGoseU",
+     "title": "What Society Never Tells Men About Staying Single",
+     "views": 59000,
+     "dur": 504,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 81,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "3iepdS5YTUo",
+     "title": "Why Modern Men Are Walking Away From the Chase (And What Happens Next)",
+     "views": 21000,
+     "dur": 634,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 62,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@ryoga.training",
+   "nota": "academia exercicios",
+   "name": null,
+   "channel_id": null,
+   "n": 9,
+   "n_long": 9,
+   "median_views": 222000,
+   "med_vph_45d": 562,
+   "best_vph": 9099,
+   "med_dur": 284,
+   "videos": [
+    {
+     "id": "Ujdz-hT6lnQ",
+     "title": "How To Force Your Skinny Arms To Grow",
+     "views": 6600000,
+     "dur": 278,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 9099,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "JJ-8EfFUCg8",
+     "title": "How I Forced My Shoulders To Grow.",
+     "views": 757000,
+     "dur": 267,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 1044,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "Eh_Lebpy1Ig",
+     "title": "How To Level-Up Your Physique Before 2027",
+     "views": 20000,
+     "dur": 307,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 681,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "eOFtwk-R4u8",
+     "title": "How To Force Your Back To Grow (3 Exercises)",
+     "views": 222000,
+     "dur": 487,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 650,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "nBiGicqyunY",
+     "title": "How To Force Your Forearms To Grow",
+     "views": 408000,
+     "dur": 284,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 562,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@bonafillorelatos",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 14,
+   "median_views": 28500.0,
+   "med_vph_45d": 63.5,
+   "best_vph": 1098,
+   "med_dur": 2085.0,
+   "videos": [
+    {
+     "id": "Q45GcjC5Uas",
+     "title": "They Called Him Crazy for Planting Tomatoes Where They Would Never Grow",
+     "views": 243000,
+     "dur": 2091,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 1098,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "9bL_rVDJK7I",
+     "title": "The Trap of Being Smart... Why You're Not Succeeding",
+     "views": 179000,
+     "dur": 2232,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 351,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "DyODykWIXnQ",
+     "title": "The Subtle Art of Playing the Fool",
+     "views": 82000,
+     "dur": 2182,
+     "upload": "20261011",
+     "hours": 269,
+     "vph": 304,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "oZ9v8R4uAso",
+     "title": "They Stole All the Cows from a Poor Old Man...",
+     "views": 31000,
+     "dur": 2596,
+     "upload": "20261016",
+     "hours": 149,
+     "vph": 208,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "HX_nWzl8c0A",
+     "title": "How to Sell Anything, Explained in a Simple Story",
+     "views": 36000,
+     "dur": 1899,
+     "upload": "20261009",
+     "hours": 317,
+     "vph": 113,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@deskstandard",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 15000,
+   "med_vph_45d": 87,
+   "best_vph": 1608,
+   "med_dur": 1214,
+   "videos": [
+    {
+     "id": "-I6Ob_wUDMQ",
+     "title": "7 Walmart Ballpoint Pens Everyone Ignores (But They're Absolute GOLDMINES)",
+     "views": 163000,
+     "dur": 1177,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 1608,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "FQ_DSWaOlDo",
+     "title": "7 Costco Ballpoint Pens Everyone Ignores (But They’re Absolute GOLDMINES)",
+     "views": 26000,
+     "dur": 1281,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 885,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "X16WqH6Eeks",
+     "title": "6 Fountain Pens Only Old Money Carry (And It's Never Montblanc)",
+     "views": 37000,
+     "dur": 1227,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 478,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "zetuPiqqPC4",
+     "title": "7 Korean Stationery Legends Hiding on Amazon (All Under $30)",
+     "views": 90000,
+     "dur": 1004,
+     "upload": "20261012",
+     "hours": 245,
+     "vph": 367,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "1NgiCBFb9CE",
+     "title": "8 American Fountain Pens That Should Cost Way More (Hiding on Amazon!)",
+     "views": 4200,
+     "dur": 1133,
+     "upload": "20261021",
+     "hours": 12,
+     "vph": 350,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@SilasMercerYT",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 4800,
+   "med_vph_45d": 67,
+   "best_vph": 258,
+   "med_dur": 1646,
+   "videos": [
+    {
+     "id": "xi6fPGDpZ8Y",
+     "title": "25 Things Mountain Men Teach Seniors Living Alone to Keep Burglars Away at Night",
+     "views": 3100,
+     "dur": 1850,
+     "upload": "20261021",
+     "hours": 12,
+     "vph": 258,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "ByeZIZ3ATBk",
+     "title": "25 BANNED Mountain Man Survival Tricks That Scientists Now Say Were GENIUS",
+     "views": 2900,
+     "dur": 1686,
+     "upload": "20261021",
+     "hours": 12,
+     "vph": 242,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "09_aw9m5TzM",
+     "title": "This $35 ALUMINUM MESH Blows 140°F Heat Into Your House on an 18°F Morning (No Gas NEEDED!!)",
+     "views": 9400,
+     "dur": 1912,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 176,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "RrIHB87SDC4",
+     "title": "12 Cheap Dollar Tree Items That Keep You Alive When the Power Goes Out for a Week",
+     "views": 8300,
+     "dur": 1560,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 156,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "JOWRgW6JEUQ",
+     "title": "20 Cheap Blackout Meals That Need No Stove, No Fridge, and No Boiling Water",
+     "views": 3800,
+     "dur": 1507,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 129,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@MilitaryStorm-Official",
+   "nota": "militar",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 76000,
+   "med_vph_45d": 386,
+   "best_vph": 1213,
+   "med_dur": 973,
+   "videos": [
+    {
+     "id": "fSec-dzzKZI",
+     "title": "Ukrainian Sniper CATCHES Russian Motorcycles STORMING His Trench — Then THIS Happened...",
+     "views": 15000,
+     "dur": 938,
+     "upload": "20261021",
+     "hours": 12,
+     "vph": 1213,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "_HDZsaBp6Ag",
+     "title": "Ukraine Waited for Russia to Load 8 Kalibr Missiles on Its $80M Warship — Then BLEW IT APART",
+     "views": 353000,
+     "dur": 911,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 1034,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "yDFSUN4iBRE",
+     "title": "Ukraine Let Russia's 20+ Motorcycles Rush Toward Its Trenches — Then BLEW THEM APART",
+     "views": 265000,
+     "dur": 949,
+     "upload": "20261010",
+     "hours": 293,
+     "vph": 903,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "RB8SB1Tl1qw",
+     "title": "Ukraine Let Russia's Massive Armored Column Capture Its Trenches — Then BLEW IT UP",
+     "views": 88000,
+     "dur": 914,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 702,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "v02kctuD-gs",
+     "title": "Ukraine Watched Russia Rush to Save Its Il-76 Fleet at Pskov — Then the Airbase ERUPTED",
+     "views": 166000,
+     "dur": 934,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 486,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@AlabamaRevealed",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 12,
+   "n_long": 10,
+   "median_views": 35500.0,
+   "med_vph_45d": 98.5,
+   "best_vph": 1192,
+   "med_dur": 1954.0,
+   "videos": [
+    {
+     "id": "nwNsT8QG0AE",
+     "title": "How Alabama Is Slowly Turning Into America's Next Mega-State",
+     "views": 35000,
+     "dur": 2283,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 1192,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "g5WC60Qj4So",
+     "title": "Alabama Megaprojects That Are Going To Transform the State",
+     "views": 106000,
+     "dur": 1503,
+     "upload": "20261009",
+     "hours": 317,
+     "vph": 334,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "5SNDEE2BhaE",
+     "title": "The Rise and Fall of the $1.5 Million Mansion Nobody in Alabama Wanted: Vestavia",
+     "views": 23000,
+     "dur": 2166,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 227,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "dkokIdWdBqw",
+     "title": "How One Man Built Alabama's Grandest Suburb and a Crash Froze It Forever: Mountain Brook",
+     "views": 81000,
+     "dur": 1484,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 159,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "n8TlXJ1Rq_w",
+     "title": "How Birmingham's Steel Money Built a Mountain of Mansions Above Its Own Smoke: Redmont",
+     "views": 36000,
+     "dur": 1418,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 105,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@ProsecutorMatthewHanson",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 10,
+   "n_long": 10,
+   "median_views": 69000.0,
+   "med_vph_45d": 391.5,
+   "best_vph": 1798,
+   "med_dur": 1381.5,
+   "videos": [
+    {
+     "id": "2JtX92ID2IA",
+     "title": "TikTok Lawyer Pushes her Luck and gets Dragged Out",
+     "views": 398000,
+     "dur": 1151,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 1798,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "ylzKXemMfQg",
+     "title": "TikTok Lawyer Spits on Cop and gets SMACKED in the Face",
+     "views": 36000,
+     "dur": 1572,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 675,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "utPCHO-0om4",
+     "title": "Internet Tough Guy Charges at Cop and gets Tazed",
+     "views": 62000,
+     "dur": 2218,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 612,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "vzyu93j45Yg",
+     "title": "TikTok Lawyer Attacks Officer and gets Slammed Against the Wall",
+     "views": 74000,
+     "dur": 1296,
+     "upload": "20261016",
+     "hours": 149,
+     "vph": 495,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "d6hO2vKJaN8",
+     "title": "Entitled Mom Ruins Her Life Over a Chick-Fil-A Sandwich...",
+     "views": 108000,
+     "dur": 1780,
+     "upload": "20261011",
+     "hours": 269,
+     "vph": 401,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@YourVibeChoice",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 20000,
+   "med_vph_45d": 30,
+   "best_vph": 424,
+   "med_dur": 737,
+   "videos": [
+    {
+     "id": "ubRkkpLfIHU",
+     "title": "This or That: Build Your Dream Fall Shopping! 🍂🛒",
+     "views": 216000,
+     "dur": 990,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 424,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "LXRYRLU2mYQ",
+     "title": "Let's Build Your Perfect Boo Basket! 🎃🧺✨ | This or That",
+     "views": 142000,
+     "dur": 656,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 279,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "QKIA6Elv8Gs",
+     "title": "This or That: Build Your Dream Halloween Party! 🎃🦇",
+     "views": 48000,
+     "dur": 645,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 141,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "epxHsqH6cVM",
+     "title": "This or That: Build Your Dream Cozy Fall Room! 🍂🛏️☕✨",
+     "views": 7700,
+     "dur": 591,
+     "upload": "20261016",
+     "hours": 149,
+     "vph": 52,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "iPhlZXvzMU0",
+     "title": "Build Your Dream Dorm Room 🗝️✨ (This or That)",
+     "views": 69000,
+     "dur": 883,
+     "upload": "20260822",
+     "hours": 1469,
+     "vph": 47,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@KnownMatter-s5q",
+   "nota": "filmes (precisa cenas de filme)",
+   "name": null,
+   "channel_id": null,
+   "n": 2,
+   "n_long": 2,
+   "median_views": 207019.0,
+   "med_vph_45d": 707.0,
+   "best_vph": 1411,
+   "med_dur": 470.0,
+   "videos": [
+    {
+     "id": "z5olE7KCjzY",
+     "title": "They Turned Brain Activity Into Images",
+     "views": 414000,
+     "dur": 454,
+     "upload": "20261010",
+     "hours": 293,
+     "vph": 1411,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "pZeI_l2TNa0",
+     "title": "Scientists Built Invisibility Cloaks. Could They Hide a Human?",
+     "views": 38,
+     "dur": 486,
+     "upload": "20261022",
+     "hours": 12,
+     "vph": 3,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@theapprenticesguide",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 5,
+   "n_long": 5,
+   "median_views": 11000,
+   "med_vph_45d": 9.5,
+   "best_vph": 1107,
+   "med_dur": 842,
+   "videos": [
+    {
+     "id": "ffO4xVOU1oI",
+     "title": "Volts, Amps & Watts Explained — and Which One Kills You",
+     "views": 803000,
+     "dur": 780,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 1107,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "MIuiZtAWm7s",
+     "title": "How Electricity Actually Flows (What's Really Moving in a Wire)",
+     "views": 69000,
+     "dur": 550,
+     "upload": "20260822",
+     "hours": 1469,
+     "vph": 47,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "pnK_OEpissI",
+     "title": "Series vs Parallel Circuits Explained — Why One Dead Bulb Kills Everything",
+     "views": 11000,
+     "dur": 842,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 15,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "8nwE0Jq202o",
+     "title": "Why Did Only One Breaker Trip?",
+     "views": 1000,
+     "dur": 991,
+     "upload": "20261011",
+     "hours": 269,
+     "vph": 4,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "LOFpw6uyYjQ",
+     "title": "Half Your House Went Dark. The Dark Half Is Still Live.",
+     "views": 1600,
+     "dur": 1094,
+     "upload": "20260924",
+     "hours": 677,
+     "vph": 2,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@criticallatitudetv",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 264000,
+   "med_vph_45d": 768,
+   "best_vph": 5566,
+   "med_dur": 1436,
+   "videos": [
+    {
+     "id": "39t1IhGejOQ",
+     "title": "Everything We Know About AMOC Collapse — And the Threat to North America's Coast",
+     "views": 1900000,
+     "dur": 1412,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 5566,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "IPcI5cSSrmE",
+     "title": "Everything We Know About Nepal's Flood - And What Everyone Got Wrong",
+     "views": 1700000,
+     "dur": 1898,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 2344,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "y93guHU5HPU",
+     "title": "Everything We Know About the New Madrid Fault - And What We Got Wrong",
+     "views": 1000000,
+     "dur": 1782,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 1963,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "MIXG2KBwLg8",
+     "title": "Everything We Know About Predicting Earthquakes From the Sun - And Why the Odds Don't Add Up",
+     "views": 51000,
+     "dur": 1671,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 1737,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "7vhcLNJNX6U",
+     "title": "The Massive Utah Earthquake Scientists Are Preparing For - Everything You Should Know",
+     "views": 306000,
+     "dur": 1436,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 1382,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@Americaunderconstruction1",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 5100,
+   "med_vph_45d": 27,
+   "best_vph": 511,
+   "med_dur": 1729,
+   "videos": [
+    {
+     "id": "PrFw_WXPR5Y",
+     "title": "10 Massive U.S. Port Expansions Being Built to Handle the World's Biggest Ships",
+     "views": 15000,
+     "dur": 1205,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 511,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "csqgBZ1PfBc",
+     "title": "10 Billion-Dollar Airports America Is Building Right Now",
+     "views": 43000,
+     "dur": 1379,
+     "upload": "20261014",
+     "hours": 197,
+     "vph": 218,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "6WlGRwBa85I",
+     "title": "10 Billion-Dollar Factories America Is Racing to Build Right Now",
+     "views": 71000,
+     "dur": 3509,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 139,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "4yhZ9gVWvmM",
+     "title": "10 Giant American Tunnels Being Built Beneath Cities and Water Right Now",
+     "views": 4500,
+     "dur": 1400,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 58,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "m3jfoAnZ0fc",
+     "title": "10 Giant Data Centers America Is Racing to Build Right Now — Some Need Their Own Power Plants",
+     "views": 7600,
+     "dur": 1431,
+     "upload": "20261016",
+     "hours": 149,
+     "vph": 51,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@AgentFlappy",
+   "nota": "animacao",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 117000,
+   "med_vph_45d": 202.5,
+   "best_vph": 447,
+   "med_dur": 1295,
+   "videos": [
+    {
+     "id": "mijVycQwp-I",
+     "title": "The Gulf War Explained in 21 Minutes",
+     "views": 56000,
+     "dur": 1244,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 447,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "kqTsZAmbByU",
+     "title": "The Most Notorious Traitors in History Explained in 19 Minutes",
+     "views": 102000,
+     "dur": 1189,
+     "upload": "20261010",
+     "hours": 293,
+     "vph": 348,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "yJBETduh0WM",
+     "title": "The Napoleonic Wars Explained in 28 Minutes",
+     "views": 127000,
+     "dur": 1728,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 249,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "KFkwkGxbm38",
+     "title": "The Most Devastating Tragedies in American History Explained",
+     "views": 148000,
+     "dur": 1035,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 204,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "MfGJX4OJCBk",
+     "title": "The Korean War Explained in 27 Minutes",
+     "views": 146000,
+     "dur": 1627,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 201,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@Healoloogy",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 13,
+   "n_long": 13,
+   "median_views": 44000,
+   "med_vph_45d": 223,
+   "best_vph": 2083,
+   "med_dur": 608,
+   "videos": [
+    {
+     "id": "_K4DrL3gEz8",
+     "title": "The Rarest NAVAJO Artifacts Ever Appraised On Antiques Roadshow !",
+     "views": 25000,
+     "dur": 502,
+     "upload": "20261021",
+     "hours": 12,
+     "vph": 2083,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "iDg6Pe-IDJk",
+     "title": "The Most Expensive Native American Artifact Ever Found on Antiques Roadshow!",
+     "views": 689000,
+     "dur": 519,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 2018,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "VWmhiH3UiYk",
+     "title": "The Most Expensive 'Oil Painting Ever Found on Antiques Roadshow!",
+     "views": 298000,
+     "dur": 622,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 411,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "N_XqR4D7o-g",
+     "title": "The Most Expensive Oil Painting Ever Found on Antiques Roadshow!",
+     "views": 181000,
+     "dur": 543,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 250,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "EqqaVb9p3RE",
+     "title": "Tiffany’s Masterpiece: The Most Expensive Lamps Ever Found on Antiques Roadshow",
+     "views": 31000,
+     "dur": 437,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 247,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UCUmCVRNy7wEOjgbteKyiUZw",
+   "nota": "",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 7,
+   "median_views": 40000,
+   "med_vph_45d": 42,
+   "best_vph": 55,
+   "med_dur": 1094,
+   "videos": [
+    {
+     "id": "NUuLldqtcCU",
+     "title": "Jim McAllister Is What Georgie Becomes in 30 Years",
+     "views": 40000,
+     "dur": 978,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 55,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "AqE41prgcto",
+     "title": "Every Kind of Lie Sheldon Was Willing to Tell",
+     "views": 7300,
+     "dur": 2217,
+     "upload": "20261015",
+     "hours": 173,
+     "vph": 42,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "QYDMLH5QD6A",
+     "title": "George Cooper Was Never The Villain as Sheldon Remembers Him",
+     "views": 80000,
+     "dur": 1390,
+     "upload": "20260722",
+     "hours": 2213,
+     "vph": 36,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "QMl7s4ssIuM",
+     "title": "Every Girl Georgie Loved (It Wasn't Mandy)",
+     "views": 48000,
+     "dur": 1229,
+     "upload": "20260822",
+     "hours": 1469,
+     "vph": 33,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "PFkoUQPtcoQ",
+     "title": "What Dale Is Actually Afraid Of",
+     "views": 19000,
+     "dur": 985,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 26,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@mikinoyarinaoshi",
+   "nota": "japones, pouca edicao",
+   "name": null,
+   "channel_id": null,
+   "n": 8,
+   "n_long": 8,
+   "median_views": 31000.0,
+   "med_vph_45d": 45,
+   "best_vph": 1930,
+   "med_dur": 741.0,
+   "videos": [
+    {
+     "id": "_sTPSLA7LgU",
+     "title": "47歳、人生初めての断捨離。1トンの物を手放して見つけた、新しい居場所と自分",
+     "views": 1400000,
+     "dur": 1263,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 1930,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "dnWLUkIOoV4",
+     "title": "47歳、早朝スーパーの惣菜パートを始めてみたら。新しい自分に出会った",
+     "views": 394000,
+     "dur": 927,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 543,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "CCzMwe1EvO0",
+     "title": "48歳、会社を辞めて後悔はある？ 今だから話せること",
+     "views": 13000,
+     "dur": 815,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 128,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "ULaFN8nY2ek",
+     "title": "会社を辞めて人生迷走中の47歳。思い出の料理を作りながらこれからを語る",
+     "views": 105000,
+     "dur": 661,
+     "upload": "20260822",
+     "hours": 1469,
+     "vph": 71,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "dE0wJD5OQQU",
+     "title": "2026年を後悔しない！47歳、私が今どうしてもやっておきたい20のこと",
+     "views": 33000,
+     "dur": 667,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 45,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "@genel_ai",
+   "nota": "japones, pouca edicao",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 11,
+   "median_views": 198000,
+   "med_vph_45d": 513,
+   "best_vph": 2344,
+   "med_dur": 493,
+   "videos": [
+    {
+     "id": "cBXM6Y_Hpdc",
+     "title": "デヴ上等 Prime Ep.1 \"Everyone's Extra-Large.\"",
+     "views": 1700000,
+     "dur": 375,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 2344,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "MxlOa0e6VZA",
+     "title": "デヴ上等 未公開映像「腹ペコなある日の男子部屋①」",
+     "views": 52000,
+     "dur": 248,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 974,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "fo4_2KazRsY",
+     "title": "デヴ上等 Prime 10話 「二郎系より、濃い5日間だった。」",
+     "views": 230000,
+     "dur": 672,
+     "upload": "20261010",
+     "hours": 293,
+     "vph": 784,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "jtygu-OQ0X4",
+     "title": "デヴ上等 Prime Ep.2 \"I'm Gonna Lose Weight Like This.\"",
+     "views": 568000,
+     "dur": 295,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 783,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "rk5Ix640jkE",
+     "title": "デヴ上等 Prime Ep.3 \"No Hidden Sweetness Gets Past Me.\"",
+     "views": 383000,
+     "dur": 327,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 528,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UC2j9C2vANDyX2WBzYZFHLxQ",
+   "nota": "(do vídeo Wap9PO01fUc) avatar animado",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 48000,
+   "med_vph_45d": 98,
+   "best_vph": 3637,
+   "med_dur": 655,
+   "videos": [
+    {
+     "id": "mK-bVg2Sk10",
+     "title": "She Paid $20 for This Jewelry at an Estate Sale... Until This Happened on Antiques Roadshow",
+     "views": 456000,
+     "dur": 757,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 3637,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "aVxqcUXo6aA",
+     "title": "She Got This $10 Painting at a Thrift Shop... Then This Happened on Antiques Roadshow",
+     "views": 74000,
+     "dur": 651,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 957,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "hK3o8IrOZtQ",
+     "title": "She Thought This Jewelry Was Worthless... Until This Happened in Antiques Roadshow",
+     "views": 74000,
+     "dur": 702,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 217,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "7oCpIkj2jbE",
+     "title": "She Got This Free Painting At A Yard Sale... Until This Happened on Antiques Roadshow",
+     "views": 69000,
+     "dur": 697,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 202,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "e04W0eoAi7c",
+     "title": "She Paid $8 For This Oil Painting... Until This Happened on Antiques Roadshow",
+     "views": 95000,
+     "dur": 658,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 187,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UCXD5niPQ7saVW1jdu4q0Zsg",
+   "nota": "(do vídeo hVMYsqfp6hA) AVATAR",
+   "name": null,
+   "channel_id": null,
+   "n": 12,
+   "n_long": 12,
+   "median_views": 21500.0,
+   "med_vph_45d": 95.0,
+   "best_vph": 1900,
+   "med_dur": 501.0,
+   "videos": [
+    {
+     "id": "ZRcvnaK6Cy4",
+     "title": "Most People Are Cooking Basmati Rice Wrong! Try These Indian Tricks for Perfect Rice Every Time",
+     "views": 968000,
+     "dur": 572,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 1900,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "cpEbE6jrYzo",
+     "title": "My SECRET Chai Masala + 3 Indian Teas to Make at Home",
+     "views": 12000,
+     "dur": 507,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 225,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "74WylhScgrA",
+     "title": "3 Indian Chutneys in 20 Minutes (No Blender!)",
+     "views": 87000,
+     "dur": 555,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 171,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "A8nK4K_rgcw",
+     "title": "NEVER Throw Away STALE Bread Again! Try This Old Indian Trick",
+     "views": 4600,
+     "dur": 655,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 157,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "hVMYsqfp6hA",
+     "title": "STOP Cooking Chicken the Same Old Way! Try This Indian Recipe",
+     "views": 1600,
+     "dur": 484,
+     "upload": "20261021",
+     "hours": 14,
+     "vph": 111,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UCXheOYtaoPyYZ4aOnoIVpCQ",
+   "nota": "(do vídeo T_fqnsc9quM) ",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 13,
+   "median_views": 4200,
+   "med_vph_45d": 9.0,
+   "best_vph": 45,
+   "med_dur": 1710,
+   "videos": [
+    {
+     "id": "T_fqnsc9quM",
+     "title": "I Got Questions w/ Teri Bailey & Guest, Annabelle Wallnau | 10.19.26",
+     "views": 2400,
+     "dur": 1710,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 45,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "KSdX2nWe4q8",
+     "title": "What Legacy Media Refused To Show You!",
+     "views": 13000,
+     "dur": 1581,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 26,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "CEGf26J4l-8",
+     "title": "I Got Questions w/ Teri Bailey & Guest, Candy Christmas | 10.12.26",
+     "views": 4200,
+     "dur": 1712,
+     "upload": "20261013",
+     "hours": 221,
+     "vph": 19,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "una0oMq_oco",
+     "title": "Take Back the Public Square! | FlashPoint Livestream | 09.14.26 | Monday",
+     "views": 14000,
+     "dur": 3511,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 19,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "X2kAwMDmrRY",
+     "title": "I Got Questions w/ Teri Bailey & Guest, Annabelle Wallnau | 09.28.26",
+     "views": 8900,
+     "dur": 1710,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 17,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UCgYTGQaaVl--ma4BOX41-MA",
+   "nota": "(do vídeo nXLxwFnBRNY) ",
+   "name": null,
+   "channel_id": null,
+   "n": 15,
+   "n_long": 15,
+   "median_views": 6700,
+   "med_vph_45d": 44,
+   "best_vph": 168,
+   "med_dur": 4514,
+   "videos": [
+    {
+     "id": "O8bPeIsS6f0",
+     "title": "30 American Factories So Big They Needed Their Own Railroads — Now Completely Silent",
+     "views": 13000,
+     "dur": 4327,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 168,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "prRjaoT4E5U",
+     "title": "30 American Factories That Once Ran 24 Hours a Day — Now Completely Silent",
+     "views": 31000,
+     "dur": 4596,
+     "upload": "20261011",
+     "hours": 269,
+     "vph": 115,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "WGOwTXsWYIc",
+     "title": "30 American Tool Companies Whose Tools Outlived Their Factories",
+     "views": 48000,
+     "dur": 4514,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 94,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "nXLxwFnBRNY",
+     "title": "25 American Factory Towns Where One Company Owned EVERYTHING — Then Disappeared",
+     "views": 2400,
+     "dur": 4257,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 82,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "eZsI2-BZ2UM",
+     "title": "30 American Manufacturers Behind Sears Brands — The Names Customers Never Knew",
+     "views": 28000,
+     "dur": 4485,
+     "upload": "20261001",
+     "hours": 509,
+     "vph": 55,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  },
+  {
+   "key": "channel/UC0UMbbooWjYX6twoYAIC5OA",
+   "nota": "(do vídeo gLtO6ZfKt3c) FILMES",
+   "name": null,
+   "channel_id": null,
+   "n": 3,
+   "n_long": 3,
+   "median_views": 1200000,
+   "med_vph_45d": 0,
+   "best_vph": 1047,
+   "med_dur": 587,
+   "videos": [
+    {
+     "id": "9foSCjgmyK8",
+     "title": "When the Director Uses REAL Bullets",
+     "views": 8400000,
+     "dur": 706,
+     "upload": "20251122",
+     "hours": 8021,
+     "vph": 1047,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "EBVZkOoYdgY",
+     "title": "The Serial Killer Who Watched His Own Movie",
+     "views": 1200000,
+     "dur": 587,
+     "upload": "20251222",
+     "hours": 7301,
+     "vph": 164,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "gLtO6ZfKt3c",
+     "title": "When the Director Hires a REAL Drill Instructor",
+     "views": 1000000,
+     "dur": 503,
+     "upload": "20260122",
+     "hours": 6557,
+     "vph": 153,
+     "channel": null,
+     "channel_id": null
+    }
+   ],
+   "err": ""
+  }
+ ],
+ "videos": {
+  "Wap9PO01fUc": {
+   "id": "Wap9PO01fUc",
+   "title": "She Paid $400 For This Painting... Until This Happened on Antiques Roadshow",
+   "views": 4074,
+   "dur": 634,
+   "upload": "20261020",
+   "channel": "Antiques Gallery",
+   "channel_id": "UC2j9C2vANDyX2WBzYZFHLxQ",
+   "subs": 3090,
+   "lang": null,
+   "nota": "avatar animado"
+  },
+  "hVMYsqfp6hA": {
+   "id": "hVMYsqfp6hA",
+   "title": "STOP Cooking Chicken the Same Old Way! Try This Indian Recipe",
+   "views": 1615,
+   "dur": 483,
+   "upload": "20261021",
+   "channel": "Nina Cooks | Indian Cooking Made Easy",
+   "channel_id": "UCXD5niPQ7saVW1jdu4q0Zsg",
+   "subs": 6790,
+   "lang": null,
+   "nota": "AVATAR"
+  },
+  "T_fqnsc9quM": {
+   "id": "T_fqnsc9quM",
+   "title": "I Got Questions w/ Teri Bailey & Guest, Annabelle Wallnau | 10.19.26",
+   "views": 2485,
+   "dur": 1710,
+   "upload": "20261019",
+   "channel": "FlashPoint",
+   "channel_id": "UCXheOYtaoPyYZ4aOnoIVpCQ",
+   "subs": 72200,
+   "lang": null,
+   "nota": ""
+  },
+  "nXLxwFnBRNY": {
+   "id": "nXLxwFnBRNY",
+   "title": "25 American Factory Towns Where One Company Owned EVERYTHING — Then Disappeared",
+   "views": 2467,
+   "dur": 4256,
+   "upload": "20261020",
+   "channel": "When America Made Everything",
+   "channel_id": "UCgYTGQaaVl--ma4BOX41-MA",
+   "subs": 7450,
+   "lang": null,
+   "nota": ""
+  },
+  "gLtO6ZfKt3c": {
+   "id": "gLtO6ZfKt3c",
+   "title": "When the Director Hires a REAL Drill Instructor",
+   "views": 1046222,
+   "dur": 502,
+   "upload": "20260115",
+   "channel": "Director's Cut.",
+   "channel_id": "UC0UMbbooWjYX6twoYAIC5OA",
+   "subs": 38000,
+   "lang": null,
+   "nota": "FILMES"
+  }
+ }
+}

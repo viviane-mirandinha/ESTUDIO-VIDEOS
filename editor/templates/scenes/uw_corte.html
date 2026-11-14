@@ -1,0 +1,65 @@
+<!--params {"modo":"bloco","rotulo":"","valor":"","a":"","b":"","c":"","seed":1}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:linear-gradient(180deg,#0e1a2a,#17283d);overflow:hidden">
+ <svg class="sv" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0"></svg>
+ <div class="rot" style="position:absolute;left:48px;top:40px;display:flex;align-items:stretch;background:rgba(8,12,20,.84);padding:8px 18px 8px 0"><span style="width:6px;background:#f5c518;margin-right:14px"></span><span style="font:800 28px 'Montserrat',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.03em">{{p.rotulo}}</span></div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id),sv=R.querySelector(".sv"),M=P.modo||"bloco";
+ if(!P.rotulo) R.querySelector(".rot").style.display="none";
+ let sd=(+P.seed||1)*977; const rnd=()=>{sd=(sd*16807)%2147483647;return sd/2147483647;};
+ const NS="http://www.w3.org/2000/svg", el=(t,a,par)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||sv).appendChild(e);return e;};
+ const txt=(x,y,s,o)=>{const e=el("text",Object.assign({x,y,fill:"#fff","font-family":"Montserrat","font-weight":800,"font-size":28,"text-anchor":"middle"},o||{}));e.textContent=s;return e;};
+ const lab=(x,y,s,anchor)=>{const g=el("g",{});const t=txt(0,0,s,{"text-anchor":"start","font-size":26});g.appendChild(t);const w=Math.max(60,s.length*16.5)+28;
+   const r=el("rect",{x:-14,y:-30,width:w,height:42,fill:"rgba(8,12,20,.85)"},g); g.insertBefore(r,t); el("rect",{x:-14,y:-30,width:5,height:42,fill:"#f5c518"},g); g.appendChild(t);
+   g.setAttribute("transform",`translate(${anchor==="r"?x-w+14:x},${y})`); return g;};
+ const rock=(y0,amp,deep)=>{let d=`M0 720 L0 ${y0}`;for(let x=0;x<=1280;x+=40){const y=y0+Math.sin(x/90+sd%7)*amp*.5+Math.sin(x/37)*amp*.25+(rnd()-.5)*amp*.4+(deep?deep(x):0);d+=` L${x} ${y.toFixed(1)}`;}return d+" L1280 720 Z";};
+ const defs=el("defs",{}); const gi=el("linearGradient",{id:"gi{{id}}",x1:0,y1:0,x2:0,y2:1},defs); el("stop",{offset:"0","stop-color":"#eef6fb"},gi); el("stop",{offset:"1","stop-color":"#9cc9e6"},gi);
+ const gw=el("linearGradient",{id:"gw{{id}}",x1:0,y1:0,x2:0,y2:1},defs); el("stop",{offset:"0","stop-color":"#2f7fb5"},gw); el("stop",{offset:"1","stop-color":"#123a63"},gw);
+ const ICE=`url(#gi{{id}})`, WAT=`url(#gw{{id}})`, ROCK="#6b4a32", anim=[];
+ const show=(e,t,o)=>anim.push([e,t,o||{}]);
+ if(M==="bloco"||M==="rebote"){
+  const top=170, base=560; el("path",{d:`M0 ${top} L1280 ${top} L1280 720 L0 720 Z`,fill:ICE});
+  for(let i=0;i<6;i++) el("line",{x1:0,x2:1280,y1:top+60+i*60,y2:top+64+i*60,stroke:"rgba(80,140,190,.25)","stroke-width":2});
+  const rk=el("path",{d:rock(base,60),fill:ROCK}); el("path",{d:rock(base+60,40),fill:"#4e3523",opacity:.6});
+  const ln=el("line",{x1:640,x2:640,y1:top,y2:base,stroke:"#f5c518","stroke-width":6}); el("line",{x1:610,x2:670,y1:top,y2:top,stroke:"#f5c518","stroke-width":6}); el("line",{x1:610,x2:670,y1:base,y2:base,stroke:"#f5c518","stroke-width":6});
+  const v=lab(670,(top+base)/2+10,P.valor||"~2 KM DE HIELO"); show(ln,.4,{scaleY:0,transformOrigin:"50% 0%"}); show(v,.9);
+  if(M==="rebote"){ const ar=el("g",{}); for(const x of [300,640,980]){el("path",{d:`M${x} ${base+80} L${x} ${base-30} M${x-26} ${base} L${x} ${base-34} L${x+26} ${base}`,stroke:"#f5c518","stroke-width":8,fill:"none","stroke-linecap":"round"},ar);} show(ar,1.2); show(rk,1.0,{y:40}); if(P.a) show(lab(80,660,P.a),1.6); }
+ } else if(M==="radar"){
+  const top=250, base=600; el("path",{d:`M0 ${top} L1280 ${top} L1280 720 L0 720 Z`,fill:ICE}); el("path",{d:rock(base,70),fill:ROCK});
+  const pl=el("g",{}); el("path",{d:"M-60 0 L50 -6 L70 0 L50 6 Z M-10 -2 L-30 -40 L-12 -40 L20 -2 Z M-10 2 L-30 40 L-12 40 L20 2 Z M-55 0 L-70 -18 L-60 -18 L-45 0 Z",fill:"#e8eef5"},pl);
+  pl.setAttribute("transform","translate(200,120)"); show(pl,0,{x:-260});
+  for(let i=0;i<5;i++){ const x=380+i*120; const d=el("line",{x1:x,x2:x,y1:140,y2:base-20,stroke:"#7fd3ff","stroke-width":4,"stroke-dasharray":"14 10"}); show(d,.6+i*.35,{scaleY:0,transformOrigin:"50% 0%"});
+    const u=el("line",{x1:x+14,x2:x+14,y1:base-20,y2:140,stroke:"#f5c518","stroke-width":4,"stroke-dasharray":"8 10"}); show(u,1.4+i*.35,{scaleY:0,transformOrigin:"50% 100%"}); }
+  show(lab(820,330,P.a||"HIELO: EL RADAR PASA"),1.2); show(lab(820,690,P.b||"ROCA: EL ECO REBOTA"),1.8);
+ } else if(M==="lago"||M==="perforacion"||M==="whillans"){
+  const top=150, base=560; el("path",{d:`M0 ${top} L1280 ${top} L1280 720 L0 720 Z`,fill:ICE}); el("path",{d:rock(base,40),fill:ROCK});
+  const lk=el("path",{d:`M250 ${base+6} Q640 ${base-90} 1030 ${base+6} Q640 ${base+70} 250 ${base+6} Z`,fill:"#2a86c8",stroke:"#bfe6ff","stroke-width":3}); show(lk,.3,{scale:.2,transformOrigin:"50% 100%"});
+  show(lab(500,base+60,P.valor||"LAGO VOSTOK · ≈ -3 °C"),.8);
+  if(M==="lago"){ const ar=el("g",{}); for(const x of [420,560,700,840]) el("path",{d:`M${x} 210 L${x} 330 M${x-16} 310 L${x} 334 L${x+16} 310`,stroke:"#1f5f95","stroke-width":6,fill:"none"},ar); show(ar,1.4);
+    show(lab(880,250,P.a||"EL HIELO AÍSLA DESDE ARRIBA"),1.6); show(lab(80,420,P.b||"PRESIÓN"),2.2);
+    const hot=el("g",{}); for(const x of [420,640,860]) el("path",{d:`M${x} 700 q-12 -20 0 -40 q12 -20 0 -40`,stroke:"#ff8a3d","stroke-width":6,fill:"none"},hot); show(hot,2.6); if(P.c) show(lab(80,700,P.c),2.8); }
+  else { const bh=el("rect",{x:634,y:top,width:12,height:base-top-30,fill:M==="whillans"?"#cfe9ff":"#c9a24a"}); show(bh,.6,{scaleY:0,transformOrigin:"50% 0%"});
+    const rig=el("path",{d:`M600 ${top} L640 ${top-90} L680 ${top} Z`,fill:"none",stroke:"#e8eef5","stroke-width":5}); show(rig,.2); show(lab(680,top+60,P.a||"POZO CON QUEROSENO · ≈3.8 KM"),1.2); if(P.b) show(lab(80,690,P.b),2); }
+ } else if(M==="plataforma"){
+  const sea=200; el("rect",{x:0,y:sea,width:1280,height:520,fill:WAT}); el("path",{d:`M0 ${sea-40} L1280 ${sea-40} L1280 ${sea+150} L0 ${sea+170} Z`,fill:ICE});
+  el("path",{d:rock(640,40),fill:ROCK}); const cb=el("line",{x1:400,x2:400,y1:sea-40,y2:610,stroke:"#f5c518","stroke-width":4}); show(cb,.5,{scaleY:0,transformOrigin:"50% 0%"});
+  const cam=el("rect",{x:388,y:600,width:24,height:18,fill:"#f5c518"}); show(cam,1.4); el("line",{x1:440,x2:440,y1:sea-40,y2:sea+160,stroke:"#7b3fe4","stroke-width":8});
+  show(lab(470,sea+70,P.valor||"≈900 M DE HIELO FLOTANTE"),.9); show(lab(470,560,P.a||"ROCA EN EL FONDO MARINO"),1.8);
+  const arr=el("path",{d:"M720 520 L1040 520 M1010 500 L1044 520 L1010 540",stroke:"#ff5a4a","stroke-width":6,fill:"none"}); if(P.b){show(arr,2.2); show(lab(760,480,P.b),2.4);}
+ } else if(M==="fosa"){
+  const sea=250; el("rect",{x:0,y:sea,width:1280,height:470,fill:"rgba(30,90,140,.25)"}); el("line",{x1:0,x2:1280,y1:sea,y2:sea,stroke:"#7fd3ff","stroke-width":3,"stroke-dasharray":"12 8"});
+  txt(1180,sea-14,P.c||"NIVEL DEL MAR",{"font-size":24,"text-anchor":"end",fill:"#7fd3ff"});
+  const prof=x=>{const c=860, w=110; return Math.abs(x-c)<w*1.6? 380*Math.exp(-Math.pow((x-c)/w,4)):0;};
+  el("path",{d:rock(sea+40,30,prof),fill:ROCK});
+  const ds=el("line",{x1:300,x2:300,y1:sea,y2:sea+44,stroke:"#f5c518","stroke-width":6}); show(ds,.6,{scaleY:0,transformOrigin:"50% 0%"}); show(lab(320,sea+92,P.a||"MAR MUERTO · -440 M"),1);
+  const dn=el("line",{x1:860,x2:860,y1:sea,y2:sea+400,stroke:"#f5c518","stroke-width":6}); show(dn,1.6,{scaleY:0,transformOrigin:"50% 0%"}); show(lab(890,sea+330,P.valor||"DENMAN · -3,500 M"),2.4);
+ } else if(M==="corcho"){
+  const sea=330; el("rect",{x:0,y:sea,width:1280,height:390,fill:WAT}); el("path",{d:`M0 120 L760 150 L800 ${sea-30} L820 ${sea+120} L0 ${sea+260} Z`,fill:ICE});
+  el("path",{d:rock(sea+250,30),fill:ROCK}); const w=el("path",{d:`M1240 ${sea+200} Q1000 ${sea+230} 840 ${sea+150} M870 ${sea+130} L836 ${sea+150} L874 ${sea+170}`,stroke:"#ff7a3d","stroke-width":9,fill:"none","stroke-linecap":"round"});
+  show(w,.8); show(lab(900,sea+110,P.a||"AGUA TIBIA DEL MAR"),1.2); show(lab(80,100,P.valor||"GLACIAR THWAITES"),.4); if(P.b) show(lab(80,sea+330,P.b),1.8);
+ }
+ tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:true},S);
+ for(const [e,t,o] of anim){ const from=Object.assign({opacity:0},o); const to={opacity:1,duration:.7,ease:"power2.out",immediateRender:true}; for(const k in o){ if(k==="transformOrigin") continue; to[k]=k.startsWith("scale")?1:0; } tl.fromTo(e,from,to,S+t); }
+ tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main,{{json}});
+</script>

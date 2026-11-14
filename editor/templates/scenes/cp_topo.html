@@ -1,0 +1,26 @@
+<!--params {"titulo":"A BRIGA DO HOME OFFICE","pontos":[0,8,16,28,39],"rotulos":["Ponto 1","Ponto 2","Ponto 3","Ponto 4","Ponto 5"]}-->
+<div id="{{id}}" style="position:absolute;left:0;top:0;width:100%;height:104px;font-family:'Segoe UI',Arial,sans-serif;z-index:50">
+ <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.82),rgba(0,0,0,.55) 70%,rgba(0,0,0,0))"></div>
+ <div style="position:absolute;left:40px;top:16px;font-family:Anton,Impact,sans-serif;font-size:52px;line-height:1;color:#fff;letter-spacing:1px">{{p.titulo}}</div>
+ <div class="pill" style="position:absolute;right:40px;top:20px;height:48px;padding:0 20px;border-radius:24px;background:#ffd84d;color:#111;font-size:26px;font-weight:800;display:flex;align-items:center;white-space:nowrap"></div>
+ <div class="bar" style="position:absolute;left:40px;right:40px;top:84px;height:8px;display:flex;gap:8px"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}"; const root=document.querySelector(R);
+  const pts=P.pontos||[0], rot=P.rotulos||[], n=pts.length;
+  const bar=root.querySelector(".bar"), pill=root.querySelector(".pill");
+  const lab=i=>'PONTO '+(i+1)+'/'+n+(rot[i]?' · '+String(rot[i]).toUpperCase():'');
+  let maior=0; pts.forEach((t,i)=>{ if(lab(i).length>lab(maior).length) maior=i; });
+  pill.innerHTML=pts.map((t,i)=>'<span class="pl" style="position:absolute;left:20px;opacity:0">'+lab(i)+'</span>').join('')+'<span style="visibility:hidden">'+lab(maior)+'</span>';
+  bar.innerHTML=pts.map(()=>'<div style="flex:1;background:rgba(255,255,255,.22);border-radius:4px;overflow:hidden"><div class="f" style="height:100%;width:0%;background:#ffd84d"></div></div>').join('');
+  tl.set(R,{opacity:0},0);
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.5,ease:"none",immediateRender:false},S);
+  const fs=root.querySelectorAll(".f"), pls=root.querySelectorAll(".pl");
+  pts.forEach((t,i)=>{ const a=S+t, b=(i+1<n?S+pts[i+1]:S+D);
+    tl.fromTo(fs[i],{width:"0%"},{width:"100%",duration:Math.max(.1,b-a),ease:"none",immediateRender:false},a);
+    tl.fromTo(pls[i],{opacity:0,y:12},{opacity:1,y:0,duration:.35,immediateRender:false},a);
+    if(i+1<n) tl.fromTo(pls[i],{opacity:1},{opacity:0,duration:.2,immediateRender:false},b-.2);
+  });
+  tl.to(R,{opacity:0,duration:.4,ease:"none"},S+D-.4);
+})(window.__timelines.main, {{json}});
+</script>

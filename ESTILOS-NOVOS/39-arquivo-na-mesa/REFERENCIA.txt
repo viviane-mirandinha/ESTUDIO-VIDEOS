@@ -1,0 +1,8 @@
+Canal 1: Red File — https://www.youtube.com/channel/UCNpjH9MosivtBOa45Hbu39g
+  Vídeo analisado: 56-Year-Old Man Has No Idea Police Just Connected His DNA to a 1996 Murder — https://youtu.be/udbDpAkUh10 (videoId udbDpAkUh10, ~1,33 mi views, 44 min, 07/08/2026)
+Canal 2: Dead Signal Investigation — https://www.youtube.com/channel/UC-WT_x7Tpo-C1_XNJFik4ag
+  Vídeo analisado: Long Island File Zero — https://youtu.be/zAoOy28kpqo (videoId zAoOy28kpqo, ~35 mil views, 14 min, 01/10/2026)
+Busca: "case file documentary desk", "declassified files documentary" (+ variações "classified files desk documentary mystery", "secret dossier documentary history")
+Trechos analisados: 0-40 s, meio (~90 s) e últimos 40 s de cada (ref/ref.mp4, 340 s); medição em ref/ESTILO-MEDIDO.md
+Print: sheet-redfile-udbDpAkUh10_deadsignal-zAoOy28kpqo.jpg (1 quadro a cada ~11 s da ref inteira)
+Exemplo nosso: VIDEOS-NOVOS/39-arquivo-na-mesa (O roubo da Mona Lisa em 1911, PT-BR, ~70 s)

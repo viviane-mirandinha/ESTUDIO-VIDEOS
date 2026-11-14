@@ -1,0 +1,36 @@
+{
+  "name": "mk-specs-list",
+  "titulo": "Lista de itens (checklist)",
+  "categoria": "Lista",
+  "descricao": "Lista de características entrando linha a linha com check.",
+  "title_en": "Specs Checklist",
+  "description_en": "Left-aligned specs/traits checklist over footage or a board: rows slide in staggered with an accent underline sweep; light and dark schemes",
+  "duration": 8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "data-viz",
+    "list",
+    "minimal",
+    "professional"
+  ],
+  "variables": [],
+  "files": [
+    "mk-specs-list.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/mk-specs-list",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Design",
+    "Typography",
+    "Motion",
+    "Color",
+    "Shapes",
+    "Minimal, clean lines",
+    "Inter SemiBold",
+    "Restrained, no bounce",
+    "Stage + one accent",
+    "Capsules & rounded cards"
+  ]
+}

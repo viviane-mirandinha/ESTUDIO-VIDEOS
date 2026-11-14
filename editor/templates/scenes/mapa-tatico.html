@@ -1,0 +1,117 @@
+<!--params {"cam0":[2000,0,4200],"cam1":[2200,0,3600],"lead0":2200,"lead1":2600,"n":42,"gap":42,"t_explode":-1,"explodido":0,"marcas":[],"atingidos":[],"tiros":[],"t_parado":-1,"rotulos":[],"hora":"06:00","rotulo":"SETOR NORTE","seed":23}-->
+<div id="{{id}}" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="{{id}}_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">{{p.rotulo}}</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">{{p.hora}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const R=document.getElementById("{{id}}");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#{{id}}_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {{json}});
+</script>

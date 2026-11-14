@@ -1,0 +1,25 @@
+<!--params {"cabecalho":"O REGISTRO · TODOS OS RECORDISTAS","titulo":"","t_titulo":0.2,"titulo2":"","t_titulo2":2.5,"rodape":"","t_rodape":4.5,"linhas":[{"nome":"GREAT EASTERN","m":211}]}-->
+<div id="{{id}}" class="kr-rg" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 45% 40%,#1d2a3a 0%,#121c29 55%,#0b121c 100%)">
+ <div class="hd" style="position:absolute;left:84px;top:30px;font:24px Consolas,monospace;letter-spacing:.12em;color:#9fb2c4">{{p.cabecalho}}</div>
+ <div class="t1" style="position:absolute;left:80px;top:62px;font-family:'Barlow',sans-serif;font-weight:700;font-size:56px;color:#f2efe6">{{p.titulo}}</div>
+ <div class="t2" style="position:absolute;left:80px;top:62px;font-family:'Barlow',sans-serif;font-weight:700;font-size:56px;color:#d9a63a;opacity:0">{{p.titulo2}}</div>
+ <div class="rows" style="position:absolute;left:0;right:0;top:140px"></div>
+ <div class="ft" style="position:absolute;right:64px;bottom:22px;font-family:'Barlow',sans-serif;font-weight:700;font-size:48px;color:#d9a63a">{{p.rodape}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", R=document.querySelector(id), box=R.querySelector(".rows");
+  const K=1.5, X=400, RH=40, L=P.linhas||[], mx=Math.max(...L.map(q=>q.m||0));
+  L.forEach((l,i)=>{ const r=document.createElement("div"); r.style.cssText=`position:absolute;left:0;right:0;top:${i*RH}px;height:${RH}px`;
+    const big=l.m===mx;
+    r.innerHTML=`<div style="position:absolute;right:${1280-X+18}px;top:2px;font-family:'Barlow',sans-serif;font-weight:700;font-size:30px;color:${big?'#d9a63a':'#f2efe6'};white-space:nowrap">${l.nome}</div>`+
+      (l.m?`<div class="b" style="position:absolute;left:${X}px;top:9px;height:22px;width:${l.m*K}px;background:${big?'#d9a63a':'rgba(217,166,58,.6)'};transform-origin:0 50%"></div><div style="position:absolute;left:${X+l.m*K+12}px;top:4px;font:24px Consolas,monospace;color:#c9d3dc">${l.m} M</div>`:`<div style="position:absolute;left:${X}px;top:4px;font:24px Consolas,monospace;color:#9fc0d8">${l.nota||''}</div>`);
+    box.appendChild(r);
+    const t=S+.25+i*.14; tl.fromTo(r,{opacity:0},{opacity:1,duration:.3,immediateRender:true},t);
+    const b=r.querySelector(".b"); if(b) tl.fromTo(b,{scaleX:0},{scaleX:1,duration:.6,ease:"power2.out",immediateRender:true},t);
+  });
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.45,immediateRender:true},S);
+  tl.fromTo(id+" .t1",{opacity:0,y:12},{opacity:1,y:0,duration:.5,immediateRender:true},S+(+P.t_titulo));
+  if(P.titulo2){ tl.to(id+" .t1",{opacity:0,duration:.3},S+(+P.t_titulo2)-.3); tl.fromTo(id+" .t2",{opacity:0,y:12},{opacity:1,y:0,duration:.5,immediateRender:true},S+(+P.t_titulo2)); }
+  if(P.rodape) tl.fromTo(id+" .ft",{opacity:0},{opacity:1,duration:.5,immediateRender:true},S+(+P.t_rodape)); else tl.set(id+" .ft",{display:"none"},S);
+})(window.__timelines.main, {{json}});
+</script>

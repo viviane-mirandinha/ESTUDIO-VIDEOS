@@ -1,0 +1,29 @@
+{
+  "name": "lt-kicker-name",
+  "titulo": "Nome na tela — com etiqueta",
+  "categoria": "Lower third",
+  "descricao": "Etiqueta colorida em cima, nome grande e função embaixo.",
+  "title_en": "Lower Third — Kicker Name",
+  "description_en": "Cardless lower third with an accent eyebrow/kicker tag, heavy name, and a drawn baseline; for footage",
+  "duration": 4.8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "lower-third",
+    "overlay",
+    "podcast",
+    "interview",
+    "bold"
+  ],
+  "variables": [],
+  "files": [
+    "lt-kicker-name.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/lt-kicker-name",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Episode 47",
+    "Maya Chen"
+  ]
+}

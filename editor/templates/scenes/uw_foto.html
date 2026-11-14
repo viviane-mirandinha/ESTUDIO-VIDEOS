@@ -1,0 +1,23 @@
+<!--params {"src":"","motion":"zoom_in","amount":0.08,"pos":"50% 50%","rotulo":"","sub":"","canto":"bl","credito":"","escurecer":0.15,"fade_in":0.4}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#0c1726">
+ <img class="im" src="{{p.src}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{p.pos}}">
+ <div class="dk" style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,10,18,.55),rgba(5,10,18,0) 40%),rgba(5,10,18,var(--d,0))"></div>
+ <div class="rot" style="position:absolute;display:flex;align-items:stretch;background:rgba(8,12,20,.84);padding:8px 18px 8px 0;max-width:900px">
+  <span style="width:6px;background:#f5c518;margin-right:14px;flex:none"></span>
+  <span><span style="display:block;font:800 28px/1.15 'Montserrat',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.03em">{{p.rotulo}}</span><span class="sb" style="display:block;font:700 24px/1.2 'Montserrat',sans-serif;color:#c9d3e0;margin-top:2px">{{p.sub}}</span></span>
+ </div>
+ <div class="cr" style="position:absolute;right:28px;bottom:22px;font:600 24px 'Inter',sans-serif;color:rgba(255,255,255,.75);text-shadow:0 1px 6px #000">{{p.credito}}</div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id);
+ R.style.setProperty("--d",+P.escurecer||0);
+ const r=R.querySelector(".rot"), c=P.canto||"bl"; r.style[c[0]==="t"?"top":"bottom"]=(c[0]==="t"?40:48)+"px"; if(c[1]==="l")r.style.left="48px"; else if(c[1]==="r")r.style.right="48px"; else {r.style.left="50%";r.style.transform="translateX(-50%)";}
+ if(!P.rotulo) r.style.display="none"; if(!P.sub) R.querySelector(".sb").style.display="none"; if(!P.credito) R.querySelector(".cr").style.display="none";
+ const fi=+P.fade_in||0; if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+ const a=+P.amount||.08, m=P.motion||"zoom_in", im=id+" .im";
+ const fr={zoom_in:{scale:1},zoom_out:{scale:1+a},pan_left:{scale:1+a,xPercent:a*40},pan_right:{scale:1+a,xPercent:-a*40},pan_up:{scale:1+a,yPercent:a*40},pan_down:{scale:1+a,yPercent:-a*40},none:{}}[m]||{};
+ const to={zoom_in:{scale:1+a},zoom_out:{scale:1},pan_left:{scale:1+a,xPercent:-a*40},pan_right:{scale:1+a,xPercent:a*40},pan_up:{scale:1+a,yPercent:-a*40},pan_down:{scale:1+a,yPercent:a*40},none:{}}[m]||{};
+ tl.fromTo(im,fr,Object.assign({duration:D,ease:"none",immediateRender:true},to),S);
+ if(P.rotulo) tl.fromTo(id+" .rot",{opacity:0,x:-16},{opacity:1,x:0,duration:.6,ease:"power2.out",immediateRender:true},S+.35);
+})(window.__timelines.main,{{json}});
+</script>

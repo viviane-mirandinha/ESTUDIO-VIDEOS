@@ -1,0 +1,10 @@
+Gênero: mapa vermelho geopolítico
+Busca: "geopolitics map documentary red" / "why this country is dangerous map" (yt-dlp ytsearch15)
+
+1) Ticket To Know — The Strait of Hormuz Explained — 4.120.591 views
+   https://www.youtube.com/watch?v=udtVdDmSSoo  (videoId udtVdDmSSoo)
+2) Himfact — Why is the Red Sea so Important? — 533.013 views
+   https://www.youtube.com/watch?v=4vRtXY-iFnc  (videoId 4vRtXY-iFnc)
+
+Trechos usados (só para medir): 0-40 s, meio (~30 s) e últimos 40 s de cada -> VIDEOS-NOVOS/43-mapa-vermelho/ref/ref.mp4
+Print: VIDEOS-NOVOS/43-mapa-vermelho/ref_sheet.jpg

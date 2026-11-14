@@ -1,0 +1,26 @@
+{
+  "name": "mk-clone-wall-transition",
+  "titulo": "Transição parede de palavras",
+  "categoria": "Transição",
+  "descricao": "Uma parede de palavras cobre a tela, inverte e revela a próxima cena.",
+  "title_en": "Text Clone Wall Transition",
+  "description_en": "Overlay transition: a tiled word wall covers the frame, inverts via difference blending, and clears — hard-cut the content beneath while covered",
+  "duration": 2.4,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "transition",
+    "typography",
+    "wipe"
+  ],
+  "variables": [],
+  "files": [
+    "mk-clone-wall-transition.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/mk-clone-wall-transition",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "HyperFrames"
+  ]
+}

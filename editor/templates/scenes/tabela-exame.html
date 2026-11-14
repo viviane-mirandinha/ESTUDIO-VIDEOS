@@ -1,0 +1,35 @@
+<!--params {"titulo":"EXAME","sub":"","cab":["EXAME","RESULTADO","NORMAL"],"linhas":[{"nome":"Fração de ejeção","det":"","valor":"35%","normal":"55–70%","status":"ruim","flag":"BAIXO","t":1}],"fundo":"#111114"}-->
+<div id="{{id}}" class="tx" style="position:absolute;inset:0;background:{{p.fundo}};font-family:Inter,Arial,sans-serif">
+  <div class="tx-h"><div class="tx-t">{{p.titulo}}</div><div class="tx-s">{{p.sub}}</div></div>
+  <div class="tx-tab"></div>
+</div>
+<style>
+#{{id}} .tx-h{position:absolute;left:90px;top:56px;right:90px}
+#{{id}} .tx-t{font:700 64px Oswald,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.01em}
+#{{id}} .tx-s{font:500 28px Inter,sans-serif;color:#5bc0eb;margin-top:2px}
+#{{id}} .tx-tab{position:absolute;left:90px;right:90px;top:220px}
+#{{id}} .tx-r{display:grid;grid-template-columns:1.4fr 1fr .9fr;align-items:center;border-bottom:2px solid #2a2a31;padding:18px 8px}
+#{{id}} .tx-r.cab{border-bottom:3px solid #5bc0eb;padding:8px}
+#{{id}} .tx-r.cab div{font:700 24px Inter,sans-serif;color:#8d909a;letter-spacing:.15em}
+#{{id}} .tx-r .n{font:600 34px Inter,sans-serif;color:#e8e8ec}
+#{{id}} .tx-r .n small{display:block;font:500 24px Inter,sans-serif;color:#8d909a;margin-top:2px}
+#{{id}} .tx-r .v{font:700 42px Oswald,Inter,sans-serif;text-transform:uppercase}
+#{{id}} .tx-r .v.ruim{color:#e3342f} #{{id}} .tx-r .v.ok{color:#5bc0eb}
+#{{id}} .tx-r .o{font:500 30px Inter,sans-serif;color:#5bc0eb}
+#{{id}} .tx-r .fl{display:inline-block;margin-left:14px;font:700 24px Inter,sans-serif;color:#fff;background:#e3342f;border-radius:6px;padding:2px 10px;vertical-align:middle;letter-spacing:.05em}
+</style>
+<script>
+(function(tl, P){ const S={{start}}; const tab=document.querySelector("#{{id}} .tx-tab");
+  const e=s=>String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  if(!P.sub) document.querySelector("#{{id}} .tx-s").style.display="none";
+  let h='<div class="tx-r cab">'+(P.cab||[]).map(c=>'<div>'+e(c)+'</div>').join("")+'</div>';
+  (P.linhas||[]).forEach((l,i)=>{ const bad=l.status&&l.status!="ok";
+    h+='<div class="tx-r ln" id="{{id}}_l'+i+'"><div class="n">'+e(l.nome)+(l.det?'<small>'+e(l.det)+'</small>':'')+'</div><div class="v '+(bad?'ruim':'ok')+'">'+e(l.valor)+(bad&&l.flag?'<span class="fl">'+e(l.flag)+'</span>':'')+'</div><div class="o">'+e(l.normal)+'</div></div>'; });
+  tab.innerHTML=h;
+  tl.set("#{{id}} .tx-t,#{{id}} .tx-s,#{{id}} .tx-r",{opacity:0},0);
+  tl.fromTo("#{{id}} .tx-t",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,ease:"power3.out",immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} .tx-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.3);
+  tl.fromTo("#{{id}} .tx-r.cab",{opacity:0},{opacity:1,duration:.35,immediateRender:false},S+.35);
+  (P.linhas||[]).forEach((l,i)=>{ tl.fromTo("#{{id}}_l"+i,{opacity:0,x:40},{opacity:1,x:0,duration:.4,ease:"power2.out",immediateRender:false},S+(l.t!=null?+l.t:0.6+i*.6)); });
+})(window.__timelines.main, {{json}});
+</script>

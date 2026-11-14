@@ -1,0 +1,288 @@
+[
+ {
+  "video": {
+   "id": "jgK_1M4UboY",
+   "title": "How JetZero is OUTSMARTING Boeing And Airbus",
+   "views": 233570,
+   "dur": 1113,
+   "upload": "20261016",
+   "channel": "The Flightside Insider",
+   "channel_id": "UCEOz69jmkiQIYitdp_NRszQ",
+   "subs": 301,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCEOz69jmkiQIYitdp_NRszQ",
+   "name": "The Flightside Insider",
+   "n": 5,
+   "median_views": 6600,
+   "med_vph_45d": 123,
+   "best_vph": 123,
+   "med_dur": 1074,
+   "videos": [
+    {
+     "id": "OFPAqFMwiao",
+     "title": "Why Boeing 777X Is Being REJECTED By All Airlines",
+     "views": 6600,
+     "dur": 1074,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 123,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ },
+ {
+  "video": {
+   "id": "hhLnlTQFcNk",
+   "title": "Every Ship That Was the Biggest in the World, Explained",
+   "views": 152553,
+   "dur": 735,
+   "upload": "20261013",
+   "channel": "KNOT & RAIL",
+   "channel_id": "UC2Rp-Mg68qFRCtDIz89R7BQ",
+   "subs": 312,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UC2Rp-Mg68qFRCtDIz89R7BQ",
+   "name": "KNOT & RAIL",
+   "n": 15,
+   "median_views": 573,
+   "med_vph_45d": 2,
+   "best_vph": 770,
+   "med_dur": 729,
+   "videos": [
+    {
+     "id": "hhLnlTQFcNk",
+     "title": "Every Ship That Was the Biggest in the World, Explained",
+     "views": 152000,
+     "dur": 735,
+     "upload": "20261014",
+     "hours": 197,
+     "vph": 770,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "gKATA71hgtY",
+     "title": "Is This Amelia Earhart's Plane? The Shape in the Lagoon, Explained",
+     "views": 13000,
+     "dur": 838,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 168,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "5Mnr_GW9FOI",
+     "title": "Every Ship That Was the Fastest in the World, Explained",
+     "views": 1200,
+     "dur": 748,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 12,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ },
+ {
+  "video": {
+   "id": "O63gU42dQAs",
+   "title": "The WORLD‘S Broken Mega-Airports — Which One Shuts Down First?",
+   "views": 137572,
+   "dur": 1800,
+   "upload": "20261017",
+   "channel": "SIGNUM",
+   "channel_id": "UCYkV-5QfcPBwlIPH9HxjHig",
+   "subs": 25900,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCYkV-5QfcPBwlIPH9HxjHig",
+   "name": "SIGNUM",
+   "n": 15,
+   "median_views": 23000.0,
+   "med_vph_45d": 113.5,
+   "best_vph": 1350,
+   "med_dur": 2079.5,
+   "videos": [
+    {
+     "id": "O63gU42dQAs",
+     "title": "The WORLD‘S Broken Mega-Airports — Which One Shuts Down First?",
+     "views": 137000,
+     "dur": 1800,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 1350,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "KKN31GSuJUc",
+     "title": "4 Megaprojects Under Construction to Bypass the Strait of Malacca",
+     "views": 758000,
+     "dur": 1465,
+     "upload": "20260922",
+     "hours": 725,
+     "vph": 1045,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "hlo3FEryrFI",
+     "title": "Inside Stargate: America's $500 Billion Construction Machine",
+     "views": 70000,
+     "dur": 2144,
+     "upload": "20261008",
+     "hours": 341,
+     "vph": 205,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ },
+ {
+  "video": {
+   "id": "H9LincTauEU",
+   "title": "America’s New Windowless Plane Is Shaking The Entire Aviation Industry",
+   "views": 503038,
+   "dur": 1243,
+   "upload": "20261002",
+   "channel": "Innovation Core",
+   "channel_id": "UC1cYR-ev0etAbjWoOkbUeQA",
+   "subs": 22400,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UC1cYR-ev0etAbjWoOkbUeQA",
+   "name": "Innovation Core",
+   "n": 15,
+   "median_views": 5800,
+   "med_vph_45d": 19,
+   "best_vph": 232,
+   "med_dur": 1364,
+   "videos": [
+    {
+     "id": "aIxvDu9-uMI",
+     "title": "Elon Musk’s Flying Tesla Actually Works — And It’s Terrifying",
+     "views": 18000,
+     "dur": 1383,
+     "upload": "20261019",
+     "hours": 77,
+     "vph": 232,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "hZGVgQuK26E",
+     "title": "America’s New Terahertz Internet Is Shaking The Entire Telecom Industry",
+     "views": 8100,
+     "dur": 1327,
+     "upload": "20261018",
+     "hours": 101,
+     "vph": 80,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "5r5z5hKTJd0",
+     "title": "America's New Invention Could Replace AI Data Centers Forever — China Is Worried",
+     "views": 7200,
+     "dur": 1372,
+     "upload": "20261017",
+     "hours": 125,
+     "vph": 57,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ },
+ {
+  "video": {
+   "id": "3aQcZlj8XaM",
+   "title": "Honda's New Flagship Has Ended the Aviation Industry Forever!",
+   "views": 100447,
+   "dur": 1352,
+   "upload": "20261013",
+   "channel": "Polarisyn",
+   "channel_id": "UCKjxfSu21UEnTlxCnzczgmQ",
+   "subs": null,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCKjxfSu21UEnTlxCnzczgmQ",
+   "name": "Polarisyn",
+   "n": 15,
+   "median_views": 0,
+   "med_vph_45d": 0,
+   "best_vph": 0,
+   "med_dur": 0,
+   "videos": []
+  }
+ },
+ {
+  "video": {
+   "id": "P7zBuMusbi4",
+   "title": "They Released 23 Poisoned Cats on a Rat-Infested Island — What Happened Next Was Incredible",
+   "views": 3698,
+   "dur": 1262,
+   "upload": "20261021",
+   "channel": "Agriculture Flow",
+   "channel_id": "UCVs-LNzoAxEyONv8ueSJEWQ",
+   "subs": 57400,
+   "lang": null
+  },
+  "canal": {
+   "channel_id": "UCVs-LNzoAxEyONv8ueSJEWQ",
+   "name": "Agriculture Flow",
+   "n": 15,
+   "median_views": 12000,
+   "med_vph_45d": 86,
+   "best_vph": 340,
+   "med_dur": 1273,
+   "videos": [
+    {
+     "id": "NLFmRwxzfX4",
+     "title": "Instead of Planting Trees, Australia Pumped THIS Into the Desert —What Happened Next Was Incredible",
+     "views": 10000,
+     "dur": 1270,
+     "upload": "20261021",
+     "hours": 29,
+     "vph": 340,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "h4uKUQRUTqA",
+     "title": "Italy Released 5-Foot Monsters into the Blue Crab-Infested Waters — And the Result Was Immediate",
+     "views": 12000,
+     "dur": 1276,
+     "upload": "20261020",
+     "hours": 53,
+     "vph": 224,
+     "channel": null,
+     "channel_id": null
+    },
+    {
+     "id": "P7zBuMusbi4",
+     "title": "They Released 23 Poisoned Cats on a Rat-Infested Island — What Happened Next Was Incredible",
+     "views": 3600,
+     "dur": 1262,
+     "upload": "20261021",
+     "hours": 20,
+     "vph": 176,
+     "channel": null,
+     "channel_id": null
+    }
+   ]
+  }
+ }
+]

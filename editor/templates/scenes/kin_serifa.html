@@ -1,0 +1,27 @@
+<!--params {"texto":"Há coisas que dependem de nós.","tempos":"","autor":"","alinhar":"centro","tamanho":60,"cor":"#f4f1ea","cor_autor":"#e8b547"}-->
+<div id="{{id}}" class="kin-s" style="position:absolute;inset:0;pointer-events:none;display:flex;align-items:center">
+ <div class="kin-b" style="position:relative">
+  <div class="kin-t" style="font-family:'Cormorant',serif;font-style:italic;font-weight:500;line-height:1.14;text-shadow:0 3px 26px rgba(0,0,0,.95)"></div>
+  <div class="kin-a" style="margin-top:26px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:28px;letter-spacing:.32em;text-transform:uppercase"></div>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, root=document.querySelector("#{{id}}");
+  const b=root.querySelector(".kin-b"), t=root.querySelector(".kin-t"), a=root.querySelector(".kin-a");
+  const esq=P.alinhar==="esquerda";
+  if(esq){ b.style.marginLeft="90px"; b.style.width="640px"; b.style.textAlign="left"; } else { b.style.margin="0 140px"; b.style.width="1000px"; b.style.textAlign="center"; }
+  t.style.fontSize=(+P.tamanho||60)+"px"; t.style.color=P.cor||"#f4f1ea"; a.style.color=P.cor_autor||"#e8b547";
+  const words=String(P.texto||"").trim().split(/\s+/).filter(Boolean);
+  const ts=String(P.tempos||"").split(",").filter(x=>x!=="").map(Number);
+  const per=(D*0.7)/Math.max(1,words.length);
+  words.forEach((w,i)=>{ const sp=document.createElement("span"); sp.textContent=w+" "; sp.style.display="inline-block"; sp.style.whiteSpace="pre"; t.appendChild(sp);
+    const tt=S+(isFinite(ts[i])?ts[i]:0.2+i*per);
+    tl.fromTo(sp,{opacity:0,y:14,filter:"blur(10px)"},{opacity:1,y:0,filter:"blur(0px)",duration:.55,ease:"power2.out",immediateRender:true},tt);
+  });
+  if(P.autor){ a.textContent="— "+P.autor; const last=isFinite(ts[words.length-1])?ts[words.length-1]:0.2+(words.length-1)*per;
+    tl.fromTo(a,{opacity:0,letterSpacing:".5em"},{opacity:1,letterSpacing:".32em",duration:.9,ease:"power2.out",immediateRender:true},S+Math.min(last+.4,D-1)); }
+  else a.style.display="none";
+  tl.fromTo(b,{x:0},{x:esq?14:0,y:esq?0:-8,duration:D,ease:"none",immediateRender:true},S);
+  tl.to(b,{opacity:0,duration:Math.min(.5,D/5),ease:"power1.in"},S+D-Math.min(.5,D/5));
+})(window.__timelines.main, {{json}});
+</script>

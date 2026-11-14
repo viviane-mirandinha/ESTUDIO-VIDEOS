@@ -1,0 +1,9 @@
+lang=en dur=26.7 words=74 wpm=166
+[0.0] One follower equals one house. Welcome to Homie Town!
+[4.2] Okay, it's a little empty for a town.
+[6.7] Right now we've got one resident, an empty city council, and a few security guards.
+[11.6] To make it a real city, we're missing one thing.
+[14.7] You!
+[15.8] Every follower gets a house, with a street and a number.
+[19.3] The town grows every day, and the top-liked comment decides what we build tomorrow.
+[24.7] So, who's moving in first?

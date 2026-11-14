@@ -1,0 +1,24 @@
+<!--params {"texto":"VOCÊ NÃO CONTROLA","tempos":"0,0.2,0.44","destaque":"CONTROLA","efeito":"scale","tamanho":104,"cor":"#f4f1ea","cor_destaque":"#e8b547","y":360}-->
+<div id="{{id}}" class="kin-g" style="position:absolute;inset:0;pointer-events:none">
+ <div style="position:absolute;left:90px;right:90px;top:{{p.y}}px;transform:translateY(-50%)"><div class="kin-w" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;column-gap:.28em;row-gap:0;font-family:'Montserrat',sans-serif;font-weight:900;text-transform:uppercase;line-height:1.02;letter-spacing:-.01em;text-align:center;text-shadow:0 4px 30px rgba(0,0,0,.85)"></div></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, root=document.querySelector("#{{id}}"), box=root.querySelector(".kin-w");
+  const words=String(P.texto||"").trim().split(/\s+/).filter(Boolean);
+  const ts=String(P.tempos||"").split(",").map(Number);
+  const norm=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^\w]/g,"").toUpperCase();
+  const hl=String(P.destaque||"").split(",").map(x=>x.trim()).filter(Boolean).flatMap(x=>x.split(/\s+/)).map(norm);
+  const nch=words.join(" ").length; let sz=+P.tamanho||104;
+  if(nch>30) sz*=.62; else if(nch>22) sz*=.74; else if(nch>15) sz*=.88;
+  box.style.fontSize=Math.max(56,Math.round(sz))+"px";
+  const ef=P.efeito||"scale";
+  const from={scale:{opacity:0,scale:1.6,filter:"blur(0px)"},blur:{opacity:0,scale:1.08,filter:"blur(18px)"},slide:{opacity:0,y:60,filter:"blur(0px)"}}[ef]||{opacity:0};
+  words.forEach((w,i)=>{ const sp=document.createElement("span"); sp.textContent=w; sp.style.display="inline-block";
+    sp.style.color=hl.includes(norm(w))?(P.cor_destaque||"#e8b547"):(P.cor||"#f4f1ea"); box.appendChild(sp);
+    const t=S+(isFinite(ts[i])?ts[i]:i*0.3);
+    tl.fromTo(sp,from,{opacity:1,scale:1,y:0,filter:"blur(0px)",duration:ef==="blur"?.38:.28,ease:ef==="scale"?"expo.out":"power3.out",immediateRender:true},t);
+  });
+  tl.fromTo(box,{scale:1},{scale:1.05,duration:D,ease:"none",immediateRender:true},S);
+  tl.to(box,{opacity:0,filter:"blur(8px)",duration:Math.min(.22,D/4),ease:"power1.in"},S+D-Math.min(.22,D/4));
+})(window.__timelines.main, {{json}});
+</script>

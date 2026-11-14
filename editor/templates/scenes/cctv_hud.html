@@ -1,0 +1,20 @@
+<!--params {"cam":"CAM 02","local":"CORREDOR B","data":"14/03/2024","hora":"03:12:07","cor":"#e8101a"}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">{{p.cam}} · {{p.local}}</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:{{p.cor}}">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>{{p.data}}</span> <span class="clk"></span></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  const box=document.querySelector("#{{id}} .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#{{id}} .rec",{opacity:1},S+k); tl.set("#{{id}} .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,66 @@
+<!--params {"modo":"cliques","src":"","src1":"","src2":"","src3":"","rot1":"","rot2":"","rot3":"","rot4":"","t1":0.5,"t2":1.2,"t3":2.0,"t4":3.0,"titulo":"","t0":0.2}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#1452c8;font-family:Montserrat,Inter,Arial,sans-serif;color:#fff">
+ <div class="bg" style="position:absolute;inset:-3%;background:linear-gradient(rgba(255,255,255,.14) 2px,transparent 2px) 0 0/64px 64px,linear-gradient(90deg,rgba(255,255,255,.14) 2px,transparent 2px) 0 0/64px 64px,linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/16px 16px"></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,.08),rgba(0,0,30,.35) 100%)"></div>
+ <div class="stage" style="position:absolute;inset:0"></div>
+</div>
+<script>
+if(!window.IA29){window.IA29=(function(){
+ function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+ function drive(tl,S,D,fn){ const o={_t:0}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;fn(v)}}); tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:false},S); }
+ function cl(v){return Math.max(0,Math.min(1,v));}
+ function eo(v){v=cl(v);return 1-Math.pow(1-v,3);}
+ function wave(seed,n,w,h,cor){ const r=rng(seed); let s='<svg viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'"><g fill="'+cor+'">';
+   for(let i=0;i<n;i++){ const env=Math.sin(Math.PI*(i+.5)/n); const bh=Math.max(4,h*(.15+.85*env*r())); s+='<rect x="'+(i*w/n+1).toFixed(1)+'" y="'+((h-bh)/2).toFixed(1)+'" width="'+(w/n-3).toFixed(1)+'" height="'+bh.toFixed(1)+'" rx="2"/>'; }
+   return s+'</g></svg>'; }
+ function noiseCanvas(seed,w,h,amt){ const c=document.createElement("canvas"); c.width=w; c.height=h; const x=c.getContext("2d"), d=x.createImageData(w,h), r=rng(seed);
+   for(let i=0;i<d.data.length;i+=4){ const v=r()*255; d.data[i]=d.data[i+1]=d.data[i+2]=v; d.data[i+3]=amt; } x.putImageData(d,0,0); return c; }
+ return {rng,drive,cl,eo,wave,noiseCanvas};
+})();}
+
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}}, st=R.querySelector(".stage");
+  const esc=function(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+  const lbl="position:absolute;font-weight:900;text-transform:uppercase;white-space:nowrap;";
+  const pill="background:#fff;color:#1452c8;padding:8px 20px;border-radius:8px;";
+  tl.fromTo(R.querySelector(".bg"),{scale:1},{scale:1.05,duration:D,ease:"none",immediateRender:false},S);
+  if((P.modo||"cliques")==="cliques"){
+    let h='';
+    if(P.src) h+='<img class="wh" src="'+esc(P.src)+'" style="position:absolute;left:50%;top:40px;height:270px;transform:translateX(-50%);filter:drop-shadow(0 16px 24px rgba(0,0,40,.45))">';
+    const seq=[["s","s","l"],["l","s"],["s","l","l","s"]]; let x=150; const Y=440, g=[];
+    seq.forEach(function(grp,gi){ const x0=x; grp.forEach(function(k){ if(k==="s"){ h+='<div class="ck s" style="position:absolute;left:'+x+'px;top:'+(Y-18)+'px;width:36px;height:36px;border-radius:50%;background:#fff;box-shadow:0 0 18px #fff"></div>'; x+=60; }
+      else { h+='<div class="ck l" style="position:absolute;left:'+x+'px;top:'+(Y-18)+'px;width:110px;height:36px;border-radius:18px;background:#ffd23a;box-shadow:0 0 18px #ffd23a"></div>'; x+=134; } });
+      g.push([x0,x-24]); x+=70; });
+    const off=(W-(x-70)-150)/2; // centraliza
+    g.forEach(function(r,i){ h+='<div class="br" style="position:absolute;left:'+(r[0]-6)+'px;top:'+(Y+34)+'px;width:'+(r[1]-r[0]+12)+'px;height:22px;border:4px solid #fff;border-top:none;border-radius:0 0 10px 10px;opacity:0"></div>'; });
+    h+='<div class="r1" style="'+lbl+'left:150px;top:'+(Y-92)+'px;font-size:36px;opacity:0">'+esc(P.rot1)+'</div>';
+    h+='<div class="r2" style="'+lbl+'right:150px;top:'+(Y-92)+'px;font-size:36px;color:#ffd23a;opacity:0">'+esc(P.rot2)+'</div>';
+    h+='<div class="r3" style="'+lbl+'left:0;right:0;text-align:center;top:'+(Y+76)+'px;font-size:40px;opacity:0">'+esc(P.rot3)+'</div>';
+    h+='<div class="r4" style="'+lbl+'left:50%;top:'+(Y+140)+'px;font-size:52px;transform:translateX(-50%);'+pill+'opacity:0">'+esc(P.rot4)+'</div>';
+    st.innerHTML=h; st.style.left=off+"px";
+    const wh=st.querySelector(".wh"); if(wh){ wh.style.marginLeft=(-off)+"px"; tl.fromTo(wh,{opacity:0,y:30},{opacity:1,y:0,duration:.6,ease:"power3.out",immediateRender:false},S+.05); tl.to(wh,{y:-12,duration:D,ease:"sine.inOut"},S+.65); }
+    const t1=+P.t1,t2=+P.t2,t3=+P.t3,t4=+P.t4;
+    tl.fromTo(st.querySelectorAll(".ck.s"),{opacity:0,scale:.2},{opacity:1,scale:1,duration:.22,stagger:.07,ease:"back.out(2)",immediateRender:false},S+t1);
+    tl.fromTo(st.querySelectorAll(".ck.l"),{opacity:0,scaleX:.1},{opacity:1,scaleX:1,duration:.3,stagger:.09,ease:"power3.out",immediateRender:false},S+t2);
+    tl.fromTo(st.querySelector(".r1"),{opacity:0,y:15},{opacity:1,y:0,duration:.35,immediateRender:false},S+t1);
+    tl.fromTo(st.querySelector(".r2"),{opacity:0,y:15},{opacity:1,y:0,duration:.35,immediateRender:false},S+t2);
+    tl.fromTo(st.querySelectorAll(".br"),{opacity:0,y:-10},{opacity:1,y:0,duration:.35,stagger:.12,immediateRender:false},S+t3);
+    tl.fromTo(st.querySelector(".r3"),{opacity:0,y:15},{opacity:1,y:0,duration:.4,immediateRender:false},S+t3+.2);
+    tl.fromTo(st.querySelector(".r4"),{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"back.out(1.7)",immediateRender:false},S+t4);
+  } else {
+    const it=[[P.src1,P.rot1,+P.t1],[P.src2,P.rot2,+P.t2],[P.src3,P.rot3,+P.t3]].filter(function(a){return a[0];});
+    const n=it.length, cw=290, gap=(W-n*cw)/(n+1); let h='';
+    it.forEach(function(a,i){ const x=gap+i*(cw+gap);
+      h+='<div class="cc c'+i+'" style="position:absolute;left:'+x+'px;top:150px;width:'+cw+'px;height:'+cw+'px;border-radius:50%;background:#fff;padding:10px;box-sizing:border-box;box-shadow:0 18px 40px rgba(0,0,40,.4);opacity:0"><div style="width:100%;height:100%;border-radius:50%;background:url('+esc(a[0])+') center/cover"></div></div>';
+      h+='<div class="cl l'+i+'" style="'+lbl+'left:'+x+'px;width:'+cw+'px;text-align:center;top:465px;font-size:44px;opacity:0">'+esc(a[1])+'</div>'; });
+    h+='<div class="r4" style="'+lbl+'left:50%;top:580px;font-size:50px;transform:translateX(-50%);'+pill+'opacity:0">'+esc(P.rot4)+'</div>';
+    if(P.titulo) h+='<div class="tt" style="'+lbl+'left:0;right:0;text-align:center;top:44px;font-size:56px;opacity:0">'+esc(P.titulo)+'</div>';
+    st.innerHTML=h;
+    if(P.titulo) tl.fromTo(st.querySelector(".tt"),{opacity:0,y:20},{opacity:1,y:0,duration:.45,immediateRender:false},S+(+P.t0));
+    it.forEach(function(a,i){ tl.fromTo(st.querySelector(".c"+i),{opacity:0,scale:.6,y:30},{opacity:1,scale:1,y:0,duration:.45,ease:"back.out(1.6)",immediateRender:false},S+a[2]);
+      tl.fromTo(st.querySelector(".l"+i),{opacity:0,y:15},{opacity:1,y:0,duration:.35,immediateRender:false},S+a[2]+.15);
+      tl.to(st.querySelector(".c"+i),{y:-10,duration:Math.max(.5,D-a[2]-.5),ease:"sine.inOut"},S+a[2]+.5); });
+    if(P.rot4) tl.fromTo(st.querySelector(".r4"),{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"back.out(1.7)",immediateRender:false},S+(+P.t4));
+  }
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {{json}});
+</script>

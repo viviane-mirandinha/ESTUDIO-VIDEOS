@@ -1,0 +1,30 @@
+{
+  "name": "hw-write-title",
+  "titulo": "Título escrito à mão",
+  "categoria": "Título",
+  "descricao": "O título é escrito com caneta na tela, traço a traço.",
+  "title_en": "Handwritten Write-On Title",
+  "description_en": "True glyph write-on: filled Caveat letterforms revealed by baked per-glyph centerline strokes traced in real stroke order with a curvature-adaptive pen-velocity ease (fast on straights, slow into curves, inter-stroke pen lifts); optional squiggle underline; boils",
+  "duration": 6,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "handwritten",
+    "typography",
+    "title-card",
+    "write-on",
+    "overlay"
+  ],
+  "variables": [],
+  "files": [
+    "hw-write-title.html",
+    "assets/baked/caveat-pen.js",
+    "assets/fonts/Caveat-700-latin.woff2"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/hw-write-title",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "write it on"
+  ]
+}

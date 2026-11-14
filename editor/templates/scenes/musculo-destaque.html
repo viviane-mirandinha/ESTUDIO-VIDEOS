@@ -1,0 +1,29 @@
+<!--params {"img":"","mascara":"","zoom":0.04,"rotulos":[{"t":"Bíceps","x":600,"y":300,"lx":380,"ly":220}],"tam":32}-->
+<div id="{{id}}" class="md" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <div class="zm" style="position:absolute;inset:0;transform-origin:50% 42%">
+  <img class="b" src="{{p.img}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain">
+  <img class="m" src="{{p.mascara}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0">
+  <svg class="lb" viewBox="0 0 1280 720" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"></svg>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", NS="http://www.w3.org/2000/svg";
+  const root=document.querySelector(id), svg=root.querySelector(".lb");
+  tl.fromTo(id+" .zm",{scale:1},{scale:1+(+P.zoom||0),duration:D,ease:"none",immediateRender:true},S);
+  // mascara colorida do musculo (overlay nosso) entra e pulsa
+  tl.fromTo(id+" .m",{opacity:0},{opacity:1,duration:.45,ease:"sine.out",immediateRender:true},S+.25);
+  const per=.5, n=Math.max(0,Math.floor((D-1.0)/per)); if(n>0) tl.to(id+" .m",{opacity:.5,duration:per,repeat:n-1,yoyo:true,ease:"sine.inOut"},S+.75);
+  let R=P.rotulos||[]; if(typeof R==="string"){try{R=JSON.parse(R)}catch(e){R=[]}}
+  R.forEach((r,i)=>{ const t0=S+.55+i*.3, esq=r.lx<r.x;
+    const ln=document.createElementNS(NS,"line"); ["x1","x2"].forEach(k=>ln.setAttribute(k,r.x)); ["y1","y2"].forEach(k=>ln.setAttribute(k,r.y));
+    ln.setAttribute("stroke","#ffffff"); ln.setAttribute("stroke-width","2.5"); ln.setAttribute("stroke-dasharray","7 6"); svg.appendChild(ln);
+    const dot=document.createElementNS(NS,"circle"); dot.setAttribute("cx",r.x); dot.setAttribute("cy",r.y); dot.setAttribute("r","6"); dot.setAttribute("fill","#ffffff"); dot.setAttribute("opacity","0"); svg.appendChild(dot);
+    const tx=document.createElementNS(NS,"text"); tx.textContent=r.t; tx.setAttribute("x",esq?r.lx-14:r.lx+14); tx.setAttribute("y",r.ly+11);
+    tx.setAttribute("text-anchor",esq?"end":"start"); tx.setAttribute("fill","#ffffff"); tx.setAttribute("font-family","Inter, sans-serif"); tx.setAttribute("font-weight","400");
+    tx.setAttribute("font-size",+P.tam||32); tx.setAttribute("opacity","0"); tx.setAttribute("style","paint-order:stroke;stroke:#000;stroke-width:6px"); svg.appendChild(tx);
+    tl.fromTo(dot,{attr:{opacity:0}},{attr:{opacity:1},duration:.2,immediateRender:true},t0);
+    tl.fromTo(ln,{attr:{x2:r.x,y2:r.y}},{attr:{x2:r.lx,y2:r.ly},duration:.4,ease:"power2.out",immediateRender:true},t0);
+    tl.fromTo(tx,{attr:{opacity:0}},{attr:{opacity:1},duration:.3,immediateRender:true},t0+.35);
+  });
+})(window.__timelines.main, {{json}});
+</script>

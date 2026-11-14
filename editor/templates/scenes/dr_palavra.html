@@ -1,0 +1,17 @@
+<!--params {"rotulo":"","t_rot":0,"y":820,"zoom":1.04,"linhas":[{"txt":"PALAVRA","cor":"#F5C518","tam":220,"t":0}]}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Oswald,Inter,sans-serif;text-align:center">
+<div class="pw" style="position:absolute;left:30px;right:30px;top:0;display:flex;flex-direction:column;align-items:center"></div></div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+const box=document.querySelector(id+" .pw"); let H=0; const els=[];
+if(P.rotulo){const r=document.createElement("div");r.textContent=P.rotulo;r.style.cssText="font:600 44px/1.2 Inter,Arial,sans-serif;color:#d6d6da;text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;white-space:nowrap";box.appendChild(r);H+=65;els.push([r,P.t_rot||S+.1]);}
+(P.linhas||[]).forEach(l=>{const t=String(l.txt||"");const tam=Math.min(l.tam||200,1000/Math.max(1,t.length*.5));
+ const d=document.createElement("div");d.textContent=t;
+ d.style.cssText=`font-family:Oswald,Inter,sans-serif;font-weight:700;font-size:${tam}px;line-height:1.04;color:${l.cor||"#fff"};white-space:nowrap;text-transform:uppercase;text-shadow:0 6px 30px rgba(0,0,0,.6)`;
+ box.appendChild(d);H+=tam*1.04;els.push([d,l.t||S+.1]);});
+box.style.top=((P.y||820)-H/2)+"px";
+els.forEach(([e,t])=>{tl.fromTo(e,{opacity:0,y:40,scale:.9},{opacity:1,y:0,scale:1,duration:.4,ease:"power3.out",immediateRender:false},Math.max(S,t-.05));tl.set(e,{opacity:0},0);});
+tl.fromTo(box,{scale:1},{scale:P.zoom||1.04,duration:Math.max(.3,D),ease:"none",immediateRender:false},S);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.2,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.2},S+D-.2);
+})(window.__timelines.main, {{json}});
+</script>

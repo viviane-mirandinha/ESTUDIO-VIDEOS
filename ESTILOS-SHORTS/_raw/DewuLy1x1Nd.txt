@@ -1,0 +1,24 @@
+lang=pt dur=82.5 words=221 wpm=161
+[0.0] Os Estados Unidos tem mais armas do que gente, e quem mata mais é o Brasil.
+[5.4] Lá são cerca de 120 armas para cada 100 pessoas, aqui umas 8.
+[10.3] Mesmo assim, o Brasil tem mais de 3 vezes mais assassinatos por habitante.
+[14.8] 19 para cada 100 mil pessoas, contra uns 6 nos Estados Unidos.
+[19.2] Então, arma não é o problema? Calma.
+[21.7] Nos Estados Unidos, mais de 44 mil pessoas morrem de tiro por ano.
+[26.2] Só que 6 em cada 10 dessas mortes são suicídios.
+[29.4] E aqui, 7 em cada 10 assassinatos são com arma de fogo.
+[33.6] Agora vem a parte que divide o país.
+[36.0] Em 2003, o Estatuto do Desarmamento apertou as regras.
+[39.6] Em 2005, num referendo, 64% votaram para continuar vendendo armas.
+[44.9] Entre 2018 e 2022, as armas de caçadores, atiradores e colecionadores
+[50.2] quase triplicaram e passaram de 1 milhão.
+[53.1] E no mesmo período, os assassinatos caíram.
+[55.6] Em 2023, as regras voltaram a apertar.
+[58.5] E os assassinatos continuaram caindo, até o menor nível em mais de 10 anos.
+[63.6] Quem defende arma diz, viu? Mais armas, menos mortes.
+[67.3] Quem é contra, responde.
+[68.6] A queda tem outros motivos, e caiu também com menos armas.
+[72.3] Os dois lados usam os mesmos números.
+[75.1] E você, o que acha?
+[76.5] Mais armas deixam o país mais seguro ou menos?
+[79.5] Comenta, arma sim ou arma não?

@@ -1,0 +1,13 @@
+<!--params {"forca":0.14,"passo":0.08}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+ <div class="fl" style="position:absolute;inset:0;background:#000;opacity:0"></div>
+ <div class="ln" style="position:absolute;left:0;right:0;height:3px;background:rgba(220,230,255,.10);top:-10px"></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, R="#{{id}}", f=+P.forca||.14, st=+P.passo||.08;
+  for(let k=0;k*st<D;k++){ const a=Math.sin(k*12.9898+3.1)*43758.5453, v=a-Math.floor(a);
+    tl.set(R+" .fl",{opacity:(v>.96? f*2.2 : v*f)},S+k*st); }
+  for(let k=0;k*6<D;k++){ tl.fromTo(R+" .ln",{top:-10},{top:{{H}}+10,duration:1.4,ease:"none",immediateRender:false},S+k*6+2.5); }
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,36 @@
+{
+  "name": "data-chart",
+  "titulo": "Gráfico de barras e linha",
+  "categoria": "Gráfico",
+  "descricao": "Gráfico com barras subindo, linha e legenda.",
+  "title_en": "Data Chart",
+  "description_en": "Animated bar + line chart with staggered reveal, NYT-style typography, and value labels",
+  "duration": 15,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "data",
+    "chart",
+    "statistics"
+  ],
+  "variables": [],
+  "files": [
+    "data-chart.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/data-chart",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Monthly Revenue vs. Conversion Rate",
+    "Jan–Jun 2024, in thousands",
+    "Revenue",
+    "Conversion Rate",
+    "Source: Internal analytics",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun"
+  ]
+}

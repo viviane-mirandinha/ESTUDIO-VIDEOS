@@ -1,0 +1,36 @@
+<!--params {"titulo":"ELETROCARDIOGRAMA","sub":"ECG · atividade elétrica do coração","cor":"#5bc0eb","cor_alerta":"#e3342f","extras":[3,6],"t_alerta":3.5,"varredura":4.5,"fundo":"#0d0e11"}-->
+<div id="{{id}}" class="eg" style="position:absolute;inset:0;background:{{p.fundo}};overflow:hidden;font-family:Oswald,Inter,sans-serif">
+  <svg class="eg-svg" width="{{W}}" height="{{H}}" viewBox="0 0 1280 720"></svg>
+  <div class="eg-h"><div class="eg-t">{{p.titulo}}</div><div class="eg-s">{{p.sub}}</div></div>
+</div>
+<style>
+#{{id}} .eg-svg{position:absolute;inset:0}
+#{{id}} .eg-h{position:absolute;left:70px;top:44px}
+#{{id}} .eg-t{font-weight:700;font-size:60px;color:#fff;letter-spacing:.01em}
+#{{id}} .eg-s{font:500 28px Inter,sans-serif;color:#8d909a;margin-top:2px}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}; const NS="http://www.w3.org/2000/svg";
+  const svg=document.querySelector("#{{id}} .eg-svg"); const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e;};
+  for(let x=0;x<=1280;x+=32) el("line",{x1:x,y1:0,x2:x,y2:720,stroke:x%160==0?"#2a1c1f":"#1a1416","stroke-width":x%160==0?2:1});
+  for(let y=0;y<=720;y+=32) el("line",{x1:0,y1:y,x2:1280,y2:y,stroke:y%160==0?"#2a1c1f":"#1a1416","stroke-width":y%160==0?2:1});
+  const B=430, ext=P.extras||[]; let pts=[[0,B]], x=20; const marks=[];
+  for(let i=0;i<9;i++){
+    if(ext.indexOf(i)>=0){ // extrassistole ventricular: precoce, larga, sem P
+      x-=26; pts.push([x,B],[x+10,B+8],[x+26,B-210],[x+46,B+120],[x+66,B+10],[x+84,B],[x+104,B+40],[x+134,B+50],[x+160,B]); marks.push(x+40); x+=200;
+    } else { // bloqueio de ramo direito: QRS alargado em M (rsR')
+      pts.push([x,B],[x+10,B-18],[x+22,B],[x+34,B],[x+40,B+14],[x+48,B-110],[x+56,B-20],[x+64,B-150],[x+74,B+30],[x+82,B],[x+104,B],[x+120,B-34],[x+138,B],[x+158,B]); x+=158;
+    }
+  }
+  pts.push([1300,B]);
+  const path=el("path",{d:"M"+pts.map(p=>p.join(",")).join(" L"),fill:"none",stroke:P.cor,"stroke-width":5,"stroke-linejoin":"round","stroke-linecap":"round",style:"filter:drop-shadow(0 0 8px "+P.cor+")"});
+  const L=path.getTotalLength(); path.style.strokeDasharray=L; path.style.strokeDashoffset=L;
+  const rings=marks.map(mx=>el("ellipse",{cx:mx,cy:B-40,rx:70,ry:190,fill:"none",stroke:P.cor_alerta,"stroke-width":5,opacity:0}));
+  tl.set(path,{strokeDashoffset:L},0);
+  tl.fromTo(path,{strokeDashoffset:L},{strokeDashoffset:0,duration:+P.varredura||D*.7,ease:"none",immediateRender:false},S+.1);
+  tl.set("#{{id}} .eg-t,#{{id}} .eg-s",{opacity:0},0);
+  tl.fromTo("#{{id}} .eg-t",{opacity:0,y:-20},{opacity:1,y:0,duration:.45,immediateRender:false},S+.05);
+  tl.fromTo("#{{id}} .eg-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.35);
+  rings.forEach((r,i)=>{ tl.set(r,{opacity:0},0); tl.fromTo(r,{opacity:0,scale:.6,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:.4,ease:"power2.out",immediateRender:false},S+(+P.t_alerta||2)+i*.25); });
+})(window.__timelines.main, {{json}});
+</script>

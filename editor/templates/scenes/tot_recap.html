@@ -1,0 +1,19 @@
+<!--params {"titulo":"Seu setup ideal","sub":"montado","cor":"#c8102e","stagger":0.07,"i01":"","i02":"","i03":"","i04":"","i05":"","i06":"","i07":"","i08":"","i09":"","i10":"","i11":"","i12":"","i13":"","i14":"","i15":"","i16":"","i17":"","i18":"","i19":""}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+  <div class="hd" style="position:absolute;left:0;right:0;top:34px;text-align:center;font-family:GeorgiaBI,Georgia,serif;font-style:italic;font-weight:700;font-size:66px;color:{{p.cor}}">{{p.titulo}} <span style="font-family:Montserrat,Arial;font-style:normal;font-size:50px;color:#1d1d1f">{{p.sub}}</span></div>
+  <div class="gr" style="position:absolute;left:0;right:0;top:140px"></div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const root=document.querySelector(id), gr=document.querySelector(id+" .gr");
+  const imgs=[]; for(let i=1;i<=19;i++){ const v=P["i"+String(i).padStart(2,"0")]; if(v) imgs.push(v); }
+  const rows=[7,6,6], sz=118, gap=18; let k=0, cards=[];
+  rows.forEach((n,r)=>{ const w=n*sz+(n-1)*gap, x0=(1280-w)/2;
+    for(let c=0;c<n&&k<imgs.length;c++,k++){ const d=document.createElement("div");
+      d.style.cssText=`position:absolute;left:${x0+c*(sz+gap)}px;top:${r*(sz+gap)}px;width:${sz}px;height:${sz}px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 18px rgba(80,40,30,.18);border:4px solid #fff`;
+      d.innerHTML=`<img src="${imgs[k]}" style="width:100%;height:100%;object-fit:cover;display:block">`; gr.appendChild(d); cards.push(d);} });
+  tl.set(root,{opacity:0},0); tl.set(root,{opacity:1},S);
+  tl.fromTo(id+" .hd",{opacity:0,y:-20},{opacity:1,y:0,duration:.4,ease:"power2.out",immediateRender:false},S);
+  cards.forEach((d,i)=>tl.fromTo(d,{opacity:0,y:30,scale:.8},{opacity:1,y:0,scale:1,duration:.35,ease:"back.out(1.6)",immediateRender:false},S+.2+i*(P.stagger||.07)));
+})(window.__timelines.main, {{json}});
+</script>

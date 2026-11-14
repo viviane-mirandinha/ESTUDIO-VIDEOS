@@ -1,0 +1,28 @@
+{
+  "name": "lt-clean-bar",
+  "titulo": "Nome na tela — barra branca",
+  "categoria": "Lower third",
+  "descricao": "Cartão branco com faixa colorida: nome + função entram deslizando.",
+  "title_en": "Lower Third — Clean Bar",
+  "description_en": "Minimal white-card lower third for podcasts/interviews: accent tab, name + role, clip-wipe entrance",
+  "duration": 4.8,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "lower-third",
+    "overlay",
+    "podcast",
+    "interview"
+  ],
+  "variables": [],
+  "files": [
+    "lt-clean-bar.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/lt-clean-bar",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Dr. Maya Chen",
+    "Host · Neuroscientist"
+  ]
+}

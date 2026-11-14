@@ -1,0 +1,15 @@
+<!--params {"titulo":"CAPÍTULO","sub":"","fade":1.5}-->
+<div id="{{id}}" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 60%)">
+ <div class="t" style="font-family:'Cormorant',serif;font-weight:400;font-size:68px;letter-spacing:.2em;text-transform:uppercase;color:#f3efe6;text-align:center;max-width:1160px;line-height:1.15;text-shadow:0 2px 24px rgba(0,0,0,.85)">{{p.titulo}}</div>
+ <div class="ln" style="width:220px;height:1px;background:rgba(232,210,160,.8);margin:22px 0 18px"></div>
+ <div class="s" style="font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:.08em;color:#e8d2a0;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.9)">{{p.sub}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", F=Math.min(+P.fade||1.5,D/3);
+  if(!P.sub){document.querySelector(id+" .s").style.display="none";}
+  tl.fromTo(id+" .t",{opacity:0,letterSpacing:"0.32em"},{opacity:1,letterSpacing:"0.2em",duration:F+1,ease:"power2.out",immediateRender:true},S);
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:F,ease:"power2.inOut",immediateRender:true},S+.4);
+  tl.fromTo(id+" .s",{opacity:0,y:10},{opacity:1,y:0,duration:F,ease:"power2.out",immediateRender:true},S+.7);
+  tl.to(id,{opacity:0,duration:Math.min(1,F),ease:"sine.in"},S+D-Math.min(1,F));
+})(window.__timelines.main, {{json}});
+</script>

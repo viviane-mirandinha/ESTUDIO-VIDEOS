@@ -1,0 +1,25 @@
+<!--params {"titulo":"Título","fonte":"Fonte: —","labels":["A","B"],"valores":[10,5],"fmt":"%","cor":"#d8c34a","cor_base":"#3f6f80","destaque":0,"nota":"","t_nota":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,#1a2026 0%,#0b0e12 70%);font-family:Inter,Arial,sans-serif;color:#fff">
+  <div class="hd" style="position:absolute;left:70px;top:44px;font-size:38px;font-weight:800">{{p.titulo}}</div>
+  <div class="bars" style="position:absolute;left:150px;right:150px;top:190px;bottom:110px;display:flex;align-items:flex-end;gap:46px;border-bottom:2px solid rgba(255,255,255,.3)"></div>
+  <div class="nota" style="position:absolute;font-family:'Barlow Condensed',Inter;font-size:40px;font-weight:700;color:#0d0d0d;background:#d8c34a;padding:4px 18px">{{p.nota}}</div>
+  <div style="position:absolute;left:70px;bottom:22px;font-size:14px;color:#8a9097">{{p.fonte}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  const box=document.querySelector(id+" .bars"), mx=Math.max(...P.valores), H=420;
+  P.valores.forEach((v,i)=>{const c=document.createElement("div");c.style.cssText="flex:1;position:relative;height:100%;display:flex;align-items:flex-end";
+    const b=document.createElement("div");b.style.cssText="width:100%;height:"+Math.max(3,H*v/mx)+"px;transform-origin:50% 100%;background:"+(i===P.destaque?P.cor:P.cor_base);
+    const val=document.createElement("div");val.style.cssText="position:absolute;left:0;right:0;bottom:"+(Math.max(3,H*v/mx)+10)+"px;text-align:center;font-family:'Barlow Condensed',Inter;font-weight:700;font-size:40px";
+    val.textContent=v.toLocaleString("pt-BR")+P.fmt;
+    const lb=document.createElement("div");lb.style.cssText="position:absolute;left:0;right:0;bottom:-40px;text-align:center;font-size:22px;color:#c9cdd2";lb.textContent=P.labels[i];
+    c.append(b,val,lb);box.appendChild(c);
+    const t=S+.5+i*.35; tl.fromTo(b,{scaleY:0},{scaleY:1,duration:.6,ease:"power3.out",immediateRender:false},t); tl.set(b,{scaleY:0},0);
+    tl.fromTo(val,{opacity:0,y:10},{opacity:1,y:0,duration:.3,immediateRender:false},t+.4); tl.set(val,{opacity:0},0);});
+  const nt=document.querySelector(id+" .nota"), col=box.children[P.destaque];
+  nt.style.left=(150+col.offsetLeft+col.offsetWidth+16)+"px"; nt.style.top="300px";
+  tl.fromTo(nt,{opacity:0,x:-20},{opacity:1,x:0,duration:.4,immediateRender:false},P.t_nota||S+1.5); tl.set(nt,{opacity:0},0);
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S); tl.set(id,{opacity:0},0);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,32 @@
+<!--params {"rotulo":"","valor":"0","unidade":"","sub":"","foto":"","ini":"","icone":"","t_valor":0,"t_sub":0,"t_rot":0,"tam":280,"cor":"#F5C518"}-->
+<div id="{{id}}" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">{{p.rotulo}}</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:{{p.cor}}"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:{{p.cor}};text-transform:uppercase">{{p.unidade}}</div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">{{p.sub}}</div></div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

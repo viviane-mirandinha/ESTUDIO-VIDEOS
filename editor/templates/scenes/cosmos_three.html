@@ -1,0 +1,85 @@
+<!--params {"modo":"voo","seed":1,"nome":"","sub":"","credito":"","fade_in":1.0,"fade_out":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="{{W}}" height="{{H}}" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">{{p.nome}}</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">{{p.sub}}</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300">{{p.credito}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", R=document.querySelector(id), W={{W}}, H={{H}};
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {{json}});
+</script>

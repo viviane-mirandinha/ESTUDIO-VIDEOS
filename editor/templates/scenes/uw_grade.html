@@ -1,0 +1,20 @@
+<!--params {"n":138,"destaque":91,"titulo":"138","sub":"PICOS VOLCÁNICOS BAJO EL HIELO","sub2":"91 DESCONOCIDOS HASTA 2017","por_linha":23}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#16263b,#0b1420 75%)">
+ <div style="position:absolute;top:56px;left:0;right:0;text-align:center">
+  <div class="t" style="font:900 88px/1 'Montserrat',sans-serif;color:#f5c518">{{p.titulo}}</div>
+  <div class="s" style="font:800 30px 'Montserrat',sans-serif;color:#fff;margin-top:10px;text-transform:uppercase;letter-spacing:.04em">{{p.sub}}</div>
+ </div>
+ <div class="gr" style="position:absolute;left:50%;top:250px;transform:translateX(-50%);display:grid;gap:10px 12px"></div>
+ <div class="s2" style="position:absolute;bottom:48px;left:0;right:0;text-align:center;font:800 30px 'Montserrat',sans-serif;color:#ff8a3d;text-transform:uppercase">{{p.sub2}}</div>
+</div>
+<script>
+(function(tl,P){const S={{start}},D={{dur}},id="#{{id}}",R=document.querySelector(id),G=R.querySelector(".gr");
+ const n=+P.n||100, h=+P.destaque||0, pl=+P.por_linha||20; G.style.gridTemplateColumns=`repeat(${pl},32px)`; if(!P.sub2) R.querySelector(".s2").style.display="none";
+ const it=[]; for(let i=0;i<n;i++){ const d=document.createElement("div"); d.style.cssText="width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:30px solid #dfe8f2"; G.appendChild(d); it.push(d); }
+ tl.fromTo(id,{opacity:0},{opacity:1,duration:.3,immediateRender:true},S);
+ tl.fromTo(id+" .t",{opacity:0,scale:.8},{opacity:1,scale:1,duration:.6,immediateRender:true},S+.1); tl.fromTo(id+" .s",{opacity:0},{opacity:1,duration:.5,immediateRender:true},S+.4);
+ tl.fromTo(it,{opacity:0,y:10},{opacity:1,y:0,duration:.25,stagger:Math.min(.012,(D*.4)/n),immediateRender:true},S+.5);
+ if(h>0){ const hs=it.slice(n-h); tl.to(hs,{borderBottomColor:"#ff7a2e",duration:.3,stagger:.006},S+Math.min(D*.55,3)); tl.fromTo(id+" .s2",{opacity:0},{opacity:1,duration:.5,immediateRender:true},S+Math.min(D*.55,3)+.3); }
+ tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main,{{json}});
+</script>

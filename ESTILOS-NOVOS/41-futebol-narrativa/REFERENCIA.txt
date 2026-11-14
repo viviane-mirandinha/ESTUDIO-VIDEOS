@@ -1,0 +1,9 @@
+Estilo 41 - FUTEBOL NARRATIVA
+Referência principal: Tifo Football by The Athletic
+  Canal: https://www.youtube.com/@Tifo
+  Vídeo: The Rise & Fall of Ronaldinho - https://www.youtube.com/watch?v=B7zPPImyTxI (videoId B7zPPImyTxI, ~1,24 mi views)
+Referência secundária: Number 9
+  Canal: https://www.youtube.com/@Number9nine
+  Vídeo: The Magician Who Brought Street Football to the World's Biggest Stadiums - https://www.youtube.com/watch?v=ifodIYxyUtg (videoId ifodIYxyUtg, ~3,55 mi views)
+Trechos analisados: VIDEOS-NOVOS\41-futebol-narrativa\ref\ref.mp4 (+ ref_sheet.jpg / ref_sheet2.jpg / ESTILO-MEDIDO.md)
+Busca: yt-dlp "ytsearch15:football story documentary player career" e "ytsearch15:the rise and fall of footballer"

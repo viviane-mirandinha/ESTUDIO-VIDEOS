@@ -1,0 +1,39 @@
+<!--params {"titulo":"Título do gráfico","fonte":"Fonte: —","xlabels":["A","B","C"],"ymin":0,"ymax":100,"yfmt":"","series":[{"nome":"Série","cor":"#d8c34a","valores":[10,50,90]}],"etapas":[[1,1]],"marcas":[]}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,#1a2026 0%,#0b0e12 70%);font-family:Inter,Arial,sans-serif;color:#fff">
+  <div class="hd" style="position:absolute;left:70px;top:44px">
+    <div style="font-size:38px;font-weight:800;letter-spacing:-.01em">{{p.titulo}}</div>
+    <div class="lg" style="font-size:17px;color:#c9cdd2;margin-top:8px"></div>
+  </div>
+  <svg class="ch" width="1280" height="720" style="position:absolute;inset:0"></svg>
+  <div style="position:absolute;left:70px;bottom:22px;font-size:14px;color:#8a9097">{{p.fonte}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", NS="http://www.w3.org/2000/svg";
+  const svg=document.querySelector(id+" .ch"), X0=130, X1=1170, Y0=620, Y1=180, n=P.xlabels.length;
+  const mk=(t,a,par)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||svg).appendChild(e);return e;};
+  const xs=i=>X0+(X1-X0)*i/(n-1), ys=v=>Y0-(Y0-Y1)*(v-P.ymin)/(P.ymax-P.ymin);
+  const defs=mk("defs",{}); const cp=mk("clipPath",{id:"{{id}}_cp"},defs); const cr=mk("rect",{x:0,y:0,width:X0,height:720},cp);
+  for(let k=0;k<=4;k++){const v=P.ymin+(P.ymax-P.ymin)*k/4,y=ys(v);mk("line",{x1:X0,x2:X1,y1:y,y2:y,stroke:"#ffffff",opacity:k?0.09:0.3});
+    const t=mk("text",{x:X0-14,y:y+5,fill:"#8a9097","font-size":15,"text-anchor":"end"});t.textContent=(Math.round(v*10)/10).toLocaleString("pt-BR")+(P.yfmt||"");}
+  P.xlabels.forEach((l,i)=>{const t=mk("text",{x:xs(i),y:Y0+30,fill:"#8a9097","font-size":15,"text-anchor":"middle"});t.textContent=l;});
+  const lg=document.querySelector(id+" .lg"), g=mk("g",{"clip-path":"url(#{{id}}_cp)"});
+  P.series.forEach((s,si)=>{
+    lg.innerHTML+='<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:'+s.cor+';margin:0 7px 0 '+(si?18:0)+'px"></span>'+s.nome;
+    const pts=s.valores.map((v,i)=>[xs(i),ys(v)]), d="M"+pts.map(p=>p.join(",")).join(" L");
+    const gr=mk("linearGradient",{id:"{{id}}_g"+si,x1:0,y1:0,x2:0,y2:1},defs); mk("stop",{offset:"0","stop-color":s.cor,"stop-opacity":.38},gr); mk("stop",{offset:"1","stop-color":s.cor,"stop-opacity":0},gr);
+    mk("path",{d:d+" L"+X1+","+Y0+" L"+X0+","+Y0+" Z",fill:"url(#{{id}}_g"+si+")"},g);
+    mk("path",{d:d,fill:"none",stroke:s.cor,"stroke-width":4,"stroke-linejoin":"round","stroke-linecap":"round"},g);
+  });
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S); tl.set(id,{opacity:0},0);
+  tl.fromTo(id+" .hd",{opacity:0,y:-16},{opacity:1,y:0,duration:.5,immediateRender:false},S+.15); tl.set(id+" .hd",{opacity:0},0);
+  let prev=S+.4; tl.set(cr,{attr:{width:X0}},0);
+  P.etapas.forEach(([t,f])=>{const ta=Math.max(prev+.3,t);tl.to(cr,{attr:{width:X0+(X1-X0)*f+8},duration:ta-prev,ease:"power1.inOut"},prev);prev=ta;});
+  (P.marcas||[]).forEach(m=>{const s=P.series[m.serie||0],x=xs(m.i),y=ys(s.valores[m.i]);
+    const c=mk("circle",{cx:x,cy:y,r:8,fill:"#0b0e12",stroke:s.cor,"stroke-width":4});
+    const w=m.texto.length*13+28, bx=Math.min(Math.max(x-w/2,X0),X1-w), by=y+(m.baixo?22:-62);
+    const r=mk("rect",{x:bx,y:by,width:w,height:40,rx:6,fill:s.cor});
+    const t=mk("text",{x:bx+w/2,y:by+27,"font-size":22,"font-weight":800,fill:"#121212","text-anchor":"middle"});t.textContent=m.texto;
+    [c,r,t].forEach(e=>{tl.fromTo(e,{opacity:0},{opacity:1,duration:.3,immediateRender:false},m.t);tl.set(e,{opacity:0},0);});});
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {{json}});
+</script>

@@ -1,0 +1,28 @@
+lang=pt dur=78.1 words=228 wpm=175
+[0.0] Se a sirene de ataque nuclear tocar, não pegue o carro.
+[3.3] Você tem uns 15 minutos, e eles valem mais do que qualquer estrada.
+[7.0] Mas só se você souber exatamente pra onde correr.
+[10.2] O alerta chega no celular de Rafa às 6h40 da tarde.
+[13.6] Em 10 minutos, a avenida inteira está parada.
+[16.6] E um carro parado é só uma caixa de lata debaixo da chuva radioativa.
+[20.7] Rafa corre pro quintal.
+[22.2] Embaixo da grama tem um bunker que o avô dele construiu em 1982.
+[26.1] No caminho, ele olha por cima do muro.
+[28.9] A luz do quarto da vizinha está acesa.
+[31.1] Ele nunca teve coragem de falar com ela.
+[33.2] Por um segundo, ele pensa em pular aquele muro.
+[36.1] Então vem o clarão.
+[37.5] Não olhe. Conte.
+[39.0] A luz chega na hora. O estrondo vem depois.
+[41.9] Cada 3 segundos de silêncio é 1km de distância.
+[45.5] Rafa conta 31, 10km.
+[47.9] Ele fecha a escotilha e gira as travas.
+[50.2] A poeira começa a cair em uns 20 minutos, mas ela tem uma regra.
+[53.6] Depois de 7 horas, a radiação cai 10 vezes.
+[56.9] Depois de 2 dias, 100 vezes.
+[59.1] Então, ele não pode sair por pelo menos 14 dias.
+[62.6] No papel, Rafa tem água e comida pra 16 dias. Só pra ele.
+[66.6] Só havia um problema.
+[68.1] Às 11 da noite, alguém bateu na escotilha.
+[70.8] 3 vezes.
+[71.9] E lá fora, o medidor marcava a radiação letal.

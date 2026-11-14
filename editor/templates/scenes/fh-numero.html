@@ -1,0 +1,23 @@
+<!--params {"numero":"97","texto":"torcedores do Liverpool morreram","sub":"","t_texto":0.6,"t_sub":2.0,"bg":"","bg_opacidade":0.22}-->
+<div id="{{id}}" style="position:absolute;inset:0;background:#000;overflow:hidden;font-family:'Playfair Display','EB Garamond',Georgia,'Times New Roman',serif;color:#f2ede4;text-align:center">
+  <div class="bgimg" style="position:absolute;inset:-4%;background:url('{{p.bg}}') center/cover no-repeat;filter:grayscale(1) blur(3px);opacity:{{p.bg_opacidade}}"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 0%,rgba(0,0,0,.85) 80%)"></div>
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+    <div class="num" style="font-size:210px;line-height:1;font-weight:400">{{p.numero}}</div>
+    <div class="rule" style="width:0;height:1px;background:#b9ad98;margin:18px 0 24px"></div>
+    <div class="tx" style="font-size:46px;font-style:italic;max-width:1100px;line-height:1.25">{{p.texto}}</div>
+    <div class="sb" style="font-size:30px;color:#b9ad98;margin-top:16px;max-width:1100px">{{p.sub}}</div>
+  </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  tl.set(id+" .num,"+id+" .tx,"+id+" .sb",{opacity:0},0); tl.set(id+" .rule",{width:0},0); tl.set(id,{opacity:0},0);
+  tl.to(id,{opacity:1,duration:.5},S);
+  tl.fromTo(id+" .num",{opacity:0,scale:.96},{opacity:1,scale:1,duration:1.1,ease:"power2.out",immediateRender:false},S+.1);
+  tl.fromTo(id+" .bgimg",{scale:1},{scale:1.06,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo(id+" .rule",{width:0},{width:260,duration:.9,ease:"power2.inOut",immediateRender:false},S+.35);
+  tl.fromTo(id+" .tx",{opacity:0,y:10},{opacity:1,y:0,duration:.8,ease:"power2.out",immediateRender:false},S+Number(P.t_texto));
+  if(P.sub) tl.fromTo(id+" .sb",{opacity:0},{opacity:1,duration:.7,immediateRender:false},S+Number(P.t_sub));
+  tl.to(id,{opacity:0,duration:.5,ease:"power1.in"},S+D-.5);
+})(window.__timelines.main, {{json}});
+</script>

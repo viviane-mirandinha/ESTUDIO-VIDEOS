@@ -1,0 +1,22 @@
+<!--params {"kicker":"","riscado":false,"valor":"40","unidade":"ANOS","contar":true,"t_valor":0.3,"sub":"","t_sub":1.0}-->
+<div id="{{id}}" class="kr-cd" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 40% 45%,#1d2a3a 0%,#121c29 55%,#0b121c 100%)">
+ <div class="kr-grain" style="position:absolute;inset:0;opacity:.10"></div>
+ <div style="position:absolute;left:110px;top:50%;transform:translateY(-50%)">
+  <div class="kk" style="position:relative;display:inline-block;font-family:'Barlow',sans-serif;font-weight:700;font-size:52px;color:#f2efe6;letter-spacing:.02em">{{p.kicker}}<div class="st" style="position:absolute;left:-4px;right:-4px;top:54%;height:5px;background:#c8463c;transform-origin:0 50%"></div></div>
+  <div class="vv" style="font-family:'Barlow',sans-serif;font-weight:700;font-size:170px;line-height:1;color:#d9a63a"><span class="v">{{p.valor}}</span> <span>{{p.unidade}}</span></div>
+  <div class="ln" style="width:420px;height:3px;background:#d9a63a;margin:14px 0 18px;transform-origin:0 50%"></div>
+  <div class="sb" style="font-family:'Barlow',sans-serif;font-weight:700;font-size:58px;color:#f2efe6;letter-spacing:.03em">{{p.sub}}</div>
+ </div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}", R=document.querySelector(id);
+  R.querySelector(".kr-grain").style.backgroundImage="url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='7'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>\")";
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.45,immediateRender:true},S);
+  if(P.kicker){ tl.fromTo(id+" .kk",{opacity:0},{opacity:1,duration:.4,immediateRender:true},S+.1); if(P.riscado) tl.fromTo(id+" .st",{scaleX:0},{scaleX:1,duration:.5,immediateRender:true},S+.6); else tl.set(id+" .st",{display:"none"},S); } else tl.set(id+" .kk",{display:"none"},S);
+  tl.fromTo(id+" .vv",{opacity:0,y:20},{opacity:1,y:0,duration:.5,immediateRender:true},S+(+P.t_valor));
+  const to=parseFloat(P.valor), v=R.querySelector(".v");
+  if(P.contar&&!isNaN(to)){ const cn={_n:to}; Object.defineProperty(cn,"n",{get(){return this._n},set(x){this._n=x; v.textContent=Math.round(x);}}); tl.fromTo(cn,{n:0},{n:to,duration:1.0,ease:"power2.out",immediateRender:true},S+(+P.t_valor)); }
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:.6,immediateRender:true},S+(+P.t_valor)+.2);
+  if(P.sub) tl.fromTo(id+" .sb",{opacity:0,x:-16},{opacity:1,x:0,duration:.5,immediateRender:true},S+(+P.t_sub)); else tl.set(id+" .sb",{display:"none"},S);
+})(window.__timelines.main, {{json}});
+</script>

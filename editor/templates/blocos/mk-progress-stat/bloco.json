@@ -1,0 +1,28 @@
+{
+  "name": "mk-progress-stat",
+  "titulo": "Número com barra de progresso",
+  "categoria": "Contador",
+  "descricao": "Número grande contando + rótulo + barra enchendo.",
+  "title_en": "Count-Up Stat Card",
+  "description_en": "Big-numeral statistic with count-up, label, thin progress track filling to value/max, and caption; light and dark schemes",
+  "duration": 7,
+  "width": 1920,
+  "height": 1080,
+  "tags": [
+    "data-viz",
+    "stat",
+    "minimal"
+  ],
+  "variables": [],
+  "files": [
+    "mk-progress-stat.html"
+  ],
+  "origem": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/mk-progress-stat",
+  "licenca": "Apache-2.0",
+  "hyperframes": "0.7.111",
+  "textos": [
+    "Goals reached",
+    "Great job, we are getting closer!",
+    "22 · Goals reached"
+  ]
+}

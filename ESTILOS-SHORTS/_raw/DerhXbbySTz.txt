@@ -1,0 +1,21 @@
+lang=pt dur=73.7 words=230 wpm=187
+[0.0] Sabe quando a bomba dá o clique e o frentista ainda aperta mais um pouquinho só pra fechar
+[5.0] em 200 redondo?
+[6.6] Pois é, esse clique não foi chute e o seu carro não tem onde guardar esse extra.
+[12.0] Olha que genial, lá na ponta do bico tem um furinho.
+[15.4] Enquanto a gasolina desce, o bico vai puxando o ar por esse furo.
+[19.1] Quando o combustível sobe e tampa o buraco, o ar para de entrar e uma mola fecha a válvula
+[24.5] na hora.
+[25.5] Sem sensor, sem chip, só ar.
+[27.9] Segue o Como Funciona para descobrir o que está por trás das coisas do dia a dia.
+[32.9] Então o clique quer dizer a gasolina já chegou na boca do tanque.
+[36.9] E o espaço que sobra lá em cima tem dono.
+[39.6] O tanque é ligado por uma mangueira a uma caixinha cheia de carvão, o cânister.
+[44.3] Ele segura o vapor da gasolina para não escapar para o ar e depois o motor queima esse vapor.
+[49.9] Só que ele foi feito para vapor, não para líquido.
+[52.6] Se o frentista insiste e completa, a gasolina pode encharcar esse carvão, acender a luz
+[58.1] da injeção e virar um conserto de centenas de reais.
+[61.7] Tudo isso por um número redondo na bomba.
+[64.6] Então, da próxima vez, avise o frentista.
+[67.4] Parou no primeiro clique, pode tirar o bico.
+[70.0] O tanque está cheio, a bomba já te avisou.

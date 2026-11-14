@@ -1,0 +1,18 @@
+<!--params {"itens":"SMALLER JET|ONE-PILOT CONTROL","tempos":"0|0.8","x":70,"y":150,"size":34}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none"><div class="sp-col"></div></div>
+<style>
+#{{id}} .sp-col{position:absolute;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+#{{id}} .sp-card{background:rgba(8,10,14,.88);color:#fff;border-left:6px solid #ffd400;padding:12px 22px 10px;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;box-shadow:0 6px 18px rgba(0,0,0,.5);white-space:nowrap}
+</style>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}};
+  const col=document.querySelector("#{{id}} .sp-col"); col.style.left=(+P.x||70)+"px"; col.style.top=(+P.y||150)+"px";
+  const it=String(P.itens||"").split("|").filter(Boolean), tp=String(P.tempos||"").split("|").map(Number);
+  it.forEach((t,i)=>{ const c=document.createElement("div"); c.className="sp-card"; c.textContent=t; c.style.fontSize=(+P.size||34)+"px"; col.appendChild(c);
+    const at=S+(isNaN(tp[i])?i*.6:tp[i])+.05;
+    tl.set(c,{opacity:0,x:-40},0);
+    tl.fromTo(c,{opacity:0,x:-40},{opacity:1,x:0,duration:.35,ease:"power3.out",immediateRender:false},at);
+  });
+  tl.to(col,{opacity:0,duration:.2,immediateRender:false},S+D-.22); tl.set(col,{opacity:1},0);
+})(window.__timelines.main, {{json}});
+</script>

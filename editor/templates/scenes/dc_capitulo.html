@@ -1,0 +1,11 @@
+<!--params {"n":"1","titulo":"","topo":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;pointer-events:none">
+ <div class="t" style="position:absolute;left:60px;right:60px;top:50%;transform:translateY(-50%);text-align:center;font-family:'Barlow',sans-serif;font-weight:700;font-size:54px;color:#fff;line-height:1.1;text-shadow:0 3px 20px rgba(0,0,0,.95),0 0 3px rgba(0,0,0,.9)">Capítulo {{p.n}}: {{p.titulo}}</div>
+</div>
+<script>
+(function(tl, P){ const S={{start}}, D={{dur}}, id="#{{id}}";
+  if(+P.topo) document.querySelector(id+" .t").style.top="22%";
+  tl.fromTo(id+" .t",{opacity:0},{opacity:1,duration:.7,ease:"sine.out",immediateRender:true},S);
+  tl.to(id+" .t",{opacity:0,duration:.5,ease:"sine.in"},S+D-.5);
+})(window.__timelines.main, {{json}});
+</script>
