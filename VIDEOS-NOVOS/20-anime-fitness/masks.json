@@ -1,0 +1,85 @@
+{
+"a_biceps": {
+"vermelho": {
+"n": 18381,
+"cx": 677,
+"cy": 208,
+"x0": 476,
+"x1": 872,
+"y0": 138,
+"y1": 293,
+"low_cx": 663,
+"low_cy": 253,
+"left_cx": 591,
+"left_cy": 208,
+"right_cx": 762,
+"right_cy": 209
+}
+},
+"a_costas": {
+"verde": {
+"n": 10341,
+"cx": 638,
+"cy": 199,
+"x0": 497,
+"x1": 818,
+"y0": 131,
+"y1": 691,
+"low_cx": 640,
+"low_cy": 258,
+"left_cx": 562,
+"left_cy": 201,
+"right_cx": 714,
+"right_cy": 197
+}
+},
+"a_braco": {
+"laranja": {
+"n": 8528,
+"cx": 698,
+"cy": 249,
+"x0": 652,
+"x1": 742,
+"y0": 181,
+"y1": 324,
+"low_cx": 705,
+"low_cy": 291,
+"left_cx": 679,
+"left_cy": 239,
+"right_cx": 715,
+"right_cy": 259
+},
+"verde": {
+"n": 62026,
+"cx": 680,
+"cy": 340,
+"x0": 478,
+"x1": 805,
+"y0": 27,
+"y1": 719,
+"low_cx": 593,
+"low_cy": 559,
+"left_cx": 620,
+"left_cy": 434,
+"right_cx": 740,
+"right_cy": 247
+}
+},
+"a_cotovelo": {
+"vermelho": {
+"n": 6112,
+"cx": 535,
+"cy": 290,
+"x0": 471,
+"x1": 613,
+"y0": 209,
+"y1": 368,
+"low_cx": 522,
+"low_cy": 334,
+"left_cx": 510,
+"left_cy": 303,
+"right_cx": 560,
+"right_cy": 277
+}
+}
+}

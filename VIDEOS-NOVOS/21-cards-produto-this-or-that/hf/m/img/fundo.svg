@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs><radialGradient id="g" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#fbf8f3"/><stop offset="1" stop-color="#efe9e1"/></radialGradient>
+<filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .32  0 0 0 .07 0"/></filter></defs>
+<rect width="1280" height="720" fill="url(#g)"/><rect width="1280" height="720" filter="url(#n)"/>
+<path d="M128,466 Q108,415 79,415 Q62,393 10,403 Q-30,350 -38,352 Q-11,331 -43,282 Q-22,254 -46,212 Q-76,167 -49,142 Q-69,91 -89,85 Q-97,82 -159,95" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M114,570 Q125,587 103,640 Q129,698 99,709 Q109,760 88,778 Q99,827 100,847 Q85,880 115,916 Q162,920 170,959 Q228,970 236,935 Q262,943 298,966" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M523,216 Q540,213 590,197 Q602,170 607,129 Q567,81 565,73 Q550,64 553,4 Q571,-12 608,-39 Q624,-84 663,-82 Q664,-85 717,-126 Q763,-153 776,-164" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M843,454 Q898,447 908,479 Q917,504 977,491 Q1005,523 1000,557 Q998,557 956,611 Q914,621 902,656 Q862,631 833,645 Q772,630 763,635 Q752,669 694,645" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M929,293 Q895,316 870,329 Q860,334 808,362 Q775,348 738,362 Q736,362 702,421 Q716,483 708,491 Q658,524 665,547 Q640,577 598,565 Q573,532 539,527" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M460,686 Q468,641 471,617 Q448,574 425,565 Q370,547 355,568 Q332,611 323,630 Q313,635 298,695 Q325,750 327,759 Q330,809 301,824 Q248,848 254,876" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M-12,526 Q-12,564 -12,596 Q33,602 24,656 Q35,691 32,726 Q64,784 68,786 Q91,800 138,789 Q173,785 206,774 Q208,773 263,733 Q325,734 331,751" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M339,714 Q374,699 407,697 Q414,648 432,632 Q436,611 494,598 Q513,612 563,602 Q617,614 633,599 Q665,591 702,615 Q718,588 749,563 Q787,573 809,528" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M18,293 Q-29,304 -46,264 Q-63,238 -66,197 Q-35,192 -43,131 Q6,73 -3,74 Q18,49 61,47 Q90,25 131,45 Q160,44 182,93 Q183,153 207,159" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M924,279 Q906,335 917,349 Q877,389 879,408 Q864,449 885,478 Q887,502 916,541 Q947,573 925,610 Q913,651 907,678 Q903,692 926,745 Q895,758 879,798" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M160,688 Q152,718 204,743 Q169,765 184,810 Q158,859 137,862 Q140,873 159,928 Q188,981 181,995 Q217,976 249,1011 Q262,1021 312,1043 Q336,1054 354,1098" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M1007,592 Q1059,611 1073,617 Q1107,593 1126,572 Q1175,546 1188,538 Q1179,495 1197,469 Q1215,458 1257,432 Q1315,406 1327,431 Q1330,451 1386,469 Q1431,446 1455,460" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M272,-52 Q320,-43 341,-36 Q344,4 398,4 Q401,5 438,62 Q463,71 506,76 Q542,35 562,33 Q608,42 629,52 Q641,86 694,77 Q747,107 763,89" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M838,78 Q859,68 899,44 Q937,44 962,14 Q1002,9 1025,45 Q1053,82 1030,115 Q1064,130 1052,181 Q1061,212 1010,237 Q991,250 940,234 Q936,203 886,189" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M14,233 Q9,242 39,298 Q54,332 17,364 Q39,400 15,434 Q17,443 64,484 Q94,483 132,466 Q180,467 196,437 Q239,414 264,420 Q269,379 283,353" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<path d="M576,118 Q535,83 506,108 Q494,139 462,161 Q432,197 393,173 Q339,156 323,171 Q310,168 269,127 Q255,67 244,61 Q241,46 254,-8 Q287,-22 320,-31" fill="none" stroke="#d9a4a4" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+<polygon points="77,607 81,630 104,636 83,648 84,671 67,655 45,663 55,642 40,623 64,626" fill="none" stroke="#b3202a" stroke-width="4" stroke-linejoin="round" opacity=".8"/>
+<polygon points="1207,628 1219,643 1238,639 1228,655 1237,672 1219,667 1206,682 1205,662 1187,655 1205,647" fill="none" stroke="#b3202a" stroke-width="4" stroke-linejoin="round" opacity=".8"/>
+<polygon points="106,101 104,116 117,124 102,127 98,142 90,129 75,129 85,118 80,104 94,110" fill="none" stroke="#b3202a" stroke-width="4" stroke-linejoin="round" opacity=".8"/>
+<polygon points="1192,280 1196,293 1210,296 1198,304 1200,317 1189,309 1177,315 1181,302 1172,292 1185,292" fill="none" stroke="#b3202a" stroke-width="4" stroke-linejoin="round" opacity=".8"/>
+<path d="M150,702.6 C130.4,690 138.8,674.6 150,685.1 C161.2,674.6 169.6,690 150,702.6Z" fill="#c8102e" opacity=".85"/>
+<path d="M1240,150.8 C1223.2,140 1230.4,126.8 1240,135.8 C1249.6,126.8 1256.8,140 1240,150.8Z" fill="#c8102e" opacity=".85"/>
+<path d="M40,389.9 C24.6,380 31.2,367.9 40,376.15 C48.8,367.9 55.4,380 40,389.9Z" fill="#c8102e" opacity=".85"/>
+<path d="M1150,609.0 C1136.0,600 1142.0,589.0 1150,596.5 C1158.0,589.0 1164.0,600 1150,609.0Z" fill="#c8102e" opacity=".85"/>
+</svg>

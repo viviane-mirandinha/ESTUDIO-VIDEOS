@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,800;1,800&display=block" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#f3ede4;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#f3ede4;}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;overflow:hidden;background:#f3ede4;}
+.cam{position:absolute;left:0;top:0;width:1280px;height:720px;}
+.cam svg{position:absolute;left:0;top:0;}
+.ov{position:absolute;left:0;top:0;width:1280px;height:720px;}
+.vin{position:absolute;left:0;top:0;width:1280px;height:720px;pointer-events:none;z-index:20;
+ background:radial-gradient(ellipse 72% 70% at 50% 50%,rgba(0,0,0,0) 55%,rgba(70,58,44,.30) 100%);}
+.lab{position:absolute;white-space:nowrap;font-family:'Poppins',sans-serif;font-weight:800;font-style:italic;color:#1f2f57;opacity:0;line-height:1.1;letter-spacing:.5px;}
+.lab b{color:#d8232a;font-weight:800;}
+.big{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;color:#1d3a6e;line-height:.9;opacity:0;}
+.sinal{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;color:#d8232a;font-size:60px;letter-spacing:6px;opacity:0;}
+.rot{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-style:italic;color:#1f2f57;font-size:52px;line-height:1.12;width:540px;opacity:0;}
+.bal{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-size:50px;color:#d8232a;background:#fff;border:4px solid #2e2a26;border-radius:34px;padding:6px 28px;opacity:0;white-space:nowrap;}
+.btn{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-size:56px;color:#fff;background:#d8232a;border-radius:60px;padding:8px 46px 12px;opacity:0;border:4px solid #2e2a26;white-space:nowrap;}
+.papel{position:absolute;left:250px;top:90px;width:780px;height:470px;background-color:#fbfbf8;opacity:0;
+ background-image:linear-gradient(#dfe6ee 2px,transparent 2px),linear-gradient(90deg,#dfe6ee 2px,transparent 2px);background-size:34px 34px;
+ box-shadow:0 10px 30px rgba(60,40,20,.18);border:1px solid #e3ddd2;}
+.frase{position:absolute;left:0;width:780px;text-align:center;font-family:'Poppins',sans-serif;font-weight:800;font-style:italic;font-size:54px;color:#1f2f57;line-height:1.15;opacity:0;}
+.frase b{color:#d8232a;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<div id="stage"></div>
+<div class="vin"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+/* ELENCO FIXO (fonte única): LEO e ANA em ilustração flat (traço fino, pastel) + PALITO para metáforas.
+   Origem (0,0) = entre os pés. Altura ~370 un. em escala 1. Juntas: _ll/_rl (quadril), _lk/_rk (joelho),
+   _la/_ra (ombro), _le/_re (cotovelo), _h (cabeça/pescoço), _b (corpo), _eo (olhos), _ph (celular). */
+const OL='#2e2a26';
+const ELENCO={
+ leo:{skin:'#f2c9a6',hair:'#4b3324',top:'#fbf8f1',sleeve:'#fbf8f1',pants:'#77805a',shoe:'#5a3a28',cabelo:'curto'},
+ ana:{skin:'#eebf9c',hair:'#7b4a2b',top:'#f3e0c4',sleeve:'#c8693d',pants:'#46516a',shoe:'#3b2f2a',cabelo:'longo'}
+};
+const POSE={ // [la, le, ra, re]  (l = braço do lado esquerdo da tela)
+ idle:[8,-4,-8,4], celular:[8,-4,-10,140], aceno:[8,-4,-150,-25], aberto:[40,-25,-40,25], alcanca:[8,-4,-84,-6],
+ peito:[8,-4,16,138], cruz:[0,-100,0,100], aponta:[8,-4,-70,-10], bolso:[14,10,-14,-10], segura:[8,-4,-30,-50]};
+const EMO={neutro:['bn','mn'],feliz:['bn','ms'],triste:['bw','mt'],serio:['bn','mr']};
+function PES(id,who,o={}){
+ const c=ELENCO[who];
+ const J=(x,y,jid,inner)=>`<g transform="translate(${x},${y})"><g id="${jid}">${inner}</g></g>`;
+ const st=`stroke="${OL}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
+ const shoe=`<path d="M-11,72 Q-13,90 6,90 L22,90 Q27,83 13,74 Z" fill="${c.shoe}" ${st}/>`;
+ const shin=`<rect x="-10" y="-8" width="20" height="86" rx="9" fill="${c.pants}" ${st}/>`+shoe;
+ const leg=(s,k)=>J(s*14,-172,`${id}_${k}l`,`<rect x="-11" y="-6" width="22" height="94" rx="10" fill="${c.pants}" ${st}/>`+J(0,84,`${id}_${k}k`,shin));
+ const phone=`<g id="${id}_ph" opacity="${o.celular?1:0}"><rect x="-11" y="44" width="22" height="36" rx="4" fill="#2d3442" ${st}/><rect x="-7" y="49" width="14" height="24" rx="2" fill="#a9d4f5"/></g>`;
+ const cuff=who==='leo'?`<rect x="-9" y="-6" width="18" height="12" rx="5" fill="${c.sleeve}" ${st}/>`:'';
+ const fore=k=>`<rect x="-8" y="-4" width="16" height="62" rx="8" fill="${who==='ana'?c.sleeve:c.skin}" ${st}/>${cuff}<circle cx="0" cy="62" r="10" fill="${c.skin}" ${st}/>`+(k==='r'?phone:'');
+ const arm=(s,k)=>J(s*34,-288,`${id}_${k}a`,`<rect x="-10" y="-8" width="20" height="80" rx="10" fill="${c.sleeve}" ${st}/>`+J(0,66,`${id}_${k}e`,fore(k)));
+ let torso=`<rect x="-32" y="-180" width="64" height="30" rx="9" fill="${c.pants}" ${st}/>`;
+ if(who==='leo') torso+=`<path d="M-36,-282 Q-36,-300 -18,-300 L18,-300 Q36,-300 36,-282 L32,-170 Q0,-164 -32,-170 Z" fill="${c.top}" ${st}/>
+  <path d="M-13,-300 L0,-283 L13,-300" fill="none" ${st}/><path d="M0,-283 V-172" fill="none" stroke="${OL}" stroke-width="2"/>
+  <circle cx="5" cy="-262" r="2" fill="${OL}"/><circle cx="5" cy="-236" r="2" fill="${OL}"/><circle cx="5" cy="-210" r="2" fill="${OL}"/>
+  <rect x="-32" y="-178" width="64" height="9" fill="#5c4434"/>`;
+ else torso+=`<path d="M-36,-282 Q-36,-300 -18,-300 L18,-300 Q36,-300 36,-282 L33,-166 Q0,-160 -33,-166 Z" fill="${c.sleeve}" ${st}/>
+  <path d="M-13,-300 L13,-300 L12,-168 L-12,-168 Z" fill="${c.top}" ${st}/>`;
+ const hairBack=c.cabelo==='longo'?`<path d="M-31,-30 Q-36,-68 0,-68 Q36,-68 31,-30 L36,24 Q0,34 -36,24 Z" fill="${c.hair}" ${st}/>`:'';
+ const hairFront=c.cabelo==='longo'
+  ?`<path d="M-26,-30 Q-26,-62 2,-62 Q28,-61 26,-30 Q14,-50 -4,-47 Q-18,-44 -26,-30 Z" fill="${c.hair}" ${st}/>`
+  :`<path d="M-25,-36 Q-29,-68 2,-66 Q29,-64 25,-34 Q20,-46 6,-48 Q-12,-50 -25,-36 Z" fill="${c.hair}" ${st}/>`;
+ const cheek=who==='ana'?`<circle cx="-13" cy="-20" r="5" fill="#e8907a" opacity=".45"/><circle cx="13" cy="-20" r="5" fill="#e8907a" opacity=".45"/>`:'';
+ const face=`<g id="${id}_eo"><circle cx="-9" cy="-29" r="3" fill="${OL}"/><circle cx="9" cy="-29" r="3" fill="${OL}"/></g>
+  <path id="${id}_f_bn" d="M-15,-38 Q-9,-41 -4,-38 M4,-38 Q9,-41 15,-38" fill="none" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>
+  <path id="${id}_f_bw" opacity="0" d="M-15,-36 Q-9,-38 -4,-42 M4,-42 Q9,-38 15,-36" fill="none" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M0,-27 Q4,-20 -1,-19" fill="none" stroke="${OL}" stroke-width="2" stroke-linecap="round"/>${cheek}
+  <path id="${id}_f_mn" d="M-6,-12 Q0,-9 6,-12" fill="none" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>
+  <path id="${id}_f_ms" opacity="0" d="M-9,-14 Q0,-4 9,-14" fill="#fff" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>
+  <path id="${id}_f_mt" opacity="0" d="M-7,-8 Q0,-15 7,-8" fill="none" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>
+  <path id="${id}_f_mr" opacity="0" d="M-7,-11 L7,-11" fill="none" stroke="${OL}" stroke-width="2.5" stroke-linecap="round"/>`;
+ const head=J(0,-300,`${id}_h`,`${hairBack}<rect x="-7" y="-8" width="14" height="14" fill="${c.skin}"/>
+  <circle cx="-24" cy="-27" r="6" fill="${c.skin}" ${st}/><circle cx="24" cy="-27" r="6" fill="${c.skin}" ${st}/>
+  <ellipse cx="0" cy="-28" rx="24" ry="28" fill="${c.skin}" ${st}/>${hairFront}${face}`);
+ return `<g id="${id}"><g id="${id}_b">${leg(-1,'l')}${leg(1,'r')}${torso}${head}${arm(-1,'l')}${arm(1,'r')}</g></g>`;
+}
+/* boneco de palito (metáforas, igual à referência): mesmas juntas */
+function PAL(id,o={}){
+ const J=(x,y,jid,inner)=>`<g transform="translate(${x},${y})"><g id="${jid}">${inner}</g></g>`;
+ const L=(y)=>`<path d="M0,0 L0,${y}" stroke="${OL}" stroke-width="7" stroke-linecap="round" fill="none"/>`;
+ const leg=(s,k)=>J(s*8,-170,`${id}_${k}l`,L(86)+J(0,86,`${id}_${k}k`,L(80)+`<path d="M0,80 L${s>0?14:-14},82" stroke="${OL}" stroke-width="7" stroke-linecap="round"/>`));
+ const arm=(s,k)=>J(s*4,-268,`${id}_${k}a`,L(66)+J(0,66,`${id}_${k}e`,L(56)));
+ const saia=o.mulher?`<path d="M0,-214 L-30,-150 L30,-150 Z" fill="#fff" stroke="${OL}" stroke-width="5" stroke-linejoin="round"/>`:'';
+ const cab=o.mulher?`<path d="M18,-318 Q44,-312 40,-280" stroke="${OL}" stroke-width="7" fill="none" stroke-linecap="round"/>`:'';
+ return `<g id="${id}"><g id="${id}_b">${leg(-1,'l')}${leg(1,'r')}<path d="M0,-278 L0,-170" stroke="${OL}" stroke-width="7" stroke-linecap="round"/>${saia}
+  ${J(0,-276,`${id}_h`,`${cab}<circle cx="0" cy="-28" r="27" fill="#fff" stroke="${OL}" stroke-width="5"/>
+  <g id="${id}_eo"><circle cx="-8" cy="-30" r="3.2" fill="${OL}"/><circle cx="8" cy="-30" r="3.2" fill="${OL}"/></g>
+  <path id="${id}_f_mn" d="M-7,-15 Q0,-12 7,-15" fill="none" stroke="${OL}" stroke-width="3" stroke-linecap="round"/>
+  <path id="${id}_f_mt" opacity="0" d="M-8,-12 Q0,-19 8,-12" fill="none" stroke="${OL}" stroke-width="3" stroke-linecap="round"/>
+  <path id="${id}_f_ms" opacity="0" d="M-8,-17 Q0,-8 8,-17" fill="none" stroke="${OL}" stroke-width="3" stroke-linecap="round"/>
+  <path id="${id}_f_bn" d="M0,0" /><path id="${id}_f_bw" opacity="0" d="M-14,-40 L-4,-44 M4,-44 L14,-40" stroke="${OL}" stroke-width="3" stroke-linecap="round"/><path id="${id}_f_mr" opacity="0" d="M-7,-14 L7,-14" stroke="${OL}" stroke-width="3"/>`)}
+  ${arm(-1,'l')}${arm(1,'r')}</g></g>`;
+}
+
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__;
+const stage=document.getElementById('stage');
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const hl=(s,k)=>{s=esc(s);return k?s.split(k).join(`<b>${k}</b>`):s;};
+/* ---------- tempo / câmera ---------- */
+function mk(it,svg,html='',zoom=.05){const d=document.createElement('div');d.className='shot';d.id='sh_'+it.id;
+ d.innerHTML=`<div class="cam"><svg width="1280" height="720" viewBox="0 0 1280 720">${svg}</svg></div><div class="ov">${html}</div>`;
+ stage.appendChild(d);const S=+it.start,D=+it.dur;if(S<.05)tl.set(d,{opacity:1},0);else tl.fromTo(d,{opacity:0},{opacity:1,duration:.12},S);if(S+D<DUR-.05)tl.set(d,{opacity:0},S+D);
+ tl.fromTo(d.querySelector('.cam'),{scale:1},{scale:1+zoom,duration:D,ease:'none',transformOrigin:'50% 55%'},S);return d;}
+function lab(id,txt,x,y,size=56,k=''){return txt?`<div id="${id}" class="lab" style="left:${x}px;top:${y}px;font-size:${size}px">${hl(txt,k)}</div>`:'';}
+function showL(id,t){const e=document.getElementById(id);if(!e)return;gsap.set(e,{xPercent:-50,yPercent:-50});tl.fromTo(e,{opacity:0,y:20},{opacity:1,y:0,duration:.35,ease:'power2.out'},t);}
+function showS(sel,t,d=.4,from=.6){tl.fromTo(sel,{opacity:0,scale:from},{opacity:1,scale:1,duration:d,ease:'back.out(1.5)',transformOrigin:'50% 50%'},t);}
+/* ---------- rig ---------- */
+function P(id,who,x,y,s=1,o={}){return `<g transform="translate(${x},${y})${o.flip?' scale(-1,1)':''}">${who==='palito'?PAL(id,o):PES(id,who,o)}</g>`;}
+function rig(id,s,p='idle',e='neutro'){gsap.set('#'+id,{scale:s,svgOrigin:'0 0'});setPose(id,p);setEmo(id,e);}
+function setPose(id,p){const a=POSE[p];['la','le','ra','re'].forEach((j,k)=>gsap.set(`#${id}_${j}`,{rotation:a[k],svgOrigin:'0 0'}));}
+function pose(id,p,t,d=.4){const a=POSE[p];['la','le','ra','re'].forEach((j,k)=>tl.to(`#${id}_${j}`,{rotation:a[k],duration:d,ease:'power2.inOut',svgOrigin:'0 0'},t));}
+const FP=['bn','bw','mn','ms','mt','mr'];
+function setEmo(id,e){FP.forEach(k=>{const el=document.getElementById(`${id}_f_${k}`);if(el)gsap.set(el,{opacity:EMO[e].includes(k)?1:0});});}
+function emo(id,e,t){FP.forEach(k=>{if(document.getElementById(`${id}_f_${k}`))tl.set(`#${id}_f_${k}`,{opacity:EMO[e].includes(k)?1:0},t);});}
+function blink(id,t){tl.to(`#${id}_eo`,{scaleY:.1,duration:.07,yoyo:true,repeat:1,transformOrigin:'50% 50%',ease:'none'},t);}
+function vivo(id,S,D,first=.7,gap=2.2){for(let t=S+first;t<S+D-.25;t+=gap)blink(id,t);
+ const n=Math.max(1,Math.floor(D/1.4));tl.to(`#${id}_b`,{y:-3,duration:.7,yoyo:true,repeat:n*2-1,ease:'sine.inOut'},S);
+ tl.to(`#${id}_h`,{rotation:3,duration:1.1,yoyo:true,repeat:Math.max(1,Math.floor(D/1.1))-1,ease:'sine.inOut',svgOrigin:'0 0'},S+.2);}
+function nega(id,t){tl.to(`#${id}_h`,{rotation:9,duration:.13,yoyo:true,repeat:5,ease:'sine.inOut',svgOrigin:'0 0'},t);tl.to(`#${id}_h`,{rotation:0,duration:.1,svgOrigin:'0 0'},t+.8);}
+function walk(id,t0,t1,per=.5,amp=10){const h=per/2,n=Math.max(1,Math.round((t1-t0)/h));
+ for(let k=0;k<n;k++){const t=t0+k*h,s=k%2?1:-1;
+  tl.to(`#${id}_ll`,{rotation:amp*s,duration:h,ease:'sine.inOut',svgOrigin:'0 0'},t);tl.to(`#${id}_rl`,{rotation:amp*s,duration:h,ease:'sine.inOut',svgOrigin:'0 0'},t);
+  tl.to(`#${id}_${s>0?'l':'r'}k`,{rotation:-28*s,duration:h/2,yoyo:true,repeat:1,ease:'sine.out',svgOrigin:'0 0'},t);
+  tl.to(`#${id}_la`,{rotation:16*s,duration:h,ease:'sine.inOut',svgOrigin:'0 0'},t);tl.to(`#${id}_ra`,{rotation:16*s,duration:h,ease:'sine.inOut',svgOrigin:'0 0'},t);
+  tl.to(`#${id}_b`,{y:-6,duration:h/2,yoyo:true,repeat:1,ease:'sine.out'},t);}
+ tl.to([`#${id}_ll`,`#${id}_rl`,`#${id}_la`,`#${id}_ra`],{rotation:0,duration:.2,svgOrigin:'0 0'},t0+n*h);}
+/* ---------- cenário flat ---------- */
+const st='stroke="#2e2a26" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+const chao=(y=600)=>`<path d="M0,${y} H1280" stroke="#d6cbb9" stroke-width="3"/><rect x="0" y="${y}" width="1280" height="${720-y}" fill="#ece4d6"/>`;
+const blob=(x,y,r,c,o=1)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" opacity="${o}"/>`;
+function planta(x,y,s=1){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M0,-40 Q-40,-110 -22,-150 Q-6,-100 0,-40 Z" fill="#8aa86b" ${st}/><path d="M0,-40 Q34,-120 20,-170 Q-2,-110 0,-40 Z" fill="#9dbb7c" ${st}/><path d="M0,-40 Q-60,-80 -66,-100 Q-20,-96 0,-40 Z" fill="#7d9b5f" ${st}/><path d="M-26,-44 L26,-44 L20,0 L-20,0 Z" fill="#d98c5f" ${st}/></g>`;}
+function janela(x,y,w=200,h=230){return `<g transform="translate(${x},${y})"><rect width="${w}" height="${h}" fill="#dbe9f1" ${st}/><path d="M${w/2},0 V${h} M0,${h/2} H${w}" ${st}/><rect x="-12" y="${h}" width="${w+24}" height="14" fill="#fbf8f1" ${st}/></g>`;}
+function quadro(x,y){return `<g transform="translate(${x},${y})"><rect width="110" height="84" fill="#fbf8f1" ${st}/><path d="M14,70 L44,36 L64,56 L80,42 L98,70 Z" fill="#c9b79a"/><circle cx="80" cy="24" r="9" fill="#e7b85b"/></g>`;}
+function porta(i,x,y){return `<g transform="translate(${x},${y})"><rect x="-6" y="-336" width="172" height="342" fill="#5a4636" ${st}/><rect x="0" y="-330" width="160" height="330" fill="#3b2f27"/>
+ <g id="${i}folha"><rect x="0" y="-330" width="160" height="330" fill="#e9dfcf" ${st}/><rect x="22" y="-300" width="116" height="120" fill="none" ${st}/><rect x="22" y="-160" width="116" height="130" fill="none" ${st}/><circle cx="138" cy="-165" r="7" fill="#c9a24a" ${st}/></g></g>`;}
+function espelho(i,x,y,w=200,h=330,dentro=''){return `<g transform="translate(${x},${y})"><defs><clipPath id="${i}clip"><rect x="0" y="0" width="${w}" height="${h}" rx="12"/></clipPath></defs>
+ <rect x="-12" y="-12" width="${w+24}" height="${h+24}" rx="18" fill="#c8a37a" ${st}/><rect x="0" y="0" width="${w}" height="${h}" rx="12" fill="#e3eef3" ${st}/>
+ <g clip-path="url(#${i}clip)">${dentro}<path d="M20,${h} L${w*0.7},0 M60,${h} L${w},${h*0.2}" stroke="#fff" stroke-width="14" opacity=".55"/></g></g>`;}
+function coracao(id,x,y,s=1,c='#d8232a',op=1){return `<g transform="translate(${x},${y})"><g id="${id}" opacity="${op}"><g transform="scale(${s})"><path d="M0,14 C-26,-6 -22,-30 -8,-30 C-2,-30 0,-24 0,-22 C0,-24 2,-30 8,-30 C22,-30 26,-6 0,14 Z" fill="${c}" stroke="#2e2a26" stroke-width="2.5"/></g></g></g>`;}
+const SH={};
+/* 1 — celular: não implora */
+SH.celular=(it,P_,S,D,i)=>{const a=i+'leo';
+ mk(it,blob(560,330,230,'#f0d9c2')+chao()+janela(860,150)+planta(1110,600,1.1)+quadro(250,170)+P(a,'leo',560,600,1,{celular:1})+
+  `<g id="${i}chat" opacity="0"><path d="M690,170 h170 a24,24 0 0 1 24,24 v62 a24,24 0 0 1 -24,24 h-120 l-30,26 v-26 h-20 a24,24 0 0 1 -24,-24 v-62 a24,24 0 0 1 24,-24 Z" fill="#fff" ${st}/>
+   <circle id="${i}d1" cx="735" cy="225" r="9" fill="#2e2a26"/><circle id="${i}d2" cx="775" cy="225" r="9" fill="#2e2a26"/><circle id="${i}d3" cx="815" cy="225" r="9" fill="#2e2a26"/></g>`);
+ rig(a,1,'celular','serio');vivo(a,S,D);showS(`#${i}chat`,S+.4);
+ [1,2,3].forEach(k=>tl.to(`#${i}d${k}`,{y:-8,duration:.22,yoyo:true,repeat:5,ease:'sine.inOut'},S+.6+k*.12));
+ const tg=S+(+P_.t_guarda||1.8);pose(a,'bolso',tg,.45);tl.to(`#${a}_ph`,{opacity:0,duration:.25},tg+.2);tl.to(`#${i}chat`,{opacity:.25,duration:.4},tg);emo(a,'feliz',tg+.4);};
+/* 2 — espelho: autoconhecimento */
+SH.espelho=(it,P_,S,D,i)=>{const a=i+'leo',r=i+'ref';
+ const ref=`<g transform="translate(110,345) scale(.78)">${P(r,'leo',0,0,1,{flip:1})}</g>`;
+ mk(it,chao()+blob(600,330,250,'#f3d3b4',.8)+espelho(i,720,250,220,330,ref)+P(a,'leo',520,600,1)+
+  `<g transform="translate(0,-78)"><g id="${i}ideia" opacity="0"><circle cx="520" cy="210" r="34" fill="#f7d36b" ${st}/><rect x="506" y="244" width="28" height="18" rx="4" fill="#c9c2b6" ${st}/>
+   <path d="M520,150 V128 M470,170 L455,155 M570,170 L585,155 M455,210 H433 M585,210 H607" ${st}/></g></g>`,.06);
+ rig(a,1,'idle','neutro');rig(r,1,'idle','neutro');vivo(a,S,D);vivo(r,S,D);
+ tl.to(`#${a}_h`,{rotation:-6,duration:.4,svgOrigin:'0 0'},S+.1);showS(`#${i}ideia`,S+(+P_.t_ideia||.5),.45,.3);emo(a,'feliz',S+.7);emo(r,'feliz',S+.7);};
+/* SINAL N — número gigante + Leo + rótulo */
+const ICO={
+ escudo:`<path d="M0,-50 L40,-36 Q42,14 0,44 Q-42,14 -40,-36 Z" fill="#7fa6c9" ${st}/><path d="M-16,0 L-4,12 L18,-14" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>`,
+ coracao:`<path d="M0,30 C-50,-6 -42,-50 -16,-50 C-4,-50 0,-40 0,-36 C0,-40 4,-50 16,-50 C42,-50 50,-6 0,30 Z" fill="#d8232a" ${st}/>`,
+ setas:`<path d="M-50,-18 H34 M18,-34 L36,-18 L18,-2" fill="none" stroke="#1d3a6e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M50,22 H-34 M-18,6 L-36,22 L-18,38" fill="none" stroke="#d8232a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`};
+SH.sinal=(it,P_,S,D,i)=>{const a=i+'leo';
+ mk(it,chao(610)+blob(300,330,190,'#e9dcc8')+P(a,'leo',560,610,1.05)+`<g id="${i}ico" transform="translate(940,170)">${ICO[P_.icone]||''}</g>`,
+  `<div id="${i}s" class="sinal" style="left:150px;top:96px">SINAL</div><div id="${i}n" class="big" style="left:150px;top:150px;font-size:400px">${esc(P_.n)}</div>
+   <div id="${i}r" class="rot" style="left:700px;top:260px">${esc(P_.rotulo)}</div>`,.04);
+ rig(a,1.05,'idle','neutro');vivo(a,S,D);
+ tl.fromTo(`#${i}n`,{opacity:0,scale:.4,transformOrigin:'40% 60%'},{opacity:1,scale:1,duration:.5,ease:'back.out(1.7)'},S+.05);
+ tl.fromTo(`#${i}s`,{opacity:0,x:-30},{opacity:1,x:0,duration:.35},S+.15);showS(`#${i}ico`,S+.5,.45,.3);
+ tl.fromTo(`#${i}r`,{opacity:0,y:24},{opacity:1,y:0,duration:.4,ease:'power2.out'},S+(+P_.t_rot||.6));
+ pose(a,P_.pose||'idle',S+(+P_.t_pose||.7),.5);emo(a,P_.emo||'serio',S+.8);};
+/* balança: dignidade x presença */
+SH.balanca=(it,P_,S,D,i)=>{const a=i+'leo';
+ const prato=(id,x,txt,ico)=>`<g transform="translate(${x},0)"><g id="${id}"><path d="M0,0 L-70,150 M0,0 L70,150" stroke="#8a7a66" stroke-width="3"/><path d="M-95,150 H95 Q80,190 0,190 Q-80,190 -95,150 Z" fill="#e7c98f" ${st}/>${ico}
+   <text x="0" y="250" text-anchor="middle" font-family="Poppins" font-weight="800" font-size="44" fill="#1f2f57">${esc(txt)}</text></g></g>`;
+ const medalha=`<circle cx="0" cy="112" r="34" fill="#f2c14e" ${st}/><path d="M-10,112 L-2,122 L14,100" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>`;
+ const sombra=`<g transform="translate(0,150) scale(.36)">${PES(i+'mini','ana')}</g>`;
+ mk(it,chao(620)+blob(760,330,240,'#efe0cb')+`<g transform="translate(760,150)"><rect x="-10" y="0" width="20" height="440" fill="#b59a74" ${st}/><path d="M-80,470 H80 L60,440 H-60 Z" fill="#b59a74" ${st}/>
+  <g id="${i}viga"><rect x="-230" y="-8" width="460" height="16" rx="8" fill="#b59a74" ${st}/>${prato(i+'pe',-220,P_.esq,medalha)}${prato(i+'pd',220,P_.dir,sombra)}</g><circle cx="0" cy="0" r="16" fill="#d8b46a" ${st}/></g>`+
+  P(a,'leo',250,620,1),'',.04);
+ rig(a,1,'idle','serio');rig(i+'mini',1,'idle','neutro');vivo(a,S,D);
+ const tp=S+(+P_.t_pesa||.8);tl.fromTo(`#${i}viga`,{rotation:0},{rotation:-12,duration:.7,ease:'back.out(1.4)',svgOrigin:'0 0'},tp);
+ tl.to(`#${i}pe`,{rotation:12,duration:.7,ease:'back.out(1.4)',svgOrigin:'0 0'},tp);tl.to(`#${i}pd`,{rotation:12,duration:.7,ease:'back.out(1.4)',svgOrigin:'0 0'},tp);
+ nega(a,S+(+P_.t_nao||.3));pose(a,'cruz',tp+.5,.45);};
+/* se diminui, sai */
+SH.diminui=(it,P_,S,D,i)=>{const a=i+'leo',b=i+'ana';
+ mk(it,chao()+janela(120,140,180,210)+porta(i,1040,600)+planta(950,600,.9)+P(b,'ana',330,600,1)+P(a,'leo',600,600,1),'',.03);
+ rig(b,1,'aponta','serio');rig(a,1,'idle','neutro');vivo(b,S,D);vivo(a,S,D,.4);
+ const td=S+(+P_.t_diminui||1.5);tl.to(`#${a}`,{scale:.55,duration:.6,ease:'power2.inOut',svgOrigin:'0 0'},td);emo(a,'triste',td);
+ const ts=S+(+P_.t_sai||2.4);tl.to(`#${a}`,{scale:1,duration:.35,ease:'power2.out',svgOrigin:'0 0'},ts);emo(a,'serio',ts);
+ tl.to(`#${i}folha`,{scaleX:.25,duration:.35,svgOrigin:'0 0'},ts);tl.to(`#${a}`,{x:520,duration:D-(ts-S)-.05,ease:'none'},ts+.25);walk(a,ts+.25,S+D-.05,.46);};
+/* "eu te amo" — não precisa */
+SH.amo=(it,P_,S,D,i)=>{const a=i+'leo',b=i+'ana';
+ mk(it,chao()+blob(820,320,200,'#f3d3b4',.7)+planta(140,600,1)+P(b,'ana',380,600,1)+P(a,'leo',860,600,1)+
+  `<g transform="translate(860,350)"><g id="${i}brilho" opacity="0"><circle cx="0" cy="0" r="46" fill="#f7d36b" opacity=".55"/><circle cx="0" cy="0" r="26" fill="#f2c14e" ${st}/>${coracao(i+'cv',0,6,.9)}</g></g>`,
+  `<div id="${i}bal" class="bal" style="left:200px;top:120px">${esc(P_.balao)} &#10084;</div>`,.04);
+ rig(b,1,'peito','feliz');rig(a,1,'idle','neutro');vivo(b,S,D);vivo(a,S,D,1);
+ const tb=S+(+P_.t_balao||1.6);tl.fromTo(`#${i}bal`,{opacity:0,scale:.5,transformOrigin:'30% 100%'},{opacity:1,scale:1,duration:.4,ease:'back.out(1.6)'},tb);
+ nega(a,S+.3);emo(a,'feliz',tb+.3);const tv=S+(+P_.t_valor||2.9);pose(a,'peito',tv-.3,.4);tl.fromTo(`#${i}brilho`,{opacity:0,scale:.3,svgOrigin:'0 0'},{opacity:1,scale:1,duration:.45,ease:'back.out(1.5)',svgOrigin:'0 0'},tv);tl.to(`#${i}brilho`,{scale:1.15,duration:.4,yoyo:true,repeat:1,svgOrigin:'0 0'},tv+.5);};
+/* segurança nasce de dentro, não do reflexo */
+SH.dentro=(it,P_,S,D,i)=>{const a=i+'leo',r=i+'ref';
+ const ref=`<g transform="translate(100,345) scale(.78)">${P(r,'ana',0,0,1)}</g>`;
+ mk(it,chao()+espelho(i,880,230,200,330,ref)+`<g id="${i}x" opacity="0"><path d="M870,230 L1090,570 M1090,230 L870,570" stroke="#d8232a" stroke-width="14" stroke-linecap="round"/></g>`+
+  `<g transform="translate(420,370)"><g id="${i}sol" opacity="0">${[150,110,72].map((rr,k)=>`<circle id="${i}o${k}" r="${rr}" fill="#f7d36b" opacity="${.25+k*.2}"/>`).join('')}</g></g>`+P(a,'leo',420,600,1),'',.05);
+ rig(a,1,'idle','neutro');rig(r,1,'idle','feliz');vivo(a,S,D);
+ const td=S+(+P_.t_dentro||1);pose(a,'peito',td-.3,.4);tl.to(`#${i}sol`,{opacity:1,duration:.2},td);
+ [0,1,2].forEach(k=>tl.fromTo(`#${i}o${k}`,{scale:0,svgOrigin:'0 0'},{scale:1,duration:.7,ease:'back.out(1.3)',svgOrigin:'0 0'},td+(2-k)*.12));
+ tl.to(`#${i}sol`,{scale:1.06,duration:.5,yoyo:true,repeat:3,ease:'sine.inOut',svgOrigin:'0 0'},td+.8);emo(a,'feliz',td+.2);
+ const tr=S+(+P_.t_reflexo||2.2);tl.to(`#${r}`,{opacity:.25,duration:.4},tr);showS(`#${i}x`,tr+.15,.35,.5);};
+/* via de mão dupla + fluxo para */
+SH.maodupla=(it,P_,S,D,i)=>{const a=i+'leo',b=i+'ana';
+ let hs='';for(let k=0;k<4;k++){hs+=coracao(`${i}h1_${k}`,0,300,1,'#d8232a',0)+coracao(`${i}h2_${k}`,0,380,1,'#e58a9a',0);}
+ mk(it,chao()+`<path id="${i}v1" d="M330,300 H950" stroke="#1d3a6e" stroke-width="8" stroke-dasharray="2 18" stroke-linecap="round"/><path d="M930,284 L956,300 L930,316" fill="none" stroke="#1d3a6e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="${i}via2"><path d="M950,380 H330" stroke="#d8232a" stroke-width="8" stroke-dasharray="2 18" stroke-linecap="round"/><path d="M350,364 L324,380 L350,396" fill="none" stroke="#d8232a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>`+
+  P(a,'leo',220,600,1)+P(b,'ana',1060,600,1,{flip:1})+hs,lab(i+'l',P_.rotulo,640,150,58,'MÃO DUPLA'),.03);
+ rig(a,1,'alcanca','feliz');rig(b,1,'alcanca','feliz');vivo(a,S,D);vivo(b,S,D,1.1);
+ const tp=S+(+P_.t_para||3.2),tn=S+(+P_.t_nao||4);
+ for(let k=0;k<4;k++){const t1=S+.2+k*.42;
+  for(let t=t1;t<tn;t+=1.68){tl.set(`#${i}h1_${k}`,{x:330,opacity:1},t);tl.to(`#${i}h1_${k}`,{x:950,duration:1.6,ease:'none'},t);tl.set(`#${i}h1_${k}`,{opacity:0},t+1.6);}
+  for(let t=t1+.2;t<tp;t+=1.68){tl.set(`#${i}h2_${k}`,{x:950,opacity:1},t);tl.to(`#${i}h2_${k}`,{x:330,duration:1.6,ease:'none'},t);tl.set(`#${i}h2_${k}`,{opacity:0},t+1.6);}}
+ for(let k=0;k<4;k++){tl.to(`#${i}h2_${k}`,{opacity:0,duration:.2},tp);tl.to(`#${i}h1_${k}`,{opacity:0,duration:.25},tn);}
+ tl.to(`#${i}via2`,{opacity:.15,duration:.4},tp);pose(b,'bolso',tp,.4);emo(b,'serio',tp);
+ showL(i+'l',S+(+P_.t_rot||1.5));pose(a,'cruz',tn,.45);emo(a,'serio',tn);tl.to(`#${i}v1`,{opacity:.15,duration:.4},tn);};
+/* perseguir quem foge (palitos) + limite */
+SH.persegue=(it,P_,S,D,i)=>{const a=i+'p1',b=i+'p2';
+ mk(it,`<path d="M0,600 H1280" stroke="#2e2a26" stroke-width="3"/>`+P(a,'palito',260,600,1)+P(b,'palito',700,600,1,{mulher:1})+
+  `<path id="${i}lim" d="M560,180 V600" stroke="#d8232a" stroke-width="9" stroke-dasharray="26 16" stroke-linecap="round"/>`+coracao(i+'hc',330,170,2.2,'#d8232a',0)+
+  `<path id="${i}rach" d="M330,140 L322,160 L338,172 L326,196" stroke="#2e2a26" stroke-width="5" fill="none" opacity="0"/>`,lab(i+'l',P_.rotulo,820,170,56,'LIMITES'),.03);
+ gsap.set(`#${i}lim`,{opacity:0});rig(a,1,'alcanca','triste');rig(b,1,'idle','serio');
+ tl.to(`#${b}`,{x:560,duration:D,ease:'none'},S);walk(b,S,S+D,.6,14);
+ const tc=S+(+P_.t_corre||.9);tl.to(`#${a}`,{x:140,duration:1.4,ease:'none'},tc);walk(a,tc,tc+1.4,.4,18);pose(a,'alcanca',tc+1.45,.2);
+ const tr=S+(+P_.t_rom||2.3);tl.to(`#${i}hc`,{opacity:1,duration:.25},tr);tl.to(`#${i}hc path`,{fill:'#bdb5a8',duration:.3},tr+.5);tl.to(`#${i}rach`,{opacity:1,duration:.15},tr+.5);
+ const tlim=S+(+P_.t_lim||3.2);tl.fromTo(`#${i}lim`,{opacity:1,scaleY:0,svgOrigin:'560 600'},{scaleY:1,duration:.45,ease:'power2.out',svgOrigin:'560 600'},tlim);
+ tl.to(`#${i}hc`,{opacity:0,duration:.2},tlim);tl.set(`#${i}rach`,{opacity:0},tlim);showL(i+'l',tlim+.15);pose(a,'idle',tlim+.1,.35);emo(a,'serio',tlim+.1);};
+/* inscreva-se */
+SH.inscreva=(it,P_,S,D,i)=>{const a=i+'leo';
+ mk(it,chao()+blob(430,330,220,'#f0d9c2')+janela(900,130)+planta(1150,600,1)+P(a,'leo',430,600,1.05),
+  `<div id="${i}bt" class="btn" style="left:640px;top:300px">${esc(P_.botao)}</div>`,.04);
+ rig(a,1.05,'aceno','feliz');vivo(a,S,D);tl.to(`#${a}_re`,{rotation:-55,duration:.25,yoyo:true,repeat:Math.max(2,Math.floor(D/.25)-2)},S+.2);
+ tl.fromTo(`#${i}bt`,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.4,ease:'back.out(1.6)'},S+.1);tl.to(`#${i}bt`,{scale:1.06,duration:.35,yoyo:true,repeat:4,ease:'sine.inOut'},S+.6);};
+/* cartão-frase em papel quadriculado */
+SH.frase=(it,P_,S,D,i)=>{
+ const k=P_.destaque||'';
+ mk(it,`<g transform="translate(1150,600)">${'<path d="M0,0 Q-40,-90 -10,-170" stroke="#6f8f55" stroke-width="5" fill="none"/>'+[0,1,2,3,4].map(n=>`<ellipse cx="${-14-n*4}" cy="${-30-n*32}" rx="26" ry="11" fill="#86a868" transform="rotate(${-30+n*8} ${-14-n*4} ${-30-n*32})"/>`).join('')}</g>`,
+  `<div id="${i}p" class="papel"><div style="position:absolute;left:40px;top:-22px;width:28px;height:80px;border:5px solid #9aa3ad;border-radius:14px"></div>
+   <div style="position:absolute;right:30px;bottom:-14px;width:150px;height:38px;background:rgba(240,214,120,.8);transform:rotate(-8deg)"></div>
+   <div id="${i}f1" class="frase" style="top:80px">${hl(P_.l1,k)}</div><div id="${i}f2" class="frase" style="top:180px">${hl(P_.l2,k)}</div><div id="${i}f3" class="frase" style="top:290px;font-size:84px">${hl(P_.l3,k)}</div></div>`,.04);
+ tl.fromTo(`#${i}p`,{opacity:0,y:30,rotation:-2},{opacity:1,y:0,rotation:-1,duration:.45,ease:'power2.out'},S);
+ [[1,.2],[2,+P_.t2||1.1],[3,+P_.t3||2.3]].forEach(([n,t])=>tl.fromTo(`#${i}f${n}`,{opacity:0,y:16},{opacity:1,y:0,duration:.35},S+t));
+ tl.fromTo(`#${i}f3 b`,{color:'#1f2f57'},{color:'#d8232a',duration:.3},S+(+P_.t3||2.3)+.4);};
+/* eu / nós */
+SH.eunos=(it,P_,S,D,i)=>{const a=i+'leo',b=i+'ana';
+ const mesa=`<g transform="translate(640,600)"><rect x="-8" y="-150" width="16" height="150" fill="#8a6a4e" ${st}/><path d="M-40,0 H40" ${st}/><ellipse cx="0" cy="-152" rx="120" ry="16" fill="#c9a27a" ${st}/>
+  <path d="M-62,-196 h32 v28 a16,10 0 0 1 -32,0 Z" fill="#fff" ${st}/><path d="M30,-196 h32 v28 a16,10 0 0 1 -32,0 Z" fill="#fff" ${st}/>
+  <path id="${i}vap" d="M-46,-206 q-8,-14 0,-26 q8,-12 0,-24 M46,-206 q-8,-14 0,-26 q8,-12 0,-24" stroke="#b9ad9c" stroke-width="4" fill="none" stroke-linecap="round"/></g>`;
+ mk(it,chao()+janela(140,120,170,200)+planta(1150,600,1)+`<g id="${i}c1" opacity="0"><circle cx="530" cy="390" r="250" fill="#7fa6c9" fill-opacity=".22" stroke="#1d3a6e" stroke-width="6"/></g>
+  <g id="${i}c2" opacity="0"><circle cx="750" cy="390" r="250" fill="#e58a9a" fill-opacity=".22" stroke="#d8232a" stroke-width="6"/></g>`+
+  mesa+P(a,'leo',450,600,1)+P(b,'ana',830,600,1,{flip:1}),
+  lab(i+'nos','NÓS',640,250,64)+lab(i+'eu','EU',360,250,72)+lab(i+'eu2','EU',920,250,72),.05);
+ rig(a,1,'segura','feliz');rig(b,1,'segura','feliz');vivo(a,S,D);vivo(b,S,D,1.2);
+ tl.to(`#${i}vap`,{y:-10,opacity:.3,duration:.8,yoyo:true,repeat:Math.floor(D/.8)},S);
+ const tc=S+(+P_.t_circ||1.9);tl.fromTo([`#${i}c1`,`#${i}c2`],{opacity:0,scale:.6},{opacity:1,scale:1,duration:.55,ease:'back.out(1.3)',transformOrigin:'50% 50%'},tc);
+ showL(i+'nos',S+(+P_.t_nos||3.7));const te=S+(+P_.t_eu||4.5);showL(i+'eu',te);showL(i+'eu2',te+.15);
+ tl.to(`#${i}c1 circle`,{attr:{'fill-opacity':.45},duration:.4},te);tl.to(`#${i}c2 circle`,{attr:{'fill-opacity':.45},duration:.4},te+.15);};
+/* ---------- montar ---------- */
+for(const it of EDIT.items){ if(it.hidden||it.type!=='scene'||it.by!=='template') continue; const p=it.props||{}; const f=SH[p.scene]; if(f) f(it,p.params||{},+it.start,+it.dur,it.id+'_'); }
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

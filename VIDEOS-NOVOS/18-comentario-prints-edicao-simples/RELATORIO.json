@@ -1,0 +1,13 @@
+{
+ "video": 18,
+ "estilo": "18-comentario-prints-edicao-simples",
+ "inicio": "2026-10-22T14:24:41-03:00",
+ "fim": "2026-10-22T14:33:00-03:00",
+ "minutos": 8.3,
+ "render_segundos": 47,
+ "observacoes": "2 renders (2º só corrigiu cor do marca-texto que sumia antes da varredura). Fundo/fotos Pixabay (creditos em img/creditos_pixabay.json). Prints HTML genéricos com perfis fictícios. Cenas novas cp_post/cp_topo/cp_frase/cp_versus/cp_status adicionadas em EDITOR VIDEOS/templates/scenes (nenhum arquivo existente alterado). Sem música, whoosh 0.1.",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "preencher-dados: Ollama gera roteiro + lista de prints/frases com destaques; whisper dá os tempos; edit.json só com cp_post/cp_frase/cp_versus sobre fundo fixo. Render ~50 s/min de vídeo; 30 min ≈ 25-30 min de render + 4-6 fotos Pixabay."
+ }
+}

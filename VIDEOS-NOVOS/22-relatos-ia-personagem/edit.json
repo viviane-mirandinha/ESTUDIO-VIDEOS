@@ -1,0 +1,313 @@
+{
+ "version": 1,
+ "name": "22 - RELATOS IA PERSONAGEM - O homem que plantou tomates no deserto e foi chamado de louco",
+ "estilo": "22-relatos-ia-personagem",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#1a1208"
+ },
+ "duration": 47.64,
+ "template": "generic",
+ "fonts": {
+  "Cormorant Garamond": "fonts/CormorantGaramond-700.ttf"
+ },
+ "referencia": {
+  "canal": "Bonafillo Relatos / Silas Mercer",
+  "canal_url": "https://www.youtube.com/@bonafillorelatos",
+  "video": "https://youtu.be/Q45GcjC5Uas",
+  "titulo": "They Called Him Crazy for Planting Tomatoes Where They Would Never Grow",
+  "nota": "personagem fixo: imagem-mestra img/mestre.jpg (Flux Kontext local t2i seed 2202 + restyle HQ), cenas via Kontext ReferenceLatent seed 2222; ver ESTILOS-NOVOS/22-relatos-ia-personagem/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundoA",
+   "name": "Ilustrações A"
+  },
+  {
+   "id": "fundoB",
+   "name": "Ilustrações B (crossfade)"
+  },
+  {
+   "id": "efeitos",
+   "name": "Filtro/vinheta/grão"
+  },
+  {
+   "id": "textos",
+   "name": "CTA"
+  }
+ ],
+ "items": [
+  {
+   "id": "p01",
+   "type": "image",
+   "track": "fundoA",
+   "label": "HOMEM chega ao sertão com mudas e baldes",
+   "start": 0,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c01_chegada.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p02",
+   "type": "image",
+   "track": "fundoB",
+   "label": "solo de pedra, sol, água na caneca",
+   "start": 4.6,
+   "dur": 5.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/d02_solo.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p03",
+   "type": "image",
+   "track": "fundoA",
+   "label": "HOMEM enterra os baldes",
+   "start": 8.9,
+   "dur": 4.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c03_enterra.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p04",
+   "type": "image",
+   "track": "fundoB",
+   "label": "HOMEM palha+esterco, planta no centro",
+   "start": 12.5,
+   "dur": 3.75,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c04_palha.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p05",
+   "type": "image",
+   "track": "fundoA",
+   "label": "balde com palha úmida",
+   "start": 15.45,
+   "dur": 4.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/d05_umidade.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p06",
+   "type": "image",
+   "track": "fundoB",
+   "label": "vizinhos riem do HOMEM",
+   "start": 19.35,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c06_vizinhos.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p07",
+   "type": "image",
+   "track": "fundoA",
+   "label": "primeira flor amarela",
+   "start": 21.1,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/d07_flor.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p08",
+   "type": "image",
+   "track": "fundoB",
+   "label": "HOMEM colhe tomates, mato cinza",
+   "start": 23.7,
+   "dur": 5.75,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c08_colheita.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p09",
+   "type": "image",
+   "track": "fundoA",
+   "label": "HOMEM pensativo - o segredo",
+   "start": 28.65,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c09_segredo.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p10",
+   "type": "image",
+   "track": "fundoB",
+   "label": "HOMEM rega gota a gota de madrugada",
+   "start": 30.6,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c10_madrugada.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p11",
+   "type": "image",
+   "track": "fundoA",
+   "label": "HOMEM na feira da cidade",
+   "start": 35.2,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c11_feira.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p12",
+   "type": "image",
+   "track": "fundoB",
+   "label": "HOMEM olha pra câmera (CTA)",
+   "start": 38.2,
+   "dur": 4.75,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c12_cta.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p13",
+   "type": "image",
+   "track": "fundoA",
+   "label": "HOMEM diante do deserto - final",
+   "start": 42.15,
+   "dur": 5.49,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c13_final.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "cta",
+   "type": "text",
+   "track": "textos",
+   "label": "inscreva-se (fala 41.8s)",
+   "start": 41.6,
+   "dur": 1.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Inscreva-se",
+    "x": 640,
+    "y": 630,
+    "w": 520,
+    "size": 56,
+    "color": "#fff4dc",
+    "font": "Cormorant Garamond",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(40,22,8,.62)",
+    "pad": 14,
+    "radius": 12,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fx",
+   "type": "html",
+   "track": "efeitos",
+   "label": "filtro quente + vinheta + grão",
+   "start": 0,
+   "dur": 47.64,
+   "props": {
+    "html": "<div class='fx warm'></div><div class='fx vin'></div><svg class='fx grain' viewBox='0 0 1280 720'><filter id='g22'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='1280' height='720' filter='url(#g22)'/></svg>",
+    "css": ".fx{position:absolute;inset:0;width:1280px;height:720px;pointer-events:none}.warm{background:rgba(255,150,60,.10);mix-blend-mode:soft-light}.vin{background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(20,8,0,.55) 100%)}.grain{opacity:.10;mix-blend-mode:overlay}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  }
+ ]
+}

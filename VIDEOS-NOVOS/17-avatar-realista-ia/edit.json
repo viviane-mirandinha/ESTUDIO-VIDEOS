@@ -1,0 +1,744 @@
+{
+ "version": 1,
+ "name": "17 - AVATAR REALISTA IA - Ela pagou 20 dolares numa joia que valia uma fortuna",
+ "estilo": "17-avatar-realista-ia",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#101010"
+ },
+ "duration": 52.9,
+ "template": "generic",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "Antiques Gallery / Healoloogy / Nina Cooks",
+  "canal_url": "https://www.youtube.com/@Healoloogy",
+  "video": "https://youtu.be/mK-bVg2Sk10",
+  "titulo": "Antiques Roadshow (réplica IA) — joias avaliadas",
+  "nota": "avatar realista consistente (imagem-mestra img/avatar-mestre.jpg, seed 1717); ver ESTILOS-NOVOS/17-avatar-realista-ia/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Planos avatar / detalhe"
+  },
+  {
+   "id": "visual",
+   "name": "Valores / letras"
+  },
+  {
+   "id": "textos",
+   "name": "Títulos / selo"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "p01",
+   "type": "image",
+   "track": "fundo",
+   "label": "AVATAR feira - paga 20 dolares",
+   "start": 0,
+   "dur": 3.3,
+   "props": {
+    "src": "img/av_feira.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p02",
+   "type": "image",
+   "track": "fundo",
+   "label": "detalhe banca bijuteria",
+   "start": 3.3,
+   "dur": 3.42,
+   "props": {
+    "src": "img/d_banca.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "p03",
+   "type": "image",
+   "track": "fundo",
+   "label": "AVATAR em casa com lupa",
+   "start": 6.72,
+   "dur": 3.38,
+   "props": {
+    "src": "img/av_lupa.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.09
+   }
+  },
+  {
+   "id": "p04",
+   "type": "image",
+   "track": "fundo",
+   "label": "macro puncao",
+   "start": 10.1,
+   "dur": 3.02,
+   "props": {
+    "src": "img/d_puncao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "p05",
+   "type": "image",
+   "track": "fundo",
+   "label": "macro puncao (letras)",
+   "start": 13.12,
+   "dur": 4.22,
+   "props": {
+    "src": "img/d_puncao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "p06",
+   "type": "image",
+   "track": "fundo",
+   "label": "diamante de transicao",
+   "start": 17.34,
+   "dur": 5.86,
+   "props": {
+    "src": "img/d_diamante.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "p07",
+   "type": "image",
+   "track": "fundo",
+   "label": "certificado falso",
+   "start": 23.2,
+   "dur": 3.75,
+   "props": {
+    "src": "img/d_certificado.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "p08",
+   "type": "image",
+   "track": "fundo",
+   "label": "AVATAR + avaliador NY",
+   "start": 26.95,
+   "dur": 3.65,
+   "props": {
+    "src": "img/av_leilao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p09",
+   "type": "image",
+   "track": "fundo",
+   "label": "montagem original",
+   "start": 30.6,
+   "dur": 2.8,
+   "props": {
+    "src": "img/d_garras.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "p10",
+   "type": "image",
+   "track": "fundo",
+   "label": "AVATAR reacao valor",
+   "start": 33.4,
+   "dur": 5.46,
+   "props": {
+    "src": "img/av_choque.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "p11",
+   "type": "image",
+   "track": "fundo",
+   "label": "sala de leilao",
+   "start": 38.86,
+   "dur": 2.14,
+   "props": {
+    "src": "img/d_leilao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "p12",
+   "type": "image",
+   "track": "fundo",
+   "label": "AVATAR CTA",
+   "start": 41.0,
+   "dur": 5.2,
+   "props": {
+    "src": "img/av_cta.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "p13",
+   "type": "image",
+   "track": "fundo",
+   "label": "relogio proximo video",
+   "start": 46.2,
+   "dur": 6.7,
+   "props": {
+    "src": "img/d_relogio.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "selo",
+   "type": "text",
+   "track": "textos",
+   "label": "selo canal",
+   "start": 0,
+   "dur": 52.9,
+   "props": {
+    "text": "OLHO CLÍNICO",
+    "x": 150,
+    "y": 46,
+    "w": 260,
+    "size": 26,
+    "color": "#ffd23f",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 10,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "let0",
+   "type": "text",
+   "track": "visual",
+   "label": "letra C",
+   "start": 14.16,
+   "dur": 3.14,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "C",
+    "x": 440,
+    "y": 300,
+    "w": 180,
+    "size": 150,
+    "color": "#ffd23f",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 7,
+    "shadow": true
+   }
+  },
+  {
+   "id": "let1",
+   "type": "text",
+   "track": "visual",
+   "label": "letra A",
+   "start": 14.6,
+   "dur": 2.7,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "A",
+    "x": 640,
+    "y": 300,
+    "w": 180,
+    "size": 150,
+    "color": "#ffd23f",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 7,
+    "shadow": true
+   }
+  },
+  {
+   "id": "let2",
+   "type": "text",
+   "track": "visual",
+   "label": "letra R",
+   "start": 14.74,
+   "dur": 2.56,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "R",
+    "x": 840,
+    "y": 300,
+    "w": 180,
+    "size": 150,
+    "color": "#ffd23f",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 7,
+    "shadow": true
+   }
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "label": "CARTIER · INÍCIO DO SÉCULO XX",
+   "start": 15.0,
+   "dur": 2.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CARTIER · INÍCIO DO SÉCULO XX",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "CARTIER"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t2",
+   "type": "text",
+   "track": "textos",
+   "label": "DIAMANTE DE TRANSIÇÃO",
+   "start": 18.6,
+   "dur": 2.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "DIAMANTE DE TRANSIÇÃO",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "DIAMANTE"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t3",
+   "type": "text",
+   "track": "textos",
+   "label": "COR J · PUREZA VS2",
+   "start": 21.15,
+   "dur": 2.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "COR J · PUREZA VS2",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "J",
+     "VS2"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "CERTIFICADO FALSO",
+   "start": 24.28,
+   "dur": 2.62,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CERTIFICADO FALSO",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "FALSO"
+    ],
+    "hl_color": "#ff4b3e",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t5",
+   "type": "text",
+   "track": "textos",
+   "label": "CASA DE LEILÕES · NOVA YORK",
+   "start": 28.2,
+   "dur": 2.35,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CASA DE LEILÕES · NOVA YORK",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t6",
+   "type": "text",
+   "track": "textos",
+   "label": "MONTAGEM ORIGINAL",
+   "start": 30.9,
+   "dur": 2.45,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "MONTAGEM ORIGINAL",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "ORIGINAL"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "v1",
+   "type": "scene",
+   "track": "visual",
+   "label": "valor US$ 180 MIL",
+   "start": 35.0,
+   "dur": 1.8,
+   "props": {
+    "scene": "valor-avaliacao",
+    "params": {
+     "de": "US$ 180 MIL",
+     "conector": "a",
+     "ate": "",
+     "cor": "#2ee04f",
+     "tam": 110,
+     "y": 42,
+     "sub": "VALOR DE MERCADO HOJE",
+     "cor_sub": "#ffffff"
+    }
+   }
+  },
+  {
+   "id": "v2",
+   "type": "scene",
+   "track": "visual",
+   "label": "valor US$ 20",
+   "start": 36.84,
+   "dur": 2.0,
+   "props": {
+    "scene": "valor-avaliacao",
+    "params": {
+     "de": "US$ 20",
+     "conector": "→",
+     "ate": "US$ 180 MIL",
+     "cor": "#2ee04f",
+     "tam": 96,
+     "y": 42,
+     "sub": "9 MIL VEZES O QUE ELA PAGOU",
+     "cor_sub": "#ffffff"
+    }
+   }
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "label": "LEILÃO NO MÊS QUE VEM",
+   "start": 39.18,
+   "dur": 1.77,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "LEILÃO NO MÊS QUE VEM",
+    "x": 640,
+    "y": 560,
+    "w": 1180,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "LEILÃO"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "t8",
+   "type": "text",
+   "track": "textos",
+   "label": "INSCREVA-SE",
+   "start": 45.38,
+   "dur": 0.82,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 640,
+    "y": 330,
+    "w": 1180,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "#d61f26",
+    "pad": 14,
+    "radius": 10,
+    "italic": true
+   }
+  },
+  {
+   "id": "t9",
+   "type": "text",
+   "track": "textos",
+   "label": "PRÓXIMO VÍDEO",
+   "start": 46.5,
+   "dur": 3.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PRÓXIMO VÍDEO",
+    "x": 640,
+    "y": 120,
+    "w": 1180,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Arial Black",
+    "weight": 900,
+    "align": "center",
+    "stroke": "#0a0a0a",
+    "stroke_w": 5,
+    "shadow": true,
+    "highlight": [
+     "PRÓXIMO"
+    ],
+    "hl_color": "#ffd23f",
+    "upper": true,
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "italic": true
+   }
+  },
+  {
+   "id": "v3",
+   "type": "scene",
+   "track": "visual",
+   "label": "valor US$ 5",
+   "start": 49.74,
+   "dur": 3.16,
+   "props": {
+    "scene": "valor-avaliacao",
+    "params": {
+     "de": "US$ 5",
+     "conector": "→",
+     "ate": "MEIO MILHÃO",
+     "cor": "#2ee04f",
+     "tam": 92,
+     "y": 42,
+     "sub": "RELÓGIO DE PULSO",
+     "cor_sub": "#ffffff"
+    }
+   }
+  },
+  {
+   "id": "leg0",
+   "type": "caption",
+   "track": "legenda",
+   "label": "legenda",
+   "start": 0,
+   "dur": 34.95,
+   "props": {
+    "words_file": "legenda.json",
+    "per_group": 3,
+    "x": 640,
+    "y": 655,
+    "size": 48,
+    "color": "#ffe14d",
+    "dim": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "stroke": "#000000",
+    "stroke_w": 4,
+    "shadow": true,
+    "bg": ""
+   }
+  },
+  {
+   "id": "leg1",
+   "type": "caption",
+   "track": "legenda",
+   "label": "legenda",
+   "start": 41.0,
+   "dur": 4.3,
+   "props": {
+    "words_file": "legenda.json",
+    "per_group": 3,
+    "x": 640,
+    "y": 655,
+    "size": 48,
+    "color": "#ffe14d",
+    "dim": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "stroke": "#000000",
+    "stroke_w": 4,
+    "shadow": true,
+    "bg": ""
+   }
+  }
+ ]
+}

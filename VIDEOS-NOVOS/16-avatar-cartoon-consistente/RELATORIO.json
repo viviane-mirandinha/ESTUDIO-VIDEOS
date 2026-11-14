@@ -1,0 +1,13 @@
+{
+ "video": 16,
+ "estilo": "16-avatar-cartoon-consistente",
+ "inicio": "2026-10-22T14:10:24.1133622-03:00",
+ "fim": "2026-10-22T14:24:04.466501-03:00",
+ "minutos": 13.7,
+ "render_segundos": 40,
+ "observacoes": "Avatar = rig SVG único (avatar.js -> img/avatar-mestre.svg + avatar-expressoes.svg), 12 expressões, juntas animadas em GSAP (andar, acenar, sentar, cair, colher). 19 cenas + HUD hora/altura + 5 cartões HORA, template local. Zero IA, zero imagem baixada, sem música/SFX. whisper GPU ok. 1 render sem retry.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "rig e biblioteca de cenários prontos: Ollama escreve {cena, params, tempos}; render ~40 s/min; gargalo é criar gags/cenários novos por roteiro"
+ }
+}

@@ -1,0 +1,891 @@
+{
+ "version": 1,
+ "name": "20 - ANIME FITNESS - Como forçar seus braços magros a crescer",
+ "estilo": "20-anime-fitness",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 50.5,
+ "template": "generic",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf"
+ },
+ "referencia": {
+  "canal": "ryoga.training",
+  "canal_url": "https://www.youtube.com/@ryoga.training",
+  "video": "https://youtu.be/Ujdz-hT6lnQ",
+  "titulo": "How To Force Your Skinny Arms To Grow",
+  "nota": "personagem anime ORIGINAL (img/mestre.jpg, Flux Kontext local seed 44/2020); musculo = mascara nossa (img/*_mask.png) extraida da versao pintada; ver ESTILOS-NOVOS/20-anime-fitness"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Quadros anime / cenas"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "p01",
+   "type": "image",
+   "track": "fundo",
+   "label": "flex - bracos nao crescem",
+   "start": 0,
+   "dur": 2.0,
+   "props": {
+    "src": "img/a_flex.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f01_bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "preto",
+   "start": 2.0,
+   "dur": 1.5,
+   "props": {
+    "html": "<div></div>",
+    "css": "#f01_bg div{position:absolute;inset:0;background:#000}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "f01",
+   "type": "text",
+   "track": "textos",
+   "label": "você treina ego, não músculo.",
+   "start": 2.0,
+   "dur": 1.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "você treina ego, não músculo.",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 52,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "ERRADO balanca na rosca",
+   "start": 3.5,
+   "dur": 2.6,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_balanco.jpg",
+     "zoom": 0.05,
+     "shake": 7,
+     "speedlines": 0,
+     "marca": "x"
+    }
+   }
+  },
+  {
+   "id": "t02",
+   "type": "text",
+   "track": "textos",
+   "label": "pare de balançar o corpo",
+   "start": 3.56,
+   "dur": 2.49,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "pare de balançar o corpo",
+    "x": 200,
+    "y": 470,
+    "w": 360,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "biceps destacado",
+   "start": 6.1,
+   "dur": 2.35,
+   "props": {
+    "scene": "musculo-destaque",
+    "params": {
+     "img": "img/a_biceps.jpg",
+     "mascara": "img/a_biceps_mask.png",
+     "zoom": 0.04,
+     "rotulos": [
+      {
+       "t": "Bíceps",
+       "x": 591,
+       "y": 208,
+       "lx": 361,
+       "ly": 138
+      }
+     ],
+     "tam": 34
+    }
+   }
+  },
+  {
+   "id": "t03",
+   "type": "text",
+   "track": "textos",
+   "label": "não faz o trabalho sozinho",
+   "start": 6.3,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "não faz o trabalho sozinho",
+    "x": 1040,
+    "y": 420,
+    "w": 420,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "rosca certa cotovelo colado",
+   "start": 8.45,
+   "dur": 4.45,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_rosca.jpg",
+     "zoom": 0.07,
+     "shake": 0,
+     "speedlines": 0,
+     "marca": "ok"
+    }
+   }
+  },
+  {
+   "id": "t04",
+   "type": "text",
+   "track": "textos",
+   "label": "cotovelos junto às costelas",
+   "start": 8.5,
+   "dur": 2.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "cotovelos junto às costelas",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "t05",
+   "type": "text",
+   "track": "textos",
+   "label": "suba controlado ↑ e aperte no topo",
+   "start": 10.74,
+   "dur": 2.11,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "suba controlado ↑ e aperte no topo",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3 x 12 reps",
+   "start": 12.9,
+   "dur": 2.9,
+   "props": {
+    "scene": "contador-reps",
+    "params": {
+     "series": "3",
+     "reps": "12",
+     "sub": "cadência 2-0-2"
+    }
+   }
+  },
+  {
+   "id": "p07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "ERRADO triceps cotovelo aberto",
+   "start": 15.8,
+   "dur": 2.9,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_tri_errado.jpg",
+     "zoom": 0.05,
+     "shake": 5,
+     "speedlines": 0,
+     "marca": "x"
+    }
+   }
+  },
+  {
+   "id": "t06",
+   "type": "text",
+   "track": "textos",
+   "label": "erro: abrir os cotovelos",
+   "start": 16.9,
+   "dur": 1.75,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "erro: abrir os cotovelos",
+    "x": 640,
+    "y": 80,
+    "w": 1100,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "triceps certo cotovelo pro teto",
+   "start": 18.7,
+   "dur": 2.5,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_tri_certo.jpg",
+     "zoom": 0.05,
+     "shake": 0,
+     "speedlines": 0,
+     "marca": "ok"
+    }
+   }
+  },
+  {
+   "id": "t07",
+   "type": "text",
+   "track": "textos",
+   "label": "cotovelos apontados ao teto",
+   "start": 19.38,
+   "dur": 1.77,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "cotovelos apontados ao teto",
+    "x": 640,
+    "y": 80,
+    "w": 1100,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "triceps destacado",
+   "start": 21.2,
+   "dur": 2.4,
+   "props": {
+    "scene": "musculo-destaque",
+    "params": {
+     "img": "img/a_costas.jpg",
+     "mascara": "img/a_costas_mask.png",
+     "zoom": 0.04,
+     "rotulos": [
+      {
+       "t": "Tríceps",
+       "x": 562,
+       "y": 201,
+       "lx": 362,
+       "ly": 141
+      },
+      {
+       "t": "Tríceps",
+       "x": 714,
+       "y": 197,
+       "lx": 914,
+       "ly": 137
+      }
+     ],
+     "tam": 34
+    }
+   }
+  },
+  {
+   "id": "t08",
+   "type": "text",
+   "track": "textos",
+   "label": "desça até a testa e estenda sem travar",
+   "start": 21.24,
+   "dur": 2.31,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "desça até a testa e estenda sem travar",
+    "x": 640,
+    "y": 672,
+    "w": 1100,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "rgba(0,0,0,.7)",
+    "upper": false,
+    "pad": 12,
+    "radius": 8
+   }
+  },
+  {
+   "id": "p10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3 x 12 reps",
+   "start": 23.6,
+   "dur": 1.4,
+   "props": {
+    "scene": "contador-reps",
+    "params": {
+     "series": "3",
+     "reps": "12",
+     "sub": ""
+    }
+   }
+  },
+  {
+   "id": "p11",
+   "type": "image",
+   "track": "fundo",
+   "label": "segredo",
+   "start": 25.0,
+   "dur": 1.9,
+   "props": {
+    "src": "img/a_segredo.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t09",
+   "type": "text",
+   "track": "textos",
+   "label": "o segredo que ninguém te conta",
+   "start": 25.08,
+   "dur": 1.77,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "o segredo que ninguém te conta",
+    "x": 210,
+    "y": 380,
+    "w": 380,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "braquial + antebraco",
+   "start": 26.9,
+   "dur": 1.4,
+   "props": {
+    "scene": "musculo-destaque",
+    "params": {
+     "img": "img/a_braco.jpg",
+     "mascara": "img/a_braco_mask.png",
+     "zoom": 0.04,
+     "rotulos": [
+      {
+       "t": "Braquial",
+       "x": 698,
+       "y": 249,
+       "lx": 938,
+       "ly": 189
+      },
+      {
+       "t": "Antebraço",
+       "x": 593,
+       "y": 559,
+       "lx": 353,
+       "ly": 599
+      }
+     ],
+     "tam": 34
+    }
+   }
+  },
+  {
+   "id": "p13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "rosca martelo",
+   "start": 28.3,
+   "dur": 3.35,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_martelo.jpg",
+     "zoom": 0.06,
+     "shake": 0,
+     "speedlines": 0,
+     "marca": "ok"
+    }
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "rosca martelo",
+   "start": 28.34,
+   "dur": 1.26,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "rosca martelo",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "pegada neutra, cotovelos parados",
+   "start": 29.6,
+   "dur": 2.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "pegada neutra, cotovelos parados",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3 x 12 reps",
+   "start": 31.65,
+   "dur": 1.5,
+   "props": {
+    "scene": "contador-reps",
+    "params": {
+     "series": "3",
+     "reps": "12",
+     "sub": ""
+    }
+   }
+  },
+  {
+   "id": "p15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "2x por semana",
+   "start": 33.15,
+   "dur": 2.25,
+   "props": {
+    "scene": "semana-dias",
+    "params": {
+     "dias": "D,S,T,Q,Q,S,S",
+     "marcados": "1,4",
+     "rotulo": "2x por semana"
+    }
+   }
+  },
+  {
+   "id": "p16",
+   "type": "image",
+   "track": "fundo",
+   "label": "dormir 8h",
+   "start": 35.4,
+   "dur": 1.1,
+   "props": {
+    "src": "img/a_dormir.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "durma 8 horas",
+   "start": 35.46,
+   "dur": 0.99,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "durma 8 horas",
+    "x": 640,
+    "y": 90,
+    "w": 1100,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p17",
+   "type": "image",
+   "track": "fundo",
+   "label": "proteina",
+   "start": 36.5,
+   "dur": 2.0,
+   "props": {
+    "src": "img/a_comer.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t13",
+   "type": "text",
+   "track": "textos",
+   "label": "proteína em toda refeição",
+   "start": 36.58,
+   "dur": 1.87,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "proteína em toda refeição",
+    "x": 640,
+    "y": 80,
+    "w": 1100,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p18",
+   "type": "scene",
+   "track": "fundo",
+   "label": "manga apertando",
+   "start": 38.5,
+   "dur": 3.6,
+   "props": {
+    "scene": "anime-quadro",
+    "params": {
+     "img": "img/a_camisa.jpg",
+     "zoom": 0.07,
+     "shake": 0,
+     "speedlines": 22,
+     "marca": ""
+    }
+   }
+  },
+  {
+   "id": "t14",
+   "type": "text",
+   "track": "textos",
+   "label": "em 8 semanas",
+   "start": 38.56,
+   "dur": 2.04,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "em 8 semanas",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "t15",
+   "type": "text",
+   "track": "textos",
+   "label": "a manga da camisa vai apertar",
+   "start": 40.6,
+   "dur": 1.45,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "a manga da camisa vai apertar",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p19",
+   "type": "scene",
+   "track": "fundo",
+   "label": "cotovelo dor",
+   "start": 42.1,
+   "dur": 3.25,
+   "props": {
+    "scene": "musculo-destaque",
+    "params": {
+     "img": "img/a_cotovelo.jpg",
+     "mascara": "img/a_cotovelo_mask.png",
+     "zoom": 0.04,
+     "rotulos": [
+      {
+       "t": "Cotovelo",
+       "x": 535,
+       "y": 290,
+       "lx": 305,
+       "ly": 210
+      }
+     ],
+     "tam": 34
+    }
+   }
+  },
+  {
+   "id": "t16",
+   "type": "text",
+   "track": "textos",
+   "label": "doeu? baixe a carga",
+   "start": 43.6,
+   "dur": 1.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "doeu? baixe a carga",
+    "x": 1010,
+    "y": 380,
+    "w": 470,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p20",
+   "type": "image",
+   "track": "fundo",
+   "label": "CTA inscreva-se",
+   "start": 45.35,
+   "dur": 2.05,
+   "props": {
+    "src": "img/a_aponta.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t17",
+   "type": "text",
+   "track": "textos",
+   "label": "inscreva-se",
+   "start": 45.42,
+   "dur": 1.93,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "inscreva-se",
+    "x": 230,
+    "y": 380,
+    "w": 420,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  },
+  {
+   "id": "p21",
+   "type": "image",
+   "track": "fundo",
+   "label": "treino de pernas",
+   "start": 47.4,
+   "dur": 3.1,
+   "props": {
+    "src": "img/a_agacha.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t18",
+   "type": "text",
+   "track": "textos",
+   "label": "treino completo de pernas",
+   "start": 47.6,
+   "dur": 2.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "treino completo de pernas",
+    "x": 1100,
+    "y": 420,
+    "w": 330,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "stroke": "",
+    "shadow": true,
+    "bg": "",
+    "upper": false
+   }
+  }
+ ]
+}

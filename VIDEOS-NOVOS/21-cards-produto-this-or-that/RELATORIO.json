@@ -1,0 +1,13 @@
+{
+ "video": 21,
+ "estilo": "21-cards-produto-this-or-that",
+ "inicio": "2026-10-22T14:44:22-03:00",
+ "fim": "2026-10-22T14:56:40-03:00",
+ "minutos": 12.3,
+ "render_segundos": 50,
+ "observacoes": "85 s, 19 pares this-or-that. 38 produtos genéricos via Flux Kontext local (~8 s/img, ~6 min total; 8 refeitos: logo no monitor/cadeira, mouse vertical, gaveta, tapete, suporte, organizador). Cenas novas tot_par e tot_recap em EDITOR VIDEOS/templates/scenes. Sem música/SFX/legenda. 2 renders (62 s + 50 s). p04b refeito no fim não foi conferido visualmente (só pixel).",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "Lista {pergunta,A,B,escolha,motivo} do Ollama + 2 imagens Flux por par (~16 s/par; 30 min ≈ 400 pares ≈ 1,8 h só de Flux, ou reaproveitar banco de PNGs); render ~35 s/min de vídeo; montagem 100% automática (montar_edit.py)"
+ }
+}

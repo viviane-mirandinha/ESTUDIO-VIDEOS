@@ -1,0 +1,13 @@
+{
+ "video": 19,
+ "estilo": "19-psicologia-flat-ilustrada",
+ "inicio": "2026-10-22T14:32:57-03:00",
+ "fim": "2026-10-22T14:43:37-03:00",
+ "minutos": 10.7,
+ "render_segundos": 31,
+ "observacoes": "Elenco = rig SVG único (rig.js: LEO, ANA, PALITO) com juntas GSAP; 14 cenas template local + 2 legendas caption (legenda.json). Zero IA/imagem baixada, sem música/SFX. Whisper GPU: com initial_prompt alucinou (repetiu frase), refeito sem prompt e condition_on_previous_text=False. 2 renders (1º: tela vazia no frame 0, corações da via de mão dupla invisíveis, brilho/sol fora do lugar por transformOrigin em <g> com transform; corrigido com wrapper translate + svgOrigin). Voz tem 48,2 s.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "rig do elenco + biblioteca de cenas (sinal, frase, palito, balança, espelho, eu/nós) reaproveitáveis; Ollama escolhe {cena, params, tempos}; render ~40 s/min; gargalo = cenas/gags novos por roteiro"
+ }
+}

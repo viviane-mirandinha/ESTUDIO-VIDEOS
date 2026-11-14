@@ -1,0 +1,627 @@
+{
+ "version": 1,
+ "name": "21 - CARDS PRODUTO THIS OR THAT - Isso ou aquilo monte seu setup de estudos",
+ "estilo": "21-cards-produto-this-or-that",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#f4f0ea"
+ },
+ "duration": 85.0,
+ "template": "generic",
+ "fonts": {
+  "Montserrat": "fonts/Montserrat-Bold.ttf",
+  "GeorgiaBI": "fonts/georgiaz.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "visual",
+   "name": "Cards this or that"
+  },
+  {
+   "id": "textos",
+   "name": "Textos / CTA"
+  }
+ ],
+ "referencia": {
+  "canal": "YourVibeChoice",
+  "canal_url": "https://www.youtube.com/@YourVibeChoice",
+  "video": "https://youtu.be/ubRkkpLfIHU",
+  "titulo": "This or That: Build Your Dream Fall Shopping!",
+  "nota": "cards this-or-that em fundo papel com rabiscos vermelhos; 2a ref: @deskstandard (narração calma)"
+ },
+ "items": [
+  {
+   "id": "fundo",
+   "type": "image",
+   "track": "fundo",
+   "label": "Fundo papel",
+   "start": 0,
+   "dur": 85.0,
+   "props": {
+    "src": "img/fundo.svg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "none"
+   }
+  },
+  {
+   "id": "par01",
+   "type": "scene",
+   "track": "visual",
+   "label": "01 Mesa ou escrivaninha?",
+   "start": 0.0,
+   "dur": 2.16,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Mesa ou escrivaninha?",
+     "n": "1/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p01a.jpg",
+     "a_rot": "Mesa",
+     "b_img": "img/p01b.jpg",
+     "b_rot": "Escrivaninha",
+     "escolha": "a",
+     "t_resp": 1.44,
+     "detalhe": "",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par02",
+   "type": "scene",
+   "track": "visual",
+   "label": "02 Cadeira gamer ou ergonômica?",
+   "start": 2.16,
+   "dur": 3.24,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Cadeira gamer ou ergonômica?",
+     "n": "2/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p02a.jpg",
+     "a_rot": "Gamer",
+     "b_img": "img/p02b.jpg",
+     "b_rot": "Ergonômica",
+     "escolha": "b",
+     "t_resp": 2.34,
+     "detalhe": "",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par03",
+   "type": "scene",
+   "track": "visual",
+   "label": "03 Monitor único ou duplo?",
+   "start": 5.4,
+   "dur": 2.68,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Monitor único ou duplo?",
+     "n": "3/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p03a.jpg",
+     "a_rot": "Único",
+     "b_img": "img/p03b.jpg",
+     "b_rot": "Duplo",
+     "escolha": "b",
+     "t_resp": 1.92,
+     "detalhe": "",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par04",
+   "type": "scene",
+   "track": "visual",
+   "label": "04 Notebook aberto ou fechado?",
+   "start": 8.08,
+   "dur": 4.0,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Notebook aberto ou fechado?",
+     "n": "4/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p04a.jpg",
+     "a_rot": "Aberto",
+     "b_img": "img/p04b.jpg",
+     "b_rot": "Fechado",
+     "escolha": "b",
+     "t_resp": 2.2,
+     "detalhe": "modo clamshell",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par05",
+   "type": "scene",
+   "track": "visual",
+   "label": "05 Teclado mecânico ou membrana?",
+   "start": 12.08,
+   "dur": 4.36,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Teclado mecânico ou membrana?",
+     "n": "5/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p05a.jpg",
+     "a_rot": "Mecânico",
+     "b_img": "img/p05b.jpg",
+     "b_rot": "Membrana",
+     "escolha": "a",
+     "t_resp": 2.1,
+     "detalhe": "switch silencioso",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par06",
+   "type": "scene",
+   "track": "visual",
+   "label": "06 Mouse vertical ou tradicional?",
+   "start": 16.44,
+   "dur": 4.1,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Mouse vertical ou tradicional?",
+     "n": "6/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p06a.jpg",
+     "a_rot": "Vertical",
+     "b_img": "img/p06b.jpg",
+     "b_rot": "Tradicional",
+     "escolha": "a",
+     "t_resp": 2.18,
+     "detalhe": "alivia o pulso",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par07",
+   "type": "scene",
+   "track": "visual",
+   "label": "07 Lâmpada fria ou quente?",
+   "start": 20.54,
+   "dur": 4.26,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Lâmpada fria ou quente?",
+     "n": "7/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p07a.jpg",
+     "a_rot": "Fria",
+     "b_img": "img/p07b.jpg",
+     "b_rot": "Quente",
+     "escolha": "b",
+     "t_resp": 1.86,
+     "detalhe": "3000K, menos cansaço",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par08",
+   "type": "scene",
+   "track": "visual",
+   "label": "08 Fone over-ear ou intra-auricular?",
+   "start": 24.8,
+   "dur": 4.26,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Fone over-ear ou intra-auricular?",
+     "n": "8/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p08a.jpg",
+     "a_rot": "Over-ear",
+     "b_img": "img/p08b.jpg",
+     "b_rot": "Intra-auricular",
+     "escolha": "a",
+     "t_resp": 2.28,
+     "detalhe": "isolamento passivo",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par09",
+   "type": "scene",
+   "track": "visual",
+   "label": "09 Papel ou tablet para anotações?",
+   "start": 29.06,
+   "dur": 4.5,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Papel ou tablet para anotações?",
+     "n": "9/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p09a.jpg",
+     "a_rot": "Papel",
+     "b_img": "img/p09b.jpg",
+     "b_rot": "Tablet",
+     "escolha": "a",
+     "t_resp": 2.4,
+     "detalhe": "fixa melhor a memória",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par10",
+   "type": "scene",
+   "track": "visual",
+   "label": "10 Parede lisa ou quadro de cortiça?",
+   "start": 33.56,
+   "dur": 5.22,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Parede lisa ou quadro de cortiça?",
+     "n": "10/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p10a.jpg",
+     "a_rot": "Parede lisa",
+     "b_img": "img/p10b.jpg",
+     "b_rot": "Cortiça",
+     "escolha": "b",
+     "t_resp": 2.66,
+     "detalhe": "organiza prazos visuais",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par11",
+   "type": "scene",
+   "track": "visual",
+   "label": "11 Café ou água?",
+   "start": 38.78,
+   "dur": 3.16,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Café ou água?",
+     "n": "11/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p11a.jpg",
+     "a_rot": "Café",
+     "b_img": "img/p11b.jpg",
+     "b_rot": "Água",
+     "escolha": "b",
+     "t_resp": 1.18,
+     "detalhe": "água primeiro, café depois",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par12",
+   "type": "scene",
+   "track": "visual",
+   "label": "12 Silêncio total ou ruído branco?",
+   "start": 41.94,
+   "dur": 4.7,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Silêncio total ou ruído branco?",
+     "n": "12/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p12a.jpg",
+     "a_rot": "Silêncio total",
+     "b_img": "img/p12b.jpg",
+     "b_rot": "Ruído branco",
+     "escolha": "b",
+     "t_resp": 2.28,
+     "detalhe": "mascara conversas",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par13",
+   "type": "scene",
+   "track": "visual",
+   "label": "13 Pomodoro ou bloco longo?",
+   "start": 46.64,
+   "dur": 3.94,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Pomodoro ou bloco longo?",
+     "n": "13/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p13a.jpg",
+     "a_rot": "Pomodoro",
+     "b_img": "img/p13b.jpg",
+     "b_rot": "Bloco longo",
+     "escolha": "a",
+     "t_resp": 1.98,
+     "detalhe": "25 e 5",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par14",
+   "type": "scene",
+   "track": "visual",
+   "label": "14 Celular na mesa ou na gaveta?",
+   "start": 50.58,
+   "dur": 4.34,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Celular na mesa ou na gaveta?",
+     "n": "14/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p14a.jpg",
+     "a_rot": "Na mesa",
+     "b_img": "img/p14b.jpg",
+     "b_rot": "Na gaveta",
+     "escolha": "b",
+     "t_resp": 2.4,
+     "detalhe": "fora do campo visual",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par15",
+   "type": "scene",
+   "track": "visual",
+   "label": "15 Planner físico ou app?",
+   "start": 54.92,
+   "dur": 4.0,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Planner físico ou app?",
+     "n": "15/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p15a.jpg",
+     "a_rot": "Planner físico",
+     "b_img": "img/p15b.jpg",
+     "b_rot": "App",
+     "escolha": "b",
+     "t_resp": 2.02,
+     "detalhe": "sincroniza com a nuvem",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par16",
+   "type": "scene",
+   "track": "visual",
+   "label": "16 Tapete de mouse grande ou pequeno?",
+   "start": 58.92,
+   "dur": 4.38,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Tapete de mouse grande ou pequeno?",
+     "n": "16/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p16a.jpg",
+     "a_rot": "Grande",
+     "b_img": "img/p16b.jpg",
+     "b_rot": "Pequeno",
+     "escolha": "a",
+     "t_resp": 2.4,
+     "detalhe": "cobre a área toda",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par17",
+   "type": "scene",
+   "track": "visual",
+   "label": "17 Suporte de notebook ou livros?",
+   "start": 63.3,
+   "dur": 4.28,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Suporte de notebook ou livros?",
+     "n": "17/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p17a.jpg",
+     "a_rot": "Suporte",
+     "b_img": "img/p17b.jpg",
+     "b_rot": "Livros",
+     "escolha": "a",
+     "t_resp": 2.46,
+     "detalhe": "altura dos olhos",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par18",
+   "type": "scene",
+   "track": "visual",
+   "label": "18 Cabo solto ou organizador?",
+   "start": 67.58,
+   "dur": 4.26,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Cabo solto ou organizador?",
+     "n": "18/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p18a.jpg",
+     "a_rot": "Cabo solto",
+     "b_img": "img/p18b.jpg",
+     "b_rot": "Organizador",
+     "escolha": "b",
+     "t_resp": 2.52,
+     "detalhe": "evita enrosco",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "par19",
+   "type": "scene",
+   "track": "visual",
+   "label": "19 Planta artificial ou natural?",
+   "start": 71.84,
+   "dur": 3.46,
+   "props": {
+    "scene": "tot_par",
+    "params": {
+     "titulo": "Planta artificial ou natural?",
+     "n": "19/19",
+     "isso": "Isso",
+     "aquilo": "Aquilo",
+     "a_img": "img/p19a.jpg",
+     "a_rot": "Artificial",
+     "b_img": "img/p19b.jpg",
+     "b_rot": "Natural",
+     "escolha": "b",
+     "t_resp": 2.0,
+     "detalhe": "melhora o ar",
+     "cor": "#c8102e"
+    }
+   }
+  },
+  {
+   "id": "recap",
+   "type": "scene",
+   "track": "visual",
+   "label": "Recap: setup montado",
+   "start": 75.3,
+   "dur": 9.7,
+   "props": {
+    "scene": "tot_recap",
+    "params": {
+     "titulo": "Seu setup ideal",
+     "sub": "montado",
+     "cor": "#c8102e",
+     "stagger": 0.07,
+     "i01": "img/p01a.jpg",
+     "i02": "img/p02b.jpg",
+     "i03": "img/p03b.jpg",
+     "i04": "img/p04b.jpg",
+     "i05": "img/p05a.jpg",
+     "i06": "img/p06a.jpg",
+     "i07": "img/p07b.jpg",
+     "i08": "img/p08a.jpg",
+     "i09": "img/p09a.jpg",
+     "i10": "img/p10b.jpg",
+     "i11": "img/p11b.jpg",
+     "i12": "img/p12b.jpg",
+     "i13": "img/p13a.jpg",
+     "i14": "img/p14b.jpg",
+     "i15": "img/p15b.jpg",
+     "i16": "img/p16a.jpg",
+     "i17": "img/p17a.jpg",
+     "i18": "img/p18b.jpg",
+     "i19": "img/p19b.jpg"
+    }
+   }
+  },
+  {
+   "id": "cta1",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA comentário",
+   "start": 77.75,
+   "dur": 3.75,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Mais de 10 iguais? Comenta qual faltou",
+    "x": 640,
+    "y": 625,
+    "w": 1100,
+    "size": 48,
+    "color": "#1d1d1f",
+    "font": "Montserrat",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(255,255,255,.92)",
+    "pad": 16,
+    "radius": 18,
+    "shadow": true,
+    "highlight": [
+     "Comenta qual faltou"
+    ],
+    "hl_color": "#c8102e"
+   }
+  },
+  {
+   "id": "cta2",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA inscreva-se",
+   "start": 81.5,
+   "dur": 3.5,
+   "in": "slide_up",
+   "out": "none",
+   "props": {
+    "text": "Inscreva-se para mais comparações",
+    "x": 640,
+    "y": 625,
+    "w": 1100,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Montserrat",
+    "weight": 800,
+    "align": "center",
+    "bg": "#c8102e",
+    "pad": 18,
+    "radius": 18,
+    "shadow": true
+   }
+  }
+ ]
+}

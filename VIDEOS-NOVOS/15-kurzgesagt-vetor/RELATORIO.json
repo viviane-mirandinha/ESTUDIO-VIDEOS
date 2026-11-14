@@ -1,0 +1,13 @@
+{
+ "video": 15,
+ "estilo": "15-kurzgesagt-vetor",
+ "inicio": "2026-10-22T14:08:47-03:00",
+ "fim": "2026-10-22T14:20:26-03:00",
+ "minutos": 11.7,
+ "render_segundos": 66,
+ "observacoes": "Template local 100% SVG+GSAP (17 cenas, 63,2 s): astronauta flat próprio com olhinhos, buraco negro com disco girando, espaguetificação (corpo estica e vira fio de átomos), luz avermelhando/ficando lenta, espaço vira tempo, relógio que para, universo acelerando, RG x MQ, CTAs. Sem imagem externa, sem SFX, música do teste 12 a 0,1 com ducking. Textos só com palavras da fala, 36-76px. Correção: smoothOrigin:false no GSAP (transformOrigin em SVG deslocava os textos).",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "biblioteca de cenas/atores (bh, astro, clock, ship, labels) já reaproveitável; 30 min exigiria ~150 cenas novas sob medida (escrita por Claude), render ~32 s/min de vídeo; preencher cena por frase via Ollama só depois de ter 20-30 cenas genéricas"
+ }
+}

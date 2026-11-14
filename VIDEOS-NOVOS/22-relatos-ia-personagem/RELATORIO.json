@@ -1,0 +1,13 @@
+{
+ "video": 22,
+ "estilo": "22-relatos-ia-personagem (Bonafillo Relatos / Silas Mercer)",
+ "inicio": "2026-10-22T14:54:06-03:00",
+ "fim": "2026-10-22T15:05:01-03:00",
+ "minutos": 10.9,
+ "render_segundos": 54,
+ "observacoes": "Template generic: 13 ilustrações tela cheia, Ken Burns alternado, crossfade 0,8 s (faixas fundoA/fundoB sobrepostas com fade), html filtro quente+vinheta+grão, CTA 'Inscreva-se' serifado só na fala. Personagem fixo: imagem-mestra img/mestre.jpg = Flux Kontext dev LOCAL t2i (seed 2202, saiu foto) + restyle Kontext para graphic novel; 10 cenas do homem via Kontext ReferenceLatent (seed 2222, ~22 s/img) = mesmo rosto/idade/roupa em todas; 3 detalhes t2i (~10 s/img). Refeitas: c11_feira (Flux escreveu placa sem sentido -> Kontext removeu texto), d05/d07 (v1 virou macarrão / flor errada). ComfyUI já estava ligado, deixado ligado. Sem música (nenhuma folk local), sem SFX. Whisper large-v3 GPU. Nenhum arquivo compartilhado do EDITOR VIDEOS alterado. Ponto fraco: flor da cena 'primeira flor amarela' saiu creme e as folhas lembram cannabis; c06 vizinhos ao lado do homem (não ao fundo).",
+ "estimativa_30min": {
+  "horas_maquina": 1.8,
+  "o_que_escala": "~200-250 ilustrações (1 a cada 7-9 s) x ~22 s no Kontext local = ~1,5 h GPU sem supervisão; render generic ~10-15 min; roteiro longo via Ollama em capítulos é o gargalo real de texto."
+ }
+}

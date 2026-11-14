@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=block" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#120a2e;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#120a2e;font-family:Montserrat,sans-serif;}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;}
+.shot svg{position:absolute;left:0;top:0;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<svg width="0" height="0" style="position:absolute"><defs>
+<radialGradient id="bgA" cx=".5" cy=".45" r=".8"><stop offset="0" stop-color="#33207a"/><stop offset="1" stop-color="#110a2c"/></radialGradient>
+<radialGradient id="bgB" cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#16467e"/><stop offset="1" stop-color="#07172e"/></radialGradient>
+<radialGradient id="bgC" cx=".5" cy=".45" r=".8"><stop offset="0" stop-color="#4a1660"/><stop offset="1" stop-color="#14061f"/></radialGradient>
+<radialGradient id="bgD" cx=".5" cy=".45" r=".8"><stop offset="0" stop-color="#0f5566"/><stop offset="1" stop-color="#05222b"/></radialGradient>
+<radialGradient id="bgE" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#1a0d3a"/><stop offset="1" stop-color="#04020c"/></radialGradient>
+<radialGradient id="disk" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff4c9"/><stop offset=".38" stop-color="#ffc24a"/><stop offset=".62" stop-color="#ff6a3d"/><stop offset=".82" stop-color="#e0337a" stop-opacity=".75"/><stop offset="1" stop-color="#8a1d8f" stop-opacity="0"/></radialGradient>
+<radialGradient id="halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff9a3c" stop-opacity=".55"/><stop offset=".5" stop-color="#ff4f8b" stop-opacity=".18"/><stop offset="1" stop-color="#ff4f8b" stop-opacity="0"/></radialGradient>
+<radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#ff7ac0"/><stop offset="1" stop-color="#ff2f86" stop-opacity="0"/></radialGradient>
+<radialGradient id="sky" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5fb7ff"/><stop offset=".7" stop-color="#2a4fb8"/><stop offset="1" stop-color="#1b2a7a"/></radialGradient>
+<linearGradient id="ship" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f7dff"/><stop offset="1" stop-color="#5a3fd6"/></linearGradient>
+</defs></svg>
+<div id="stage"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__;
+const stage=document.getElementById('stage');
+let Z=1;
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const F=(t,a,b,at)=>tl.fromTo(t,a,Object.assign({immediateRender:false},b.transformOrigin?{smoothOrigin:false}:{},b),at);
+const hid=(...ss)=>ss.forEach(s=>tl.set(s,{opacity:0},0));
+const f=n=>(+n).toFixed(1);
+function mk(id,bg,inner){const d=document.createElement('div');d.className='shot';d.id=id;d.style.zIndex=Z++;
+  d.innerHTML=`<svg width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="${bg}"/><g id="${id}cam">${inner}</g></svg>`;stage.appendChild(d);}
+function shot(id,S,D,first){
+  if(first) tl.set('#'+id,{opacity:1},S);
+  else F('#'+id,{opacity:0,scale:1.15},{opacity:1,scale:1,duration:.42,ease:'power2.out'},S);
+  tl.set('#'+id,{opacity:0},S+D+.45);
+  F('#'+id+'cam',{scale:1,x:0},{scale:1.08,x:0,duration:D+.45,ease:'none',svgOrigin:'640 360'},S);
+}
+/* ---------- biblioteca ---------- */
+function stars(id,seed,n){const r=rng(seed);const L=['','',''];for(let i=0;i<n;i++){const l=i%3;const x=r()*1500-110,y=r()*900-90,s=[1.1,2.0,3.2][l]*(0.6+r()*0.8);const q=r();const c=q<.12?'#ffcf6b':(q<.3?'#8fe7ff':'#ffffff');L[l]+=`<circle cx="${f(x)}" cy="${f(y)}" r="${f(s)}" fill="${c}" opacity="${(0.3+l*0.25+r()*0.2).toFixed(2)}"/>`;}
+  return L.map((s,i)=>`<g id="${id}st${i}">${s}</g>`).join('');}
+function drift(id,S,D,dx,dy){for(let i=0;i<3;i++)F(`#${id}st${i}`,{x:0,y:0},{x:dx*(i+1),y:dy*(i+1),duration:D+.5,ease:'none'},S);}
+function bh(id,cx,cy,r,o={}){const tl_=o.tilt||0.3,rx=r*2.5,ry=rx*tl_;
+  const rings=k=>[0,1,2].map(j=>`<ellipse class="${id}rg" rx="${f(rx*(0.55+j*0.15))}" ry="${f(ry*(0.55+j*0.15))}" fill="none" stroke="${['#fff0b0','#ff8a45','#ff4f8b'][j]}" stroke-width="${f(r*0.045)}" stroke-dasharray="${f(r*0.5)} ${f(r*0.3)}" opacity=".85"/>`).join('');
+  return `<g transform="translate(${cx},${cy})"><g id="${id}">
+  <circle r="${f(r*3.3)}" fill="url(#halo)"/>
+  <ellipse rx="${f(rx)}" ry="${f(ry)}" fill="url(#disk)"/>${rings()}
+  <circle r="${f(r*1.13)}" fill="none" stroke="#ffd98a" stroke-width="${f(r*0.07)}"/>
+  <circle r="${f(r*1.03)}" fill="none" stroke="#fff6dc" stroke-width="${f(r*0.025)}"/>
+  <circle r="${f(r)}" fill="#03010a"/>
+  <clipPath id="${id}cl"><rect x="${f(-rx*1.2)}" y="0" width="${f(rx*2.4)}" height="${f(ry*1.4)}"/></clipPath>
+  <g clip-path="url(#${id}cl)"><ellipse rx="${f(rx)}" ry="${f(ry)}" fill="url(#disk)" opacity=".95"/>${rings()}</g>
+  ${o.hor?`<circle id="${id}hz" r="${f(r*1.45)}" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="14 12" opacity=".8"/>`:''}
+  </g></g>`;}
+function spin(id,S,D,r){F(`#${id} .${id}rg`,{strokeDashoffset:0},{strokeDashoffset:-r*7,duration:D+.5,ease:'none'},S);
+  F(`#${id}`,{scale:1},{scale:1.04,duration:1.3,yoyo:true,repeat:Math.max(1,Math.floor((D+.5)/1.3)),ease:'sine.inOut',transformOrigin:'50% 50%'},S);}
+function astro(id,o={}){const s=o.s||1,su=o.suit||'#eef1ff',sh=o.shade||'#b9c0e6',ac=o.acc||'#ff8a3d',vi=o.visor||'#24185c';
+  return `<g transform="translate(${o.x||0},${o.y||0}) rotate(${o.rot||0})"><g id="${id}"><g transform="scale(${s})"><g id="${id}b">
+  <rect x="-40" y="-26" width="80" height="58" rx="14" fill="${sh}"/>
+  <g id="${id}ll"><rect x="-27" y="18" width="22" height="50" rx="11" fill="${su}"/><rect x="-30" y="58" width="27" height="17" rx="8" fill="${ac}"/></g>
+  <g id="${id}lr"><rect x="5" y="18" width="22" height="50" rx="11" fill="${su}"/><rect x="3" y="58" width="27" height="17" rx="8" fill="${ac}"/></g>
+  <rect x="-32" y="-22" width="64" height="66" rx="26" fill="${su}"/>
+  <rect x="-15" y="0" width="30" height="15" rx="5" fill="${ac}"/><circle cx="-6" cy="7.5" r="3" fill="#fff"/><circle cx="6" cy="7.5" r="3" fill="#24185c"/>
+  <g id="${id}al"><rect x="-47" y="-16" width="18" height="50" rx="9" fill="${su}"/><circle cx="-38" cy="36" r="10" fill="${ac}"/></g>
+  <g id="${id}ar"><rect x="29" y="-16" width="18" height="50" rx="9" fill="${su}"/><circle cx="38" cy="36" r="10" fill="${ac}"/></g>
+  <g id="${id}h"><circle cy="-52" r="40" fill="${su}"/><rect x="-25" y="-74" width="56" height="44" rx="21" fill="${vi}"/>
+  <ellipse cx="-11" cy="-64" rx="8" ry="5" fill="#ffffff" opacity=".45"/>
+  <g id="${id}e"><ellipse cx="-2" cy="-50" rx="4.8" ry="7" fill="#fff"/><ellipse cx="15" cy="-50" rx="4.8" ry="7" fill="#fff"/></g></g>
+  </g></g></g></g>`;}
+function breath(id,S,D,amp=6,per=1.1){F(`#${id}b`,{y:0},{y:-amp,duration:per,yoyo:true,repeat:Math.max(1,Math.floor((D+.5)/per)),ease:'sine.inOut'},S);}
+function wave(id,S,D,per=.45){F(`#${id}ar`,{rotation:0},{rotation:-130,duration:.35,ease:'back.out(2)',transformOrigin:'50% 8%'},S);
+  F(`#${id}ar`,{rotation:-130},{rotation:-95,duration:per,yoyo:true,repeat:Math.max(1,Math.floor(D/per)),ease:'sine.inOut',transformOrigin:'50% 8%'},S+.35);}
+function lab(id,txt,x,y,o={}){const sz=o.size||64,ls=String(txt).split('|');
+  return `<g transform="translate(${x},${y})"><g id="${id}" opacity="0">${ls.map((l,i)=>`<text y="${f((i-(ls.length-1)/2)*sz*1.12+sz*0.36)}" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="${sz}" fill="${o.color||'#ffffff'}" stroke="${o.stroke||'#120a2e'}" stroke-width="${o.sw||10}" stroke-linejoin="round" paint-order="stroke" letter-spacing="1">${esc(l)}</text>`).join('')}</g></g>`;}
+function pop(id,t,out){F(`#${id}`,{opacity:0,scale:.55},{opacity:1,scale:1,duration:.55,ease:'back.out(2)',transformOrigin:'50% 50%'},t);
+  if(out!=null) F(`#${id}`,{opacity:1},{opacity:0,duration:.3},out);}
+function clock(id,x,y,r,col='#ffffff'){return `<g transform="translate(${x},${y})"><g id="${id}"><circle r="${r}" fill="${col}"/><circle r="${r*0.86}" fill="#1b1340"/>
+  ${[...Array(12)].map((_,k)=>{const a=k*Math.PI/6;return `<circle cx="${f(Math.sin(a)*r*0.72)}" cy="${f(-Math.cos(a)*r*0.72)}" r="${f(r*0.05)}" fill="${col}"/>`;}).join('')}
+  <g id="${id}hh"><rect x="${f(-r*0.05)}" y="${f(-r*0.42)}" width="${f(r*0.1)}" height="${f(r*0.46)}" rx="${f(r*0.05)}" fill="#ffd27a"/></g>
+  <g id="${id}mh"><rect x="${f(-r*0.035)}" y="${f(-r*0.66)}" width="${f(r*0.07)}" height="${f(r*0.7)}" rx="${f(r*0.035)}" fill="#ff6aa8"/></g>
+  <circle r="${f(r*0.08)}" fill="${col}"/></g></g>`;}
+function hands(id,S,D,turns,ease){F(`#${id}mh`,{rotation:0},{rotation:360*turns,duration:D,ease,transformOrigin:'50% 94.3%'},S);F(`#${id}hh`,{rotation:0},{rotation:30*turns,duration:D,ease,transformOrigin:'50% 91.3%'},S);}
+function shipSvg(id,x,y,s=1){return `<g transform="translate(${x},${y}) scale(${s})"><g id="${id}">
+  <path d="M-150,10 L-190,-40 L-120,-20Z M-150,10 L-190,60 L-120,40Z" fill="#ff4f8b"/>
+  <ellipse rx="150" ry="58" fill="url(#ship)"/><ellipse cx="20" cy="-18" rx="110" ry="18" fill="#ffffff" opacity=".12"/>
+  <circle cx="60" r="36" fill="#120a2e"/><circle cx="60" r="36" fill="none" stroke="#ffd27a" stroke-width="7"/>
+  <circle cx="60" cy="6" r="22" fill="#eef1ff"/><rect x="47" y="-6" width="30" height="20" rx="9" fill="#24185c"/><ellipse cx="57" cy="4" rx="2.6" ry="4" fill="#fff"/><ellipse cx="67" cy="4" rx="2.6" ry="4" fill="#fff"/>
+  <circle cx="-60" cy="0" r="9" fill="#ffd27a"/><circle cx="-25" cy="0" r="9" fill="#7fe3ff"/>
+  <path d="M-150,-14 L-185,-6 L-185,6 L-150,14Z" fill="#7fe3ff" opacity=".7"/></g></g>`;}
+function bob(id,S,D,amp=8,per=1.4){F(`#${id}`,{y:0},{y:-amp,duration:per,yoyo:true,repeat:Math.max(1,Math.floor((D+.5)/per)),ease:'sine.inOut'},S);}
+const SH={};
+/* 1. queda */
+SH.queda=(it,P,S,D,i)=>{mk(i,'url(#bgA)',stars(i,11,140)+bh(i+'bh',700,400,105)+astro(i+'a',{x:0,y:0,s:1}));
+  drift(i,S,D,-25,-10);spin(i+'bh',S,D,105);
+  F(`#${i}a`,{x:220,y:110,scale:.55,rotation:-30},{x:560,y:330,scale:.32,rotation:160,duration:D+.45,ease:'power1.in',transformOrigin:'50% 50%'},S);};
+/* 2. gravidade pés x cabeça */
+SH.gravidade=(it,P,S,D,i)=>{const arrow=(id,x,y,h,w,c)=>`<g transform="translate(${x},${y})"><g id="${id}"><rect x="${-w/2}" y="0" width="${w}" height="${h}" rx="${w/2}" fill="${c}"/><path d="M${-w*1.6},${h-4} L${w*1.6},${h-4} L0,${h+w*2.4}Z" fill="${c}"/></g></g>`;
+  mk(i,'url(#bgB)',stars(i,22,120)+bh(i+'bh',640,830,250,{tilt:.22})+astro(i+'a',{x:560,y:280,s:1.55})
+   +arrow(i+'ah',800,135,22,12,'#7fe3ff')+arrow(i+'af',800,330,150,26,'#ff8a3d')
+   +lab(i+'lc',P.cabeca,960,160,{size:36})+lab(i+'lp',P.pes,960,450,{size:36})+lab(i+'lm',P.titulo,640,70,{size:58,color:'#ffd27a'}));
+  drift(i,S,D,-15,-20);spin(i+'bh',S,D,250);hid(`#${i}af`,`#${i}ah`);breath(i+'a',S,D,5,.9);
+  F(`#${i}a`,{scaleY:1},{scaleY:1.07,duration:D,ease:'power1.in',transformOrigin:'50% 100%'},S);
+  F(`#${i}af`,{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:.7,ease:'back.out(1.6)',transformOrigin:'50% 0%'},S+(+P.t_pes));pop(i+'lp',S+(+P.t_pes)+.1);
+  F(`#${i}af`,{scaleY:1},{scaleY:1.12,duration:.5,yoyo:true,repeat:5,ease:'sine.inOut',transformOrigin:'50% 0%'},S+(+P.t_pes)+.8);
+  F(`#${i}ah`,{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:.5,ease:'back.out(1.6)',transformOrigin:'50% 0%'},S+(+P.t_cab));pop(i+'lc',S+(+P.t_cab));
+  pop(i+'lm',S+(+P.t_mil));};
+/* 3. espaguetificação */
+SH.espaguete=(it,P,S,D,i)=>{const r=rng(5);let at='';for(let k=0;k<58;k++){const x=230+k*13.2,y=360+Math.sin(k*0.9)*5+(r()-.5)*8;const c=['#ffd27a','#ff8a3d','#ff4f8b','#eef1ff','#7fe3ff'][k%5];at+=`<circle cx="${f(x)}" cy="${f(y)}" r="${f(5+r()*3)}" fill="${c}"/>`;}
+  mk(i,'url(#bgC)',stars(i,33,120)+bh(i+'bh',1080,360,120)+astro(i+'a',{x:470,y:360,s:1.25,rot:-90})+`<g id="${i}fio" opacity="0">${at}</g>`
+   +lab(i+'l1',P.fio,520,520,{size:40})+lab(i+'l2',P.titulo,600,110,{size:64,color:'#ffd27a'}));
+  drift(i,S,D,-30,0);spin(i+'bh',S,D,120);
+  const tf=S+(+P.t_fio);
+  F(`#${i}a`,{scaleY:1,scaleX:1,x:0},{scaleY:3.0,scaleX:.35,x:0,duration:tf-S-.3,ease:'power2.in',transformOrigin:'50% 0%'},S+.5);
+  F(`#${i}a`,{opacity:1},{opacity:0,duration:.35},tf-.2);
+  F(`#${i}fio`,{opacity:0,x:-60},{opacity:1,x:0,duration:.4},tf-.2);
+  F(`#${i}fio`,{x:0},{x:150,duration:S+D+.45-tf,ease:'power1.in'},tf+.2);
+  pop(i+'l1',tf+.1);pop(i+'l2',S+(+P.t_esp));};
+/* 4/5. observador de fora + luz avermelhando */
+SH.observa=(it,P,S,D,i)=>{const luz=P.modo==='luz';
+  const bhx=luz?990:950, edge=bhx-120*1.45;
+  mk(i,'url(#bgA)',stars(i,luz?55:44,130)+`<line id="${i}vis" x1="300" y1="380" x2="${edge-10}" y2="372" stroke="#ffffff" stroke-width="3" stroke-dasharray="6 14" opacity="${luz?0:.5}"/>`
+   +shipSvg(i+'sh',luz?190:210,380,luz?.8:1)+bh(i+'bh',bhx,380,120,{hor:true})
+   +`<path id="${i}wv" d="" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="${luz?1:0}"/>`
+   +astro(i+'a',{x:0,y:0,s:.42})+`<g id="${i}ared" opacity="0">${astro(i+'r',{x:0,y:0,s:.42,suit:'#ff3b3b',shade:'#b3122f',acc:'#7a0b2a',visor:'#3a0414'})}</g>`
+   +lab(i+'l1',P.l1,luz?640:210,luz?95:520,{size:luz?56:44,color:luz?'#ff5a5a':'#ffffff'})+lab(i+'l2',P.l2,luz?640:bhx,luz?620:150,{size:luz?56:48,color:luz?'#ffd27a':'#ffffff'})+(luz?lab(i+'l3',P.l3,640,165,{size:56,color:'#ff9a6a'}):''));
+  drift(i,S,D,-12,0);spin(i+'bh',S,D,120);bob(i+'sh',S,D,8,1.5);
+  if(!luz){F([`#${i}a`],{x:610,y:250,rotation:-40},{x:edge-30,y:350,rotation:60,duration:D+.45,ease:'expo.out',transformOrigin:'50% 50%'},S);
+    F(`#${i}vis`,{strokeDashoffset:0},{strokeDashoffset:-120,duration:D+.45,ease:'none'},S);
+    pop(i+'l1',S+(+P.t_l1));pop(i+'l2',S+(+P.t_l2));
+    F(`#${i}hz`,{opacity:.3},{opacity:1,duration:.4,yoyo:true,repeat:3},S+(+P.t_l2));}
+  else{const ax=edge-26,ay=362;
+    F(`#${i}a`,{x:ax-25,y:ay-8,rotation:40},{x:ax,y:ay,rotation:58,duration:D+.45,ease:'expo.out',transformOrigin:'50% 50%'},S);
+    F(`#${i}ared`,{opacity:0,x:ax-25,y:ay-8,rotation:40},{opacity:.9,x:ax,y:ay,rotation:58,duration:(+P.t_l3)+.2,ease:'power1.in',transformOrigin:'50% 50%'},S);
+    const wv=document.getElementById(i+'wv');const o={k:0};const x0=ax-45,x1=300;
+    F(o,{k:0},{k:1,duration:D+.45,ease:'none',onUpdate:()=>{const k=Math.min(1,o.k*D/((+P.t_l3)+.4));const lam=26+k*190;const ph=14*(1-Math.pow(1-k,3))+o.k*.2;
+      let d='';for(let x=x0;x>=x1;x-=5){const y=372+16*Math.sin(2*Math.PI*(x0-x)/lam-ph*2*Math.PI/1.0);d+=(d?'L':'M')+x.toFixed(0)+','+y.toFixed(1);}
+      wv.setAttribute('d',d);wv.setAttribute('stroke',gsap.utils.interpolate('#ffffff','#ff2a2a',Math.min(1,k*1.2)));wv.setAttribute('opacity',(1-Math.max(0,o.k-.85)*4).toFixed(2));}},S);
+    pop(i+'l1',S+(+P.t_l1));pop(i+'l3',S+(+P.t_l2));pop(i+'l2',S+(+P.t_l3));}};
+/* 6. imagem estática desbotando */
+SH.estatica=(it,P,S,D,i)=>{mk(i,'url(#bgA)',stars(i,66,110)+`<g transform="translate(640,330)"><g id="${i}fr"><rect x="-200" y="-220" width="400" height="430" rx="18" fill="#f4efe6"/>
+  <svg x="-170" y="-190" width="340" height="320" viewBox="-170 -160 340 320"><rect x="-170" y="-160" width="340" height="320" fill="#1d0c24"/><g id="${i}pic">${bh(i+'bh',260,40,150)}${astro(i+'r',{x:-10,y:10,s:1.05,rot:58,suit:'#ff4b4b',shade:'#b3122f',acc:'#7a0b2a',visor:'#3a0414'})}</g></svg></g></g>`
+   +lab(i+'l1',P.l1,640,640,{size:52})+lab(i+'l2',P.l2,640,640,{size:60,color:'#ffd27a'}));
+  drift(i,S,D,-10,0);
+  F(`#${i}fr`,{rotation:-6,y:0},{rotation:-2,y:-10,duration:D+.45,ease:'sine.inOut',transformOrigin:'50% 50%'},S);
+  F(`#${i}pic`,{opacity:1},{opacity:.12,duration:D+.3,ease:'power1.in'},S+.4);
+  pop(i+'l1',S+(+P.t_l1),S+(+P.t_l2)-.3);pop(i+'l2',S+(+P.t_l2));};
+/* 7. POV: nada muda na travessia */
+SH.pov=(it,P,S,D,i)=>{mk(i,'url(#bgB)',stars(i,77,150)+astro(i+'a',{x:640,y:390,s:1.6})
+   +`<g id="${i}hz"><rect x="-50" y="-3" width="1380" height="6" fill="#ffd27a" opacity=".9"/><rect x="-50" y="-20" width="1380" height="40" fill="#ffd27a" opacity=".15"/></g>`
+   +lab(i+'lh',P.hor,1080,0,{size:36,color:'#ffd27a'})+lab(i+'l1',P.l1,640,85,{size:54})+lab(i+'l2',P.l2,640,85,{size:66,color:'#7fe3ff'}));
+  drift(i,S,D,0,-60);breath(i+'a',S,D,8,1.2);wave(i+'a',S+(+P.t_l2),D-(+P.t_l2));
+  const tt=S+(+P.t_trav);F([`#${i}hz`],{y:780},{y:-60,duration:2.2,ease:'none'},tt-1.0);
+  F(`#${i}lh`,{y:760,opacity:1},{y:-80,opacity:1,duration:2.2,ease:'none'},tt-1.0);
+  pop(i+'l1',S+(+P.t_l1),S+(+P.t_l2)-.3);pop(i+'l2',S+(+P.t_l2));};
+/* 8. espaço vira tempo / futuro inevitável */
+SH.tempo=(it,P,S,D,i)=>{const cx=900,cy=440;let arr='';const pts=[[60,120],[40,640],[1250,90],[1260,650],[640,710],[700,40],[1250,380]];
+  pts.forEach((p,k)=>{const mx=(p[0]+cx)/2+(k%2?90:-90),my=(p[1]+cy)/2+(k%3?-70:70);arr+=`<path class="${i}ar" d="M${p[0]},${p[1]} Q${mx},${my} ${cx},${cy}" fill="none" stroke="#ff8ac4" stroke-width="7" stroke-linecap="round" stroke-dasharray="1400" stroke-dashoffset="1400" opacity=".9"/>`;});
+  mk(i,'url(#bgC)',stars(i,88,120)+`<circle cx="${cx}" cy="${cy}" r="215" fill="#07020f" opacity=".85"/><circle cx="${cx}" cy="${cy}" r="215" fill="none" stroke="#ff4f8b" stroke-width="5" stroke-dasharray="12 10"/>`+arr
+   +`<g transform="translate(${cx},${cy})"><circle id="${i}co" r="46" fill="url(#core)"/></g>`+astro(i+'a',{x:300,y:430,s:.95})
+   +`<g transform="translate(640,175)"><g id="${i}dar"><rect x="-150" y="-5" width="300" height="10" rx="5" fill="#fff"/><path d="M-170,0 L-140,-20 L-140,20Z M170,0 L140,-20 L140,20Z" fill="#fff"/></g>
+     <g id="${i}oar" opacity="0"><rect x="-150" y="-5" width="300" height="10" rx="5" fill="#ffd27a"/><path d="M175,0 L140,-22 L140,22Z" fill="#ffd27a"/></g></g>`
+   +clock(i+'ck',450,90,34)+lab(i+'l1',P.esp,640,95,{size:64})+lab(i+'l2',P.tem,660,95,{size:64,color:'#ffd27a'})+lab(i+'l3',P.fut,cx,680,{size:54,color:'#ffd27a'}));
+  drift(i,S,D,-20,10);breath(i+'a',S,D,6,1);hid(`#${i}ck`);
+  F(`#${i}co`,{scale:.8},{scale:1.25,duration:.6,yoyo:true,repeat:Math.floor(D/.6),ease:'sine.inOut',transformOrigin:'50% 50%'},S);
+  F(`#${i}l1`,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.45,ease:'back.out(2)',transformOrigin:'50% 50%'},S+.05);
+  const tt=S+(+P.t_tem);F(`#${i}l1`,{scaleY:1},{scaleY:0,duration:.2,transformOrigin:'50% 50%'},tt);F(`#${i}dar`,{opacity:1},{opacity:0,duration:.2},tt);
+  F(`#${i}l2`,{opacity:0,scaleY:0},{opacity:1,scaleY:1,duration:.3,ease:'back.out(2)',transformOrigin:'50% 50%'},tt+.2);F(`#${i}oar`,{opacity:0},{opacity:1,duration:.3},tt+.2);
+  F(`#${i}ck`,{opacity:0,scale:0},{opacity:1,scale:1,duration:.45,ease:'back.out(2)',transformOrigin:'50% 50%'},tt+.25);hands(i+'ck',tt+.25,D,3,'none');
+  const tc=S+(+P.t_cen);F(`#${i} .${i}ar`,{strokeDashoffset:1400},{strokeDashoffset:0,duration:1.4,ease:'power2.inOut',stagger:.18},tc);
+  F(`#${i}a`,{x:0,y:0},{x:120,y:-10,duration:S+D-tc,ease:'power1.in'},tc);
+  pop(i+'l3',S+(+P.t_fut));};
+/* 9. singularidade não é ponto / fim do relógio */
+SH.singular=(it,P,S,D,i)=>{mk(i,'url(#bgE)',stars(i,99,120)+`<circle cx="640" cy="370" r="250" fill="#05020c"/><circle cx="640" cy="370" r="250" fill="none" stroke="#ffb35a" stroke-width="10" opacity=".85"/><circle cx="640" cy="370" r="262" fill="none" stroke="#ff4f8b" stroke-width="4" opacity=".5"/>
+   <g transform="translate(640,370)"><g id="${i}pt"><circle r="40" fill="url(#core)"/><circle r="9" fill="#fff"/></g>
+   <g id="${i}x" opacity="0"><rect x="-70" y="-11" width="140" height="22" rx="11" fill="#ff3b5c" transform="rotate(45)"/><rect x="-70" y="-11" width="140" height="22" rx="11" fill="#ff3b5c" transform="rotate(-45)"/></g></g>`
+   +clock(i+'ck',640,370,120)+lab(i+'l0',P.titulo,640,70,{size:60,color:'#ffd27a'})+lab(i+'l1',P.l1,640,670,{size:48})+lab(i+'l2',P.l2,640,670,{size:56,color:'#ff8ac4'}));
+  drift(i,S,D,-15,0);pop(i+'l0',S+.1);
+  F(`#${i}pt`,{scale:.8},{scale:1.3,duration:.5,yoyo:true,repeat:5,ease:'sine.inOut',transformOrigin:'50% 50%'},S);
+  const tn=S+(+P.t_nao);F(`#${i}x`,{opacity:0,scale:2},{opacity:1,scale:1,duration:.35,ease:'power3.out',transformOrigin:'50% 50%'},tn);pop(i+'l1',tn,S+(+P.t_fim)-.3);
+  const tf=S+(+P.t_fim);F([`#${i}pt`,`#${i}x`],{opacity:1},{opacity:0,duration:.25},tf-.15);
+  hid(`#${i}ck`);
+  F(`#${i}ck`,{opacity:0,scale:.3},{opacity:1,scale:1,duration:.45,ease:'back.out(1.8)',transformOrigin:'50% 50%'},tf);
+  hands(i+'ck',tf,S+D-tf-.2,4,'power3.out');F(`#${i}ck`,{opacity:1},{opacity:.35,duration:.5},S+D-.4);pop(i+'l2',tf+.1);};
+/* 10. supermassivo: passa a borda inteiro */
+SH.super=(it,P,S,D,i)=>{mk(i,'url(#bgB)',stars(i,111,150)+`<circle cx="640" cy="1300" r="1150" fill="url(#halo)"/><circle cx="640" cy="1300" r="830" fill="none" stroke="#ffd98a" stroke-width="16"/><circle cx="640" cy="1300" r="812" fill="#03010a"/>
+   <circle id="${i}hz" cx="640" cy="1300" r="880" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="16 12" opacity=".8"/>`
+   +astro(i+'a',{x:640,y:0,s:.6})+lab(i+'l1',P.titulo,640,80,{size:64,color:'#ffd27a'})+lab(i+'l2',P.l2,1040,330,{size:44}));
+  drift(i,S,D,-25,0);breath(i+'a',S,D,5,1);pop(i+'l1',S+(+P.t_sup));
+  F(`#${i}hz`,{strokeDashoffset:0},{strokeDashoffset:-200,duration:D+.45,ease:'none'},S);
+  F(`#${i}a`,{y:180,rotation:-10},{y:520,rotation:10,duration:D+.45,ease:'none',transformOrigin:'50% 50%'},S);
+  pop(i+'l2',S+(+P.t_int));F(`#${i}ae`,{scaleY:1},{scaleY:.35,duration:.25,transformOrigin:'50% 100%'},S+(+P.t_int));wave(i+'a',S+(+P.t_int),D-(+P.t_int));};
+/* 11. universo acelerando até o fim dos tempos */
+SH.acelera=(it,P,S,D,i)=>{const r=rng(12);let st='';for(let k=0;k<70;k++)st+=`<circle cx="${f(-170+r()*340)}" cy="${f(-170+r()*340)}" r="${f(1+r()*2.4)}" fill="#fff" opacity="${(0.4+r()*.6).toFixed(2)}"/>`;
+  const gal=(id,x,y,s,c)=>`<g transform="translate(${x},${y}) scale(${s})"><g id="${id}">${[0,60,120].map(a=>`<ellipse rx="44" ry="11" fill="${c}" opacity=".55" transform="rotate(${a})"/>`).join('')}<circle r="10" fill="#fff"/></g></g>`;
+  mk(i,'url(#bgE)',stars(i,121,90)+`<clipPath id="${i}cp"><circle id="${i}cc" cx="640" cy="250" r="160"/></clipPath><circle id="${i}rim" cx="640" cy="250" r="168" fill="none" stroke="#ffd98a" stroke-width="10"/>
+   <g clip-path="url(#${i}cp)"><g id="${i}win"><rect x="420" y="30" width="440" height="440" fill="url(#sky)"/><g transform="translate(640,250)"><g id="${i}sky">${st}</g></g>${gal(i+'g1',580,210,1.1,'#ffd27a')}${gal(i+'g2',700,300,.8,'#ff8ac4')}</g></g>`
+   +astro(i+'a',{x:640,y:600,s:.8})+clock(i+'ck',1030,320,70)+lab(i+'l1',P.l1,270,330,{size:50})+lab(i+'l2',P.l2,640,250,{size:62,color:'#ffd27a'}));
+  drift(i,S,D,-8,0);breath(i+'a',S,D,4,1);F(`#${i}ae`,{y:0},{y:-6,duration:.4},S);
+  F(`#${i}g1`,{rotation:0},{rotation:-2400,duration:D,ease:'expo.in',transformOrigin:'50% 50%'},S);F(`#${i}g2`,{rotation:0},{rotation:2000,duration:D,ease:'expo.in',transformOrigin:'50% 50%'},S);
+  F(`#${i}sky`,{rotation:0},{rotation:-900,duration:D,ease:'expo.in',transformOrigin:'50% 50%'},S);hands(i+'ck',S,D,40,'expo.in');
+  const te=S+(+P.t_fim);F([`#${i}cc`],{attr:{r:160}},{attr:{r:30},duration:te-S,ease:'power2.in'},S);F(`#${i}rim`,{attr:{r:168}},{attr:{r:38},duration:te-S,ease:'power2.in'},S);
+  F([`#${i}cc`],{attr:{r:30}},{attr:{r:0},duration:.6},te);F(`#${i}rim`,{opacity:1},{opacity:0,duration:.6},te);
+  pop(i+'l1',S+(+P.t_seg),te-.25);pop(i+'l2',te+.2);};
+/* 12. a física para */
+SH.para=(it,P,S,D,i)=>{mk(i,'url(#bgE)',stars(i,131,120)+`<g transform="translate(640,250)"><g id="${i}ps"><circle r="95" fill="#ff4f8b"/><rect x="-36" y="-45" width="24" height="90" rx="8" fill="#fff"/><rect x="12" y="-45" width="24" height="90" rx="8" fill="#fff"/></g></g>`
+   +lab(i+'l1',P.titulo,640,470,{size:76}));
+  hid(`#${i}ps`);F(`#${i}ps`,{opacity:1,scale:0,rotation:-90},{scale:1,rotation:0,duration:.55,ease:'back.out(1.6)',transformOrigin:'50% 50%'},S+.1);pop(i+'l1',S+(+P.t_fis));};
+/* 13. CTA curta */
+SH.curta=(it,P,S,D,i)=>{mk(i,'url(#bgC)',stars(i,141,110)+astro(i+'a',{x:430,y:410,s:1.35})
+   +`<g transform="translate(860,390)"><g id="${i}lk"><circle r="130" fill="#ff4f8b"/><circle r="130" fill="none" stroke="#fff" stroke-width="8" opacity=".35"/>
+   <g transform="scale(1.35) translate(-8,6)"><rect x="-52" y="-12" width="24" height="66" rx="6" fill="#fff"/><path d="M-20,-10 L4,-58 Q16,-74 28,-60 Q32,-50 26,-20 L56,-20 Q72,-18 68,-2 L58,48 Q54,58 42,58 L-20,58 Z" fill="#fff"/></g></g></g>`
+   +lab(i+'l1',P.titulo,640,90,{size:64}));
+  hid(`#${i}lk`);drift(i,S,D,-20,0);F(`#${i}a`,{x:-3},{x:3,duration:.06,yoyo:true,repeat:Math.floor((D+.4)/.06),ease:'none'},S);
+  F(`#${i}ae`,{scale:1},{scale:1.5,duration:.3,ease:'back.out(3)',transformOrigin:'50% 50%'},S+.2);
+  F(`#${i}lk`,{opacity:1,scale:0,rotation:-25},{opacity:1,scale:1,rotation:0,duration:.6,ease:'back.out(1.8)',transformOrigin:'50% 50%'},S+.15);
+  F(`#${i}lk`,{scale:1},{scale:1.07,duration:.45,yoyo:true,repeat:4,ease:'sine.inOut',transformOrigin:'50% 50%'},S+.8);pop(i+'l1',S+.05);};
+/* 14. a teoria falha na singularidade */
+SH.falha=(it,P,S,D,i)=>{let d='';for(let x=0;x<=1;x+=.02){const X=180+x*700,Y=600-Math.min(560,18/(1.02-x)) ;d+=(d?'L':'M')+X.toFixed(0)+','+Y.toFixed(0);}
+  mk(i,'url(#bgB)',stars(i,151,90)+`<rect x="176" y="190" width="6" height="420" rx="3" fill="#fff" opacity=".8"/><rect x="176" y="604" width="760" height="6" rx="3" fill="#fff" opacity=".8"/>
+   <line x1="894" y1="160" x2="894" y2="604" stroke="#ff8ac4" stroke-width="4" stroke-dasharray="12 10"/>
+   <path id="${i}cv" d="${d}" fill="none" stroke="#ffd27a" stroke-width="9" stroke-linecap="round" stroke-dasharray="2000" stroke-dashoffset="2000"/>
+   <g transform="translate(895,170)"><g id="${i}bk" opacity="0"><path d="M-40,-30 L-10,-5 L-30,10 L5,40 L-5,10 L20,0 Z" fill="#ff3b5c"/><circle r="70" fill="none" stroke="#ff3b5c" stroke-width="6" opacity=".6"/></g></g>`
+   +bh(i+'bh',1080,500,55)+lab(i+'l1',P.titulo,640,80,{size:64})+lab(i+'l2',P.sing,1080,640,{size:36,color:'#ff8ac4'}));
+  drift(i,S,D,-15,0);spin(i+'bh',S,D,55);pop(i+'l1',S+.05);
+  F(`#${i}cv`,{strokeDashoffset:2000},{strokeDashoffset:0,duration:1.2,ease:'power1.in'},S+.2);
+  const tf=S+(+P.t_fal);F(`#${i}bk`,{opacity:0,scale:.3},{opacity:1,scale:1,duration:.4,ease:'back.out(2.5)',transformOrigin:'50% 50%'},tf+.3);
+  F(`#${i}bk`,{rotation:-4},{rotation:4,duration:.12,yoyo:true,repeat:10,transformOrigin:'50% 50%'},tf+.7);pop(i+'l2',S+(+P.t_sin));};
+/* 15. relatividade geral x mecânica quântica */
+SH.rgmq=(it,P,S,D,i)=>{let fun='';for(let k=0;k<7;k++){const rx=240*Math.pow(1-k/7,1.5),y=250+k*42;fun+=`<ellipse class="${i}fn" cx="330" cy="${y}" rx="${f(rx)}" ry="${f(rx*.22)}" fill="none" stroke="#7fe3ff" stroke-width="4" opacity="${(1-k*.08).toFixed(2)}"/>`;}
+  for(let k=0;k<10;k++){const a=k/10*Math.PI*2,x0=330+Math.cos(a)*240,y0=250+Math.sin(a)*53;fun+=`<path class="${i}fn" d="M${f(x0)},${f(y0)} Q${f(330+Math.cos(a)*40)},${f(300+Math.sin(a)*10)} 330,520" fill="none" stroke="#7fe3ff" stroke-width="3" opacity=".55"/>`;}
+  const r=rng(31);let cl='';for(let k=0;k<46;k++){const a=r()*6.283,dd=Math.pow(r(),.6)*140;cl+=`<circle class="${i}q" cx="${f(950+Math.cos(a)*dd)}" cy="${f(370+Math.sin(a)*dd*.8)}" r="${f(4+r()*7)}" fill="${['#ff8ac4','#7fe3ff','#ffd27a'][k%3]}" opacity="${(0.4+r()*.6).toFixed(2)}"/>`;}
+  mk(i,'url(#bgA)',stars(i,161,90)+`<rect x="637" y="40" width="6" height="640" rx="3" fill="#fff" opacity=".25"/><g id="${i}L">${fun}</g><g id="${i}R" opacity="0">${cl}<circle cx="950" cy="370" r="22" fill="#fff"/></g>`
+   +lab(i+'t1',P.rg,330,110,{size:52})+lab(i+'inf','∞',330,565,{size:100,color:'#ff8ac4'})+lab(i+'d1',P.dens,330,655,{size:36,color:'#ff8ac4'})
+   +lab(i+'t2',P.mq,950,110,{size:52})+`<g transform="translate(950,600) rotate(-8)"><g id="${i}st" opacity="0"><rect x="-170" y="-50" width="340" height="100" rx="14" fill="none" stroke="#ff3b5c" stroke-width="9"/><text y="24" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="64" fill="#ff3b5c">${esc(P.proibe)}</text></g></g>`);
+  drift(i,S,D,-12,0);pop(i+'t1',S+.1);
+  F(`#${i} .${i}fn`,{opacity:0,y:-30},{opacity:.85,y:0,duration:.5,stagger:.06},S+.3);
+  F(`#${i}L`,{y:0},{y:8,duration:.8,yoyo:true,repeat:Math.floor(D/.8),ease:'sine.inOut'},S);
+  const ti=S+(+P.t_inf);pop(i+'inf',ti);pop(i+'d1',ti+.15);
+  const tq=S+(+P.t_mq);pop(i+'t2',tq);F(`#${i}R`,{opacity:0},{opacity:1,duration:.4},tq);
+  F(`#${i} .${i}q`,{x:0,y:0},{x:k=>((k*37)%29)-14,y:k=>((k*53)%27)-13,duration:.18,repeat:Math.floor((S+D-tq)/.18),yoyo:true,ease:'none'},tq);
+  F(`#${i}st`,{opacity:0,scale:2.2},{opacity:1,scale:1,duration:.3,ease:'power3.out',transformOrigin:'50% 50%'},S+(+P.t_pro));};
+/* 16. teoria que ainda não existe */
+SH.teoria=(it,P,S,D,i)=>{const piece=(id,x,c,inner)=>`<g transform="translate(${x},330)"><g id="${id}"><rect x="-110" y="-110" width="220" height="220" rx="26" fill="${c}"/><circle cx="110" cy="0" r="30" fill="${c}"/>${inner}</g></g>`;
+  const fn=[0,1,2,3].map(k=>`<ellipse cy="${-40+k*24}" rx="${70-k*16}" ry="${14-k*3}" fill="none" stroke="#fff" stroke-width="5"/>`).join('');
+  const at=[0,60,120].map(a=>`<ellipse rx="70" ry="24" fill="none" stroke="#fff" stroke-width="5" transform="rotate(${a})"/>`).join('')+'<circle r="12" fill="#fff"/>';
+  mk(i,'url(#bgD)',stars(i,171,100)+piece(i+'p1',330,'#7b5cff',fn)+`<g transform="translate(950,330) scale(-1,1)"><g id="${i}p2"><rect x="-110" y="-110" width="220" height="220" rx="26" fill="#1fb8a6"/><circle cx="110" cy="0" r="30" fill="#1fb8a6"/><g transform="scale(-1,1)">${at}</g></g></g>`
+   +`<g transform="translate(640,330)"><g id="${i}mid"><rect x="-110" y="-110" width="220" height="220" rx="26" fill="#ffffff" fill-opacity=".06" stroke="#ffd27a" stroke-width="6" stroke-dasharray="16 12"/>
+   <text y="45" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="130" fill="#ffd27a">?</text></g></g>`
+   +lab(i+'l1',P.titulo,640,600,{size:50}));
+  drift(i,S,D,-15,0);
+  F(`#${i}p1`,{x:-250,opacity:0},{x:0,opacity:1,duration:.7,ease:'back.out(1.4)'},S+.1);F(`#${i}p2`,{x:-250,opacity:0},{x:0,opacity:1,duration:.7,ease:'back.out(1.4)'},S+.3);
+  F(`#${i}mid`,{scale:.9,opacity:.5},{scale:1.08,opacity:1,duration:.55,yoyo:true,repeat:Math.floor(D/.55),ease:'sine.inOut',transformOrigin:'50% 50%'},S);
+  hid(`#${i}p1`,`#${i}p2`);pop(i+'l1',S+(+P.t_teo));};
+/* 17. CTA inscreva-se */
+SH.inscreva=(it,P,S,D,i)=>{mk(i,'url(#bgA)',stars(i,181,140)+bh(i+'bh',1000,380,120)+astro(i+'a',{x:420,y:300,s:1.15})
+   +`<g transform="translate(420,600)"><g id="${i}bt"><rect x="-265" y="-50" width="530" height="100" rx="50" fill="#ff3b5c"/>
+   <g transform="translate(-212,0)"><path d="M-18,14 Q-18,-20 0,-22 Q18,-20 18,14 L24,20 L-24,20Z" fill="#fff"/><circle cy="27" r="6" fill="#fff"/></g>
+   <text x="35" y="18" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="50" fill="#fff">${esc(P.botao)}</text></g></g>`);
+  drift(i,S,D,-25,0);spin(i+'bh',S,D,120);breath(i+'a',S,D,7,1.1);wave(i+'a',S+.4,D-.4);
+  hid(`#${i}bt`);F(`#${i}bt`,{opacity:1,scale:0},{opacity:1,scale:1,duration:.6,ease:'back.out(1.8)',transformOrigin:'50% 50%'},S+.2);
+  F(`#${i}bt`,{scale:1},{scale:1.06,duration:.5,yoyo:true,repeat:Math.floor((D-1)/.5),ease:'sine.inOut',transformOrigin:'50% 50%'},S+.9);};
+/* ---------- montar ---------- */
+const its=EDIT.items.filter(it=>!it.hidden&&it.type==='scene'&&it.by==='template').sort((a,b)=>a.start-b.start);
+its.forEach((it,n)=>{const p=it.props||{};const fn=SH[p.scene];if(!fn)return;const id=it.id+'_';fn(it,p.params||{},+it.start,+it.dur,id);shot(id,+it.start,+it.dur,n===0);});
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

@@ -1,0 +1,352 @@
+{
+ "version": 1,
+ "name": "15 - KURZGESAGT VETOR - O que aconteceria se você caísse num buraco negro",
+ "estilo": "15-kurzgesagt-vetor",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#120a2e"
+ },
+ "duration": 63.2,
+ "template": "local",
+ "referencia": {
+  "canal": "Kurzgesagt – In a Nutshell",
+  "canal_url": "https://www.youtube.com/@kurzgesagt",
+  "video": "https://youtu.be/ujkD4SxPKOI",
+  "titulo": "AI Just Crossed the Terrifying Line - Now What?",
+  "nota": "vetor flat denso, fundo escuro saturado, atores com olhinhos, câmera em zoom contínuo; personagens/marca próprios (astronauta), sem passarinho"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas vetor"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Você cai num buraco negro",
+   "start": 0,
+   "dur": 1.5,
+   "by": "template",
+   "props": {
+    "scene": "queda",
+    "params": {}
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Gravidade: pés x cabeça",
+   "start": 1.5,
+   "dur": 4.55,
+   "by": "template",
+   "props": {
+    "scene": "gravidade",
+    "params": {
+     "pes": "PÉS",
+     "cabeca": "CABEÇA",
+     "titulo": "MILHÕES DE VEZES",
+     "t_pes": 1.32,
+     "t_cab": 3.84,
+     "t_mil": 2.0
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Espaguetificação",
+   "start": 6.05,
+   "dur": 4.8,
+   "by": "template",
+   "props": {
+    "scene": "espaguete",
+    "params": {
+     "fio": "FIO DE ÁTOMOS",
+     "titulo": "ESPAGUETIFICAÇÃO",
+     "t_fio": 2.53,
+     "t_esp": 3.49
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Quem observa de fora",
+   "start": 10.85,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "scene": "observa",
+    "params": {
+     "modo": "fora",
+     "l1": "DE FORA",
+     "l2": "HORIZONTE",
+     "t_l1": 0.55,
+     "t_l2": 2.85
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Luz vermelha e lenta",
+   "start": 14.35,
+   "dur": 4.7,
+   "by": "template",
+   "props": {
+    "scene": "observa",
+    "params": {
+     "modo": "luz",
+     "l1": "MAIS VERMELHA",
+     "l3": "E MAIS LENTA",
+     "l2": "CONGELA NA BORDA",
+     "t_l1": 2.35,
+     "t_l2": 3.03,
+     "t_l3": 3.57
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Imagem estática desbotando",
+   "start": 19.05,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "scene": "estatica",
+    "params": {
+     "l1": "IMAGEM ESTÁTICA",
+     "l2": "PARA SEMPRE",
+     "t_l1": 0.97,
+     "t_l2": 2.71
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Na sua visão nada muda",
+   "start": 22.55,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "scene": "pov",
+    "params": {
+     "l1": "NA SUA VISÃO",
+     "l2": "NADA MUDA",
+     "hor": "HORIZONTE",
+     "t_l1": 0.55,
+     "t_l2": 1.47,
+     "t_trav": 2.87
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Espaço vira tempo / futuro",
+   "start": 26.05,
+   "dur": 5.25,
+   "by": "template",
+   "props": {
+    "scene": "tempo",
+    "params": {
+     "esp": "ESPAÇO",
+     "tem": "TEMPO",
+     "fut": "SEU FUTURO",
+     "t_tem": 1.13,
+     "t_cen": 1.95,
+     "t_fut": 4.09
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Singularidade = fim do relógio",
+   "start": 31.3,
+   "dur": 4.2,
+   "by": "template",
+   "props": {
+    "scene": "singular",
+    "params": {
+     "titulo": "SINGULARIDADE",
+     "l1": "NÃO É UM PONTO",
+     "l2": "FIM DO SEU RELÓGIO",
+     "t_nao": 1.16,
+     "t_fim": 2.68
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Supermassivo: passa inteiro",
+   "start": 35.5,
+   "dur": 3.55,
+   "by": "template",
+   "props": {
+    "scene": "super",
+    "params": {
+     "titulo": "SUPERMASSIVO",
+     "l2": "INTEIRO",
+     "t_sup": 1.16,
+     "t_int": 3.08
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Universo acelera até o fim",
+   "start": 39.05,
+   "dur": 4.75,
+   "by": "template",
+   "props": {
+    "scene": "acelera",
+    "params": {
+     "l1": "SEGUNDOS|OU HORAS",
+     "l2": "FIM DOS TEMPOS",
+     "t_seg": 0.47,
+     "t_fim": 3.81
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "A física para",
+   "start": 43.8,
+   "dur": 1.7,
+   "by": "template",
+   "props": {
+    "scene": "para",
+    "params": {
+     "titulo": "A FÍSICA PARA",
+     "t_fis": 0.64
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "CTA curtir",
+   "start": 45.5,
+   "dur": 2.35,
+   "by": "template",
+   "props": {
+    "scene": "curta",
+    "params": {
+     "titulo": "CURTA O VÍDEO"
+    }
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "A teoria falha",
+   "start": 47.85,
+   "dur": 2.3,
+   "by": "template",
+   "props": {
+    "scene": "falha",
+    "params": {
+     "titulo": "A TEORIA FALHA",
+     "sing": "SINGULARIDADE",
+     "t_fal": 0.75,
+     "t_sin": 1.31
+    }
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Relatividade x Quântica",
+   "start": 50.15,
+   "dur": 5.1,
+   "by": "template",
+   "props": {
+    "scene": "rgmq",
+    "params": {
+     "rg": "RELATIVIDADE|GERAL",
+     "dens": "DENSIDADE INFINITA",
+     "mq": "MECÂNICA|QUÂNTICA",
+     "proibe": "PROÍBE",
+     "t_inf": 1.99,
+     "t_mq": 3.25,
+     "t_pro": 4.57
+    }
+   }
+  },
+  {
+   "id": "s16",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Teoria que ainda não existe",
+   "start": 55.25,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "scene": "teoria",
+    "params": {
+     "titulo": "UMA TEORIA QUE|AINDA NÃO EXISTE",
+     "t_teo": 1.73
+    }
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "fundo",
+   "label": "CTA inscreva-se",
+   "start": 58.75,
+   "dur": 4.45,
+   "by": "template",
+   "props": {
+    "scene": "inscreva",
+    "params": {
+     "botao": "INSCREVA-SE"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "video": 17,
+ "estilo": "17-avatar-realista-ia (Antiques Gallery / Healoloogy / Nina Cooks)",
+ "inicio": "2026-10-22T14:21:01-03:00",
+ "fim": "2026-10-22T14:33:24-03:00",
+ "minutos": 12.4,
+ "render_segundos": 41,
+ "observacoes": "Template generic, 13 planos Ken Burns alternando avatar (5) e detalhe (7) + cena nova reutilizável EDITOR VIDEOS/templates/scenes/valor-avaliacao.html (valor verde gigante com contorno, params de/conector/ate/sub). Imagem-mestra via Pollinations Flux seed 1717 (único acerto antes de 402/503 em série); as 5 cenas da avatar via Flux Kontext dev LOCAL (ComfyUI E:\\AI, imagem-mestra como ReferenceLatent, seed 1717, ~25 s/img) = mesma mulher em todas; detalhes via Flux Kontext local texto->imagem (~10 s/img). ComfyUI subido e parado por este job. Legenda palavra-a-palavra Oswald branca/amarela (whisper large-v3 GPU, 'C. A Rua' corrigido para 'C, A, R.'). Sem música, sem SFX. 1 render (41 s), blackdetect 0. build_from_edit.py/server.py não alterados. Avatar saiu mais jovem (~25) e sem a mecha grisalha pedida no prompt; punção gerada tem letras sem sentido (cobertas pelo C·A·R).",
+ "estimativa_30min": {
+  "horas_maquina": 1.0,
+  "o_que_escala": "Com ComfyUI local: ~25 s por cena da avatar (Kontext) e ~10 s por detalhe -> ~300 imagens para 30 min = ~1,5 h GPU, sem custo; edição é preencher lista {frase, plano avatar|detalhe, título, valor}. Render ~0,8 s por segundo (~25 min). Gargalo real: só imagem parada (sem i2v); com LTX i2v da imagem-mestra seriam +3-5 h GPU."
+ }
+}

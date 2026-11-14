@@ -1,0 +1,584 @@
+{
+ "version": 1,
+ "name": "18 - COMENTARIO PRINTS EDICAO SIMPLES - Por que todo mundo está brigando sobre trabalho remoto",
+ "estilo": "18-comentario-prints-edicao-simples",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#05070a"
+ },
+ "duration": 57.1,
+ "template": "generic",
+ "fonts": {
+  "Anton": "fonts/Anton-Regular.ttf"
+ },
+ "referencia": {
+  "canal": "Nômade Digital Raiam",
+  "canal_url": "https://www.youtube.com/@nomadedigitalraiam",
+  "video": "https://youtu.be/69XnYWZCg8M",
+  "titulo": "ABOUT THE PROBLEM IN FRANCE",
+  "nota": "também Critical Latitude (39t1IhGejOQ) e Prosecutor Matthew Hanson; versão faceless: voz + prints genéricos + fundo fixo; ver ESTILOS-NOVOS/18-comentario-prints-edicao-simples/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 7.65,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 16.3,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh2",
+    "src": "sfx/whoosh.wav",
+    "start": 28.1,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh3",
+    "src": "sfx/whoosh.wav",
+    "start": 38.9,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh4",
+    "src": "sfx/whoosh.wav",
+    "start": 47.65,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo cidade"
+  },
+  {
+   "id": "fotos",
+   "name": "Fotos"
+  },
+  {
+   "id": "cards",
+   "name": "Prints / frases"
+  },
+  {
+   "id": "topo",
+   "name": "Título + progresso"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "scene",
+   "track": "fundo",
+   "label": "fundo cidade à noite (desfocado)",
+   "start": 0,
+   "dur": 57.1,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/fundo_cidade.jpg",
+     "mov": "push",
+     "amt": 0.06,
+     "brilho": 0.9,
+     "nevoa": 0.0,
+     "tint": "rgba(6,10,24,.25)"
+    }
+   }
+  },
+  {
+   "id": "topo",
+   "type": "scene",
+   "track": "topo",
+   "label": "título fixo + ponto n/5",
+   "start": 0,
+   "dur": 47.75,
+   "props": {
+    "scene": "cp_topo",
+    "params": {
+     "titulo": "A BRIGA DO HOME OFFICE",
+     "pontos": [
+      0,
+      7.75,
+      16.4,
+      28.2,
+      39.0
+     ],
+     "rotulos": [
+      "o real motivo",
+      "o print",
+      "é medo",
+      "o print 2",
+      "quem ganha"
+     ]
+    }
+   }
+  },
+  {
+   "id": "f1",
+   "type": "scene",
+   "track": "fotos",
+   "label": "foto homeoffice1.jpg",
+   "start": 0,
+   "dur": 4.95,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/homeoffice1.jpg",
+     "mov": "push",
+     "amt": 0.07,
+     "brilho": 0.8,
+     "nevoa": 0.0,
+     "tint": "rgba(0,0,0,.15)"
+    }
+   }
+  },
+  {
+   "id": "t1",
+   "type": "scene",
+   "track": "cards",
+   "label": "real motivo: controle",
+   "start": 0,
+   "dur": 4.95,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "baixo",
+     "scrim": true,
+     "linhas": [
+      {
+       "txt": "Ninguém fala do real motivo:",
+       "t": 2.1,
+       "cls": "apoio",
+       "destaques": []
+      },
+      {
+       "txt": "CONTROLE.",
+       "t": 4.1,
+       "cls": "grande",
+       "destaques": [
+        {
+         "p": "CONTROLE.",
+         "t": 4.2
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "f2",
+   "type": "scene",
+   "track": "fotos",
+   "label": "foto homeoffice0.jpg",
+   "start": 4.95,
+   "dur": 2.8,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/homeoffice0.jpg",
+     "mov": "pan_r",
+     "amt": 0.07,
+     "brilho": 0.8,
+     "nevoa": 0.0,
+     "tint": "rgba(0,0,0,.15)"
+    }
+   }
+  },
+  {
+   "id": "t2",
+   "type": "scene",
+   "track": "cards",
+   "label": "não odeiam o sofá",
+   "start": 4.95,
+   "dur": 2.8,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "baixo",
+     "scrim": true,
+     "linhas": [
+      {
+       "txt": "Chefes não odeiam o sofá…",
+       "t": 0.05,
+       "cls": "apoio",
+       "destaques": []
+      },
+      {
+       "txt": "odeiam não te ver.",
+       "t": 1.6,
+       "cls": "grande",
+       "destaques": [
+        {
+         "p": "não te ver.",
+         "t": 2.1
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "p1",
+   "type": "scene",
+   "track": "cards",
+   "label": "print 1 + resposta",
+   "start": 7.75,
+   "dur": 8.65,
+   "props": {
+    "scene": "cp_post",
+    "params": {
+     "rotulo": "UM PRINT VIRALIZOU",
+     "nome": "Gestor Exemplo",
+     "handle": "@gestor_exemplo",
+     "data": "perfil fictício",
+     "texto": "Se não estou olhando, como sei que trabalha?",
+     "t_texto": 1.3,
+     "destaques": [
+      {
+       "p": "como sei que trabalha?",
+       "t": 2.6
+      }
+     ],
+     "resposta": {
+      "nome": "Dev Remoto",
+      "handle": "@dev_remoto",
+      "data": "perfil fictício",
+      "texto": "Pelo resultado entregue.",
+      "t": 3.85,
+      "destaques": [
+       {
+        "p": "resultado entregue.",
+        "t": 5.75
+       }
+      ]
+     },
+     "selo": "QUEBROU A INTERNET",
+     "t_selo": 7.2
+    }
+   }
+  },
+  {
+   "id": "t3",
+   "type": "scene",
+   "track": "cards",
+   "label": "não é preguiça, é medo",
+   "start": 16.4,
+   "dur": 6.45,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "centro",
+     "scrim": false,
+     "linhas": [
+      {
+       "txt": "Não é preguiça.",
+       "t": 0.6,
+       "cls": "grande",
+       "risca": 1.2,
+       "destaques": []
+      },
+      {
+       "txt": "É medo.",
+       "t": 1.8,
+       "cls": "grande",
+       "destaques": [
+        {
+         "p": "medo.",
+         "t": 2.1
+        }
+       ]
+      },
+      {
+       "txt": "Medo de ficar obsoleto quem só sabe gerenciar presença.",
+       "t": 2.7,
+       "cls": "apoio",
+       "destaques": [
+        {
+         "p": "gerenciar presença.",
+         "t": 5.0
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "v1",
+   "type": "scene",
+   "track": "cards",
+   "label": "horas x entrega",
+   "start": 22.85,
+   "dur": 5.35,
+   "props": {
+    "scene": "cp_versus",
+    "params": {
+     "topo": "Empresas que medem…",
+     "esq": {
+      "titulo": "HORAS",
+      "sub": "chamam de cultura",
+      "t": 0.6,
+      "ts": 1.9
+     },
+     "dir": {
+      "titulo": "ENTREGA",
+      "sub": "chamam de liberdade",
+      "t": 3.3,
+      "ts": 4.8
+     }
+    }
+   }
+  },
+  {
+   "id": "f3",
+   "type": "scene",
+   "track": "fotos",
+   "label": "foto mouse0.jpg",
+   "start": 28.2,
+   "dur": 6.45,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/mouse0.jpg",
+     "mov": "push",
+     "amt": 0.07,
+     "brilho": 0.45,
+     "nevoa": 0.0,
+     "tint": "rgba(0,0,0,.15)"
+    }
+   }
+  },
+  {
+   "id": "p2",
+   "type": "scene",
+   "track": "cards",
+   "label": "print 2 (mouse)",
+   "start": 28.2,
+   "dur": 6.45,
+   "props": {
+    "scene": "cp_post",
+    "params": {
+     "rotulo": "O PRINT QUE CALOU A DISCUSSÃO",
+     "nome": "Analista Cansado",
+     "handle": "@analista_cansado",
+     "data": "perfil fictício",
+     "texto": "Meu chefe me monitora pelo mouse. Minha entrega dobrou, meu salário não.",
+     "t_texto": 1.9,
+     "tam": 40,
+     "destaques": [
+      {
+       "p": "me monitora pelo mouse.",
+       "t": 2.9
+      },
+      {
+       "p": "Minha entrega dobrou,",
+       "t": 4.25
+      },
+      {
+       "p": "meu salário não.",
+       "t": 5.5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "t4",
+   "type": "scene",
+   "track": "cards",
+   "label": "virou teatro",
+   "start": 34.65,
+   "dur": 4.35,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "centro",
+     "scrim": false,
+     "linhas": [
+      {
+       "txt": "Se a métrica é o clique,",
+       "t": 0.05,
+       "cls": "apoio",
+       "destaques": []
+      },
+      {
+       "txt": "o trabalho virou teatro.",
+       "t": 1.6,
+       "cls": "grande",
+       "destaques": [
+        {
+         "p": "teatro.",
+         "t": 2.35
+        }
+       ]
+      },
+      {
+       "txt": "E teatro cansa.",
+       "t": 3.0,
+       "cls": "apoio",
+       "destaques": []
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "v2",
+   "type": "scene",
+   "track": "cards",
+   "label": "confiança x segurança",
+   "start": 39.0,
+   "dur": 4.45,
+   "props": {
+    "scene": "cp_versus",
+    "params": {
+     "topo": "Por isso a briga esquenta",
+     "esq": {
+      "titulo": "UM LADO QUER",
+      "sub": "confiança",
+      "t": 1.5,
+      "ts": 2.25
+     },
+     "dir": {
+      "titulo": "O OUTRO QUER",
+      "sub": "segurança",
+      "t": 3.1,
+      "ts": 3.7
+     }
+    }
+   }
+  },
+  {
+   "id": "t5",
+   "type": "scene",
+   "track": "cards",
+   "label": "quem ganha",
+   "start": 43.45,
+   "dur": 4.3,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "centro",
+     "scrim": false,
+     "linhas": [
+      {
+       "txt": "Quem ganha?",
+       "t": 0.05,
+       "cls": "grande",
+       "destaques": []
+      },
+      {
+       "txt": "Quem aceitar que adulto não precisa de babá para produzir.",
+       "t": 0.95,
+       "cls": "apoio",
+       "destaques": [
+        {
+         "p": "não precisa de babá",
+         "t": 2.45
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "f4",
+   "type": "scene",
+   "track": "fotos",
+   "label": "foto digitando0.jpg",
+   "start": 47.75,
+   "dur": 4.25,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/digitando0.jpg",
+     "mov": "push",
+     "amt": 0.07,
+     "brilho": 0.75,
+     "nevoa": 0.0,
+     "tint": "rgba(0,0,0,.15)"
+    }
+   }
+  },
+  {
+   "id": "cta",
+   "type": "scene",
+   "track": "cards",
+   "label": "status verde + comenta eu",
+   "start": 47.75,
+   "dur": 4.25,
+   "props": {
+    "scene": "cp_status",
+    "params": {
+     "nome": "Você",
+     "t_status": 2.5,
+     "t_digit": 1.0,
+     "t_cta": 3.4,
+     "t_eu": 3.9,
+     "cta": "COMENTA “EU”"
+    }
+   }
+  },
+  {
+   "id": "fim",
+   "type": "scene",
+   "track": "cards",
+   "label": "próximo vídeo",
+   "start": 52.0,
+   "dur": 5.1,
+   "props": {
+    "scene": "cp_frase",
+    "params": {
+     "pos": "centro",
+     "scrim": false,
+     "linhas": [
+      {
+       "txt": "No próximo vídeo",
+       "t": 0.1,
+       "cls": "rotulo",
+       "destaques": []
+      },
+      {
+       "txt": "Como negociar autonomia",
+       "t": 1.5,
+       "cls": "grande",
+       "destaques": [
+        {
+         "p": "autonomia",
+         "t": 2.4
+        }
+       ]
+      },
+      {
+       "txt": "sem quebrar a cara.",
+       "t": 3.1,
+       "cls": "apoio",
+       "destaques": []
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

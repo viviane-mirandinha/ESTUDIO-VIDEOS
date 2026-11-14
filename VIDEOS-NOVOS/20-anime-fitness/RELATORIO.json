@@ -1,0 +1,13 @@
+{
+ "video": 20,
+ "estilo": "20-anime-fitness (ryoga.training)",
+ "inicio": "2026-10-22T14:34:13-03:00",
+ "fim": "2026-10-22T14:53:29-03:00",
+ "minutos": 19.3,
+ "render_segundos": 32,
+ "observacoes": "Template generic, 20 planos sobre preto total. Personagem anime ORIGINAL (cabelo prateado espetado, calça roxa): imagem-mestra Flux Kontext dev LOCAL t2i (seed 44, escolhida entre 4) + 16 poses por Kontext com a mestra como ReferenceLatent (seed 2020, ~22 s/img). Músculo-alvo = máscara nossa: Kontext pinta uma cópia, mask.py extrai só os pixels coloridos onde a base é P&B (exclui a calça roxa dilatada) -> PNG RGBA pulsando + rótulos tracejados ancorados no centróide. 4 cenas NOVAS reutilizáveis em EDITOR VIDEOS/templates/scenes: anime-quadro (zoom+shake leve+speedlines SVG+✕/✓), musculo-destaque, contador-reps, semana-dias. Whisper large-v3 GPU. Sem música, sem SFX. 2 renders (2º: trocado plano de 'balançar' que parecia agachamento e texto movido p/ não cobrir os pés). blackdetect 0. build_from_edit.py/server.py/static NÃO alterados. ComfyUI subido por este job (PID em comfy_pid.txt) e DEIXADO LIGADO porque o vídeo 21 está usando. Fraco: a pose 'rosca roubada balançando' não saiu fiel (Kontext não entende bem); pintura do bíceps vazou p/ ombro/peito; traço mais limpo/'anime' e menos sombreado que a referência.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Banco de ~40 poses do mesmo personagem (Kontext ~22 s cada, ~15 min GPU) cobre quase tudo com reuso; máscaras automáticas por mask.py; edição = lista {frase, pose, músculo, texto, séries/reps}. Render ~0,7 s por segundo de vídeo (~25 min p/ 30 min). Gargalo: poses com equipamento específico às vezes erram e exigem re-seed + conferência visual."
+ }
+}
