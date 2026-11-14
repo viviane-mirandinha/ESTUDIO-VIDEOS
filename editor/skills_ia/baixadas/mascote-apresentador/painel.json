@@ -1,0 +1,8 @@
+﻿{
+    "id":  "mascote-apresentador",
+    "tipo":  "claude",
+    "formato":  "short",
+    "entrada":  "texto",
+    "nome":  "Mascote Apresentador",
+    "descricao_curta":  "Mascote animado (5 personagens) apresenta o vídeo, fundo escuro com gradiente"
+}

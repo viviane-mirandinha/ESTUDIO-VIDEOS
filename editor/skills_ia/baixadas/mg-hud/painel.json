@@ -1,0 +1,12 @@
+{
+ "id": "mg-hud",
+ "nome": "HUD Cyberpunk",
+ "emoji": "🛰️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Interface de filme de ficção: linhas neon ciano e laranja, mira travando alvo, radar girando, dados em fonte mono e holograma 3D. Tecnologia, IA, análise, ranking, 'missão'.",
+ "exemplo": "Como o algoritmo decide quem vai viralizar",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

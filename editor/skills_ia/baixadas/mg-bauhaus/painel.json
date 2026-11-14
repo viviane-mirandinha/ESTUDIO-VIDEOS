@@ -1,0 +1,12 @@
+{
+ "id": "mg-bauhaus",
+ "nome": "Geométrico Bauhaus",
+ "emoji": "🔺",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Círculo, triângulo e quadrado numa grade rígida, só vermelho, amarelo, azul, preto e branco, tudo no ritmo da batida. Pôster cinético: listas, regras, frases curtas.",
+ "exemplo": "Três regras de foco que cabem num post-it",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

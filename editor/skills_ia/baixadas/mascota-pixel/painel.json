@@ -1,0 +1,12 @@
+{
+ "id": "mascota-pixel",
+ "nome": "Mascote Pixel (sua foto vira pixel art)",
+ "emoji": "👾",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Sua foto ou imagem vira um mascote em pixel art que mexe a boca com a voz. Passos numerados, cartões de app, capa e textos.",
+ "exemplo": "3 apps grátis que substituem programas pagos",
+ "peso": 2,
+ "tempo": "10–20 min",
+ "categoria": "short"
+}

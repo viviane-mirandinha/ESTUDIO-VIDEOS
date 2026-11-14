@@ -1,0 +1,12 @@
+{
+ "id": "animate",
+ "nome": "Animação Procedural (Recorte, Nanquim, Riso...)",
+ "emoji": "✂️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Animação curta feita 100% em código, com trilha sintetizada, em estilos de recorte de papel, nanquim, riso, caderno, pixel, isométrico ou matemática.",
+ "exemplo": "A história da inteligência artificial em 60 segundos",
+ "peso": 2,
+ "tempo": "15–30 min",
+ "categoria": "estilo"
+}

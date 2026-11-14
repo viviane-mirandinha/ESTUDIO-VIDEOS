@@ -1,0 +1,12 @@
+{
+ "id": "mg-isometric",
+ "nome": "Isométrico 2.5D",
+ "emoji": "🏙️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Mundo em miniatura visto em perspectiva isométrica: prédios e peças crescendo, câmera deslizando em trilhos. Bom pra mostrar sistema, processo, negócio crescendo, tecnologia.",
+ "exemplo": "Como um negócio online pequeno cresce passo a passo",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

@@ -1,0 +1,12 @@
+{
+ "id": "mg-flat-vector",
+ "nome": "Flat Vector 2D",
+ "emoji": "🟠",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Explainer de formas chapadas: cores fortes sem degradê, personagens geométricos e tudo entrando com pulo elástico (estica, amassa, volta). Bom pra explicar app, produto, processo ou dica rápida.",
+ "exemplo": "Como um aplicativo decide o que te mostrar primeiro",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

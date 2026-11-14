@@ -1,0 +1,8 @@
+﻿{
+    "id":  "hand-drawing",
+    "tipo":  "claude",
+    "formato":  "short",
+    "entrada":  "texto",
+    "nome":  "Hand Drawing",
+    "descricao_curta":  "Mão real desenhando no quadro branco/lousa, estilo whiteboard explainer"
+}

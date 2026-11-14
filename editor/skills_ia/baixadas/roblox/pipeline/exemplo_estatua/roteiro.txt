@@ -1,0 +1,59 @@
+ROTEIRO 01 - ESTÁTUA (Short Roblox animado, PT-BR, criança narrando em 1ª pessoa)
+Ideia aprovada: "Nessa cidade, se você não dorme, você vira estátua."
+Voz: Kokoro speed 1.25 + pitch +1,5 semitom | alvo ~40 s | 1 linha = 1 fala do TTS
+
+================ NARRAÇÃO (pronta pro TTS) ================
+Nessa cidade, se você não dorme, você vira estátua.
+Por isso, às nove em ponto, toda luz apaga.
+Minha vizinha dorme abraçada no despertador.
+O padeiro dorme até em pé.
+E eu? Eu sou o Léo. O rei do videogame.
+Ontem eu falei: só mais uma fase.
+Só mais uma.
+Aí o sol nasceu.
+Créc! Meu dedo virou pedra.
+Créc, créc! O braço, a perna, o nariz.
+Puf! Acordei na praça, de pedra inteirinho.
+E a praça tava lotada. De estátua de criança.
+Um pombo pousou na minha cabeça. E fez um ninho.
+Aí eu vi a estátua mais velha de todas.
+Cheia de musgo. Segurando um controle.
+Era o meu pai. Com dez anos.
+Puf! Ele piscou pra mim. E bocejou.
+Eu bocejei também.
+Puf! A pedra caiu. A gente acordou de verdade.
+Agora a praça inteira tá bocejando.
+Nessa cidade, quem dorme cedo... é quem acorda de verdade.
+
+Palavras: 151 (fala estimada ~38-42 s na voz rápida)
+Pausa maior (0,24 s) antes de "Aí eu vi a estátua mais velha de todas." (música corta aqui)
+
+================ CENAS ================
+nº | frase | o que aparece na tela
+01 | Nessa cidade, | plano aberto: rua do bairro de manhã, um menino de pedra parado na calçada (a regra já acontecendo)
+02 | se você não dorme, | close: olhos arregalados com olheira, tela de celular iluminando o rosto
+03 | você vira estátua. | close do menino de pedra, rosto cinza congelado em bocejo
+04 | Por isso, às nove em ponto, | close de relógio de torre batendo 9 (sino "dém")
+05 | toda luz apaga. | plano aberto noturno: janelas apagando uma a uma, em sequência
+06 | Minha vizinha dorme abraçada no despertador. | médio: vizinha na cama abraçando despertador gigante
+07 | O padeiro dorme até em pé. | médio: padeiro de chapéu roncando em pé atrás do balcão, pão na mão
+08 | E eu? Eu sou o Léo. | close: Léo (boné vermelho, pijama azul) estala pose ao dizer "Léo"
+09 | O rei do videogame. | médio: Léo de coroa de papel no sofá, controle erguido, tela piscando
+10 | Ontem eu falei: só mais uma fase. | close: rosto do Léo iluminado pela TV, sorriso determinado
+11 | Só mais uma. | close do relógio: 3h da manhã, ponteiro pulando
+12 | Aí o sol nasceu. | janela: sol subindo atrás das casas, luz entra no quarto
+13 | Créc! Meu dedo virou pedra. | close extremo da mão no controle: dedo fica cinza, rachadura + puf
+14 | Créc, créc! O braço, a perna, o nariz. | 3 cortes rápidos: braço vira pedra / perna vira pedra / nariz vira pedra (cada um com puf)
+15 | Puf! Acordei na praça, de pedra inteirinho. | médio: Léo-estátua num pedestal na praça, puf branco + estrelinhas
+16 | E a praça tava lotada. De estátua de criança. | REVELAÇÃO (1 slide lento): câmera desliza ao longo de 40-50 estátuas de crianças cinzas com controles, celulares, livros
+17 | Um pombo pousou na minha cabeça. | close: pombo pousando na cabeça do Léo, olhos dele se mexendo (só os olhos)
+18 | E fez um ninho. | close: ninho de gravetos montado, ovinho aparece com "pop"
+19 | Aí eu vi a estátua mais velha de todas. | MÚSICA CORTA 1-2 s; plano aberto: estátua mais alta no centro da praça, isolada; um "tum" grave na palavra "velha"
+20 | Cheia de musgo. Segurando um controle. | push-in: musgo verde nas rachaduras → close das mãos de pedra num controle antigo quadradão
+21 | Era o meu pai. Com dez anos. | close do rosto da estátua: mesmo nariz e boné do pai; placa no pedestal "1996"; corte pro Léo com cara de choque
+22 | Puf! Ele piscou pra mim. E bocejou. | VIRADA: puf no rosto da estátua, olho pisca, boca abre em bocejo enorme
+23 | Eu bocejei também. | close: Léo bocejando, troca de rosto pra sonolento
+24 | Puf! A pedra caiu. A gente acordou de verdade. | pedra estoura em pedaços (puf grande + estrelas); Léo e o pai-menino coloridos, de pijama, se olhando
+25 | Agora a praça inteira tá bocejando. | plano aberto: todas as estátuas abrindo a boca em bocejo, uma por uma (escalonado)
+26 | Nessa cidade, quem dorme cedo... | todo o elenco vira a cabeça pra câmera de uma vez (snap), sting toca
+27 | é quem acorda de verdade. | close final do Léo de olhos fechados dormindo em pé no pedestal, pombo no ninho; segura 1,5 s após a última palavra

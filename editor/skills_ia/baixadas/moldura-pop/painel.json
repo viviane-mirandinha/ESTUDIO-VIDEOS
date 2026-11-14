@@ -1,0 +1,8 @@
+﻿{
+    "id":  "moldura-pop",
+    "tipo":  "claude",
+    "formato":  "short",
+    "entrada":  "video",
+    "nome":  "Moldura Pop",
+    "descricao_curta":  "Vídeo de pessoa falando com moldura arredondada, cabeça sai da borda, letterings premium"
+}

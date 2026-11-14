@@ -1,0 +1,12 @@
+{
+ "id": "mg-collage",
+ "nome": "Colagem Recortada",
+ "emoji": "✂️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Recortes de fotos antigas e jornal com borda branca de tesoura, retícula e movimento travado tipo stop-motion. Surreal e retrô: opinião, cultura, cérebro, comportamento.",
+ "exemplo": "O que passa na cabeça de quem nunca consegue começar",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

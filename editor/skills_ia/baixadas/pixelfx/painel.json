@@ -1,0 +1,12 @@
+{
+ "id": "pixelfx",
+ "nome": "Efeitos Pixel Art (244 efeitos)",
+ "emoji": "👾",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Efeitos em pixel art prontos (fogo, explosão, gelo, raio, magia, moedas) pra games, nostalgia ou pra enfeitar um vídeo.",
+ "exemplo": "Uma explosão de moedas douradas em pixel art pra abrir o vídeo",
+ "peso": 1,
+ "tempo": "3–8 min",
+ "categoria": "estilo"
+}

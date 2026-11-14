@@ -1,0 +1,12 @@
+{
+ "id": "talking-head-recut",
+ "nome": "Cards por Cima (fala + gráficos)",
+ "emoji": "🗂",
+ "entrada": "video",
+ "formato": "short",
+ "quando": "Você falando (entrevista, podcast, explicação). O vídeo toca inteiro e ganha cartões gráficos sincronizados com a fala: títulos, nome na tela, números, citações, painel lateral e picture-in-picture. Serve pra 9:16, 16:9 ou 4:5.",
+ "exemplo": "Meu vídeo explicando 3 erros de quem começa no Instagram",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "short"
+}

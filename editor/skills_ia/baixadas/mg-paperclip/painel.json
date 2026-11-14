@@ -1,0 +1,12 @@
+{
+ "id": "mg-paperclip",
+ "nome": "Explicador com Adesivos",
+ "emoji": "🧷",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Fotos recortadas com borda branca grossa (adesivo), ícones planos e gráficos com dados numa tela gigante que a câmera percorre. Explicador de conhecimento: economia, ciência, dados.",
+ "exemplo": "Quanto tempo a gente passa no celular por dia",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

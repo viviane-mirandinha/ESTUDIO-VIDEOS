@@ -1,0 +1,52 @@
+{
+  "amarelas": ["volts", "ligado", "eletricista", "bairro", "escuro", "linha", "viva", "isolador", "rachado", "caminho", "cesto", "fibra", "borracha", "couro", "três", "milhares", "circuito", "capas", "passarinho", "choque", "mesma", "tensão", "vara", "manobra", "nova", "volta", "ninguém", "piscou", "profissão"],
+  "etiquetas": [
+    {"de": "0:5", "ate": "1:0", "texto": "+13 MIL VOLTS"},
+    {"de": "7:4", "ate": "8:0", "texto": "LINHA VIVA"},
+    {"de": "8:5", "ate": "9:0", "texto": "ISOLADOR"},
+    {"de": "9:0", "ate": "10:0", "texto": "RACHADO"},
+    {"de": "11:5", "ate": "11:10", "texto": "CESTO ISOLADO"},
+    {"de": "11:10", "ate": "12:0", "texto": "BRAÇO DE FIBRA"},
+    {"de": "13:4", "ate": "14:5", "texto": "BORRACHA ISOLANTE"},
+    {"de": "14:5", "ate": "15:0", "texto": "COURO POR CIMA"},
+    {"de": "15:5", "ate": "15:8", "texto": "3 FIOS"},
+    {"de": "15:8", "ate": "16:0", "texto": "MILHARES DE VOLTS"},
+    {"de": "17:7", "ate": "18:0", "texto": "CAPA ISOLANTE"},
+    {"de": "20:5", "ate": "21:0", "texto": "MESMA TENSÃO"},
+    {"de": "21:4", "ate": "22:0", "texto": "BORRACHA + FIBRA"},
+    {"de": "22:2", "ate": "22:9", "texto": "VARA DE MANOBRA"},
+    {"de": "23:0", "ate": "24:0", "texto": "PEÇA NOVA"},
+    {"de": "27:0", "ate": "28:0", "texto": "NENHUMA LUZ PISCOU"},
+    {"de": "29:7", "ate": "fim", "texto": "COMENTA PROFISSÃO", "grande": true}
+  ],
+  "selos": [
+    {"de": "5:0", "ate": "6:0", "texto": "SIMULAÇÃO", "cor": "#FF4A3D"},
+    {"de": "10:0", "ate": "11:0", "texto": "SIMULAÇÃO", "cor": "#FF4A3D"},
+    {"de": "13:0", "ate": "15:0", "texto": "CAMADAS DA LUVA", "cor": "#3DDC84"},
+    {"de": "16:0", "ate": "17:0", "texto": "SIMULAÇÃO", "cor": "#FF4A3D"},
+    {"de": "20:0", "ate": "21:0", "texto": "RAIO-X", "cor": "#4AB8FF"}
+  ],
+  "checks": [{"de": "17:8", "ate": "18:0", "x": 700, "y": 880}],
+  "tintas": [{"de": "20:0", "ate": "21:0", "tipo": "raiox"}],
+  "musica": "kits/CURSOS-MENTORIAS/MENTORIA CANAL DARK/MUSICAS SEM DIREITOS-20260118T055900Z-1-001/MUSICAS SEM DIREITOS/Blue Dream - Cheel.mp3",
+  "sfx": [
+    ["synth:zumbido", "0:0", 0.0, -36, 2.2],
+    ["synth:zumbido", "7:0", 0.0, -36, 1.5],
+    ["synth:faisca", "9:2", -0.05, -28, 0.8],
+    ["synth:zumbido", "10:7", 0.0, -34, 1.6],
+    ["kit:whooshes/whoosh-slow-soft", "11:0", 0.0, -30, 0],
+    ["kit:foley/foley-fabric-slide", "14:5", -0.25, -28, 0],
+    ["synth:faisca", "15:8", 0.0, -32, 1.4],
+    ["synth:faisca", "16:2", 0.0, -27, 0.5],
+    ["synth:zumbido", "16:5", -0.1, -32, 1.2],
+    ["kit:interface/click-snap-soft", "17:2", 0.0, -30, 0],
+    ["kit:shimmers/shimmer-short-soft", "17:8", 0.0, -30, 0],
+    ["synth:passarinho", "18:2", 0.0, -30, 0],
+    ["synth:passarinho", "19:3", 0.1, -33, 0],
+    ["kit:digital/digital-scan-subtle", "20:0", 0.0, -34, 0],
+    ["kit:foley/foley-wood-touch", "22:10", 0.0, -28, 0],
+    ["kit:mechanical/mechanical-latch-light", "23:3", 0.0, -24, 0],
+    ["kit:foley/foley-plastic-touch", "24:2", 0.0, -28, 0],
+    ["kit:notifications/notification-success-sparkle", "29:7", 0.0, -30, 0]
+  ]
+}

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "maquete-viva",
+    "tipo":  "claude",
+    "formato":  "short",
+    "entrada":  "texto",
+    "nome":  "Maquete Viva",
+    "descricao_curta":  "Animação 3D maquete viva premium, cidade em miniatura no Blender"
+}

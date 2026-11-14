@@ -1,0 +1,12 @@
+{
+ "id": "mg-pixel",
+ "nome": "Pixel Art 8-bit",
+ "emoji": "👾",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Pixels grandes, paleta limitada, sprites com poucos quadros e filtro de TV antiga (CRT). Games, nostalgia, 'fases' e 'missões', jornada de alguém.",
+ "exemplo": "A vida de criador de conteúdo como se fosse um videogame",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

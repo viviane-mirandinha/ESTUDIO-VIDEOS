@@ -1,0 +1,12 @@
+{
+ "id": "roblox",
+ "nome": "Roblox Story (Nessa cidade...)",
+ "emoji": "🧱",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Historinha animada em 3D com bonequinhos de bloco estilo Roblox, narrada por criança (voz local), legenda palavra por palavra com destaque vermelho. Formato 'Nessa cidade, se você ___, você ___' ou clonar um reel Roblox de referência. Precisa do Blender.",
+ "exemplo": "Nessa cidade, se você não dorme, você vira estátua",
+ "peso": 3,
+ "tempo": "20–40 min",
+ "categoria": "estilo"
+}

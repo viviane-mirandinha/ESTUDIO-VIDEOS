@@ -1,0 +1,9 @@
+{
+  "name": "animate-skill-local",
+  "private": true,
+  "description": "Dependencias locais da skill animate (MIT). Rode: npm install --no-audit --no-fund && npx playwright install chromium",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

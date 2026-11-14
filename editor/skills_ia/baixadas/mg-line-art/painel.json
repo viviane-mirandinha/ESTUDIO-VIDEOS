@@ -1,0 +1,12 @@
+{
+ "id": "mg-line-art",
+ "nome": "Line Art (Um Traço)",
+ "emoji": "✒️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Uma única linha fina que se desenha sozinha e vira o próximo desenho, num fundo limpo. Minimalista e elegante: frase de impacto, marca pessoal, finanças, reflexão.",
+ "exemplo": "A ideia simples que separa quem começa de quem termina",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

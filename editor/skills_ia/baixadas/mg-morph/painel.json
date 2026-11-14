@@ -1,0 +1,12 @@
+{
+ "id": "mg-morph",
+ "nome": "Morph de Formas",
+ "emoji": "🔷",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Uma forma vira outra sem corte (celular vira alfinete de mapa, xícara vira pôr do sol). Storytelling visual: antes e depois, metáforas, jornada em etapas.",
+ "exemplo": "Do primeiro post ao primeiro cliente",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "cartoon",
+    "tipo":  "claude",
+    "formato":  "longo",
+    "entrada":  "texto",
+    "nome":  "Cartoon",
+    "descricao_curta":  "Desenho animado infantil, estilo felt-and-paper, narração e música"
+}

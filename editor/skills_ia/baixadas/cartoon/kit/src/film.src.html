@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>The Paper Rocket</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-latin-900-normal.ttf") format("truetype"); font-weight: 900; font-style: normal; }
+      @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-latin-600-normal.ttf") format("truetype"); font-weight: 600; font-style: normal; }
+      @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-latin-600-italic.ttf") format("truetype"); font-weight: 600; font-style: italic; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #0f1430; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0f1430; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg.art { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+      .words {
+        position: absolute; left: 140px; right: 140px; text-align: center;
+        font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 84px; line-height: 1.08;
+        letter-spacing: -0.01em; color: #2a1d3a;
+      }
+      .words .w { display: inline-block; opacity: 0; margin: 0 0.12em; }
+      .words.light { color: #fff6e6; text-shadow: 0 4px 16px rgba(10, 8, 40, 0.45); }
+      .words.dark { text-shadow: 0 3px 0 rgba(255, 255, 255, 0.55); }
+      #defs { position: absolute; width: 0; height: 0; }
+      #fx { position: absolute; inset: 0; pointer-events: none; }
+      #fx svg { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="37" data-width="1920" data-height="1080">
+      <svg id="defs" aria-hidden="true">
+        <defs>
+          <filter id="felt" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="warp" />
+            <feDisplacementMap in="SourceGraphic" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G" result="shape" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="11" result="fib" />
+            <feDiffuseLighting in="fib" surfaceScale="2.4" lighting-color="#ffffff" result="lit">
+              <feDistantLight azimuth="235" elevation="58" />
+            </feDiffuseLighting>
+            <feComponentTransfer in="lit" result="lit2">
+              <feFuncR type="linear" slope="0.5" intercept="0.62" />
+              <feFuncG type="linear" slope="0.5" intercept="0.62" />
+              <feFuncB type="linear" slope="0.5" intercept="0.62" />
+            </feComponentTransfer>
+            <feComposite in="lit2" in2="shape" operator="in" result="litA" />
+            <feBlend in="shape" in2="litA" mode="multiply" result="tex" />
+            <feDropShadow in="tex" dx="0" dy="6" stdDeviation="5" flood-color="#21123a" flood-opacity="0.32" />
+          </filter>
+          <filter id="paper" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="7" result="fib" />
+            <feDiffuseLighting in="fib" surfaceScale="1.2" lighting-color="#ffffff" result="lit">
+              <feDistantLight azimuth="235" elevation="65" />
+            </feDiffuseLighting>
+            <feComponentTransfer in="lit" result="lit2">
+              <feFuncR type="linear" slope="0.3" intercept="0.78" />
+              <feFuncG type="linear" slope="0.3" intercept="0.78" />
+              <feFuncB type="linear" slope="0.3" intercept="0.78" />
+            </feComponentTransfer>
+            <feComposite in="lit2" in2="SourceGraphic" operator="in" result="litA" />
+            <feBlend in="SourceGraphic" in2="litA" mode="multiply" result="tex" />
+            <feDropShadow in="tex" dx="0" dy="7" stdDeviation="6" flood-color="#1b1030" flood-opacity="0.25" />
+          </filter>
+          <filter id="bg" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="2" result="fib" />
+            <feDiffuseLighting in="fib" surfaceScale="1" lighting-color="#ffffff" result="lit">
+              <feDistantLight azimuth="235" elevation="70" />
+            </feDiffuseLighting>
+            <feComponentTransfer in="lit" result="lit2">
+              <feFuncR type="linear" slope="0.25" intercept="0.82" />
+              <feFuncG type="linear" slope="0.25" intercept="0.82" />
+              <feFuncB type="linear" slope="0.25" intercept="0.82" />
+            </feComponentTransfer>
+            <feComposite in="lit2" in2="SourceGraphic" operator="in" result="litA" />
+            <feBlend in="SourceGraphic" in2="litA" mode="multiply" />
+          </filter>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="10" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="scene clip" id="s1" data-start="0" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s2" data-start="2" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s3" data-start="4" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s4" data-start="6" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s5" data-start="8" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s6" data-start="10" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s7" data-start="12" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s8" data-start="14" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s9" data-start="16" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s10" data-start="18" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s11" data-start="20" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s12" data-start="22" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s13" data-start="24" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s14" data-start="26" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s15" data-start="28" data-duration="2" data-track-index="0"></div>
+      <div class="scene clip" id="s16" data-start="30" data-duration="7" data-track-index="0"></div>
+      <div id="fx" class="clip" data-start="0" data-duration="37" data-track-index="1" data-layout-allow-overflow></div>
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="37" data-track-index="2" data-volume="1"></audio>
+    </div>
+
+    <script>
+      // ------------------------------------------------------------------ data
+      const W = __WORDS__;
+      const TOTAL = 37;
+      const SPANS = [[0, 3], [4, 8], [9, 13], [14, 18], [19, 24], [25, 27], [28, 29], [30, 33], [34, 38], [39, 41],
+                     [42, 45], [46, 49], [50, 57], [58, 62], [63, 70], [71, 86]];
+      const START = SPANS.map(([a], i) => (i === 0 ? 0 : +(W[a].t - 0.16).toFixed(3)));
+      const END = START.map((s, i) => (i < START.length - 1 ? START[i + 1] : TOTAL));
+
+      // ------------------------------------------------------------------ kit
+      const NS = "http://www.w3.org/2000/svg";
+      function E(tag, a = {}, parent) {
+        const e = document.createElementNS(NS, tag);
+        for (const k in a) e.setAttribute(k, a[k]);
+        if (parent) parent.appendChild(e);
+        return e;
+      }
+      function G(parent, a = {}) { return E("g", a, parent); }
+      let seed = 1234567;
+      function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+      function R(a, b) { return a + (b - a) * rnd(); }
+
+      const C = {
+        ink: "#2a1d3a", cream: "#fff6e6", stitch: "#fff3dc", fox: "#f28a2e", foxDark: "#d4691c", white: "#fffaf0",
+        grass1: "#7fcf6e", grass2: "#5cb85c", grass3: "#46a24f",
+        red: "#ef5b5b", teal: "#2ec4b6", yellow: "#ffd23f", pink: "#ff8fab", purple: "#9b7bd8", navy: "#1b2453",
+        card: "#d9a566", cardDark: "#b98446", tape: "#d9d4c7", moon: "#efe7d2", moonDark: "#d8ccb0",
+      };
+
+      function scene(id) {
+        const host = document.getElementById(id);
+        const svg = E("svg", { class: "art", viewBox: "0 0 1920 1080" }, host);
+        const cam = G(svg);
+        return { host, svg, cam };
+      }
+      let gid = 0;
+      function bgRect(parent, top, bottom) {
+        const id = "lg" + gid++;
+        const lg = E("linearGradient", { id, x1: 0, y1: 0, x2: 0, y2: 1 }, E("defs", {}, parent));
+        E("stop", { offset: "0", "stop-color": top }, lg);
+        E("stop", { offset: "1", "stop-color": bottom }, lg);
+        return E("rect", { x: -200, y: -200, width: 2320, height: 1480, fill: `url(#${id})`, filter: "url(#bg)" }, parent);
+      }
+      // felt piece: shape + optional running stitch inset toward its centre
+      function felt(parent, tag, a, fill, stitch = true, inset = 0.9) {
+        const g = G(parent, { filter: "url(#felt)" });
+        const s = E(tag, Object.assign({ fill }, a), g);
+        if (stitch) {
+          const st = E(tag, Object.assign({}, a, { fill: "none", stroke: typeof stitch === "string" ? stitch : C.stitch,
+            "stroke-width": 4, "stroke-dasharray": "11 9", "stroke-linecap": "round", opacity: 0.9 }), g);
+          const bb = s.getBBox();
+          const cx = bb.x + bb.width / 2, cy = bb.y + bb.height / 2;
+          const prev = a.transform ? a.transform + " " : "";
+          st.setAttribute("transform", `${prev}translate(${cx} ${cy}) scale(${inset}) translate(${-cx} ${-cy})`);
+        }
+        return g;
+      }
+      function paper(parent, tag, a, fill) { const g = G(parent, { filter: "url(#paper)" }); E(tag, Object.assign({ fill }, a), g); return g; }
+      function bead(parent, x, y, r, col = "#1a1420") {
+        const g = G(parent);
+        E("circle", { cx: x, cy: y, r, fill: col }, g);
+        E("circle", { cx: x - r * 0.35, cy: y - r * 0.35, r: r * 0.32, fill: "#ffffff", opacity: 0.85 }, g);
+        return g;
+      }
+      // puffy cloud: big rounded bumps (large arcs) on a flat base
+      function cloudPath(x, y, w, h) {
+        const n = 4, c = w / n, base = y + h;
+        let d = `M${x} ${base} L${x} ${base - h * 0.35}`;
+        for (let i = 0; i < n; i++) {
+          const r = c * (i === 1 || i === 2 ? 0.72 : 0.6);
+          d += ` A${r.toFixed(1)} ${r.toFixed(1)} 0 1 1 ${(x + c * (i + 1)).toFixed(1)} ${(base - h * 0.35).toFixed(1)}`;
+        }
+        return d + ` L${x + w} ${base} Z`;
+      }
+      function cloud(parent, x, y, w, h, fill = "#ffffff") { return felt(parent, "path", { d: cloudPath(x, y, w, h) }, fill, true, 0.88); }
+      function star5(cx, cy, ro, ri = ro * 0.46, n = 5) {
+        let d = "";
+        for (let i = 0; i < n * 2; i++) {
+          const r = i % 2 ? ri : ro, a = -Math.PI / 2 + (i * Math.PI) / n;
+          d += (i ? "L" : "M") + (cx + r * Math.cos(a)).toFixed(1) + " " + (cy + r * Math.sin(a)).toFixed(1);
+        }
+        return d + "Z";
+      }
+      function flower(parent, x, y, col) {
+        const g = G(parent, { transform: `translate(${x} ${y})` });
+        E("rect", { x: -4, y: 0, width: 8, height: 90, fill: C.grass3, rx: 4 }, g);
+        const head = G(g);
+        for (let i = 0; i < 6; i++) {
+          const a = (i * Math.PI) / 3;
+          felt(head, "ellipse", { cx: 22 * Math.cos(a), cy: 22 * Math.sin(a), rx: 18, ry: 18 }, col, false);
+        }
+        felt(head, "circle", { cx: 0, cy: 0, r: 14 }, C.yellow, false);
+        return { g, head };
+      }
+      function hills(parent, y, col, amp, shift = 0) {
+        let d = `M-100 1180 L-100 ${y}`;
+        for (let x = -100; x <= 2020; x += 40) d += ` L${x} ${(y - amp * Math.sin((x + shift) / 260) - amp * 0.4 * Math.sin((x + shift) / 97)).toFixed(1)}`;
+        d += " L2020 1180 Z";
+        return felt(parent, "path", { d }, col, true, 1.0);
+      }
+
+      // Pip the fox (origin = feet centre, ~330 px tall at s=1)
+      function makePip(parent, x, y, s = 1, opts = {}) {
+        const g = G(parent, { transform: `translate(${x} ${y}) scale(${s})` });
+        const inner = G(g);
+        const tail = G(inner);
+        felt(tail, "path", { d: "M40 -70 C150 -90 190 -190 120 -250 C150 -170 90 -130 30 -110 Z" }, C.fox);
+        felt(tail, "path", { d: "M120 -250 C150 -215 150 -185 132 -165 C128 -200 118 -225 104 -238 Z" }, C.white, false);
+        felt(inner, "ellipse", { cx: 0, cy: -80, rx: 72, ry: 82 }, C.fox);
+        felt(inner, "ellipse", { cx: -6, cy: -62, rx: 40, ry: 54 }, C.white, false);
+        felt(inner, "ellipse", { cx: -34, cy: -6, rx: 30, ry: 14 }, C.foxDark, false);
+        felt(inner, "ellipse", { cx: 34, cy: -6, rx: 30, ry: 14 }, C.foxDark, false);
+        const head = G(inner);
+        const earL = G(head), earR = G(head);
+        felt(earL, "path", { d: "M-70 -220 L-92 -318 L-22 -250 Z" }, C.fox);
+        felt(earL, "path", { d: "M-68 -236 L-82 -296 L-40 -254 Z" }, "#5a3a2a", false);
+        felt(earR, "path", { d: "M70 -220 L92 -318 L22 -250 Z" }, C.fox);
+        felt(earR, "path", { d: "M68 -236 L82 -296 L40 -254 Z" }, "#5a3a2a", false);
+        felt(head, "path", { d: "M-96 -205 C-96 -275 96 -275 96 -205 C96 -170 40 -140 0 -132 C-40 -140 -96 -170 -96 -205 Z" }, C.fox);
+        felt(head, "path", { d: "M-78 -186 C-40 -192 -14 -175 0 -150 C14 -175 40 -192 78 -186 C60 -150 30 -134 0 -132 C-30 -134 -60 -150 -78 -186 Z" }, C.white, false);
+        bead(head, -36, -206, 11);
+        bead(head, 36, -206, 11);
+        E("ellipse", { cx: 0, cy: -152, rx: 13, ry: 9, fill: "#2a1d24" }, head);
+        felt(head, "circle", { cx: -58, cy: -172, r: 11 }, C.pink, false);
+        felt(head, "circle", { cx: 58, cy: -172, r: 11 }, C.pink, false);
+        if (opts.goggles !== false) {
+          E("rect", { x: -95, y: -258, width: 190, height: 14, rx: 7, fill: "#3a6e8f" }, head);
+          felt(head, "circle", { cx: -34, cy: -252, r: 24 }, "#7fd3e8", "#2f5f7a", 0.8);
+          felt(head, "circle", { cx: 34, cy: -252, r: 24 }, "#7fd3e8", "#2f5f7a", 0.8);
+        }
+        const arm = G(inner);
+        felt(arm, "ellipse", { cx: -66, cy: -112, rx: 20, ry: 48, transform: "rotate(28 -66 -112)" }, C.foxDark, false);
+        return { g, inner, head, tail, arm, earL, earR };
+      }
+
+      // Cardboard rocket (origin = base centre, ~570 px tall at s=1)
+      function makeRocket(parent, x, y, s = 1, opts = {}) {
+        const g = G(parent, { transform: `translate(${x} ${y}) scale(${s})` });
+        const inner = G(g);
+        const flame = G(inner);
+        felt(flame, "path", { d: "M-55 0 C-50 90 -15 150 0 210 C15 150 50 90 55 0 Z" }, "#ff9f1c", false);
+        felt(flame, "path", { d: "M-30 0 C-28 60 -8 100 0 140 C8 100 28 60 30 0 Z" }, C.yellow, false);
+        const body = G(inner);
+        felt(body, "path", { d: "M-150 -20 L-95 -150 L-95 -10 Z" }, opts.painted ? C.teal : C.cardDark);
+        felt(body, "path", { d: "M150 -20 L95 -150 L95 -10 Z" }, opts.painted ? C.teal : C.cardDark);
+        felt(body, "rect", { x: -100, y: -400, width: 200, height: 400, rx: 18 }, C.card, true, 0.94);
+        const paint = G(body);
+        felt(paint, "rect", { x: -100, y: -120, width: 200, height: 46 }, C.red, false);
+        felt(paint, "rect", { x: -100, y: -60, width: 200, height: 22 }, C.yellow, false);
+        felt(paint, "circle", { cx: -62, cy: -350, r: 14 }, C.pink, false);
+        felt(paint, "circle", { cx: 66, cy: -180, r: 12 }, C.teal, false);
+        const tape = G(body);
+        E("rect", { x: -100, y: -212, width: 200, height: 26, fill: C.tape, opacity: 0.92, filter: "url(#paper)" }, tape);
+        E("rect", { x: -14, y: -400, width: 28, height: 400, fill: C.tape, opacity: 0.75, filter: "url(#paper)" }, tape);
+        const cone = G(inner);
+        felt(cone, "path", { d: "M-108 -396 C-90 -470 -40 -540 0 -570 C40 -540 90 -470 108 -396 Z" }, opts.painted ? C.red : C.cardDark);
+        const port = G(inner);
+        felt(port, "circle", { cx: 0, cy: -290, r: 58 }, "#c9d1d8", false);
+        E("circle", { cx: 0, cy: -290, r: 44, fill: "#9fdcf2" }, port);
+        let pilot = null;
+        if (opts.pip) {
+          const cp = "cp" + gid++;
+          const cpe = E("clipPath", { id: cp }, E("defs", {}, port));
+          E("circle", { cx: 0, cy: -290, r: 44 }, cpe);
+          const holder = G(port, { "clip-path": `url(#${cp})` });
+          pilot = makePip(holder, 0, -150, 0.42, {});
+        }
+        E("circle", { cx: -16, cy: -308, r: 9, fill: "#ffffff", opacity: 0.7 }, port);
+        if (!opts.painted) gsap.set([paint, cone], { opacity: 0 });
+        gsap.set(flame, { opacity: opts.flame ? 1 : 0, transformOrigin: "50% 0%" });
+        return { g, inner, flame, paint, tape, cone, body, port, pilot };
+      }
+      function puff(parent, x, y, r) { return felt(parent, "circle", { cx: x, cy: y, r }, "#ffffff", false); }
+
+      // story words (HTML) inside a scene, popped in on the narration's word times
+      function words(host, span, opts = {}) {
+        const div = document.createElement("div");
+        div.className = "words " + (opts.light ? "light" : "dark");
+        div.style.top = (opts.top ?? 70) + "px";
+        if (opts.size) div.style.fontSize = opts.size + "px";
+        if (opts.weight) div.style.fontWeight = opts.weight;
+        if (opts.italic) div.style.fontStyle = "italic";
+        if (opts.left !== undefined) div.style.left = opts.left + "px";
+        host.appendChild(div);
+        const spans = [];
+        for (let i = span[0]; i <= span[1]; i++) {
+          let txt = (opts.map && opts.map[i]) || W[i].w;
+          if (txt === "–") txt = "—";
+          const sp = document.createElement("span");
+          sp.className = "w";
+          sp.textContent = txt;
+          if (opts.color && opts.color[i]) sp.style.color = opts.color[i];
+          div.appendChild(sp);
+          div.appendChild(document.createTextNode(" "));
+          spans.push([sp, W[i].t]);
+        }
+        return spans;
+      }
+      function popWords(tl, spans, big = false) {
+        spans.forEach(([sp, t]) => {
+          tl.fromTo(sp, { opacity: 0, y: 26, scale: big ? 0.4 : 0.7, rotation: R(-6, 6) },
+            { opacity: 1, y: 0, scale: 1, rotation: 0, duration: big ? 0.38 : 0.32, ease: "back.out(2.6)" }, t - 0.05);
+        });
+      }
+      function push(tl, cam, i, from = 1, to = 1.07, ox = "50%", oy = "50%") {
+        tl.fromTo(cam, { scale: from }, { scale: to, duration: END[i] - START[i] + 0.05, ease: "none", transformOrigin: `${ox} ${oy}` }, START[i]);
+      }
+      function shake(tl, el, t, dur = 0.4, amp = 14) {
+        const n = Math.max(2, Math.round(dur / 0.04));
+        for (let k = 0; k < n; k++) {
+          const f = 1 - k / n;
+          tl.to(el, { x: R(-amp, amp) * f, y: R(-amp, amp) * f, duration: 0.04, ease: "none" }, t + k * 0.04);
+        }
+        tl.to(el, { x: 0, y: 0, duration: 0.04 }, t + n * 0.04);
+      }
+      function wobble(tl, el, t0, t1, amp, period, prop = "y") {
+        let k = 0;
+        for (let t = t0; t < t1 - 1e-6; t += period / 2, k++) tl.to(el, { [prop]: k % 2 ? -amp : amp, duration: period / 2, ease: "sine.inOut" }, t);
+      }
+      function flicker(tl, flame, t0, t1) {
+        const n = Math.ceil((t1 - t0) / 0.07);
+        for (let k = 0; k < n; k++) tl.to(flame, { scaleY: k % 2 ? 0.75 : 1.3, scaleX: k % 2 ? 1.05 : 0.92, duration: 0.07, ease: "none" }, t0 + k * 0.07);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+
+      // ================================================================= SCENES
+      // 1 · Once upon a time — sun rises over felt hills
+      {
+        const { host, cam } = scene("s1");
+        bgRect(cam, "#7fd0f5", "#ffe2b8");
+        const sun = G(cam);
+        const rays = G(sun);
+        for (let i = 0; i < 12; i++) {
+          const a = (i * Math.PI) / 6;
+          felt(rays, "path", { d: `M${960 + 150 * Math.cos(a - 0.12)} ${620 + 150 * Math.sin(a - 0.12)} L${960 + 235 * Math.cos(a)} ${620 + 235 * Math.sin(a)} L${960 + 150 * Math.cos(a + 0.12)} ${620 + 150 * Math.sin(a + 0.12)} Z` }, "#ffb627", false);
+        }
+        felt(sun, "circle", { cx: 960, cy: 620, r: 130 }, C.yellow);
+        const cl1 = cloud(cam, 120, 250, 420, 130), cl2 = cloud(cam, 1400, 320, 380, 120);
+        hills(cam, 820, C.grass1, 40, 100);
+        hills(cam, 900, C.grass2, 30, 600);
+        const fl = [flower(cam, 300, 860, C.pink), flower(cam, 1580, 880, C.red), flower(cam, 1720, 850, C.purple)];
+        const T = START[0];
+        tl.fromTo(sun, { y: 420 }, { y: 0, duration: 1.2, ease: "back.out(1.4)" }, T);
+        tl.fromTo(rays, { rotation: 0 }, { rotation: 40, smoothOrigin: false, svgOrigin: "960 620", duration: 2.2, ease: "none" }, T);
+        tl.fromTo(cl1, { x: -600 }, { x: 0, duration: 0.9, ease: "power3.out" }, T + 0.1);
+        tl.fromTo(cl2, { x: 700 }, { x: 0, duration: 0.9, ease: "power3.out" }, T + 0.2);
+        fl.forEach((f, i) => tl.fromTo(f.head, { scale: 0.001 }, { scale: 1, duration: 0.4, ease: "back.out(3)", transformOrigin: "50% 50%" }, T + 0.4 + i * 0.12));
+        push(tl, cam, 0, 1.08, 1.0);
+        popWords(tl, words(host, SPANS[0], { top: 80, size: 124, italic: true, map: { 3: "time…" } }), true);
+      }
+
+      // 2 · a little fox named Pip — Pip pops up in the backyard
+      {
+        const { host, cam } = scene("s2");
+        bgRect(cam, "#8fd6f7", "#d8f3ff");
+        cloud(cam, 1350, 130, 360, 110);
+        const fence = G(cam);
+        for (let x = 0; x < 1920; x += 90) felt(fence, "path", { d: `M${x} 760 L${x} 560 L${x + 35} 525 L${x + 70} 560 L${x + 70} 760 Z` }, "#fff1d6", false);
+        felt(fence, "rect", { x: -20, y: 600, width: 1960, height: 26 }, "#f3dcb3", false);
+        hills(cam, 760, C.grass1, 26, 300);
+        const pip = makePip(cam, 960, 1010, 1.05);
+        hills(cam, 900, C.grass2, 22, 900);
+        const fl = [flower(cam, 380, 900, C.yellow), flower(cam, 1500, 910, C.pink), flower(cam, 1640, 890, C.red)];
+        const T = START[1];
+        tl.fromTo(pip.inner, { y: 360 }, { y: 0, duration: 0.55, ease: "back.out(2)" }, T + 0.1);
+        wobble(tl, pip.tail, T + 0.3, END[1], 12, 0.4, "rotation");
+        gsap.set(pip.tail, { smoothOrigin: false, svgOrigin: "40 -80" });
+        tl.fromTo(pip.earR, { rotation: 0 }, { rotation: 14, smoothOrigin: false, svgOrigin: "50 -230", duration: 0.12, repeat: 3, yoyo: true }, T + 0.9);
+        fl.forEach((f, i) => { gsap.set(f.head, { transformOrigin: "50% 50%" }); wobble(tl, f.head, T, END[1], 10, 0.5 + i * 0.1, "rotation"); });
+        push(tl, cam, 1, 1.0, 1.08, "50%", "70%");
+        popWords(tl, words(host, SPANS[1], { top: 70, color: { 8: C.foxDark }, map: { 8: "Pip" } }));
+      }
+
+      // 3 · dreamed of touching the moon — thought bubble
+      {
+        const { host, cam } = scene("s3");
+        bgRect(cam, "#b9a6f0", "#ffd6e7");
+        hills(cam, 900, C.grass1, 20, 50);
+        const pip = makePip(cam, 260, 1010, 0.95);
+        const bub = G(cam);
+        felt(bub, "circle", { cx: 680, cy: 610, r: 22 }, C.cream, false);
+        felt(bub, "circle", { cx: 760, cy: 530, r: 34 }, C.cream, false);
+        felt(bub, "ellipse", { cx: 1220, cy: 440, rx: 420, ry: 300 }, C.cream, true, 0.95);
+        const night = G(bub);
+        felt(night, "ellipse", { cx: 1220, cy: 440, rx: 345, ry: 238 }, C.navy, false);
+        const twinkles = [];
+        for (let i = 0; i < 14; i++) twinkles.push(E("path", { d: star5(R(930, 1510), R(260, 620), R(6, 12)), fill: C.yellow, filter: "url(#glow)" }, night));
+        const moon = G(night);
+        felt(moon, "circle", { cx: 1220, cy: 440, r: 125 }, C.yellow);
+        E("circle", { cx: 1272, cy: 410, r: 110, fill: C.navy }, moon);
+        const T = START[2];
+        tl.fromTo(bub, { scale: 0.001 }, { scale: 1, duration: 0.6, ease: "back.out(1.8)", smoothOrigin: false, svgOrigin: "680 610" }, T + 0.05);
+        tl.fromTo(moon, { scale: 0.2, rotation: -40 }, { scale: 1, rotation: 0, duration: 0.6, ease: "back.out(2.2)", smoothOrigin: false, svgOrigin: "1220 440" }, T + 0.45);
+        twinkles.forEach((s, i) => tl.fromTo(s, { opacity: 0, scale: 0.001 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(3)", transformOrigin: "50% 50%" }, T + 0.5 + i * 0.06));
+        tl.fromTo(pip.head, { rotation: 0 }, { rotation: 10, smoothOrigin: false, svgOrigin: "0 -150", duration: 0.5, ease: "sine.inOut" }, T + 0.2);
+        push(tl, cam, 2, 1.0, 1.06, "60%", "40%");
+        popWords(tl, words(host, SPANS[2], { top: 800, left: 470, size: 76, color: { 13: "#a87b00" }, map: { 13: "moon." } }));
+      }
+
+      // 4 · So Pip built a rocket — boxes fly in and stack, tape zips
+      {
+        const { host, cam } = scene("s4");
+        bgRect(cam, "#ffd98a", "#ffbf69");
+        for (let i = 0; i < 9; i++) for (let j = 0; j < 4; j++) E("circle", { cx: 150 + i * 200, cy: 260 + j * 120, r: 8, fill: "#e6a54a" }, cam);
+        felt(cam, "rect", { x: -50, y: 900, width: 2020, height: 300 }, "#c98b52", false);
+        const boxes = [
+          felt(cam, "rect", { x: 820, y: 640, width: 280, height: 260, rx: 10 }, C.card),
+          felt(cam, "rect", { x: 850, y: 420, width: 220, height: 220, rx: 10 }, "#cf9a5c"),
+          felt(cam, "rect", { x: 880, y: 250, width: 160, height: 170, rx: 10 }, C.card),
+        ];
+        const tapes = [E("rect", { x: 820, y: 760, width: 280, height: 24, fill: C.tape, filter: "url(#paper)" }, cam),
+                       E("rect", { x: 850, y: 520, width: 220, height: 22, fill: C.tape, filter: "url(#paper)" }, cam)];
+        const pip = makePip(cam, 1420, 900, 0.9);
+        const hammer = G(pip.arm);
+        felt(hammer, "rect", { x: -108, y: -205, width: 14, height: 110, rx: 6 }, "#8a5a3a", false);
+        felt(hammer, "rect", { x: -138, y: -220, width: 74, height: 36, rx: 6 }, "#6c7a89", false);
+        const T = START[3];
+        boxes.forEach((b, i) => tl.fromTo(b, { y: -900, rotation: R(-25, 25) }, { y: 0, rotation: 0, duration: 0.45, ease: "bounce.out", smoothOrigin: false, svgOrigin: "960 600" }, T + i * 0.22));
+        tapes.forEach((tp, i) => tl.fromTo(tp, { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.out", smoothOrigin: false, svgOrigin: `${i ? 850 : 820} 0` }, T + 0.75 + i * 0.2));
+        tl.fromTo(pip.arm, { rotation: 0 }, { rotation: -35, smoothOrigin: false, svgOrigin: "-50 -130", duration: 0.12, repeat: 7, yoyo: true, ease: "power1.inOut" }, T + 0.2);
+        push(tl, cam, 3, 1.0, 1.06);
+        popWords(tl, words(host, SPANS[3], { top: 70, color: { 15: C.foxDark }, map: { 14: "So" } }));
+      }
+
+      // 5 · out of boxes, tape and paint! — the rocket gets painted
+      {
+        const { host, cam } = scene("s5");
+        bgRect(cam, "#ffe3a3", "#ffc6a0");
+        felt(cam, "rect", { x: -50, y: 920, width: 2020, height: 300 }, "#c98b52", false);
+        const rk = makeRocket(cam, 960, 930, 1.0, { painted: false });
+        const splats = [];
+        const cols = [C.red, C.teal, C.yellow, C.pink, C.purple, C.teal, C.red];
+        for (let i = 0; i < 7; i++) {
+          const x = R(560, 1360), y = R(330, 860);
+          let d = "";
+          for (let k = 0; k < 14; k++) { const a = (k * Math.PI) / 7, r = k % 2 ? R(22, 34) : R(40, 58); d += (k ? "L" : "M") + (x + r * Math.cos(a)).toFixed(1) + " " + (y + r * Math.sin(a)).toFixed(1); }
+          splats.push(felt(cam, "path", { d: d + "Z" }, cols[i], false));
+        }
+        const brush = G(cam);
+        felt(brush, "rect", { x: 1380, y: 330, width: 22, height: 220, rx: 10, transform: "rotate(-30 1390 440)" }, "#8a5a3a", false);
+        felt(brush, "path", { d: "M1300 320 L1340 290 L1380 330 L1350 360 Z" }, C.red, false);
+        const T = START[4];
+        splats.forEach((s, i) => tl.fromTo(s, { scale: 0.001, opacity: 1 }, { scale: 1, duration: 0.18, ease: "back.out(4)", transformOrigin: "50% 50%" }, T + 0.15 + i * 0.22));
+        tl.to(splats, { opacity: 0, duration: 0.3 }, T + 1.9);
+        tl.fromTo(rk.paint, { opacity: 0 }, { opacity: 1, duration: 0.25 }, T + 1.0);
+        tl.fromTo(rk.cone, { opacity: 1, y: -700 }, { y: 0, duration: 0.45, ease: "bounce.out" }, T + 0.4);
+        tl.fromTo(brush, { x: 0, y: 0 }, { x: -420, y: 260, duration: 0.25, repeat: 7, yoyo: true, ease: "sine.inOut" }, T);
+        push(tl, cam, 4, 1.05, 1.0, "50%", "60%");
+        popWords(tl, words(host, SPANS[4], { top: 60, color: { 21: "#a86b2c", 22: "#7d7a72", 24: C.red }, map: { 24: "paint!" } }));
+      }
+
+      // 6 · Three… two… one… — giant felt numbers slam in, colours flip
+      {
+        const { host, cam } = scene("s6");
+        const bgs = [C.red, C.teal, "#ffb627"].map((col) => E("rect", { x: -200, y: -200, width: 2320, height: 1480, fill: col, filter: "url(#bg)" }, cam));
+        const rays = G(cam, { opacity: 0.18 });
+        for (let i = 0; i < 16; i++) { const a = (i * Math.PI) / 8; E("path", { d: `M960 540 L${960 + 1600 * Math.cos(a - 0.09)} ${540 + 1600 * Math.sin(a - 0.09)} L${960 + 1600 * Math.cos(a + 0.09)} ${540 + 1600 * Math.sin(a + 0.09)} Z`, fill: "#ffffff" }, rays); }
+        const nums = ["3", "2", "1"].map((n) => {
+          const g = G(cam, { filter: "url(#felt)" });
+          E("text", { x: 960, y: 760, "text-anchor": "middle", "font-family": "Fraunces", "font-weight": 900, "font-size": 620, fill: C.cream }, g).textContent = n;
+          return g;
+        });
+        const rk = makeRocket(cam, 1640, 1060, 0.42, { painted: true });
+        const T = START[5];
+        tl.set(bgs, { opacity: 0 }, T);
+        tl.set(bgs[0], { opacity: 1 }, T);
+        tl.set(nums, { opacity: 0 }, T);
+        [25, 26, 27].forEach((wi, k) => {
+          const t = W[wi].t;
+          if (k) { tl.set(bgs[k], { opacity: 1 }, t - 0.06); tl.set(bgs[k - 1], { opacity: 0 }, t - 0.06); }
+          tl.fromTo(nums[k], { opacity: 0, scale: 2.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "power4.in", smoothOrigin: false, svgOrigin: "960 540" }, t - 0.06);
+          if (k < 2) tl.to(nums[k], { opacity: 0, scale: 0.6, smoothOrigin: false, svgOrigin: "960 540", duration: 0.15 }, W[wi + 1].t - 0.12);
+          shake(tl, cam, t + 0.18, 0.3, 18);
+        });
+        tl.fromTo(rays, { rotation: 0 }, { rotation: 45, smoothOrigin: false, svgOrigin: "960 540", duration: END[5] - T, ease: "none" }, T);
+        wobble(tl, rk.inner, T, END[5], 4, 0.12, "x");
+      }
+
+      // 7 · BLAST OFF! — rocket launches from the backyard
+      {
+        const { host, cam } = scene("s7");
+        bgRect(cam, "#79c9f2", "#cdeefc");
+        cloud(cam, 160, 160, 320, 100);
+        cloud(cam, 1450, 220, 300, 90);
+        hills(cam, 860, C.grass1, 26, 200);
+        const rk = makeRocket(cam, 960, 900, 0.9, { painted: true, pip: true, flame: true });
+        const puffs = G(cam);
+        const pl = [];
+        for (let i = 0; i < 16; i++) pl.push(puff(puffs, 960 + R(-420, 420), 960 + R(-40, 80), R(60, 120)));
+        hills(cam, 960, C.grass2, 20, 700);
+        const T = START[6], tB = W[28].t;
+        flicker(tl, rk.flame, T, END[6]);
+        shake(tl, rk.inner, T, Math.max(0.1, tB - T), 6);
+        tl.fromTo(rk.inner, { y: 0 }, { y: -1700, duration: 0.9, ease: "power3.in" }, tB);
+        pl.forEach((p, i) => tl.fromTo(p, { scale: 0.001 }, { scale: 1.4, duration: 0.6, ease: "power2.out", transformOrigin: "50% 50%" }, tB - 0.1 + i * 0.03));
+        shake(tl, cam, tB, 0.8, 22);
+        push(tl, cam, 6, 1.0, 1.1, "50%", "80%");
+        popWords(tl, words(host, SPANS[6], { top: 170, size: 230, weight: 900, color: { 28: C.red, 29: C.red }, map: { 28: "BLAST", 29: "OFF!" } }), true);
+      }
+
+      function flyingRocket(cam, x, y, s, T, D, tilt = 0) {
+        const rk = makeRocket(cam, x, y, s, { painted: true, pip: true, flame: true });
+        gsap.set(rk.inner, { rotation: tilt, smoothOrigin: false, svgOrigin: "0 -250" });
+        flicker(tl, rk.flame, T, T + D);
+        wobble(tl, rk.inner, T, T + D, 8, 0.35, "x");
+        return rk;
+      }
+
+      // 8 · Up past the clouds — clouds rush down, speed lines
+      {
+        const { host, cam } = scene("s8");
+        bgRect(cam, "#5fb6ee", "#a9e0fb");
+        const T = START[7], D = END[7] - START[7];
+        for (let i = 0; i < 26; i++) {
+          const l = E("rect", { x: R(0, 1920), y: 0, width: 5, height: R(120, 260), rx: 3, fill: "#ffffff", opacity: 0.55 }, cam);
+          const sp = R(0.35, 0.6), off = R(0, sp);
+          for (let k = 0; k < Math.ceil((D + off) / sp); k++) tl.fromTo(l, { y: -400 }, { y: 1500, duration: sp, ease: "none", immediateRender: false }, T - off + k * sp);
+        }
+        for (let i = 0; i < 9; i++) {
+          const c = cloud(cam, R(-100, 1700), 0, R(260, 460), R(90, 140));
+          tl.fromTo(c, { y: -400 - i * 190 }, { y: 1500 - i * 190 + 1100, duration: D + 0.3, ease: "none" }, T - 0.15);
+        }
+        flyingRocket(cam, 960, 820, 0.85, T, D);
+        popWords(tl, words(host, SPANS[7], { top: 60, light: true }));
+      }
+
+      // 9 · through a flock of birds — flapping felt birds cross
+      {
+        const { host, cam } = scene("s9");
+        bgRect(cam, "#4fa5e8", "#9fd6fa");
+        const T = START[8], D = END[8] - START[8];
+        for (let i = 0; i < 5; i++) { const c = cloud(cam, R(-100, 1700), 0, R(200, 360), R(70, 110), "#eaf7ff"); tl.fromTo(c, { y: R(-400, 200) }, { y: "+=" + 900, duration: D, ease: "none" }, T); }
+        flyingRocket(cam, 760, 860, 0.8, T, D, -8);
+        const cols = [C.pink, C.yellow, C.teal, C.purple, C.red, "#ffffff"];
+        for (let i = 0; i < 6; i++) {
+          const y = R(180, 700), s = R(0.7, 1.15);
+          const b = G(cam, { transform: `translate(0 ${y.toFixed(0)}) scale(${s.toFixed(2)})` });
+          const inner = G(b);
+          felt(inner, "ellipse", { cx: 0, cy: 0, rx: 60, ry: 42 }, cols[i]);
+          felt(inner, "path", { d: "M-58 -6 L-92 -8 L-60 12 Z" }, "#ffb627", false);
+          bead(inner, -30, -10, 7);
+          const wing = G(inner);
+          felt(wing, "path", { d: "M-10 -10 C10 -70 60 -80 70 -20 Z" }, "#ffffff", false);
+          gsap.set(wing, { smoothOrigin: false, svgOrigin: "20 -12" });
+          wobble(tl, wing, T, T + D, 0.6, 0.22, "scaleY");
+          tl.fromTo(inner, { x: 2100 / s + i * 120 }, { x: -400 / s + i * 60, duration: D + 0.3, ease: "none" }, T - 0.15);
+        }
+        popWords(tl, words(host, SPANS[8], { top: 60, light: true }));
+      }
+
+      // 10 · over a rainbow — arcs draw on, rocket arcs over
+      {
+        const { host, cam } = scene("s10");
+        bgRect(cam, "#4b98e0", "#a6dbff");
+        const T = START[9], D = END[9] - START[9];
+        const cols = [C.red, "#ff9f1c", C.yellow, C.grass1, C.teal, C.purple];
+        cols.forEach((col, i) => {
+          const r = 720 - i * 52;
+          const len = Math.PI * r;
+          const p = E("path", { d: `M${960 - r} 1150 A${r} ${r} 0 0 1 ${960 + r} 1150`, fill: "none", stroke: col, "stroke-width": 54, "stroke-dasharray": `${len.toFixed(1)} ${len.toFixed(1)}`, filter: "url(#felt)" }, cam);
+          tl.fromTo(p, { attr: { "stroke-dashoffset": len } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.55, ease: "power2.out" }, T + i * 0.05);
+        });
+        cloud(cam, 120, 960, 420, 140);
+        cloud(cam, 1420, 980, 420, 140);
+        const rk = makeRocket(cam, 0, 0, 0.55, { painted: true, pip: true, flame: true });
+        const steps = 20;
+        for (let k = 0; k <= steps; k++) {
+          const a = Math.PI + (k / steps) * Math.PI;
+          const st = { x: 960 + 820 * Math.cos(a), y: 1150 + 820 * Math.sin(a), rotation: (k / steps) * 180 - 90 };
+          if (k === 0) tl.set(rk.g, st, T);
+          else tl.to(rk.g, Object.assign(st, { duration: D / steps, ease: "none" }), T + (k - 1) * (D / steps));
+        }
+        flicker(tl, rk.flame, T, T + D);
+        popWords(tl, words(host, SPANS[9], { top: 60, light: true, color: { 41: C.yellow } }));
+      }
+
+      // 11 · and into the stars! — iris to navy, stars pop
+      {
+        const { host, cam } = scene("s11");
+        bgRect(cam, C.navy, "#3b3f8f");
+        const T = START[10], D = END[10] - START[10];
+        for (let i = 0; i < 60; i++) {
+          const big = i < 14;
+          const s = big ? felt(cam, "path", { d: star5(R(60, 1860), R(160, 1020), R(16, 30)) }, C.yellow, false)
+                        : E("circle", { cx: R(0, 1920), cy: R(0, 1080), r: R(2, 5), fill: "#fff6d8", filter: "url(#glow)" }, cam);
+          tl.fromTo(s, { scale: 0.001, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)", transformOrigin: "50% 50%" }, T + 0.05 + rnd() * 0.9);
+          if (big) tl.fromTo(s, { rotation: 0 }, { rotation: 72, transformOrigin: "50% 50%", duration: D, ease: "none" }, T);
+        }
+        const pl = felt(cam, "circle", { cx: 1560, cy: 300, r: 90 }, C.pink);
+        const pl2 = felt(cam, "circle", { cx: 300, cy: 820, r: 60 }, C.teal);
+        tl.fromTo([pl, pl2], { scale: 0.001 }, { scale: 1, duration: 0.5, ease: "back.out(2)", transformOrigin: "50% 50%" }, T + 0.3);
+        const rk = makeRocket(cam, 0, 0, 0.6, { painted: true, pip: true, flame: true });
+        tl.fromTo(rk.g, { x: 300, y: 1300, rotation: 35 }, { x: 1300, y: 560, rotation: 50, duration: D, ease: "power1.inOut" }, T);
+        flicker(tl, rk.flame, T, T + D);
+        const iris = E("circle", { cx: 960, cy: 540, r: 1200, fill: "none", stroke: "#4b98e0", "stroke-width": 2400 }, cam);
+        tl.fromTo(iris, { attr: { "stroke-width": 2400 } }, { attr: { "stroke-width": 0 }, duration: 0.5, ease: "power2.in" }, T);
+        popWords(tl, words(host, SPANS[10], { top: 60, light: true, color: { 45: C.yellow } }));
+      }
+
+      // 12 · Pip waved at Saturn — Saturn spins, Pip waves from the porthole
+      {
+        const { host, cam } = scene("s12");
+        bgRect(cam, "#26285f", "#4a3d8f");
+        for (let i = 0; i < 40; i++) E("circle", { cx: R(0, 1920), cy: R(0, 1080), r: R(2, 4), fill: "#fff6d8", opacity: R(0.5, 1) }, cam);
+        const sat = G(cam);
+        E("path", { d: "M830 560 A430 90 0 0 1 1690 560", fill: "none", stroke: "#ffd6a5", "stroke-width": 46, filter: "url(#felt)" }, sat);
+        felt(sat, "circle", { cx: 1260, cy: 560, r: 250 }, "#ffb38a");
+        felt(sat, "path", { d: "M1030 500 C1150 470 1370 470 1490 500 L1495 540 C1370 515 1150 515 1025 540 Z" }, "#ff9a76", false);
+        felt(sat, "path", { d: "M1030 610 C1150 640 1370 640 1490 610 L1480 650 C1370 670 1150 670 1040 650 Z" }, "#ffcf9e", false);
+        E("path", { d: "M830 560 A430 90 0 0 0 1690 560", fill: "none", stroke: "#ffe3c2", "stroke-width": 46, filter: "url(#felt)" }, sat);
+        const T = START[11], D = END[11] - START[11];
+        tl.fromTo(sat, { rotation: -14, scale: 0.85 }, { rotation: 6, scale: 1, smoothOrigin: false, svgOrigin: "1260 560", duration: D, ease: "sine.inOut" }, T);
+        const rk = makeRocket(cam, 0, 0, 0.9, { painted: true, pip: true, flame: true });
+        tl.fromTo(rk.g, { x: -300, y: 900, rotation: 70 }, { x: 600, y: 780, rotation: 80, duration: D, ease: "power2.out" }, T);
+        flicker(tl, rk.flame, T, T + D);
+        if (rk.pilot) tl.fromTo(rk.pilot.arm, { rotation: 0 }, { rotation: -60, smoothOrigin: false, svgOrigin: "-50 -130", duration: 0.16, repeat: 9, yoyo: true }, T + 0.3);
+        popWords(tl, words(host, SPANS[11], { top: 60, light: true, color: { 46: "#ffb36b", 49: "#ffd6a5" } }));
+      }
+
+      // 13 · and landed — bump! — on the moon
+      {
+        const { host, cam } = scene("s13");
+        bgRect(cam, "#141a45", "#2b2f6b");
+        for (let i = 0; i < 50; i++) E("circle", { cx: R(0, 1920), cy: R(0, 700), r: R(2, 4), fill: "#fff6d8", opacity: R(0.5, 1) }, cam);
+        const earth = G(cam);
+        felt(earth, "circle", { cx: 1580, cy: 300, r: 110 }, "#3d8bd9");
+        felt(earth, "path", { d: "M1510 250 C1550 220 1600 260 1580 300 C1560 330 1520 320 1510 290 Z" }, C.grass1, false);
+        felt(earth, "path", { d: "M1610 330 C1650 320 1670 360 1640 380 C1615 390 1600 360 1610 330 Z" }, C.grass1, false);
+        felt(cam, "path", { d: "M-100 1180 L-100 860 C300 780 700 760 960 770 C1300 780 1650 810 2020 860 L2020 1180 Z" }, C.moon, true, 1.0);
+        [[400, 900, 70], [1300, 930, 90], [820, 1000, 50], [1650, 980, 60]].forEach(([x, y, r]) => felt(cam, "ellipse", { cx: x, cy: y, rx: r, ry: r * 0.4 }, C.moonDark, false));
+        const rk = makeRocket(cam, 960, 870, 0.8, { painted: true, pip: true, flame: true });
+        const dust = [];
+        for (let i = 0; i < 10; i++) dust.push(puff(cam, 960 + R(-300, 300), 880 + R(-20, 40), R(30, 60)));
+        gsap.set(dust, { scale: 0.001, transformOrigin: "50% 50%" });
+        const T = START[12], tB = W[53].t;
+        tl.fromTo(rk.inner, { y: -1000 }, { y: 0, duration: tB - T, ease: "power2.in" }, T);
+        flicker(tl, rk.flame, T, tB);
+        tl.fromTo(rk.inner, { scaleX: 1, scaleY: 1 }, { scaleX: 1.18, scaleY: 0.8, smoothOrigin: false, svgOrigin: "0 0", duration: 0.08, yoyo: true, repeat: 3, ease: "power1.out" }, tB);
+        tl.to(rk.flame, { opacity: 0, duration: 0.2 }, tB + 0.1);
+        dust.forEach((d, i) => tl.fromTo(d, { scale: 0.001, opacity: 1, x: 0 }, { scale: 1.6, opacity: 0, x: R(-140, 140), duration: 0.9, ease: "power2.out" }, tB + i * 0.02));
+        shake(tl, cam, tB, 0.35, 16);
+        push(tl, cam, 12, 1.0, 1.06, "50%", "80%");
+        const sp = words(host, SPANS[12], { top: 60, light: true, map: { 53: "bump!" }, color: { 53: C.yellow, 57: C.moon } });
+        popWords(tl, sp);
+        tl.to(sp[3][0], { y: -30, duration: 0.12, yoyo: true, repeat: 3, ease: "power2.out" }, tB + 0.3);
+      }
+
+      // 14 · Dreams are made to fly. — Pip plants a star flag, Earth rises
+      {
+        const { host, cam } = scene("s14");
+        bgRect(cam, "#1b2156", "#3f3a8a");
+        for (let i = 0; i < 50; i++) E("circle", { cx: R(0, 1920), cy: R(0, 700), r: R(2, 4), fill: "#fff6d8", opacity: R(0.5, 1) }, cam);
+        const earth = G(cam);
+        felt(earth, "circle", { cx: 960, cy: 820, r: 330 }, "#3d8bd9");
+        felt(earth, "path", { d: "M780 640 C860 560 980 620 940 720 C900 800 800 780 780 700 Z" }, C.grass1, false);
+        felt(earth, "path", { d: "M1040 780 C1120 760 1180 840 1120 900 C1060 940 1010 860 1040 780 Z" }, C.grass1, false);
+        felt(cam, "path", { d: "M-100 1180 L-100 900 C400 840 1500 840 2020 900 L2020 1180 Z" }, C.moon, true, 1.0);
+        makeRocket(cam, 1500, 930, 0.62, { painted: true, flame: false });
+        const pip = makePip(cam, 700, 960, 0.85);
+        const flag = G(cam);
+        felt(flag, "rect", { x: 880, y: 560, width: 12, height: 400, rx: 6 }, "#cfd6de", false);
+        const cloth = G(flag);
+        felt(cloth, "path", { d: "M892 570 C980 550 1040 600 1120 580 L1120 700 C1040 720 980 670 892 690 Z" }, C.red);
+        felt(cloth, "path", { d: star5(1005, 632, 34) }, C.yellow, false);
+        const T = START[13], D = END[13] - START[13];
+        tl.fromTo(earth, { y: 400 }, { y: 0, duration: D, ease: "power2.out" }, T);
+        tl.fromTo(flag, { y: -600 }, { y: 0, duration: 0.45, ease: "bounce.out" }, T + 0.2);
+        tl.fromTo(cloth, { skewY: -6 }, { skewY: 6, duration: 0.3, repeat: 8, yoyo: true, ease: "sine.inOut", smoothOrigin: false, svgOrigin: "892 630" }, T + 0.5);
+        tl.fromTo(pip.inner, { y: 0 }, { y: -40, duration: 0.22, repeat: 5, yoyo: true, ease: "power1.out" }, T + 0.6);
+        tl.fromTo(pip.arm, { rotation: 0 }, { rotation: -70, smoothOrigin: false, svgOrigin: "-50 -130", duration: 0.3, ease: "back.out(2)" }, T + 0.5);
+        popWords(tl, words(host, SPANS[13], { top: 70, light: true, size: 100, italic: true, color: { 62: C.yellow } }), true);
+      }
+
+      // ================================================================= END CARDS
+      function nightSky(cam) {
+        bgRect(cam, "#141a45", "#2b2f6b");
+        for (let i = 0; i < 70; i++) E("circle", { cx: R(0, 1920), cy: R(0, 1080), r: R(2, 4.5), fill: "#fff6d8", opacity: R(0.4, 1) }, cam);
+        [[130, 260], [330, 120], [1600, 200], [1790, 340], [240, 470], [1700, 520]].forEach(([x, y]) => {
+          E("line", { x1: x, y1: -20, x2: x, y2: y, stroke: "#e8dcc0", "stroke-width": 2, opacity: 0.7 }, cam);
+          felt(cam, "path", { d: star5(x, y + 26, 26) }, C.yellow, false);
+        });
+      }
+      // 15 · Everything you just saw was made by Claude.
+      {
+        const { host, cam } = scene("s15");
+        nightSky(cam);
+        const card = G(cam);
+        [-330, 330].forEach((dx) => E("line", { x1: 960 + dx, y1: -400, x2: 960 + dx, y2: 330, stroke: "#e8dcc0", "stroke-width": 3 }, card));
+        const pts = [];
+        for (let x = 480; x <= 1440; x += 16) pts.push([x, 330 + R(-5, 5)]);
+        for (let y = 330; y <= 760; y += 16) pts.push([1440 + R(-5, 5), y]);
+        for (let x = 1440; x >= 480; x -= 16) pts.push([x, 760 + R(-5, 5)]);
+        for (let y = 760; y >= 330; y -= 16) pts.push([480 + R(-5, 5), y]);
+        paper(card, "path", { d: pts.map(([x, y], i) => (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1)).join("") + "Z" }, "#f6ead2");
+        E("text", { x: 960, y: 500, "text-anchor": "middle", "font-family": "Fraunces", "font-weight": 600, "font-size": 70, fill: C.ink }, card).textContent = "Everything you just saw";
+        const t2 = E("text", { x: 960, y: 620, "text-anchor": "middle", "font-family": "Fraunces", "font-weight": 600, "font-size": 70, fill: C.ink }, card);
+        E("tspan", {}, t2).textContent = "was made by ";
+        E("tspan", { "font-weight": 900, "font-size": 92, fill: "#c24d1a" }, t2).textContent = "Claude.";
+        E("text", { x: 960, y: 702, "text-anchor": "middle", "font-family": "Fraunces", "font-style": "italic", "font-weight": 600, "font-size": 34, fill: "#9a3d1a", y: 716 }, card).textContent = "every scene · every character · every frame — in code";
+        const T = START[14];
+        tl.fromTo(card, { y: -1000 }, { y: 0, duration: 0.55, ease: "back.out(1.3)" }, T + 0.05);
+        tl.fromTo(card, { rotation: 4 }, { rotation: 0, smoothOrigin: false, svgOrigin: "960 0", duration: 1.4, ease: "elastic.out(1, 0.35)" }, T + 0.4);
+        tl.to(card, { y: -1100, duration: 0.35, ease: "power3.in" }, END[14] - 0.35);
+        push(tl, cam, 14, 1.0, 1.04);
+      }
+
+      // 16 · Comment STORY
+      {
+        const { host, cam } = scene("s16");
+        nightSky(cam);
+        const T = START[15];
+        const cm = G(cam);
+        E("text", { x: 960, y: 290, "text-anchor": "middle", "font-family": "Fraunces", "font-style": "italic", "font-weight": 600, "font-size": 104, fill: C.cream, filter: "url(#paper)" }, cm).textContent = "Comment";
+        tl.fromTo(cm, { y: -500 }, { y: 0, duration: 0.5, ease: "back.out(1.6)" }, Math.max(T, W[71].t - 0.25));
+        const cols = ["#dc6530", "#f2c14e", "#e79a9a", "#7fb2e5", "#8ccb9b"];
+        const widths = [215, 205, 250, 240, 225];
+        const total = widths.reduce((a, b) => a + b, 0) + 4 * 46;
+        let x = 960 - total / 2;
+        "STORY".split("").forEach((ch, i) => {
+          const cx = x + widths[i] / 2;
+          const g = G(cam);
+          E("line", { x1: cx, y1: -400, x2: cx, y2: 500, stroke: "#e8dcc0", "stroke-width": 3 }, g);
+          const lt = G(g, { filter: "url(#felt)" });
+          E("text", { x: cx, y: 720, "text-anchor": "middle", "font-family": "Fraunces", "font-weight": 900, "font-size": 300, fill: cols[i], "data-layout-allow-overlap": "" }, lt).textContent = ch;
+          const t0 = W[72].t + i * 0.15;
+          tl.fromTo(g, { y: -900 }, { y: 0, duration: 0.42, ease: "bounce.out" }, t0 - 0.3);
+          tl.fromTo(g, { rotation: (i % 2 ? 1 : -1) * 8 }, { rotation: 0, smoothOrigin: false, svgOrigin: `${cx} 500`, duration: 1.6, ease: "elastic.out(1, 0.3)" }, t0 + 0.1);
+          x += widths[i] + 46;
+        });
+        const strip = G(cam);
+        paper(strip, "rect", { x: 330, y: 830, width: 1260, height: 92, rx: 4 }, "#f6ead2");
+        E("text", { x: 960, y: 890, "text-anchor": "middle", "font-family": "Fraunces", "font-weight": 600, "font-size": 40, fill: C.ink }, strip).textContent = "and I'll send you the script, the guide & how to do this yourself.";
+        tl.fromTo(strip, { y: 420, rotation: -4 }, { y: 0, rotation: 0, smoothOrigin: false, svgOrigin: "960 880", duration: 0.5, ease: "back.out(1.8)" }, W[73].t + 0.1);
+        const mini = makeRocket(cam, 0, 0, 0.28, { painted: true, flame: true });
+        tl.fromTo(mini.g, { x: -200, y: 1000, rotation: 60 }, { x: 2100, y: 640, rotation: 75, duration: 4.5, ease: "none" }, 31.6);
+        flicker(tl, mini.flame, 31.6, 36.1);
+        push(tl, cam, 15, 1.0, 1.04);
+      }
+
+      // ================================================================= WIPES (scallop paper panels at scene changes)
+      {
+        const fx = document.getElementById("fx");
+        const svg = E("svg", { viewBox: "0 0 1920 1080" }, fx);
+        function scallopPanel(col) {
+          let d = "M0 -100 L2300 -100 L2300 1180 L0 1180";
+          for (let y = 1180; y > -100; y -= 80) d += ` A40 40 0 0 1 0 ${y - 80}`;
+          return E("path", { d: d + " Z", fill: col, filter: "url(#paper)" }, svg);
+        }
+        const plan = [[1, "#fff3dc"], [2, "#ffe6f0"], [3, "#ffe7b3"], [4, "#fff3dc"], [7, "#e6f6ff"], [8, "#d8efff"], [9, "#fff3dc"], [11, "#e9e3ff"], [13, "#fff3dc"], [14, "#f6ead2"]];
+        plan.forEach(([i, col], k) => {
+          const p = scallopPanel(col);
+          const t = START[i];
+          const fromRight = k % 2 === 0;
+          tl.set(p, { x: fromRight ? 2000 : -2400 }, 0);
+          tl.to(p, { x: fromRight ? -40 : -260, duration: 0.2, ease: "power2.in" }, t - 0.2);
+          tl.to(p, { x: fromRight ? -2500 : 2000, duration: 0.24, ease: "power2.out" }, t);
+        });
+      }
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+ "id": "mg-3d-render",
+ "nome": "3D Render (Blender)",
+ "emoji": "🧊",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Objetos 3D com material de verdade (borracha macia, vidro, metal), luz de estúdio e desfoque de fundo. Visual premium de comercial. Precisa do Blender e é o mais lento de renderizar.",
+ "exemplo": "O que faz um produto parecer caro",
+ "peso": 3,
+ "tempo": "20–40 min",
+ "categoria": "estilo"
+}

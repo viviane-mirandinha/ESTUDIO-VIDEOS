@@ -1,0 +1,12 @@
+{
+ "id": "mg-cel-boil",
+ "nome": "Quadro a Quadro (Line Boil)",
+ "emoji": "✏️",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Traço desenhado à mão que 'ferve' (treme de leve a cada 2 quadros), papel texturizado, fumaça e faíscas desenhadas. Tom artesanal e caloroso: histórias, curiosidades, bastidores.",
+ "exemplo": "A invenção famosa que nasceu de um erro",
+ "peso": 2,
+ "tempo": "8–15 min",
+ "categoria": "estilo"
+}

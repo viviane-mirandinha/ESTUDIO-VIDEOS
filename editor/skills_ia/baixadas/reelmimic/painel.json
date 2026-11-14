@@ -1,0 +1,12 @@
+{
+ "id": "reelmimic",
+ "nome": "ReelMimic (clonar estilo animado)",
+ "emoji": "🪞",
+ "entrada": "ambos",
+ "formato": "short",
+ "quando": "Mande um vídeo de REFERÊNCIA (arquivo ou link) + o tema/roteiro: ele mede cortes, ritmo/BPM, câmera de cada plano e o clímax da referência e cria um vídeo ANIMADO 2D novo com a mesma edição (motion graphics, aquarela, giz de cera, pixel art, recorte de papel, quadro branco ou anime). Não edita vídeo de pessoa falando. Lento (~1-3 h de Claude por vídeo), sem API paga.",
+ "exemplo": "Igual ao ritmo e às transições da referência, mas contando por que o gato odeia banho, 30 segundos",
+ "peso": 3,
+ "tempo": "30–60 min",
+ "categoria": "estilo"
+}

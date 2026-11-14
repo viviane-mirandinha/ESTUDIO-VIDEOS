@@ -1,0 +1,12 @@
+{
+ "id": "huashu-motion",
+ "nome": "Motion de Lançamento (Huashu)",
+ "emoji": "🎬",
+ "entrada": "texto",
+ "formato": "short",
+ "quando": "Vídeo de lançamento ou explicativo de produto em motion graphics, com som, que você ajusta apontando no quadro.",
+ "exemplo": "Vídeo de lançamento do meu app de controle de gastos",
+ "peso": 3,
+ "tempo": "15–30 min",
+ "categoria": "estilo"
+}
