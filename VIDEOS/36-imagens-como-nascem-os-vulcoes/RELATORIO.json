@@ -1,0 +1,22 @@
+{
+ "video": 36,
+ "estilo": "B-roll documentário (fotos e clipes com movimento, legenda e títulos)",
+ "ferramenta": "Vídeo com imagens",
+ "titulo": "Dragon Ball Daima: Como Nascem os Vulcões na Série?",
+ "canal": "CURIOSIDADES DO MUNDO",
+ "inicio": "2026-10-23T02:00:27-03:00",
+ "fim": "2026-10-23T02:01:33-03:00",
+ "minutos": 1.08,
+ "minutos_por_etapa": {
+  "roteiro": 0.09,
+  "voz": 0.1,
+  "whisper": 0.09,
+  "imagens": 0.16,
+  "montar_render": 0.64
+ },
+ "render_segundos": 37,
+ "duracao_video": 29.57,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "VÍDEO COM IMAGENS (zero token Claude, só Python local): fatos de referência: Wikipedia “Dragon Ball Daima” (https://pt.wikipedia.org/wiki/Dragon_Ball_Daima); roteiro pelo Ollama qwen2.5:7b (68 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (26.0s); 5 imagens/clipes para 5 cenas (Wikimedia); 5 cenas; edit.json por estilos/broll-documentario/preencher.py"
+}

@@ -1,0 +1,1917 @@
+{
+ "version": 1,
+ "name": "01 - WHITEBOARD QUADRO - Por que o Reino Unido tem quatro países dentro de um só",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#ffffff"
+ },
+ "duration": 61.9,
+ "template": "local",
+ "fonts": {
+  "Kalam": "fonts/Kalam-Bold.ttf",
+  "Lilita One": "fonts/LilitaOne-Regular.ttf",
+  "Caveat": "fonts/Caveat.ttf",
+  "Patrick Hand": "fonts/PatrickHand-Regular.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "quadro",
+   "name": "Desenhos (bandeiras, mapa, setas)"
+  },
+  {
+   "id": "textos",
+   "name": "Textos / datas"
+  }
+ ],
+ "items": [
+  {
+   "id": "camera",
+   "type": "param",
+   "label": "Câmera [t, x, y, zoom]",
+   "props": {
+    "value": [
+     [
+      0,
+      640,
+      200,
+      1.12
+     ],
+     [
+      1.9,
+      640,
+      300,
+      1.06
+     ],
+     [
+      3.9,
+      640,
+      400,
+      1.0
+     ],
+     [
+      5.6,
+      400,
+      470,
+      1.1
+     ],
+     [
+      7.0,
+      860,
+      470,
+      1.1
+     ],
+     [
+      8.4,
+      640,
+      380,
+      1.0
+     ],
+     [
+      9.5,
+      640,
+      360,
+      1.0
+     ],
+     [
+      11.2,
+      400,
+      200,
+      1.12
+     ],
+     [
+      13.3,
+      400,
+      300,
+      1.12
+     ],
+     [
+      16.4,
+      640,
+      420,
+      1.06
+     ],
+     [
+      17.8,
+      900,
+      480,
+      1.15
+     ],
+     [
+      19.4,
+      400,
+      480,
+      1.12
+     ],
+     [
+      23.6,
+      582,
+      520,
+      1.1
+     ],
+     [
+      26.0,
+      400,
+      600,
+      1.12
+     ],
+     [
+      28.3,
+      640,
+      360,
+      1.0
+     ],
+     [
+      30.5,
+      330,
+      360,
+      1.1
+     ],
+     [
+      33.3,
+      450,
+      260,
+      1.12
+     ],
+     [
+      36.9,
+      900,
+      250,
+      1.1
+     ],
+     [
+      40.6,
+      900,
+      400,
+      1.1
+     ],
+     [
+      43.0,
+      640,
+      360,
+      1.0
+     ],
+     [
+      44.0,
+      640,
+      360,
+      1.0
+     ],
+     [
+      44.3,
+      350,
+      180,
+      1.12
+     ],
+     [
+      46.0,
+      640,
+      330,
+      1.06
+     ],
+     [
+      50.4,
+      640,
+      330,
+      1.12
+     ],
+     [
+      52.4,
+      500,
+      520,
+      1.1
+     ],
+     [
+      54.2,
+      640,
+      360,
+      1.0
+     ],
+     [
+      54.6,
+      640,
+      360,
+      1.0
+     ],
+     [
+      55.2,
+      520,
+      300,
+      1.1
+     ],
+     [
+      58.3,
+      640,
+      450,
+      1.06
+     ],
+     [
+      60.5,
+      640,
+      360,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "wipes",
+   "type": "param",
+   "label": "Limpar quadro (segundos)",
+   "props": {
+    "value": [
+     9.4,
+     28.25,
+     43.97,
+     54.6
+    ]
+   }
+  },
+  {
+   "id": "boneco",
+   "type": "param",
+   "label": "Boneco [t, pose, balão]  poses: neutro duvida pensando aponta feliz bravo surpreso vergonha joinha",
+   "props": {
+    "value": [
+     [
+      0,
+      "neutro",
+      ""
+     ],
+     [
+      0.8,
+      "duvida",
+      "Não é um país?!"
+     ],
+     [
+      3.0,
+      "neutro",
+      ""
+     ],
+     [
+      5.6,
+      "aponta",
+      ""
+     ],
+     [
+      9.5,
+      "neutro",
+      ""
+     ],
+     [
+      15.0,
+      "feliz",
+      ""
+     ],
+     [
+      17.9,
+      "pensando",
+      ""
+     ],
+     [
+      21.3,
+      "bravo",
+      "Sem voto?!"
+     ],
+     [
+      23.6,
+      "neutro",
+      ""
+     ],
+     [
+      25.9,
+      "surpreso",
+      ""
+     ],
+     [
+      28.3,
+      "neutro",
+      ""
+     ],
+     [
+      31.4,
+      "feliz",
+      ""
+     ],
+     [
+      33.4,
+      "pensando",
+      ""
+     ],
+     [
+      36.0,
+      "aponta",
+      ""
+     ],
+     [
+      42.2,
+      "surpreso",
+      ""
+     ],
+     [
+      44.0,
+      "neutro",
+      ""
+     ],
+     [
+      50.2,
+      "pensando",
+      ""
+     ],
+     [
+      52.5,
+      "feliz",
+      "Ahh, entendi!"
+     ],
+     [
+      54.6,
+      "pensando",
+      ""
+     ],
+     [
+      57.0,
+      "vergonha",
+      ""
+     ],
+     [
+      58.4,
+      "joinha",
+      ""
+     ]
+    ]
+   }
+  },
+  {
+   "id": "q1_t",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: REINO UNIDO",
+   "start": 0.05,
+   "dur": 9.35,
+   "by": "template",
+   "props": {
+    "text": "REINO UNIDO",
+    "x": 640,
+    "y": 92,
+    "size": 76,
+    "kind": "title",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q1_uk",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira uk",
+   "start": 0.85,
+   "dur": 8.55,
+   "by": "template",
+   "props": {
+    "src": "img/uk.svg",
+    "x": 640,
+    "y": 222,
+    "w": 230,
+    "h": 115,
+    "label": "",
+    "kind": "flag",
+    "draw": 0.9
+   }
+  },
+  {
+   "id": "q1_box",
+   "type": "text",
+   "track": "textos",
+   "label": "Caixa: Estado soberano",
+   "start": 2.0,
+   "dur": 7.4,
+   "by": "template",
+   "props": {
+    "text": "Estado soberano",
+    "x": 640,
+    "y": 345,
+    "w": 380,
+    "h": 74,
+    "size": 40,
+    "color": "#1d2a5c",
+    "kind": "box",
+    "draw": 1.0
+   }
+  },
+  {
+   "id": "q1_a0",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 3.95,
+   "dur": 5.45,
+   "by": "template",
+   "props": {
+    "d": "M550,388 Q410,398 280,452",
+    "d2": "M302,454 L280,452 L294,435",
+    "kind": "path",
+    "draw": 0.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_a1",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 4.1,
+   "dur": 5.3,
+   "by": "template",
+   "props": {
+    "d": "M610,388 Q560,413 520,452",
+    "d2": "M541,446 L520,452 L526,431",
+    "kind": "path",
+    "draw": 0.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_a2",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 4.25,
+   "dur": 5.15,
+   "by": "template",
+   "props": {
+    "d": "M670,388 Q720,413 760,452",
+    "d2": "M754,431 L760,452 L739,446",
+    "kind": "path",
+    "draw": 0.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_a3",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 4.4,
+   "dur": 5.0,
+   "by": "template",
+   "props": {
+    "d": "M730,388 Q870,398 1000,452",
+    "d2": "M986,435 L1000,452 L978,454",
+    "kind": "path",
+    "draw": 0.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_4n",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: 4 nações",
+   "start": 4.35,
+   "dur": 5.05,
+   "by": "template",
+   "props": {
+    "text": "4 nações",
+    "x": 935,
+    "y": 345,
+    "size": 40,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q1_eng",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira eng",
+   "start": 5.7,
+   "dur": 3.7,
+   "by": "template",
+   "props": {
+    "src": "img/eng.svg",
+    "x": 280,
+    "y": 520,
+    "w": 150,
+    "h": 90,
+    "label": "Inglaterra",
+    "kind": "flag",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q1_sco",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira sco",
+   "start": 6.35,
+   "dur": 3.05,
+   "by": "template",
+   "props": {
+    "src": "img/sco.svg",
+    "x": 520,
+    "y": 520,
+    "w": 150,
+    "h": 90,
+    "label": "Escócia",
+    "kind": "flag",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q1_wal",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira wal",
+   "start": 7.1,
+   "dur": 2.3,
+   "by": "template",
+   "props": {
+    "src": "img/wal.svg",
+    "x": 760,
+    "y": 520,
+    "w": 150,
+    "h": 90,
+    "label": "País de Gales",
+    "kind": "flag",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q1_nir",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira nir",
+   "start": 8.3,
+   "dur": 1.1,
+   "by": "template",
+   "props": {
+    "src": "img/nir.svg",
+    "x": 1000,
+    "y": 520,
+    "w": 150,
+    "h": 90,
+    "label": "Irlanda do Norte",
+    "kind": "flag",
+    "draw": 0.85
+   }
+  },
+  {
+   "id": "q1_p1",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sinal +",
+   "start": 6.1,
+   "dur": 3.3,
+   "by": "template",
+   "props": {
+    "d": "M382,520 H418",
+    "d2": "M400,502 V538",
+    "color": "#222",
+    "width": 6,
+    "kind": "path",
+    "draw": 0.3,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_p2",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sinal +",
+   "start": 6.95,
+   "dur": 2.45,
+   "by": "template",
+   "props": {
+    "d": "M622,520 H658",
+    "d2": "M640,502 V538",
+    "color": "#222",
+    "width": 6,
+    "kind": "path",
+    "draw": 0.3,
+    "html": ""
+   }
+  },
+  {
+   "id": "q1_p3",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sinal +",
+   "start": 8.05,
+   "dur": 1.35,
+   "by": "template",
+   "props": {
+    "d": "M862,520 H898",
+    "d2": "M880,502 V538",
+    "color": "#222",
+    "width": 6,
+    "kind": "path",
+    "draw": 0.3,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_map",
+   "type": "html",
+   "track": "quadro",
+   "label": "Mapa ilhas britânicas",
+   "start": 9.5,
+   "dur": 18.75,
+   "by": "template",
+   "props": {
+    "regions": [
+     "sco",
+     "eng",
+     "wal",
+     "nir",
+     "irl"
+    ],
+    "tx": 690,
+    "ty": 45,
+    "s": 1.2,
+    "sea": [
+     900,
+     355,
+     250,
+     330
+    ],
+    "kind": "map",
+    "draw": 1.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_feng",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar eng",
+   "start": 11.3,
+   "dur": 16.95,
+   "by": "template",
+   "props": {
+    "map": "q2_map",
+    "region": "eng",
+    "color": "#f19c9c",
+    "hand": true,
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_fsco",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar sco",
+   "start": 12.1,
+   "dur": 16.15,
+   "by": "template",
+   "props": {
+    "map": "q2_map",
+    "region": "sco",
+    "color": "#9dbcf0",
+    "hand": true,
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_fwal",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar wal",
+   "start": 16.85,
+   "dur": 11.4,
+   "by": "template",
+   "props": {
+    "map": "q2_map",
+    "region": "wal",
+    "color": "#9fd7a6",
+    "hand": true,
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_firl",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar irl",
+   "start": 23.75,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "map": "q2_map",
+    "region": "irl",
+    "color": "#f6d77a",
+    "hand": true,
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_fnir",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar nir",
+   "start": 23.75,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "map": "q2_map",
+    "region": "nir",
+    "color": "#f6d77a",
+    "hand": false,
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_1707",
+   "type": "text",
+   "track": "textos",
+   "label": "Data: 1707",
+   "start": 9.9,
+   "dur": 18.35,
+   "by": "template",
+   "props": {
+    "text": "1707",
+    "x": 105,
+    "y": 105,
+    "w": 130,
+    "kind": "pill",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q2_eng",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira eng",
+   "start": 11.25,
+   "dur": 17.0,
+   "by": "template",
+   "props": {
+    "src": "img/eng.svg",
+    "x": 260,
+    "y": 105,
+    "w": 120,
+    "h": 72,
+    "label": "Inglaterra",
+    "lsize": 28,
+    "kind": "flag",
+    "draw": 0.75
+   }
+  },
+  {
+   "id": "q2_p",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sinal +",
+   "start": 11.95,
+   "dur": 16.3,
+   "by": "template",
+   "props": {
+    "d": "M346,105 H378",
+    "d2": "M362,89 V121",
+    "color": "#222",
+    "width": 6,
+    "kind": "path",
+    "draw": 0.3,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_sco",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira sco",
+   "start": 12.1,
+   "dur": 16.15,
+   "by": "template",
+   "props": {
+    "src": "img/sco.svg",
+    "x": 465,
+    "y": 105,
+    "w": 120,
+    "h": 72,
+    "label": "Escócia",
+    "lsize": 28,
+    "kind": "flag",
+    "draw": 0.75
+   }
+  },
+  {
+   "id": "q2_ato",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone scroll-text",
+   "start": 13.35,
+   "dur": 14.9,
+   "by": "template",
+   "props": {
+    "name": "scroll-text",
+    "src": "img/ic/scroll-text.svg",
+    "x": 95,
+    "y": 262,
+    "size": 84,
+    "color": "#6b4a2b",
+    "kind": "icon",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q2_atol",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: Ato de União",
+   "start": 13.65,
+   "dur": 14.6,
+   "by": "template",
+   "props": {
+    "text": "Ato de União",
+    "x": 255,
+    "y": 262,
+    "size": 36,
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q2_a1",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 14.35,
+   "dur": 13.9,
+   "by": "template",
+   "props": {
+    "d": "M250,292 Q266,318 250,345",
+    "d2": "M269,334 L250,345 L251,323",
+    "kind": "path",
+    "draw": 0.5,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_gb",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: GRÃ-BRETANHA",
+   "start": 15.0,
+   "dur": 13.25,
+   "by": "template",
+   "props": {
+    "text": "GRÃ-BRETANHA",
+    "x": 330,
+    "y": 380,
+    "size": 56,
+    "kind": "title",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q2_wal",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira wal",
+   "start": 16.45,
+   "dur": 11.8,
+   "by": "template",
+   "props": {
+    "src": "img/wal.svg",
+    "x": 260,
+    "y": 500,
+    "w": 120,
+    "h": 72,
+    "label": "País de Gales",
+    "lsize": 28,
+    "kind": "flag",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q2_aw",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 17.9,
+   "dur": 10.35,
+   "by": "template",
+   "props": {
+    "d": "M1045,455 Q974,459 935,518",
+    "d2": "M954,508 L935,518 L937,496",
+    "kind": "path",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_anx",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: anexado!",
+   "start": 18.1,
+   "dur": 10.15,
+   "by": "template",
+   "props": {
+    "text": "anexado!",
+    "x": 420,
+    "y": 470,
+    "size": 34,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q2_1536",
+   "type": "text",
+   "track": "textos",
+   "label": "Data: 1536",
+   "start": 19.45,
+   "dur": 8.8,
+   "by": "template",
+   "props": {
+    "text": "1536",
+    "x": 105,
+    "y": 500,
+    "w": 130,
+    "kind": "pill",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q2_vote",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone vote",
+   "start": 21.3,
+   "dur": 6.95,
+   "by": "template",
+   "props": {
+    "name": "vote",
+    "src": "img/ic/vote.svg",
+    "x": 560,
+    "y": 500,
+    "size": 76,
+    "kind": "icon",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q2_vx",
+   "type": "html",
+   "track": "quadro",
+   "label": "X vermelho",
+   "start": 21.85,
+   "dur": 6.4,
+   "by": "template",
+   "props": {
+    "d": "M526,466 L594,534",
+    "d2": "M594,466 L526,534",
+    "width": 8,
+    "kind": "path",
+    "draw": 0.45,
+    "html": ""
+   }
+  },
+  {
+   "id": "q2_vl",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: sem voto",
+   "start": 22.4,
+   "dur": 5.85,
+   "by": "template",
+   "props": {
+    "text": "sem voto",
+    "x": 560,
+    "y": 562,
+    "size": 30,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q2_stp",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira stp",
+   "start": 23.7,
+   "dur": 4.55,
+   "by": "template",
+   "props": {
+    "src": "img/stp.svg",
+    "x": 260,
+    "y": 628,
+    "w": 110,
+    "h": 66,
+    "label": "Irlanda",
+    "lsize": 28,
+    "kind": "flag",
+    "draw": 0.8
+   }
+  },
+  {
+   "id": "q2_1801",
+   "type": "text",
+   "track": "textos",
+   "label": "Data: 1801",
+   "start": 24.6,
+   "dur": 3.65,
+   "by": "template",
+   "props": {
+    "text": "1801",
+    "x": 105,
+    "y": 628,
+    "w": 130,
+    "kind": "pill",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q2_sw",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone swords",
+   "start": 25.85,
+   "dur": 2.4,
+   "by": "template",
+   "props": {
+    "name": "swords",
+    "src": "img/ic/swords.svg",
+    "x": 430,
+    "y": 628,
+    "size": 72,
+    "kind": "icon",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q2_reb",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: rebelião",
+   "start": 26.5,
+   "dur": 1.75,
+   "by": "template",
+   "props": {
+    "text": "rebelião",
+    "x": 560,
+    "y": 612,
+    "size": 32,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q2_sx",
+   "type": "html",
+   "track": "quadro",
+   "label": "X vermelho",
+   "start": 27.5,
+   "dur": 0.75,
+   "by": "template",
+   "props": {
+    "d": "M400,598 L460,658",
+    "d2": "M460,598 L400,658",
+    "width": 8,
+    "kind": "path",
+    "draw": 0.45,
+    "html": ""
+   }
+  },
+  {
+   "id": "q3_map",
+   "type": "html",
+   "track": "quadro",
+   "label": "Mapa ilha da Irlanda",
+   "start": 28.3,
+   "dur": 15.67,
+   "by": "template",
+   "props": {
+    "regions": [
+     "irl",
+     "nir"
+    ],
+    "tx": 30,
+    "ty": -680,
+    "s": 3.0,
+    "sea": [
+     275,
+     370,
+     250,
+     300
+    ],
+    "kind": "map",
+    "draw": 1.2,
+    "html": ""
+   }
+  },
+  {
+   "id": "q3_1922",
+   "type": "text",
+   "track": "textos",
+   "label": "Data: 1922",
+   "start": 28.85,
+   "dur": 15.12,
+   "by": "template",
+   "props": {
+    "text": "1922",
+    "x": 590,
+    "y": 110,
+    "w": 130,
+    "kind": "pill",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q3_firl",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar sul (Irlanda)",
+   "start": 30.6,
+   "dur": 13.37,
+   "by": "template",
+   "props": {
+    "map": "q3_map",
+    "region": "irl",
+    "color": "#8fd19a",
+    "kind": "fill",
+    "draw": 0.7,
+    "html": ""
+   }
+  },
+  {
+   "id": "q3_irl",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira irl",
+   "start": 31.4,
+   "dur": 12.57,
+   "by": "template",
+   "props": {
+    "src": "img/irl.svg",
+    "x": 255,
+    "y": 470,
+    "w": 120,
+    "h": 80,
+    "label": "Independência",
+    "lsize": 30,
+    "kind": "flag",
+    "draw": 0.9
+   }
+  },
+  {
+   "id": "q3_fnir",
+   "type": "html",
+   "track": "quadro",
+   "label": "Pintar norte",
+   "start": 33.35,
+   "dur": 10.62,
+   "by": "template",
+   "props": {
+    "map": "q3_map",
+    "region": "nir",
+    "color": "#f19c9c",
+    "kind": "fill",
+    "draw": 0.6,
+    "html": ""
+   }
+  },
+  {
+   "id": "q3_nir",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira nir",
+   "start": 33.6,
+   "dur": 10.37,
+   "by": "template",
+   "props": {
+    "src": "img/nir.svg",
+    "x": 600,
+    "y": 235,
+    "w": 130,
+    "h": 65,
+    "label": "Irlanda do Norte",
+    "lsize": 28,
+    "kind": "flag",
+    "draw": 0.9
+   }
+  },
+  {
+   "id": "q3_an",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 34.5,
+   "dur": 9.47,
+   "by": "template",
+   "props": {
+    "d": "M425,210 Q479,200 525,230",
+    "d2": "M515,211 L525,230 L503,228",
+    "kind": "path",
+    "draw": 0.4,
+    "html": ""
+   }
+  },
+  {
+   "id": "q3_prot",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: protestante",
+   "start": 34.6,
+   "dur": 9.37,
+   "by": "template",
+   "props": {
+    "text": "protestante",
+    "x": 600,
+    "y": 330,
+    "size": 32,
+    "color": "#1d2a5c",
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q3_fic",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: ficou!",
+   "start": 35.35,
+   "dur": 8.62,
+   "by": "template",
+   "props": {
+    "text": "ficou!",
+    "x": 600,
+    "y": 375,
+    "size": 38,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.5
+   }
+  },
+  {
+   "id": "q3_n0",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 4",
+   "start": 37.0,
+   "dur": 6.97,
+   "by": "template",
+   "props": {
+    "text": "4",
+    "x": 785,
+    "y": 140,
+    "size": 70,
+    "kind": "title",
+    "draw": 0.35
+   }
+  },
+  {
+   "id": "q3_i0",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone ball",
+   "start": 37.3,
+   "dur": 6.67,
+   "by": "template",
+   "props": {
+    "name": "ball",
+    "src": "img/ic/ball.svg",
+    "x": 870,
+    "y": 140,
+    "size": 70,
+    "fill": "#222",
+    "kind": "icon",
+    "draw": 0.45
+   }
+  },
+  {
+   "id": "q3_l0",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: times de futebol",
+   "start": 37.6,
+   "dur": 6.37,
+   "by": "template",
+   "props": {
+    "text": "times de futebol",
+    "x": 920,
+    "y": 140,
+    "size": 36,
+    "anchor": "start",
+    "kind": "label",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q3_n1",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 4",
+   "start": 38.95,
+   "dur": 5.02,
+   "by": "template",
+   "props": {
+    "text": "4",
+    "x": 785,
+    "y": 250,
+    "size": 70,
+    "kind": "title",
+    "draw": 0.35
+   }
+  },
+  {
+   "id": "q3_i1",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone scale",
+   "start": 39.25,
+   "dur": 4.72,
+   "by": "template",
+   "props": {
+    "name": "scale",
+    "src": "img/ic/scale.svg",
+    "x": 870,
+    "y": 250,
+    "size": 70,
+    "kind": "icon",
+    "draw": 0.45
+   }
+  },
+  {
+   "id": "q3_l1",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: sistemas de lei",
+   "start": 39.55,
+   "dur": 4.42,
+   "by": "template",
+   "props": {
+    "text": "sistemas de lei",
+    "x": 920,
+    "y": 250,
+    "size": 36,
+    "anchor": "start",
+    "kind": "label",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q3_n2",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 4",
+   "start": 40.65,
+   "dur": 3.32,
+   "by": "template",
+   "props": {
+    "text": "4",
+    "x": 785,
+    "y": 360,
+    "size": 70,
+    "kind": "title",
+    "draw": 0.35
+   }
+  },
+  {
+   "id": "q3_i2",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone map-pin",
+   "start": 40.95,
+   "dur": 3.02,
+   "by": "template",
+   "props": {
+    "name": "map-pin",
+    "src": "img/ic/map-pin.svg",
+    "x": 870,
+    "y": 360,
+    "size": 70,
+    "kind": "icon",
+    "draw": 0.45
+   }
+  },
+  {
+   "id": "q3_l2",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: capitais",
+   "start": 41.25,
+   "dur": 2.72,
+   "by": "template",
+   "props": {
+    "text": "capitais",
+    "x": 920,
+    "y": 360,
+    "size": 36,
+    "anchor": "start",
+    "kind": "label",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q3_n3",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 1",
+   "start": 42.2,
+   "dur": 1.77,
+   "by": "template",
+   "props": {
+    "text": "1",
+    "x": 785,
+    "y": 490,
+    "size": 70,
+    "color": "#f08080",
+    "kind": "title",
+    "draw": 0.35
+   }
+  },
+  {
+   "id": "q3_i3",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone globe",
+   "start": 42.5,
+   "dur": 1.47,
+   "by": "template",
+   "props": {
+    "name": "globe",
+    "src": "img/ic/globe.svg",
+    "x": 870,
+    "y": 490,
+    "size": 70,
+    "kind": "icon",
+    "draw": 0.45
+   }
+  },
+  {
+   "id": "q3_l3",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: assento na ONU",
+   "start": 42.8,
+   "dur": 1.17,
+   "by": "template",
+   "props": {
+    "text": "assento na ONU",
+    "x": 920,
+    "y": 490,
+    "size": 36,
+    "anchor": "start",
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q3_caps",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: Londres · Edimburgo · Cardiff · Belfast",
+   "start": 41.45,
+   "dur": 2.52,
+   "by": "template",
+   "props": {
+    "text": "Londres · Edimburgo · Cardiff · Belfast",
+    "x": 990,
+    "y": 410,
+    "size": 28,
+    "color": "#555",
+    "kind": "label",
+    "draw": 0.75
+   }
+  },
+  {
+   "id": "q4_cr",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone crown",
+   "start": 44.35,
+   "dur": 10.25,
+   "by": "template",
+   "props": {
+    "name": "crown",
+    "src": "img/ic/crown.svg",
+    "x": 215,
+    "y": 115,
+    "size": 100,
+    "fill": "#f2c200",
+    "kind": "icon",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q4_el",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: Rainha Elizabeth II",
+   "start": 44.75,
+   "dur": 9.85,
+   "by": "template",
+   "props": {
+    "text": "Rainha Elizabeth II",
+    "x": 225,
+    "y": 200,
+    "size": 36,
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q4_sig",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: Elizabeth R",
+   "start": 45.0,
+   "dur": 9.6,
+   "by": "template",
+   "props": {
+    "text": "Elizabeth R",
+    "x": 560,
+    "y": 130,
+    "size": 72,
+    "font": "Caveat",
+    "color": "#1d2a5c",
+    "kind": "label",
+    "draw": 0.9
+   }
+  },
+  {
+   "id": "q4_box",
+   "type": "text",
+   "track": "textos",
+   "label": "Caixa: nome oficial",
+   "start": 46.1,
+   "dur": 8.5,
+   "by": "template",
+   "props": {
+    "text": "Rainha do Reino Unido da Grã-Bretanha\ne Irlanda do Norte",
+    "x": 615,
+    "y": 330,
+    "w": 990,
+    "h": 150,
+    "size": 44,
+    "kind": "box",
+    "draw": 3.7
+   }
+  },
+  {
+   "id": "q4_u1",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sublinhar Grã-Bretanha",
+   "start": 50.6,
+   "dur": 4.0,
+   "by": "template",
+   "props": {
+    "ref": "q4_box",
+    "word": "Grã-Bretanha",
+    "color": "#c8102e",
+    "kind": "uline",
+    "draw": 0.5,
+    "html": ""
+   }
+  },
+  {
+   "id": "q4_u2",
+   "type": "html",
+   "track": "quadro",
+   "label": "Sublinhar Irlanda do Norte",
+   "start": 51.1,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "ref": "q4_box",
+    "word": "Irlanda do Norte",
+    "color": "#c8102e",
+    "kind": "uline",
+    "draw": 0.5,
+    "html": ""
+   }
+  },
+  {
+   "id": "q4_uk",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira uk",
+   "start": 52.5,
+   "dur": 2.1,
+   "by": "template",
+   "props": {
+    "src": "img/uk.svg",
+    "x": 300,
+    "y": 515,
+    "w": 180,
+    "h": 90,
+    "label": "",
+    "kind": "flag",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q4_1e",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 1 ESTADO",
+   "start": 52.85,
+   "dur": 1.75,
+   "by": "template",
+   "props": {
+    "text": "1 ESTADO",
+    "x": 300,
+    "y": 622,
+    "size": 56,
+    "kind": "title",
+    "draw": 0.55
+   }
+  },
+  {
+   "id": "q4_a",
+   "type": "html",
+   "track": "quadro",
+   "label": "Seta",
+   "start": 53.35,
+   "dur": 1.25,
+   "by": "template",
+   "props": {
+    "d": "M410,520 Q490,520 570,520",
+    "d2": "M551,509 L570,520 L551,531",
+    "kind": "path",
+    "draw": 0.3,
+    "html": ""
+   }
+  },
+  {
+   "id": "q4_f0",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira eng",
+   "start": 53.45,
+   "dur": 1.15,
+   "by": "template",
+   "props": {
+    "src": "img/eng.svg",
+    "x": 645,
+    "y": 482,
+    "w": 100,
+    "h": 60,
+    "label": "",
+    "hand": false,
+    "kind": "flag",
+    "draw": 0.32
+   }
+  },
+  {
+   "id": "q4_f1",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira sco",
+   "start": 53.59,
+   "dur": 1.01,
+   "by": "template",
+   "props": {
+    "src": "img/sco.svg",
+    "x": 770,
+    "y": 482,
+    "w": 100,
+    "h": 60,
+    "label": "",
+    "hand": false,
+    "kind": "flag",
+    "draw": 0.32
+   }
+  },
+  {
+   "id": "q4_f2",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira wal",
+   "start": 53.73,
+   "dur": 0.87,
+   "by": "template",
+   "props": {
+    "src": "img/wal.svg",
+    "x": 645,
+    "y": 562,
+    "w": 100,
+    "h": 60,
+    "label": "",
+    "hand": false,
+    "kind": "flag",
+    "draw": 0.32
+   }
+  },
+  {
+   "id": "q4_f3",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira nir",
+   "start": 53.87,
+   "dur": 0.73,
+   "by": "template",
+   "props": {
+    "src": "img/nir.svg",
+    "x": 770,
+    "y": 562,
+    "w": 100,
+    "h": 60,
+    "label": "",
+    "hand": true,
+    "kind": "flag",
+    "draw": 0.32
+   }
+  },
+  {
+   "id": "q4_4p",
+   "type": "text",
+   "track": "textos",
+   "label": "Título: 4 PAÍSES",
+   "start": 53.95,
+   "dur": 0.65,
+   "by": "template",
+   "props": {
+    "text": "4 PAÍSES",
+    "x": 708,
+    "y": 645,
+    "size": 56,
+    "color": "#f08080",
+    "kind": "title",
+    "draw": 0.5
+   }
+  },
+  {
+   "id": "q5_eng",
+   "type": "image",
+   "track": "quadro",
+   "label": "Bandeira eng",
+   "start": 55.2,
+   "dur": 6.7,
+   "by": "template",
+   "props": {
+    "src": "img/eng.svg",
+    "x": 520,
+    "y": 245,
+    "w": 300,
+    "h": 180,
+    "label": "",
+    "kind": "flag",
+    "draw": 1.0
+   }
+  },
+  {
+   "id": "q5_tudo",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: tudo Inglaterra?",
+   "start": 55.95,
+   "dur": 5.95,
+   "by": "template",
+   "props": {
+    "text": "tudo Inglaterra?",
+    "x": 520,
+    "y": 385,
+    "size": 44,
+    "color": "#1d2a5c",
+    "kind": "label",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q5_x",
+   "type": "html",
+   "track": "quadro",
+   "label": "X vermelho",
+   "start": 57.05,
+   "dur": 4.85,
+   "by": "template",
+   "props": {
+    "d": "M410,135 L630,355",
+    "d2": "M630,135 L410,355",
+    "width": 14,
+    "kind": "path",
+    "draw": 0.5,
+    "html": ""
+   }
+  },
+  {
+   "id": "q5_erro",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: erro comum!",
+   "start": 57.55,
+   "dur": 4.35,
+   "by": "template",
+   "props": {
+    "text": "erro comum!",
+    "x": 520,
+    "y": 445,
+    "size": 44,
+    "color": "#c8102e",
+    "kind": "label",
+    "draw": 0.6
+   }
+  },
+  {
+   "id": "q5_sub",
+   "type": "text",
+   "track": "textos",
+   "label": "Data: INSCREVA-SE",
+   "start": 58.45,
+   "dur": 3.45,
+   "by": "template",
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 470,
+    "y": 580,
+    "w": 330,
+    "h": 76,
+    "size": 46,
+    "bg": "#c8102e",
+    "kind": "pill",
+    "draw": 0.7
+   }
+  },
+  {
+   "id": "q5_bell",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone bell",
+   "start": 58.95,
+   "dur": 2.95,
+   "by": "template",
+   "props": {
+    "name": "bell",
+    "src": "img/ic/bell.svg",
+    "x": 690,
+    "y": 580,
+    "size": 70,
+    "fill": "#f2c200",
+    "kind": "icon",
+    "draw": 0.45
+   }
+  },
+  {
+   "id": "q5_globe",
+   "type": "image",
+   "track": "quadro",
+   "label": "Ícone globe",
+   "start": 59.4,
+   "dur": 2.5,
+   "by": "template",
+   "props": {
+    "name": "globe",
+    "src": "img/ic/globe.svg",
+    "x": 830,
+    "y": 580,
+    "size": 76,
+    "color": "#1f6fb2",
+    "kind": "icon",
+    "draw": 0.5
+   }
+  },
+  {
+   "id": "q5_mapas",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo: + mapas",
+   "start": 59.7,
+   "dur": 2.2,
+   "by": "template",
+   "props": {
+    "text": "+ mapas",
+    "x": 960,
+    "y": 580,
+    "size": 40,
+    "color": "#1d2a5c",
+    "kind": "label",
+    "draw": 0.6
+   }
+  }
+ ],
+ "estilo": "Whiteboard / quadro branco",
+ "referencia": {
+  "video": "https://youtu.be/5Igq8zO_h-Q",
+  "canal": "Academia Play",
+  "canal_url": "https://www.youtube.com/channel/UCv05qOuJ6Igbe-EyQibJgwQ",
+  "titulo": "¿Gran Bretaña? ¿Inglaterra? ¿Reino Unido? ¿Cuál es la bandera de Irlanda del Norte?",
+  "nota": "ver ESTILOS-NOVOS/01-whiteboard-quadro"
+ },
+ "ref_inicio": 0.0
+}

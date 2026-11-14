@@ -1,0 +1,123 @@
+{
+ "estado": "pronto",
+ "estilo": "stickman",
+ "titulo": "Gatos e Ronronados",
+ "voz": "voz.mp3",
+ "duracao_voz": 50.52,
+ "permite_video": false,
+ "vertical": true,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 4.78,
+   "texto": "Gatos ronronam para chamar atenção. Ronronar ajuda a relaxar o corpo.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 1,
+   "s": 5.68,
+   "e": 8.22,
+   "texto": "Frequência do ronronado varia entre gatos.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 2,
+   "s": 8.9,
+   "e": 11.68,
+   "texto": "Gatos pequenos geralmente ronronam mais alto.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 3,
+   "s": 12.42,
+   "e": 17.26,
+   "texto": "Músculos ao redor da laringe se contraem. O som é feito com o ar escapando.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 4,
+   "s": 17.92,
+   "e": 22.86,
+   "texto": "Também indica estado de felicidade. Alguns ronronam ao se alimentar.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 5,
+   "s": 23.38,
+   "e": 26.34,
+   "texto": "Gatos domésticos fazem isso mais que selvagens.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 6,
+   "s": 26.34,
+   "e": 30.08,
+   "texto": "Ronronado ajuda a recuperação após operações.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 7,
+   "s": 31.11,
+   "e": 37.7,
+   "texto": "Ronronar pode indicar câimbras musculares. Gatos podem sincronizar ronronado com batimentos cardíacos.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 8,
+   "s": 37.76,
+   "e": 41.24,
+   "texto": "O ronronado aumenta fluxo sanguíneo ao pescoço.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 9,
+   "s": 42.09,
+   "e": 45.1,
+   "texto": "Alguns gatos param de ronronar quando dormem profundamente.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 10,
+   "s": 46.13,
+   "e": 49.48,
+   "texto": "Ronronar pode ter origem em ancestralidade marina dos felinos.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.13,
+  "voz": 0.16,
+  "whisper": 0.08
+ },
+ "obs": [
+  "Wikipedia “Gato” descartada (não é sobre o tema)",
+  "sem fatos de referência (Wikipedia não respondeu) — conferir tudo",
+  "roteiro pelo Ollama qwen2.5:7b (95 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (50.5s)",
+  "11 cenas desenhadas em código (sem banco de imagens)"
+ ],
+ "inicio": "2026-10-23T21:36:26-03:00"
+}

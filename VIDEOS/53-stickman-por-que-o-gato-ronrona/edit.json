@@ -1,0 +1,338 @@
+{
+ "version": 1,
+ "name": "53 - 23-10-2026 - CURIOSO DE PALITO - Gatos e Ronronados",
+ "estilo": "Stickman Studio",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#f7f4ec"
+ },
+ "duration": 51.72,
+ "template": "generic",
+ "head": "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap\">",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (bonecos)"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "c00",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 1: Gatos ronronam para chamar atenção. Ronr",
+   "start": 0.0,
+   "dur": 5.68,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "",
+     "destaque": "Gatos e Ronronados",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": true,
+     "entrada": "anda"
+    }
+   }
+  },
+  {
+   "id": "c01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 2: Frequência do ronronado varia entre gato",
+   "start": 5.68,
+   "dur": 3.22,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "pensando",
+     "fala": "",
+     "destaque": "Frequência varia",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 3: Gatos pequenos geralmente ronronam mais ",
+   "start": 8.9,
+   "dur": 3.52,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "",
+     "destaque": "Pequenos ronronam alto",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 4: Músculos ao redor da laringe se contraem",
+   "start": 12.42,
+   "dur": 5.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "pensando",
+     "fala": "",
+     "destaque": "Músculos contraem",
+     "cenario": "natureza",
+     "lado": "dir",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "anda"
+    }
+   }
+  },
+  {
+   "id": "c04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 5: Também indica estado de felicidade. Algu",
+   "start": 17.92,
+   "dur": 5.46,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "Ar escapando",
+     "destaque": "FELICIDADE",
+     "cenario": "natureza",
+     "lado": "dir",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 6: Gatos domésticos fazem isso mais que sel",
+   "start": 23.38,
+   "dur": 2.96,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "pensando",
+     "fala": "",
+     "destaque": "DOMÉSTICOS",
+     "cenario": "natureza",
+     "lado": "dir",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 7: Ronronado ajuda a recuperação após opera",
+   "start": 26.34,
+   "dur": 4.77,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "Ronronam",
+     "destaque": "RECUPERAÇÃO",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "anda"
+    }
+   }
+  },
+  {
+   "id": "c07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 8: Ronronar pode indicar câimbras musculare",
+   "start": 31.11,
+   "dur": 6.65,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "pensando",
+     "fala": "",
+     "destaque": "SINCRONIZAR",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 9: O ronronado aumenta fluxo sanguíneo ao p",
+   "start": 37.76,
+   "dur": 4.33,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "aumenta fluxo",
+     "destaque": "ronronado",
+     "cenario": "natureza",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "c09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 10: Alguns gatos param de ronronar quando do",
+   "start": 42.09,
+   "dur": 4.04,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "pensando",
+     "fala": "",
+     "destaque": "ronronar",
+     "cenario": "natureza",
+     "lado": "dir",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "anda"
+    }
+   }
+  },
+  {
+   "id": "c10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cena 11: Ronronar pode ter origem em ancestralida",
+   "start": 46.13,
+   "dur": 2.99,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "explicando",
+     "fala": "marina felinos",
+     "destaque": "origem",
+     "cenario": "natureza",
+     "lado": "dir",
+     "cor": "#2f7cf6",
+     "desenhar": false,
+     "entrada": "nada"
+    }
+   }
+  },
+  {
+   "id": "fim",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão final",
+   "start": 49.12,
+   "dur": 2.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "stickman",
+    "params": {
+     "pose": "comemorando",
+     "fala": "Se inscreve aí!",
+     "destaque": "Curioso de Palito",
+     "cenario": "palco",
+     "lado": "esq",
+     "cor": "#2f7cf6",
+     "desenhar": true,
+     "entrada": "pula"
+    }
+   }
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 49.12,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "words_file": "words.json",
+    "per_group": 2,
+    "x": 540,
+    "y": 1507,
+    "size": 76,
+    "color": "#1c1c1c",
+    "dim": "rgba(28,28,28,.45)",
+    "hl_color": "#2f7cf6",
+    "font": "Patrick Hand",
+    "weight": 800,
+    "bg": "rgba(255,255,255,.88)",
+    "upper": false
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/estilos/stickman/preencher.py",
+  "cena": "templates/scenes/stickman.html"
+ },
+ "ferramenta": "Stickman Studio"
+}

@@ -1,0 +1,1428 @@
+{
+ "estado": "pronto",
+ "estilo": "short-documentario",
+ "titulo": "Polvos e Seus Três Corações",
+ "voz": "voz.mp3",
+ "duracao_voz": 52.128,
+ "permite_video": true,
+ "vertical": true,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 2.76,
+   "texto": "Polvos têm três corações, incrível, certo?",
+   "query": "polvo squid hearts",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/01-b52e8f.jpg"
+   }
+  },
+  {
+   "i": 1,
+   "s": 3.62,
+   "e": 6.08,
+   "texto": "Um para o sangue branco, outro para o vermelho.",
+   "query": "polvo white blood",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/02-1322fc.jpg"
+   }
+  },
+  {
+   "i": 2,
+   "s": 6.7,
+   "e": 9.26,
+   "texto": "O terceiro direciona oxigênio ao cérebro.",
+   "query": "polvo red blood",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blood_Moon_-_Luna_Roja_140415-1506-jikatu_%2813913709754%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blood_Moon_-_Luna_Roja_140415-1506-jikatu_%2813913709754%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Blood Moon - Luna Roja 140415-1506-jikatu (13913709754).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-1506-jikatu_(13913709754).jpg",
+     "w": 1849,
+     "h": 1249,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Blood_Moon_-_Luna_Roja_140415-1507-jikatu_%2813867855573%29.jpg/1920px-Blood_Moon_-_Luna_Roja_140415-1507-jikatu_%2813867855573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Blood_Moon_-_Luna_Roja_140415-1507-jikatu_%2813867855573%29.jpg/330px-Blood_Moon_-_Luna_Roja_140415-1507-jikatu_%2813867855573%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Blood Moon - Luna Roja 140415-1507-jikatu (13867855573).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-1507-jikatu_(13867855573).jpg",
+     "w": 4452,
+     "h": 2776,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Blood_Moon_-_Luna_Roja_140415-1508-jikatu_%2813890174931%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/34/Blood_Moon_-_Luna_Roja_140415-1508-jikatu_%2813890174931%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Blood Moon - Luna Roja 140415-1508-jikatu (13890174931).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-1508-jikatu_(13890174931).jpg",
+     "w": 1428,
+     "h": 1439,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Blood_Moon_-_Luna_Roja_140415-5061-jikatu_%2813867895153%29.jpg/1920px-Blood_Moon_-_Luna_Roja_140415-5061-jikatu_%2813867895153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Blood_Moon_-_Luna_Roja_140415-5061-jikatu_%2813867895153%29.jpg/330px-Blood_Moon_-_Luna_Roja_140415-5061-jikatu_%2813867895153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Blood Moon - Luna Roja 140415-5061-jikatu (13867895153).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-5061-jikatu_(13867895153).jpg",
+     "w": 2935,
+     "h": 4402,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Blood_Moon_-_Luna_Roja_140415-5062-jikatu_%2813890182431%29.jpg/1920px-Blood_Moon_-_Luna_Roja_140415-5062-jikatu_%2813890182431%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Blood_Moon_-_Luna_Roja_140415-5062-jikatu_%2813890182431%29.jpg/330px-Blood_Moon_-_Luna_Roja_140415-5062-jikatu_%2813890182431%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Blood Moon - Luna Roja 140415-5062-jikatu (13890182431).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-5062-jikatu_(13890182431).jpg",
+     "w": 2091,
+     "h": 3136,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Blood_Moon_-_Luna_Roja_140415-5079-jikatu_%2813913365283%29.jpg/1920px-Blood_Moon_-_Luna_Roja_140415-5079-jikatu_%2813913365283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Blood_Moon_-_Luna_Roja_140415-5079-jikatu_%2813913365283%29.jpg/330px-Blood_Moon_-_Luna_Roja_140415-5079-jikatu_%2813913365283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Blood Moon - Luna Roja 140415-5079-jikatu (13913365283).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-5079-jikatu_(13913365283).jpg",
+     "w": 5060,
+     "h": 3373,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Blood Moon - Luna Roja 140415-1506-jikatu (13913709754).jpg",
+    "licenca": "CC BY-SA 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Blood_Moon_-_Luna_Roja_140415-1506-jikatu_(13913709754).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blood_Moon_-_Luna_Roja_140415-1506-jikatu_%2813913709754%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blood_Moon_-_Luna_Roja_140415-1506-jikatu_%2813913709754%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/03-5942d6.jpg"
+   }
+  },
+  {
+   "i": 3,
+   "s": 9.92,
+   "e": 12.76,
+   "texto": "Melhora a circulação, vital para a sua vida.",
+   "query": "polvo brain oxygenation",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/04-3ca71c.jpg"
+   }
+  },
+  {
+   "i": 4,
+   "s": 13.6,
+   "e": 16.52,
+   "texto": "Não precisam respirar como nós, mas ainda assim.",
+   "query": "polvo circulation improvement",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/05-d74a6a.png"
+   }
+  },
+  {
+   "i": 5,
+   "s": 17.1,
+   "e": 19.7,
+   "texto": "A estranha anatomia explica seu desempenho.",
+   "query": "polvo underwater breathing",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/06-40beca.jpg"
+   }
+  },
+  {
+   "i": 6,
+   "s": 20.04,
+   "e": 22.82,
+   "texto": "Na história de Hugo, eles salvam Gilead.",
+   "query": "polvo anatomy uniqueness",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg"
+   }
+  },
+  {
+   "i": 7,
+   "s": 23.52,
+   "e": 26.1,
+   "texto": "No mar, polvos são gigantes perigosos.",
+   "query": "polvo Hugo character",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 8,
+   "s": 26.46,
+   "e": 28.18,
+   "texto": "Em Leis Trabalhadores do",
+   "query": "polvo ocean giants",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 9,
+   "s": 28.18,
+   "e": 33.24,
+   "texto": "Mar, a cena é tensa. Com três corações, sobrevivem a aventuras.",
+   "query": "polvo worker scene",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 10,
+   "s": 33.94,
+   "e": 36.26,
+   "texto": "Auxilia na rápida troca de oxigênio",
+   "query": "polvo tense marine",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 11,
+   "s": 36.26,
+   "e": 40.44,
+   "texto": "durante mudanças de temperatura. O coração vermelho circula",
+   "query": "polvo oxygen exchange",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-8c7f89.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 12,
+   "s": 40.44,
+   "e": 42.18,
+   "texto": "sangue arterial diretamente ao corpo.",
+   "query": "polvo temperature changes",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/1920px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/330px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Betelgeuse captured by ALMA.jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Betelgeuse_captured_by_ALMA.jpg",
+     "w": 4000,
+     "h": 4000,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Betelgeuse captured by ALMA.jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Betelgeuse_captured_by_ALMA.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/1920px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/330px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-7ec48a.jpg"
+   }
+  },
+  {
+   "i": 13,
+   "s": 42.94,
+   "e": 44.88,
+   "texto": "Aumenta sua resistência a pressões",
+   "query": "polvo arterial circulation",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Betelgeuse captured by ALMA.jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Betelgeuse_captured_by_ALMA.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/1920px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/330px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-7ec48a.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 14,
+   "s": 44.88,
+   "e": 49.58,
+   "texto": "extremas nas profundezas. Essa adaptação é crucial para a sobrevivência",
+   "query": "polvo pressure resistance",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Betelgeuse captured by ALMA.jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Betelgeuse_captured_by_ALMA.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/1920px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/330px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-7ec48a.jpg",
+    "repetida": true
+   }
+  },
+  {
+   "i": 15,
+   "s": 49.58,
+   "e": 51.1,
+   "texto": "em ambientes marinhos variados.",
+   "query": "polvo deep sea survival",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416259).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416259).jpg",
+     "w": 7678,
+     "h": 5121,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416262).jpg",
+     "w": 7477,
+     "h": 4987,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/1920px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg/330px-Brain_and_Backbone-_New_Environments%2C_New_Targets_%288184262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Brain and Backbone- New Environments, New Targets (8184262).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brain_and_Backbone-_New_Environments,_New_Targets_(8184262).jpg",
+     "w": 4113,
+     "h": 2892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Role of phytoplankton on various compartments of the marine environment.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Role_of_phytoplankton_on_various_compartments_of_the_marine_environment.png",
+     "w": 785,
+     "h": 625,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416256%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416256).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416256).jpg",
+     "w": 6856,
+     "h": 4573,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/1920px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg/330px-2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_%289416257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "2nd Marine Logistics Group pushes for C4 modernization efforts in austere environments (9416257).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:2nd_Marine_Logistics_Group_pushes_for_C4_modernization_efforts_in_austere_environments_(9416257).jpg",
+     "w": 7540,
+     "h": 5029,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Betelgeuse captured by ALMA.jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Betelgeuse_captured_by_ALMA.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/1920px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Betelgeuse_captured_by_ALMA.jpg/330px-Betelgeuse_captured_by_ALMA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-7ec48a.jpg",
+    "repetida": true
+   }
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.17,
+  "voz": 0.24,
+  "whisper": 0.14,
+  "imagens": 0.65
+ },
+ "obs": [
+  "fatos de referência: Wikipedia “Les Travailleurs de la Mer” (https://pt.wikipedia.org/wiki/Les_Travailleurs_de_la_Mer)",
+  "roteiro pelo Ollama qwen2.5:7b (107 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (52.1s)",
+  "8 imagens/clipes para 16 cenas (Wikimedia)"
+ ],
+ "inicio": "2026-10-23T04:58:01-03:00"
+}

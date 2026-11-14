@@ -1,0 +1,608 @@
+{
+ "version": 1,
+ "name": "39 - 23-10-2026 - E SE ACONTECESSE - E se a internet sumisse por um dia",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#472838"
+ },
+ "duration": 66.07,
+ "template": "generic",
+ "fonts": {
+  "Preset": "fonts/burbank-big-condensed-black.otf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (fotos / clipes)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / flash"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "c0",
+   "track": "fundo",
+   "label": "E se, por um dia, todos os computadores ",
+   "start": 0.0,
+   "dur": 4.35,
+   "in": "none",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/01-06e265.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "c1",
+   "track": "fundo",
+   "label": "E se a internet desaparecesse em uma noi",
+   "start": 4.2,
+   "dur": 3.15,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/02-107ca1.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.234
+   }
+  },
+  {
+   "id": "c2",
+   "track": "fundo",
+   "label": "Na Índia, século VI, surgia Chaturanga, ",
+   "start": 7.2,
+   "dur": 6.57,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/03-0b4b7f.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.153
+   }
+  },
+  {
+   "id": "c3",
+   "track": "fundo",
+   "label": "Jogadores enfrentam reis e rainhas, peõe",
+   "start": 13.62,
+   "dur": 5.75,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/04-391cc0.png",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.27
+   }
+  },
+  {
+   "id": "fl3",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 13.57,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c4",
+   "track": "fundo",
+   "label": "No século XV, na Europa, xadrez ganhava ",
+   "start": 19.22,
+   "dur": 5.99,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/05-ca670f.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "c5",
+   "track": "fundo",
+   "label": "O supercomputador Deep Blue venceu Garry",
+   "start": 25.06,
+   "dur": 3.85,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/06-f73cee.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.234
+   }
+  },
+  {
+   "id": "c6",
+   "track": "fundo",
+   "label": "em 1997, mostrando o poder computacional",
+   "start": 28.76,
+   "dur": 4.15,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-bb6777.png",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.153
+   }
+  },
+  {
+   "id": "fl6",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 28.71,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c7",
+   "track": "fundo",
+   "label": "Naquele dia, sem internet, o mundo parar",
+   "start": 32.76,
+   "dur": 4.17,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/08-b873de.png",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_down",
+    "motion_amount": 0.27
+   }
+  },
+  {
+   "id": "c8",
+   "track": "fundo",
+   "label": "Cidades sem sistemas de transporte e tra",
+   "start": 36.78,
+   "dur": 2.61,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/09-81b229.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "c9",
+   "track": "fundo",
+   "label": "remoto, escolas sem aulas online.",
+   "start": 39.24,
+   "dur": 3.23,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/10-54f035.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.234
+   }
+  },
+  {
+   "id": "fl9",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 39.19,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c10",
+   "track": "fundo",
+   "label": "Comunicação direta entre pessoas seria f",
+   "start": 42.32,
+   "dur": 3.95,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/11-e3e6b8.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.153
+   }
+  },
+  {
+   "id": "c11",
+   "track": "fundo",
+   "label": "Jogos como xadrez se tornariam ainda mai",
+   "start": 46.12,
+   "dur": 4.03,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/12-3b2092.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.27
+   }
+  },
+  {
+   "id": "c12",
+   "track": "fundo",
+   "label": "Imagine um rei em seu trono real,",
+   "start": 50.0,
+   "dur": 2.59,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-bc9524.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "fl12",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 49.95,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c13",
+   "track": "fundo",
+   "label": "jogando com seus filhos, pedindo ajuda a",
+   "start": 52.44,
+   "dur": 2.77,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/14-bfcf7e.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.234
+   }
+  },
+  {
+   "id": "c14",
+   "track": "fundo",
+   "label": "Apenas com gestos. O que você faria?",
+   "start": 55.06,
+   "dur": 3.43,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/15-c35fe9.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.153
+   }
+  },
+  {
+   "id": "c15",
+   "track": "fundo",
+   "label": "Se essa parte te surpreendeu, deixe o li",
+   "start": 58.34,
+   "dur": 7.73,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/15-c35fe9.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_down",
+    "motion_amount": 0.27
+   }
+  },
+  {
+   "id": "fl15",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 58.29,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + degradê",
+   "start": 0,
+   "dur": 66.07,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vg'></div>",
+    "fill": true,
+    "css": ".vg{width:1280px;height:720px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%),linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 30%),linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%)}"
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título de abertura",
+   "start": 0.3,
+   "dur": 3.6,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "E se a internet sumisse por um dia?",
+    "x": 640,
+    "y": 330,
+    "w": 1120,
+    "size": 76,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true,
+    "stroke": "#000000",
+    "stroke_w": 4,
+    "line": 1.05
+   }
+  },
+  {
+   "id": "selo",
+   "type": "text",
+   "track": "textos",
+   "label": "Selo do canal",
+   "start": 0,
+   "dur": 62.67,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "E SE ACONTECESSE",
+    "x": 150,
+    "y": 46,
+    "w": 260,
+    "size": 24,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "left",
+    "upper": true,
+    "bg": "rgba(0,0,0,.45)",
+    "pad": 6,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "cta0",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA like 1",
+   "start": 61.16,
+   "dur": 2.6,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "👍 Deixa o like se está curtindo",
+    "x": 640.0,
+    "y": 92,
+    "w": 760,
+    "size": 32,
+    "color": "#111111",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "bg": "#61eedc",
+    "pad": 12,
+    "radius": 40,
+    "shadow": false
+   }
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 62.67,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "words_file": "words.json",
+    "per_group": 2,
+    "x": 640.0,
+    "y": 380,
+    "size": 60,
+    "color": "#ffffff",
+    "dim": "rgba(255,255,255,.62)",
+    "hl_color": "#61eedc",
+    "keywords": [
+     "pararem",
+     "desaparecesse",
+     "surgia",
+     "ganhava",
+     "venceu",
+     "pararia",
+     "sem",
+     "fundamental",
+     "tornariam",
+     "imagine"
+    ],
+    "font": "Preset",
+    "weight": 900,
+    "stroke": "#000000",
+    "stroke_w": 5,
+    "upper": true
+   }
+  },
+  {
+   "id": "fim_fundo",
+   "type": "html",
+   "track": "visual",
+   "label": "Cartão final (fundo)",
+   "start": 62.67,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='ff'></div>",
+    "css": ".ff{width:1280px;height:720px;background:rgba(5,6,10,.8)}",
+    "fill": true
+   }
+  },
+  {
+   "id": "fim_canal",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: canal",
+   "start": 62.87,
+   "dur": 3.2,
+   "in": "pop",
+   "out": "none",
+   "props": {
+    "text": "E SE ACONTECESSE",
+    "x": 640.0,
+    "y": 316.8,
+    "w": 1160,
+    "size": 84,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim_insc",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: chamada",
+   "start": 63.07,
+   "dur": 3.0,
+   "in": "slide_up",
+   "out": "none",
+   "props": {
+    "text": "Inscreva-se para o próximo",
+    "x": 640.0,
+    "y": 416.8,
+    "w": 800,
+    "size": 34,
+    "color": "#111111",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "bg": "#61eedc",
+    "pad": 12,
+    "radius": 40,
+    "shadow": false,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/lib/preencher_preset.py",
+  "preset": {
+   "formato": "longo",
+   "cor_destaque": "#61eedc",
+   "cor_texto": "#ffffff",
+   "fundo": "#472838",
+   "fonte": "condensada",
+   "legenda": true,
+   "legenda_pos": "centro",
+   "legenda_palavras": 2,
+   "legenda_tamanho": 0,
+   "legenda_caixa": false,
+   "titulo_fixo": false,
+   "zoom": 0.18,
+   "flash_cada": 3,
+   "vinheta": true,
+   "cartao_final": true,
+   "cta": true,
+   "transicao": 0.15,
+   "destaque_padrao": false
+  },
+  "creditos": "img/creditos.json"
+ },
+ "estilo": "Desenho explicativo colorido",
+ "ferramenta": "Vídeo com imagens"
+}

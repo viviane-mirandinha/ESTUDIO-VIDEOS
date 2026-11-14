@@ -1,0 +1,554 @@
+{
+ "version": 1,
+ "name": "45 - 23-10-2026 - CURIOSIDADES RÁPIDAS - Polvos e Seus Três Corações",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#05060a"
+ },
+ "duration": 53.93,
+ "template": "generic",
+ "fonts": {
+  "Preset": "fonts/burbank-big-condensed-black.otf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (fotos / clipes)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / flash"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "c0",
+   "track": "fundo",
+   "label": "Polvos têm três corações, incrível, cert",
+   "start": 0.0,
+   "dur": 3.87,
+   "in": "none",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/01-b52e8f.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c1",
+   "track": "fundo",
+   "label": "Um para o sangue branco, outro para o ve",
+   "start": 3.62,
+   "dur": 3.33,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/02-1322fc.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c2",
+   "track": "fundo",
+   "label": "O terceiro direciona oxigênio ao cérebro",
+   "start": 6.7,
+   "dur": 3.47,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/03-5942d6.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "c3",
+   "track": "fundo",
+   "label": "Melhora a circulação, vital para a sua v",
+   "start": 9.92,
+   "dur": 3.93,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/04-3ca71c.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c4",
+   "track": "fundo",
+   "label": "Não precisam respirar como nós, mas aind",
+   "start": 13.6,
+   "dur": 3.75,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/05-d74a6a.png",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c5",
+   "track": "fundo",
+   "label": "A estranha anatomia explica seu desempen",
+   "start": 17.1,
+   "dur": 3.19,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/06-40beca.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "fl5",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 17.05,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1080px;height:1920px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c6",
+   "track": "fundo",
+   "label": "Na história de Hugo, eles salvam Gilead.",
+   "start": 20.04,
+   "dur": 3.73,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "c7",
+   "track": "fundo",
+   "label": "No mar, polvos são gigantes perigosos.",
+   "start": 23.52,
+   "dur": 3.19,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_down",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c8",
+   "track": "fundo",
+   "label": "Em Leis Trabalhadores do",
+   "start": 26.46,
+   "dur": 1.97,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c9",
+   "track": "fundo",
+   "label": "Mar, a cena é tensa. Com três corações, ",
+   "start": 28.18,
+   "dur": 6.01,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c10",
+   "track": "fundo",
+   "label": "Auxilia na rápida troca de oxigênio",
+   "start": 33.94,
+   "dur": 2.57,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "fl10",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 33.89,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1080px;height:1920px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c11",
+   "track": "fundo",
+   "label": "durante mudanças de temperatura. O coraç",
+   "start": 36.26,
+   "dur": 4.43,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-8c7f89.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c12",
+   "track": "fundo",
+   "label": "sangue arterial diretamente ao corpo.",
+   "start": 40.44,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-7ec48a.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c13",
+   "track": "fundo",
+   "label": "Aumenta sua resistência a pressões",
+   "start": 42.94,
+   "dur": 2.19,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-7ec48a.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c14",
+   "track": "fundo",
+   "label": "extremas nas profundezas. Essa adaptação",
+   "start": 44.88,
+   "dur": 4.95,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-7ec48a.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "c15",
+   "track": "fundo",
+   "label": "em ambientes marinhos variados.",
+   "start": 49.58,
+   "dur": 4.35,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-7ec48a.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_down",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "fl15",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 49.53,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1080px;height:1920px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + degradê",
+   "start": 0,
+   "dur": 53.93,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vg'></div>",
+    "fill": true,
+    "css": ".vg{width:1080px;height:1920px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%),linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 30%),linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%)}"
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título (topo)",
+   "start": 0,
+   "dur": 52.33,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "Polvos e Seus Três Corações",
+    "x": 540.0,
+    "y": 250,
+    "w": 960,
+    "size": 76,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "bg": "rgba(0,0,0,.62)",
+    "pad": 18,
+    "radius": 22,
+    "shadow": false,
+    "line": 1.05,
+    "highlight": [],
+    "hl_color": "#ffd400"
+   }
+  },
+  {
+   "id": "selo",
+   "type": "text",
+   "track": "textos",
+   "label": "Selo do canal",
+   "start": 0,
+   "dur": 52.33,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CURIOSIDADES RÁPIDAS",
+    "x": 540.0,
+    "y": 1760,
+    "w": 700,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "bg": "rgba(0,0,0,.45)",
+    "pad": 6,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 52.33,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "words_file": "words.json",
+    "per_group": 2,
+    "x": 540.0,
+    "y": 1080,
+    "size": 108,
+    "color": "#ffffff",
+    "dim": "rgba(255,255,255,.62)",
+    "hl_color": "#ffd400",
+    "keywords": [
+     "incrível",
+     "certo",
+     "melhora",
+     "vital",
+     "perigosos",
+     "tensa",
+     "sobrevivem",
+     "crucial",
+     "variados"
+    ],
+    "font": "Preset",
+    "weight": 900,
+    "stroke": "#000000",
+    "stroke_w": 7,
+    "upper": true
+   }
+  },
+  {
+   "id": "fim_fundo",
+   "type": "html",
+   "track": "visual",
+   "label": "Cartão final (fundo)",
+   "start": 52.33,
+   "dur": 1.6,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='ff'></div>",
+    "css": ".ff{width:1080px;height:1920px;background:rgba(5,6,10,.8)}",
+    "fill": true
+   }
+  },
+  {
+   "id": "fim_canal",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: canal",
+   "start": 52.53,
+   "dur": 1.4,
+   "in": "pop",
+   "out": "none",
+   "props": {
+    "text": "CURIOSIDADES RÁPIDAS",
+    "x": 540.0,
+    "y": 844.8,
+    "w": 960,
+    "size": 96,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim_insc",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: chamada",
+   "start": 52.73,
+   "dur": 1.2,
+   "in": "slide_up",
+   "out": "none",
+   "props": {
+    "text": "Segue para mais",
+    "x": 540.0,
+    "y": 994.8,
+    "w": 860,
+    "size": 56,
+    "color": "#111111",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "bg": "#ffd400",
+    "pad": 12,
+    "radius": 40,
+    "shadow": false,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/lib/preencher_preset.py",
+  "preset": {
+   "formato": "short",
+   "cor_destaque": "#ffd400",
+   "cor_texto": "#ffffff",
+   "fundo": "#05060a",
+   "fonte": "condensada",
+   "legenda": true,
+   "legenda_pos": "centro",
+   "legenda_palavras": 2,
+   "legenda_tamanho": 0,
+   "legenda_caixa": false,
+   "titulo_fixo": true,
+   "zoom": 0.14,
+   "flash_cada": 5,
+   "vinheta": true,
+   "cartao_final": true,
+   "cta": false,
+   "transicao": 0.25
+  },
+  "creditos": "img/creditos.json"
+ },
+ "estilo": "Short documentário",
+ "ferramenta": "Fábrica de Shorts"
+}

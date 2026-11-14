@@ -1,0 +1,680 @@
+{
+ "estado": "pronto",
+ "estilo": "broll-documentario",
+ "titulo": "Por que o céu é azul e outros mistérios",
+ "voz": "voz.mp3",
+ "duracao_voz": 36.624,
+ "permite_video": true,
+ "vertical": false,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 4.48,
+   "texto": "Céu Azul, no oeste do Paraná, teve seu nome inspirado por um dia especial.",
+   "query": "Paraná sky",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Guisard_-_Milky_Way.jpg/1920px-Guisard_-_Milky_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Guisard_-_Milky_Way.jpg/330px-Guisard_-_Milky_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Guisard - Milky Way.jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Guisard_-_Milky_Way.jpg",
+     "w": 4331,
+     "h": 2480,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Vista da paisagem urbana do por do sol no bairro Neva, em Cascavel-PR. View of the sky cityscape of the sundown in Neva, near downtown of the city of Cascavel, state of Paraná. - panoramio.jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva,_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva,_near_downtown_of_the_city_of_Cascavel,_state_of_Paran%C3%A1._-_panoramio.jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%281%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%281%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Vista da paisagem urbana do por do sol no bairro Neva, em Cascavel-PR. View of the sky cityscape of the sundown in Neva, near downtown of the city of Cascavel, state of Paraná. - panoramio (1).jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva,_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva,_near_downtown_of_the_city_of_Cascavel,_state_of_Paran%C3%A1._-_panoramio_(1).jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%282%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%282%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Vista da paisagem urbana do por do sol no bairro Neva, em Cascavel-PR. View of the sky cityscape of the sundown in Neva, near downtown of the city of Cascavel, state of Paraná. - panoramio (2).jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva,_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva,_near_downtown_of_the_city_of_Cascavel,_state_of_Paran%C3%A1._-_panoramio_(2).jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%283%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%283%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Vista da paisagem urbana do por do sol no bairro Neva, em Cascavel-PR. View of the sky cityscape of the sundown in Neva, near downtown of the city of Cascavel, state of Paraná. - panoramio (3).jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva,_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva,_near_downtown_of_the_city_of_Cascavel,_state_of_Paran%C3%A1._-_panoramio_(3).jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%284%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva%2C_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva%2C_near_downtown_of_the_city_of_Cascavel%2C_state_of_Paran%C3%A1._-_panoramio_%284%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Vista da paisagem urbana do por do sol no bairro Neva, em Cascavel-PR. View of the sky cityscape of the sundown in Neva, near downtown of the city of Cascavel, state of Paraná. - panoramio (4).jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Vista_da_paisagem_urbana_do_por_do_sol_no_bairro_Neva,_em_Cascavel-PR._View_of_the_sky_cityscape_of_the_sundown_in_Neva,_near_downtown_of_the_city_of_Cascavel,_state_of_Paran%C3%A1._-_panoramio_(4).jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 4
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Guisard - Milky Way.jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Guisard_-_Milky_Way.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Guisard_-_Milky_Way.jpg/1920px-Guisard_-_Milky_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Guisard_-_Milky_Way.jpg/330px-Guisard_-_Milky_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/01-6a1592.jpg"
+   }
+  },
+  {
+   "i": 1,
+   "s": 5.54,
+   "e": 9.66,
+   "texto": "Trabalhadores em pausa notaram um céu azul intenso contra as matas verdes.",
+   "query": "workers break",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground%3B_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek%2C_2007.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground%3B_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek%2C_2007.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A break for the construction workers at the Rokin at the building site of the future metro station underground; free photo of Amsterdam streets by Fons Heijnsbroek, 2007.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground;_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek,_2007.jpg",
+     "w": 3307,
+     "h": 2480,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Photograph_Showing_Workers_Taking_a_Break_on_the_Truck_Trail_at_Mesa_Grande_-_DPLA_-_0ce5bc677bd6d2ef5b68faf37559d99f.jpg/1920px-Photograph_Showing_Workers_Taking_a_Break_on_the_Truck_Trail_at_Mesa_Grande_-_DPLA_-_0ce5bc677bd6d2ef5b68faf37559d99f.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Photograph_Showing_Workers_Taking_a_Break_on_the_Truck_Trail_at_Mesa_Grande_-_DPLA_-_0ce5bc677bd6d2ef5b68faf37559d99f.jpg/330px-Photograph_Showing_Workers_Taking_a_Break_on_the_Truck_Trail_at_Mesa_Grande_-_DPLA_-_0ce5bc677bd6d2ef5b68faf37559d99f.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Photograph Showing Workers Taking a Break on the Truck Trail at Mesa Grande - DPLA - 0ce5bc677bd6d2ef5b68faf37559d99f.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Photograph_Showing_Workers_Taking_a_Break_on_the_Truck_Trail_at_Mesa_Grande_-_DPLA_-_0ce5bc677bd6d2ef5b68faf37559d99f.jpg",
+     "w": 3997,
+     "h": 2607,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Workers_on_Break_at_Store_Oak_Ridge_%288006896335%29.jpg/1920px-Workers_on_Break_at_Store_Oak_Ridge_%288006896335%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Workers_on_Break_at_Store_Oak_Ridge_%288006896335%29.jpg/330px-Workers_on_Break_at_Store_Oak_Ridge_%288006896335%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Workers on Break at Store Oak Ridge (8006896335).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Workers_on_Break_at_Store_Oak_Ridge_(8006896335).jpg",
+     "w": 5704,
+     "h": 3819,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Cleaning_women_at_coffee_break_in_tram_depot%2C_Stockholm_1930_%286081775137%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Cleaning_women_at_coffee_break_in_tram_depot%2C_Stockholm_1930_%286081775137%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Cleaning women at coffee break in tram depot, Stockholm 1930 (6081775137).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Cleaning_women_at_coffee_break_in_tram_depot,_Stockholm_1930_(6081775137).jpg",
+     "w": 1200,
+     "h": 906,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Workers_on_the_Big_Inch_pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/92/Workers_on_the_Big_Inch_pipeline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Workers on the Big Inch pipeline.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Workers_on_the_Big_Inch_pipeline.jpg",
+     "w": 959,
+     "h": 704,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/CONSTRUCTION_WORKERS_TAKE_LUNCH_BREAK_AT_SITE_OF_EXPO_%2774_SITE_OVERLOOKS_THE_COLUMBIA_RIVER_-_NARA_-_548120.jpg/1920px-CONSTRUCTION_WORKERS_TAKE_LUNCH_BREAK_AT_SITE_OF_EXPO_%2774_SITE_OVERLOOKS_THE_COLUMBIA_RIVER_-_NARA_-_548120.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/CONSTRUCTION_WORKERS_TAKE_LUNCH_BREAK_AT_SITE_OF_EXPO_%2774_SITE_OVERLOOKS_THE_COLUMBIA_RIVER_-_NARA_-_548120.jpg/330px-CONSTRUCTION_WORKERS_TAKE_LUNCH_BREAK_AT_SITE_OF_EXPO_%2774_SITE_OVERLOOKS_THE_COLUMBIA_RIVER_-_NARA_-_548120.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "CONSTRUCTION WORKERS TAKE LUNCH BREAK AT SITE OF EXPO '74 SITE OVERLOOKS THE COLUMBIA RIVER - NARA - 548120.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:CONSTRUCTION_WORKERS_TAKE_LUNCH_BREAK_AT_SITE_OF_EXPO_%2774_SITE_OVERLOOKS_THE_COLUMBIA_RIVER_-_NARA_-_548120.jpg",
+     "w": 2020,
+     "h": 3000,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A break for the construction workers at the Rokin at the building site of the future metro station underground; free photo of Amsterdam streets by Fons Heijnsbroek, 2007.jpg",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground;_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek,_2007.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground%3B_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek%2C_2007.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_break_for_the_construction_workers_at_the_Rokin_at_the_building_site_of_the_future_metro_station_underground%3B_free_photo_of_Amsterdam_streets_by_Fons_Heijnsbroek%2C_2007.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/02-e8416a.jpg"
+   }
+  },
+  {
+   "i": 2,
+   "s": 9.92,
+   "e": 13.86,
+   "texto": "A beleza foi memorável e a localidade recebeu esse nome belo.",
+   "query": "green forest",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg/1920px-Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg/330px-Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Two holes and green leaves on the bark of a tree trunk in the forest in Luang Prabang Laos.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg",
+     "w": 3979,
+     "h": 5968,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Beauty_of_green_forest_01.jpg/1920px-Beauty_of_green_forest_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Beauty_of_green_forest_01.jpg/330px-Beauty_of_green_forest_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Beauty of green forest 01.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Beauty_of_green_forest_01.jpg",
+     "w": 4160,
+     "h": 3120,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Common_green_forest_lizard_%28Calotes_calotes%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Common_green_forest_lizard_%28Calotes_calotes%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Common green forest lizard (Calotes calotes).jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Common_green_forest_lizard_(Calotes_calotes).jpg",
+     "w": 1510,
+     "h": 2040,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Forest_Green%2C_The_%27Parrot%27_-_geograph.org.uk_-_4214365.jpg/1920px-Forest_Green%2C_The_%27Parrot%27_-_geograph.org.uk_-_4214365.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Forest_Green%2C_The_%27Parrot%27_-_geograph.org.uk_-_4214365.jpg/330px-Forest_Green%2C_The_%27Parrot%27_-_geograph.org.uk_-_4214365.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Forest Green, The 'Parrot' - geograph.org.uk - 4214365.jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Forest_Green,_The_%27Parrot%27_-_geograph.org.uk_-_4214365.jpg",
+     "w": 4608,
+     "h": 3456,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Forest_Green_%281%29_-_geograph.org.uk_-_3210893.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/94/Forest_Green_%281%29_-_geograph.org.uk_-_3210893.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Forest Green (1) - geograph.org.uk - 3210893.jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Forest_Green_(1)_-_geograph.org.uk_-_3210893.jpg",
+     "w": 1800,
+     "h": 1175,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Forest_Green_%282%29_-_geograph.org.uk_-_3210903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/da/Forest_Green_%282%29_-_geograph.org.uk_-_3210903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Forest Green (2) - geograph.org.uk - 3210903.jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Forest_Green_(2)_-_geograph.org.uk_-_3210903.jpg",
+     "w": 1800,
+     "h": 1175,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Two holes and green leaves on the bark of a tree trunk in the forest in Luang Prabang Laos.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg/1920px-Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg/330px-Two_holes_and_green_leaves_on_the_bark_of_a_tree_trunk_in_the_forest_in_Luang_Prabang_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/03-fe8fd3.jpg"
+   }
+  },
+  {
+   "i": 3,
+   "s": 14.64,
+   "e": 19.36,
+   "texto": "Na década de 1950, grandes empresas colonizadoras trouxeram",
+   "query": "colonizers era",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_colonial_era_%281892%29_%2814777959231%29.jpg/1920px-The_colonial_era_%281892%29_%2814777959231%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_colonial_era_%281892%29_%2814777959231%29.jpg/330px-The_colonial_era_%281892%29_%2814777959231%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "The colonial era (1892) (14777959231).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:The_colonial_era_(1892)_(14777959231).jpg",
+     "w": 2030,
+     "h": 2652,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Bantayan_of_La_Union.jpg/1920px-Bantayan_of_La_Union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Bantayan_of_La_Union.jpg/330px-Bantayan_of_La_Union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bantayan of La Union.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bantayan_of_La_Union.jpg",
+     "w": 3602,
+     "h": 2912,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bottle_necks_recovered_in_the_Volta_regions.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bottle_necks_recovered_in_the_Volta_regions.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bottle necks recovered in the Volta regions.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bottle_necks_recovered_in_the_Volta_regions.jpg",
+     "w": 960,
+     "h": 1280,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Caboclo_by_Jean-Baptiste_Debret_1834.jpg/1920px-Caboclo_by_Jean-Baptiste_Debret_1834.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Caboclo_by_Jean-Baptiste_Debret_1834.jpg/330px-Caboclo_by_Jean-Baptiste_Debret_1834.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Caboclo by Jean-Baptiste Debret 1834.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Caboclo_by_Jean-Baptiste_Debret_1834.jpg",
+     "w": 3000,
+     "h": 2058,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Hawaii_and_the_Chinese%2C_The_San_Francisco_Call%2C_October_24%2C_1897%2C_page_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/06/Hawaii_and_the_Chinese%2C_The_San_Francisco_Call%2C_October_24%2C_1897%2C_page_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Hawaii and the Chinese, The San Francisco Call, October 24, 1897, page 6.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hawaii_and_the_Chinese,_The_San_Francisco_Call,_October_24,_1897,_page_6.jpg",
+     "w": 1107,
+     "h": 432,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_era_of_the_Civil_War%2C_1848-1870_%281919%29_%2814760390234%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_era_of_the_Civil_War%2C_1848-1870_%281919%29_%2814760390234%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "The era of the Civil War, 1848-1870 (1919) (14760390234).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:The_era_of_the_Civil_War,_1848-1870_(1919)_(14760390234).jpg",
+     "w": 1698,
+     "h": 2926,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "The colonial era (1892) (14777959231).jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_colonial_era_(1892)_(14777959231).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_colonial_era_%281892%29_%2814777959231%29.jpg/1920px-The_colonial_era_%281892%29_%2814777959231%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_colonial_era_%281892%29_%2814777959231%29.jpg/330px-The_colonial_era_%281892%29_%2814777959231%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/04-6f8ccb.jpg"
+   }
+  },
+  {
+   "i": 4,
+   "s": 19.36,
+   "e": 23.92,
+   "texto": "migrantes do Rio Grande do Sul, trazendo culturas e gastronomia alemãs e italianas.",
+   "query": "German immigrants",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d1/143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143305 furniture details of german immigrants in the fift PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/143306_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/49/143306_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143306 furniture details of german immigrants in the fift PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143306_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/143308_settlement_map_of_german_immigrants_during_the_fif_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8b/143308_settlement_map_of_german_immigrants_during_the_fif_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143308 settlement map of german immigrants during the fif PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143308_settlement_map_of_german_immigrants_during_the_fif_PikiWiki_Israel.jpg",
+     "w": 1200,
+     "h": 1600,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/143309_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d2/143309_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143309 furniture details of german immigrants in the fift PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143309_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/143311_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/66/143311_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143311 details of judaica from german immigrants during t PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143311_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/143312_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/96/143312_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "143312 details of judaica from german immigrants during t PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:143312_details_of_judaica_from_german_immigrants_during_t_PikiWiki_Israel.jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "143305 furniture details of german immigrants in the fift PikiWiki Israel.jpg",
+    "licenca": "CC BY 2.5",
+    "pagina": "https://commons.wikimedia.org/wiki/File:143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d1/143305_furniture_details_of_german_immigrants_in_the_fift_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/05-27c4e2.jpg"
+   }
+  },
+  {
+   "i": 5,
+   "s": 24.5,
+   "e": 28.02,
+   "texto": "Hoje, agricultura e pecuária são pilares da economia local,",
+   "query": "local economy",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg/1920px-A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg/330px-A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A sunnier outlook sunflowers oiling the local economy (6721493541).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_sunnier_outlook_sunflowers_oiling_the_local_economy_(6721493541).jpg",
+     "w": 3888,
+     "h": 2592,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Reflecting_on_the_local_economy_-_geograph.org.uk_-_7467263.jpg/1920px-Reflecting_on_the_local_economy_-_geograph.org.uk_-_7467263.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Reflecting_on_the_local_economy_-_geograph.org.uk_-_7467263.jpg/330px-Reflecting_on_the_local_economy_-_geograph.org.uk_-_7467263.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Reflecting on the local economy - geograph.org.uk - 7467263.jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Reflecting_on_the_local_economy_-_geograph.org.uk_-_7467263.jpg",
+     "w": 2048,
+     "h": 1536,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/4-pillars-of-knowledge-economy.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0a/4-pillars-of-knowledge-economy.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "4-pillars-of-knowledge-economy.webp",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:4-pillars-of-knowledge-economy.webp",
+     "w": 1018,
+     "h": 491,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Income_Leisure_Preference_in_a_Robinson_Crusoe_Economy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/85/Income_Leisure_Preference_in_a_Robinson_Crusoe_Economy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Income Leisure Preference in a Robinson Crusoe Economy.jpg",
+     "licenca": "CC BY 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Income_Leisure_Preference_in_a_Robinson_Crusoe_Economy.jpg",
+     "w": 785,
+     "h": 494,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Shadow_Economy_in_Europe%2C_by_country.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Shadow_Economy_in_Europe%2C_by_country.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Shadow Economy in Europe, by country.jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Shadow_Economy_in_Europe,_by_country.jpg",
+     "w": 1414,
+     "h": 1705,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Shimorin_%28Economy%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/84/Shimorin_%28Economy%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Shimorin (Economy).png",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Shimorin_(Economy).png",
+     "w": 704,
+     "h": 715,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A sunnier outlook sunflowers oiling the local economy (6721493541).jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_sunnier_outlook_sunflowers_oiling_the_local_economy_(6721493541).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg/1920px-A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg/330px-A_sunnier_outlook_sunflowers_oiling_the_local_economy_%286721493541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/06-8112a0.jpg"
+   }
+  },
+  {
+   "i": 6,
+   "s": 28.02,
+   "e": 32.08,
+   "texto": "com vastos trechos de mata preservada no Parque Nacional do Iguaçu.",
+   "query": "Iguazu Park",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (22329).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(22329).jpg",
+     "w": 4000,
+     "h": 3000,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2825033%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2825033%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2825033%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2825033%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (25033).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(25033).jpg",
+     "w": 4000,
+     "h": 3000,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2826649%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2826649%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2826649%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2826649%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (26649).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(26649).jpg",
+     "w": 4000,
+     "h": 3000,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2845646%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2845646%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2845646%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2845646%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (45646).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(45646).jpg",
+     "w": 4000,
+     "h": 3000,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2853584%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2853584%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2853584%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2853584%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (53584).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(53584).jpg",
+     "w": 4000,
+     "h": 3000,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2858836%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2858836%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2858836%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2858836%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A view of Iguazu Falls from the Argentina side (58836).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(58836).jpg",
+     "w": 3000,
+     "h": 4000,
+     "nota": 3
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A view of Iguazu Falls from the Argentina side (22329).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(22329).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-fbd23b.jpg"
+   }
+  },
+  {
+   "i": 7,
+   "s": 32.6,
+   "e": 35.54,
+   "texto": "Se essa história surpreendeu você, dá um like!",
+   "query": "",
+   "candidatos": [],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A view of Iguazu Falls from the Argentina side (22329).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_view_of_Iguazu_Falls_from_the_Argentina_side_(22329).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/1920px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg/330px-A_view_of_Iguazu_Falls_from_the_Argentina_side_%2822329%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-fbd23b.jpg",
+    "repetida": true
+   }
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.08,
+  "voz": 0.12,
+  "whisper": 0.11,
+  "imagens": 0.44
+ },
+ "obs": [
+  "fatos de referência: Wikipedia “Céu Azul” (https://pt.wikipedia.org/wiki/C%C3%A9u_Azul)",
+  "roteiro pelo Ollama qwen2.5:7b (86 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (36.6s)",
+  "7 imagens/clipes para 8 cenas (Wikimedia)"
+ ],
+ "inicio": "2026-10-23T04:25:34-03:00"
+}

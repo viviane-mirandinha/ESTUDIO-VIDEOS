@@ -1,0 +1,13 @@
+{
+ "video": 1,
+ "estilo": "01-whiteboard-quadro",
+ "inicio": "2026-10-22T10:31:45-03:00",
+ "fim": "2026-10-22T10:54:15-03:00",
+ "minutos": 22.5,
+ "render_segundos": 35,
+ "observacoes": "Template local (template.html gerado por make.py) com 85 itens editáveis no edit.json (títulos, rótulos, datas, bandeiras, ícones Lucide, setas, mapa, pinturas) + params câmera/wipes/boneco. Bandeiras Wikimedia; mapa countries50m dividido em 4 nações por fronteira aproximada; mão e boneco SVG próprios. Whisper GPU precisou do cublas do torch (Python311) no PATH. 1 render draft, sem re-render. Sem legenda, sem SFX, sem música.",
+ "estimativa_30min": {
+  "horas_maquina": 0.5,
+  "o_que_escala": "Render ~35 s/min de vídeo; o gargalo é montar a lista de itens por frase (hoje à mão em make.py). Com Ollama gerando a lista {tipo,valor,x,y,t} por frase e uma biblioteca de ~60 ícones/bandeiras, 30 min sai em ~15 min de render + revisão; layout automático (grade por quadro) é a peça que falta."
+ }
+}

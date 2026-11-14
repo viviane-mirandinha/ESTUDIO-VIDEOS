@@ -1,0 +1,21 @@
+{
+ "video": 51,
+ "estilo": "Stickman Studio (bonecos de palito animados)",
+ "ferramenta": "Stickman Studio",
+ "titulo": "Céu azul de dia vermelho no pôr do sol",
+ "canal": "Curioso de Palito",
+ "inicio": "2026-10-23T16:49:27-03:00",
+ "fim": "2026-10-23T16:50:19-03:00",
+ "minutos": 0.86,
+ "minutos_por_etapa": {
+  "roteiro": 0.03,
+  "voz": 0.11,
+  "whisper": 0.09,
+  "montar_render": 0.63
+ },
+ "render_segundos": 35,
+ "duracao_video": 31.66,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "STICKMAN STUDIO (16:9) (zero token Claude, só Python local): sem fatos de referência (Wikipedia não respondeu) — conferir tudo; roteiro pelo Ollama qwen2.5:7b (66 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (30.5s); 7 cenas desenhadas em código (sem banco de imagens); 7 cenas; edit.json por estilos/stickman/preencher.py"
+}

@@ -1,0 +1,23 @@
+{
+ "video": 29,
+ "estilo": "Canal de história simples (fotos de arquivo em Ken Burns, sépia)",
+ "fabrica": "historia-simples",
+ "titulo": "Lenda etíope: Café despertava monges e mudou o mundo",
+ "canal": "HISTÓRIAS DO CAFÉ",
+ "inicio": "2026-10-22T22:37:35-03:00",
+ "fim": "2026-10-22T22:39:29-03:00",
+ "minutos": 1.9,
+ "minutos_por_etapa": {
+  "roteiro": 0.04,
+  "tts": 0.18,
+  "whisper": 0.12,
+  "imagens": 0.7,
+  "edit_json": 0.0,
+  "render": 0.86
+ },
+ "render_segundos": 51,
+ "duracao_video": 50.93,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "MODO FÁBRICA (zero token Claude, só Python local): roteiro pelo Ollama qwen2.5:7b (112 palavras) — revisar fatos antes de publicar; voz: edge (49.7s); 9 imagens Wikimedia Commons (img/creditos.json) para 10 shots; busca pelo Ollama; 10 shots; edit.json por estilos/historia-simples/preencher.py; render build_from_edit.py"
+}

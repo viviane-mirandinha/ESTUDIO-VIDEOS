@@ -1,0 +1,16 @@
+{
+ "modo": "tema",
+ "tema": "Por que o céu é azul",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "broll-documentario",
+ "roteiro_ref": "",
+ "duracao": 30.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "CURIOSIDADES DO MUNDO",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "criado": "2026-10-23T04:24:24"
+}

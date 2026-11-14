@@ -1,0 +1,16 @@
+{
+ "modo": "tema",
+ "tema": "E se a internet caísse no mundo inteiro por um dia?",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "meu-desenho-explicativo-colorido",
+ "roteiro_ref": "",
+ "duracao": 60.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "E SE ACONTECESSE",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "criado": "2026-10-23T03:12:30"
+}

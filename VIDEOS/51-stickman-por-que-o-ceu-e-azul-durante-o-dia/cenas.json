@@ -1,0 +1,86 @@
+{
+ "estado": "pronto",
+ "estilo": "stickman",
+ "titulo": "Céu azul de dia vermelho no pôr do sol",
+ "voz": "voz.mp3",
+ "duracao_voz": 30.456,
+ "permite_video": false,
+ "vertical": false,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 5.16,
+   "texto": "O céu acorda azul ao amanhecer. Raios de sol se misturam com partículas de ar.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 1,
+   "s": 5.83,
+   "e": 10.96,
+   "texto": "Ao meio -dia, ele é brilhante e claro. Quando a noite chega, tudo muda.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 2,
+   "s": 11.57,
+   "e": 14.96,
+   "texto": "O sol se entende, corpos celestes dançam na escuridão.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 3,
+   "s": 15.7,
+   "e": 19.02,
+   "texto": "Pedaços vermelhos surgem, pintando o céu com fogo.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 4,
+   "s": 19.71,
+   "e": 22.86,
+   "texto": "Como por magia, azul vira roxo, depois escuro.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 5,
+   "s": 23.34,
+   "e": 29.36,
+   "texto": "Vamos curtir esse espetáculo diário? Se essa parte te surpreendeu, deixa o like.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  },
+  {
+   "i": 6,
+   "s": 30.0,
+   "e": 30.42,
+   "texto": "E se você gostou, deixa o seu comentário.",
+   "query": "",
+   "candidatos": [],
+   "escolha": null
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.03,
+  "voz": 0.11,
+  "whisper": 0.09
+ },
+ "obs": [
+  "sem fatos de referência (Wikipedia não respondeu) — conferir tudo",
+  "roteiro pelo Ollama qwen2.5:7b (66 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (30.5s)",
+  "7 cenas desenhadas em código (sem banco de imagens)"
+ ],
+ "inicio": "2026-10-23T16:49:27-03:00"
+}

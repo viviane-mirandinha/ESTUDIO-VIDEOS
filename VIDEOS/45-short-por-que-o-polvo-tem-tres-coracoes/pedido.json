@@ -1,0 +1,16 @@
+{
+ "modo": "tema",
+ "tema": "Por que o polvo tem três corações",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "short-documentario",
+ "roteiro_ref": "",
+ "duracao": 40.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "CURIOSIDADES RÁPIDAS",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "criado": "2026-10-23T04:58:01"
+}

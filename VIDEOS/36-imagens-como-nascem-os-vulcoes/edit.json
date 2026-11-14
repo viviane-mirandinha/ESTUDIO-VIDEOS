@@ -1,0 +1,316 @@
+{
+ "version": 1,
+ "name": "36 - 23-10-2026 - CURIOSIDADES DO MUNDO - Dragon Ball Daima Como Nascem os Vulcões na Série",
+ "estilo": "B-roll documentário",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#05060a"
+ },
+ "duration": 29.57,
+ "template": "generic",
+ "fonts": {
+  "Doc": "fonts/burbank-big-condensed-black.otf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (fotos / clipes)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / flash"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "c0",
+   "track": "fundo",
+   "label": "Durante os eventos de Dragon Ball Z, apó",
+   "start": 0.0,
+   "dur": 4.24,
+   "in": "none",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/01-0e73f5.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "c1",
+   "track": "fundo",
+   "label": "Akira Toriyama, o criador da franquia, e",
+   "start": 3.84,
+   "dur": 8.98,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/02-d18dbc.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.16
+   }
+  },
+  {
+   "id": "c2",
+   "track": "fundo",
+   "label": "Anunciado em outubro de 2023, o anime fo",
+   "start": 12.42,
+   "dur": 5.04,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/03-0f9aba.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "c3",
+   "track": "fundo",
+   "label": "e fevereiro de 2025, reunindo Goku e seu",
+   "start": 17.06,
+   "dur": 4.86,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/04-ecd4a0.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.18
+   }
+  },
+  {
+   "id": "c4",
+   "track": "fundo",
+   "label": "pelo reino dos demônios para enfrentar G",
+   "start": 21.52,
+   "dur": 8.05,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/05-ca6f52.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "fl4",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 21.47,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1280px;height:720px;background:#fff;opacity:.55}",
+    "fill": true
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + degradê",
+   "start": 0,
+   "dur": 29.57,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vg'></div>",
+    "fill": true,
+    "css": ".vg{width:1280px;height:720px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 58%,rgba(0,0,0,.55) 100%),linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,0) 34%)}"
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título de abertura",
+   "start": 0.3,
+   "dur": 3.6,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Dragon Ball Daima: Como Nascem os Vulcões na Série?",
+    "x": 640,
+    "y": 330,
+    "w": 1120,
+    "size": 76,
+    "color": "#ffffff",
+    "font": "Doc",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true,
+    "stroke": "#000000",
+    "stroke_w": 4,
+    "line": 1.05
+   }
+  },
+  {
+   "id": "selo",
+   "type": "text",
+   "track": "textos",
+   "label": "Selo do canal",
+   "start": 0,
+   "dur": 26.17,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CURIOSIDADES DO MUNDO",
+    "x": 150,
+    "y": 46,
+    "w": 260,
+    "size": 24,
+    "color": "#ffffff",
+    "font": "Doc",
+    "weight": 900,
+    "align": "left",
+    "upper": true,
+    "bg": "rgba(0,0,0,.45)",
+    "pad": 6,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 26.17,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "words_file": "words.json",
+    "per_group": 3,
+    "x": 640,
+    "y": 628,
+    "size": 58,
+    "color": "#ffffff",
+    "dim": "rgba(255,255,255,.62)",
+    "hl_color": "#ffd400",
+    "keywords": [
+     "durante",
+     "derrota",
+     "majin",
+     "boo",
+     "profundamente",
+     "criação",
+     "anunciado",
+     "anime",
+     "jornada",
+     "reunindo"
+    ],
+    "font": "Doc",
+    "weight": 900,
+    "stroke": "#000000",
+    "stroke_w": 5,
+    "upper": true
+   }
+  },
+  {
+   "id": "fim_fundo",
+   "type": "html",
+   "track": "visual",
+   "label": "Cartão final (fundo)",
+   "start": 26.17,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='ff'></div>",
+    "css": ".ff{width:1280px;height:720px;background:rgba(5,6,10,.78)}",
+    "fill": true
+   }
+  },
+  {
+   "id": "fim_canal",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: canal",
+   "start": 26.47,
+   "dur": 2.9,
+   "in": "pop",
+   "out": "none",
+   "props": {
+    "text": "CURIOSIDADES DO MUNDO",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 84,
+    "color": "#ffffff",
+    "font": "Doc",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim_insc",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: inscreva-se",
+   "start": 26.77,
+   "dur": 2.6,
+   "in": "slide_up",
+   "out": "none",
+   "props": {
+    "text": "Inscreva-se para o próximo",
+    "x": 640,
+    "y": 430,
+    "w": 800,
+    "size": 34,
+    "color": "#111111",
+    "font": "Doc",
+    "weight": 900,
+    "align": "center",
+    "bg": "#ffd400",
+    "pad": 10,
+    "radius": 40,
+    "shadow": false,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/estilos/broll-documentario/preencher.py",
+  "creditos": "img/creditos.json"
+ },
+ "ferramenta": "Vídeo com imagens"
+}

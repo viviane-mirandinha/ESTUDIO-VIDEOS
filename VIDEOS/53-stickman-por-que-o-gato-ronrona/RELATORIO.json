@@ -1,0 +1,21 @@
+{
+ "video": 53,
+ "estilo": "Stickman Studio (bonecos de palito animados)",
+ "ferramenta": "Stickman Studio",
+ "titulo": "Gatos e Ronronados",
+ "canal": "Curioso de Palito",
+ "inicio": "2026-10-23T21:36:26-03:00",
+ "fim": "2026-10-23T21:37:45-03:00",
+ "minutos": 1.31,
+ "minutos_por_etapa": {
+  "roteiro": 0.13,
+  "voz": 0.16,
+  "whisper": 0.08,
+  "montar_render": 0.94
+ },
+ "render_segundos": 52,
+ "duracao_video": 51.72,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "STICKMAN STUDIO (9:16) (zero token Claude, só Python local): Wikipedia “Gato” descartada (não é sobre o tema); sem fatos de referência (Wikipedia não respondeu) — conferir tudo; roteiro pelo Ollama qwen2.5:7b (95 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (50.5s); 11 cenas desenhadas em código (sem banco de imagens); 11 cenas; edit.json por estilos/stickman/preencher.py"
+}

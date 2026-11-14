@@ -1,0 +1,22 @@
+{
+ "video": 39,
+ "estilo": "Desenho explicativo colorido",
+ "ferramenta": "Vídeo com imagens",
+ "titulo": "E se a internet sumisse por um dia?",
+ "canal": "E SE ACONTECESSE",
+ "inicio": "2026-10-23T03:12:30-03:00",
+ "fim": "2026-10-23T03:15:14-03:00",
+ "minutos": 2.73,
+ "minutos_por_etapa": {
+  "roteiro": 0.14,
+  "voz": 0.14,
+  "whisper": 0.16,
+  "imagens": 1.31,
+  "montar_render": 0.98
+ },
+ "render_segundos": 57,
+ "duracao_video": 66.07,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "VÍDEO COM IMAGENS (zero token Claude, só Python local): fatos de referência: Wikipedia “Xadrez” (https://pt.wikipedia.org/wiki/Xadrez); roteiro pelo Ollama qwen2.5:7b (128 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (62.5s); 15 imagens/clipes para 16 cenas (Wikimedia); 16 cenas; edit.json por estilos/meu-desenho-explicativo-colorido/preencher.py"
+}

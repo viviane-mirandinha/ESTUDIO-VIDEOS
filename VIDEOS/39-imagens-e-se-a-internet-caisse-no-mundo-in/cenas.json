@@ -1,0 +1,1336 @@
+{
+ "estado": "pronto",
+ "estilo": "meu-desenho-explicativo-colorido",
+ "titulo": "E se a internet sumisse por um dia?",
+ "voz": "voz.mp3",
+ "duracao_voz": 62.472,
+ "permite_video": true,
+ "vertical": false,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 3.52,
+   "texto": "E se, por um dia, todos os computadores do mundo pararem?",
+   "query": "world computers stopping",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg/1920px-July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg/330px-July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "July 2018 FBI 90th Anniversary Memorabilia (43051992014).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:July_2018_FBI_90th_Anniversary_Memorabilia_(43051992014).jpg",
+     "w": 2784,
+     "h": 1566,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Edwin_Smith_Papyrus_v2.jpg/1920px-Edwin_Smith_Papyrus_v2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Edwin_Smith_Papyrus_v2.jpg/330px-Edwin_Smith_Papyrus_v2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Edwin Smith Papyrus v2.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Edwin_Smith_Papyrus_v2.jpg",
+     "w": 2550,
+     "h": 1954,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/HDR_Infrared_San_Antonio_Texas_River_Walk_%282852696792%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/09/HDR_Infrared_San_Antonio_Texas_River_Walk_%282852696792%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "HDR Infrared San Antonio Texas River Walk (2852696792).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:HDR_Infrared_San_Antonio_Texas_River_Walk_(2852696792).jpg",
+     "w": 1600,
+     "h": 1067,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Infrared_All_Saints_church_Thornage_Norfolk_%283022073073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Infrared_All_Saints_church_Thornage_Norfolk_%283022073073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Infrared All Saints church Thornage Norfolk (3022073073).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Infrared_All_Saints_church_Thornage_Norfolk_(3022073073).jpg",
+     "w": 1600,
+     "h": 1065,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Infrared_HDR_Buena_Vista_Colorado_%282811938379%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Infrared_HDR_Buena_Vista_Colorado_%282811938379%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Infrared HDR Buena Vista Colorado (2811938379).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Infrared_HDR_Buena_Vista_Colorado_(2811938379).jpg",
+     "w": 1600,
+     "h": 1066,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Infrared_HDR_Buena_Vista_Colorado_%282812787832%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Infrared_HDR_Buena_Vista_Colorado_%282812787832%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Infrared HDR Buena Vista Colorado (2812787832).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Infrared_HDR_Buena_Vista_Colorado_(2812787832).jpg",
+     "w": 1599,
+     "h": 1056,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "July 2018 FBI 90th Anniversary Memorabilia (43051992014).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:July_2018_FBI_90th_Anniversary_Memorabilia_(43051992014).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg/1920px-July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg/330px-July_2018_FBI_90th_Anniversary_Memorabilia_%2843051992014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/01-06e265.jpg"
+   }
+  },
+  {
+   "i": 1,
+   "s": 4.2,
+   "e": 6.68,
+   "texto": "E se a internet desaparecesse em uma noite?",
+   "query": "internet disappearing",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg/1920px-The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg/330px-The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "The people's war book; history, cyclopaedia and chronology of the great world war (1919) (14595327968).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:The_people%27s_war_book;_history,_cyclopaedia_and_chronology_of_the_great_world_war_(1919)_(14595327968).jpg",
+     "w": 2208,
+     "h": 1202,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/106129_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/1920px-106129_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/106129_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/330px-106129_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "106129 eilat the disappearing lake PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:106129_eilat_the_disappearing_lake_PikiWiki_Israel.jpg",
+     "w": 4372,
+     "h": 2591,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/106130_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/1920px-106130_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/106130_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/330px-106130_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "106130 eilat the disappearing lake PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:106130_eilat_the_disappearing_lake_PikiWiki_Israel.jpg",
+     "w": 2560,
+     "h": 1440,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/106131_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/1920px-106131_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/106131_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/330px-106131_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "106131 eilat the disappearing lake PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:106131_eilat_the_disappearing_lake_PikiWiki_Israel.jpg",
+     "w": 2560,
+     "h": 1440,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/106132_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/1920px-106132_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/106132_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/330px-106132_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "106132 eilat the disappearing lake PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:106132_eilat_the_disappearing_lake_PikiWiki_Israel.jpg",
+     "w": 4608,
+     "h": 2592,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/106133_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/1920px-106133_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/106133_eilat_the_disappearing_lake_PikiWiki_Israel.jpg/330px-106133_eilat_the_disappearing_lake_PikiWiki_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "106133 eilat the disappearing lake PikiWiki Israel.jpg",
+     "licenca": "CC BY 2.5",
+     "pagina": "https://commons.wikimedia.org/wiki/File:106133_eilat_the_disappearing_lake_PikiWiki_Israel.jpg",
+     "w": 4608,
+     "h": 2592,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "The people's war book; history, cyclopaedia and chronology of the great world war (1919) (14595327968).jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_people%27s_war_book;_history,_cyclopaedia_and_chronology_of_the_great_world_war_(1919)_(14595327968).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg/1920px-The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg/330px-The_people%27s_war_book%3B_history%2C_cyclopaedia_and_chronology_of_the_great_world_war_%281919%29_%2814595327968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/02-107ca1.jpg"
+   }
+  },
+  {
+   "i": 2,
+   "s": 7.2,
+   "e": 12.82,
+   "texto": "Na Índia, século VI, surgia Chaturanga, o antepassado do xadrez moderno.",
+   "query": "Chaturanga invention",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/1920px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/330px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Endangered arctic - starving polar bear.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Endangered_arctic_-_starving_polar_bear.jpg",
+     "w": 3009,
+     "h": 1693,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/1920px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/330px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gamma Ray 27x39 ENGLISH.png",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gamma_Ray_27x39_ENGLISH.png",
+     "w": 8100,
+     "h": 11708,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Cabinet attributed to Herman Doomer, c. 1640-50.JPG",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Cabinet_attributed_to_Herman_Doomer,_c._1640-50.JPG",
+     "w": 872,
+     "h": 448,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Doomer, Lambert, Cologne Cathedral, 17th c.,.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Doomer,_Lambert,_Cologne_Cathedral,_17th_c.,.jpg",
+     "w": 1686,
+     "h": 992,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/1920px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/330px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gustave Doré - The Holy Bible - Plate I, The Deluge.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I,_The_Deluge.jpg",
+     "w": 4770,
+     "h": 6219,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/1920px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/330px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hammer of Doom X Würzburg Candlemass 11.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg",
+     "w": 3681,
+     "h": 4436,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Endangered arctic - starving polar bear.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Endangered_arctic_-_starving_polar_bear.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/1920px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/330px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/03-0b4b7f.jpg"
+   }
+  },
+  {
+   "i": 3,
+   "s": 13.62,
+   "e": 18.76,
+   "texto": "Jogadores enfrentam reis e rainhas, peões e torres em um tabuleiro de 64 casas.",
+   "query": "chess game played",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_Game_of_Humanity_with_Artificial_Intelligence.png/1920px-Chess_Game_of_Humanity_with_Artificial_Intelligence.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_Game_of_Humanity_with_Artificial_Intelligence.png/330px-Chess_Game_of_Humanity_with_Artificial_Intelligence.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Chess Game of Humanity with Artificial Intelligence.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Chess_Game_of_Humanity_with_Artificial_Intelligence.png",
+     "w": 2412,
+     "h": 1706,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Correspondence_chess_%28sample_of_a_game_that_can_be_played_at_a_public_chess_forum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/44/Correspondence_chess_%28sample_of_a_game_that_can_be_played_at_a_public_chess_forum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Correspondence chess (sample of a game that can be played at a public chess forum).jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Correspondence_chess_(sample_of_a_game_that_can_be_played_at_a_public_chess_forum).jpg",
+     "w": 889,
+     "h": 1123,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/A_game_of_chess_in_North_York_Centre_Station_%28Toronto_ON%29.jpg/1920px-A_game_of_chess_in_North_York_Centre_Station_%28Toronto_ON%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/A_game_of_chess_in_North_York_Centre_Station_%28Toronto_ON%29.jpg/330px-A_game_of_chess_in_North_York_Centre_Station_%28Toronto_ON%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A game of chess in North York Centre Station (Toronto ON).jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_game_of_chess_in_North_York_Centre_Station_(Toronto_ON).jpg",
+     "w": 2000,
+     "h": 1500,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Active_game_of_chess_in_the_Philippines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Active_game_of_chess_in_the_Philippines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Active game of chess in the Philippines.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Active_game_of_chess_in_the_Philippines.jpg",
+     "w": 1536,
+     "h": 2048,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Anguissola_The_Chess_Game_%28detail%29_02.jpg/1920px-Anguissola_The_Chess_Game_%28detail%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Anguissola_The_Chess_Game_%28detail%29_02.jpg/330px-Anguissola_The_Chess_Game_%28detail%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Anguissola The Chess Game (detail) 02.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Anguissola_The_Chess_Game_(detail)_02.jpg",
+     "w": 2048,
+     "h": 1152,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Chess_Game_%285662604493%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Chess_Game_%285662604493%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Chess Game (5662604493) (2).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Chess_Game_(5662604493)_(2).jpg",
+     "w": 1704,
+     "h": 2272,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Chess Game of Humanity with Artificial Intelligence.png",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Chess_Game_of_Humanity_with_Artificial_Intelligence.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_Game_of_Humanity_with_Artificial_Intelligence.png/1920px-Chess_Game_of_Humanity_with_Artificial_Intelligence.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_Game_of_Humanity_with_Artificial_Intelligence.png/330px-Chess_Game_of_Humanity_with_Artificial_Intelligence.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/04-391cc0.png"
+   }
+  },
+  {
+   "i": 4,
+   "s": 19.22,
+   "e": 25.06,
+   "texto": "No século XV, na Europa, xadrez ganhava a forma ocidental, tornando -se competitivo.",
+   "query": "European chess development",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Caf%C3%A9_Man_Ray_%281968%29_-_Man_Ray_%281890_-_1976%29_%2823464981861%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Caf%C3%A9_Man_Ray_%281968%29_-_Man_Ray_%281890_-_1976%29_%2823464981861%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Café Man Ray (1968) - Man Ray (1890 - 1976) (23464981861).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Man_Ray_(1968)_-_Man_Ray_(1890_-_1976)_(23464981861).jpg",
+     "w": 1459,
+     "h": 2325,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Karta_Aziatskoy_Rossii_-_Sostavlena_po_Noveyshim_Svedeniyam._i_Izdana_pri_voyepno_%E2%80%93_topograficheskoy_..._Glavnogo_%28IA_dr_karta-aziatskoy-rossii-sostavlena-po-noveyshim-svedeniyam-i-izdana-pri-v-13538000%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Karta_Aziatskoy_Rossii_-_Sostavlena_po_Noveyshim_Svedeniyam._i_Izdana_pri_voyepno_%E2%80%93_topograficheskoy_..._Glavnogo_%28IA_dr_karta-aziatskoy-rossii-sostavlena-po-noveyshim-svedeniyam-i-izdana-pri-v-13538000%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Karta Aziatskoy Rossii - Sostavlena po Noveyshim Svedeniyam. i Izdana pri voyepno – topograficheskoy ... Glavnogo (IA dr karta-aziatskoy-rossii-sostavlena-po-noveyshim-svedeniyam-i-izdana-pri-v-13538000).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Karta_Aziatskoy_Rossii_-_Sostavlena_po_Noveyshim_Svedeniyam._i_Izdana_pri_voyepno_%E2%80%93_topograficheskoy_..._Glavnogo_(IA_dr_karta-aziatskoy-rossii-sostavlena-po-noveyshim-svedeniyam-i-izdana-pri-v-13538000).jpg",
+     "w": 1536,
+     "h": 854,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Café Man Ray (1968) - Man Ray (1890 - 1976) (23464981861).jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Man_Ray_(1968)_-_Man_Ray_(1890_-_1976)_(23464981861).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Caf%C3%A9_Man_Ray_%281968%29_-_Man_Ray_%281890_-_1976%29_%2823464981861%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Caf%C3%A9_Man_Ray_%281968%29_-_Man_Ray_%281890_-_1976%29_%2823464981861%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/05-ca670f.jpg"
+   }
+  },
+  {
+   "i": 5,
+   "s": 25.06,
+   "e": 28.76,
+   "texto": "O supercomputador Deep Blue venceu Garry Kasparov",
+   "query": "Deep Blue victory",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg/1920px-Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg/330px-Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Flowers as offerings, Maa Kamakhya Temple, 2025.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Flowers_as_offerings,_Maa_Kamakhya_Temple,_2025.jpg",
+     "w": 3286,
+     "h": 2077,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_1_%2834519726136%29.jpg/1920px-Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_1_%2834519726136%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_1_%2834519726136%29.jpg/330px-Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_1_%2834519726136%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Fluorite (Crystal Victory Mine, near Cave-in-Rock, Illinois, USA) 1 (34519726136).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Fluorite_(Crystal_Victory_Mine,_near_Cave-in-Rock,_Illinois,_USA)_1_(34519726136).jpg",
+     "w": 2178,
+     "h": 2741,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_2_%2834430613991%29.jpg/1920px-Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_2_%2834430613991%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_2_%2834430613991%29.jpg/330px-Fluorite_%28Crystal_Victory_Mine%2C_near_Cave-in-Rock%2C_Illinois%2C_USA%29_2_%2834430613991%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Fluorite (Crystal Victory Mine, near Cave-in-Rock, Illinois, USA) 2 (34430613991).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Fluorite_(Crystal_Victory_Mine,_near_Cave-in-Rock,_Illinois,_USA)_2_(34430613991).jpg",
+     "w": 2370,
+     "h": 2931,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/The_Victory_by_Dr._Mostafa_Sadek%2C_Acrylic_on_canvas_SKU_AXLV1020RBGS_120%2A100%2A5_cm_%D8%A7%D9%84%D9%86%D8%B5%D8%B1_%D8%AF._%D9%85%D8%B5%D8%B7%D9%81%D9%89_%D8%B5%D8%A7%D8%AF%D9%82.jpg/1920px-The_Victory_by_Dr._Mostafa_Sadek%2C_Acrylic_on_canvas_SKU_AXLV1020RBGS_120%2A100%2A5_cm_%D8%A7%D9%84%D9%86%D8%B5%D8%B1_%D8%AF._%D9%85%D8%B5%D8%B7%D9%81%D9%89_%D8%B5%D8%A7%D8%AF%D9%82.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/The_Victory_by_Dr._Mostafa_Sadek%2C_Acrylic_on_canvas_SKU_AXLV1020RBGS_120%2A100%2A5_cm_%D8%A7%D9%84%D9%86%D8%B5%D8%B1_%D8%AF._%D9%85%D8%B5%D8%B7%D9%81%D9%89_%D8%B5%D8%A7%D8%AF%D9%82.jpg/330px-The_Victory_by_Dr._Mostafa_Sadek%2C_Acrylic_on_canvas_SKU_AXLV1020RBGS_120%2A100%2A5_cm_%D8%A7%D9%84%D9%86%D8%B5%D8%B1_%D8%AF._%D9%85%D8%B5%D8%B7%D9%81%D9%89_%D8%B5%D8%A7%D8%AF%D9%82.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "The Victory by Dr. Mostafa Sadek, Acrylic on canvas SKU AXLV1020RBGS 120*100*5 cm النصر د. مصطفى صادق.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:The_Victory_by_Dr._Mostafa_Sadek,_Acrylic_on_canvas_SKU_AXLV1020RBGS_120*100*5_cm_%D8%A7%D9%84%D9%86%D8%B5%D8%B1_%D8%AF._%D9%85%D8%B5%D8%B7%D9%81%D9%89_%D8%B5%D8%A7%D8%AF%D9%82.jpg",
+     "w": 2851,
+     "h": 2346,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Flickr_-_Israel_Defense_Forces_-_IDF_Japan_Aid_Delegation_and_Local_Children_Speak_the_Same_Language_%283%29.jpg/1920px-Flickr_-_Israel_Defense_Forces_-_IDF_Japan_Aid_Delegation_and_Local_Children_Speak_the_Same_Language_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Flickr_-_Israel_Defense_Forces_-_IDF_Japan_Aid_Delegation_and_Local_Children_Speak_the_Same_Language_%283%29.jpg/330px-Flickr_-_Israel_Defense_Forces_-_IDF_Japan_Aid_Delegation_and_Local_Children_Speak_the_Same_Language_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Flickr - Israel Defense Forces - IDF Japan Aid Delegation and Local Children Speak the Same Language (3).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Flickr_-_Israel_Defense_Forces_-_IDF_Japan_Aid_Delegation_and_Local_Children_Speak_the_Same_Language_(3).jpg",
+     "w": 2816,
+     "h": 1584,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Fluorite_%28Victory_Mine%2C_Cave-in-Rock%2C_Illinois%2C_USA%29_1.jpg/1920px-Fluorite_%28Victory_Mine%2C_Cave-in-Rock%2C_Illinois%2C_USA%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Fluorite_%28Victory_Mine%2C_Cave-in-Rock%2C_Illinois%2C_USA%29_1.jpg/330px-Fluorite_%28Victory_Mine%2C_Cave-in-Rock%2C_Illinois%2C_USA%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Fluorite (Victory Mine, Cave-in-Rock, Illinois, USA) 1.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Fluorite_(Victory_Mine,_Cave-in-Rock,_Illinois,_USA)_1.jpg",
+     "w": 3535,
+     "h": 2990,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Flowers as offerings, Maa Kamakhya Temple, 2025.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Flowers_as_offerings,_Maa_Kamakhya_Temple,_2025.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg/1920px-Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg/330px-Flowers_as_offerings%2C_Maa_Kamakhya_Temple%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/06-f73cee.jpg"
+   }
+  },
+  {
+   "i": 6,
+   "s": 28.76,
+   "e": 32.1,
+   "texto": "em 1997, mostrando o poder computacional.",
+   "query": "1997 computational power",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/1920px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/330px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Endangered arctic - starving polar bear.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Endangered_arctic_-_starving_polar_bear.jpg",
+     "w": 3009,
+     "h": 1693,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/1920px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/330px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gamma Ray 27x39 ENGLISH.png",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gamma_Ray_27x39_ENGLISH.png",
+     "w": 8100,
+     "h": 11708,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Cabinet attributed to Herman Doomer, c. 1640-50.JPG",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Cabinet_attributed_to_Herman_Doomer,_c._1640-50.JPG",
+     "w": 872,
+     "h": 448,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Doomer, Lambert, Cologne Cathedral, 17th c.,.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Doomer,_Lambert,_Cologne_Cathedral,_17th_c.,.jpg",
+     "w": 1686,
+     "h": 992,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/1920px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/330px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gustave Doré - The Holy Bible - Plate I, The Deluge.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I,_The_Deluge.jpg",
+     "w": 4770,
+     "h": 6219,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/1920px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/330px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hammer of Doom X Würzburg Candlemass 11.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg",
+     "w": 3681,
+     "h": 4436,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Gamma Ray 27x39 ENGLISH.png",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gamma_Ray_27x39_ENGLISH.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/1920px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/330px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-bb6777.png"
+   }
+  },
+  {
+   "i": 7,
+   "s": 32.76,
+   "e": 35.94,
+   "texto": "Naquele dia, sem internet, o mundo pararia?",
+   "query": "world without internet",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png/1920px-Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png/330px-Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Reporters Without Borders 'Enemies of the Internet' World Map - 2018.png",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png",
+     "w": 8550,
+     "h": 4350,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Internet_World_Fair_2017.jpg/1920px-Internet_World_Fair_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Internet_World_Fair_2017.jpg/330px-Internet_World_Fair_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Internet World Fair 2017.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Internet_World_Fair_2017.jpg",
+     "w": 3456,
+     "h": 4608,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Internet_World_Fair_2017_%2802%29.jpg/1920px-Internet_World_Fair_2017_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Internet_World_Fair_2017_%2802%29.jpg/330px-Internet_World_Fair_2017_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Internet World Fair 2017 (02).jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Internet_World_Fair_2017_(02).jpg",
+     "w": 4608,
+     "h": 3456,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Internet_World_Fair_2017_%2803%29.jpg/1920px-Internet_World_Fair_2017_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Internet_World_Fair_2017_%2803%29.jpg/330px-Internet_World_Fair_2017_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Internet World Fair 2017 (03).jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Internet_World_Fair_2017_(03).jpg",
+     "w": 4301,
+     "h": 2314,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_World_Fair_2017_%2804%29.jpg/1920px-Internet_World_Fair_2017_%2804%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_World_Fair_2017_%2804%29.jpg/330px-Internet_World_Fair_2017_%2804%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Internet World Fair 2017 (04).jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Internet_World_Fair_2017_(04).jpg",
+     "w": 4608,
+     "h": 3456,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Internet_World_Fair_2017_%2805%29.jpg/1920px-Internet_World_Fair_2017_%2805%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Internet_World_Fair_2017_%2805%29.jpg/330px-Internet_World_Fair_2017_%2805%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Internet World Fair 2017 (05).jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Internet_World_Fair_2017_(05).jpg",
+     "w": 4608,
+     "h": 3456,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Reporters Without Borders 'Enemies of the Internet' World Map - 2018.png",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png/1920px-Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png/330px-Reporters_Without_Borders_%27Enemies_of_the_Internet%27_World_Map_-_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/08-b873de.png"
+   }
+  },
+  {
+   "i": 8,
+   "s": 36.78,
+   "e": 39.24,
+   "texto": "Cidades sem sistemas de transporte e trabalho",
+   "query": "transport systems halted",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg/1920px-Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg/330px-Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Coca-Cola Zero® Bike Share Docking Station -CORK CITY- REF-106718 (19976162385).jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_(19976162385).jpg",
+     "w": 6000,
+     "h": 4000,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_1.jpg/1920px-Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_1.jpg/330px-Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Amboy (California, USA), Hist. Route 66 -- 2012 -- 1.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Amboy_(California,_USA),_Hist._Route_66_--_2012_--_1.jpg",
+     "w": 5065,
+     "h": 2570,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_5705.jpg/1920px-Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_5705.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_5705.jpg/330px-Amboy_%28California%2C_USA%29%2C_Hist._Route_66_--_2012_--_5705.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Amboy (California, USA), Hist. Route 66 -- 2012 -- 5705.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Amboy_(California,_USA),_Hist._Route_66_--_2012_--_5705.jpg",
+     "w": 4891,
+     "h": 3261,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Amboy_%28California%2C_USA%29_--_2012_--_5698.jpg/1920px-Amboy_%28California%2C_USA%29_--_2012_--_5698.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Amboy_%28California%2C_USA%29_--_2012_--_5698.jpg/330px-Amboy_%28California%2C_USA%29_--_2012_--_5698.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Amboy (California, USA) -- 2012 -- 5698.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Amboy_(California,_USA)_--_2012_--_5698.jpg",
+     "w": 3388,
+     "h": 4681,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Amboy_%28California%2C_USA%29_--_2012_--_5704.jpg/1920px-Amboy_%28California%2C_USA%29_--_2012_--_5704.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Amboy_%28California%2C_USA%29_--_2012_--_5704.jpg/330px-Amboy_%28California%2C_USA%29_--_2012_--_5704.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Amboy (California, USA) -- 2012 -- 5704.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Amboy_(California,_USA)_--_2012_--_5704.jpg",
+     "w": 4809,
+     "h": 3206,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Chalcombe_Road_Halt_site_geograph-3148169-by-Ben-Brooksbank.jpg/1920px-Chalcombe_Road_Halt_site_geograph-3148169-by-Ben-Brooksbank.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Chalcombe_Road_Halt_site_geograph-3148169-by-Ben-Brooksbank.jpg/330px-Chalcombe_Road_Halt_site_geograph-3148169-by-Ben-Brooksbank.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Chalcombe Road Halt site geograph-3148169-by-Ben-Brooksbank.jpg",
+     "licenca": "CC BY-SA 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Chalcombe_Road_Halt_site_geograph-3148169-by-Ben-Brooksbank.jpg",
+     "w": 2398,
+     "h": 1449,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Coca-Cola Zero® Bike Share Docking Station -CORK CITY- REF-106718 (19976162385).jpg",
+    "licenca": "CC BY-SA 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_(19976162385).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg/1920px-Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg/330px-Coca-Cola_Zero%C2%AE_Bike_Share_Docking_Station_-CORK_CITY-_REF-106718_%2819976162385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/09-81b229.jpg"
+   }
+  },
+  {
+   "i": 9,
+   "s": 39.24,
+   "e": 41.42,
+   "texto": "remoto, escolas sem aulas online.",
+   "query": "online classes canceled",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Baltimore_and_Ohio_employees_magazine_%281920%29_%2814759813405%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Baltimore_and_Ohio_employees_magazine_%281920%29_%2814759813405%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Baltimore and Ohio employees magazine (1920) (14759813405).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Baltimore_and_Ohio_employees_magazine_(1920)_(14759813405).jpg",
+     "w": 1210,
+     "h": 534,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Benton_County_Nursery_Co_%281943%29_%2820364317335%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/18/Benton_County_Nursery_Co_%281943%29_%2820364317335%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Benton County Nursery Co (1943) (20364317335).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Benton_County_Nursery_Co_(1943)_(20364317335).jpg",
+     "w": 1446,
+     "h": 1972,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Benton_County_Nursery_Co_%281945%29_%2819743425343%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Benton_County_Nursery_Co_%281945%29_%2819743425343%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Benton County Nursery Co (1945) (19743425343).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Benton_County_Nursery_Co_(1945)_(19743425343).jpg",
+     "w": 1384,
+     "h": 2020,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bird_lore_%281918%29_%2814752978624%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bird_lore_%281918%29_%2814752978624%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bird lore (1918) (14752978624).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird_lore_(1918)_(14752978624).jpg",
+     "w": 1702,
+     "h": 2266,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Catalogs_%281912%29_%2814748830806%29.jpg/1920px-Catalogs_%281912%29_%2814748830806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Catalogs_%281912%29_%2814748830806%29.jpg/330px-Catalogs_%281912%29_%2814748830806%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Catalogs (1912) (14748830806).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Catalogs_(1912)_(14748830806).jpg",
+     "w": 3024,
+     "h": 2024,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Catalogs_%281912%29_%2814769466304%29.jpg/1920px-Catalogs_%281912%29_%2814769466304%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Catalogs_%281912%29_%2814769466304%29.jpg/330px-Catalogs_%281912%29_%2814769466304%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Catalogs (1912) (14769466304).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Catalogs_(1912)_(14769466304).jpg",
+     "w": 3424,
+     "h": 2184,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Baltimore and Ohio employees magazine (1920) (14759813405).jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Baltimore_and_Ohio_employees_magazine_(1920)_(14759813405).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Baltimore_and_Ohio_employees_magazine_%281920%29_%2814759813405%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Baltimore_and_Ohio_employees_magazine_%281920%29_%2814759813405%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/10-54f035.jpg"
+   }
+  },
+  {
+   "i": 10,
+   "s": 42.32,
+   "e": 45.0,
+   "texto": "Comunicação direta entre pessoas seria fundamental.",
+   "query": "direct human communication",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/1920px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Endangered_arctic_-_starving_polar_bear.jpg/330px-Endangered_arctic_-_starving_polar_bear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Endangered arctic - starving polar bear.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Endangered_arctic_-_starving_polar_bear.jpg",
+     "w": 3009,
+     "h": 1693,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/1920px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Gamma_Ray_27x39_ENGLISH.png/330px-Gamma_Ray_27x39_ENGLISH.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gamma Ray 27x39 ENGLISH.png",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gamma_Ray_27x39_ENGLISH.png",
+     "w": 8100,
+     "h": 11708,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Cabinet attributed to Herman Doomer, c. 1640-50.JPG",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Cabinet_attributed_to_Herman_Doomer,_c._1640-50.JPG",
+     "w": 872,
+     "h": 448,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Doomer%2C_Lambert%2C_Cologne_Cathedral%2C_17th_c.%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Doomer, Lambert, Cologne Cathedral, 17th c.,.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Doomer,_Lambert,_Cologne_Cathedral,_17th_c.,.jpg",
+     "w": 1686,
+     "h": 992,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/1920px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg/330px-Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I%2C_The_Deluge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Gustave Doré - The Holy Bible - Plate I, The Deluge.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Gustave_Dor%C3%A9_-_The_Holy_Bible_-_Plate_I,_The_Deluge.jpg",
+     "w": 4770,
+     "h": 6219,
+     "nota": 0
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/1920px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg/330px-Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hammer of Doom X Würzburg Candlemass 11.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hammer_of_Doom_X_W%C3%BCrzburg_Candlemass_11.jpg",
+     "w": 3681,
+     "h": 4436,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Cabinet attributed to Herman Doomer, c. 1640-50.JPG",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cabinet_attributed_to_Herman_Doomer,_c._1640-50.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Cabinet_attributed_to_Herman_Doomer%2C_c._1640-50.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/11-e3e6b8.jpg"
+   }
+  },
+  {
+   "i": 11,
+   "s": 46.12,
+   "e": 49.3,
+   "texto": "Jogos como xadrez se tornariam ainda mais populares.",
+   "query": "chess popularity increases",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Seal_matrix_%28device%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Seal_matrix_%28device%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Seal matrix (device) (FindID 776706).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Seal_matrix_(device)_(FindID_776706).jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Seal_matrix_%28face%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Seal_matrix_%28face%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Seal matrix (face) (FindID 776706).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Seal_matrix_(face)_(FindID_776706).jpg",
+     "w": 1200,
+     "h": 1600,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Seal_matrix_%28impression%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Seal_matrix_%28impression%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Seal matrix (impression) (FindID 776706).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Seal_matrix_(impression)_(FindID_776706).jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Seal_matrix_%28profile%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Seal_matrix_%28profile%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Seal matrix (profile) (FindID 776706).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Seal_matrix_(profile)_(FindID_776706).jpg",
+     "w": 1600,
+     "h": 1200,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Seal matrix (device) (FindID 776706).jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Seal_matrix_(device)_(FindID_776706).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Seal_matrix_%28device%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Seal_matrix_%28device%29_%28FindID_776706%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/12-3b2092.jpg"
+   }
+  },
+  {
+   "i": 12,
+   "s": 50.0,
+   "e": 52.28,
+   "texto": "Imagine um rei em seu trono real,",
+   "query": "king on throne",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg/1920px-Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg/330px-Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Germany, King's Throne Room, Munich, Munich Residence.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Germany,_King%27s_Throne_Room,_Munich,_Munich_Residence.jpg",
+     "w": 5159,
+     "h": 8256,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hampi_-_King%27s_Palace_-_Throne_Platform.jpg/1920px-Hampi_-_King%27s_Palace_-_Throne_Platform.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hampi_-_King%27s_Palace_-_Throne_Platform.jpg/330px-Hampi_-_King%27s_Palace_-_Throne_Platform.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hampi - King's Palace - Throne Platform.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hampi_-_King%27s_Palace_-_Throne_Platform.jpg",
+     "w": 7973,
+     "h": 2920,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_1.jpg/1920px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_1.jpg/330px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hampi - King's Palace - Throne Platform - Relief - 1.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_1.jpg",
+     "w": 7008,
+     "h": 4672,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_10.jpg/1920px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_10.jpg/330px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hampi - King's Palace - Throne Platform - Relief - 10.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_10.jpg",
+     "w": 6648,
+     "h": 4488,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_12.jpg/1920px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_12.jpg/330px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hampi - King's Palace - Throne Platform - Relief - 12.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_12.jpg",
+     "w": 7008,
+     "h": 4672,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_13.jpg/1920px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_13.jpg/330px-Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Hampi - King's Palace - Throne Platform - Relief - 13.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Hampi_-_King%27s_Palace_-_Throne_Platform_-_Relief_-_13.jpg",
+     "w": 7008,
+     "h": 4672,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Germany, King's Throne Room, Munich, Munich Residence.jpg",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Germany,_King%27s_Throne_Room,_Munich,_Munich_Residence.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg/1920px-Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg/330px-Germany%2C_King%27s_Throne_Room%2C_Munich%2C_Munich_Residence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-bc9524.jpg"
+   }
+  },
+  {
+   "i": 13,
+   "s": 52.44,
+   "e": 55.04,
+   "texto": "jogando com seus filhos, pedindo ajuda a pessoas.",
+   "query": "parent-child interaction",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg/1920px-Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg/330px-Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Moments of connection between a parent and child shared in a cozy indoor space during peaceful afternoon hours.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg",
+     "w": 6016,
+     "h": 4016,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Participation_of_Ursula_von_der_Leyen%2C_in_the_second_meeting_of_the_Special_Panel_on_child_safety_online_%28P-069502-00-01%29.jpg/1920px-Participation_of_Ursula_von_der_Leyen%2C_in_the_second_meeting_of_the_Special_Panel_on_child_safety_online_%28P-069502-00-01%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Participation_of_Ursula_von_der_Leyen%2C_in_the_second_meeting_of_the_Special_Panel_on_child_safety_online_%28P-069502-00-01%29.jpg/330px-Participation_of_Ursula_von_der_Leyen%2C_in_the_second_meeting_of_the_Special_Panel_on_child_safety_online_%28P-069502-00-01%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Participation of Ursula von der Leyen, in the second meeting of the Special Panel on child safety online (P-069502-00-01).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Participation_of_Ursula_von_der_Leyen,_in_the_second_meeting_of_the_Special_Panel_on_child_safety_online_(P-069502-00-01).jpg",
+     "w": 4000,
+     "h": 2667,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/RMV_License_to_Learn_Event%2C_Boston%2C_December_16%2C_2014_%2815850308917%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/96/RMV_License_to_Learn_Event%2C_Boston%2C_December_16%2C_2014_%2815850308917%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "RMV License to Learn Event, Boston, December 16, 2014 (15850308917).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:RMV_License_to_Learn_Event,_Boston,_December_16,_2014_(15850308917).jpg",
+     "w": 1632,
+     "h": 1224,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Report_Human_Trafficking_Sign_at_DCA_Airport.jpg/1920px-Report_Human_Trafficking_Sign_at_DCA_Airport.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Report_Human_Trafficking_Sign_at_DCA_Airport.jpg/330px-Report_Human_Trafficking_Sign_at_DCA_Airport.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Report Human Trafficking Sign at DCA Airport.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Report_Human_Trafficking_Sign_at_DCA_Airport.jpg",
+     "w": 5712,
+     "h": 4284,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Brainy_Child_Montessori_is_known_as_the_best_Preschool_in_Orchard%2C_Singapore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Brainy_Child_Montessori_is_known_as_the_best_Preschool_in_Orchard%2C_Singapore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Brainy Child Montessori is known as the best Preschool in Orchard, Singapore.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Brainy_Child_Montessori_is_known_as_the_best_Preschool_in_Orchard,_Singapore.jpg",
+     "w": 1000,
+     "h": 667,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Developmental_Pediatrics_Team_Visits_Vandenberg_%287253018%29.jpg/1920px-Developmental_Pediatrics_Team_Visits_Vandenberg_%287253018%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Developmental_Pediatrics_Team_Visits_Vandenberg_%287253018%29.jpg/330px-Developmental_Pediatrics_Team_Visits_Vandenberg_%287253018%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Developmental Pediatrics Team Visits Vandenberg (7253018).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Developmental_Pediatrics_Team_Visits_Vandenberg_(7253018).jpg",
+     "w": 5160,
+     "h": 3686,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Moments of connection between a parent and child shared in a cozy indoor space during peaceful afternoon hours.jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg/1920px-Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg/330px-Moments_of_connection_between_a_parent_and_child_shared_in_a_cozy_indoor_space_during_peaceful_afternoon_hours.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/14-bfcf7e.jpg"
+   }
+  },
+  {
+   "i": 14,
+   "s": 55.06,
+   "e": 57.82,
+   "texto": "Apenas com gestos. O que você faria?",
+   "query": "gestures for help",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Georgian Minister of Defense Irakli Alasania, left, gestures for U.S. Secretary of Defense Chuck Hagel, center, to enter a building as U.S. Ambassador to Georgia Richard Norland helps point the way Sept 140907-D-NI589-740.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Georgian_Minister_of_Defense_Irakli_Alasania,_left,_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel,_center,_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg",
+     "w": 4856,
+     "h": 3192,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Signal_for_Help_gestures_%28no_text%29.png/1920px-Signal_for_Help_gestures_%28no_text%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Signal_for_Help_gestures_%28no_text%29.png/330px-Signal_for_Help_gestures_%28no_text%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Signal for Help gestures (no text).png",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Signal_for_Help_gestures_(no_text).png",
+     "w": 3154,
+     "h": 1855,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/US_Navy_050116-N-6074Y-254_Aviation_Machinist%27s_Mate_3rd_Class_Jason_Shireman%2C_of_Chicago%2C_Ill.%2C_gestures_to_another_air_crewman_for_help%2C_as_he_passes_out_supplies_to_locals.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/US_Navy_050116-N-6074Y-254_Aviation_Machinist%27s_Mate_3rd_Class_Jason_Shireman%2C_of_Chicago%2C_Ill.%2C_gestures_to_another_air_crewman_for_help%2C_as_he_passes_out_supplies_to_locals.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "US Navy 050116-N-6074Y-254 Aviation Machinist's Mate 3rd Class Jason Shireman, of Chicago, Ill., gestures to another air crewman for help, as he passes out supplies to locals.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:US_Navy_050116-N-6074Y-254_Aviation_Machinist%27s_Mate_3rd_Class_Jason_Shireman,_of_Chicago,_Ill.,_gestures_to_another_air_crewman_for_help,_as_he_passes_out_supplies_to_locals.jpg",
+     "w": 2250,
+     "h": 1500,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Notgeste_H%C3%A4usliche_Gewalt.png/1920px-Notgeste_H%C3%A4usliche_Gewalt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Notgeste_H%C3%A4usliche_Gewalt.png/330px-Notgeste_H%C3%A4usliche_Gewalt.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Notgeste Häusliche Gewalt.png",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Notgeste_H%C3%A4usliche_Gewalt.png",
+     "w": 3161,
+     "h": 2218,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/See_him_through--Help_us_to_help_the_boys.jpg/1920px-See_him_through--Help_us_to_help_the_boys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/See_him_through--Help_us_to_help_the_boys.jpg/330px-See_him_through--Help_us_to_help_the_boys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "See him through--Help us to help the boys.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:See_him_through--Help_us_to_help_the_boys.jpg",
+     "w": 2290,
+     "h": 3456,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/See_him_through-Help_us_to_help_the_boys_LCCN00652952.jpg/1920px-See_him_through-Help_us_to_help_the_boys_LCCN00652952.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/See_him_through-Help_us_to_help_the_boys_LCCN00652952.jpg/330px-See_him_through-Help_us_to_help_the_boys_LCCN00652952.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "See him through-Help us to help the boys LCCN00652952.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:See_him_through-Help_us_to_help_the_boys_LCCN00652952.jpg",
+     "w": 3737,
+     "h": 4647,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Georgian Minister of Defense Irakli Alasania, left, gestures for U.S. Secretary of Defense Chuck Hagel, center, to enter a building as U.S. Ambassador to Georgia Richard Norland helps point the way Sept 140907-D-NI589-740.jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Georgian_Minister_of_Defense_Irakli_Alasania,_left,_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel,_center,_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/15-c35fe9.jpg"
+   }
+  },
+  {
+   "i": 15,
+   "s": 58.34,
+   "e": 61.4,
+   "texto": "Se essa parte te surpreendeu, deixe o like.",
+   "query": "",
+   "candidatos": [],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Georgian Minister of Defense Irakli Alasania, left, gestures for U.S. Secretary of Defense Chuck Hagel, center, to enter a building as U.S. Ambassador to Georgia Richard Norland helps point the way Sept 140907-D-NI589-740.jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Georgian_Minister_of_Defense_Irakli_Alasania,_left,_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel,_center,_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Georgian_Minister_of_Defense_Irakli_Alasania%2C_left%2C_gestures_for_U.S._Secretary_of_Defense_Chuck_Hagel%2C_center%2C_to_enter_a_building_as_U.S._Ambassador_to_Georgia_Richard_Norland_helps_point_the_way_Sept_140907-D-NI589-740.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/15-c35fe9.jpg",
+    "repetida": true
+   }
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.14,
+  "voz": 0.14,
+  "whisper": 0.16,
+  "imagens": 1.31
+ },
+ "obs": [
+  "fatos de referência: Wikipedia “Xadrez” (https://pt.wikipedia.org/wiki/Xadrez)",
+  "roteiro pelo Ollama qwen2.5:7b (128 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (62.5s)",
+  "15 imagens/clipes para 16 cenas (Wikimedia)"
+ ],
+ "inicio": "2026-10-23T03:12:30-03:00"
+}

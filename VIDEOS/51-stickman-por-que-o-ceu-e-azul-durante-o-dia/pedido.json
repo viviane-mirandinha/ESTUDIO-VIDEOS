@@ -1,0 +1,17 @@
+{
+ "modo": "tema",
+ "tema": "Por que o céu é azul durante o dia e vermelho no pôr do sol",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "stickman",
+ "roteiro_ref": "",
+ "duracao": 30.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "Curioso de Palito",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "formato": "16:9",
+ "criado": "2026-10-23T16:49:27"
+}

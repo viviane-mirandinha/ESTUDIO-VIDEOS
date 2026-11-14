@@ -1,0 +1,22 @@
+{
+ "video": 44,
+ "estilo": "B-roll documentário (fotos e clipes com movimento, legenda e títulos)",
+ "ferramenta": "Vídeo com imagens",
+ "titulo": "Por que o céu é azul e outros mistérios",
+ "canal": "CURIOSIDADES DO MUNDO",
+ "inicio": "2026-10-23T04:25:34-03:00",
+ "fim": "2026-10-23T04:26:57-03:00",
+ "minutos": 1.4,
+ "minutos_por_etapa": {
+  "roteiro": 0.08,
+  "voz": 0.12,
+  "whisper": 0.11,
+  "imagens": 0.44,
+  "montar_render": 0.65
+ },
+ "render_segundos": 38,
+ "duracao_video": 40.22,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "VÍDEO COM IMAGENS (zero token Claude, só Python local): fatos de referência: Wikipedia “Céu Azul” (https://pt.wikipedia.org/wiki/C%C3%A9u_Azul); roteiro pelo Ollama qwen2.5:7b (86 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (36.6s); 7 imagens/clipes para 8 cenas (Wikimedia); 8 cenas; edit.json por estilos/broll-documentario/preencher.py"
+}

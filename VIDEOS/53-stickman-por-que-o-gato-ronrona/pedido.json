@@ -1,0 +1,17 @@
+{
+ "modo": "tema",
+ "tema": "Por que o gato ronrona",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "stickman",
+ "roteiro_ref": "",
+ "duracao": 40.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "Curioso de Palito",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "formato": "9:16",
+ "criado": "2026-10-23T21:36:18"
+}
