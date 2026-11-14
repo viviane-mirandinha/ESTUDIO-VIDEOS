@@ -1780,7 +1780,7 @@ function renderFila() {
       const r = j.resultado || {};
       const naFilaClaude = /^Na fila do Claude/.test(j.msg || "");
       const tempo = !j.done ? (naFilaClaude ? `esperando a vez do Claude · posição ${(window.__filaClaude || {})[j.id] || "?"} · cada vídeo leva ~15 min` : j.status === "fila" ? (j.posicao ? `posição ${j.posicao} na fila` : "esperando a vez") : `${Math.round(j.pct)}%${j.eta != null ? " · faltam ~" + fmtSeg(j.eta) : ""} · ${fmtSeg(j.decorrido)} até agora`)
-        : (j.decorrido ? "levou " + fmtSeg(j.decorrido) : "");
+        : (j.total != null ? "⏱ levou " + fmtSeg(j.total) + " do clique até ficar pronto" : j.decorrido ? "levou " + fmtSeg(j.decorrido) : "");
       let acts = "";
       if (!j.done) acts = `<button class="btn mini danger" data-jcan="${j.id}">Cancelar</button>`;
       else if (j.status === "pronto") {

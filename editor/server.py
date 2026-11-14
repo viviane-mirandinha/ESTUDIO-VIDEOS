@@ -1123,6 +1123,7 @@ def jobs_list():
         if r.get("folder"):
             d["resultado"]["pasta_nome"] = amigavel(r["folder"])
         d["decorrido"] = int((j.get("fim") or now) - j["inicio"]) if j.get("inicio") else 0
+        d["total"] = int(j["fim"] - j["criado"]) if j.get("fim") and j.get("criado") else None   # do clique em "fazer vídeo" até ficar pronto (inclui a espera na fila)
         if j["status"] == "fila" and j["id"] in fila_ids:
             d["posicao"] = fila_ids.index(j["id"]) + 1
         out.append(d)
