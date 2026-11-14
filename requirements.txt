@@ -1,0 +1,11 @@
+# Estúdio de Vídeos — dependências Python (instaladas pelo setup no .venv do pacote)
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+edge-tts>=6.1
+faster-whisper>=1.0
+numpy>=1.26
+shapely>=2.0
+yt-dlp>=2024.10.0
+pillow>=10.0
+anthropic>=0.40   # opcional: revisar roteiro com o Claude (precisa de chave própria em Ajustes)

@@ -1,0 +1,121 @@
+{
+ "nome": "Animação detalhada e explicativa",
+ "nome_curto": "Animação detalhada e explicativa",
+ "descricao": "Copiado de um vídeo: troca de cena a cada ~4 s, sem legenda e com narração. Na tela: transição.",
+ "imagens": "wikimedia",
+ "clipes": true,
+ "vertical": false,
+ "so_ferramenta": true,
+ "aproximado": true,
+ "formato": "longo",
+ "dica_busca": "real photographs and stock footage",
+ "extra_busca": "",
+ "preferir_titulo": [
+  "photo",
+  "photograph"
+ ],
+ "shot_min": 2.47,
+ "shot_max": 4.77,
+ "palavras_por_minuto": 130,
+ "pad_fim": 2.4,
+ "roteiro_prompt": "vídeo narrado, fatos reais",
+ "copiar": [],
+ "preset": {
+  "formato": "longo",
+  "cor_destaque": "#ffd400",
+  "destaque_padrao": true,
+  "fundo": "#040510",
+  "fonte": "condensada",
+  "legenda": false,
+  "legenda_pos": "baixo",
+  "legenda_palavras": 3,
+  "titulo_fixo": false,
+  "zoom": 0.12,
+  "flash_cada": 0,
+  "vinheta": true,
+  "cartao_final": true,
+  "cta": true,
+  "transicao": 0.5,
+  "elementos": [
+   {
+    "tipo": "transicao",
+    "nome": "Transição",
+    "dica": "Suave (esmaece)",
+    "modo": "suave",
+    "vezes": 0,
+    "ligado": true
+   }
+  ]
+ },
+ "analise": {
+  "formato": "longo",
+  "w": 1280,
+  "h": 720,
+  "duracao_analisada": 180.0,
+  "cortes": 50,
+  "cortes_por_min": 16.7,
+  "plano_medio_s": 3.53,
+  "cores": [
+   {
+    "hex": "#99805e",
+    "pct": 11.1,
+    "sat": 0.24,
+    "luz": 0.48
+   },
+   {
+    "hex": "#040510",
+    "pct": 10.6,
+    "sat": 0.6,
+    "luz": 0.04
+   },
+   {
+    "hex": "#0d1023",
+    "pct": 10.3,
+    "sat": 0.46,
+    "luz": 0.09
+   },
+   {
+    "hex": "#716d5b",
+    "pct": 9.8,
+    "sat": 0.11,
+    "luz": 0.4
+   },
+   {
+    "hex": "#655245",
+    "pct": 8.8,
+    "sat": 0.19,
+    "luz": 0.33
+   },
+   {
+    "hex": "#2d2d31",
+    "pct": 7.9,
+    "sat": 0.04,
+    "luz": 0.18
+   }
+  ],
+  "cor_destaque": null,
+  "cor_escura": "#040510",
+  "pecas": [
+   {
+    "tipo": "transicao",
+    "nome": "Transição",
+    "dica": "Suave (esmaece)",
+    "modo": "suave",
+    "vezes": 0,
+    "ligado": true
+   }
+  ],
+  "pecas_ocr": false,
+  "texto_na_tela_pct": 5.6,
+  "tem_legenda": false,
+  "legenda_pos": "baixo",
+  "tem_narracao": true,
+  "palavras_por_min": 107,
+  "avisos": []
+ },
+ "referencia": {
+  "video": "https://youtu.be/P0VF4KHaBHk?si=jYiTHsrp04hXeqI-",
+  "titulo": ""
+ },
+ "criado": "2026-11-13T07:30:51"
+}

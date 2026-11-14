@@ -1,0 +1,1 @@
+file '<pacote>/editor/previas_vozes/auto-pt-br/_partes/p01.wav'

@@ -1,0 +1,119 @@
+{
+ "nome": "Desenho explicativo colorido",
+ "nome_curto": "Desenho explicativo colorido",
+ "descricao": "Aproximado de uma referência: 19.3 cortes/min, plano médio 3.05 s, legenda sim, centro, com narração.",
+ "bom_para": [
+  "explicações",
+  "ciência",
+  "como as coisas funcionam"
+ ],
+ "palavras_tema": [
+  "explica",
+  "como funciona",
+  "ciencia",
+  "corpo",
+  "saude",
+  "tecnolog",
+  "por que",
+  "porque",
+  "como ",
+  "planeta",
+  "natureza",
+  "science",
+  "how "
+ ],
+ "imagens": "wikimedia",
+ "clipes": true,
+ "vertical": false,
+ "so_ferramenta": true,
+ "aproximado": true,
+ "formato": "longo",
+ "dica_busca": "real photographs and stock footage",
+ "extra_busca": "",
+ "preferir_titulo": [
+  "photo",
+  "photograph"
+ ],
+ "shot_min": 2.13,
+ "shot_max": 4.12,
+ "palavras_por_minuto": 173,
+ "pad_fim": 2.4,
+ "roteiro_prompt": "vídeo narrado, fatos reais",
+ "copiar": [],
+ "preset": {
+  "formato": "longo",
+  "cor_destaque": "#61eedc",
+  "destaque_padrao": false,
+  "fundo": "#472838",
+  "fonte": "condensada",
+  "legenda": true,
+  "legenda_pos": "centro",
+  "legenda_palavras": 2,
+  "titulo_fixo": false,
+  "zoom": 0.18,
+  "flash_cada": 3,
+  "vinheta": true,
+  "cartao_final": true,
+  "cta": true,
+  "transicao": 0.15
+ },
+ "analise": {
+  "formato": "longo",
+  "w": 1280,
+  "h": 720,
+  "duracao_analisada": 180.0,
+  "cortes": 58,
+  "cortes_por_min": 19.3,
+  "plano_medio_s": 3.05,
+  "cores": [
+   {
+    "hex": "#472838",
+    "pct": 12.6,
+    "sat": 0.28,
+    "luz": 0.22
+   },
+   {
+    "hex": "#b2e5d8",
+    "pct": 11.8,
+    "sat": 0.5,
+    "luz": 0.8
+   },
+   {
+    "hex": "#da8a55",
+    "pct": 11.7,
+    "sat": 0.64,
+    "luz": 0.59
+   },
+   {
+    "hex": "#77764c",
+    "pct": 10.4,
+    "sat": 0.22,
+    "luz": 0.38
+   },
+   {
+    "hex": "#995046",
+    "pct": 8.9,
+    "sat": 0.37,
+    "luz": 0.44
+   },
+   {
+    "hex": "#efdf9d",
+    "pct": 8.4,
+    "sat": 0.72,
+    "luz": 0.78
+   }
+  ],
+  "cor_destaque": "#61eedc",
+  "cor_escura": "#472838",
+  "texto_na_tela_pct": 29.4,
+  "tem_legenda": true,
+  "legenda_pos": "centro",
+  "tem_narracao": true,
+  "palavras_por_min": 173
+ },
+ "referencia": {
+  "video": "https://youtu.be/mS9FeqA-J34",
+  "titulo": ""
+ },
+ "criado": "2026-10-23T03:11:11"
+}

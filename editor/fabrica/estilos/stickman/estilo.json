@@ -1,0 +1,41 @@
+{
+ "nome": "Stickman Studio (bonecos de palito animados)",
+ "descricao": "Bonequinhos de palito desenhados em código, com poses (parado, andando, apontando, pensando, surpreso, comemorando), balões de fala, cenários de linha e o texto-chave grande — sincronizados frase a frase com a narração.",
+ "bom_para": [
+  "explicações leves",
+  "dicas",
+  "dinheiro e finanças",
+  "como as coisas funcionam"
+ ],
+ "palavras_tema": [
+  "dica",
+  "como funciona",
+  "dinheiro",
+  "financ",
+  "economia",
+  "explica",
+  "passo",
+  "aprend",
+  "trabalho",
+  "negocio",
+  "investi",
+  "poupar",
+  "produtiv",
+  "salario",
+  "imposto",
+  "divida",
+  "habito",
+  "money",
+  "tips"
+ ],
+ "ferramenta": "Stickman Studio",
+ "so_ferramenta": true,
+ "sem_imagens": true,
+ "formato_livre": true,
+ "fatos": "conferir",
+ "shot_min": 2.4,
+ "shot_max": 4.6,
+ "palavras_por_minuto": 150,
+ "roteiro_prompt": "vídeo explicativo leve e divertido, frases curtas, linguagem simples, como quem explica pra um amigo; cada frase descreve algo que dá pra mostrar com um boneco de palito",
+ "copiar": []
+}

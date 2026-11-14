@@ -1,0 +1,59 @@
+{
+ "nome": "Psicologia / filosofia sombria (pinturas clássicas, Einzelgänger)",
+ "origem": "TESTE ESTILOS DARK/VIDEOS/08-psicologia (tools/make_edit.py)",
+ "imagens": "wikimedia",
+ "dica_busca": "classical painting (oil on canvas) by an old master: romanticism, baroque, symbolism — e.g. Goya, Friedrich, Rembrandt, Böcklin, Bouguereau; dark mood, melancholy, solitude, night, sea, ruins",
+ "extra_busca": "painting",
+ "preferir_titulo": [
+  "painting",
+  "oil on canvas",
+  "engraving",
+  "etching",
+  "drawing",
+  "gemälde",
+  "peinture"
+ ],
+ "shot_min": 3.6,
+ "shot_max": 7.5,
+ "palavras_por_minuto": 135,
+ "roteiro_prompt": "ensaio de psicologia/filosofia sombria (estoicismo, Nietzsche, Jung, Schopenhauer), ritmo lento e reflexivo, perguntas diretas ao espectador, uma citação real e conhecida no máximo (sem inventar citação)",
+ "copiar": [
+  "fonts"
+ ],
+ "bom_para": [
+  "psicologia",
+  "filosofia",
+  "comportamento",
+  "reflexões sobre a vida"
+ ],
+ "palavras_tema": [
+  "psicolog",
+  "filosof",
+  "mente",
+  "comportament",
+  "manipula",
+  "narcis",
+  "ansiedade",
+  "solidao",
+  "sozinh",
+  "estoic",
+  "sentido da vida",
+  "felicidade",
+  "emoc",
+  "introvert",
+  "personalidade",
+  "sombra",
+  "mental",
+  "cerebro",
+  "habito",
+  "disciplina",
+  "nietzsche",
+  "socrates",
+  "pessoas que",
+  "sinais de",
+  "psychology",
+  "philosophy",
+  "stoic",
+  "mind"
+ ]
+}

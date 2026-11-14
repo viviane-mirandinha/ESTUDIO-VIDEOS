@@ -1,0 +1,11 @@
+{
+ "versao": "2026-11-07",
+ "titulo": "O que mudou no Estúdio",
+ "itens": [
+  "🎨 Copiar estilo agora acha as peças do vídeo (título, etiqueta de nome, caixinha de número, crédito) e mostra lado a lado: o vídeo de referência × como o seu vai ficar. Cada peça liga e desliga com 1 clique.",
+  "🔢 Nova linha \"Na tela\": caixinha com datas e números quando a narração fala um, e o crédito de cada foto no canto. Já vem ligado.",
+  "🧹 Clipes com pessoa falando, legenda gravada ou logo no canto agora são descartados sozinhos antes de entrar no seu vídeo.",
+  "📈 Estilos em alta agora mostra cada nicho com selo (em alta, subindo, difícil) e um botão pra usar o estilo certo.",
+  "🧭 Novo cartão \"Comece aqui\" no Início, cada estilo diz pra que tipo de vídeo ele é bom, e os textos das telas ficaram mais simples."
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "nome": "Canal de história simples (fotos de arquivo em Ken Burns, sépia)",
+ "origem": "TESTE ESTILOS DARK/VIDEOS/04-dinheiro-antigo (build.py + make_edit.py)",
+ "imagens": "wikimedia",
+ "dica_busca": "archival historical photograph, old black and white photo, engraving, portrait, historic building, antique coin or banknote",
+ "extra_busca": "",
+ "preferir_titulo": [
+  "engraving",
+  "lithograph",
+  "illustration",
+  "1880",
+  "1890",
+  "190",
+  "191",
+  "192",
+  "museum",
+  "library of congress",
+  "lccn"
+ ],
+ "shot_min": 2.6,
+ "shot_max": 5.2,
+ "palavras_por_minuto": 150,
+ "roteiro_prompt": "documentário histórico curto, tom de mistério e curiosidade, narrador em terceira pessoa, fatos reais sobre história do dinheiro/economia",
+ "formatos": [
+  "longo",
+  "short"
+ ],
+ "copiar": [
+  "fonts"
+ ],
+ "bom_para": [
+  "história",
+  "guerras e batalhas",
+  "reis e impérios",
+  "vida de pessoas famosas"
+ ],
+ "palavras_tema": [
+  "histor",
+  "guerra",
+  "imperio",
+  "rei ",
+  "reis",
+  "rainha",
+  "farao",
+  "egito",
+  "roma",
+  "romano",
+  "medieval",
+  "seculo",
+  "antig",
+  "batalha",
+  "revoluc",
+  "biografia",
+  "vida de",
+  "civiliza",
+  "piramide",
+  "napoleao",
+  "nazis",
+  "hitler",
+  "imperador",
+  "dinastia",
+  "colonia",
+  "descobri",
+  "history",
+  "war",
+  "empire",
+  "ancient"
+ ]
+}

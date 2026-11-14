@@ -1,0 +1,8 @@
+{
+  "name": "estudio-videos",
+  "private": true,
+  "description": "Renderizador HyperFrames local do Estúdio de Vídeos",
+  "dependencies": {
+    "hyperframes": "0.7.111"
+  }
+}

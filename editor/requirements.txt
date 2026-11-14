@@ -1,0 +1,12 @@
+# Pacotes Python do Estúdio de Vídeos (o INSTALAR.bat instala sozinho)
+fastapi
+uvicorn
+python-multipart
+yt-dlp
+edge-tts
+numpy
+pillow
+qrcode
+anthropic
+# leitor de texto local (Copiar estilo acha as peças; limpeza descarta clipe com legenda/logo). Se faltar, só pula essas checagens.
+rapidocr_onnxruntime

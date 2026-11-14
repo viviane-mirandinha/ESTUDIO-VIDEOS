@@ -1,0 +1,36 @@
+{
+ "nome": "Short amarelo rápido (1 palavra por vez, cortes rápidos)",
+ "nome_curto": "Short amarelo rápido",
+ "autor": "Estúdio de Vídeos",
+ "descricao": "Short em pé acelerado: cena nova a cada ~1,5-2,5 s, zoom forte, flash a cada 3 cortes, legenda de 1 palavra gigante no centro e título fixo no topo.",
+ "formato": "short",
+ "imagens": "wikimedia",
+ "clipes": true,
+ "dica_busca": "real photographs and stock footage, vertical, close-up",
+ "preferir_titulo": [
+  "photo",
+  "close"
+ ],
+ "shot_min": 1.4,
+ "shot_max": 2.6,
+ "palavras_por_minuto": 175,
+ "pad_fim": 0.6,
+ "roteiro_prompt": "short rápido de curiosidade",
+ "copiar": [],
+ "preset": {
+  "formato": "short",
+  "cor_destaque": "#ffd400",
+  "fonte": "condensada",
+  "legenda": true,
+  "legenda_pos": "centro",
+  "legenda_palavras": 1,
+  "legenda_tamanho": 132,
+  "titulo_fixo": true,
+  "zoom": 0.2,
+  "flash_cada": 3,
+  "vinheta": true,
+  "cartao_final": true,
+  "cta": false,
+  "transicao": 0.12
+ }
+}

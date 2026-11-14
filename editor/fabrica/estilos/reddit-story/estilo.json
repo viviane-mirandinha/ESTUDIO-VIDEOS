@@ -1,0 +1,45 @@
+{
+ "nome": "Reddit story (card do post + legenda palavra-por-palavra sobre gameplay)",
+ "origem": "TESTE ESTILOS DARK/VIDEOS/12-reddit (mk_edit.py)",
+ "imagens": "gameplay",
+ "shot_min": 2.0,
+ "shot_max": 6.0,
+ "palavras_por_minuto": 160,
+ "roteiro_prompt": "história de Reddit em primeira pessoa, estilo 'EOB — Eu sou o babaca?', drama familiar/relacionamento, ficção",
+ "regras_roteiro": "Você é um roteirista de histórias virais de Reddit (estilo 'Eu sou o babaca?'). Regras: 1) História FICTÍCIA em PRIMEIRA pessoa, português do Brasil coloquial, frases curtas. 2) A PRIMEIRA frase da locução é exatamente o título da postagem, em forma de pergunta começando com 'Eu sou o babaca por' ou 'Estou errado por'. 3) Depois conte a história de forma linear: contexto rápido, o conflito, o que você fez, a reação das pessoas, e termine perguntando se exagerou. 4) Gancho forte nos 5 primeiros segundos, sem saudação. 5) Sem nomes de pessoas reais famosas, sem marcas. 6) Nada de títulos, marcadores, emojis ou colchetes: só a locução pura. 7) No final, uma frase curta pedindo pra comentar quem está certo e deixar o like.",
+ "formatos": [
+  "longo",
+  "short"
+ ],
+ "copiar": [
+  "fonts"
+ ],
+ "bom_para": [
+  "histórias de internet (Reddit)",
+  "desabafos",
+  "drama de família e trabalho"
+ ],
+ "palavras_tema": [
+  "reddit",
+  "namorad",
+  "sogra",
+  "chefe",
+  "vizinh",
+  "casamento",
+  "noiva",
+  "traic",
+  "traiu",
+  "familia",
+  "desabafo",
+  "aita",
+  "colega",
+  "meu ex",
+  "minha ex",
+  "irma",
+  "cunhad",
+  "story time",
+  "boyfriend",
+  "girlfriend",
+  "wedding"
+ ]
+}

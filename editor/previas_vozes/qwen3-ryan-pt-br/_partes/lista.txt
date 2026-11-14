@@ -1,0 +1,1 @@
+file '<pacote>/editor/.cache/previas/qwen3-ryan-pt-br/_partes/p01.wav'

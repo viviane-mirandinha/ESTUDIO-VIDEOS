@@ -1,0 +1,1 @@
+file '<pacote>/editor/.cache/previas/qwen3-dylan-pt-br/_partes/p01.wav'

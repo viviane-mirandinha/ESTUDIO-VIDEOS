@@ -1,0 +1,365 @@
+<title>Guia do Estúdio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Single dark theme — studio/production tool aesthetic */
+:root {
+  --bg: #0f1114;
+  --surface: #181b20;
+  --surface2: #1e2228;
+  --border: #2a2f38;
+  --fg: #e4e6ea;
+  --fg2: #9da3ae;
+  --accent: #6c8cff;
+  --accent2: #4ecdc4;
+  --warn: #f7a858;
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --body: 'Inter', system-ui, sans-serif;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1, h2, h3 { font-family: var(--display); color: var(--fg); margin: 0; }
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 3rem; }
+h1 span { color: var(--accent); }
+h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1rem; font-weight: 600; margin-top: 1.5rem; color: var(--accent2); }
+p { margin: 0.75rem 0; }
+.subtitle { color: var(--fg2); font-size: 1rem; margin-top: 0.5rem; }
+.badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; margin-left: 6px; }
+.badge.green { background: var(--accent2); color: #0f1114; }
+.badge.orange { background: var(--warn); color: #0f1114; }
+.version { color: var(--fg2); font-size: 0.85rem; margin-top: 0.25rem; }
+.steps { list-style: none; padding: 0; margin: 1rem 0; display: flex; flex-direction: column; gap: 0.75rem; counter-reset: step; }
+.steps li { counter-increment: step; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1rem 1rem 3.5rem; position: relative; }
+.steps li::before { content: counter(step); position: absolute; left: 1rem; top: 1rem; width: 1.75rem; height: 1.75rem; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 0.85rem; }
+.steps li strong { color: var(--fg); }
+code { background: var(--surface2); color: var(--accent); padding: 2px 6px; border-radius: 3px; font-size: 0.85em; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+pre { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; overflow-x: auto; font-size: 0.85rem; margin: 0.75rem 0; }
+pre code { background: none; padding: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; margin: 1rem 0; }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; min-width: 0; }
+.card .name { font-family: var(--display); font-weight: 600; font-size: 0.9rem; color: var(--fg); }
+.card .desc { color: var(--fg2); font-size: 0.8rem; margin-top: 0.25rem; }
+.cat-label { display: inline-block; font-size: 0.7rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.85rem; }
+th { text-align: left; padding: 0.5rem 0.75rem; background: var(--surface); color: var(--fg2); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 2px solid var(--border); }
+td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+td:first-child { font-weight: 500; white-space: nowrap; }
+.prompt-box { background: var(--surface); border: 2px solid var(--accent); border-radius: 8px; padding: 1.25rem; margin: 1rem 0; position: relative; }
+.prompt-box::before { content: 'PROMPT PRONTO — COLE NO CLAUDE CODE'; position: absolute; top: -0.65rem; left: 1rem; background: var(--bg); padding: 0 0.5rem; font-size: 0.65rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; }
+.prompt-box p { color: var(--fg); font-size: 0.9rem; margin: 0; white-space: pre-wrap; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.footer { color: var(--fg2); font-size: 0.8rem; text-align: center; padding: 2rem 0 1rem; }
+@media print {
+  :root { --bg: #fff; --surface: #f6f7f9; --surface2: #e9ecf1; --border: #d5d9e0; --fg: #111; --fg2: #555; --accent: #3550c8; --accent2: #127a73; --warn: #b5650d; color-scheme: light; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { max-width: none; padding: 1cm; }
+  .card, tr, .steps li { break-inside: avoid; }
+  .badge { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .steps li::before { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style>
+
+<h1>Estúdio de <span>Vídeos</span></h1>
+<p class="subtitle">Fábrica de vídeos para canais dark — editor local, vídeos automáticos, 79 skills de IA</p>
+<p class="version">Versão 02/11/2026</p>
+
+<h2>Instalação</h2>
+<p>Requisitos: Windows 10+, Mac (macOS 13+) ou Linux · 16 GB RAM (32 melhor) · 15-30 GB livres · Internet na primeira vez (~8-10 GB de downloads)</p>
+
+<ol class="steps">
+  <li><strong>Descompacte</strong> o zip numa pasta simples, sem acento, fora do OneDrive. Ex: <code>C:\ESTUDIO-VIDEOS</code></li>
+  <li><strong>Dê dois cliques em <code>INSTALAR.bat</code></strong>. Se o Windows perguntar "Permitir alterações?", clique <strong>Sim</strong>. Se aparecer "O Windows protegeu o computador", clique em <strong>Mais informações → Executar assim mesmo</strong>.</li>
+  <li><strong>Espere</strong> (15 min a 1 h, depende da internet). Ele instala Python, Node, ffmpeg, Ollama e tudo que precisa sozinho. Deu erro? Leia a mensagem amarela <strong>"O QUE FAZER"</strong>, faça e clique de novo no INSTALAR.bat (ele continua de onde parou). Se não resolver, mande o arquivo <code>INSTALACAO.log</code> pro suporte.</li>
+  <li><strong>Pronto:</strong> o painel abre sozinho (<a href="http://localhost:8780">localhost:8780</a>) e fica um atalho <strong>"Estúdio de Vídeos"</strong> na área de trabalho.</li>
+  <li><strong>Peça vídeos!</strong> Botão ➕ no painel. Não precisa de nenhuma chave de API. Mac/Linux: <code>bash setup.sh</code> e depois <code>bash iniciar.sh</code>.</li>
+</ol>
+
+<p><strong>Sem Claude Code?</strong> Windows: botão direito em <code>setup.ps1</code> → "Executar com o PowerShell". Mac/Linux: <code>bash setup.sh</code> no Terminal.</p>
+
+<h2>Como usar com o Claude Code</h2>
+
+<div class="prompt-box">
+<p>Olha essa pasta. É o Estúdio de Vídeos.
+Instala tudo e me avisa quando terminar.
+Depois me mostra os estilos disponíveis.</p>
+</div>
+
+<p>Outros comandos úteis:</p>
+<div style="overflow-x:auto">
+<table>
+  <tr><th>Você escreve</th><th>O que acontece</th></tr>
+  <tr><td><code>faz um vídeo no estilo historia-simples sobre café</code></td><td>Cria vídeo completo (roteiro + voz + render)</td></tr>
+  <tr><td><code>copia o estilo deste vídeo https://youtube.com/...</code></td><td>Clona estilo visual de qualquer vídeo do YouTube</td></tr>
+  <tr><td><code>faz um short sobre por que gatos ronronam</code></td><td>Cria short 9:16 (60s)</td></tr>
+  <tr><td><code>mostra os estilos disponíveis</code></td><td>Lista todos os estilos com exemplos</td></tr>
+  <tr><td><code>edita esse reel</code></td><td>Usa a skill de edição de Reel no seu vídeo</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<h2>Todas as 79 Skills <span class="badge">AI LAB</span></h2>
+<p style="color:var(--fg2)">Skills são habilidades que o Claude Code usa automaticamente quando você pede algo dentro do Estúdio. Todas já estão instaladas.</p>
+
+<h3>Edição de Reels / Shorts</h3>
+<div class="grid">
+  <div class="card"><div class="name">mascota-pixel</div><div class="desc">Sua foto vira mascote pixel art que fala com a sua voz</div></div>
+  <div class="card"><div class="name">etiqueta-brutal</div><div class="desc">Fundo creme, legenda em etiquetas com sombra</div></div>
+  <div class="card"><div class="name">ganchos-reels</div><div class="desc">Ganchos de abertura para Reels/Shorts</div></div>
+  <div class="card"><div class="name">kinetic-creme</div><div class="desc">Tipografia cinética fundo creme + laranja</div></div>
+  <div class="card"><div class="name">kinetic-noir</div><div class="desc">Preto + verde-limão, câmera 3D elástica</div></div>
+  <div class="card"><div class="name">manifesto-feed</div><div class="desc">Texto opinião, grafite, tipografia pesada</div></div>
+  <div class="card"><div class="name">mascote-apresentador</div><div class="desc">Mascote fofo apresenta o vídeo todo</div></div>
+  <div class="card"><div class="name">moldura-pop</div><div class="desc">Moldura colorida, cabeça sai da borda</div></div>
+  <div class="card"><div class="name">reelmimic</div><div class="desc">Clona estilo visual de qualquer Reel</div></div>
+  <div class="card"><div class="name">safe-zone-reels</div><div class="desc">Garante safe zone em Reels 9:16</div></div>
+</div>
+
+<h3>Motion Graphics — Estilos visuais</h3>
+<div class="grid grid-3">
+  <div class="card"><div class="name">mg-3d-render</div><div class="desc">Render 3D realista</div></div>
+  <div class="card"><div class="name">mg-aurora-glass</div><div class="desc">Vidro aurora boreal</div></div>
+  <div class="card"><div class="name">mg-bauhaus</div><div class="desc">Geométrico Bauhaus</div></div>
+  <div class="card"><div class="name">mg-cel-boil</div><div class="desc">Animação cel-shading</div></div>
+  <div class="card"><div class="name">mg-collage</div><div class="desc">Colagem de papel</div></div>
+  <div class="card"><div class="name">mg-flat-vector</div><div class="desc">Vetor flat colorido</div></div>
+  <div class="card"><div class="name">mg-hanazi</div><div class="desc">Estilo hanazi japonês</div></div>
+  <div class="card"><div class="name">mg-hud</div><div class="desc">Interface HUD futurista</div></div>
+  <div class="card"><div class="name">mg-isometric</div><div class="desc">Isométrico 3D</div></div>
+  <div class="card"><div class="name">mg-line-art</div><div class="desc">Traço fino line art</div></div>
+  <div class="card"><div class="name">mg-liquid</div><div class="desc">Fluido líquido</div></div>
+  <div class="card"><div class="name">mg-morph</div><div class="desc">Morphing entre formas</div></div>
+  <div class="card"><div class="name">mg-paperclip</div><div class="desc">Paperclip / grampo</div></div>
+  <div class="card"><div class="name">mg-pixel</div><div class="desc">Pixel art retrô</div></div>
+  <div class="card"><div class="name">mg-styles-15</div><div class="desc">Pack com 15 estilos MG</div></div>
+  <div class="card"><div class="name">mg-synthwave</div><div class="desc">Neon synthwave 80s</div></div>
+</div>
+
+<h3>HyperFrames — Motor de vídeo</h3>
+<div class="grid grid-3">
+  <div class="card"><div class="name">hyperframes</div><div class="desc">Skill principal do motor</div></div>
+  <div class="card"><div class="name">hyperframes-animation</div><div class="desc">Sistema de animação</div></div>
+  <div class="card"><div class="name">hyperframes-audio</div><div class="desc">Áudio, mixagem, FX</div></div>
+  <div class="card"><div class="name">hyperframes-cli</div><div class="desc">CLI de render</div></div>
+  <div class="card"><div class="name">hyperframes-core</div><div class="desc">Core do framework</div></div>
+  <div class="card"><div class="name">hyperframes-creative</div><div class="desc">Direção criativa</div></div>
+  <div class="card"><div class="name">hyperframes-keyframes</div><div class="desc">Keyframes e easing</div></div>
+  <div class="card"><div class="name">hyperframes-registry</div><div class="desc">Registry de componentes</div></div>
+</div>
+
+<h3>Remotion — Vídeo programático</h3>
+<div class="grid grid-3">
+  <div class="card"><div class="name">remotion-best-practices</div><div class="desc">Boas práticas</div></div>
+  <div class="card"><div class="name">remotion-captions</div><div class="desc">Legendas automáticas</div></div>
+  <div class="card"><div class="name">remotion-create</div><div class="desc">Criar projeto novo</div></div>
+  <div class="card"><div class="name">remotion-docs</div><div class="desc">Documentação</div></div>
+  <div class="card"><div class="name">remotion-interactivity</div><div class="desc">Elementos interativos</div></div>
+  <div class="card"><div class="name">remotion-maps</div><div class="desc">Mapas animados</div></div>
+  <div class="card"><div class="name">remotion-markup</div><div class="desc">Markup e layout</div></div>
+  <div class="card"><div class="name">remotion-multimedia</div><div class="desc">Vídeo + áudio</div></div>
+  <div class="card"><div class="name">remotion-render</div><div class="desc">Render e export</div></div>
+  <div class="card"><div class="name">remotion-saas</div><div class="desc">SaaS com Remotion</div></div>
+  <div class="card"><div class="name">remotion-studio</div><div class="desc">Studio visual</div></div>
+  <div class="card"><div class="name">remotion-upgrade</div><div class="desc">Upgrade de versão</div></div>
+</div>
+
+<h3>Criação de vídeo</h3>
+<div class="grid">
+  <div class="card"><div class="name">cartoon</div><div class="desc">Desenho infantil feltro e papel</div></div>
+  <div class="card"><div class="name">embedded-captions</div><div class="desc">Legendas embutidas no vídeo</div></div>
+  <div class="card"><div class="name">general-video</div><div class="desc">Pipeline genérico de vídeo</div></div>
+  <div class="card"><div class="name">hand-drawing</div><div class="desc">Mão desenhando no quadro</div></div>
+  <div class="card"><div class="name">maquete-viva</div><div class="desc">Maquete 3D (Blender)</div></div>
+  <div class="card"><div class="name">motion-graphics</div><div class="desc">Motion graphics genérico</div></div>
+  <div class="card"><div class="name">shorts</div><div class="desc">Pipeline de Shorts</div></div>
+  <div class="card"><div class="name">talking-head-recut</div><div class="desc">Re-edição de talking head</div></div>
+  <div class="card"><div class="name">animate</div><div class="desc">Animação procedural (recorte, nanquim, riso…)</div></div>
+  <div class="card"><div class="name">huashu-motion</div><div class="desc">Motion de lançamento</div></div>
+  <div class="card"><div class="name">motion-prompt</div><div class="desc">Prompts de motion design</div></div>
+  <div class="card"><div class="name">pixelfx</div><div class="desc">244 efeitos em pixel art</div></div>
+  <div class="card"><div class="name">roblox</div><div class="desc">Roblox Story (Nessa cidade…)</div></div>
+</div>
+
+<h3>Avatar e IA visual</h3>
+<div class="grid">
+  <div class="card"><div class="name">ai-avatar-video-system</div><div class="desc">Sistema de avatar IA para vídeos</div></div>
+  <div class="card"><div class="name">avatar-realista</div><div class="desc">Avatar realista com lip-sync</div></div>
+</div>
+
+<h3>Áudio e SFX</h3>
+<div class="grid">
+  <div class="card"><div class="name">earshot</div><div class="desc">Análise e escolha de áudio/SFX</div></div>
+  <div class="card"><div class="name">real-sound</div><div class="desc">Som realista para vídeos</div></div>
+</div>
+
+<h3>Instagram e YouTube</h3>
+<div class="grid">
+  <div class="card"><div class="name">ig-profile-analyzer</div><div class="desc">Análise de perfil Instagram</div></div>
+  <div class="card"><div class="name">claude-youtube</div><div class="desc">YouTube completo (SEO, analytics, estratégia)</div></div>
+  <div class="card"><div class="name">content-ideas</div><div class="desc">Gerador de ideias de conteúdo</div></div>
+  <div class="card"><div class="name">_ig-shared</div><div class="desc">Recursos compartilhados IG</div></div>
+</div>
+
+<h3>GSAP e 3D</h3>
+<div class="grid">
+  <div class="card"><div class="name">img2threejs</div><div class="desc">Converter imagem em cena Three.js 3D</div></div>
+</div>
+
+<h3>Utilidades e assistentes</h3>
+<div class="grid grid-3">
+  <div class="card"><div class="name">brainstorming</div><div class="desc">Brainstorm estruturado</div></div>
+  <div class="card"><div class="name">escolher-estilo</div><div class="desc">Quiz para escolher estilo</div></div>
+  <div class="card"><div class="name">clientes-simulados</div><div class="desc">Simular feedback de clientes</div></div>
+  <div class="card"><div class="name">dispatching-parallel-agents</div><div class="desc">Rodar agentes em paralelo</div></div>
+  <div class="card"><div class="name">marca-dagua</div><div class="desc">Aplicar marca d'água</div></div>
+  <div class="card"><div class="name">media-use</div><div class="desc">Usar mídia (vídeo/áudio/imagem)</div></div>
+  <div class="card"><div class="name">skill-do-jarvis</div><div class="desc">Edição completa estilo Jarvis</div></div>
+  <div class="card"><div class="name">task-observer</div><div class="desc">Observar progresso de tarefas</div></div>
+  <div class="card"><div class="name">using-superpowers</div><div class="desc">Ferramentas avançadas Claude</div></div>
+  <div class="card"><div class="name">watch</div><div class="desc">Monitorar arquivos/pastas</div></div>
+  <div class="card"><div class="name">writing-skills</div><div class="desc">Escrita e copywriting</div></div>
+</div>
+
+<hr class="divider">
+
+<h2>Todos os estilos de vídeo</h2>
+
+<h3>Estilos longos <span class="badge green">16:9</span></h3>
+<div style="overflow-x:auto">
+<table>
+  <tr><th>#</th><th>Estilo</th><th>Descrição</th></tr>
+  <tr><td>01</td><td>whiteboard-quadro</td><td>Quadro branco com desenhos e explicações</td></tr>
+  <tr><td>02</td><td>true-crime-arquivo</td><td>Arquivo policial, fotos e documentos</td></tr>
+  <tr><td>03</td><td>top10-contagem</td><td>Top 10/5 com contagem regressiva</td></tr>
+  <tr><td>04</td><td>comparacao-ranking</td><td>Comparação lado a lado com ranking</td></tr>
+  <tr><td>05</td><td>timeline-ano-a-ano</td><td>Linha do tempo cronológica</td></tr>
+  <tr><td>06</td><td>guerra-top-down</td><td>Mapa militar visto de cima</td></tr>
+  <tr><td>07</td><td>cartoon-paises</td><td>Países como personagens cartoon</td></tr>
+  <tr><td>08</td><td>fern-cinematico</td><td>Cinematográfico estilo documentário</td></tr>
+  <tr><td>09</td><td>desastre-fotos-cartoes</td><td>Fotos em cartões sobre desastres</td></tr>
+  <tr><td>10</td><td>caso-medico</td><td>Caso médico estilo série hospitalar</td></tr>
+  <tr><td>11</td><td>terror-creepy</td><td>Terror escuro com clima creepy</td></tr>
+  <tr><td>12</td><td>espaco-cosmos</td><td>Espaço e cosmos com visuais NASA</td></tr>
+  <tr><td>13</td><td>economia-graficos</td><td>Economia com gráficos animados</td></tr>
+  <tr><td>14</td><td>tipografia-cinetica</td><td>Tipografia cinética filosófica</td></tr>
+  <tr><td>15</td><td>kurzgesagt-vetor</td><td>Estilo Kurzgesagt (vetor colorido)</td></tr>
+  <tr><td>16</td><td>avatar-cartoon</td><td>Avatar cartoon consistente narrando</td></tr>
+  <tr><td>17</td><td>avatar-realista-ia</td><td>Avatar realista gerado por IA</td></tr>
+  <tr><td>18</td><td>comentario-prints</td><td>Prints e comentários, edição simples</td></tr>
+  <tr><td>19</td><td>psicologia-flat</td><td>Psicologia com ilustrações flat</td></tr>
+  <tr><td>20</td><td>anime-fitness</td><td>Fitness estilo anime</td></tr>
+  <tr><td>21</td><td>cards-produto</td><td>Cards de produto "this or that"</td></tr>
+  <tr><td>22</td><td>relatos-ia</td><td>Relatos com personagem IA</td></tr>
+  <tr><td>23</td><td>militar-footage</td><td>Footage militar real</td></tr>
+  <tr><td>24</td><td>filmes-cenas-ciencia</td><td>Cenas de filme explicando ciência</td></tr>
+  <tr><td>25</td><td>doc-local-mapas</td><td>Documentário local com mapas e dados</td></tr>
+  <tr><td>26</td><td>japones-reality-ia</td><td>Reality japonês com IA</td></tr>
+  <tr><td>27</td><td>doc-stock-megaprojetos</td><td>Megaprojetos com stock footage</td></tr>
+  <tr><td>28</td><td>infografico-escuro</td><td>Infográfico dourado em fundo escuro</td></tr>
+  <tr><td>29</td><td>ia-noticias-robo-3d</td><td>Notícias com robô 3D apresentador</td></tr>
+  <tr><td>30</td><td>experimento-real</td><td>Experimento real filmado (formigas etc.)</td></tr>
+  <tr><td>31</td><td>guerra-de-especies</td><td>Swarm — guerra de espécies</td></tr>
+  <tr><td>32</td><td>mapa-3d-sem-gelo</td><td>Documentário com mapa 3D</td></tr>
+  <tr><td>34</td><td>e-se-voce-stickman</td><td>"E se você..." com stickman</td></tr>
+  <tr><td>35</td><td>ranking-precos</td><td>Ranking de preços visual</td></tr>
+  <tr><td>36</td><td>terror-se-voce-ver</td><td>Terror "se você ver isso, corra"</td></tr>
+  <tr><td>37</td><td>historia-empresa</td><td>História de empresa ilustrada</td></tr>
+  <tr><td>38</td><td>colagem-de-papel</td><td>Colagem de papel artístico</td></tr>
+  <tr><td>39</td><td>arquivo-na-mesa</td><td>Documentos na mesa estilo investigação</td></tr>
+  <tr><td>40</td><td>despacho-de-guerra</td><td>Despacho militar com mapas</td></tr>
+  <tr><td>41</td><td>futebol-narrativa</td><td>Futebol com narrativa dramática</td></tr>
+  <tr><td>42</td><td>futebol-tv-retro</td><td>Futebol estilo TV retrô</td></tr>
+  <tr><td>43</td><td>mapa-vermelho</td><td>Mapa vermelho geopolítico</td></tr>
+  <tr><td>44</td><td>tecnologia-de-guerra</td><td>Tecnologia militar e defesa</td></tr>
+  <tr><td>45</td><td>hype-de-jogos</td><td>Hype de jogos / gaming</td></tr>
+  <tr><td>46</td><td>lore-de-quadrinhos</td><td>Lore de HQs e universos</td></tr>
+  <tr><td>47</td><td>documentario-em-alta</td><td>Documentário trending</td></tr>
+  <tr><td>48</td><td>noticias-consumo</td><td>Notícias de consumo</td></tr>
+  <tr><td>49</td><td>industria-energia</td><td>Indústria e energia</td></tr>
+  <tr><td>50</td><td>geopolitica-globo</td><td>Geopolítica com globo</td></tr>
+  <tr><td>51</td><td>investigacao-automotiva</td><td>Investigação automotiva</td></tr>
+  <tr><td>52</td><td>aviacao-defesa</td><td>Aviação e defesa aeroespacial</td></tr>
+  <tr><td>53</td><td>doc-investigativo</td><td>Documentário investigativo / mistério</td></tr>
+  <tr><td>54</td><td>top-lista-polaroid</td><td>Top lista com fotos polaroid</td></tr>
+  <tr><td>55</td><td>doc-cinematico-dourado</td><td>Documentário cinematográfico dourado</td></tr>
+  <tr><td>56</td><td>naval-militar</td><td>Naval e poder militar</td></tr>
+</table>
+</div>
+
+<h3>Estilos Shorts / Reels <span class="badge orange">9:16</span></h3>
+<div style="overflow-x:auto">
+<table>
+  <tr><th>#</th><th>Estilo</th><th>Descrição</th></tr>
+  <tr><td>01</td><td>saga-sobrevivencia-2d</td><td>Saga de sobrevivência animação 2D</td></tr>
+  <tr><td>02</td><td>lowpoly-3d-desmontando</td><td>Desmontando objetos em low-poly 3D</td></tr>
+  <tr><td>03</td><td>3d-escuro-por-dentro</td><td>"Por dentro" de objetos em 3D escuro</td></tr>
+  <tr><td>04</td><td>3d-comparacao-pedestais</td><td>Comparação em pedestais 3D</td></tr>
+  <tr><td>05</td><td>cidade-lowpoly</td><td>Cidade low-poly com seguidores</td></tr>
+  <tr><td>06</td><td>dados-ranking-escuro</td><td>Dados e ranking fundo escuro/amarelo</td></tr>
+  <tr><td>11</td><td>voce-decide-stickman</td><td>"Você decide" interativo com stickman</td></tr>
+  <tr><td>12</td><td>explicador-3d-vertical</td><td>Explicador 3D vertical</td></tr>
+  <tr><td>13</td><td>futebol-stats-rapido</td><td>Stats de futebol rápido</td></tr>
+  <tr><td>—</td><td>_kit / _template-palco3d</td><td>Templates de código (JS low-poly, palco 3D)</td></tr>
+</table>
+</div>
+
+<h3>Estilos da Fábrica (automáticos, 0 token)</h3>
+<div style="overflow-x:auto">
+<table>
+  <tr><th>Estilo</th><th>O que faz</th><th>Duração</th></tr>
+  <tr><td><code>historia-simples</code></td><td>História com imagens + narração</td><td>3-8 min</td></tr>
+  <tr><td><code>psicologia-sombria</code></td><td>Psicologia dark com tipografia</td><td>5-10 min</td></tr>
+  <tr><td><code>reddit-story</code></td><td>Relato Reddit + gameplay de fundo</td><td>5-15 min</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<h2>Estrutura do pacote</h2>
+<div style="overflow-x:auto">
+<table>
+  <tr><th>Pasta</th><th>O que é</th></tr>
+  <tr><td><code>editor/</code></td><td>Editor local (FastAPI). <code>server.py</code>, <code>build_from_edit.py</code>, <code>FORMATO.md</code></td></tr>
+  <tr><td><code>editor/fabrica/</code></td><td>Fábrica: vídeo completo sem gastar token (Ollama + edge-tts + Whisper + HyperFrames)</td></tr>
+  <tr><td><code>editor/skills_ia/</code></td><td>79 skills de IA do Claude (todas incluídas)</td></tr>
+  <tr><td><code>VIDEOS/</code></td><td>Vídeos de exemplo (26 prontos com mp4)</td></tr>
+  <tr><td><code>VIDEOS-NOVOS/</code></td><td>55 estilos longos (templates + exemplos)</td></tr>
+  <tr><td><code>VIDEOS-SHORTS/</code></td><td>15 estilos de Shorts 9:16</td></tr>
+  <tr><td><code>ESTILOS-NOVOS/</code></td><td>56 fichas de estilo (<code>ESTILO.md</code> + referências)</td></tr>
+  <tr><td><code>ESTILOS-SHORTS/</code></td><td>10 fichas de estilo Short</td></tr>
+  <tr><td><code>ROTEIROS*/</code></td><td>Roteiros prontos em texto</td></tr>
+  <tr><td><code>VIDEOAULAS/</code></td><td>28 videoaulas (aulas 00 a 26) de como usar</td></tr>
+  <tr><td><code>recursos/</code></td><td>Fontes (Google/OFL), SFX próprio, mapa Natural Earth</td></tr>
+  <tr><td><code>kits/</code></td><td>Kit 3D clay-retencao (Three.js)</td></tr>
+  <tr><td><code>node_modules/</code></td><td>HyperFrames + dependências (não mexer)</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<h2>Prompt para pedir ajuda</h2>
+<p>Se tiver qualquer problema, cole isso no Claude Code:</p>
+
+<div class="prompt-box">
+<p>Estou usando o Estúdio de Vídeos (pacote ESTUDIO-VIDEOS).
+Lê o CLAUDE.md e o LEIA-ME.md desta pasta.
+Me ajuda com: [descreva o problema ou o que quer fazer]</p>
+</div>
+
+<div class="footer">
+  Estúdio de Vídeos · v02/11/2026 · 79 skills · 56+ estilos<br>
+  Feito com Claude Code
+</div>
