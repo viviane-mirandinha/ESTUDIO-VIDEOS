@@ -1,0 +1,358 @@
+{
+ "version": 1,
+ "name": "35 - RANKING PRECOS - Do barato ao mais caro 6 coisas mais caras ja vendidas",
+ "estilo": "Ranking crescente de preço (foto grande + etiqueta + barras)",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#e9edf2"
+ },
+ "duration": 71.0,
+ "template": "local",
+ "fonts": {
+  "Anton": "fonts/Anton-Regular.ttf",
+  "Inter": "fonts/Inter.ttf"
+ },
+ "referencia": {
+  "canais": [
+   "jack pockets (@jackpockets)",
+   "10x Discovery (@10xDiscovery)"
+  ],
+  "videos": [
+   "https://youtu.be/jXwOcpkMQAA",
+   "https://youtu.be/dj0UAatiiDI"
+  ]
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 7.25,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 17.95,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 26.85,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 35.55,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 47.35,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 54.85,
+    "volume": 0.16,
+    "label": "whoosh troca item"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Itens"
+  },
+  {
+   "id": "visual",
+   "name": "Gráfico"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "t_titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título",
+   "start": 0.0,
+   "dur": 4.0,
+   "by": "template",
+   "props": {
+    "text": "DO BARATO AO MAIS CARO"
+   }
+  },
+  {
+   "id": "t_sub",
+   "type": "text",
+   "track": "textos",
+   "label": "Subtítulo + miniaturas",
+   "start": 1.5,
+   "dur": 5.7,
+   "by": "template",
+   "props": {
+    "text": "6 COISAS MAIS CARAS JÁ VENDIDAS"
+   }
+  },
+  {
+   "id": "t_hook",
+   "type": "text",
+   "track": "textos",
+   "label": "Gancho",
+   "start": 4.1,
+   "dur": 3.1,
+   "by": "template",
+   "props": {
+    "text": "A <b>Nº 1</b> VALE MAIS QUE AS OUTRAS 5 <b>SOMADAS</b>"
+   }
+  },
+  {
+   "id": "t_head",
+   "type": "text",
+   "track": "textos",
+   "label": "Cabeçalho",
+   "start": 7.3,
+   "dur": 58.0,
+   "by": "template",
+   "props": {
+    "text": "DO BARATO AO <i>MAIS CARO</i>"
+   }
+  },
+  {
+   "id": "t_chart",
+   "type": "text",
+   "track": "visual",
+   "label": "Gráfico (título)",
+   "start": 7.3,
+   "dur": 63.7,
+   "by": "template",
+   "props": {
+    "text": "VALOR PAGO (EM DÓLARES)"
+   }
+  },
+  {
+   "id": "t_nota",
+   "type": "text",
+   "track": "textos",
+   "label": "Nota de rodapé",
+   "start": 7.3,
+   "dur": 63.7,
+   "by": "template",
+   "props": {
+    "text": "Valores da época da venda, sem correção · Mercedes: €135 mi ≈ US$ 142 mi (2022)"
+   }
+  },
+  {
+   "id": "r_selo",
+   "type": "html",
+   "track": "fundo",
+   "label": "#6 UM CENTAVO MAGENTA",
+   "start": 7.3,
+   "dur": 10.7,
+   "by": "template",
+   "props": {
+    "rank": 6,
+    "nome": "UM CENTAVO MAGENTA",
+    "curto": "Selo",
+    "sub": "Selo · Guiana Inglesa, 1856 · leilão Sotheby's, 2021",
+    "img": "img/selo.jpg",
+    "fit": "contain",
+    "moeda": "US$",
+    "preco_num": 8.3,
+    "dec": 1,
+    "sufixo": "MI",
+    "preco_curto": "US$ 8,3 mi",
+    "valor_usd": 8.307,
+    "t_preco": 15.68,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "r_codex",
+   "type": "html",
+   "track": "fundo",
+   "label": "#5 CODEX LEICESTER",
+   "start": 18.0,
+   "dur": 8.9,
+   "by": "template",
+   "props": {
+    "rank": 5,
+    "nome": "CODEX LEICESTER",
+    "curto": "Codex",
+    "sub": "Caderno de Leonardo da Vinci · comprado por Bill Gates na Christie's, 1994",
+    "img": "img/codex.jpg",
+    "fit": "contain",
+    "moeda": "US$",
+    "preco_num": 30.8,
+    "dec": 1,
+    "sufixo": "MI",
+    "preco_curto": "US$ 30,8 mi",
+    "valor_usd": 30.8025,
+    "t_preco": 23.2,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "r_ferrari",
+   "type": "html",
+   "track": "fundo",
+   "label": "#4 FERRARI 250 GTO",
+   "start": 26.9,
+   "dur": 8.7,
+   "by": "template",
+   "props": {
+    "rank": 4,
+    "nome": "FERRARI 250 GTO",
+    "curto": "Ferrari",
+    "sub": "Ferrari 250 GTO de 1962 · leilão RM Sotheby's, 2018",
+    "img": "img/ferrari.jpg",
+    "fit": "cover",
+    "moeda": "US$",
+    "preco_num": 48.4,
+    "dec": 1,
+    "sufixo": "MI",
+    "preco_curto": "US$ 48,4 mi",
+    "valor_usd": 48.405,
+    "t_preco": 32.98,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "r_mercedes",
+   "type": "html",
+   "track": "fundo",
+   "label": "#3 MERCEDES 300 SLR UHLENHAUT",
+   "start": 35.6,
+   "dur": 11.8,
+   "by": "template",
+   "props": {
+    "rank": 3,
+    "nome": "MERCEDES 300 SLR UHLENHAUT",
+    "curto": "Mercedes",
+    "sub": "Coupé de 1955 · leilão RM Sotheby's, 2022 · carro mais caro já vendido",
+    "img": "img/mercedes.jpg",
+    "fit": "cover",
+    "moeda": "€",
+    "preco_num": 135,
+    "dec": 0,
+    "sufixo": "MI",
+    "preco_curto": "€ 135 mi",
+    "valor_usd": 142,
+    "t_preco": 43.52,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "r_modigliani",
+   "type": "html",
+   "track": "fundo",
+   "label": "#2 NU DEITADO",
+   "start": 47.4,
+   "dur": 7.5,
+   "by": "template",
+   "props": {
+    "rank": 2,
+    "nome": "NU DEITADO",
+    "curto": "Modigliani",
+    "sub": "Amedeo Modigliani, 1917-18 · leilão Christie's, 2015",
+    "img": "img/modigliani.jpg",
+    "fit": "cover",
+    "moeda": "US$",
+    "preco_num": 170.4,
+    "dec": 1,
+    "sufixo": "MI",
+    "preco_curto": "US$ 170,4 mi",
+    "valor_usd": 170.4,
+    "t_preco": 51.16,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "r_salvator",
+   "type": "html",
+   "track": "fundo",
+   "label": "#1 SALVATOR MUNDI",
+   "start": 54.9,
+   "dur": 10.4,
+   "by": "template",
+   "props": {
+    "rank": 1,
+    "nome": "SALVATOR MUNDI",
+    "curto": "Salvator",
+    "sub": "Atribuído a Leonardo da Vinci · leilão Christie's, 2017",
+    "img": "img/salvator.jpg",
+    "fit": "contain",
+    "moeda": "US$",
+    "preco_num": 450.3,
+    "dec": 1,
+    "sufixo": "MI",
+    "preco_curto": "US$ 450,3 mi",
+    "valor_usd": 450.3,
+    "t_preco": 60.54,
+    "html": "",
+    "css": ""
+   }
+  },
+  {
+   "id": "o_final",
+   "type": "text",
+   "track": "textos",
+   "label": "Fecho pergunta",
+   "start": 65.3,
+   "dur": 5.7,
+   "by": "template",
+   "props": {
+    "text": "QUAL DESSAS VOCÊ COMPRARIA?"
+   }
+  },
+  {
+   "id": "o_cta",
+   "type": "text",
+   "track": "textos",
+   "label": "Fecho comenta",
+   "start": 67.5,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "text": "COMENTA AÍ!"
+   }
+  },
+  {
+   "id": "o_ins",
+   "type": "text",
+   "track": "textos",
+   "label": "Inscreva-se",
+   "start": 68.2,
+   "dur": 2.8,
+   "by": "template",
+   "props": {
+    "text": "INSCREVA-SE"
+   }
+  }
+ ]
+}

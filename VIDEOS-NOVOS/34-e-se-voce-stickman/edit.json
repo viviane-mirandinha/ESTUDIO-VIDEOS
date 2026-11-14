@@ -1,0 +1,359 @@
+{
+ "version": 1,
+ "name": "34 - E SE VOCÊ (stickman) - E se você fosse 10 vezes mais rápido",
+ "estilo": "E SE VOCÊ — boneco de moletom + diagramas navy",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b1330"
+ },
+ "duration": 78.4,
+ "template": "local",
+ "fonts": {
+  "DMSerif": "fonts/DMSerifDisplay-Regular.ttf",
+  "MontX": "fonts/Montserrat-ExtraBold.ttf"
+ },
+ "referencia": {
+  "canal": "IFOLOGY",
+  "canal_url": "https://www.youtube.com/channel/UCv4DniMRgnBTmfFaxeMTTLA",
+  "video": "https://youtu.be/YznR5NmI3bc",
+  "titulo": "What IF You Could Stop Time?",
+  "nota": "só o estilo; personagem, nome e cenas próprios"
+ },
+ "audio": {
+  "voice": {
+   "src": "audio/voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "audio/musica.mp3",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w1",
+    "src": "audio/whoosh.wav",
+    "start": 15.1,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "audio/whoosh.wav",
+    "start": 31.2,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "audio/whoosh.wav",
+    "start": 52.65,
+    "volume": 0.22,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas"
+  }
+ ],
+ "items": [
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Copo cai",
+   "start": 0,
+   "dur": 6.6,
+   "by": "template",
+   "props": {
+    "scene": "cozinha",
+    "params": {
+     "modo": "cai",
+     "rotulo": "≈ 0,4 s",
+     "t_rot": 4.3,
+     "rotulo2": "queda de 80 cm",
+     "t_rot2": 1.9
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Você pega",
+   "start": 6.6,
+   "dur": 5.35,
+   "by": "template",
+   "props": {
+    "scene": "cozinha",
+    "params": {
+     "modo": "pega",
+     "rotulo": "PRA VOCÊ: 4 s",
+     "t_rot": 8.6,
+     "rotulo2": "0,4 s × 10",
+     "t_rot2": 8.3,
+     "t_corre": 8.4,
+     "t_pega": 10.9
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Título",
+   "start": 11.95,
+   "dur": 3.25,
+   "by": "template",
+   "props": {
+    "scene": "titulo",
+    "params": {
+     "linha1": "E SE VOCÊ FOSSE",
+     "linha2": "10× MAIS RÁPIDO?"
+    }
+   }
+  },
+  {
+   "id": "c4",
+   "type": "scene",
+   "track": "fundo",
+   "label": "5 → 50 km/h",
+   "start": 15.2,
+   "dur": 7.75,
+   "by": "template",
+   "props": {
+    "scene": "troca",
+    "params": {
+     "ia": "walker",
+     "ta": "5 km/h",
+     "meio": "× 10",
+     "ib": "car",
+     "tb": "50 km/h",
+     "titulo": "",
+     "em_a": 18.9,
+     "em_m": 20.9,
+     "em_b": 21.8
+    }
+   }
+  },
+  {
+   "id": "c5",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Anda junto do carro",
+   "start": 22.95,
+   "dur": 3.1,
+   "by": "template",
+   "props": {
+    "scene": "rua",
+    "params": {
+     "modo": "andar",
+     "rotulo": "50 KM/H",
+     "grande": true,
+     "t_rot": 24.9,
+     "rotulo2": "",
+     "t_rot2": 99
+    }
+   }
+  },
+  {
+   "id": "c6",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Corre a 100",
+   "start": 26.05,
+   "dur": 5.25,
+   "by": "template",
+   "props": {
+    "scene": "rua",
+    "params": {
+     "modo": "correr",
+     "rotulo": "100 KM/H",
+     "grande": true,
+     "t_rot": 28.6,
+     "rotulo2": "",
+     "t_rot2": 99
+    }
+   }
+  },
+  {
+   "id": "c7",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Força do ar",
+   "start": 31.3,
+   "dur": 7.15,
+   "by": "template",
+   "props": {
+    "scene": "curva",
+    "params": {
+     "titulo": "1º PROBLEMA: O AR",
+     "em_t": 32.8,
+     "em_ar": 33.86,
+     "em_c": 35.9,
+     "formula": "F ∝ v²",
+     "em_f": 36.7,
+     "eixo_x": "velocidade",
+     "eixo_y": "força do ar"
+    }
+   }
+  },
+  {
+   "id": "c8",
+   "type": "scene",
+   "track": "fundo",
+   "label": "10x vel = 100x força",
+   "start": 38.45,
+   "dur": 3.4,
+   "by": "template",
+   "props": {
+    "scene": "troca",
+    "params": {
+     "ia": "runner",
+     "ta": "10× velocidade",
+     "meio": "",
+     "ib": "wind",
+     "tb": "100× força",
+     "titulo": "",
+     "em_a": 38.6,
+     "em_m": 39.5,
+     "em_b": 40.2
+    }
+   }
+  },
+  {
+   "id": "c9",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Energia",
+   "start": 41.85,
+   "dur": 6.0,
+   "by": "template",
+   "props": {
+    "scene": "formula",
+    "params": {
+     "titulo": "2º PROBLEMA: A BATIDA",
+     "em_t": 42.4,
+     "formula": "E = ½ · m · ",
+     "formula_destaque": "v²",
+     "em_f": 44.6,
+     "resultado": "v × 10  →  E × 100",
+     "em_r": 46.6
+    }
+   }
+  },
+  {
+   "id": "c10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Poste",
+   "start": 47.85,
+   "dur": 4.9,
+   "by": "template",
+   "props": {
+    "scene": "rua",
+    "params": {
+     "modo": "poste",
+     "t_bate": 48.7,
+     "rotulo": "= ACIDENTE DE CARRO",
+     "t_rot": 49.7,
+     "rotulo2": "SÓ QUE SEM O CARRO",
+     "tam2": 72,
+     "t_rot2": 51.2,
+     "t_carro": 51.1
+    }
+   }
+  },
+  {
+   "id": "c11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3 s → 30 s",
+   "start": 52.75,
+   "dur": 8.2,
+   "by": "template",
+   "props": {
+    "scene": "tempo",
+    "params": {
+     "titulo": "E O SEU CÉREBRO?",
+     "em_t": 53.5,
+     "linha_a": "amigo fala",
+     "valor_a": "3 s",
+     "em_a": 58.0,
+     "linha_b": "você sente",
+     "valor_b": "30 s",
+     "em_b": 59.2
+    }
+   }
+  },
+  {
+   "id": "c12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "120 Hz → 12 Hz",
+   "start": 60.95,
+   "dur": 8.2,
+   "by": "template",
+   "props": {
+    "scene": "som",
+    "params": {
+     "valor_a": "120 Hz",
+     "em_a": 62.3,
+     "valor_b": "12 Hz",
+     "em_b": 63.9,
+     "zona": "abaixo de 20 Hz: quase sem tom",
+     "em_c": 65.3
+    }
+   }
+  },
+  {
+   "id": "c13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ronco arrastado",
+   "start": 69.15,
+   "dur": 1.8,
+   "by": "template",
+   "props": {
+    "scene": "rua",
+    "params": {
+     "modo": "conversa",
+     "fala": "ôôôôôiii...",
+     "rotulo": "",
+     "t_rot": 99,
+     "rotulo2": "",
+     "t_rot2": 99
+    }
+   }
+  },
+  {
+   "id": "c14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Fim",
+   "start": 70.95,
+   "dur": 7.45,
+   "by": "template",
+   "props": {
+    "scene": "rua",
+    "params": {
+     "modo": "fim",
+     "serif": true,
+     "rotulo": "A PESSOA MAIS RÁPIDA DO MUNDO",
+     "t_rot": 72.0,
+     "rotulo2": "presa num mundo em câmera lenta",
+     "tam2": 64,
+     "t_rot2": 74.4
+    }
+   }
+  }
+ ]
+}

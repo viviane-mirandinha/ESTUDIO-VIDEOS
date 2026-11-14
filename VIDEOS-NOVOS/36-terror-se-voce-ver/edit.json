@@ -1,0 +1,1255 @@
+{
+ "version": 1,
+ "name": "36 - 24-10-2026 - TERROR SE VOCE VER - Se o seu celular tocar sem chip às 3 da manhã... NÃO ATENDA",
+ "estilo": "36-terror-se-voce-ver",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#050505"
+ },
+ "duration": 70.6,
+ "template": "generic",
+ "fonts": {
+  "MontEB": "fonts/Montserrat-ExtraBold.ttf",
+  "MontMd": "fonts/Montserrat-Medium.ttf"
+ },
+ "head": "",
+ "referencia": {
+  "canal": "Bradikinin / Final Sight",
+  "canal_url": "https://www.youtube.com/@BradikininVideos",
+  "video": "https://youtu.be/-SXNp5h58vQ",
+  "titulo": "If Your Dog Ever Throws The Ball For You... GO GET IT",
+  "nota": "2ª ref: Final Sight https://youtu.be/vCPqDB1FYew (If You Ever See Your Dog Scream At 3AM... HIDE RIGHT NOW). Protocolo de sobrevivência fictício: pictogramas flat brancos no preto, vermelho de destaque, cartões REGRA N, frase em caixa alta embaixo."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.16,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 19.349999999999998,
+    "volume": 0.22,
+    "label": "whoosh regra"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 26.45,
+    "volume": 0.22,
+    "label": "whoosh regra"
+   },
+   {
+    "id": "wh2",
+    "src": "sfx/whoosh.wav",
+    "start": 35.3,
+    "volume": 0.22,
+    "label": "whoosh regra"
+   },
+   {
+    "id": "wh3",
+    "src": "sfx/whoosh.wav",
+    "start": 45.949999999999996,
+    "volume": 0.22,
+    "label": "whoosh regra"
+   },
+   {
+    "id": "tq0",
+    "src": "sfx/toque.wav",
+    "start": 6.9,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq1",
+    "src": "sfx/toque.wav",
+    "start": 9.9,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq2",
+    "src": "sfx/toque.wav",
+    "start": 11.6,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq3",
+    "src": "sfx/toque.wav",
+    "start": 14.6,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq4",
+    "src": "sfx/toque.wav",
+    "start": 17.6,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq5",
+    "src": "sfx/toque.wav",
+    "start": 22.3,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq6",
+    "src": "sfx/toque.wav",
+    "start": 25.3,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "tq7",
+    "src": "sfx/toque.wav",
+    "start": 62.2,
+    "volume": 0.1,
+    "label": "toque celular (ffmpeg)"
+   },
+   {
+    "id": "ta0",
+    "src": "sfx/toque_abafado.wav",
+    "start": 40.4,
+    "volume": 0.22,
+    "label": "toque abafado (ffmpeg)"
+   },
+   {
+    "id": "ta1",
+    "src": "sfx/toque_abafado.wav",
+    "start": 43.4,
+    "volume": 0.22,
+    "label": "toque abafado (ffmpeg)"
+   },
+   {
+    "id": "ta2",
+    "src": "sfx/toque_abafado.wav",
+    "start": 49.9,
+    "volume": 0.1,
+    "label": "toque abafado (ffmpeg)"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas ilustradas"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "c01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Aviso: história de ficção",
+   "start": 0.0,
+   "dur": 6.0,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "aviso",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0,
+     "t1": 1.86,
+     "total": 4
+    }
+   }
+  },
+  {
+   "id": "c02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Quarto 03:00, celular toca",
+   "start": 6.0,
+   "dur": 5.5,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "quarto",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "t1": 0.88,
+     "t2": 3.1,
+     "hora": "03:00",
+     "ordem": "NÃO ATENDA",
+     "t_ordem": 4.2
+    }
+   }
+  },
+  {
+   "id": "c03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Tela: número desconhecido",
+   "start": 11.5,
+   "dur": 7.95,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "tela",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "t1": 2.78,
+     "t2": 4.44,
+     "t3": 5.8
+    }
+   }
+  },
+  {
+   "id": "c04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Regra 1",
+   "start": 19.45,
+   "dur": 2.85,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "regra",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "n": 1,
+     "total": 4,
+     "texto": "NÃO ATENDA",
+     "t1": 1.55
+    }
+   }
+  },
+  {
+   "id": "c05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Contagem 7-8-9",
+   "start": 22.3,
+   "dur": 4.25,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "contagem",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "valores": "7,8,9",
+     "t1": 0.1,
+     "t2": 0.82,
+     "t3": 1.4,
+     "ordem": "DEIXE TOCAR",
+     "t_ordem": 2.82
+    }
+   }
+  },
+  {
+   "id": "c06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Regra 2",
+   "start": 26.55,
+   "dur": 3.35,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "regra",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "n": 2,
+     "total": 4,
+     "texto": "NÃO DESLIGUE O APARELHO",
+     "t1": 1.39
+    }
+   }
+  },
+  {
+   "id": "c07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Tela não apaga + mensagem",
+   "start": 29.9,
+   "dur": 5.5,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "mensagem",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "hora": "03:04",
+     "t1": 0.3,
+     "t2": 3.6,
+     "texto": "POR QUE|VOCÊ NÃO|ATENDE?"
+    }
+   }
+  },
+  {
+   "id": "c08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Regra 3",
+   "start": 35.4,
+   "dur": 3.1,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "regra",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "n": 3,
+     "total": 4,
+     "texto": "NÃO OLHE PARA A PORTA",
+     "t1": 1.42
+    }
+   }
+  },
+  {
+   "id": "c09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Toque vem do corredor",
+   "start": 38.5,
+   "dur": 7.55,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "porta",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "t1": 1.88,
+     "t2": 3.88,
+     "p1": "10ª LIGAÇÃO",
+     "p2": "DO CORREDOR"
+    }
+   }
+  },
+  {
+   "id": "c10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Regra 4",
+   "start": 46.05,
+   "dur": 3.8,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "regra",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "n": 4,
+     "total": 4,
+     "texto": "FIQUE NA CAMA",
+     "t1": 1.55
+    }
+   }
+  },
+  {
+   "id": "c11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Coberto, 03:13, passos",
+   "start": 49.85,
+   "dur": 4.75,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "cobrir",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "hora": "03:12",
+     "hora2": "03:13",
+     "t1": 0.57,
+     "t2": 1.69,
+     "t3": 3.35
+    }
+   }
+  },
+  {
+   "id": "c12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "A voz é a sua",
+   "start": 54.6,
+   "dur": 7.4,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "voz",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "t1": 3.44,
+     "t2": 5.38,
+     "texto": "AGORA É A SUA VEZ|DE LIGAR."
+    }
+   }
+  },
+  {
+   "id": "c13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "CTA final",
+   "start": 62.0,
+   "dur": 8.6,
+   "props": {
+    "scene": "sv_protocolo",
+    "params": {
+     "modo": "fim",
+     "rotulo": "PROTOCOLO 03:00 · FICÇÃO",
+     "fade_in": 0.25,
+     "t1": 2.68,
+     "t2": 4.6,
+     "texto": "VOCÊ ATENDERIA?",
+     "sub": "COMENTA AQUI EMBAIXO",
+     "p1": "INSCREVA-SE"
+    }
+   }
+  },
+  {
+   "id": "leg",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 6.0,
+   "dur": 56.0,
+   "props": {
+    "words": [
+     {
+      "w": "Esta",
+      "s": 0.0,
+      "e": 0.28
+     },
+     {
+      "w": "é",
+      "s": 0.28,
+      "e": 0.38
+     },
+     {
+      "w": "uma",
+      "s": 0.38,
+      "e": 0.48
+     },
+     {
+      "w": "história",
+      "s": 0.48,
+      "e": 0.78
+     },
+     {
+      "w": "de",
+      "s": 0.78,
+      "e": 0.96
+     },
+     {
+      "w": "ficção.",
+      "s": 0.96,
+      "e": 1.32
+     },
+     {
+      "w": "Mas,",
+      "s": 1.86,
+      "e": 2.46
+     },
+     {
+      "w": "se",
+      "s": 2.56,
+      "e": 2.88
+     },
+     {
+      "w": "um",
+      "s": 2.88,
+      "e": 2.98
+     },
+     {
+      "w": "dia",
+      "s": 2.98,
+      "e": 3.2
+     },
+     {
+      "w": "acontecer",
+      "s": 3.2,
+      "e": 3.56
+     },
+     {
+      "w": "com",
+      "s": 3.56,
+      "e": 3.86
+     },
+     {
+      "w": "você,",
+      "s": 3.86,
+      "e": 4.16
+     },
+     {
+      "w": "lembre",
+      "s": 4.34,
+      "e": 4.82
+     },
+     {
+      "w": "das",
+      "s": 4.82,
+      "e": 4.92
+     },
+     {
+      "w": "regras.",
+      "s": 4.92,
+      "e": 5.34
+     },
+     {
+      "w": "Se",
+      "s": 6.02,
+      "e": 6.32
+     },
+     {
+      "w": "o",
+      "s": 6.32,
+      "e": 6.46
+     },
+     {
+      "w": "seu",
+      "s": 6.46,
+      "e": 6.58
+     },
+     {
+      "w": "celular",
+      "s": 6.58,
+      "e": 6.88
+     },
+     {
+      "w": "tocar",
+      "s": 6.88,
+      "e": 7.22
+     },
+     {
+      "w": "às",
+      "s": 7.22,
+      "e": 7.42
+     },
+     {
+      "w": "três",
+      "s": 7.42,
+      "e": 7.6
+     },
+     {
+      "w": "da",
+      "s": 7.6,
+      "e": 7.8
+     },
+     {
+      "w": "manhã",
+      "s": 7.8,
+      "e": 8.08
+     },
+     {
+      "w": "e",
+      "s": 8.08,
+      "e": 8.36
+     },
+     {
+      "w": "não",
+      "s": 8.36,
+      "e": 8.58
+     },
+     {
+      "w": "tiver",
+      "s": 8.58,
+      "e": 8.82
+     },
+     {
+      "w": "nenhum",
+      "s": 8.82,
+      "e": 9.14
+     },
+     {
+      "w": "chip",
+      "s": 9.14,
+      "e": 9.46
+     },
+     {
+      "w": "dentro",
+      "s": 9.46,
+      "e": 9.74
+     },
+     {
+      "w": "dele,",
+      "s": 9.74,
+      "e": 10.1
+     },
+     {
+      "w": "não",
+      "s": 10.22,
+      "e": 10.48
+     },
+     {
+      "w": "atenda.",
+      "s": 10.48,
+      "e": 10.86
+     },
+     {
+      "w": "Na",
+      "s": 11.56,
+      "e": 11.86
+     },
+     {
+      "w": "tela,",
+      "s": 11.86,
+      "e": 12.26
+     },
+     {
+      "w": "número",
+      "s": 12.34,
+      "e": 12.7
+     },
+     {
+      "w": "desconhecido.",
+      "s": 12.7,
+      "e": 13.54
+     },
+     {
+      "w": "Sem",
+      "s": 14.28,
+      "e": 14.58
+     },
+     {
+      "w": "operadora.",
+      "s": 14.58,
+      "e": 15.18
+     },
+     {
+      "w": "Sem",
+      "s": 15.94,
+      "e": 16.24
+     },
+     {
+      "w": "sinal.",
+      "s": 16.24,
+      "e": 16.6
+     },
+     {
+      "w": "E",
+      "s": 17.26,
+      "e": 17.56
+     },
+     {
+      "w": "mesmo",
+      "s": 17.56,
+      "e": 17.84
+     },
+     {
+      "w": "assim,",
+      "s": 17.84,
+      "e": 18.08
+     },
+     {
+      "w": "ele",
+      "s": 18.26,
+      "e": 18.56
+     },
+     {
+      "w": "toca.",
+      "s": 18.56,
+      "e": 18.82
+     },
+     {
+      "w": "Regra",
+      "s": 19.54,
+      "e": 20.14
+     },
+     {
+      "w": "um.",
+      "s": 20.14,
+      "e": 20.24
+     },
+     {
+      "w": "Não",
+      "s": 21.04,
+      "e": 21.34
+     },
+     {
+      "w": "atenda.",
+      "s": 21.34,
+      "e": 21.72
+     },
+     {
+      "w": "sete,",
+      "s": 22.4,
+      "e": 23.0
+     },
+     {
+      "w": "oito,",
+      "s": 23.12,
+      "e": 23.52
+     },
+     {
+      "w": "nove",
+      "s": 23.7,
+      "e": 24.0
+     },
+     {
+      "w": "vezes.",
+      "s": 24.0,
+      "e": 24.4
+     },
+     {
+      "w": "Deixe",
+      "s": 25.12,
+      "e": 25.72
+     },
+     {
+      "w": "tocar.",
+      "s": 25.72,
+      "e": 25.88
+     },
+     {
+      "w": "Regra",
+      "s": 26.66,
+      "e": 27.26
+     },
+     {
+      "w": "dois.",
+      "s": 27.26,
+      "e": 27.4
+     },
+     {
+      "w": "Não",
+      "s": 27.94,
+      "e": 28.54
+     },
+     {
+      "w": "desligue",
+      "s": 28.54,
+      "e": 29.06
+     },
+     {
+      "w": "o",
+      "s": 29.06,
+      "e": 29.08
+     },
+     {
+      "w": "aparelho.",
+      "s": 29.08,
+      "e": 29.52
+     },
+     {
+      "w": "A",
+      "s": 30.0,
+      "e": 30.36
+     },
+     {
+      "w": "tela",
+      "s": 30.36,
+      "e": 30.64
+     },
+     {
+      "w": "não",
+      "s": 30.64,
+      "e": 30.86
+     },
+     {
+      "w": "apaga.",
+      "s": 30.86,
+      "e": 31.32
+     },
+     {
+      "w": "Ela",
+      "s": 31.78,
+      "e": 32.28
+     },
+     {
+      "w": "só",
+      "s": 32.28,
+      "e": 32.5
+     },
+     {
+      "w": "mostra",
+      "s": 32.5,
+      "e": 32.86
+     },
+     {
+      "w": "uma",
+      "s": 32.86,
+      "e": 33.0
+     },
+     {
+      "w": "frase.",
+      "s": 33.0,
+      "e": 33.34
+     },
+     {
+      "w": "Por",
+      "s": 33.5,
+      "e": 33.82
+     },
+     {
+      "w": "que",
+      "s": 33.82,
+      "e": 34.02
+     },
+     {
+      "w": "você",
+      "s": 34.02,
+      "e": 34.22
+     },
+     {
+      "w": "não",
+      "s": 34.22,
+      "e": 34.4
+     },
+     {
+      "w": "atende?",
+      "s": 34.4,
+      "e": 34.76
+     },
+     {
+      "w": "Regra",
+      "s": 35.48,
+      "e": 35.98
+     },
+     {
+      "w": "três.",
+      "s": 35.98,
+      "e": 36.16
+     },
+     {
+      "w": "Não",
+      "s": 36.82,
+      "e": 37.32
+     },
+     {
+      "w": "olhe",
+      "s": 37.32,
+      "e": 37.68
+     },
+     {
+      "w": "para",
+      "s": 37.68,
+      "e": 37.78
+     },
+     {
+      "w": "a",
+      "s": 37.78,
+      "e": 37.88
+     },
+     {
+      "w": "porta.",
+      "s": 37.88,
+      "e": 38.14
+     },
+     {
+      "w": "Na",
+      "s": 38.6,
+      "e": 39.1
+     },
+     {
+      "w": "décima",
+      "s": 39.1,
+      "e": 39.56
+     },
+     {
+      "w": "ligação,",
+      "s": 39.56,
+      "e": 39.92
+     },
+     {
+      "w": "o",
+      "s": 40.08,
+      "e": 40.38
+     },
+     {
+      "w": "toque",
+      "s": 40.38,
+      "e": 40.72
+     },
+     {
+      "w": "não",
+      "s": 40.72,
+      "e": 40.84
+     },
+     {
+      "w": "vem",
+      "s": 40.84,
+      "e": 41.08
+     },
+     {
+      "w": "mais",
+      "s": 41.08,
+      "e": 41.28
+     },
+     {
+      "w": "do",
+      "s": 41.28,
+      "e": 41.44
+     },
+     {
+      "w": "celular.",
+      "s": 41.44,
+      "e": 41.74
+     },
+     {
+      "w": "Vem",
+      "s": 42.38,
+      "e": 42.88
+     },
+     {
+      "w": "do",
+      "s": 42.88,
+      "e": 43.0
+     },
+     {
+      "w": "corredor.",
+      "s": 43.0,
+      "e": 43.54
+     },
+     {
+      "w": "Do",
+      "s": 43.88,
+      "e": 44.38
+     },
+     {
+      "w": "outro",
+      "s": 44.38,
+      "e": 44.66
+     },
+     {
+      "w": "lado",
+      "s": 44.66,
+      "e": 44.94
+     },
+     {
+      "w": "da",
+      "s": 44.94,
+      "e": 45.14
+     },
+     {
+      "w": "porta.",
+      "s": 45.14,
+      "e": 45.4
+     },
+     {
+      "w": "Regra",
+      "s": 46.16,
+      "e": 46.66
+     },
+     {
+      "w": "quatro.",
+      "s": 46.66,
+      "e": 46.86
+     },
+     {
+      "w": "Fique",
+      "s": 47.6,
+      "e": 48.1
+     },
+     {
+      "w": "na",
+      "s": 48.1,
+      "e": 48.24
+     },
+     {
+      "w": "cama",
+      "s": 48.24,
+      "e": 48.58
+     },
+     {
+      "w": "e",
+      "s": 48.58,
+      "e": 48.7
+     },
+     {
+      "w": "cubra",
+      "s": 48.7,
+      "e": 48.92
+     },
+     {
+      "w": "o",
+      "s": 48.92,
+      "e": 48.98
+     },
+     {
+      "w": "celular.",
+      "s": 48.98,
+      "e": 49.22
+     },
+     {
+      "w": "Às",
+      "s": 49.94,
+      "e": 50.42
+     },
+     {
+      "w": "três e treze,",
+      "s": 50.42,
+      "e": 50.84
+     },
+     {
+      "w": "ele",
+      "s": 51.16,
+      "e": 51.54
+     },
+     {
+      "w": "para.",
+      "s": 51.54,
+      "e": 51.68
+     },
+     {
+      "w": "E",
+      "s": 52.18,
+      "e": 52.68
+     },
+     {
+      "w": "você",
+      "s": 52.68,
+      "e": 52.88
+     },
+     {
+      "w": "ouve",
+      "s": 52.88,
+      "e": 53.2
+     },
+     {
+      "w": "passos",
+      "s": 53.2,
+      "e": 53.54
+     },
+     {
+      "w": "indo",
+      "s": 53.54,
+      "e": 53.74
+     },
+     {
+      "w": "embora.",
+      "s": 53.74,
+      "e": 53.98
+     },
+     {
+      "w": "Mas,",
+      "s": 54.72,
+      "e": 55.22
+     },
+     {
+      "w": "se",
+      "s": 55.32,
+      "e": 55.64
+     },
+     {
+      "w": "você",
+      "s": 55.64,
+      "e": 55.86
+     },
+     {
+      "w": "atender,",
+      "s": 55.86,
+      "e": 56.2
+     },
+     {
+      "w": "a",
+      "s": 56.44,
+      "e": 56.66
+     },
+     {
+      "w": "voz",
+      "s": 56.66,
+      "e": 56.9
+     },
+     {
+      "w": "do",
+      "s": 56.9,
+      "e": 57.06
+     },
+     {
+      "w": "outro",
+      "s": 57.06,
+      "e": 57.26
+     },
+     {
+      "w": "lado",
+      "s": 57.26,
+      "e": 57.54
+     },
+     {
+      "w": "vai",
+      "s": 57.54,
+      "e": 57.74
+     },
+     {
+      "w": "ser",
+      "s": 57.74,
+      "e": 57.92
+     },
+     {
+      "w": "a",
+      "s": 57.92,
+      "e": 58.04
+     },
+     {
+      "w": "sua.",
+      "s": 58.04,
+      "e": 58.28
+     },
+     {
+      "w": "E",
+      "s": 58.76,
+      "e": 59.2
+     },
+     {
+      "w": "ela",
+      "s": 59.2,
+      "e": 59.38
+     },
+     {
+      "w": "vai",
+      "s": 59.38,
+      "e": 59.54
+     },
+     {
+      "w": "dizer,",
+      "s": 59.54,
+      "e": 59.8
+     },
+     {
+      "w": "agora",
+      "s": 59.98,
+      "e": 60.48
+     },
+     {
+      "w": "é",
+      "s": 60.48,
+      "e": 60.7
+     },
+     {
+      "w": "a",
+      "s": 60.7,
+      "e": 60.74
+     },
+     {
+      "w": "sua",
+      "s": 60.74,
+      "e": 60.92
+     },
+     {
+      "w": "vez",
+      "s": 60.92,
+      "e": 61.14
+     },
+     {
+      "w": "de",
+      "s": 61.14,
+      "e": 61.34
+     },
+     {
+      "w": "ligar.",
+      "s": 61.34,
+      "e": 61.68
+     },
+     {
+      "w": "E",
+      "s": 62.02,
+      "e": 62.46
+     },
+     {
+      "w": "aí,",
+      "s": 62.46,
+      "e": 62.68
+     },
+     {
+      "w": "você",
+      "s": 62.82,
+      "e": 63.28
+     },
+     {
+      "w": "atenderia?",
+      "s": 63.28,
+      "e": 63.86
+     },
+     {
+      "w": "Comenta",
+      "s": 64.68,
+      "e": 65.12
+     },
+     {
+      "w": "aqui",
+      "s": 65.12,
+      "e": 65.24
+     },
+     {
+      "w": "embaixo.",
+      "s": 65.24,
+      "e": 65.5
+     },
+     {
+      "w": "E",
+      "s": 66.16,
+      "e": 66.6
+     },
+     {
+      "w": "se",
+      "s": 66.6,
+      "e": 66.7
+     },
+     {
+      "w": "inscreva,",
+      "s": 66.7,
+      "e": 67.22
+     },
+     {
+      "w": "antes",
+      "s": 67.26,
+      "e": 67.64
+     },
+     {
+      "w": "que",
+      "s": 67.64,
+      "e": 67.86
+     },
+     {
+      "w": "o",
+      "s": 67.86,
+      "e": 67.92
+     },
+     {
+      "w": "seu",
+      "s": 67.92,
+      "e": 68.04
+     },
+     {
+      "w": "celular",
+      "s": 68.04,
+      "e": 68.36
+     },
+     {
+      "w": "toque.",
+      "s": 68.36,
+      "e": 68.82
+     }
+    ],
+    "per_group": 5,
+    "x": 640,
+    "y": 652,
+    "size": 30,
+    "color": "#f2f2f2",
+    "dim": "#7a7a7a",
+    "hl_color": "#e0182d",
+    "keywords": [
+     "NÃO",
+     "ATENDA",
+     "REGRA",
+     "PORTA",
+     "SUA"
+    ],
+    "bg": "",
+    "font": "MontEB",
+    "weight": 700,
+    "upper": true
+   }
+  }
+ ]
+}

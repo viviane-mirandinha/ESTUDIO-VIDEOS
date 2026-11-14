@@ -1,0 +1,13 @@
+{
+ "video": 31,
+ "estilo": "31-guerra-de-especies-swarm",
+ "inicio": "2026-10-22T15:40:17",
+ "fim": "2026-10-22T15:50:25",
+ "minutos": 10.1,
+ "render_segundos": 41,
+ "observacoes": "Cenas novas sw_swarm (canvas 2D seeded, modos caca/devora/frente/intercepta/asas/virada/captura) e sw_stat em EDITOR VIDEOS/templates/scenes; reusa cosmos_foto. Stock Pixabay (5 videos + 2 fotos, creditos em img/creditos.json). Musica de 06-guerra-top-down baixa com ducking. 2 renders (1o: rotulos sobrepostos no intercepta, frente vazia, captura pequena).",
+ "estimativa_30min": {
+  "horas_maquina": 1.0,
+  "o_que_escala": "Render ~1x tempo real (41 s p/ 44 s); cenas sw_swarm sao parametricas (cores/rotulos/modo), entao 30 min = roteiro + busca Pixabay por termo + preencher edit.json; o gargalo e escolher stock que bata com a fala e criar 1-2 modos novos de enxame por tema."
+ }
+}

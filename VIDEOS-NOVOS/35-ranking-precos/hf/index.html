@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#e9edf2;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;font-family:'Inter',sans-serif;color:#111;
+  background:radial-gradient(ellipse at 50% 30%,#ffffff 0%,#eef1f5 45%,#d9dee6 100%);}
+/* chão do estúdio (vazio branco tipo maquete 3D) */
+#floor{position:absolute;left:-200px;right:-200px;top:470px;height:400px;
+  background:linear-gradient(#cfd6df 0%,#e6eaef 35%,#f4f6f8 100%);transform:perspective(500px) rotateX(55deg);transform-origin:50% 0;}
+#floor:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(0,0,0,.06) 1px,transparent 1px),linear-gradient(rgba(0,0,0,.06) 1px,transparent 1px);background-size:80px 80px;}
+#horiz{position:absolute;left:0;right:0;top:468px;height:3px;background:rgba(0,0,0,.05);}
+/* cabeçalho */
+#head{position:absolute;left:40px;top:26px;font-family:'Anton';font-size:30px;letter-spacing:1px;color:#1b1f27;opacity:0;}
+#head i{font-style:normal;color:#18a957;}
+#dots{position:absolute;right:40px;top:34px;display:flex;gap:10px;opacity:0;}
+#dots span{width:44px;height:26px;border-radius:13px;background:#cfd5dd;font:400 18px/26px 'Anton';text-align:center;color:#fff;}
+#dots span.on{background:#18a957;}
+/* card da foto */
+.card{position:absolute;left:52px;top:96px;width:640px;height:430px;border:10px solid #fff;border-radius:6px;overflow:hidden;
+  box-shadow:0 26px 50px rgba(20,30,50,.35),0 4px 10px rgba(0,0,0,.2);background:#111;opacity:0;}
+.card .bl{position:absolute;inset:-40px;background-size:cover;background-position:center;filter:blur(26px) brightness(.55);}
+.card img{position:absolute;left:0;top:0;width:100%;height:100%;}
+.rank{position:absolute;left:24px;top:62px;width:118px;height:118px;border-radius:50%;background:#111;color:#ffd21f;
+  font:400 66px/118px 'Anton';text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.35);border:5px solid #ffd21f;opacity:0;z-index:5;}
+/* etiqueta de preço pendurada */
+.tag{position:absolute;left:470px;top:430px;width:300px;height:116px;opacity:0;z-index:6;transform-origin:22px 58px;}
+.tag .body{position:absolute;inset:0;background:#ffd21f;clip-path:polygon(16% 0,100% 0,100% 100%,16% 100%,0 50%);
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.35));}
+.tag .hole{position:absolute;left:28px;top:48px;width:20px;height:20px;border-radius:50%;background:#e9edf2;box-shadow:inset 0 2px 3px rgba(0,0,0,.4);}
+.tag .v{position:absolute;left:58px;right:12px;top:0;bottom:0;display:flex;align-items:center;justify-content:center;
+  font:400 58px 'Anton';color:#111;letter-spacing:.5px;white-space:nowrap;}
+.tag .v small{font-size:30px;margin-right:6px;}
+/* lower third */
+.lt{position:absolute;left:52px;top:556px;width:660px;opacity:0;}
+.lt .n{display:inline-block;background:#111;color:#fff;font:400 38px/56px 'Anton';padding:0 18px;letter-spacing:.5px;white-space:nowrap;}
+.lt .n b{color:#ffd21f;font-weight:400;margin-right:12px;}
+.lt .s{display:block;width:max-content;max-width:660px;background:#ffd21f;color:#111;font:800 21px/36px 'Inter';padding:0 16px;}
+/* gráfico de barras */
+#chart{position:absolute;left:744px;top:96px;width:500px;height:520px;opacity:0;}
+#chart .base{position:absolute;left:0;right:0;bottom:60px;height:4px;background:#9aa4b2;}
+#chart .ttl{position:absolute;left:0;right:0;top:0;text-align:center;font:400 24px 'Anton';color:#59636f;letter-spacing:1px;}
+.bar{position:absolute;bottom:64px;width:64px;height:0;background:linear-gradient(90deg,#14a352,#2fd277 60%,#1db862);border-radius:3px 3px 0 0;opacity:0;}
+.bar:before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:#7ff0ab;transform:skewX(-40deg);transform-origin:0 100%;}
+.bar .th{position:absolute;left:50%;top:-74px;width:56px;height:56px;margin-left:-28px;border-radius:50%;background-size:cover;background-position:center;border:3px solid #fff;box-shadow:0 3px 8px rgba(0,0,0,.3);}
+.bar .lb{position:absolute;left:-9px;right:-9px;top:-98px;text-align:center;font:400 17px 'Anton';color:#111;white-space:nowrap;}
+.bar .nm{position:absolute;left:-14px;right:-14px;bottom:-52px;text-align:center;font:800 13px/15px 'Inter';color:#4b5563;}
+/* intro / outro */
+.big{position:absolute;left:0;right:0;text-align:center;font-family:'Anton';letter-spacing:1px;opacity:0;}
+#thumbs{position:absolute;left:0;right:0;top:380px;display:flex;justify-content:center;gap:18px;}
+#thumbs div{width:150px;height:150px;border:6px solid #fff;border-radius:6px;background-size:cover;background-position:center;opacity:0;
+  box-shadow:0 12px 26px rgba(0,0,0,.3);position:relative;}
+#thumbs div.q:after{content:"?";position:absolute;inset:0;background:rgba(17,17,17,.85);color:#ffd21f;font:400 96px/138px 'Anton';text-align:center;}
+#hook{position:absolute;left:50%;top:600px;transform:translateX(-50%);background:#111;color:#fff;padding:6px 26px;font:400 34px 'Anton';white-space:nowrap;opacity:0;}
+#hook b{color:#ffd21f;font-weight:400;}
+#cmp{position:absolute;left:744px;top:96px;width:500px;height:520px;opacity:0;}
+#ins{position:absolute;left:50%;top:640px;transform:translateX(-50%);background:#e8101a;color:#fff;padding:6px 34px;border-radius:40px;
+  font:400 40px 'Anton';letter-spacing:1px;opacity:0;box-shadow:0 8px 20px rgba(0,0,0,.3);white-space:nowrap;}
+#nota{position:absolute;right:20px;bottom:8px;font:600 13px 'Inter';color:#6b7280;opacity:0;}
+#preload{position:absolute;width:2px;height:2px;overflow:hidden;opacity:0;}
+@font-face{font-family:'Anton';src:url('m/fonts/Anton-Regular.ttf');font-weight:100 900;}@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="71.0" data-width="1280" data-height="720">
+ <div id="floor"></div><div id="horiz"></div>
+ <div id="head"></div>
+ <div id="dots"></div>
+ <div id="cards"></div>
+ <div id="chart"><div class="ttl" id="charttl"></div><div class="base"></div></div>
+ <div id="t1" class="big" style="top:110px;font-size:92px;color:#111"></div>
+ <div id="t2" class="big" style="top:232px;font-size:52px;color:#18a957"></div>
+ <div id="thumbs"></div>
+ <div id="hook"></div>
+ <div id="o1" class="big" style="top:150px;font-size:74px;color:#111;left:40px;right:560px"></div>
+ <div id="o2" class="big" style="top:350px;font-size:46px;color:#18a957;left:40px;right:560px"></div>
+ <div id="ins"></div>
+ <div id="nota"></div>
+ 
+ <div id="preload">
+  <img src="m/img/selo.jpg"><img src="m/img/codex.jpg"><img src="m/img/ferrari.jpg">
+  <img src="m/img/mercedes.jpg"><img src="m/img/modigliani.jpg"><img src="m/img/salvator.jpg">
+ </div>
+</div>
+<script>
+const EDIT = {"version": 1, "name": "35 - RANKING PRECOS - Do barato ao mais caro 6 coisas mais caras ja vendidas", "estilo": "Ranking crescente de preço (foto grande + etiqueta + barras)", "canvas": {"w": 1280, "h": 720, "fps": 30, "bg": "#e9edf2"}, "duration": 71.0, "template": "local", "fonts": {"Anton": "fonts/Anton-Regular.ttf", "Inter": "fonts/Inter.ttf"}, "referencia": {"canais": ["jack pockets (@jackpockets)", "10x Discovery (@10xDiscovery)"], "videos": ["https://youtu.be/jXwOcpkMQAA", "https://youtu.be/dj0UAatiiDI"]}, "audio": {"voice": {"src": "voz.mp3", "volume": 1.0, "start": 0}, "extra": [{"id": "w0", "src": "sfx/whoosh.wav", "start": 7.25, "volume": 0.16, "label": "whoosh troca item"}, {"id": "w1", "src": "sfx/whoosh.wav", "start": 17.95, "volume": 0.16, "label": "whoosh troca item"}, {"id": "w2", "src": "sfx/whoosh.wav", "start": 26.85, "volume": 0.16, "label": "whoosh troca item"}, {"id": "w3", "src": "sfx/whoosh.wav", "start": 35.55, "volume": 0.16, "label": "whoosh troca item"}, {"id": "w4", "src": "sfx/whoosh.wav", "start": 47.35, "volume": 0.16, "label": "whoosh troca item"}, {"id": "w5", "src": "sfx/whoosh.wav", "start": 54.85, "volume": 0.16, "label": "whoosh troca item"}]}, "tracks": [{"id": "fundo", "name": "Itens"}, {"id": "visual", "name": "Gráfico"}, {"id": "textos", "name": "Textos"}], "items": [{"id": "t_titulo", "type": "text", "track": "textos", "label": "Título", "start": 0.0, "dur": 4.0, "by": "template", "props": {"text": "DO BARATO AO MAIS CARO"}}, {"id": "t_sub", "type": "text", "track": "textos", "label": "Subtítulo + miniaturas", "start": 1.5, "dur": 5.7, "by": "template", "props": {"text": "6 COISAS MAIS CARAS JÁ VENDIDAS"}}, {"id": "t_hook", "type": "text", "track": "textos", "label": "Gancho", "start": 4.1, "dur": 3.1, "by": "template", "props": {"text": "A <b>Nº 1<\/b> VALE MAIS QUE AS OUTRAS 5 <b>SOMADAS<\/b>"}}, {"id": "t_head", "type": "text", "track": "textos", "label": "Cabeçalho", "start": 7.3, "dur": 58.0, "by": "template", "props": {"text": "DO BARATO AO <i>MAIS CARO<\/i>"}}, {"id": "t_chart", "type": "text", "track": "visual", "label": "Gráfico (título)", "start": 7.3, "dur": 63.7, "by": "template", "props": {"text": "VALOR PAGO (EM DÓLARES)"}}, {"id": "t_nota", "type": "text", "track": "textos", "label": "Nota de rodapé", "start": 7.3, "dur": 63.7, "by": "template", "props": {"text": "Valores da época da venda, sem correção · Mercedes: €135 mi ≈ US$ 142 mi (2022)"}}, {"id": "r_selo", "type": "html", "track": "fundo", "label": "#6 UM CENTAVO MAGENTA", "start": 7.3, "dur": 10.7, "by": "template", "props": {"rank": 6, "nome": "UM CENTAVO MAGENTA", "curto": "Selo", "sub": "Selo · Guiana Inglesa, 1856 · leilão Sotheby's, 2021", "img": "img/selo.jpg", "fit": "contain", "moeda": "US$", "preco_num": 8.3, "dec": 1, "sufixo": "MI", "preco_curto": "US$ 8,3 mi", "valor_usd": 8.307, "t_preco": 15.68, "html": "", "css": ""}}, {"id": "r_codex", "type": "html", "track": "fundo", "label": "#5 CODEX LEICESTER", "start": 18.0, "dur": 8.9, "by": "template", "props": {"rank": 5, "nome": "CODEX LEICESTER", "curto": "Codex", "sub": "Caderno de Leonardo da Vinci · comprado por Bill Gates na Christie's, 1994", "img": "img/codex.jpg", "fit": "contain", "moeda": "US$", "preco_num": 30.8, "dec": 1, "sufixo": "MI", "preco_curto": "US$ 30,8 mi", "valor_usd": 30.8025, "t_preco": 23.2, "html": "", "css": ""}}, {"id": "r_ferrari", "type": "html", "track": "fundo", "label": "#4 FERRARI 250 GTO", "start": 26.9, "dur": 8.7, "by": "template", "props": {"rank": 4, "nome": "FERRARI 250 GTO", "curto": "Ferrari", "sub": "Ferrari 250 GTO de 1962 · leilão RM Sotheby's, 2018", "img": "img/ferrari.jpg", "fit": "cover", "moeda": "US$", "preco_num": 48.4, "dec": 1, "sufixo": "MI", "preco_curto": "US$ 48,4 mi", "valor_usd": 48.405, "t_preco": 32.98, "html": "", "css": ""}}, {"id": "r_mercedes", "type": "html", "track": "fundo", "label": "#3 MERCEDES 300 SLR UHLENHAUT", "start": 35.6, "dur": 11.8, "by": "template", "props": {"rank": 3, "nome": "MERCEDES 300 SLR UHLENHAUT", "curto": "Mercedes", "sub": "Coupé de 1955 · leilão RM Sotheby's, 2022 · carro mais caro já vendido", "img": "img/mercedes.jpg", "fit": "cover", "moeda": "€", "preco_num": 135, "dec": 0, "sufixo": "MI", "preco_curto": "€ 135 mi", "valor_usd": 142, "t_preco": 43.52, "html": "", "css": ""}}, {"id": "r_modigliani", "type": "html", "track": "fundo", "label": "#2 NU DEITADO", "start": 47.4, "dur": 7.5, "by": "template", "props": {"rank": 2, "nome": "NU DEITADO", "curto": "Modigliani", "sub": "Amedeo Modigliani, 1917-18 · leilão Christie's, 2015", "img": "img/modigliani.jpg", "fit": "cover", "moeda": "US$", "preco_num": 170.4, "dec": 1, "sufixo": "MI", "preco_curto": "US$ 170,4 mi", "valor_usd": 170.4, "t_preco": 51.16, "html": "", "css": ""}}, {"id": "r_salvator", "type": "html", "track": "fundo", "label": "#1 SALVATOR MUNDI", "start": 54.9, "dur": 10.4, "by": "template", "props": {"rank": 1, "nome": "SALVATOR MUNDI", "curto": "Salvator", "sub": "Atribuído a Leonardo da Vinci · leilão Christie's, 2017", "img": "img/salvator.jpg", "fit": "contain", "moeda": "US$", "preco_num": 450.3, "dec": 1, "sufixo": "MI", "preco_curto": "US$ 450,3 mi", "valor_usd": 450.3, "t_preco": 60.54, "html": "", "css": ""}}, {"id": "o_final", "type": "text", "track": "textos", "label": "Fecho pergunta", "start": 65.3, "dur": 5.7, "by": "template", "props": {"text": "QUAL DESSAS VOCÊ COMPRARIA?"}}, {"id": "o_cta", "type": "text", "track": "textos", "label": "Fecho comenta", "start": 67.5, "dur": 3.5, "by": "template", "props": {"text": "COMENTA AÍ!"}}, {"id": "o_ins", "type": "text", "track": "textos", "label": "Inscreva-se", "start": 68.2, "dur": 2.8, "by": "template", "props": {"text": "INSCREVA-SE"}}]};
+const ED = Object.fromEntries(EDIT.items.map(i => [i.id, i]));
+const DUR = 71.0;
+const M = s => 'm/' + s;
+const $ = id => document.getElementById(id);
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:DUR,ease:"none"},0);
+const vis = it => it && !it.hidden;
+const fmt = (v,d) => v.toFixed(d).replace('.',',');
+
+// itens do ranking (ordem crescente de valor)
+const R = EDIT.items.filter(i => i.type==='html' && i.props && i.props.rank).sort((a,b)=>a.start-b.start);
+const N = R.length;
+const MAXV = Math.max(...R.map(r=>r.props.valor_usd));
+
+// ---- intro ----
+const T1=ED.t_titulo, T2=ED.t_sub, HK=ED.t_hook;
+if(vis(T1)){ $('t1').textContent=T1.props.text; tl.fromTo('#t1',{opacity:0,y:-30},{opacity:1,y:0,duration:.45,ease:'back.out(2)'},T1.start).to('#t1',{opacity:0,duration:.3},T1.start+T1.dur-.3); }
+if(vis(T2)){ $('t2').textContent=T2.props.text; tl.fromTo('#t2',{opacity:0,scale:.8},{opacity:1,scale:1,duration:.4,ease:'back.out(2)'},T2.start).to('#t2',{opacity:0,duration:.3},T2.start+T2.dur-.3); }
+R.forEach((r,k)=>{ const d=document.createElement('div'); d.style.backgroundImage=`url(${M(r.props.img)})`; if(k===N-1) d.className='q'; $('thumbs').appendChild(d);
+  if(vis(T2)){ tl.fromTo(d,{opacity:0,y:40},{opacity:1,y:0,duration:.35,ease:'back.out(2)'},T2.start+.3+k*.18).to(d,{opacity:0,y:-20,duration:.3},T2.start+T2.dur-.3); }});
+if(vis(HK)){ $('hook').innerHTML=HK.props.text; tl.fromTo('#hook',{opacity:0,scale:.7},{opacity:1,scale:1,duration:.35,ease:'back.out(2.5)'},HK.start).to('#hook',{opacity:0,duration:.3},HK.start+HK.dur-.3);
+  tl.to('#thumbs div.q',{scale:1.15,duration:.25,yoyo:true,repeat:3},HK.start+.2); }
+
+// ---- cabeçalho + bolinhas ----
+const HD=ED.t_head;
+if(vis(HD)){ $('head').innerHTML=HD.props.text; tl.to('#head',{opacity:1,duration:.3},HD.start).to('#head',{opacity:0,duration:.3},HD.start+HD.dur-.3);
+  tl.to('#dots',{opacity:1,duration:.3},HD.start).to('#dots',{opacity:0,duration:.3},HD.start+HD.dur-.3); }
+R.forEach((r,k)=>{ const s=document.createElement('span'); s.textContent='#'+r.props.rank; $('dots').appendChild(s);
+  tl.set(s,{className:'on'},r.start); });
+
+// ---- gráfico ----
+$('charttl').textContent = (ED.t_chart && ED.t_chart.props.text) || '';
+const CH=ED.t_chart; const chEnd = CH ? CH.start+CH.dur : DUR;
+if(vis(CH)){ tl.to('#chart',{opacity:1,duration:.4},CH.start).to('#chart',{opacity:0,duration:.3},chEnd-.3); }
+const BW=64, GAP=(500-BW*N)/(N+1), HMAX=300;
+const bars = R.map((r,k)=>{ const b=document.createElement('div'); b.className='bar'; b.style.left=(GAP+k*(BW+GAP))+'px';
+  b.innerHTML=`<div class="th" style="background-image:url(${M(r.props.img)})"></div><div class="lb">${r.props.preco_curto}</div><div class="nm">${r.props.curto}</div>`;
+  $('chart').appendChild(b); return b; });
+
+// ---- cada item ----
+R.forEach((r,k)=>{
+  const p=r.props, t0=r.start, t1=r.start+r.dur;
+  const c=document.createElement('div'); c.className='card';
+  c.innerHTML=`<div class="bl" style="background-image:url(${M(p.img)})"></div><img src="${M(p.img)}" style="object-fit:${p.fit||'contain'};object-position:${p.pos||'center'}">`;
+  const rk=document.createElement('div'); rk.className='rank'; rk.textContent='#'+p.rank;
+  const tg=document.createElement('div'); tg.className='tag';
+  tg.innerHTML=`<div class="body"></div><div class="hole"></div><div class="v"><small>${p.moeda}</small><span>0</span><small style="margin-left:8px">${p.sufixo}</small></div>`;
+  const lt=document.createElement('div'); lt.className='lt';
+  lt.innerHTML=`<span class="n"><b>#${p.rank}</b>${p.nome}</span><span class="s">${p.sub}</span>`;
+  [c,rk,tg,lt].forEach(e=>$('cards').appendChild(e));
+  if(r.hidden) return;
+  const img=c.querySelector('img');
+  // entrada / saída
+  tl.fromTo(c,{opacity:0,x:700,rotation:4},{opacity:1,x:0,rotation:0,duration:.55,ease:'power3.out'},t0);
+  tl.fromTo(img,{scale:1},{scale:1.07,duration:r.dur,ease:'none'},t0);
+  tl.fromTo(rk,{opacity:0,scale:0,rotation:-90},{opacity:1,scale:1,rotation:0,duration:.45,ease:'back.out(2.2)'},t0+.35);
+  tl.fromTo(lt,{opacity:0,x:-60},{opacity:1,x:0,duration:.4,ease:'power2.out'},t0+.6);
+  const tp=p.t_preco;
+  tl.fromTo(tg,{opacity:0,rotation:-38,y:-60},{opacity:1,rotation:-6,y:0,duration:.7,ease:'elastic.out(1,.45)'},tp-.15);
+  const o={v:0}, sp=tg.querySelector('span');
+  tl.fromTo(o,{v:0},{v:p.preco_num,duration:1.1,ease:'power2.out',onUpdate:()=>{sp.textContent=fmt(o.v,p.dec);}},tp-.1);
+  tl.to(tg,{scale:1.12,duration:.15,yoyo:true,repeat:1},tp+1.0);
+  if(k<N-1 || !ED.o_final || ED.o_final.hidden){ tl.to([c,rk,tg,lt],{opacity:0,x:-700,duration:.45,ease:'power2.in'},t1-.4); }
+  else { tl.to([c,rk,tg,lt],{opacity:0,scale:.9,duration:.4},t1-.4); }
+  // barras: esta cresce, as anteriores reescalam pelo novo máximo (fromTo explícito = seek-safe)
+  const hk=(st,j)=>{const mx=Math.max(...R.slice(0,st+1).map(q=>q.props.valor_usd));return Math.max(4,HMAX*R[j].props.valor_usd/mx);};
+  for(let j=0;j<=k;j++){
+    if(j===k) tl.fromTo(bars[j],{opacity:1,height:0},{opacity:1,height:hk(k,j),duration:1.1,ease:'power2.out',immediateRender:false},tp-.1);
+    else tl.fromTo(bars[j],{height:hk(k-1,j)},{height:hk(k,j),duration:.9,ease:'power2.inOut',immediateRender:false},tp-.1);
+  }
+});
+// estado inicial (antes do 1º item)
+
+// ---- fecho ----
+const OF=ED.o_final, OC=ED.o_cta, OI=ED.o_ins, NT=ED.t_nota;
+if(vis(OF)){ $('o1').innerHTML=OF.props.text; tl.fromTo('#o1',{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:'back.out(2)'},OF.start).to('#o1',{opacity:0,duration:.3},OF.start+OF.dur-.3);
+  tl.to('#chart',{x:-30,scale:1.06,duration:.8,ease:'power2.inOut'},OF.start); }
+if(vis(OC)){ $('o2').innerHTML=OC.props.text; tl.fromTo('#o2',{opacity:0,scale:.7},{opacity:1,scale:1,duration:.4,ease:'back.out(2.5)'},OC.start).to('#o2',{opacity:0,duration:.3},OC.start+OC.dur-.3); }
+if(vis(OI)){ $('ins').textContent=OI.props.text; tl.fromTo('#ins',{opacity:0,y:40},{opacity:1,y:0,duration:.4,ease:'back.out(2)'},OI.start).to('#ins',{scale:1.08,duration:.3,yoyo:true,repeat:3},OI.start+.6); }
+if(vis(NT)){ $('nota').textContent=NT.props.text; tl.to('#nota',{opacity:1,duration:.3},NT.start).to('#nota',{opacity:0,duration:.3},NT.start+NT.dur-.3); }
+
+window.__timelines = window.__timelines || {};
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+})();</script>
+</body></html>

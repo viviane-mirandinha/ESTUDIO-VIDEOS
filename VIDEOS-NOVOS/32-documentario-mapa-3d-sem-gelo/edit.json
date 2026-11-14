@@ -1,0 +1,5710 @@
+{
+ "name": "32 - DOCUMENTARIO MAPA 3D - Así se ve la Antártida sin hielo",
+ "estilo": "32-documentario-mapa-3d-sem-gelo",
+ "grupo": "ESTILOS NOVOS",
+ "referencia": {
+  "canal": "Unseen Works",
+  "canal_url": "https://www.youtube.com/channel/UCVZp2VFWV4mUJOjhklymJKQ",
+  "video": "https://youtu.be/TudM_lSW8WA",
+  "titulo": "What Antarctica Looks Like Without Ice"
+ },
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0c1726"
+ },
+ "duration": 705,
+ "template": "generic",
+ "fonts": {
+  "Montserrat": "fonts/Montserrat-Black.ttf",
+  "Inter": "fonts/Inter.ttf"
+ },
+ "head": "<script src=\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\"></script>",
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "texto",
+   "name": "Texto"
+  }
+ ],
+ "items": [
+  {
+   "id": "c1",
+   "type": "scene",
+   "start": 0,
+   "dur": 3.24,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 53,
+     "az1": 31,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "contorno": {
+      "rot": 0,
+      "dx": 0,
+      "dy": -10
+     }
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "start": 0.15,
+   "dur": 2.94,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ANTÁRTIDA > EE. UU. + MÉXICO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "start": 3.24,
+   "dur": 2.56,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 106,
+     "az1": 84,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c4",
+   "type": "scene",
+   "start": 5.8,
+   "dur": 7.2,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_denman_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c5",
+   "type": "scene",
+   "start": 13.0,
+   "dur": 1.2,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 159,
+     "az1": 137,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c6",
+   "type": "scene",
+   "start": 13.15,
+   "dur": 0.9,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ES UNA TAPA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c7",
+   "type": "scene",
+   "start": 14.06,
+   "dur": 4.64,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "bloco",
+     "valor": "+2 KM DE HIELO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c8",
+   "type": "scene",
+   "start": 14.21,
+   "dur": 4.34,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+2 KM",
+     "sub": "DE HIELO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c9",
+   "type": "scene",
+   "start": 18.7,
+   "dur": 8.28,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_twinotter_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c10",
+   "type": "scene",
+   "start": 18.85,
+   "dur": 7.98,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "60",
+     "sub": "AÑOS DE VUELOS Y RADAR",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c11",
+   "type": "scene",
+   "start": 26.98,
+   "dur": 4.72,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "derrete",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 212,
+     "az1": 190,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "derrete_ini": 0.15,
+     "derrete_fim": 0.85
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c12",
+   "type": "scene",
+   "start": 31.7,
+   "dur": 4.92,
+   "props": {
+    "scene": "uw_capitulo",
+    "params": {
+     "n": "CAPÍTULO 01",
+     "titulo": "LA TAPA"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c13",
+   "type": "scene",
+   "start": 36.62,
+   "dur": 2.9,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 265,
+     "az1": 243,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c14",
+   "type": "scene",
+   "start": 36.77,
+   "dur": 2.6,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "27 MILLONES",
+     "sub": "DE KM³ DE HIELO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c15",
+   "type": "scene",
+   "start": 39.52,
+   "dur": 6.28,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_thwaites_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c16",
+   "type": "scene",
+   "start": 39.67,
+   "dur": 5.98,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+58 M",
+     "sub": "DE NIVEL DEL MAR",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c17",
+   "type": "scene",
+   "start": 45.8,
+   "dur": 6.86,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_burj_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c18",
+   "type": "scene",
+   "start": 45.95,
+   "dur": 6.56,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "EDIFICIO DE 20 PISOS BAJO EL AGUA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c19",
+   "type": "scene",
+   "start": 52.66,
+   "dur": 9.56,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -70,
+      120
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 318,
+     "az1": 296,
+     "rotulo": "TIERRA DE WILKES",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c20",
+   "type": "scene",
+   "start": 52.81,
+   "dur": 9.26,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "4,757 M",
+     "sub": "DE HIELO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c21",
+   "type": "scene",
+   "start": 62.22,
+   "dur": 8.5,
+   "props": {
+    "scene": "uw_escala",
+    "params": {
+     "n": 5.7,
+     "valor": "4,757 M DE HIELO",
+     "burj": "BURJ KHALIFA · 828 M"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c22",
+   "type": "scene",
+   "start": 70.72,
+   "dur": 3.88,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "bloco",
+     "valor": "PROMEDIO: 2.1 KM"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c23",
+   "type": "scene",
+   "start": 70.87,
+   "dur": 3.58,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "PROMEDIO: 2.1 KM",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c24",
+   "type": "scene",
+   "start": 74.6,
+   "dur": 4.24,
+   "props": {
+    "scene": "uw_escala",
+    "params": {
+     "n": 2.5,
+     "valor": "2,100 M DE HIELO",
+     "burj": "BURJ KHALIFA · 828 M"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c25",
+   "type": "scene",
+   "start": 78.84,
+   "dur": 4.3,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 11,
+     "az1": -11,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c26",
+   "type": "scene",
+   "start": 78.99,
+   "dur": 4.0,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "EL DESIERTO MÁS GRANDE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c27",
+   "type": "scene",
+   "start": 83.14,
+   "dur": 7.12,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_vostokst_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c28",
+   "type": "scene",
+   "start": 83.29,
+   "dur": 6.82,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "<5 CM",
+     "sub": "DE AGUA AL AÑO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c29",
+   "type": "scene",
+   "start": 90.26,
+   "dur": 3.46,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_dryvalley_2.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c30",
+   "type": "scene",
+   "start": 90.41,
+   "dur": 3.16,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "VALLES SECOS DE MCMURDO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c31",
+   "type": "scene",
+   "start": 93.72,
+   "dur": 5.7,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_curiosity_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c32",
+   "type": "scene",
+   "start": 93.87,
+   "dur": 5.4,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "COMO MARTE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c33",
+   "type": "scene",
+   "start": 99.42,
+   "dur": 4.96,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 64,
+     "az1": 42,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c34",
+   "type": "scene",
+   "start": 99.57,
+   "dur": 4.66,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "¿CÓMO SE VE EL SUELO?",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c35",
+   "type": "scene",
+   "start": 104.38,
+   "dur": 4.46,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_twinotter_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c36",
+   "type": "scene",
+   "start": 104.53,
+   "dur": 4.16,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "RADAR",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c37",
+   "type": "scene",
+   "start": 108.84,
+   "dur": 7.4,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "radar"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c38",
+   "type": "scene",
+   "start": 116.24,
+   "dur": 4.03,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_twinotter_2.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c39",
+   "type": "scene",
+   "start": 116.39,
+   "dur": 3.73,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "DESDE LOS AÑOS 60",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c40",
+   "type": "scene",
+   "start": 120.27,
+   "dur": 8.71,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 117,
+     "az1": 95,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c41",
+   "type": "scene",
+   "start": 120.42,
+   "dur": 8.41,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "BEDMAP 3.0",
+     "sub": "277 ESTUDIOS · 82 MILLONES DE MEDICIONES",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c42",
+   "type": "scene",
+   "start": 128.98,
+   "dur": 6.34,
+   "props": {
+    "scene": "uw_carimbo",
+    "params": {
+     "pergunta": "¿90% SIN MAPEAR?",
+     "carimbo": "NO EXACTAMENTE"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c43",
+   "type": "scene",
+   "start": 133.61,
+   "dur": 1.56,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "NO EXACTAMENTE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c44",
+   "type": "scene",
+   "start": 135.32,
+   "dur": 4.18,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      95
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 170,
+     "az1": 148,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c45",
+   "type": "scene",
+   "start": 135.47,
+   "dur": 3.88,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "A ~6 KM DE UNA MEDICIÓN",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c46",
+   "type": "scene",
+   "start": 139.5,
+   "dur": 4.7,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 223,
+     "az1": 201,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c47",
+   "type": "scene",
+   "start": 144.2,
+   "dur": 11.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 276,
+     "az1": 254,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c48",
+   "type": "scene",
+   "start": 144.35,
+   "dur": 11.18,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2026",
+     "sub": "72,000 COLINAS ESCONDIDAS",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c49",
+   "type": "scene",
+   "start": 155.68,
+   "dur": 1.2,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "derrete",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 329,
+     "az1": 307,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "derrete_ini": 0.15,
+     "derrete_fim": 0.85
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c50",
+   "type": "scene",
+   "start": 156.8,
+   "dur": 2.32,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 22,
+     "az1": 0,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c51",
+   "type": "scene",
+   "start": 156.95,
+   "dur": 2.02,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ANTÁRTIDA SIN HIELO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c52",
+   "type": "scene",
+   "start": 159.12,
+   "dur": 7.08,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 75,
+     "az1": 53,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c53",
+   "type": "scene",
+   "start": 159.27,
+   "dur": 6.78,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "47%",
+     "sub": "BAJO EL NIVEL DEL MAR",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c54",
+   "type": "scene",
+   "start": 166.2,
+   "dur": 4.34,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 128,
+     "az1": 106,
+     "rotulo": "ANTÁRTIDA OCCIDENTAL",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c55",
+   "type": "scene",
+   "start": 166.35,
+   "dur": 4.04,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ANTÁRTIDA OCCIDENTAL",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c56",
+   "type": "scene",
+   "start": 170.54,
+   "dur": 3.54,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 181,
+     "az1": 159,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c57",
+   "type": "scene",
+   "start": 170.69,
+   "dur": 3.24,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ISLAS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c58",
+   "type": "scene",
+   "start": 174.08,
+   "dur": 4.54,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 234,
+     "az1": 212,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "linhas": [
+      {
+       "pts": [
+        [
+         -77,
+         -165
+        ],
+        [
+         -79,
+         -140
+        ],
+        [
+         -80,
+         -115
+        ],
+        [
+         -78,
+         -95
+        ],
+        [
+         -74,
+         -80
+        ]
+       ],
+       "cor": "#ff6b35",
+       "w": 4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c59",
+   "type": "scene",
+   "start": 174.23,
+   "dur": 4.24,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "RIFT",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c60",
+   "type": "scene",
+   "start": 178.62,
+   "dur": 2.96,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      95
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 287,
+     "az1": 265,
+     "rotulo": "ANTÁRTIDA ORIENTAL",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c61",
+   "type": "scene",
+   "start": 178.77,
+   "dur": 2.66,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ANTÁRTIDA ORIENTAL",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c62",
+   "type": "scene",
+   "start": 181.58,
+   "dur": 3.92,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      95
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 340,
+     "az1": 318,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c63",
+   "type": "scene",
+   "start": 185.5,
+   "dur": 8.56,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "rebote",
+     "valor": "~2 KM DE HIELO",
+     "a": "LA ROCA SE LEVANTA HASTA 900 M"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c64",
+   "type": "scene",
+   "start": 188.79,
+   "dur": 5.12,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "HASTA +900 M DE REBOTE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c65",
+   "type": "scene",
+   "start": 194.06,
+   "dur": 6.86,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -66.75,
+      99.5
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 33,
+     "az1": 11,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -66.75,
+        99.5
+       ],
+       "label": "GLACIAR DENMAN",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c66",
+   "type": "scene",
+   "start": 194.21,
+   "dur": 6.56,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "GLACIAR DENMAN",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c67",
+   "type": "scene",
+   "start": 200.92,
+   "dur": 4.68,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_denman_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c68",
+   "type": "scene",
+   "start": 201.07,
+   "dur": 4.38,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "−3.5 KM",
+     "sub": "",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c69",
+   "type": "scene",
+   "start": 205.6,
+   "dur": 5.36,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_marmuerto_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c70",
+   "type": "scene",
+   "start": 210.96,
+   "dur": 6.22,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "fosa"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c71",
+   "type": "scene",
+   "start": 211.11,
+   "dur": 5.92,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "MAR MUERTO −440 M",
+     "sub": "DENMAN 8× MÁS",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c72",
+   "type": "scene",
+   "start": 217.18,
+   "dur": 4.5,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_twinotter_1.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c73",
+   "type": "scene",
+   "start": 221.68,
+   "dur": 3.84,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_denman_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c74",
+   "type": "scene",
+   "start": 225.52,
+   "dur": 6.32,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -66.75,
+      99.5
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 40,
+     "az0": 86,
+     "az1": 64,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -66.75,
+        99.5
+       ],
+       "label": "DENMAN",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c75",
+   "type": "scene",
+   "start": 225.67,
+   "dur": 6.02,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "DESCUBIERTO EN 2019",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c76",
+   "type": "scene",
+   "start": 231.84,
+   "dur": 2.04,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_denman_0.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c77",
+   "type": "scene",
+   "start": 233.88,
+   "dur": 8.12,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -66.75,
+      99.5
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 139,
+     "az1": 117,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -66.75,
+        99.5
+       ],
+       "label": "LÍNEA DE APOYO",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c78",
+   "type": "scene",
+   "start": 234.03,
+   "dur": 7.82,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "RETROCEDIÓ 5 KM EN 20 AÑOS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c79",
+   "type": "scene",
+   "start": 242.0,
+   "dur": 6.96,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_vostokst_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c80",
+   "type": "scene",
+   "start": 242.15,
+   "dur": 6.66,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1958",
+     "sub": "EXPEDICIÓN SOVIÉTICA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c81",
+   "type": "scene",
+   "start": 248.96,
+   "dur": 2.66,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 192,
+     "az1": 170,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c82",
+   "type": "scene",
+   "start": 251.62,
+   "dur": 1.2,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "derrete",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 245,
+     "az1": 223,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "derrete_ini": 0.15,
+     "derrete_fim": 0.85
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c83",
+   "type": "scene",
+   "start": 252.68,
+   "dur": 4.76,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 298,
+     "az1": 276,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c84",
+   "type": "scene",
+   "start": 252.83,
+   "dur": 4.46,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1,200 KM",
+     "sub": "DE CORDILLERA",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c85",
+   "type": "scene",
+   "start": 257.44,
+   "dur": 4.88,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 34,
+     "az0": 351,
+     "az1": 329,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -80.5,
+        76
+       ],
+       "label": "MONTES GAMBURTSEV",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c86",
+   "type": "scene",
+   "start": 257.59,
+   "dur": 4.58,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "MONTES GAMBURTSEV",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c87",
+   "type": "scene",
+   "start": 262.32,
+   "dur": 2.64,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "bloco",
+     "valor": "+600 M DE HIELO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c88",
+   "type": "scene",
+   "start": 262.47,
+   "dur": 2.34,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+600 M",
+     "sub": "DE HIELO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c89",
+   "type": "scene",
+   "start": 264.96,
+   "dur": 8.54,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_twinotter_0.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c90",
+   "type": "scene",
+   "start": 266.57,
+   "dur": 6.78,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2008",
+     "sub": "7 PAÍSES · 120,000 KM DE RADAR",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c91",
+   "type": "scene",
+   "start": 273.5,
+   "dur": 2.08,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 44,
+     "az1": 22,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c92",
+   "type": "scene",
+   "start": 275.58,
+   "dur": 6.5,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 97,
+     "az1": 75,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c93",
+   "type": "scene",
+   "start": 282.08,
+   "dur": 3.68,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 150,
+     "az1": 128,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c94",
+   "type": "scene",
+   "start": 282.23,
+   "dur": 3.38,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "RAÍCES: ~1,000 MILLONES DE AÑOS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c95",
+   "type": "scene",
+   "start": 285.76,
+   "dur": 3.82,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_gondwana_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c96",
+   "type": "scene",
+   "start": 285.91,
+   "dur": 3.52,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "GONDWANA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c97",
+   "type": "scene",
+   "start": 289.58,
+   "dur": 2.72,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 203,
+     "az1": 181,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c98",
+   "type": "scene",
+   "start": 289.73,
+   "dur": 2.42,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "34 MILLONES",
+     "sub": "DE AÑOS DE HIELO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c99",
+   "type": "scene",
+   "start": 292.3,
+   "dur": 6.36,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_glossopteris_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c100",
+   "type": "scene",
+   "start": 298.66,
+   "dur": 1.96,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_glossopteris_2.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c101",
+   "type": "scene",
+   "start": 298.81,
+   "dur": 1.66,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "HACE 90 MILLONES DE AÑOS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c102",
+   "type": "scene",
+   "start": 300.62,
+   "dur": 3.16,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_glossopteris_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c103",
+   "type": "scene",
+   "start": 300.77,
+   "dur": 2.86,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "SELVA CERCA DEL POLO SUR",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c104",
+   "type": "scene",
+   "start": 303.78,
+   "dur": 7.2,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_icecore_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c105",
+   "type": "scene",
+   "start": 310.98,
+   "dur": 4.86,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 256,
+     "az1": 234,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c106",
+   "type": "scene",
+   "start": 311.13,
+   "dur": 4.56,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "34 MILLONES",
+     "sub": "DE AÑOS",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c107",
+   "type": "scene",
+   "start": 315.84,
+   "dur": 1.42,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -75,
+      95
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 309,
+     "az1": 287,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c108",
+   "type": "scene",
+   "start": 317.26,
+   "dur": 6.9,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_putorana_2.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c109",
+   "type": "scene",
+   "start": 317.41,
+   "dur": 6.6,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2023",
+     "sub": "TAMAÑO DE BÉLGICA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c110",
+   "type": "scene",
+   "start": 324.16,
+   "dur": 2.34,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "bloco",
+     "valor": "~2 KM DE HIELO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c111",
+   "type": "scene",
+   "start": 326.5,
+   "dur": 4.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -68,
+      110
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 2,
+     "az1": -20,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c112",
+   "type": "scene",
+   "start": 326.65,
+   "dur": 4.18,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2025",
+     "sub": "LLANURA COSTERA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c113",
+   "type": "scene",
+   "start": 330.98,
+   "dur": 5.4,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -70,
+      80
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 55,
+     "az1": 33,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c114",
+   "type": "scene",
+   "start": 331.13,
+   "dur": 5.1,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "3,500 KM",
+     "sub": "DE COSTA",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c115",
+   "type": "scene",
+   "start": 336.38,
+   "dur": 5.08,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_denman_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c116",
+   "type": "scene",
+   "start": 341.46,
+   "dur": 3.08,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 108,
+     "az1": 86,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c117",
+   "type": "scene",
+   "start": 341.61,
+   "dur": 2.78,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "AGUA LÍQUIDA BAJO EL HIELO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c118",
+   "type": "scene",
+   "start": 344.54,
+   "dur": 4.52,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      95
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 161,
+     "az1": 139,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c119",
+   "type": "scene",
+   "start": 344.69,
+   "dur": 4.22,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+700",
+     "sub": "LAGOS SUBGLACIALES",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c120",
+   "type": "scene",
+   "start": 349.06,
+   "dur": 3.22,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 214,
+     "az1": 192,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c121",
+   "type": "scene",
+   "start": 352.28,
+   "dur": 5.92,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 267,
+     "az1": 245,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c122",
+   "type": "scene",
+   "start": 352.43,
+   "dur": 5.62,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2025",
+     "sub": "85 LAGOS NUEVOS",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c123",
+   "type": "scene",
+   "start": 358.2,
+   "dur": 2.14,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 320,
+     "az1": 298,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -77.5,
+        106
+       ],
+       "label": "LAGO VOSTOK",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c124",
+   "type": "scene",
+   "start": 358.35,
+   "dur": 1.84,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "LAGO VOSTOK",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c125",
+   "type": "scene",
+   "start": 360.34,
+   "dur": 2.92,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 13,
+     "az1": -9,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -77.5,
+        106
+       ],
+       "label": "VOSTOK",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c126",
+   "type": "scene",
+   "start": 363.26,
+   "dur": 5.46,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 34,
+     "az0": 66,
+     "az1": 44,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c127",
+   "type": "scene",
+   "start": 363.41,
+   "dur": 5.16,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "250 KM",
+     "sub": "DE LARGO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c128",
+   "type": "scene",
+   "start": 368.72,
+   "dur": 3.16,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_michigan_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c129",
+   "type": "scene",
+   "start": 368.87,
+   "dur": 2.86,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "≈ LAGO MÍCHIGAN",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c130",
+   "type": "scene",
+   "start": 371.88,
+   "dur": 10.4,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "lago",
+     "valor": "LAGO VOSTOK · ≈ -3 °C",
+     "a": "EL HIELO AÍSLA DESDE ARRIBA",
+     "b": "PRESIÓN",
+     "c": "LA TIERRA CALIENTA DESDE ABAJO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c131",
+   "type": "scene",
+   "start": 372.03,
+   "dur": 1.86,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "−3 °C",
+     "sub": "",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c132",
+   "type": "scene",
+   "start": 382.28,
+   "dur": 3.44,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_europa_0.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c133",
+   "type": "scene",
+   "start": 385.72,
+   "dur": 5.38,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_europa_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c134",
+   "type": "scene",
+   "start": 385.87,
+   "dur": 5.08,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "EUROPA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c135",
+   "type": "scene",
+   "start": 391.1,
+   "dur": 3.86,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_europa_2.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c136",
+   "type": "scene",
+   "start": 394.96,
+   "dur": 3.86,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_vostokst_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c137",
+   "type": "scene",
+   "start": 395.11,
+   "dur": 3.56,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2012",
+     "sub": "PERFORACIÓN RUSA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c138",
+   "type": "scene",
+   "start": 398.82,
+   "dur": 3.72,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "perforacion",
+     "a": "POZO CON QUEROSENO · ≈3.8 KM"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c139",
+   "type": "scene",
+   "start": 398.97,
+   "dur": 3.42,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "QUEROSENO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c140",
+   "type": "scene",
+   "start": 402.54,
+   "dur": 2.5,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_icecore_1.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c141",
+   "type": "scene",
+   "start": 402.69,
+   "dur": 2.2,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "MUESTRAS CONTAMINADAS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c142",
+   "type": "scene",
+   "start": 405.04,
+   "dur": 3.14,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 40,
+     "az0": 119,
+     "az1": 97,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c143",
+   "type": "scene",
+   "start": 408.18,
+   "dur": 5.18,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_icecore_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c144",
+   "type": "scene",
+   "start": 408.33,
+   "dur": 4.88,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2024",
+     "sub": "TAMBIÉN CONTAMINACIÓN",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c145",
+   "type": "scene",
+   "start": 413.36,
+   "dur": 4.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -84.24,
+      -153.6
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 172,
+     "az1": 150,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -84.24,
+        -153.6
+       ],
+       "label": "LAGO WHILLANS",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c146",
+   "type": "scene",
+   "start": 413.51,
+   "dur": 4.18,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "LAGO WHILLANS",
+     "sub": "2013",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c147",
+   "type": "scene",
+   "start": 417.84,
+   "dur": 3.02,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "whillans",
+     "valor": "LAGO WHILLANS",
+     "a": "TALADRO ESTÉRIL DE AGUA CALIENTE"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c148",
+   "type": "scene",
+   "start": 420.86,
+   "dur": 4.66,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -84.24,
+      -153.6
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 34,
+     "az0": 225,
+     "az1": 203,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c149",
+   "type": "scene",
+   "start": 421.01,
+   "dur": 4.36,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "130,000",
+     "sub": "CÉLULAS POR ML",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c150",
+   "type": "scene",
+   "start": 425.52,
+   "dur": 4.34,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -84.24,
+      -153.6
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 40,
+     "az0": 278,
+     "az1": 256,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c151",
+   "type": "scene",
+   "start": 429.86,
+   "dur": 9.82,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "plataforma",
+     "valor": "≈900 M DE HIELO FLOTANTE",
+     "a": "ROCA EN EL FONDO MARINO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c152",
+   "type": "scene",
+   "start": 430.01,
+   "dur": 6.42,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2021",
+     "sub": "900 M DE HIELO",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c153",
+   "type": "scene",
+   "start": 439.68,
+   "dur": 3.08,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_anfipodo_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c154",
+   "type": "scene",
+   "start": 439.83,
+   "dur": 2.78,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "ESPONJAS Y OTROS ANIMALES",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c155",
+   "type": "scene",
+   "start": 442.76,
+   "dur": 2.76,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80,
+      -50
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 331,
+     "az1": 309,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -80,
+        -50
+       ],
+       "label": "260 KM DEL MAR",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c156",
+   "type": "scene",
+   "start": 442.91,
+   "dur": 2.46,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "260 KM",
+     "sub": "DEL MAR ABIERTO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c157",
+   "type": "scene",
+   "start": 445.52,
+   "dur": 4.02,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -50
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 34,
+     "az0": 24,
+     "az1": 2,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c158",
+   "type": "scene",
+   "start": 449.54,
+   "dur": 2.1,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_anfipodo_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c159",
+   "type": "scene",
+   "start": 449.69,
+   "dur": 1.8,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "¿DE QUÉ SE ALIMENTAN?",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c160",
+   "type": "scene",
+   "start": 451.64,
+   "dur": 5.0,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82.5,
+      -145
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 77,
+     "az1": 55,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -82.5,
+        -145
+       ],
+       "label": "KAMB",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c161",
+   "type": "scene",
+   "start": 451.79,
+   "dur": 4.7,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2022",
+     "sub": "NUEVA ZELANDA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c162",
+   "type": "scene",
+   "start": 456.64,
+   "dur": 2.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82.5,
+      -145
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 130,
+     "az1": 108,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c163",
+   "type": "scene",
+   "start": 459.12,
+   "dur": 3.66,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_anfipodo_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c164",
+   "type": "scene",
+   "start": 462.78,
+   "dur": 2.38,
+   "props": {
+    "scene": "uw_capitulo",
+    "params": {
+     "n": "CAPÍTULO",
+     "titulo": "FUEGO BAJO EL HIELO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c165",
+   "type": "scene",
+   "start": 465.16,
+   "dur": 4.82,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebuslava_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c166",
+   "type": "scene",
+   "start": 465.31,
+   "dur": 4.52,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "CUEVAS DE HIELO",
+     "sub": "25 °C",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c167",
+   "type": "scene",
+   "start": 469.98,
+   "dur": 4.2,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebus_2.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c168",
+   "type": "scene",
+   "start": 474.18,
+   "dur": 3.82,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_bloodfalls_1.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c169",
+   "type": "scene",
+   "start": 474.33,
+   "dur": 3.52,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "GLACIAR TAYLOR",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c170",
+   "type": "scene",
+   "start": 478.0,
+   "dur": 5.66,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_bloodfalls_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c171",
+   "type": "scene",
+   "start": 478.15,
+   "dur": 5.36,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "CATARATAS DE SANGRE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c172",
+   "type": "scene",
+   "start": 483.66,
+   "dur": 2.74,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_bloodfalls_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.12,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c173",
+   "type": "scene",
+   "start": 486.4,
+   "dur": 2.78,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_bloodfalls_2.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c174",
+   "type": "scene",
+   "start": 489.18,
+   "dur": 2.8,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.72,
+      162.27
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 34,
+     "az0": 183,
+     "az1": 161,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -77.72,
+        162.27
+       ],
+       "label": "CATARATAS DE SANGRE",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c175",
+   "type": "scene",
+   "start": 489.33,
+   "dur": 2.5,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "SIN LUZ NI OXÍGENO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c176",
+   "type": "scene",
+   "start": 491.98,
+   "dur": 3.88,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.53,
+      167.15
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 236,
+     "az1": 214,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -77.53,
+        167.15
+       ],
+       "label": "MONTE EREBUS",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c177",
+   "type": "scene",
+   "start": 492.13,
+   "dur": 3.58,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "VOLCÁN EREBUS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c178",
+   "type": "scene",
+   "start": 495.86,
+   "dur": 2.32,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebuslava_2.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c179",
+   "type": "scene",
+   "start": 498.18,
+   "dur": 4.07,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebus_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c180",
+   "type": "scene",
+   "start": 498.33,
+   "dur": 3.77,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "LAVA DESDE 1972",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c181",
+   "type": "scene",
+   "start": 502.25,
+   "dur": 2.56,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebuslava_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c182",
+   "type": "scene",
+   "start": 504.81,
+   "dur": 1.76,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_erebus_1.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c183",
+   "type": "scene",
+   "start": 504.96,
+   "dur": 1.46,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "80 G",
+     "sub": "DE ORO AL DÍA",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c184",
+   "type": "scene",
+   "start": 506.57,
+   "dur": 1.32,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 289,
+     "az1": 267,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c185",
+   "type": "scene",
+   "start": 507.89,
+   "dur": 3.58,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 342,
+     "az1": 320,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c186",
+   "type": "scene",
+   "start": 511.47,
+   "dur": 7.38,
+   "props": {
+    "scene": "uw_grade",
+    "params": {
+     "n": 138,
+     "destaque": 91,
+     "titulo": "138",
+     "sub": "PICOS VOLCÁNICOS BAJO EL HIELO",
+     "sub2": "91 DESCONOCIDOS HASTA 2017",
+     "por_linha": 23
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c187",
+   "type": "scene",
+   "start": 515.38,
+   "dur": 3.32,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "91",
+     "sub": "NUEVOS DESDE 2017",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c188",
+   "type": "scene",
+   "start": 518.85,
+   "dur": 2.8,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -70,
+      120
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 35,
+     "az1": 13,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c189",
+   "type": "scene",
+   "start": 519.0,
+   "dur": 2.5,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "LA AFIRMACIÓN MÁS EXTRAÑA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c190",
+   "type": "scene",
+   "start": 521.65,
+   "dur": 7.96,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -70,
+      120
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 88,
+     "az1": 66,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "circulos": [
+      {
+       "c": [
+        -70,
+        120
+       ],
+       "r_km": 250,
+       "cor": "#ff4444"
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c191",
+   "type": "scene",
+   "start": 525.54,
+   "dur": 3.92,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "CÍRCULO DE 500 KM",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c192",
+   "type": "scene",
+   "start": 529.61,
+   "dur": 4.28,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_meteorito_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c193",
+   "type": "scene",
+   "start": 533.89,
+   "dur": 5.32,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_glossopteris_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c194",
+   "type": "scene",
+   "start": 534.04,
+   "dur": 1.88,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "LA GRAN MORTANDAD",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c195",
+   "type": "scene",
+   "start": 539.21,
+   "dur": 2.94,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_glossopteris_2.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c196",
+   "type": "scene",
+   "start": 539.36,
+   "dur": 2.64,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "HACE 252 MILLONES DE AÑOS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c197",
+   "type": "scene",
+   "start": 542.15,
+   "dur": 2.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -70,
+      120
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 141,
+     "az1": 119,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "circulos": [
+      {
+       "c": [
+        -70,
+        120
+       ],
+       "r_km": 250,
+       "cor": "#ff4444"
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c198",
+   "type": "scene",
+   "start": 544.63,
+   "dur": 3.3,
+   "props": {
+    "scene": "uw_carimbo",
+    "params": {
+     "pergunta": "¿MUESTRAS DE ROCA?",
+     "carimbo": "NINGUNA"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c199",
+   "type": "scene",
+   "start": 547.93,
+   "dur": 5.04,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_putorana_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c200",
+   "type": "scene",
+   "start": 548.08,
+   "dur": 4.74,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "VOLCANES DE SIBERIA",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c201",
+   "type": "scene",
+   "start": 552.97,
+   "dur": 3.08,
+   "props": {
+    "scene": "uw_carimbo",
+    "params": {
+     "pergunta": "¿UN CRÁTER GIGANTE?",
+     "carimbo": "HIPÓTESIS"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c202",
+   "type": "scene",
+   "start": 556.05,
+   "dur": 3.88,
+   "props": {
+    "scene": "uw_capitulo",
+    "params": {
+     "n": "CAPÍTULO",
+     "titulo": "¿DE QUIÉN ES TODO?"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c203",
+   "type": "scene",
+   "start": 559.93,
+   "dur": 2.64,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 194,
+     "az1": 172,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "setores": [
+      {
+       "lon0": -20,
+       "lon1": 45,
+       "cor": "#4477ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 45,
+       "lon1": 136,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 136,
+       "lon1": 142,
+       "cor": "#8844ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 142,
+       "lon1": 160,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 160,
+       "lon1": 210,
+       "cor": "#44bb44",
+       "op": 0.35
+      },
+      {
+       "lon0": -90,
+       "lon1": -53,
+       "cor": "#ff3333",
+       "op": 0.3
+      },
+      {
+       "lon0": -80,
+       "lon1": -20,
+       "cor": "#ee6600",
+       "op": 0.25
+      },
+      {
+       "lon0": -74,
+       "lon1": -25,
+       "cor": "#33ccff",
+       "op": 0.25
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c204",
+   "type": "scene",
+   "start": 560.08,
+   "dur": 2.34,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "7",
+     "sub": "PAÍSES RECLAMAN",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c205",
+   "type": "scene",
+   "start": 562.57,
+   "dur": 4.56,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -68,
+      -63
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 247,
+     "az1": 225,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "setores": [
+      {
+       "lon0": -20,
+       "lon1": 45,
+       "cor": "#4477ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 45,
+       "lon1": 136,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 136,
+       "lon1": 142,
+       "cor": "#8844ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 142,
+       "lon1": 160,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 160,
+       "lon1": 210,
+       "cor": "#44bb44",
+       "op": 0.35
+      },
+      {
+       "lon0": -90,
+       "lon1": -53,
+       "cor": "#ff3333",
+       "op": 0.3
+      },
+      {
+       "lon0": -80,
+       "lon1": -20,
+       "cor": "#ee6600",
+       "op": 0.25
+      },
+      {
+       "lon0": -74,
+       "lon1": -25,
+       "cor": "#33ccff",
+       "op": 0.25
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c206",
+   "type": "scene",
+   "start": 562.72,
+   "dur": 4.26,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "3",
+     "sub": "RECLAMOS SE TRASLAPAN",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c207",
+   "type": "scene",
+   "start": 567.13,
+   "dur": 5.06,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_tratado_0.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c208",
+   "type": "scene",
+   "start": 567.28,
+   "dur": 4.76,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1959",
+     "sub": "TRATADO ANTÁRTICO",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c209",
+   "type": "scene",
+   "start": 572.19,
+   "dur": 5.68,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 300,
+     "az1": 278,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c210",
+   "type": "scene",
+   "start": 577.87,
+   "dur": 3.32,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 353,
+     "az1": 331,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "setores": [
+      {
+       "lon0": -20,
+       "lon1": 45,
+       "cor": "#4477ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 45,
+       "lon1": 136,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 136,
+       "lon1": 142,
+       "cor": "#8844ff",
+       "op": 0.35
+      },
+      {
+       "lon0": 142,
+       "lon1": 160,
+       "cor": "#ffaa00",
+       "op": 0.35
+      },
+      {
+       "lon0": 160,
+       "lon1": 210,
+       "cor": "#44bb44",
+       "op": 0.35
+      },
+      {
+       "lon0": -90,
+       "lon1": -53,
+       "cor": "#ff3333",
+       "op": 0.3
+      },
+      {
+       "lon0": -80,
+       "lon1": -20,
+       "cor": "#ee6600",
+       "op": 0.25
+      },
+      {
+       "lon0": -74,
+       "lon1": -25,
+       "cor": "#33ccff",
+       "op": 0.25
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c211",
+   "type": "scene",
+   "start": 578.02,
+   "dur": 3.02,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "58",
+     "sub": "PAÍSES",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c212",
+   "type": "scene",
+   "start": 581.19,
+   "dur": 5.56,
+   "props": {
+    "scene": "uw_linha",
+    "params": {
+     "itens": [
+      {
+       "ano": "1959",
+       "txt": "12 PAÍSES FIRMAN"
+      },
+      {
+       "ano": "1991",
+       "txt": "SE PROHÍBE LA MINERÍA"
+      }
+     ],
+     "titulo": "TRATADO ANTÁRTICO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c213",
+   "type": "scene",
+   "start": 584.56,
+   "dur": 2.04,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1991",
+     "sub": "MINERÍA PROHIBIDA",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c214",
+   "type": "scene",
+   "start": 586.75,
+   "dur": 6.06,
+   "props": {
+    "scene": "uw_carimbo",
+    "params": {
+     "pergunta": "¿LA PROHIBICIÓN VENCE EN 2048?",
+     "carimbo": "FALSO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c215",
+   "type": "scene",
+   "start": 591.16,
+   "dur": 1.5,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "NO ES CIERTO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c216",
+   "type": "scene",
+   "start": 592.81,
+   "dur": 3.64,
+   "props": {
+    "scene": "uw_linha",
+    "params": {
+     "itens": [
+      {
+       "ano": "1959",
+       "txt": "TRATADO"
+      },
+      {
+       "ano": "1991",
+       "txt": "MINERÍA PROHIBIDA"
+      },
+      {
+       "ano": "2048",
+       "txt": "SOLO SE PUEDE REVISAR"
+      }
+     ],
+     "titulo": "TRATADO ANTÁRTICO"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c217",
+   "type": "scene",
+   "start": 596.45,
+   "dur": 6.02,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_tratado_0.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c218",
+   "type": "scene",
+   "start": 602.47,
+   "dur": 3.8,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      -45
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 46,
+     "az1": 24,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -75,
+        -45
+       ],
+       "label": "MAR DE WEDDELL",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c219",
+   "type": "scene",
+   "start": 602.62,
+   "dur": 3.5,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "¿PETRÓLEO EN WEDDELL?",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c220",
+   "type": "scene",
+   "start": 606.27,
+   "dur": 2.92,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -75,
+      -45
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 99,
+     "az1": 77,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c221",
+   "type": "scene",
+   "start": 606.42,
+   "dur": 2.62,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "SOLO UNA ESTIMACIÓN",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c222",
+   "type": "scene",
+   "start": 609.19,
+   "dur": 2.1,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75,
+      -45
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 40,
+     "az0": 152,
+     "az1": 130,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c223",
+   "type": "scene",
+   "start": 609.34,
+   "dur": 1.8,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "0",
+     "sub": "POZOS PERFORADOS",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c224",
+   "type": "scene",
+   "start": 611.29,
+   "dur": 2.78,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 205,
+     "az1": 183,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c225",
+   "type": "scene",
+   "start": 614.07,
+   "dur": 1.48,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_thwaites_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c226",
+   "type": "scene",
+   "start": 615.55,
+   "dur": 4.34,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -75.5,
+      -106.75
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 258,
+     "az1": 236,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -75.5,
+        -106.75
+       ],
+       "label": "GLACIAR THWAITES",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c227",
+   "type": "scene",
+   "start": 615.7,
+   "dur": 4.04,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "GLACIAR THWAITES",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c228",
+   "type": "scene",
+   "start": 619.89,
+   "dur": 5.14,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "corcho",
+     "valor": "GLACIAR THWAITES",
+     "a": "AGUA TIBIA DEL MAR"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c229",
+   "type": "scene",
+   "start": 620.04,
+   "dur": 4.84,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "COMO UN CORCHO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c230",
+   "type": "scene",
+   "start": 625.03,
+   "dur": 3.2,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_thwaites_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c231",
+   "type": "scene",
+   "start": 625.18,
+   "dur": 2.9,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "30",
+     "sub": "AÑOS DE RETROCESO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c232",
+   "type": "scene",
+   "start": 628.23,
+   "dur": 3.22,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "corcho",
+     "valor": "GLACIAR THWAITES",
+     "a": "AGUA TIBIA DEL MAR",
+     "seed": 3
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c233",
+   "type": "scene",
+   "start": 631.45,
+   "dur": 5.16,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -75.5,
+      -106.75
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 311,
+     "az1": 289,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c234",
+   "type": "scene",
+   "start": 631.6,
+   "dur": 4.86,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+65 CM",
+     "sub": "",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c235",
+   "type": "scene",
+   "start": 636.61,
+   "dur": 1.88,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 46,
+     "az0": 4,
+     "az1": -18,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c236",
+   "type": "scene",
+   "start": 638.49,
+   "dur": 1.22,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "derrete",
+     "foco": [
+      -80,
+      -115
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 57,
+     "az1": 35,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "derrete_ini": 0.15,
+     "derrete_fim": 0.85
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c237",
+   "type": "scene",
+   "start": 638.64,
+   "dur": 0.92,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+3 M",
+     "sub": "",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c238",
+   "type": "scene",
+   "start": 639.71,
+   "dur": 3.72,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_icecore_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c239",
+   "type": "scene",
+   "start": 643.43,
+   "dur": 5.98,
+   "props": {
+    "scene": "uw_corte",
+    "params": {
+     "modo": "perforacion",
+     "a": "HASTA LA ROCA MADRE"
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c240",
+   "type": "scene",
+   "start": 643.58,
+   "dur": 4.48,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "2025",
+     "sub": "HASTA LA ROCA MADRE",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c241",
+   "type": "scene",
+   "start": 649.15,
+   "dur": 3.46,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_icecore_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c242",
+   "type": "scene",
+   "start": 649.3,
+   "dur": 3.16,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "+1.2 MILLONES",
+     "sub": "DE AÑOS",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c243",
+   "type": "scene",
+   "start": 652.61,
+   "dur": 4.38,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_meteorito_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c244",
+   "type": "scene",
+   "start": 652.76,
+   "dur": 4.08,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "METEORITOS",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c245",
+   "type": "scene",
+   "start": 656.99,
+   "dur": 6.06,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -76.7,
+      159.7
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 40,
+     "az0": 110,
+     "az1": 88,
+     "rotulo": "",
+     "fade_in": 0.35,
+     "pinos": [
+      {
+       "c": [
+        -76.7,
+        159.7
+       ],
+       "label": "COLINAS ALLAN",
+       "t": 0.4
+      }
+     ]
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c246",
+   "type": "scene",
+   "start": 657.14,
+   "dur": 5.76,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1984",
+     "sub": "ALLAN HILLS · MARTE",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c247",
+   "type": "scene",
+   "start": 663.05,
+   "dur": 6.08,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_alh84001_0.jpg",
+     "motion": "pan_right",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c248",
+   "type": "scene",
+   "start": 663.2,
+   "dur": 5.78,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "1996",
+     "sub": "¿FÓSILES?",
+     "escurecer": 0.4,
+     "conta": false
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c249",
+   "type": "scene",
+   "start": 669.13,
+   "dur": 5.54,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_curiosity_2.jpg",
+     "motion": "pan_left",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c250",
+   "type": "scene",
+   "start": 674.67,
+   "dur": 8.7,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_meteorito_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c251",
+   "type": "scene",
+   "start": 674.82,
+   "dur": 5.86,
+   "props": {
+    "scene": "uw_numero",
+    "params": {
+     "numero": "5,000",
+     "sub": "METEORITOS POR AÑO",
+     "escurecer": 0.4,
+     "conta": true
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c252",
+   "type": "scene",
+   "start": 683.37,
+   "dur": 3.58,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -80.5,
+      76
+     ],
+     "zoom0": 0.5,
+     "zoom1": 0.44,
+     "el": 46,
+     "az0": 163,
+     "az1": 141,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c253",
+   "type": "scene",
+   "start": 686.95,
+   "dur": 3.76,
+   "props": {
+    "scene": "uw_foto",
+    "params": {
+     "src": "img/cand/w_putorana_2.jpg",
+     "motion": "zoom_out",
+     "amount": 0.07,
+     "escurecer": 0.15,
+     "fade_in": 0.12
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c254",
+   "type": "scene",
+   "start": 690.71,
+   "dur": 2.56,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -77.5,
+      106
+     ],
+     "zoom0": 0.62,
+     "zoom1": 0.55,
+     "el": 34,
+     "az0": 216,
+     "az1": 194,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c255",
+   "type": "scene",
+   "start": 693.27,
+   "dur": 1.7,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 269,
+     "az1": 247,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c256",
+   "type": "scene",
+   "start": 693.42,
+   "dur": 1.4,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "CASI TODO MEDIDO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c257",
+   "type": "scene",
+   "start": 694.97,
+   "dur": 1.97,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 322,
+     "az1": 300,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c258",
+   "type": "scene",
+   "start": 695.12,
+   "dur": 1.67,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "APENAS VISTO",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c259",
+   "type": "scene",
+   "start": 696.94,
+   "dur": 3.25,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "sem-gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 34,
+     "az0": 15,
+     "az1": -7,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c260",
+   "type": "scene",
+   "start": 700.19,
+   "dur": 1.48,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 40,
+     "az0": 68,
+     "az1": 46,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  },
+  {
+   "id": "c261",
+   "type": "scene",
+   "start": 700.34,
+   "dur": 1.18,
+   "props": {
+    "scene": "uw_rotulo",
+    "params": {
+     "texto": "SUSCRÍBETE",
+     "sub": "",
+     "canto": "bl"
+    },
+    "fill": true,
+    "z": 5
+   },
+   "track": "texto"
+  },
+  {
+   "id": "c262",
+   "type": "scene",
+   "start": 701.67,
+   "dur": 3.22,
+   "props": {
+    "scene": "uw_relevo",
+    "params": {
+     "modo": "gelo",
+     "foco": [
+      -82,
+      0
+     ],
+     "zoom0": 0.88,
+     "zoom1": 0.76,
+     "el": 46,
+     "az0": 121,
+     "az1": 99,
+     "rotulo": "",
+     "fade_in": 0.35
+    },
+    "fill": true,
+    "z": 1
+   },
+   "track": "fundo"
+  }
+ ]
+}

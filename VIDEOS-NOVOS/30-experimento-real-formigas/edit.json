@@ -1,0 +1,937 @@
+{
+ "version": 1,
+ "name": "30 - EXPERIMENTO SELVAGEM - O que acontece se você colocar 100 formigas numa caixa com 1 aranha",
+ "estilo": "30-experimento-real-formigas",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#8f8ab3"
+ },
+ "duration": 53.1,
+ "template": "local",
+ "referencia": {
+  "canal": "Wild Experiments",
+  "canal_url": "https://www.youtube.com/channel/UCns0RTIxXRQKY0XC_doFvww",
+  "video": "https://youtu.be/u7IKFWsLC_U",
+  "titulo": "2 Ant Colonies Race Through Obstacles & Meet After 30 Days (1.000 Red vs Black Ants) - [REUPLOAD]",
+  "nota": "Original = terrário real filmado. Aqui: VARIANTE CARTOON 2D (cutaways do canal como vídeo inteiro): arena vista de cima + cortes laterais, 100 formigas e 1 aranha-lobo em SVG, simulação determinística em GSAP."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (arena)"
+  },
+  {
+   "id": "cards",
+   "name": "Cards MINUTO"
+  },
+  {
+   "id": "textos",
+   "name": "Rótulos + setas"
+  },
+  {
+   "id": "hud",
+   "name": "Placar"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Formigas entram pelo tubo",
+   "start": 0,
+   "dur": 2.2,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      330,
+      520,
+      1.9
+     ],
+     "cam1": [
+      390,
+      480,
+      1.6
+     ]
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Caixa de lado + luva solta a aranha",
+   "start": 2.2,
+   "dur": 2.74,
+   "by": "template",
+   "props": {
+    "scene": "lado_intro",
+    "params": {}
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Aranha imóvel, pernas recolhidas",
+   "start": 4.94,
+   "dur": 3.16,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      640,
+      325,
+      2.3
+     ],
+     "cam1": [
+      640,
+      330,
+      2.0
+     ]
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Exploram as paredes (geral)",
+   "start": 8.1,
+   "dur": 4.94,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      640,
+      370,
+      1.0
+     ],
+     "cam1": [
+      640,
+      370,
+      1.1
+     ]
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Toca a pata traseira",
+   "start": 13.04,
+   "dur": 3.3,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      680,
+      380,
+      2.6
+     ],
+     "cam1": [
+      680,
+      375,
+      2.9
+     ]
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Golpe e fuga",
+   "start": 16.34,
+   "dur": 3.28,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      620,
+      430,
+      1.8
+     ],
+     "cam1": [
+      600,
+      450,
+      1.6
+     ]
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cheiro de alarme / convergem",
+   "start": 19.62,
+   "dur": 4.14,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      640,
+      380,
+      1.05
+     ],
+     "cam1": [
+      640,
+      375,
+      1.25
+     ]
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3 mortes em 10 s",
+   "start": 23.76,
+   "dur": 2.34,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      660,
+      410,
+      2.0
+     ],
+     "cam1": [
+      660,
+      405,
+      2.2
+     ]
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Enxame sobe no cefalotórax",
+   "start": 26.1,
+   "dur": 4.6,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      640,
+      360,
+      2.0
+     ],
+     "cam1": [
+      640,
+      345,
+      2.8
+     ]
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Tomba de lado (close lateral)",
+   "start": 30.7,
+   "dur": 2.82,
+   "by": "template",
+   "props": {
+    "scene": "lado_tomba",
+    "params": {}
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cortam pernas, levam ao ninho",
+   "start": 33.52,
+   "dur": 5.56,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      780,
+      300,
+      1.05
+     ],
+     "cam1": [
+      830,
+      290,
+      1.2
+     ]
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "15 min: cefalotórax vazio",
+   "start": 39.08,
+   "dur": 3.68,
+   "by": "template",
+   "props": {
+    "scene": "topo",
+    "params": {
+     "cam0": [
+      640,
+      385,
+      2.2
+     ],
+     "cam1": [
+      640,
+      380,
+      2.7
+     ]
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Inscreva-se / vespas",
+   "start": 42.76,
+   "dur": 2.56,
+   "by": "template",
+   "props": {
+    "scene": "cta",
+    "params": {}
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Número > veneno: 30 x 100",
+   "start": 45.32,
+   "dur": 7.78,
+   "by": "template",
+   "props": {
+    "scene": "versus",
+    "params": {}
+   }
+  },
+  {
+   "id": "t01",
+   "type": "text",
+   "track": "textos",
+   "label": "100 FORMIGAS OPERÁRIAS",
+   "start": 0.75,
+   "dur": 1.45,
+   "by": "template",
+   "props": {
+    "text": "100 FORMIGAS OPERÁRIAS",
+    "x": 640,
+    "y": 640,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t02",
+   "type": "text",
+   "track": "textos",
+   "label": "ARENA DE ACRÍLICO",
+   "start": 2.4,
+   "dur": 1.15,
+   "by": "template",
+   "props": {
+    "text": "ARENA DE ACRÍLICO",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "x": 163,
+     "y": 400,
+     "ang": 180
+    }
+   }
+  },
+  {
+   "id": "t03",
+   "type": "text",
+   "track": "textos",
+   "label": "1 ARANHA-LOBO ADULTA",
+   "start": 3.65,
+   "dur": 1.29,
+   "by": "template",
+   "props": {
+    "text": "1 ARANHA-LOBO ADULTA",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t04",
+   "type": "text",
+   "track": "textos",
+   "label": "PERNAS RECOLHIDAS",
+   "start": 6.85,
+   "dur": 1.25,
+   "by": "template",
+   "props": {
+    "text": "PERNAS RECOLHIDAS",
+    "x": 640,
+    "y": 640,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "legR",
+     "ang": 90,
+     "dy": -6
+    }
+   }
+  },
+  {
+   "id": "t05",
+   "type": "text",
+   "track": "textos",
+   "label": "EXPLORAM AS PAREDES",
+   "start": 8.9,
+   "dur": 1.55,
+   "by": "template",
+   "props": {
+    "text": "EXPLORAM AS PAREDES",
+    "x": 640,
+    "y": 250,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "x": 640,
+     "y": 96,
+     "ang": 270
+    }
+   }
+  },
+  {
+   "id": "t06",
+   "type": "text",
+   "track": "textos",
+   "label": "IGNORAM O PREDADOR",
+   "start": 10.5,
+   "dur": 2.54,
+   "by": "template",
+   "props": {
+    "text": "IGNORAM O PREDADOR",
+    "x": 640,
+    "y": 590,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "spider",
+     "ang": 270,
+     "dy": 80
+    }
+   }
+  },
+  {
+   "id": "t07",
+   "type": "text",
+   "track": "textos",
+   "label": "TOCOU A PATA TRASEIRA",
+   "start": 14.4,
+   "dur": 1.94,
+   "by": "template",
+   "props": {
+    "text": "TOCOU A PATA TRASEIRA",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "tip7",
+     "ang": 90,
+     "dy": -10
+    }
+   }
+  },
+  {
+   "id": "t08",
+   "type": "text",
+   "track": "textos",
+   "label": "GOLPE ÚNICO!",
+   "start": 17.26,
+   "dur": 1.44,
+   "by": "template",
+   "props": {
+    "text": "GOLPE ÚNICO!",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t09",
+   "type": "text",
+   "track": "textos",
+   "label": "ESCAPOU!",
+   "start": 18.75,
+   "dur": 0.87,
+   "by": "template",
+   "props": {
+    "text": "ESCAPOU!",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag",
+    "color": "#ffd23a"
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "CHEIRO DE ALARME",
+   "start": 20.36,
+   "dur": 1.24,
+   "by": "template",
+   "props": {
+    "text": "CHEIRO DE ALARME",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag",
+    "color": "#ffb36b"
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "DEZENAS CONVERGEM",
+   "start": 21.64,
+   "dur": 2.12,
+   "by": "template",
+   "props": {
+    "text": "DEZENAS CONVERGEM",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "3 EM 10 SEGUNDOS",
+   "start": 24.58,
+   "dur": 1.52,
+   "by": "template",
+   "props": {
+    "text": "3 EM 10 SEGUNDOS",
+    "x": 640,
+    "y": 640,
+    "size": 56,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t13",
+   "type": "text",
+   "track": "textos",
+   "label": "CEFALOTÓRAX",
+   "start": 27.36,
+   "dur": 1.54,
+   "by": "template",
+   "props": {
+    "text": "CEFALOTÓRAX",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "ceph",
+     "ang": 90,
+     "dy": -30
+    }
+   }
+  },
+  {
+   "id": "t14",
+   "type": "text",
+   "track": "textos",
+   "label": "OLHOS E ARTICULAÇÕES",
+   "start": 28.96,
+   "dur": 1.74,
+   "by": "template",
+   "props": {
+    "text": "OLHOS E ARTICULAÇÕES",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t15",
+   "type": "text",
+   "track": "textos",
+   "label": "TOMBOU DE LADO",
+   "start": 31.0,
+   "dur": 2.52,
+   "by": "template",
+   "props": {
+    "text": "TOMBOU DE LADO",
+    "x": 640,
+    "y": 110,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t16",
+   "type": "text",
+   "track": "textos",
+   "label": "CORTAM AS PERNAS",
+   "start": 34.92,
+   "dur": 2.48,
+   "by": "template",
+   "props": {
+    "text": "CORTAM AS PERNAS",
+    "x": 640,
+    "y": 650,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t17",
+   "type": "text",
+   "track": "textos",
+   "label": "NINHO ARTIFICIAL",
+   "start": 37.5,
+   "dur": 1.58,
+   "by": "template",
+   "props": {
+    "text": "NINHO ARTIFICIAL",
+    "x": 760,
+    "y": 560,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "nest",
+     "ang": 270
+    }
+   }
+  },
+  {
+   "id": "t18",
+   "type": "text",
+   "track": "textos",
+   "label": "SÓ RESTOU O CEFALOTÓRAX",
+   "start": 41.2,
+   "dur": 1.56,
+   "by": "template",
+   "props": {
+    "text": "SÓ RESTOU O CEFALOTÓRAX",
+    "x": 640,
+    "y": 640,
+    "size": 52,
+    "estilo": "tag",
+    "seta": {
+     "ponto": "ceph",
+     "ang": 90,
+     "dy": -40
+    }
+   }
+  },
+  {
+   "id": "t19",
+   "type": "text",
+   "track": "textos",
+   "label": "SE INSCREVA",
+   "start": 42.9,
+   "dur": 2.42,
+   "by": "template",
+   "props": {
+    "text": "SE INSCREVA",
+    "x": 380,
+    "y": 300,
+    "size": 64,
+    "estilo": "btn"
+   }
+  },
+  {
+   "id": "t20",
+   "type": "text",
+   "track": "textos",
+   "label": "PRÓXIMO TESTE: VESPAS",
+   "start": 43.6,
+   "dur": 1.72,
+   "by": "template",
+   "props": {
+    "text": "PRÓXIMO TESTE: VESPAS",
+    "x": 380,
+    "y": 440,
+    "size": 52,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t21",
+   "type": "text",
+   "track": "textos",
+   "label": "Número (grande)",
+   "start": 45.4,
+   "dur": 2.5,
+   "by": "template",
+   "props": {
+    "text": "O NÚMERO DE FORMIGAS",
+    "x": 640,
+    "y": 300,
+    "size": 80,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t22",
+   "type": "text",
+   "track": "textos",
+   "label": "Veneno (grande)",
+   "start": 46.38,
+   "dur": 1.52,
+   "by": "template",
+   "props": {
+    "text": "IMPORTA MAIS QUE O VENENO",
+    "x": 640,
+    "y": 430,
+    "size": 64,
+    "estilo": "tag",
+    "color": "#ffd23a"
+   }
+  },
+  {
+   "id": "t23",
+   "type": "text",
+   "track": "textos",
+   "label": "NÚMERO > VENENO",
+   "start": 47.94,
+   "dur": 5.16,
+   "by": "template",
+   "props": {
+    "text": "NÚMERO > VENENO",
+    "x": 640,
+    "y": 100,
+    "size": 64,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t24",
+   "type": "text",
+   "track": "textos",
+   "label": "30 FORMIGAS",
+   "start": 47.94,
+   "dur": 5.16,
+   "by": "template",
+   "props": {
+    "text": "30 FORMIGAS",
+    "x": 330,
+    "y": 255,
+    "size": 48,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t25",
+   "type": "text",
+   "track": "textos",
+   "label": "PERDERIAM",
+   "start": 48.8,
+   "dur": 4.3,
+   "by": "template",
+   "props": {
+    "text": "PERDERIAM",
+    "x": 330,
+    "y": 585,
+    "size": 52,
+    "estilo": "stamp",
+    "color": "#d61f1f",
+    "rot": -6
+   }
+  },
+  {
+   "id": "t26",
+   "type": "text",
+   "track": "textos",
+   "label": "100 FORMIGAS",
+   "start": 50.12,
+   "dur": 2.98,
+   "by": "template",
+   "props": {
+    "text": "100 FORMIGAS",
+    "x": 950,
+    "y": 255,
+    "size": 48,
+    "estilo": "tag"
+   }
+  },
+  {
+   "id": "t27",
+   "type": "text",
+   "track": "textos",
+   "label": "CAÇADOR VIROU PRESA",
+   "start": 50.9,
+   "dur": 2.2,
+   "by": "template",
+   "props": {
+    "text": "CAÇADOR VIROU PRESA",
+    "x": 950,
+    "y": 585,
+    "size": 48,
+    "estilo": "stamp",
+    "color": "#1f8a3a",
+    "rot": -5
+   }
+  },
+  {
+   "id": "c1",
+   "type": "text",
+   "track": "cards",
+   "label": "Card MINUTO 0",
+   "start": 4.94,
+   "dur": 1.8,
+   "by": "template",
+   "props": {
+    "text": "MINUTO 0",
+    "size": 110
+   }
+  },
+  {
+   "id": "c2",
+   "type": "text",
+   "track": "cards",
+   "label": "Card MINUTO 15",
+   "start": 39.08,
+   "dur": 1.9,
+   "by": "template",
+   "props": {
+    "text": "MINUTO 15",
+    "size": 110
+   }
+  },
+  {
+   "id": "h1",
+   "type": "text",
+   "track": "hud",
+   "label": "HUD FORMIGAS: 100",
+   "start": 0.72,
+   "dur": 42.04,
+   "by": "template",
+   "props": {
+    "text": "FORMIGAS: 100"
+   }
+  },
+  {
+   "id": "h2",
+   "type": "text",
+   "track": "hud",
+   "label": "HUD ARANHA-LOBO: 1",
+   "start": 3.6,
+   "dur": 39.16,
+   "by": "template",
+   "props": {
+    "text": "ARANHA-LOBO: 1"
+   }
+  },
+  {
+   "id": "h3",
+   "type": "text",
+   "track": "hud",
+   "label": "HUD BAIXAS: 3",
+   "start": 24.58,
+   "dur": 18.18,
+   "by": "template",
+   "props": {
+    "text": "BAIXAS: 3"
+   }
+  },
+  {
+   "id": "h4",
+   "type": "text",
+   "track": "hud",
+   "label": "HUD MIN 15",
+   "start": 39.08,
+   "dur": 3.68,
+   "by": "template",
+   "props": {
+    "text": "MIN 15"
+   }
+  },
+  {
+   "id": "vs_esq",
+   "type": "param",
+   "label": "Versus: painel 30 entra (s)",
+   "start": 47.94,
+   "props": {
+    "value": 47.94
+   }
+  },
+  {
+   "id": "vs_dir",
+   "type": "param",
+   "label": "Versus: painel 100 entra (s)",
+   "start": 50.12,
+   "props": {
+    "value": 50.12
+   }
+  },
+  {
+   "id": "tempos",
+   "type": "param",
+   "label": "Tempos da simulação (s)",
+   "props": {
+    "value": {
+     "entra": 0.7,
+     "aranha": 3.6,
+     "toque": 14.38,
+     "gira": 16.76,
+     "foge": 17.0,
+     "escapou": 18.84,
+     "alarme": 20.36,
+     "converge": 21.64,
+     "mortes": [
+      24.6,
+      25.15,
+      25.7
+     ],
+     "sobe": 26.6,
+     "tomba": 30.82,
+     "corta": 34.92,
+     "abd": 37.2,
+     "vazio": 41.2
+    }
+   }
+  }
+ ]
+}

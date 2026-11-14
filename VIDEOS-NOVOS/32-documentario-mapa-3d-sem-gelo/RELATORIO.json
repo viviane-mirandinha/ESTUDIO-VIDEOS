@@ -1,0 +1,23 @@
+{
+  "video": 32,
+  "estilo": "32-documentario-mapa-3d-sem-gelo (Unseen Works - What Antarctica Looks Like Without Ice)",
+  "inicio": "2026-10-23T04:57:37-03:00",
+  "fim": "2026-10-23T06:15:30-03:00",
+  "minutos": 77.9,
+  "render_segundos": 887,
+  "etapas_min": {
+    "estudo_referencia_e_catalogo": 6,
+    "roteiro_es_pro_sonnet": 10,
+    "espera_audio_usuario": 7,
+    "whisper_e_alinhamento": 8,
+    "dados_3d_bedmap2_e_cenas_novas": 22,
+    "montagem_edit_e_testes": 10,
+    "render_1_falhou_no_audio": 0,
+    "render_final": 15
+  },
+  "observacoes": "Mesmo roteiro/gancho da referencia em es-MX humanizado; voz gravada pelo usuario (704 s). Mapa 3D real (Bedmap2 BAS 1 km) em Three.js: modos gelo/sem-gelo/derrete, pinos, circulo Wilkes, rift, setores das reivindicacoes, contorno EUA+MX. 11 cenas novas uw_* reutilizaveis em EDITOR VIDEOS/templates/scenes (relevo, corte, escala, grade, linha, carimbo, capitulo, numero, rotulo, foto, split). 262 itens: 77 mapas 3D, 58 fotos Wikimedia (53 candidatas, creditos em img/cand/creditos.json), 14 cortes, 44 numeros, 57 rotulos. Sem clipes de banco (Pixabay 401, Wikimedia 429). Sem legenda/SFX/musica (igual referencia). 1o render: quadros ok mas mix de audio quebrou (audio.voice precisa ser {src}); corrigido e remixado sem renderizar de novo. 2o render (v2) com mapa cena-a-cena explicito para imagem bater com a fala. Modo globo da abertura nao usado (sem textura). build_from_edit.py nao foi alterado.",
+  "estimativa_30min": {
+    "horas_maquina": 1.5,
+    "o_que_escala": "Cenas e dados 3D ja prontos: proximo video do estilo = roteiro + voz + preencher tabela V em montar_edit.py (regiao/foto por frase). Render ~1,25 s por segundo de video (~38 min para 30 min)."
+  }
+}

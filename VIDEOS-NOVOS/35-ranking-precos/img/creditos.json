@@ -1,0 +1,50 @@
+{
+ "selo": {
+  "file": "File:British Guiana 1856 1c magenta stamp.jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:British_Guiana_1856_1c_magenta_stamp.jpg",
+  "autor": "Joseph Baum and William Dallas printers for local postmaster, E.T.E. Dalton",
+  "licenca": "Public domain",
+  "raw": "img/raw/selo_0.jpg",
+  "arquivo": "img/selo.jpg"
+ },
+ "codex": {
+  "file": "File:CodexLeicester.jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:CodexLeicester.jpg",
+  "autor": "<a href=\"https://tr.wikipedia.org/wiki/Leonardo_da_Vinci\" class=\"extiw\" title=\"tr:Leonardo da Vinci\">Leonardo</a> da <a href=\"https://en.wikipedia.org/wiki/it:Vinci\" class=\"extiw\" title=\"w:it:Vinci\">V",
+  "licenca": "Public domain",
+  "raw": "img/raw/codex_1.jpg",
+  "arquivo": "img/codex.jpg"
+ },
+ "ferrari": {
+  "file": "File:Ferrari 250 GTO (18856656241).jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:Ferrari_250_GTO_(18856656241).jpg",
+  "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/32569229@N06\">Alexandre Prévot</a> from Nancy, France",
+  "licenca": "CC BY-SA 2.0",
+  "raw": "img/raw/ferrarib_2.jpg",
+  "arquivo": "img/ferrari.jpg"
+ },
+ "mercedes": {
+  "file": "File:Mercedes-Benz 300 SLR Uhlenhaut Coupe - Petersen Automotive Museum - Los Angeles.jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_300_SLR_Uhlenhaut_Coupe_-_Petersen_Automotive_Museum_-_Los_Angeles.jpg",
+  "autor": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Guywelch2000\" title=\"User:Guywelch2000\">Guywelch2000</a>",
+  "licenca": "CC BY 4.0",
+  "raw": "img/raw/mercedes_0.jpg",
+  "arquivo": "img/mercedes.jpg"
+ },
+ "modigliani": {
+  "file": "File:Modigliani - Nu couché.jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:Modigliani_-_Nu_couch%C3%A9.jpg",
+  "autor": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Amedeo_Modigliani\" class=\"extiw\" title=\"w:en:Amedeo Modigliani\"><span title=\"Italian painter and sculptor (1884–1920)\">Amedeo Modigliani</span></a></bdi>",
+  "licenca": "Public domain",
+  "raw": "img/raw/modigliani_0.jpg",
+  "arquivo": "img/modigliani.jpg"
+ },
+ "salvator": {
+  "file": "File:Leonardo da Vinci, Salvator Mundi, c.1500, oil on walnut, 45.4 × 65.6 cm.jpg",
+  "url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci,_Salvator_Mundi,_c.1500,_oil_on_walnut,_45.4_%C3%97_65.6_cm.jpg",
+  "autor": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Leonardo_da_Vinci\" class=\"extiw\" title=\"w:en:Leonardo da Vinci\"><span title=\"Italian Renaissance polymath (1452−1519)\">Leonardo da Vinci</span></a></bdi>",
+  "licenca": "Public domain",
+  "raw": "img/raw/salvator_0.jpg",
+  "arquivo": "img/salvator.jpg"
+ }
+}

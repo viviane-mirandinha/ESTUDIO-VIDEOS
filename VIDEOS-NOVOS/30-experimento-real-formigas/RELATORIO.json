@@ -1,0 +1,13 @@
+{
+ "video": 30,
+ "estilo": "30-experimento-real-formigas",
+ "inicio": "2026-10-22T15:39:33-03:00",
+ "fim": "2026-10-22T15:54:33-03:00",
+ "minutos": 15.0,
+ "render_segundos": 62,
+ "observacoes": "Variante cartoon 2D (o estilo real exige filmar formigas). template local: arena vista de cima + 2 cortes laterais + CTA + versus; 100 formigas e 1 aranha-lobo em SVG, simulação determinística por tempo (setter defineProperty, seek-safe), todos os tempos/textos no edit.json (item 'tempos'). Zero imagem baixada, zero IA, sem música/SFX. whisper GPU ok. 2 renders (2º: tela vazia em 45-48 s virou texto grande).",
+ "estimativa_30min": {
+  "horas_maquina": 1.0,
+  "o_que_escala": "o motor (arena/formigas/aranha/setas/cards) é reaproveitável: trocar predador e linha do tempo de eventos por roteiro; render ~65 s/min. Gargalo: desenhar predador/obstáculo novo por tema."
+ }
+}

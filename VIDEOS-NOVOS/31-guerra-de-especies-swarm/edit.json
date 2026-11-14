@@ -1,0 +1,514 @@
+{
+ "version": 1,
+ "name": "31 - GUERRA DE ESPECIES SWARM - Por que as vespas têm medo das libélulas",
+ "estilo": "31-guerra-de-especies-swarm",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0a1f1d"
+ },
+ "duration": 44.0,
+ "template": "generic",
+ "fonts": {
+  "Outfit": "fonts/Outfit.ttf"
+ },
+ "head": "",
+ "referencia": {
+  "canal": "SwarmTheory",
+  "canal_url": "https://www.youtube.com/channel/UCnQGQTq_hH7h7v84eApwcUA",
+  "video": "https://youtu.be/18gEjxdSuxc",
+  "titulo": "The Biggest War Between Species on Planet Earth",
+  "nota": "Fundo verde-petróleo texturizado + enxames de partículas laranja x azul (canvas seeded), macro stock real Pixabay, rótulos no canto, pouco texto. Tema = 'Why Wasps are Terrified of Dragonflies'."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas / mídia"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "video",
+   "track": "fundo",
+   "label": "Vídeo vespas no ninho",
+   "start": 0.0,
+   "dur": 2.85,
+   "in": "none",
+   "props": {
+    "src": "clips/vwasp1.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 1,
+    "motion": "zoom_in"
+   }
+  },
+  {
+   "id": "r01",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Vespa",
+   "start": 0.2,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Vespa",
+    "x": 330,
+    "y": 64,
+    "w": 600,
+    "size": 36,
+    "color": "#f2f2ea",
+    "font": "Outfit",
+    "weight": 500,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   }
+  },
+  {
+   "id": "x01",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto O terror dos céus?",
+   "start": 0.3,
+   "dur": 2.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "O terror dos céus?",
+    "x": 640,
+    "y": 600,
+    "w": 1150,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Outfit",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(6,22,21,.55)",
+    "pad": 16,
+    "radius": 10,
+    "shadow": true
+   }
+  },
+  {
+   "id": "s02",
+   "type": "video",
+   "track": "fundo",
+   "label": "Vídeo libélula",
+   "start": 2.35,
+   "dur": 2.1,
+   "in": "fade",
+   "props": {
+    "src": "clips/vdfly1.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 1,
+    "motion": "zoom_in"
+   }
+  },
+  {
+   "id": "r02",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Libélula",
+   "start": 2.5,
+   "dur": 1.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Libélula",
+    "x": 330,
+    "y": 64,
+    "w": 600,
+    "size": 36,
+    "color": "#f2f2ea",
+    "font": "Outfit",
+    "weight": 500,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Enxame: libélulas caçando vespas",
+   "start": 3.95,
+   "dur": 2.15,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "caca",
+     "seed": 8,
+     "fade_in": 0.4,
+     "rotulo": "Caça no ar"
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Número 95%",
+   "start": 5.6,
+   "dur": 2.6,
+   "props": {
+    "scene": "sw_stat",
+    "params": {
+     "valor": 95,
+     "prefixo": "",
+     "sufixo": "%",
+     "legenda": "de sucesso na caça",
+     "rotulo": "",
+     "cor": "#5cc8ff",
+     "seed": 5,
+     "t_conta": 0.1,
+     "conta_dur": 0.8,
+     "fade_in": 0.3
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto Processamento",
+   "start": 7.7,
+   "dur": 3.2,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/ieye1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "Processamento",
+     "sub": "não é força",
+     "credito": "Pixabay / Pexels",
+     "fade_in": 0.4,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Prevê trajetória e intercepta",
+   "start": 10.4,
+   "dur": 5.55,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "intercepta",
+     "seed": 11,
+     "fade_in": 0.4,
+     "rotulo": "Cérebro da libélula",
+     "l1": "prevê a trajetória",
+     "l2": "intercepta",
+     "l3": "não persegue"
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "4 asas independentes",
+   "start": 15.45,
+   "dur": 3.6,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "asas",
+     "seed": 12,
+     "fade_in": 0.4,
+     "titulo": "4 asas",
+     "sub": "batem de forma independente",
+     "t_titulo": 0.4
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Virada de 90 graus",
+   "start": 18.55,
+   "dur": 3.45,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "virada",
+     "seed": 13,
+     "fade_in": 0.4,
+     "l1": "90°",
+     "l2": "em décimos de segundo"
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto Ferrão",
+   "start": 21.5,
+   "dur": 2.3,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/iwasp3.jpg",
+     "motion": "pan_left",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "Ferrão",
+     "sub": "a arma da vespa",
+     "credito": "Pixabay / DerWeg",
+     "fade_in": 0.4,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Agarra pelo tórax, asas caem",
+   "start": 23.3,
+   "dur": 4.3,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "captura",
+     "seed": 15,
+     "fade_in": 0.4,
+     "l1": "tórax",
+     "l2": "asas",
+     "titulo": "",
+     "sub": "antes que a vítima reaja",
+     "t_titulo": 2.9
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Uma libélula devora dezenas",
+   "start": 27.1,
+   "dur": 4.2,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "devora",
+     "seed": 16,
+     "fade_in": 0.4,
+     "titulo": "dezenas de insetos",
+     "sub": "por dia",
+     "t_titulo": 1.5
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "video",
+   "track": "fundo",
+   "label": "Vídeo vespa comendo",
+   "start": 30.8,
+   "dur": 3.4,
+   "in": "fade",
+   "props": {
+    "src": "clips/vwasp2.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 1,
+    "motion": "zoom_in"
+   }
+  },
+  {
+   "id": "r12",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Vespa: presas paradas",
+   "start": 31.0,
+   "dur": 2.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Vespa: presas paradas",
+    "x": 330,
+    "y": 64,
+    "w": 600,
+    "size": 36,
+    "color": "#f2f2ea",
+    "font": "Outfit",
+    "weight": 500,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s13",
+   "type": "video",
+   "track": "fundo",
+   "label": "Vídeo libélula asas abertas",
+   "start": 33.7,
+   "dur": 3.0,
+   "in": "fade",
+   "props": {
+    "src": "clips/vdfly0.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 1,
+    "motion": "zoom_in"
+   }
+  },
+  {
+   "id": "r13",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Libélula: mata no voo",
+   "start": 33.9,
+   "dur": 2.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Libélula: mata no voo",
+    "x": 330,
+    "y": 64,
+    "w": 600,
+    "size": 36,
+    "color": "#f2f2ea",
+    "font": "Outfit",
+    "weight": 500,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Frente de batalha",
+   "start": 36.2,
+   "dur": 3.8,
+   "props": {
+    "scene": "sw_swarm",
+    "params": {
+     "modo": "frente",
+     "seed": 21,
+     "fade_in": 0.4,
+     "titulo": "Quem vence?",
+     "t_titulo": 0.1,
+     "titulo_fim": 1.1
+    }
+   }
+  },
+  {
+   "id": "x14",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto Inscreva-se para ver o p",
+   "start": 37.3,
+   "dur": 2.1,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Inscreva-se para ver o próximo duelo",
+    "x": 640,
+    "y": 360,
+    "w": 1150,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Outfit",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(6,22,21,.55)",
+    "pad": 16,
+    "radius": 10,
+    "shadow": true
+   }
+  },
+  {
+   "id": "s15",
+   "type": "video",
+   "track": "fundo",
+   "label": "Drone floresta e rio",
+   "start": 39.5,
+   "dur": 4.5,
+   "in": "fade",
+   "props": {
+    "src": "clips/vforest0.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 1,
+    "motion": "zoom_in"
+   }
+  },
+  {
+   "id": "x15",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto A natureza não perdoa er",
+   "start": 39.7,
+   "dur": 3.5,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "A natureza não perdoa erro de cálculo.",
+    "x": 640,
+    "y": 600,
+    "w": 1150,
+    "size": 52,
+    "color": "#ffffff",
+    "font": "Outfit",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(6,22,21,.55)",
+    "pad": 16,
+    "radius": 10,
+    "shadow": true
+   }
+  }
+ ]
+}
