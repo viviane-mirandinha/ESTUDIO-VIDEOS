@@ -1,0 +1,13 @@
+{
+ "video": 23,
+ "estilo": "23-militar-footage",
+ "inicio": "2026-10-22T14:57:26-03:00",
+ "fim": "2026-10-22T15:13:37-03:00",
+ "minutos": 16.2,
+ "render_segundos": 86,
+ "observacoes": "Variante licenciada: zero footage de combate real. 15 clipes Pixabay (créditos em clips/creditos.json) com filtro térmico verde/drone P&B no ffmpeg + 5 imagens Flux local (ComfyUI, ~10 s cada). Cenas novas em EDITOR VIDEOS/templates/scenes: hud-drone (drone/mira), termico, mapa-tatico (SVG top-down: 42 veículos, explosão KM 3, poço a 40 m, flanco, zoom log), mil-relatorio. Whisper medium GPU ok (pulou 'retirada chega tarde... alvos', irrelevante pois sem legenda). 1º render: carimbo do relatório quebrava em 2 linhas e rótulo KM 3 sobrepunha VEÍCULO 3 -> corrigido no 2º render. Cenas com onUpdate não desenham no seek do HyperFrames: usar setter (defineProperty) como em fern_three. Sem SFX de impacto, 4 whooshes suaves, música 7% com ducking.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Cenas novas reaproveitáveis (hud-drone, termico, mapa-tatico, mil-relatorio): vídeo novo = edit.json com cortes + params do mapa (câmera, marcas, rótulos, tiros). 30 min ≈ 450 cortes: busca/curadoria de stock militar livre (~1 h, Pixabay tem pouco militar; DVIDS sem API key), Flux local ~10 s/imagem, render draft ~20-30 min."
+ }
+}

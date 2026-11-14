@@ -1,0 +1,13 @@
+{
+ "video": 24,
+ "estilo": "24-filmes-cenas-ciencia (Director's Cut / Known Matter)",
+ "inicio": "2026-10-22T15:05:48.0957915-03:00",
+ "fim": "2026-10-22T15:28:24.754644-03:00",
+ "minutos": 22.6,
+ "render_segundos": 109,
+ "observacoes": "Template generic + 3 cenas novas reutilizaveis em EDITOR VIDEOS/templates/scenes: dc_still (still tela cheia Ken Burns, P&B opcional, modo moldura com fundo desfocado, texto central, rotulo de personagem centrado embaixo, credito), dc_capitulo ('Capitulo N: ...' Barlow Condensed 54px), dc_troca (frase riscada -> nova). 27 stills: 13 Wikimedia Commons livres (Kubrick 1949/2/Spartacus/trailer Dr. Strangelove PD; Ermey USMC/Navy PD + CC BY-SA; Vietna 1968 USMC Archives CC BY; capacete e helicoptero de Full Metal Jacket na Stanley Kubrick Exhibition CC BY/BY-SA), 6 frames isolados do trailer oficial Warner (360p, <=2 s cada, emoldurados), 6 Flux local (set, recrutas de costas, roteiro, claquete, elenco, set escuro; sem rosto real, sem texto). Creditos em img/creditos.json. whisper large-v3 GPU. Musica = drone grave sintetizado no ffmpeg (0.12). Sem SFX. Commons deu 429 em originais pequenos: resolvido pedindo thumb em largura padrao (500/960). 2 renders (116 s + 109 s): o 2o corrigiu frames do trailer extraidos 1 s antes (um tinha o letreiro '4K Ultra HD') e titulo do capitulo 3. build_from_edit.py/server.py/static nao foram alterados.",
+ "estimativa_30min": {
+  "horas_maquina": 1.3,
+  "o_que_escala": "Molde preencher-dados: lista {frase, still (Commons/trailer/Flux), rotulo, capitulo} -> edit.json; render ~1,7 s por s de video (~50 min p/ 30 min). Gargalo = achar stills livres de bastidor por fala (Commons 429, poucas fotos do set) e escolher frames de trailer sem letreiro; Flux local cobre o resto em ~10 s/imagem."
+ }
+}

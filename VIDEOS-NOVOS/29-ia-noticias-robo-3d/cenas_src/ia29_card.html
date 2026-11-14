@@ -1,0 +1,35 @@
+<!--params {"cor":"dourado","pre":"","texto":"TEXTO","sub":"","t_txt":0.15,"t_sub":0.6,"texto2":"","t2":1.5,"tam":96}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <div class="bg" style="position:absolute;inset:-4%;"></div>
+ <canvas class="mot" width="320" height="180" style="position:absolute;inset:-4%;width:108%;height:108%;filter:blur(18px);mix-blend-mode:multiply;opacity:.9"></canvas>
+ <div class="gr" style="position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay"></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%)"></div>
+ <div class="box" style="position:absolute;left:80px;right:80px;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:Montserrat,Inter,Arial,sans-serif;text-shadow:0 4px 30px rgba(0,0,0,.35)">
+  <div class="pre" style="font-weight:400;font-size:54px;letter-spacing:1px;text-transform:uppercase;line-height:1.05">{{p.pre}}</div>
+  <div class="tx" style="position:relative;font-weight:900;font-size:{{p.tam}}px;line-height:1.02;text-transform:uppercase;letter-spacing:-1px">
+    <span class="a">{{p.texto}}</span><span class="b" style="position:absolute;left:0;right:0;top:0;opacity:0">{{p.texto2}}</span></div>
+  <div class="sub" style="font-weight:400;font-size:48px;letter-spacing:1px;text-transform:uppercase;margin-top:14px;line-height:1.1">{{p.sub}}</div>
+ </div>
+</div>
+<script>
+/*IA29LIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), L=IA29;
+  const cor=P.cor||"dourado", bg=R.querySelector(".bg"), mot=R.querySelector(".mot");
+  if(cor==="azul"){ bg.style.background="linear-gradient(rgba(255,255,255,.13) 2px,transparent 2px) 0 0/64px 64px,linear-gradient(90deg,rgba(255,255,255,.13) 2px,transparent 2px) 0 0/64px 64px,linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/16px 16px,#1452c8"; mot.style.display="none"; }
+  else if(cor==="preto"){ bg.style.background="radial-gradient(ellipse at 50% 45%,#1d1d1d,#050505 75%)"; mot.style.opacity=".5"; }
+  else { bg.style.background="radial-gradient(ellipse at 45% 40%,#f0c43a 0%,#c8941c 40%,#7a5208 85%)"; }
+  const x=mot.getContext("2d"), r=L.rng(cor.length*13+7); x.fillStyle="#fff"; x.fillRect(0,0,320,180);
+  for(let i=0;i<260;i++){ const g=Math.floor(120+r()*135); x.fillStyle="rgba("+g+","+Math.floor(g*.92)+","+Math.floor(g*.8)+","+(.25+r()*.5)+")"; x.beginPath(); x.arc(r()*320,r()*180,2+r()*14,0,6.283); x.fill(); }
+  const gr=R.querySelector(".gr"); gr.style.backgroundImage="url("+L.noiseCanvas(9,256,256,255).toDataURL()+")";
+  if(!P.pre) R.querySelector(".pre").style.display="none";
+  if(!P.sub) R.querySelector(".sub").style.display="none";
+  tl.fromTo(bg,{scale:1},{scale:1.06,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo(mot,{x:0},{x:-30,duration:D,ease:"none",immediateRender:false},S);
+  const t0=+P.t_txt||0;
+  if(P.pre) tl.fromTo(R.querySelector(".pre"),{opacity:0,y:20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},S+t0);
+  tl.fromTo(R.querySelector(".tx"),{opacity:0,y:30,filter:"blur(10px)"},{opacity:1,y:0,filter:"blur(0px)",duration:.5,ease:"power3.out",immediateRender:false},S+t0+(P.pre?.15:0));
+  if(P.sub) tl.fromTo(R.querySelector(".sub"),{opacity:0,y:20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},S+(+P.t_sub));
+  if(P.texto2){ tl.to(R.querySelector(".a"),{opacity:0,y:-20,duration:.3,ease:"power2.in"},S+(+P.t2)); tl.fromTo(R.querySelector(".b"),{opacity:0,y:25},{opacity:1,y:0,duration:.4,ease:"power3.out",immediateRender:false},S+(+P.t2)+.2); }
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {{json}});
+</script>

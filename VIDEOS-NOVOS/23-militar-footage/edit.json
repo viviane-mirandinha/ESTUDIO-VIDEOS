@@ -1,0 +1,1619 @@
+{
+ "version": 1,
+ "name": "23 - MILITAR HUD - O dia em que um sniper parou uma coluna inteira",
+ "estilo": "23-militar-footage",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0c08"
+ },
+ "duration": 69.4,
+ "template": "generic",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "Military Storm",
+  "canal_url": "https://www.youtube.com/@MilitaryStorm-Official",
+  "video": "https://youtu.be/fSec-dzzKZI",
+  "titulo": "Ukrainian Sniper CATCHES Russian Motorcycles STORMING His Trench — Then THIS Happened...",
+  "nota": "Variante licenciada: sem footage de combate real; stock Pixabay + Flux local + mapa tático SVG + HUD drone/mira/térmico em HTML."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.07,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 4.75,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 26.95,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 48.95,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 66.75,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Footage / mapa"
+  },
+  {
+   "id": "filtro",
+   "name": "Filtro térmico"
+  },
+  {
+   "id": "hud",
+   "name": "HUD drone/mira"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "v1",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/aerial_g.mp4",
+   "start": 0,
+   "dur": 4.8,
+   "props": {
+    "src": "clips/aerial_g.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s2",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD drone 06:00",
+   "start": 0,
+   "dur": 4.8,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "drone",
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t3",
+   "type": "text",
+   "track": "textos",
+   "label": "relógio 06:00",
+   "start": 0.0,
+   "dur": 1.7,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "06:00",
+    "x": 640,
+    "y": 330,
+    "w": 900,
+    "size": 120,
+    "color": "#ffd23a",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "COLUNA DE ABASTECIMENTO",
+   "start": 1.75,
+   "dur": 3.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "COLUNA DE ABASTECIMENTO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s5",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 4.8,
+   "dur": 2.4,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2000,
+      0,
+      4600
+     ],
+     "cam1": [
+      2100,
+      0,
+      3800
+     ],
+     "lead0": 1300,
+     "lead1": 1700,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 0,
+     "marcas": [
+      "2km"
+     ],
+     "atingidos": [],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "v6",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/truck1.mp4",
+   "start": 7.2,
+   "dur": 3.1,
+   "props": {
+    "src": "clips/truck1.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "label": "NENHUM DRONE",
+   "start": 7.26,
+   "dur": 2.99,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "NENHUM DRONE",
+    "x": 640,
+    "y": 520,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t8",
+   "type": "text",
+   "track": "textos",
+   "label": "NENHUM RECONHECIMENTO AVANÇADO",
+   "start": 8.42,
+   "dur": 1.83,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "NENHUM RECONHECIMENTO AVANÇADO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s9",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 10.3,
+   "dur": 2.3,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2600,
+      0,
+      3000
+     ],
+     "cam1": [
+      2700,
+      0,
+      2600
+     ],
+     "lead0": 1700,
+     "lead1": 2050,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 0,
+     "marcas": [
+      "limpa"
+     ],
+     "atingidos": [],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "i10",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_caminhao.jpg",
+   "start": 12.6,
+   "dur": 1.5,
+   "props": {
+    "src": "img/f_caminhao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD drone 06:00",
+   "start": 12.6,
+   "dur": 1.5,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "drone",
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "PRIMEIRO CAMINHÃO",
+   "start": 12.7,
+   "dur": 1.35,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "PRIMEIRO CAMINHÃO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 14.1,
+   "dur": 1.4,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      3000,
+      0,
+      1400
+     ],
+     "cam1": [
+      3000,
+      0,
+      1100
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": 0.1,
+     "explodido": 0,
+     "marcas": [
+      "km3"
+     ],
+     "atingidos": [],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "v14",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/nato.mp4",
+   "start": 15.5,
+   "dur": 1.9,
+   "props": {
+    "src": "clips/nato.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t15",
+   "type": "text",
+   "track": "textos",
+   "label": "FOGO SUPRESSOR IMEDIATO",
+   "start": 15.56,
+   "dur": 1.79,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "FOGO SUPRESSOR IMEDIATO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "v16",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/burn_t.mp4",
+   "start": 17.4,
+   "dur": 3.0,
+   "props": {
+    "src": "clips/burn_t.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "filtro",
+   "label": "térmico",
+   "start": 17.4,
+   "dur": 3.0,
+   "props": {
+    "scene": "termico",
+    "params": {
+     "intensidade": 0.22
+    }
+   }
+  },
+  {
+   "id": "s18",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD mira 06:00",
+   "start": 17.4,
+   "dur": 3.0,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "mira",
+     "hora": "06:00",
+     "rotulo": "",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t19",
+   "type": "text",
+   "track": "textos",
+   "label": "SEGUNDO TIRO",
+   "start": 17.9,
+   "dur": 2.45,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "SEGUNDO TIRO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s20",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 20.4,
+   "dur": 2.4,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2950,
+      0,
+      900
+     ],
+     "cam1": [
+      2930,
+      0,
+      700
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "veic3"
+     ],
+     "atingidos": [
+      2
+     ],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [
+      {
+       "txt": "MOTORISTA · VEÍCULO 3",
+       "alvo": "veiculo",
+       "i": 2,
+       "dy": 40,
+       "t": 0.1,
+       "size": 32,
+       "cor": "#ff4a3a"
+      }
+     ],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "i21",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_radio.jpg",
+   "start": 22.8,
+   "dur": 1.6,
+   "props": {
+    "src": "img/f_radio.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t22",
+   "type": "text",
+   "track": "textos",
+   "label": "SILÊNCIO TOTAL NO RÁDIO",
+   "start": 22.82,
+   "dur": 1.56,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "SILÊNCIO TOTAL NO RÁDIO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "v23",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/forest_t.mp4",
+   "start": 24.4,
+   "dur": 2.6,
+   "props": {
+    "src": "clips/forest_t.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "s24",
+   "type": "scene",
+   "track": "filtro",
+   "label": "térmico",
+   "start": 24.4,
+   "dur": 2.6,
+   "props": {
+    "scene": "termico",
+    "params": {
+     "intensidade": 0.22
+    }
+   }
+  },
+  {
+   "id": "s25",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD mira 06:00",
+   "start": 24.4,
+   "dur": 2.6,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "mira",
+     "hora": "06:00",
+     "rotulo": "",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t26",
+   "type": "text",
+   "track": "textos",
+   "label": "LINHA DAS ÁRVORES",
+   "start": 24.6,
+   "dur": 2.35,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "LINHA DAS ÁRVORES",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "risco",
+   "type": "html",
+   "track": "textos",
+   "label": "risco vermelho",
+   "start": 25.1,
+   "dur": 1.85,
+   "in": "slide_left",
+   "out": "fade",
+   "props": {
+    "html": "<div class='risco'></div>",
+    "css": ".risco{width:100%;height:100%;background:#ff4a3a;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.6)}",
+    "x": 640,
+    "y": 604,
+    "w": 540,
+    "h": 9
+   }
+  },
+  {
+   "id": "s27",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 27.0,
+   "dur": 1.3,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2700,
+      -150,
+      2200
+     ],
+     "cam1": [
+      2930,
+      -40,
+      520
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "arvores"
+     ],
+     "atingidos": [
+      2
+     ],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "t28",
+   "type": "text",
+   "track": "textos",
+   "label": "ESTÁ NO SUBSOLO",
+   "start": 27.0,
+   "dur": 1.28,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "ESTÁ NO SUBSOLO",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 72,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i29",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_poco.jpg",
+   "start": 28.3,
+   "dur": 2.3,
+   "props": {
+    "src": "img/f_poco.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t30",
+   "type": "text",
+   "track": "textos",
+   "label": "POÇO DE OBSERVAÇÃO CAMUFLADO",
+   "start": 28.32,
+   "dur": 2.26,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "POÇO DE OBSERVAÇÃO CAMUFLADO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s31",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 30.6,
+   "dur": 2.3,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2930,
+      -20,
+      440
+     ],
+     "cam1": [
+      2930,
+      -20,
+      340
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "poco",
+      "40m"
+     ],
+     "atingidos": [
+      2
+     ],
+     "tiros": [],
+     "t_parado": -1,
+     "rotulos": [
+      {
+       "txt": "À ESQUERDA DA PISTA",
+       "x": 2930,
+       "y": -30.5,
+       "dy": 40,
+       "t": 1.5,
+       "size": 32,
+       "cor": "#ffd23a"
+      }
+     ],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "i32",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_parada_t.jpg",
+   "start": 32.9,
+   "dur": 4.0,
+   "props": {
+    "src": "img/f_parada_t.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "s33",
+   "type": "scene",
+   "track": "filtro",
+   "label": "térmico",
+   "start": 32.9,
+   "dur": 4.0,
+   "props": {
+    "scene": "termico",
+    "params": {
+     "intensidade": 0.22
+    }
+   }
+  },
+  {
+   "id": "s34",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD mira 06:00",
+   "start": 32.9,
+   "dur": 4.0,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "mira",
+     "hora": "06:00",
+     "rotulo": "",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t35",
+   "type": "text",
+   "track": "textos",
+   "label": "ELE ESPERA A COLUNA PARAR",
+   "start": 32.94,
+   "dur": 1.68,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "ELE ESPERA A COLUNA PARAR",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t36",
+   "type": "text",
+   "track": "textos",
+   "label": "ESPERA O PÂNICO",
+   "start": 34.66,
+   "dur": 2.19,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "ESPERA O PÂNICO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "v37",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/sniper3.mp4",
+   "start": 36.9,
+   "dur": 4.1,
+   "props": {
+    "src": "clips/sniper3.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t38",
+   "type": "text",
+   "track": "textos",
+   "label": "TERCEIRO TIRO",
+   "start": 36.92,
+   "dur": 1.08,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "TERCEIRO TIRO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t39",
+   "type": "text",
+   "track": "textos",
+   "label": "QUARTO TIRO",
+   "start": 38.04,
+   "dur": 1.06,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "QUARTO TIRO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t40",
+   "type": "text",
+   "track": "textos",
+   "label": "DOIS OFICIAIS DE LIGAÇÃO",
+   "start": 39.14,
+   "dur": 1.81,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "DOIS OFICIAIS DE LIGAÇÃO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s41",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:00",
+   "start": 41.0,
+   "dur": 1.4,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2400,
+      0,
+      2600
+     ],
+     "cam1": [
+      2380,
+      0,
+      2800
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [],
+     "atingidos": [
+      2,
+      7,
+      12
+     ],
+     "tiros": [],
+     "t_parado": 0,
+     "rotulos": [],
+     "hora": "06:00",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "t42",
+   "type": "text",
+   "track": "textos",
+   "label": "A COLUNA TRAVA",
+   "start": 41.0,
+   "dur": 1.35,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "A COLUNA TRAVA",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s43",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:20",
+   "start": 42.4,
+   "dur": 3.9,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2380,
+      0,
+      2800
+     ],
+     "cam1": [
+      2550,
+      -60,
+      2400
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "flanco"
+     ],
+     "atingidos": [
+      2,
+      7,
+      12
+     ],
+     "tiros": [],
+     "t_parado": 0,
+     "rotulos": [],
+     "hora": "06:20",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "t44",
+   "type": "text",
+   "track": "textos",
+   "label": "relógio 06:20",
+   "start": 42.38,
+   "dur": 1.52,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "06:20",
+    "x": 640,
+    "y": 330,
+    "w": 900,
+    "size": 120,
+    "color": "#ffd23a",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i45",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_coluna_g.jpg",
+   "start": 46.3,
+   "dur": 2.7,
+   "props": {
+    "src": "img/f_coluna_g.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s46",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD drone 06:40",
+   "start": 46.3,
+   "dur": 2.7,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "drone",
+     "hora": "06:40",
+     "rotulo": "SETOR NORTE",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t47",
+   "type": "text",
+   "track": "textos",
+   "label": "relógio 06:40",
+   "start": 46.26,
+   "dur": 2.64,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "06:40",
+    "x": 640,
+    "y": 330,
+    "w": 900,
+    "size": 120,
+    "color": "#ffd23a",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s48",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:40",
+   "start": 49.0,
+   "dur": 3.6,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      1950,
+      0,
+      4400
+     ],
+     "cam1": [
+      2050,
+      0,
+      3900
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "poco"
+     ],
+     "atingidos": [
+      2,
+      7,
+      12
+     ],
+     "tiros": [],
+     "t_parado": 0,
+     "rotulos": [
+      {
+       "txt": "42 VEÍCULOS",
+       "alvo": "comboio",
+       "dy": 60,
+       "t": 0,
+       "size": 44,
+       "cor": "#ff4a3a"
+      },
+      {
+       "txt": "UM ÚNICO OPERADOR",
+       "alvo": "poco",
+       "dy": -150,
+       "t": 1.9,
+       "size": 44,
+       "cor": "#9dff7a"
+      }
+     ],
+     "hora": "06:40",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "v49",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/aerial2_g.mp4",
+   "start": 52.6,
+   "dur": 3.9,
+   "props": {
+    "src": "clips/aerial2_g.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s50",
+   "type": "scene",
+   "track": "hud",
+   "label": "HUD drone 06:55",
+   "start": 52.6,
+   "dur": 3.9,
+   "props": {
+    "scene": "hud-drone",
+    "params": {
+     "modo": "drone",
+     "hora": "06:55",
+     "rotulo": "SETOR NORTE",
+     "sinal": "REC",
+     "cor": "#9dff7a"
+    }
+   }
+  },
+  {
+   "id": "t51",
+   "type": "text",
+   "track": "textos",
+   "label": "relógio 06:55",
+   "start": 52.6,
+   "dur": 1.9,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "06:55",
+    "x": 640,
+    "y": 330,
+    "w": 900,
+    "size": 120,
+    "color": "#ffd23a",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t52",
+   "type": "text",
+   "track": "textos",
+   "label": "A ORDEM DE RETIRADA CHEGA TARDE",
+   "start": 54.56,
+   "dur": 1.89,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "A ORDEM DE RETIRADA CHEGA TARDE",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "v53",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/sniper1.mp4",
+   "start": 56.5,
+   "dur": 4.2,
+   "props": {
+    "src": "clips/sniper1.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t54",
+   "type": "text",
+   "track": "textos",
+   "label": "SNIPER SÓ MATA ALVOS DE VALOR?",
+   "start": 56.7,
+   "dur": 2.7,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "SNIPER SÓ MATA ALVOS DE VALOR?",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t55",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA inscreva-se",
+   "start": 59.5,
+   "dur": 1.2,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 640,
+    "y": 600,
+    "w": 520,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "#c8281e",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s56",
+   "type": "scene",
+   "track": "fundo",
+   "label": "relatório final",
+   "start": 60.7,
+   "dur": 4.7,
+   "props": {
+    "scene": "mil-relatorio",
+    "params": {
+     "titulo": "RELATÓRIO FINAL",
+     "linha": "GASTO DE MUNIÇÃO",
+     "valor": "",
+     "carimbo": "14 CARTUCHOS",
+     "t_carimbo": 3.3,
+     "cor": "#c8281e"
+    }
+   }
+  },
+  {
+   "id": "v57",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/ammo.mp4",
+   "start": 65.4,
+   "dur": 1.4,
+   "props": {
+    "src": "clips/ammo.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t58",
+   "type": "text",
+   "track": "textos",
+   "label": "relógio 14 TIROS",
+   "start": 65.45,
+   "dur": 1.33,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "text": "14 TIROS",
+    "x": 640,
+    "y": 360,
+    "w": 900,
+    "size": 120,
+    "color": "#ffd23a",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s59",
+   "type": "scene",
+   "track": "fundo",
+   "label": "mapa 06:55",
+   "start": 66.8,
+   "dur": 2.6,
+   "props": {
+    "scene": "mapa-tatico",
+    "params": {
+     "cam0": [
+      2000,
+      0,
+      3000
+     ],
+     "cam1": [
+      1900,
+      0,
+      5200
+     ],
+     "lead0": 3000,
+     "lead1": 3000,
+     "n": 42,
+     "gap": 42,
+     "t_explode": -1,
+     "explodido": 1,
+     "marcas": [
+      "poco"
+     ],
+     "atingidos": [
+      2,
+      7,
+      12
+     ],
+     "tiros": [],
+     "t_parado": 0,
+     "rotulos": [],
+     "hora": "06:55",
+     "rotulo": "SETOR NORTE",
+     "seed": 23
+    }
+   }
+  },
+  {
+   "id": "t60",
+   "type": "text",
+   "track": "textos",
+   "label": "UMA COLUNA INTEIRA PARALISADA",
+   "start": 66.84,
+   "dur": 2.51,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "UMA COLUNA INTEIRA PARALISADA",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.72)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  }
+ ]
+}

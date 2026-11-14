@@ -1,0 +1,24 @@
+<!--params {"consulta":"","t_dig":0.3,"vel":14,"res_tit":"","res_sub":"","t_res":1.8}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#2b2d31,#141518 80%);font-family:Montserrat,Inter,Arial,sans-serif">
+ <div class="wrap" style="position:absolute;left:0;right:0;top:0;bottom:0">
+  <div class="bar" style="position:absolute;left:190px;right:190px;top:250px;height:96px;border-radius:48px;background:#fff;box-shadow:0 14px 50px rgba(0,0,0,.5);display:flex;align-items:center;padding:0 40px;box-sizing:border-box">
+   <svg width="44" height="44" viewBox="0 0 24 24" style="flex:none"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#6b6f76" stroke-width="2.4"/><path d="M15 15l5.5 5.5" stroke="#6b6f76" stroke-width="2.6" stroke-linecap="round"/></svg>
+   <div class="q" style="margin-left:24px;font-size:46px;font-weight:600;color:#202124;white-space:nowrap;overflow:hidden"></div><div class="cur" style="width:3px;height:52px;background:#202124;margin-left:4px"></div>
+  </div>
+  <div class="res" style="position:absolute;left:190px;right:190px;top:390px;padding:30px 40px;border-radius:22px;background:#1f4fe0;color:#fff;box-shadow:0 14px 50px rgba(0,0,0,.45);opacity:0">
+   <div style="font-size:56px;font-weight:900;line-height:1.05">{{p.res_tit}}</div>
+   <div style="font-size:34px;font-weight:500;margin-top:10px;opacity:.92">{{p.res_sub}}</div>
+  </div>
+ </div>
+</div>
+<script>
+/*IA29LIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), L=IA29;
+  const q=R.querySelector(".q"), cur=R.querySelector(".cur"), txt=String(P.consulta||""), t0=+P.t_dig, v=+P.vel||14;
+  L.drive(tl,S,D,function(t){ const n=Math.max(0,Math.min(txt.length,Math.floor((t-t0)*v))); q.textContent=txt.slice(0,n); cur.style.opacity=(Math.floor(t*2.2)%2===0||n<txt.length)?1:0; });
+  tl.fromTo(R.querySelector(".wrap"),{scale:1.08},{scale:1,duration:D,ease:"power2.out",immediateRender:false},S);
+  if(P.res_tit){ tl.fromTo(R.querySelector(".res"),{opacity:0,y:40},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_res));
+    tl.to(R.querySelector(".bar"),{y:-60,duration:.5,ease:"power3.out"},S+(+P.t_res)); tl.to(R.querySelector(".res"),{y:-60,duration:.5,ease:"power3.out"},S+(+P.t_res)+.5); }
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {{json}});
+</script>

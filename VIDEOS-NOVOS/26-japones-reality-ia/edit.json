@@ -1,0 +1,1092 @@
+{
+ "version": 1,
+ "name": "26 - REALITY IA LEGENDA TV - Reality da familia que come demais",
+ "estilo": "26-japones-reality-ia",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#111"
+ },
+ "duration": 63.92,
+ "template": "generic",
+ "fonts": {
+  "Nunito": "fonts/Nunito-VF.ttf"
+ },
+ "referencia": {
+  "canal": "genel_ai (デヴ上等 Prime)",
+  "canal_url": "https://www.youtube.com/@genel_ai",
+  "video": "https://youtu.be/cBXM6Y_Hpdc",
+  "titulo": "デヴ上等 Prime Ep.1 \"Everyone's Extra-Large.\"",
+  "nota": "família fictícia fixa: img/mestre_mae|pai|filho.jpg (Flux Kontext local t2i seed 2601); cenas via Kontext ReferenceLatent seed 2626 (casal/trio = mestras costuradas); ver ESTILOS-NOVOS/26-japones-reality-ia/REFERENCIA.txt"
+ },
+ "falas": [
+  {
+   "i": 0,
+   "quem": "NARRADOR",
+   "start": 0.0
+  },
+  {
+   "i": 1,
+   "quem": "MÃE",
+   "start": 2.75
+  },
+  {
+   "i": 2,
+   "quem": "PAI",
+   "start": 5.01
+  },
+  {
+   "i": 3,
+   "quem": "FILHO",
+   "start": 7.18
+  },
+  {
+   "i": 4,
+   "quem": "MÃE",
+   "start": 9.54
+  },
+  {
+   "i": 5,
+   "quem": "PAI",
+   "start": 14.16
+  },
+  {
+   "i": 6,
+   "quem": "FILHO",
+   "start": 17.56
+  },
+  {
+   "i": 7,
+   "quem": "MÃE",
+   "start": 20.64
+  },
+  {
+   "i": 8,
+   "quem": "PAI",
+   "start": 23.17
+  },
+  {
+   "i": 9,
+   "quem": "FILHO",
+   "start": 25.58
+  },
+  {
+   "i": 10,
+   "quem": "MÃE",
+   "start": 28.42
+  },
+  {
+   "i": 11,
+   "quem": "PAI",
+   "start": 31.43
+  },
+  {
+   "i": 12,
+   "quem": "FILHO",
+   "start": 34.37
+  },
+  {
+   "i": 13,
+   "quem": "MÃE",
+   "start": 37.71
+  },
+  {
+   "i": 14,
+   "quem": "PAI",
+   "start": 40.68
+  },
+  {
+   "i": 15,
+   "quem": "FILHO",
+   "start": 44.48
+  },
+  {
+   "i": 16,
+   "quem": "MÃE",
+   "start": 46.98
+  },
+  {
+   "i": 17,
+   "quem": "FILHO",
+   "start": 49.11
+  },
+  {
+   "i": 18,
+   "quem": "PAI",
+   "start": 51.85
+  },
+  {
+   "i": 19,
+   "quem": "NARRADOR",
+   "start": 53.97
+  }
+ ],
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (personagens)"
+  },
+  {
+   "id": "nomes",
+   "name": "Apresentação personagem"
+  },
+  {
+   "id": "legendas",
+   "name": "Legenda TV por personagem"
+  },
+  {
+   "id": "extras",
+   "name": "Título/CTA"
+  },
+  {
+   "id": "canto",
+   "name": "Selo + CSS"
+  }
+ ],
+ "items": [
+  {
+   "id": "i00",
+   "type": "image",
+   "track": "fundo",
+   "label": "s00_geladeira",
+   "start": 0.0,
+   "dur": 2.75,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s00_geladeira.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i01",
+   "type": "image",
+   "track": "fundo",
+   "label": "s01_mae_lanche",
+   "start": 2.75,
+   "dur": 2.26,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s01_mae_lanche.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i02",
+   "type": "image",
+   "track": "fundo",
+   "label": "s02_pai_iogurte",
+   "start": 5.01,
+   "dur": 2.17,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s02_pai_iogurte.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i03",
+   "type": "image",
+   "track": "fundo",
+   "label": "s03_filho_viu",
+   "start": 7.18,
+   "dur": 2.36,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s03_filho_viu.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i04",
+   "type": "image",
+   "track": "fundo",
+   "label": "s04_mae_lasanha",
+   "start": 9.54,
+   "dur": 4.62,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s04_mae_lasanha.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i05",
+   "type": "image",
+   "track": "fundo",
+   "label": "s05_pai_gelada",
+   "start": 14.16,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s05_pai_gelada.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i06",
+   "type": "image",
+   "track": "fundo",
+   "label": "s06_filho_sorvete",
+   "start": 17.56,
+   "dur": 3.08,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s06_filho_sorvete.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i07",
+   "type": "image",
+   "track": "fundo",
+   "label": "s07_mae_tampa",
+   "start": 20.64,
+   "dur": 2.53,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s07_mae_tampa.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i08",
+   "type": "image",
+   "track": "fundo",
+   "label": "s08_pai_tampa",
+   "start": 23.17,
+   "dur": 2.41,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s08_pai_tampa.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i09",
+   "type": "image",
+   "track": "fundo",
+   "label": "s09_filho_cachorro",
+   "start": 25.58,
+   "dur": 2.84,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s09_filho_cachorro.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i10",
+   "type": "image",
+   "track": "fundo",
+   "label": "s10_mae_fantasma",
+   "start": 28.42,
+   "dur": 3.01,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s10_mae_fantasma.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i11",
+   "type": "image",
+   "track": "fundo",
+   "label": "s11_pai_drama",
+   "start": 31.43,
+   "dur": 2.94,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s11_pai_drama.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i12",
+   "type": "image",
+   "track": "fundo",
+   "label": "s12_casal_dormindo",
+   "start": 34.37,
+   "dur": 3.34,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s12_casal_dormindo.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i13",
+   "type": "image",
+   "track": "fundo",
+   "label": "s13_mae_pipoca",
+   "start": 37.71,
+   "dur": 2.97,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s13_mae_pipoca.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i14",
+   "type": "image",
+   "track": "fundo",
+   "label": "s14_pai_pipoca",
+   "start": 40.68,
+   "dur": 3.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s14_pai_pipoca.jpg",
+    "fill": false,
+    "fit": "cover",
+    "x": 640,
+    "y": 720,
+    "w": 2560,
+    "h": 1440,
+    "motion": "zoom_out",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "i15",
+   "type": "image",
+   "track": "fundo",
+   "label": "s15_filho_pacotes",
+   "start": 44.48,
+   "dur": 2.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s15_filho_pacotes.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i16",
+   "type": "image",
+   "track": "fundo",
+   "label": "s16_mae_mentira",
+   "start": 46.98,
+   "dur": 2.13,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s16_mae_mentira.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i17",
+   "type": "image",
+   "track": "fundo",
+   "label": "s17_filho_armario",
+   "start": 49.11,
+   "dur": 2.74,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s17_filho_armario.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i18",
+   "type": "image",
+   "track": "fundo",
+   "label": "s18_pai_genio",
+   "start": 51.85,
+   "dur": 2.12,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s18_pai_genio.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i19",
+   "type": "image",
+   "track": "fundo",
+   "label": "s19_familia_sofa",
+   "start": 53.97,
+   "dur": 5.87,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s19_familia_sofa.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "i20",
+   "type": "image",
+   "track": "fundo",
+   "label": "s20_churrasco",
+   "start": 59.84,
+   "dur": 4.08,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/s20_churrasco.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "c00",
+   "type": "html",
+   "track": "legendas",
+   "label": "NARRADOR: A geladeira vazia às três da m",
+   "start": 0.0,
+   "dur": 2.75,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ffb300;color:#111'>NARRADOR</span><div class='ln'>A <span class='k'>geladeira vazia</span> às <span class='k'>três da manhã</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c01",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: Foi só um lanche.",
+   "start": 2.75,
+   "dur": 2.26,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'>Foi só um <span class='k'>lanche</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c02",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Comi iogurte.",
+   "start": 5.01,
+   "dur": 2.17,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'>Comi <span class='k'>iogurte</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c03",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: Eu vi vocês dois.",
+   "start": 7.18,
+   "dur": 2.36,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>Eu <span class='k'>vi</span> vocês dois.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c04",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: A lasanha de domingo? Desapare",
+   "start": 9.54,
+   "dur": 4.62,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'>A <span class='k'>lasanha</span> de domingo? Desapareceu em <span class='k'>vinte minutos</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c05",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Estava gelada, nem esquentei.",
+   "start": 14.16,
+   "dur": 3.4,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'>Estava <span class='k'>gelada</span>, nem esquentei.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c06",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: E o pote de sorvete de dois li",
+   "start": 17.56,
+   "dur": 3.08,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>E o pote de sorvete de <span class='k'>dois litros</span>?</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c07",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: Sobrou só a tampa.",
+   "start": 20.64,
+   "dur": 2.53,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'>Sobrou só a <span class='k'>tampa</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c08",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Quem comeu a tampa?",
+   "start": 23.17,
+   "dur": 2.41,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'>Quem <span class='k'>comeu a tampa</span>?</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c09",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: O cachorro não sobe no balcão.",
+   "start": 25.58,
+   "dur": 2.84,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>O <span class='k'>cachorro</span> não sobe no balcão.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c10",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: Então foi o “fantasma da cozin",
+   "start": 28.42,
+   "dur": 3.01,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'>Então foi o “<span class='k'>fantasma da cozinha</span>”.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c11",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Deixa de drama, mulher.",
+   "start": 31.43,
+   "dur": 2.94,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'>Deixa de <span class='k'>drama</span>, mulher.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c12",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: Vocês dormem de boca aberta, e",
+   "start": 34.37,
+   "dur": 3.34,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>Vocês dormem de <span class='k'>boca aberta</span>, eu vi.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c13",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: Cala a boca e passa a pipoca.",
+   "start": 37.71,
+   "dur": 2.97,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'>Cala a boca e passa a <span class='k'>pipoca</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c14",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Pipoca? Acabou ontem.",
+   "start": 40.68,
+   "dur": 3.8,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'>Pipoca? <span class='k'>Acabou</span> ontem.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c15",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: Comprei três pacotes.",
+   "start": 44.48,
+   "dur": 2.5,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>Comprei <span class='k'>três pacotes</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c16",
+   "type": "html",
+   "track": "legendas",
+   "label": "MÃE: Mentira.",
+   "start": 46.98,
+   "dur": 2.13,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ff3d8b;color:#fff'>MÃE</span><div class='ln'><span class='k'>Mentira</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c17",
+   "type": "html",
+   "track": "legendas",
+   "label": "FILHO: Escondi no armário de vassoura",
+   "start": 49.11,
+   "dur": 2.74,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#2fbf3a;color:#fff'>FILHO</span><div class='ln'>Escondi no <span class='k'>armário de vassoura</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c18",
+   "type": "html",
+   "track": "legendas",
+   "label": "PAI: Gênio.",
+   "start": 51.85,
+   "dur": 2.12,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#1e7bff;color:#fff'>PAI</span><div class='ln'><span class='k'>Gênio</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c19_0",
+   "type": "html",
+   "track": "legendas",
+   "label": "NARRADOR: Nessa casa, dieta é lenda urba",
+   "start": 53.97,
+   "dur": 2.65,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ffb300;color:#111'>NARRADOR</span><div class='ln'>Nessa casa, dieta é <span class='k'>lenda urbana</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c19_1",
+   "type": "html",
+   "track": "legendas",
+   "label": "NARRADOR: Se você também esconde comida,",
+   "start": 56.62,
+   "dur": 3.04,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ffb300;color:#111'>NARRADOR</span><div class='ln'>Se você também <span class='k'>esconde comida</span>, deixa o <span class='k'>like</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c19_2",
+   "type": "html",
+   "track": "legendas",
+   "label": "NARRADOR: Inscreva-se para o próximo epi",
+   "start": 59.66,
+   "dur": 2.34,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ffb300;color:#111'>NARRADOR</span><div class='ln'><span class='k'>Inscreva-se</span> para o próximo episódio:</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "c19_3",
+   "type": "html",
+   "track": "legendas",
+   "label": "NARRADOR: o churrasco de domingo.",
+   "start": 62.0,
+   "dur": 1.92,
+   "in": "slide_left",
+   "out": "none",
+   "props": {
+    "html": "<div class='rt'><span class='tag' style='background:#ffb300;color:#111'>NARRADOR</span><div class='ln'>o <span class='k'>churrasco de domingo</span>.</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 575,
+    "w": 1220,
+    "h": 250
+   }
+  },
+  {
+   "id": "n_mae",
+   "type": "html",
+   "track": "nomes",
+   "label": "apresenta MÃE",
+   "start": 2.85,
+   "dur": 2.16,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='vn'><div class='vl'><b>M</b><b>Ã</b><b>E</b></div><div class='aka'><i>a.k.a.</i>rainha do lanche</div></div>",
+    "css": "",
+    "x": 1165,
+    "y": 350,
+    "w": 200,
+    "h": 580
+   }
+  },
+  {
+   "id": "n_pai",
+   "type": "html",
+   "track": "nomes",
+   "label": "apresenta PAI",
+   "start": 5.109999999999999,
+   "dur": 2.07,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='vn'><div class='vl'><b>P</b><b>A</b><b>I</b></div><div class='aka'><i>a.k.a.</i>só um iogurte</div></div>",
+    "css": "",
+    "x": 1165,
+    "y": 350,
+    "w": 200,
+    "h": 580
+   }
+  },
+  {
+   "id": "n_filho",
+   "type": "html",
+   "track": "nomes",
+   "label": "apresenta FILHO",
+   "start": 7.279999999999999,
+   "dur": 2.26,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='vn'><div class='vl'><b>F</b><b>I</b><b>L</b><b>H</b><b>O</b></div><div class='aka'><i>a.k.a.</i>o fiscal da casa</div></div>",
+    "css": "",
+    "x": 1165,
+    "y": 350,
+    "w": 200,
+    "h": 580
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "html",
+   "track": "extras",
+   "label": "título do episódio",
+   "start": 0.15,
+   "dur": 2.6,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "html": "<div class='ep'><div class='ep1'>REALITY DA FAMÍLIA · EP.1</div><div class='ep2'>A FAMÍLIA QUE<br>COME DEMAIS</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 250,
+    "w": 900,
+    "h": 300
+   }
+  },
+  {
+   "id": "canto",
+   "type": "html",
+   "track": "canto",
+   "label": "selo do programa",
+   "start": 2.75,
+   "dur": 61.17,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='cn'><span class='c1'>REALITY DA FAMÍLIA</span><span class='c2'>EP.1 · A geladeira vazia</span></div>",
+    "css": "",
+    "x": 330,
+    "y": 48,
+    "w": 620,
+    "h": 64
+   }
+  },
+  {
+   "id": "like",
+   "type": "html",
+   "track": "extras",
+   "label": "deixa o like",
+   "start": 58.3,
+   "dur": 1.5,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "html": "<div class='pill' style='background:#1e7bff'><svg viewBox='0 0 24 24' width='44' height='44'><path fill='#fff' d='M2 21h4V9H2v12zm20-11c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6C6.2 8 6 8.5 6 9v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2z'/></svg><span>DEIXA O LIKE</span></div>",
+    "css": "",
+    "x": 1040,
+    "y": 150,
+    "w": 420,
+    "h": 110
+   }
+  },
+  {
+   "id": "insc",
+   "type": "html",
+   "track": "extras",
+   "label": "inscreva-se",
+   "start": 59.75,
+   "dur": 2.2,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "html": "<div class='pill' style='background:#e8202a'><span>INSCREVA-SE</span></div>",
+    "css": "",
+    "x": 1040,
+    "y": 150,
+    "w": 420,
+    "h": 110
+   }
+  },
+  {
+   "id": "prox",
+   "type": "html",
+   "track": "extras",
+   "label": "próximo episódio",
+   "start": 61.9,
+   "dur": 2.02,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "html": "<div class='ep'><div class='ep1'>PRÓXIMO EPISÓDIO</div><div class='ep2'>O CHURRASCO<br>DE DOMINGO</div></div>",
+    "css": "",
+    "x": 640,
+    "y": 230,
+    "w": 900,
+    "h": 300
+   }
+  },
+  {
+   "id": "estilo",
+   "type": "html",
+   "track": "canto",
+   "label": "CSS legenda TV (não aparece)",
+   "start": 0,
+   "dur": 63.92,
+   "props": {
+    "html": "",
+    "css": "#root .rt,#root .vn,#root .ep,#root .cn,#root .pill{font-family:'Nunito',Arial,sans-serif;font-weight:900}.rt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:6px}.rt .tag{font-size:28px;padding:3px 18px;border-radius:8px;transform:skewX(-8deg);border:3px solid #111;letter-spacing:1px}.rt .ln{font-size:60px;line-height:1.08;color:#fff;-webkit-text-stroke:11px #111;paint-order:stroke fill;text-shadow:0 5px 0 rgba(0,0,0,.55);text-align:left}.rt .k{color:#ffe600}.vn{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.vl{display:flex;flex-direction:column;align-items:center}.vl b{font-size:72px;line-height:1.0;color:#ffe600;-webkit-text-stroke:10px #111;paint-order:stroke fill;text-shadow:0 5px 0 rgba(0,0,0,.5)}.aka{margin-top:10px;background:#111;color:#fff;font-size:24px;padding:4px 10px;border-radius:6px;text-align:center;line-height:1.1}.aka i{display:block;font-size:24px;color:#ffe600;font-style:normal}.ep{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-4deg)}.ep1{background:#e8202a;color:#fff;font-size:30px;padding:4px 22px;border-radius:8px;border:3px solid #111;margin-bottom:-6px;z-index:2}.ep2{background:#ffe600;color:#111;font-size:70px;line-height:1.0;padding:14px 34px;border:6px solid #111;border-radius:14px;text-align:center;box-shadow:10px 10px 0 #111}.cn{position:absolute;inset:0;display:flex;align-items:center;gap:0;white-space:nowrap}.cn .c1{background:#e8202a;color:#fff;font-size:26px;padding:6px 14px;border:3px solid #111;border-radius:8px 0 0 8px}.cn .c2{background:#ffe600;color:#111;font-size:24px;padding:7px 14px;border:3px solid #111;border-left:0;border-radius:0 8px 8px 0}.pill{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:14px;color:#fff;font-size:44px;border:5px solid #111;border-radius:60px;box-shadow:8px 8px 0 #111}",
+    "x": 0,
+    "y": 0,
+    "w": 1,
+    "h": 1
+   }
+  }
+ ]
+}

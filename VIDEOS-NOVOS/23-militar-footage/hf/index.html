@@ -1,0 +1,1883 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#0b0c08;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#0b0c08;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}.risco{width:100%;height:100%;background:#ff4a3a;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.6)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="69.4" data-width="1280" data-height="720">
+<div id="v1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v1_mv" class="ed-mv"><video id="v1" class="clip" data-start="0.000" data-duration="4.800" data-track-index="1" src="m/clips/aerial_g.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s5_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s5_clip" class="clip" data-start="4.800" data-duration="2.400" data-track-index="2" style="width:100%;height:100%;position:relative">
+<div id="s5" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s5_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="v6_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v6_mv" class="ed-mv"><video id="v6" class="clip" data-start="7.200" data-duration="3.100" data-track-index="3" data-media-start="2.000" src="m/clips/truck1.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s9_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s9_clip" class="clip" data-start="10.300" data-duration="2.300" data-track-index="4" style="width:100%;height:100%;position:relative">
+<div id="s9" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s9_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="i10_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="i10_mv" class="ed-mv"><img id="i10" class="clip" data-start="12.600" data-duration="1.500" data-track-index="5" src="m/img/f_caminhao.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="s13_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s13_clip" class="clip" data-start="14.100" data-duration="1.400" data-track-index="6" style="width:100%;height:100%;position:relative">
+<div id="s13" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s13_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="v14_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v14_mv" class="ed-mv"><video id="v14" class="clip" data-start="15.500" data-duration="1.900" data-track-index="7" src="m/clips/nato.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="v16_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v16_mv" class="ed-mv"><video id="v16" class="clip" data-start="17.400" data-duration="3.000" data-track-index="8" data-media-start="2.000" src="m/clips/burn_t.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s20_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s20_clip" class="clip" data-start="20.400" data-duration="2.400" data-track-index="9" style="width:100%;height:100%;position:relative">
+<div id="s20" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s20_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="i21_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="i21_mv" class="ed-mv"><img id="i21" class="clip" data-start="22.800" data-duration="1.600" data-track-index="10" src="m/img/f_radio.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="v23_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v23_mv" class="ed-mv"><video id="v23" class="clip" data-start="24.400" data-duration="2.600" data-track-index="11" data-media-start="1.000" src="m/clips/forest_t.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s27_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s27_clip" class="clip" data-start="27.000" data-duration="1.300" data-track-index="12" style="width:100%;height:100%;position:relative">
+<div id="s27" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s27_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="i29_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="i29_mv" class="ed-mv"><img id="i29" class="clip" data-start="28.300" data-duration="2.300" data-track-index="13" src="m/img/f_poco.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="s31_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s31_clip" class="clip" data-start="30.600" data-duration="2.300" data-track-index="14" style="width:100%;height:100%;position:relative">
+<div id="s31" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s31_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="i32_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="i32_mv" class="ed-mv"><img id="i32" class="clip" data-start="32.900" data-duration="4.000" data-track-index="15" src="m/img/f_parada_t.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="v37_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v37_mv" class="ed-mv"><video id="v37" class="clip" data-start="36.900" data-duration="4.100" data-track-index="16" data-media-start="1.000" src="m/clips/sniper3.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s41_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s41_clip" class="clip" data-start="41.000" data-duration="1.400" data-track-index="17" style="width:100%;height:100%;position:relative">
+<div id="s41" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s41_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:00</div>
+</div>
+
+</div></div>
+<div id="s43_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s43_clip" class="clip" data-start="42.400" data-duration="3.900" data-track-index="18" style="width:100%;height:100%;position:relative">
+<div id="s43" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s43_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:20</div>
+</div>
+
+</div></div>
+<div id="i45_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="i45_mv" class="ed-mv"><img id="i45" class="clip" data-start="46.300" data-duration="2.700" data-track-index="19" src="m/img/f_coluna_g.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="s48_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s48_clip" class="clip" data-start="49.000" data-duration="3.600" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="s48" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s48_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:40</div>
+</div>
+
+</div></div>
+<div id="v49_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v49_mv" class="ed-mv"><video id="v49" class="clip" data-start="52.600" data-duration="3.900" data-track-index="21" src="m/clips/aerial2_g.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="v53_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v53_mv" class="ed-mv"><video id="v53" class="clip" data-start="56.500" data-duration="4.200" data-track-index="22" src="m/clips/sniper1.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s56_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s56_clip" class="clip" data-start="60.700" data-duration="4.700" data-track-index="23" style="width:100%;height:100%;position:relative">
+<div id="s56" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#2c2e24,#121309);font-family:Oswald,'Arial Narrow',sans-serif">
+  <div class="rel-p" style="position:absolute;left:260px;top:70px;width:760px;height:580px;background:#e7e1cf;box-shadow:0 30px 60px rgba(0,0,0,.6);transform:rotate(-1.4deg);padding:44px 56px;box-sizing:border-box;color:#1d1c17">
+    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #1d1c17;padding-bottom:14px">
+      <div class="rel-t" style="font-size:58px;font-weight:700;letter-spacing:3px">RELATÓRIO FINAL</div>
+      <div style="width:84px;height:84px;border:4px solid #1d1c17;border-radius:50%;opacity:.55"></div>
+    </div>
+    <div class="rel-r" style="margin-top:26px">
+      <div style="height:26px;background:#1d1c17;width:88%;margin:14px 0"></div>
+      <div style="height:26px;background:#1d1c17;width:64%;margin:14px 0"></div>
+      <div style="height:26px;background:#1d1c17;width:76%;margin:14px 0"></div>
+    </div>
+    <div class="rel-l" style="margin-top:30px;font:700 34px Consolas,monospace;letter-spacing:1px">GASTO DE MUNIÇÃO: <span style="opacity:.8"></span></div>
+    <div class="rel-c" style="position:absolute;left:90px;top:330px;font-size:84px;font-weight:700;white-space:nowrap;color:#c8281e;border:8px solid #c8281e;padding:0 30px;transform:rotate(-6deg);letter-spacing:4px;opacity:0">14 CARTUCHOS</div>
+  </div>
+</div>
+
+</div></div>
+<div id="v57_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="v57_mv" class="ed-mv"><video id="v57" class="clip" data-start="65.400" data-duration="1.400" data-track-index="24" src="m/clips/ammo.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="s59_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s59_clip" class="clip" data-start="66.800" data-duration="2.600" data-track-index="25" style="width:100%;height:100%;position:relative">
+<div id="s59" class="mt" style="position:absolute;inset:0;overflow:hidden;background:#5f5d33;font-family:Oswald,'Arial Narrow',sans-serif">
+  <svg class="mt-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <defs>
+      <radialGradient id="s59_fx"><stop offset="0" stop-color="#fff3c0"/><stop offset=".35" stop-color="#ffb030"/><stop offset="1" stop-color="#ff5a10" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g class="mt-world">
+      <g class="mt-fields"></g><g class="mt-trees"></g>
+      <path class="mt-road2" fill="none" stroke="#8a7a52" stroke-linecap="round"/>
+      <path class="mt-road" fill="none" stroke="#cdbb8a" stroke-linecap="round"/>
+      <g class="mt-grid" stroke="rgba(255,255,255,.10)" fill="none"></g>
+      <g class="mt-zone"></g><g class="mt-marks"></g><g class="mt-shots"></g>
+      <g class="mt-veh"></g><g class="mt-smoke"></g><g class="mt-pit"></g>
+    </g>
+  </svg>
+  <div class="mt-ui" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(0,0,0,.45) 100%)"></div>
+  <div style="position:absolute;left:40px;top:34px;font:700 30px Consolas,monospace;color:#f4f0dc;background:rgba(0,0,0,.72);padding:6px 16px;border-left:6px solid #e8b13a">SETOR NORTE</div>
+  <div style="position:absolute;right:40px;top:34px;font:700 34px Consolas,monospace;color:#ffd23a;background:rgba(0,0,0,.72);padding:6px 16px">06:55</div>
+</div>
+
+</div></div>
+<div id="s17_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="s17_clip" class="clip" data-start="17.400" data-duration="3.000" data-track-index="26" style="width:100%;height:100%;position:relative">
+<div id="s17" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+  <div class="term-scan" style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 2px,rgba(0,0,0,0.22) 3px,rgba(0,0,0,0) 4px)"></div>
+  <div class="term-bar" style="position:absolute;left:0;right:0;height:140px;top:-160px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(157,255,122,.10),rgba(255,255,255,0))"></div>
+  <div class="term-vig" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+</div>
+
+</div></div>
+<div id="s24_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="s24_clip" class="clip" data-start="24.400" data-duration="2.600" data-track-index="27" style="width:100%;height:100%;position:relative">
+<div id="s24" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+  <div class="term-scan" style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 2px,rgba(0,0,0,0.22) 3px,rgba(0,0,0,0) 4px)"></div>
+  <div class="term-bar" style="position:absolute;left:0;right:0;height:140px;top:-160px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(157,255,122,.10),rgba(255,255,255,0))"></div>
+  <div class="term-vig" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+</div>
+
+</div></div>
+<div id="s33_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="s33_clip" class="clip" data-start="32.900" data-duration="4.000" data-track-index="28" style="width:100%;height:100%;position:relative">
+<div id="s33" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+  <div class="term-scan" style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 2px,rgba(0,0,0,0.22) 3px,rgba(0,0,0,0) 4px)"></div>
+  <div class="term-bar" style="position:absolute;left:0;right:0;height:140px;top:-160px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(157,255,122,.10),rgba(255,255,255,0))"></div>
+  <div class="term-vig" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+</div>
+
+</div></div>
+<div id="s2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s2_clip" class="clip" data-start="0.000" data-duration="4.800" data-track-index="29" style="width:100%;height:100%;position:relative">
+<div id="s2" class="hudd" data-modo="drone" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s2_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s2_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px">SETOR NORTE</div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:00</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s11_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s11_clip" class="clip" data-start="12.600" data-duration="1.500" data-track-index="30" style="width:100%;height:100%;position:relative">
+<div id="s11" class="hudd" data-modo="drone" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s11_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s11_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px">SETOR NORTE</div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:00</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s18_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s18_clip" class="clip" data-start="17.400" data-duration="3.000" data-track-index="31" style="width:100%;height:100%;position:relative">
+<div id="s18" class="hudd" data-modo="mira" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s18_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s18_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px"></div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:00</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s25_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s25_clip" class="clip" data-start="24.400" data-duration="2.600" data-track-index="32" style="width:100%;height:100%;position:relative">
+<div id="s25" class="hudd" data-modo="mira" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s25_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s25_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px"></div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:00</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s34_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s34_clip" class="clip" data-start="32.900" data-duration="4.000" data-track-index="33" style="width:100%;height:100%;position:relative">
+<div id="s34" class="hudd" data-modo="mira" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s34_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s34_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px"></div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:00</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s46_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s46_clip" class="clip" data-start="46.300" data-duration="2.700" data-track-index="34" style="width:100%;height:100%;position:relative">
+<div id="s46" class="hudd" data-modo="drone" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s46_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s46_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px">SETOR NORTE</div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:40</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="s50_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="s50_clip" class="clip" data-start="52.600" data-duration="3.900" data-track-index="35" style="width:100%;height:100%;position:relative">
+<div id="s50" class="hudd" data-modo="drone" style="position:absolute;inset:0;overflow:hidden;font-family:Consolas,'Courier New',monospace;color:#9dff7a;text-shadow:0 0 6px rgba(0,0,0,.9),2px 2px 0 #000">
+  <svg class="hudd-svg" viewBox="0 0 1280 720" width="1280" height="720" style="position:absolute;inset:0">
+    <g class="hudd-drone" fill="none" stroke="#9dff7a" stroke-width="3" opacity=".92">
+      <path d="M70 120 V70 H120 M1160 70 H1210 V120 M1210 600 V650 H1160 M120 650 H70 V600"/>
+      <path d="M640 300 V340 M640 380 V420 M580 360 H620 M660 360 H700"/>
+      <circle cx="640" cy="360" r="88" stroke-dasharray="14 10"/>
+      <g class="hudd-ladder" stroke-width="2.5">
+        <path d="M470 250 H560 M720 250 H810 M500 310 H560 M720 310 H780 M500 410 H560 M720 410 H780 M470 470 H560 M720 470 H810"/>
+      </g>
+      <rect x="96" y="210" width="26" height="300"/>
+      <g class="hudd-tapeL" stroke-width="2.5"></g>
+      <rect x="1158" y="210" width="26" height="300"/>
+      <g class="hudd-tapeR" stroke-width="2.5"></g>
+      <rect x="470" y="628" width="340" height="16"/>
+      <rect class="hudd-zoom" x="472" y="630" width="120" height="12" fill="#9dff7a" stroke="none"/>
+    </g>
+    <g class="hudd-mira">
+      <defs><mask id="s50_m"><rect width="1280" height="720" fill="#fff"/><circle class="hudd-hole" cx="640" cy="360" r="318" fill="#000"/></mask></defs>
+      <rect width="1280" height="720" fill="#000" mask="url(#s50_m)"/>
+      <g class="hudd-ret" stroke="#0a0a0a" fill="none">
+        <circle cx="640" cy="360" r="318" stroke-width="10" stroke="#111"/>
+        <path d="M322 360 H600 M680 360 H958 M640 42 V320 M640 400 V678" stroke-width="3"/>
+        <path d="M322 360 H470 M810 360 H958 M640 42 V190 M640 530 V678" stroke-width="9"/>
+        <g class="hudd-dots" fill="#0a0a0a" stroke="none"></g>
+      </g>
+    </g>
+  </svg>
+  <div class="hudd-lbl" style="position:absolute;left:150px;top:60px;font-size:30px;font-weight:700;letter-spacing:2px">SETOR NORTE</div>
+  <div class="hudd-hora" style="position:absolute;right:150px;top:60px;font-size:34px;font-weight:700;letter-spacing:2px">06:55</div>
+  <div class="hudd-rec" style="position:absolute;left:150px;bottom:66px;font-size:28px;font-weight:700"><span style="color:#ff4040">●</span> REC</div>
+</div>
+
+</div></div>
+<div id="t3_box" class="ed-box" style="left:640.0px;top:330.0px;transform:translate(-50%,-50%);width:900.0px;z-index:41;"><div id="t3" class="clip" data-start="0.000" data-duration="1.700" data-track-index="36" style="font-size:120.0px;color:#ffd23a;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">06:00</div></div>
+<div id="t4_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t4" class="clip" data-start="1.750" data-duration="3.000" data-track-index="37" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">COLUNA DE ABASTECIMENTO</div></div>
+<div id="t7_box" class="ed-box" style="left:640.0px;top:520.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t7" class="clip" data-start="7.260" data-duration="2.990" data-track-index="38" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">NENHUM DRONE</div></div>
+<div id="t8_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t8" class="clip" data-start="8.420" data-duration="1.830" data-track-index="39" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">NENHUM RECONHECIMENTO AVANÇADO</div></div>
+<div id="t12_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t12" class="clip" data-start="12.700" data-duration="1.350" data-track-index="40" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">PRIMEIRO CAMINHÃO</div></div>
+<div id="t15_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t15" class="clip" data-start="15.560" data-duration="1.790" data-track-index="41" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">FOGO SUPRESSOR IMEDIATO</div></div>
+<div id="t19_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t19" class="clip" data-start="17.900" data-duration="2.450" data-track-index="42" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SEGUNDO TIRO</div></div>
+<div id="t22_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t22" class="clip" data-start="22.820" data-duration="1.560" data-track-index="43" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SILÊNCIO TOTAL NO RÁDIO</div></div>
+<div id="t26_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t26" class="clip" data-start="24.600" data-duration="2.350" data-track-index="44" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">LINHA DAS ÁRVORES</div></div>
+<div id="risco_box" class="ed-box" style="left:640.0px;top:604.0px;transform:translate(-50%,-50%);width:540.0px;height:9.0px;z-index:41;"><div id="risco" class="clip" data-start="25.100" data-duration="1.850" data-track-index="45" style="width:100%;height:100%"><div class='risco'></div></div></div>
+<div id="t28_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t28" class="clip" data-start="27.000" data-duration="1.280" data-track-index="46" style="font-size:72.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">ESTÁ NO SUBSOLO</div></div>
+<div id="t30_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t30" class="clip" data-start="28.320" data-duration="2.260" data-track-index="47" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">POÇO DE OBSERVAÇÃO CAMUFLADO</div></div>
+<div id="t35_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t35" class="clip" data-start="32.940" data-duration="1.680" data-track-index="48" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">ELE ESPERA A COLUNA PARAR</div></div>
+<div id="t36_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t36" class="clip" data-start="34.660" data-duration="2.190" data-track-index="49" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">ESPERA O PÂNICO</div></div>
+<div id="t38_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t38" class="clip" data-start="36.920" data-duration="1.080" data-track-index="50" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">TERCEIRO TIRO</div></div>
+<div id="t39_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t39" class="clip" data-start="38.040" data-duration="1.060" data-track-index="51" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">QUARTO TIRO</div></div>
+<div id="t40_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t40" class="clip" data-start="39.140" data-duration="1.810" data-track-index="52" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DOIS OFICIAIS DE LIGAÇÃO</div></div>
+<div id="t42_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t42" class="clip" data-start="41.000" data-duration="1.350" data-track-index="53" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">A COLUNA TRAVA</div></div>
+<div id="t44_box" class="ed-box" style="left:640.0px;top:330.0px;transform:translate(-50%,-50%);width:900.0px;z-index:41;"><div id="t44" class="clip" data-start="42.380" data-duration="1.520" data-track-index="54" style="font-size:120.0px;color:#ffd23a;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">06:20</div></div>
+<div id="t47_box" class="ed-box" style="left:640.0px;top:330.0px;transform:translate(-50%,-50%);width:900.0px;z-index:41;"><div id="t47" class="clip" data-start="46.260" data-duration="2.640" data-track-index="55" style="font-size:120.0px;color:#ffd23a;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">06:40</div></div>
+<div id="t51_box" class="ed-box" style="left:640.0px;top:330.0px;transform:translate(-50%,-50%);width:900.0px;z-index:41;"><div id="t51" class="clip" data-start="52.600" data-duration="1.900" data-track-index="56" style="font-size:120.0px;color:#ffd23a;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">06:55</div></div>
+<div id="t52_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t52" class="clip" data-start="54.560" data-duration="1.890" data-track-index="57" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">A ORDEM DE RETIRADA CHEGA TARDE</div></div>
+<div id="t54_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t54" class="clip" data-start="56.700" data-duration="2.700" data-track-index="58" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SNIPER SÓ MATA ALVOS DE VALOR?</div></div>
+<div id="t55_box" class="ed-box" style="left:640.0px;top:600.0px;transform:translate(-50%,-50%);width:520.0px;z-index:41;"><div id="t55" class="clip" data-start="59.500" data-duration="1.200" data-track-index="59" style="font-size:64.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:#c8281e;padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">INSCREVA-SE</div></div>
+<div id="t58_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:900.0px;z-index:41;"><div id="t58" class="clip" data-start="65.450" data-duration="1.330" data-track-index="60" style="font-size:120.0px;color:#ffd23a;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">14 TIROS</div></div>
+<div id="t60_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:41;"><div id="t60" class="clip" data-start="66.840" data-duration="2.510" data-track-index="61" style="font-size:56.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.72);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">UMA COLUNA INTEIRA PARALISADA</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:69.4,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+(function(tl, P){ const S=4.8, D=2.4; const R=document.getElementById("s5");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s5_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2000, 0, 4600], "cam1": [2100, 0, 3800], "lead0": 1300, "lead1": 1700, "n": 42, "gap": 42, "t_explode": -1, "explodido": 0, "marcas": ["2km"], "atingidos": [], "tiros": [], "t_parado": -1, "rotulos": [], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+
+(function(tl, P){ const S=10.3, D=2.3; const R=document.getElementById("s9");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s9_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2600, 0, 3000], "cam1": [2700, 0, 2600], "lead0": 1700, "lead1": 2050, "n": 42, "gap": 42, "t_explode": -1, "explodido": 0, "marcas": ["limpa"], "atingidos": [], "tiros": [], "t_parado": -1, "rotulos": [], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#i10_mv",{scale:1},{...{scale:1.06},duration:1.500,ease:"none",immediateRender:false},12.600);
+tl.set("#i10_mv",{scale:1},0);
+
+(function(tl, P){ const S=14.1, D=1.4; const R=document.getElementById("s13");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s13_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [3000, 0, 1400], "cam1": [3000, 0, 1100], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": 0.1, "explodido": 0, "marcas": ["km3"], "atingidos": [], "tiros": [], "t_parado": -1, "rotulos": [], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+
+(function(tl, P){ const S=20.4, D=2.4; const R=document.getElementById("s20");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s20_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2950, 0, 900], "cam1": [2930, 0, 700], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["veic3"], "atingidos": [2], "tiros": [], "t_parado": -1, "rotulos": [{"txt": "MOTORISTA · VEÍCULO 3", "alvo": "veiculo", "i": 2, "dy": 40, "t": 0.1, "size": 32, "cor": "#ff4a3a"}], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#i21_mv",{scale:1},{...{scale:1.07},duration:1.600,ease:"none",immediateRender:false},22.800);
+tl.set("#i21_mv",{scale:1},0);
+tl.fromTo("#v23_mv",{scale:1.08,xPercent:4.0},{...{scale:1.08,xPercent:-4.0},duration:2.600,ease:"none",immediateRender:false},24.400);
+tl.set("#v23_mv",{scale:1.08,xPercent:4.0},0);
+
+(function(tl, P){ const S=27.0, D=1.3; const R=document.getElementById("s27");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s27_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2700, -150, 2200], "cam1": [2930, -40, 520], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["arvores"], "atingidos": [2], "tiros": [], "t_parado": -1, "rotulos": [], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#i29_mv",{scale:1},{...{scale:1.08},duration:2.300,ease:"none",immediateRender:false},28.300);
+tl.set("#i29_mv",{scale:1},0);
+
+(function(tl, P){ const S=30.6, D=2.3; const R=document.getElementById("s31");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s31_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2930, -20, 440], "cam1": [2930, -20, 340], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["poco", "40m"], "atingidos": [2], "tiros": [], "t_parado": -1, "rotulos": [{"txt": "À ESQUERDA DA PISTA", "x": 2930, "y": -30.5, "dy": 40, "t": 1.5, "size": 32, "cor": "#ffd23a"}], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#i32_mv",{scale:1},{...{scale:1.1},duration:4.000,ease:"none",immediateRender:false},32.900);
+tl.set("#i32_mv",{scale:1},0);
+tl.fromTo("#v37_mv",{scale:1},{...{scale:1.05},duration:4.100,ease:"none",immediateRender:false},36.900);
+tl.set("#v37_mv",{scale:1},0);
+
+(function(tl, P){ const S=41.0, D=1.4; const R=document.getElementById("s41");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s41_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2400, 0, 2600], "cam1": [2380, 0, 2800], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": [], "atingidos": [2, 7, 12], "tiros": [], "t_parado": 0, "rotulos": [], "hora": "06:00", "rotulo": "SETOR NORTE", "seed": 23});
+
+
+(function(tl, P){ const S=42.4, D=3.9; const R=document.getElementById("s43");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s43_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2380, 0, 2800], "cam1": [2550, -60, 2400], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["flanco"], "atingidos": [2, 7, 12], "tiros": [], "t_parado": 0, "rotulos": [], "hora": "06:20", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#i45_mv",{scale:1},{...{scale:1.06},duration:2.700,ease:"none",immediateRender:false},46.300);
+tl.set("#i45_mv",{scale:1},0);
+
+(function(tl, P){ const S=49.0, D=3.6; const R=document.getElementById("s48");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s48_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [1950, 0, 4400], "cam1": [2050, 0, 3900], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["poco"], "atingidos": [2, 7, 12], "tiros": [], "t_parado": 0, "rotulos": [{"txt": "42 VEÍCULOS", "alvo": "comboio", "dy": 60, "t": 0, "size": 44, "cor": "#ff4a3a"}, {"txt": "UM ÚNICO OPERADOR", "alvo": "poco", "dy": -150, "t": 1.9, "size": 44, "cor": "#9dff7a"}], "hora": "06:40", "rotulo": "SETOR NORTE", "seed": 23});
+
+tl.fromTo("#v53_mv",{scale:1},{...{scale:1.05},duration:4.200,ease:"none",immediateRender:false},56.500);
+tl.set("#v53_mv",{scale:1},0);
+
+(function(tl, P){ const S=60.7, D=4.7; const R=document.getElementById("s56");
+  tl.fromTo(R.querySelector(".rel-p"),{y:60,opacity:0},{y:0,opacity:1,duration:.6,ease:"power2.out",immediateRender:false},S);
+  tl.fromTo(R.querySelector(".rel-l"),{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+0.9);
+  tl.fromTo(R.querySelector(".rel-c"),{opacity:0,scale:1.25},{opacity:.92,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S+P.t_carimbo);
+  const pp=R.querySelector(".rel-p"); const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;pp.style.scale=(1+v*0.05).toFixed(4);}});
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"titulo": "RELATÓRIO FINAL", "linha": "GASTO DE MUNIÇÃO", "valor": "", "carimbo": "14 CARTUCHOS", "t_carimbo": 3.3, "cor": "#c8281e"});
+
+tl.fromTo("#v57_mv",{scale:1},{...{scale:1.06},duration:1.400,ease:"none",immediateRender:false},65.400);
+tl.set("#v57_mv",{scale:1},0);
+
+(function(tl, P){ const S=66.8, D=2.6; const R=document.getElementById("s59");
+  const ns="http://www.w3.org/2000/svg"; const W=1280,H=720;
+  const el=(tag,a,par)=>{const e=document.createElementNS(ns,tag);for(const k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e;};
+  let sd=P.seed||23; const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const roadY=x=>34*Math.sin(x/650)+16*Math.sin(x/230);
+  const slope=x=>(roadY(x+1)-roadY(x-1))/2;
+  const M=new Set(P.marcas||[]);
+  // campos
+  const gf=R.querySelector(".mt-fields"); const cols=["#6f6d38","#7c7a3c","#66643a","#858246","#5d6b3a","#727a40","#8a8650"];
+  for(let x=-1400;x<5000;x+=320){ for(let y=-1800;y<1800;y+=230){
+    const w=320*(0.8+rnd()*0.4), h=230*(0.8+rnd()*0.4);
+    el("rect",{x:x+rnd()*30,y:y+rnd()*30,width:w,height:h,fill:cols[Math.floor(rnd()*cols.length)],stroke:"#4b4a28","stroke-width":1.2,"vector-effect":"non-scaling-stroke",transform:`rotate(${(rnd()-.5)*6} ${x} ${y})`},gf);
+  }}
+  // linha das árvores (norte) + bosques
+  const gt=R.querySelector(".mt-trees");
+  const tree=(cx,cy)=>{el("circle",{cx,cy,r:7+rnd()*9,fill:rnd()<.5?"#2f4a26":"#3a5a2c"},gt);};
+  for(let x=1200;x<3900;x+=11){ for(let k=0;k<4;k++) tree(x+rnd()*10, roadY(x)-230-rnd()*110); }
+  for(let x=-900;x<1100;x+=14){ for(let k=0;k<3;k++) tree(x+rnd()*12, roadY(x)+260+rnd()*90); }
+  // estrada
+  let d=""; for(let x=-1500;x<=5200;x+=20) d+=(d?"L":"M")+x+" "+roadY(x).toFixed(1)+" ";
+  R.querySelector(".mt-road").setAttribute("d",d); R.querySelector(".mt-road2").setAttribute("d",d);
+  // grade
+  const gg=R.querySelector(".mt-grid"); for(let x=-1500;x<=5500;x+=500) el("path",{d:`M${x} -2000 V2000`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  for(let y=-2000;y<=2000;y+=500) el("path",{d:`M-1500 ${y} H5500`,"vector-effect":"non-scaling-stroke","stroke-width":1},gg);
+  // veículos
+  const gv=R.querySelector(".mt-veh"); const V=[];
+  for(let i=0;i<(P.n||42);i++){ const g=el("g",{},gv);
+    el("rect",{x:-6,y:-2.6,width:9,height:5.2,rx:.6,fill:"#c9d3d8",stroke:"#1b2328","stroke-width":.9},g);
+    el("rect",{x:3.4,y:-2.3,width:2.8,height:4.6,rx:.5,fill:"#7f8d95",stroke:"#1b2328","stroke-width":.9},g);
+    V.push(g); }
+  const AT=new Set(P.atingidos||[]);
+  // poço
+  const pitX=2930, pitY=roadY(2930)-40; const gp=R.querySelector(".mt-pit");
+  const pit=el("g",{},gp); el("ellipse",{cx:0,cy:0,rx:9,ry:6,fill:"#24361d",stroke:"#9dff7a","stroke-width":1.4,"vector-effect":"non-scaling-stroke"},pit); el("rect",{x:-6,y:-1,width:12,height:2,fill:"#060806"},pit);
+  pit.style.display=M.has("poco")?"":"none";
+  const gm=R.querySelector(".mt-marks"), gz=R.querySelector(".mt-zone"), gs=R.querySelector(".mt-shots"), gk=R.querySelector(".mt-smoke");
+  // zona "limpa"
+  let zone=null; if(M.has("limpa")){ zone=el("rect",{x:1700,y:-520,width:2000,height:1040,fill:"rgba(90,220,110,.12)",stroke:"#6dff8a","stroke-width":3,"stroke-dasharray":"14 10","vector-effect":"non-scaling-stroke"},gz); }
+  // trecho 2 km
+  let br=null; if(M.has("2km")){ let bd=""; for(let x=1000;x<=3000;x+=20) bd+=(bd?"L":"M")+x+" "+(roadY(x)+70).toFixed(1)+" ";
+    br=el("path",{d:bd+` M1000 ${roadY(1000)+40} V${roadY(1000)+100} M3000 ${roadY(3000)+40} V${roadY(3000)+100}`,fill:"none",stroke:"#ffd23a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gm); }
+  let kmPost=null; if(M.has("km3")) kmPost=el("circle",{cx:3000,cy:roadY(3000)+22,r:5,fill:"#ffd23a",stroke:"#000","stroke-width":1.5,"vector-effect":"non-scaling-stroke"},gm);
+  let dim=null; if(M.has("40m")) dim=el("path",{d:`M${pitX+16} ${pitY} V${roadY(pitX+16)} M${pitX+8} ${pitY} H${pitX+24} M${pitX+8} ${roadY(pitX+16)} H${pitX+24}`,fill:"none",stroke:"#ffd23a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gm);
+  const flank=[]; if(M.has("flanco")){ [[-1],[1]].forEach(([s])=>{ const p=el("path",{d:`M2350 ${roadY(2350)} C2450 ${s*420} 2800 ${s*420} 2900 ${roadY(2900)+s*60}`,fill:"none",stroke:"#7fc8ff","stroke-width":5,"stroke-dasharray":"16 12","vector-effect":"non-scaling-stroke"},gm); flank.push(p);}); }
+  let ret=null; if(M.has("retirada")) ret=el("path",{d:`M2500 ${roadY(2500)-60} L1700 ${roadY(1700)-60} M1760 ${roadY(1760)-100} L1700 ${roadY(1700)-60} L1760 ${roadY(1760)-20}`,fill:"none",stroke:"#7fc8ff","stroke-width":6,"vector-effect":"non-scaling-stroke"},gm);
+  // camadas de UI (rótulos em pixels de tela)
+  const ui=R.querySelector(".mt-ui"); const L=[];
+  const lab=(txt,wx,wy,cor,dy,t0,size)=>{ const e=document.createElement("div"); e.textContent=txt;
+    e.style.cssText=`position:absolute;left:0;top:0;white-space:nowrap;font-weight:700;font-size:${size||30}px;color:#fff;background:rgba(0,0,0,.78);padding:4px 14px;border-left:7px solid ${cor||"#ffd23a"};letter-spacing:1px`;
+    ui.appendChild(e); L.push({e,wx,wy,dy:dy||-46,t0:t0||0}); return e; };
+  const lead=t=>{const k=Math.min(1,Math.max(0,t/D)); const tp=P.t_parado>=0?Math.min(t,P.t_parado):t; const kk=Math.min(1,tp/D); return P.lead0+(P.lead1-P.lead0)*(1-Math.pow(1-kk,1.6));};
+  if(M.has("2km")){ lab("2 KM",2000,roadY(2000)+70,"#ffd23a",30,0.3,40); lab("ESTRADA EXPOSTA",2000,roadY(2000)+70,"#ffd23a",86,0.8,28); }
+  if(M.has("km3")) lab("KM 3",3000,roadY(3000)+22,"#ffd23a",26,0,34);
+  if(M.has("limpa")) lab("ÁREA LIMPA",2700,-520,"#6dff8a",24,0.4,36);
+  if(M.has("poco")) lab("POÇO DE OBSERVAÇÃO",pitX,pitY,"#9dff7a",-64,0.2,30);
+  if(M.has("40m")) lab("40 M",pitX+16,(pitY+roadY(pitX+16))/2,"#ffd23a",-24,0.4,34).style.marginLeft="34px";
+  if(M.has("arvores")) lab("LINHA DAS ÁRVORES",2500,roadY(2500)-300,"#3a5a2c",-30,0.2,28);
+  if(M.has("flanco")) lab("NENHUM FLANCO",2620,-330,"#7fc8ff",-30,0.6,32);
+  if(M.has("retirada")) lab("RETIRADA",2050,roadY(2050)-60,"#7fc8ff",-58,0.4,32);
+  (P.rotulos||[]).forEach(r=>{ let wx=r.x, wy=r.y; if(r.alvo==="poco"){wx=pitX;wy=pitY;} if(r.alvo==="comboio"){wx=null;}
+    const e=lab(r.txt,wx,wy,r.cor,r.dy,r.t,r.size); e._alvo=r.alvo; e._i=r.i; });
+  let flX=null; if(M.has("flanco")){ flX=el("path",{d:"",fill:"none",stroke:"#ff4a3a","stroke-width":8,"stroke-linecap":"round"},R.querySelector(".mt-svg")); }
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}}); const world=R.querySelector(".mt-world");
+  function draw(){ const t=st.k*D; const e=t/D, ee=e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2;
+    const c0=P.cam0,c1=P.cam1; const cx=c0[0]+(c1[0]-c0[0])*ee, cy=c0[1]+(c1[1]-c0[1])*ee, cw=Math.exp(Math.log(c0[2])+(Math.log(c1[2])-Math.log(c0[2]))*ee);
+    const s=W/cw, mpp=cw/W;
+    world.setAttribute("transform",`translate(${W/2} ${H/2}) scale(${s}) translate(${-cx} ${-cy})`);
+    const rw=Math.max(9,5*mpp); R.querySelector(".mt-road").setAttribute("stroke-width",rw); R.querySelector(".mt-road2").setAttribute("stroke-width",rw*1.5);
+    const vs=Math.max(1.4,16*mpp/9); // escala do ícone (mín. ~16 px)
+    const lx=lead(t); const parado=P.t_parado>=0&&t>=P.t_parado;
+    V.forEach((g,i)=>{ const x=lx-i*(P.gap||42); const ang=Math.atan(slope(x))*57.3;
+      g.setAttribute("transform",`translate(${x.toFixed(1)} ${roadY(x).toFixed(1)}) rotate(${ang.toFixed(1)}) scale(${vs.toFixed(3)})`);
+      let hit=AT.has(i); (P.tiros||[]).forEach(([ts,ti])=>{ if(ti===i&&t>=ts+0.25) hit=true; });
+      const dead=(i===0&&(P.explodido||(P.t_explode>=0&&t>=P.t_explode)));
+      const body=g.firstChild; body.setAttribute("fill",dead?"#2a2522":hit?"#ff4a3a":parado?(Math.floor(t*2)%2?"#ff8a6a":"#c9d3d8"):"#c9d3d8"); });
+    // explosão + fumaça (sem som)
+    while(gk.firstChild) gk.removeChild(gk.firstChild);
+    const tex=P.explodido?-30:P.t_explode; if(tex!==-1&&t>=tex){ const dt=t-tex; const x0=3000, y0=roadY(3000);
+      if(dt<0.9) el("circle",{cx:x0,cy:y0,r:(6+dt*60)*vs,fill:`url(#s59_fx)`,opacity:(1-dt/0.9).toFixed(3)},gk);
+      for(let j=0;j<7;j++){ const a=j*0.9, gr=Math.min(1,dt/2.5); el("circle",{cx:x0+(18+j*14)*gr*vs*0.6+Math.sin(a+t*.3)*4*vs, cy:y0-(10+j*9)*gr*vs*0.6+Math.cos(a)*6*vs, r:(5+j*2.2)*gr*vs+2, fill:j%2?"#3b3836":"#55504b", opacity:(0.55+0.05*j)*Math.min(1,dt*2)},gk); } }
+    // tiros: linha do poço ao alvo
+    while(gs.firstChild) gs.removeChild(gs.firstChild);
+    (P.tiros||[]).forEach(([ts,ti])=>{ if(t>=ts&&t<ts+1.1){ const x=lx-ti*(P.gap||42); el("path",{d:`M${pitX} ${pitY} L${x} ${roadY(x)}`,stroke:"#ff4a3a","stroke-width":3,"stroke-dasharray":"10 8",fill:"none","vector-effect":"non-scaling-stroke",opacity:(1-(t-ts)/1.1).toFixed(3)},gs);
+      el("circle",{cx:x,cy:roadY(x),r:12*vs,fill:"none",stroke:"#ff4a3a","stroke-width":3,"vector-effect":"non-scaling-stroke"},gs);} });
+    if(M.has("veic3")){ const x=lx-2*(P.gap||42); el("circle",{cx:x,cy:roadY(x),r:(16+4*Math.sin(t*5))*vs,fill:"none",stroke:"#ff4a3a","stroke-width":4,"vector-effect":"non-scaling-stroke"},gs); }
+    pit.setAttribute("transform",`translate(${pitX} ${pitY}) scale(${Math.max(1,18*mpp/9).toFixed(3)})`);
+    flank.forEach(p=>{p.setAttribute("stroke-dashoffset",(-t*40).toFixed(1));});
+    if(flX){ const k=Math.min(1,Math.max(0,(t-0.8)/0.4)); const q=(x,y)=>[(x-cx)*s+W/2,(y-cy)*s+H/2]; const a=q(2620,-330); const r=46*k;
+      flX.setAttribute("d",k>0?`M${a[0]-r} ${a[1]+60-r} L${a[0]+r} ${a[1]+60+r} M${a[0]+r} ${a[1]+60-r} L${a[0]-r} ${a[1]+60+r}`:""); }
+    L.forEach(o=>{ let wx=o.wx, wy=o.wy; if(o.e._alvo==="comboio"){ const mid=lx-((P.n||42)-1)*(P.gap||42)/2; wx=mid; wy=roadY(mid);} if(o.e._alvo==="veiculo"){ wx=lx-o.e._i*(P.gap||42); wy=roadY(wx);}
+      const sx=(wx-cx)*s+W/2, sy=(wy-cy)*s+H/2; const vis=t>=o.t0; o.e.style.opacity=vis?Math.min(1,(t-o.t0)/0.3):0;
+      o.e.style.transform=`translate(${sx.toFixed(1)}px,${(sy+o.dy).toFixed(1)}px) translate(-50%,0)`; });
+  }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"cam0": [2000, 0, 3000], "cam1": [1900, 0, 5200], "lead0": 3000, "lead1": 3000, "n": 42, "gap": 42, "t_explode": -1, "explodido": 1, "marcas": ["poco"], "atingidos": [2, 7, 12], "tiros": [], "t_parado": 0, "rotulos": [], "hora": "06:55", "rotulo": "SETOR NORTE", "seed": 23});
+
+
+(function(tl, P){ const S=17.4, D=3.0; const R=document.getElementById("s17");
+  const bar=R.querySelector(".term-bar"), sc=R.querySelector(".term-scan"); const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D; bar.style.top=(((t*260)%1020)-160).toFixed(1)+"px";
+    sc.style.opacity=(0.85+0.15*Math.sin(t*23.0)).toFixed(3); }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"intensidade": 0.22, "cor": "rgba(157,255,122,.10)"});
+
+
+(function(tl, P){ const S=24.4, D=2.6; const R=document.getElementById("s24");
+  const bar=R.querySelector(".term-bar"), sc=R.querySelector(".term-scan"); const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D; bar.style.top=(((t*260)%1020)-160).toFixed(1)+"px";
+    sc.style.opacity=(0.85+0.15*Math.sin(t*23.0)).toFixed(3); }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"intensidade": 0.22, "cor": "rgba(157,255,122,.10)"});
+
+
+(function(tl, P){ const S=32.9, D=4.0; const R=document.getElementById("s33");
+  const bar=R.querySelector(".term-bar"), sc=R.querySelector(".term-scan"); const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D; bar.style.top=(((t*260)%1020)-160).toFixed(1)+"px";
+    sc.style.opacity=(0.85+0.15*Math.sin(t*23.0)).toFixed(3); }
+  draw(); tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"intensidade": 0.22, "cor": "rgba(157,255,122,.10)"});
+
+
+(function(tl, P){ const S=0.0, D=4.8; const R=document.getElementById("s2");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "drone", "hora": "06:00", "rotulo": "SETOR NORTE", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=12.6, D=1.5; const R=document.getElementById("s11");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "drone", "hora": "06:00", "rotulo": "SETOR NORTE", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=17.4, D=3.0; const R=document.getElementById("s18");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "mira", "hora": "06:00", "rotulo": "", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=24.4, D=2.6; const R=document.getElementById("s25");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "mira", "hora": "06:00", "rotulo": "", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=32.9, D=4.0; const R=document.getElementById("s34");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "mira", "hora": "06:00", "rotulo": "", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=46.3, D=2.7; const R=document.getElementById("s46");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "drone", "hora": "06:40", "rotulo": "SETOR NORTE", "sinal": "REC", "cor": "#9dff7a"});
+
+
+(function(tl, P){ const S=52.6, D=3.9; const R=document.getElementById("s50");
+  const ns="http://www.w3.org/2000/svg";
+  const mira=P.modo==="mira";
+  R.querySelector(".hudd-drone").style.display=mira?"none":"";
+  R.querySelector(".hudd-mira").style.display=mira?"":"none";
+  if(mira){ const L=R.querySelector(".hudd-lbl"), H=R.querySelector(".hudd-hora"), C=R.querySelector(".hudd-rec");
+    [L,H,C].forEach(e=>{e.style.color="#e9ffe0";}); L.style.left="60px"; H.style.right="60px"; C.style.left="60px";
+    const g=R.querySelector(".hudd-dots"); for(let i=-4;i<=4;i++){ if(!i) continue;
+      [[640+i*36,360],[640,360+i*36]].forEach(([x,y])=>{const c=document.createElementNS(ns,"circle");c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",4.5);g.appendChild(c);});}
+  }
+  // fitas laterais (só traços, sem números)
+  ["L","R"].forEach((side,si)=>{ const g=R.querySelector(".hudd-tape"+side); const x=si?1158:96;
+    for(let i=0;i<16;i++){ const p=document.createElementNS(ns,"path"); const y=214+i*20; p.setAttribute("d",`M${x+(si?0:14)} ${y} H${x+(si?12:26)}`); g.appendChild(p);} });
+  const st={_k:0}; Object.defineProperty(st,"k",{get(){return this._k},set(v){this._k=v;draw();}});
+  function draw(){ const t=st.k*D;
+    if(!mira){
+      R.querySelector(".hudd-tapeL").setAttribute("transform",`translate(0 ${((t*7)%20).toFixed(2)})`);
+      R.querySelector(".hudd-tapeR").setAttribute("transform",`translate(0 ${(-(t*5)%20).toFixed(2)})`);
+      R.querySelector(".hudd-ladder").setAttribute("transform",`translate(0 ${(Math.sin(t*0.9)*10).toFixed(2)}) rotate(${(Math.sin(t*0.6)*1.6).toFixed(2)} 640 360)`);
+      R.querySelector(".hudd-zoom").setAttribute("width",(120+Math.sin(t*0.5)*40+t*6).toFixed(1));
+    } else {
+      const dx=Math.sin(t*0.8)*14+Math.sin(t*2.1)*4, dy=Math.cos(t*0.7)*10+Math.sin(t*1.7)*3;
+      R.querySelector(".hudd-ret").setAttribute("transform",`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);
+      R.querySelector(".hudd-hole").setAttribute("cx",(640+dx).toFixed(2)); R.querySelector(".hudd-hole").setAttribute("cy",(360+dy).toFixed(2));
+    }
+    R.querySelector(".hudd-rec").style.opacity=(Math.floor(t*2)%2)?0.35:1;
+  }
+  draw();
+  tl.fromTo(st,{k:0},{k:1,duration:D,ease:"none",immediateRender:false},S);
+})(window.__timelines.main, {"modo": "drone", "hora": "06:55", "rotulo": "SETOR NORTE", "sinal": "REC", "cor": "#9dff7a"});
+
+tl.fromTo("#t3_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.000);
+tl.to("#t3_box",{...{opacity:0},duration:0.350,ease:"power2.in"},1.350);
+tl.fromTo("#t4_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},1.750);
+tl.set("#t4_box",{opacity:0,y:50},0);
+tl.to("#t4_box",{...{opacity:0},duration:0.350,ease:"power2.in"},4.400);
+tl.fromTo("#t7_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},7.260);
+tl.set("#t7_box",{opacity:0,y:50},0);
+tl.to("#t7_box",{...{opacity:0},duration:0.350,ease:"power2.in"},9.900);
+tl.fromTo("#t8_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},8.420);
+tl.set("#t8_box",{opacity:0,y:50},0);
+tl.to("#t8_box",{...{opacity:0},duration:0.350,ease:"power2.in"},9.900);
+tl.fromTo("#t12_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},12.700);
+tl.set("#t12_box",{opacity:0,y:50},0);
+tl.to("#t12_box",{...{opacity:0},duration:0.350,ease:"power2.in"},13.700);
+tl.fromTo("#t15_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},15.560);
+tl.set("#t15_box",{opacity:0,y:50},0);
+tl.to("#t15_box",{...{opacity:0},duration:0.350,ease:"power2.in"},17.000);
+tl.fromTo("#t19_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},17.900);
+tl.set("#t19_box",{opacity:0,y:50},0);
+tl.to("#t19_box",{...{opacity:0},duration:0.350,ease:"power2.in"},20.000);
+tl.fromTo("#t22_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},22.820);
+tl.set("#t22_box",{opacity:0,y:50},0);
+tl.to("#t22_box",{...{opacity:0},duration:0.350,ease:"power2.in"},24.030);
+tl.fromTo("#t26_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},24.600);
+tl.set("#t26_box",{opacity:0,y:50},0);
+tl.to("#t26_box",{...{opacity:0},duration:0.350,ease:"power2.in"},26.600);
+tl.fromTo("#risco_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},25.100);
+tl.set("#risco_box",{opacity:0,x:80},0);
+tl.to("#risco_box",{...{opacity:0},duration:0.350,ease:"power2.in"},26.600);
+tl.fromTo("#t28_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},27.000);
+tl.set("#t28_box",{opacity:0,scale:1.18},0);
+tl.to("#t28_box",{...{opacity:0},duration:0.350,ease:"power2.in"},27.930);
+tl.fromTo("#t30_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},28.320);
+tl.set("#t30_box",{opacity:0,y:50},0);
+tl.to("#t30_box",{...{opacity:0},duration:0.350,ease:"power2.in"},30.230);
+tl.fromTo("#t35_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},32.940);
+tl.set("#t35_box",{opacity:0,y:50},0);
+tl.to("#t35_box",{...{opacity:0},duration:0.350,ease:"power2.in"},34.270);
+tl.fromTo("#t36_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},34.660);
+tl.set("#t36_box",{opacity:0,y:50},0);
+tl.to("#t36_box",{...{opacity:0},duration:0.350,ease:"power2.in"},36.500);
+tl.fromTo("#t38_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},36.920);
+tl.set("#t38_box",{opacity:0,y:50},0);
+tl.to("#t38_box",{...{opacity:0},duration:0.350,ease:"power2.in"},37.650);
+tl.fromTo("#t39_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},38.040);
+tl.set("#t39_box",{opacity:0,y:50},0);
+tl.to("#t39_box",{...{opacity:0},duration:0.350,ease:"power2.in"},38.750);
+tl.fromTo("#t40_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},39.140);
+tl.set("#t40_box",{opacity:0,y:50},0);
+tl.to("#t40_box",{...{opacity:0},duration:0.350,ease:"power2.in"},40.600);
+tl.fromTo("#t42_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},41.000);
+tl.set("#t42_box",{opacity:0,y:50},0);
+tl.to("#t42_box",{...{opacity:0},duration:0.350,ease:"power2.in"},42.000);
+tl.fromTo("#t44_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},42.380);
+tl.set("#t44_box",{opacity:0,scale:1.18},0);
+tl.to("#t44_box",{...{opacity:0},duration:0.350,ease:"power2.in"},43.550);
+tl.fromTo("#t47_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.260);
+tl.set("#t47_box",{opacity:0,scale:1.18},0);
+tl.to("#t47_box",{...{opacity:0},duration:0.350,ease:"power2.in"},48.550);
+tl.fromTo("#t51_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},52.600);
+tl.set("#t51_box",{opacity:0,scale:1.18},0);
+tl.to("#t51_box",{...{opacity:0},duration:0.350,ease:"power2.in"},54.150);
+tl.fromTo("#t52_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},54.560);
+tl.set("#t52_box",{opacity:0,y:50},0);
+tl.to("#t52_box",{...{opacity:0},duration:0.350,ease:"power2.in"},56.100);
+tl.fromTo("#t54_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},56.700);
+tl.set("#t54_box",{opacity:0,y:50},0);
+tl.to("#t54_box",{...{opacity:0},duration:0.350,ease:"power2.in"},59.050);
+tl.fromTo("#t55_box",{opacity:0,scale:.6},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"back.out(1.7)",immediateRender:false},59.500);
+tl.set("#t55_box",{opacity:0,scale:.6},0);
+tl.to("#t55_box",{...{opacity:0},duration:0.350,ease:"power2.in"},60.350);
+tl.fromTo("#t58_box",{opacity:0,scale:1.18},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},65.450);
+tl.set("#t58_box",{opacity:0,scale:1.18},0);
+tl.to("#t58_box",{...{opacity:0},duration:0.350,ease:"power2.in"},66.430);
+tl.fromTo("#t60_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},66.840);
+tl.set("#t60_box",{opacity:0,y:50},0);
+tl.to("#t60_box",{...{opacity:0},duration:0.350,ease:"power2.in"},69.000);
+})();</script>
+</body></html>

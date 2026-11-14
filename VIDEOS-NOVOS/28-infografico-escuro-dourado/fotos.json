@@ -1,0 +1,34 @@
+{
+ "great_eastern": {
+  "src": "img/great_eastern.jpg",
+  "tom": 0.7
+ },
+ "celtic": {
+  "src": "img/celtic.jpg",
+  "tom": 0.7
+ },
+ "olympic_titanic": {
+  "src": "img/olympic_titanic.jpg",
+  "tom": 0.7
+ },
+ "imperator": {
+  "src": "img/imperator.jpg",
+  "tom": 0.7
+ },
+ "vaterland": {
+  "src": "img/vaterland.jpg",
+  "tom": 0.7
+ },
+ "queen_elizabeth": {
+  "src": "img/queen_elizabeth.jpg",
+  "tom": 0.7
+ },
+ "seawise": {
+  "src": "img/seawise.jpg",
+  "tom": 0.5
+ },
+ "icon": {
+  "src": "img/icon.jpg",
+  "tom": 0.25
+ }
+}

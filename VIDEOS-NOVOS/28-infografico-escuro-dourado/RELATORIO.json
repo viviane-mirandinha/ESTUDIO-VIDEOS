@@ -1,0 +1,13 @@
+{
+  "video": 28,
+  "estilo": "28-infografico-escuro-dourado (KNOT & RAIL - Every Ship That Was the Biggest in the World)",
+  "inicio": "2026-10-22T15:29:00-03:00",
+  "fim": "2026-10-22T16:01:00-03:00",
+  "minutos": 32.0,
+  "render_segundos": 47,
+  "observacoes": "Template generic + 4 cenas novas reutilizaveis em EDITOR VIDEOS/templates/scenes: kr_foto (foto historica sepia, Ken Burns, moldura fina dourada, tag mono, titulo dourado + medida), kr_lineup (silhuetas SVG proprias geradas por tipo liner/tanker/cruise/crane em escala unica 2,25 px/m; recordista novo dourado cresce a partir do anterior, anterior em contorno azul; numero gigante com contagem via setter defineProperty), kr_card (tese '40 ANOS'), kr_registro (barras de todos os recordistas + CTA). 8 fotos Wikimedia Commons (creditos em img/creditos.json); Seawise Giant so existe em 500px (upscale). Celtic: cartao-postal recortado para tirar '21,026 tons' impresso (medida nao falada). whisper large-v3 GPU. Musica = pad reaproveitado do 12, volume 0.10 com duck. Sem SFX, sem legenda. 2 renders (54 s + 47 s); 2o deixou o recordista anterior so em contorno (o dourado do novo estava sumindo sob o azul) e recortou o Celtic. Sem tela preta (blackdetect 0).",
+  "estimativa_30min": {
+    "horas_maquina": 1.0,
+    "o_que_escala": "Molde 'preencher dados': lista {nome, ano, medida, tipo de silhueta, foto Commons} -> edit.json com kr_foto/kr_lineup alternados; render ~0,7 s por segundo de video (~25 min para 30 min). Gargalo = Wikimedia 429 e fotos pequenas/ausentes para navios modernos; silhuetas sao genericas por tipo (nao tracadas do navio real)."
+  }
+}

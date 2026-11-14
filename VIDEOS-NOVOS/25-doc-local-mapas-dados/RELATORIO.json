@@ -1,0 +1,13 @@
+{
+ "video": 25,
+ "estilo": "25-doc-local-mapas-dados",
+ "inicio": "2026-10-22T15:14:20-03:00",
+ "fim": "2026-10-22T15:39:36-03:00",
+ "minutos": 25.3,
+ "render_segundos": 55,
+ "observacoes": "Template local: mapa SVG dos 645 municípios de SP (malha IBGE, simplificada com shapely) com câmera GSAP que voa até cada cidade citada (pinta de vermelho + etiqueta + número), cards de dado pretos (barra 1,8% com contagem, comparação 2-3x), capítulo azul-marinho, setas capital→interior, CTA com mapa do Brasil. Fotos Wikimedia Commons (1,5 s entre requisições; vários 429). Whisper GPU. Sem SFX; música baixa com duck. 1º render 123 s, re-render 55 s (fix: rótulos dos estados vizinhos somem no zoom).",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Mapa/câmera/cards são reaproveitáveis (só trocar GeoJSON/cidades/números no edit.json); gargalo = buscar fotos certas por cidade no Commons (rate limit) e conferir dados da fala; render ~1 min por minuto de vídeo."
+ }
+}

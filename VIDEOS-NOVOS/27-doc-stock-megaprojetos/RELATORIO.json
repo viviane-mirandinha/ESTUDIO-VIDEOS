@@ -1,0 +1,13 @@
+{
+ "video": 27,
+ "estilo": "27-doc-stock-megaprojetos",
+ "inicio": "2026-10-22T15:24:06-03:00",
+ "fim": "2026-10-22T15:35:36-03:00",
+ "minutos": 11.5,
+ "render_segundos": 114,
+ "observacoes": "21 planos em 57,6 s. Mídia: 9 clipes Pixabay (clips/creditos.json), 7 fotos Wikimedia (img/creditos.json: arte conceitual JetZero e X-48B/X-48C em domínio público; Alaska 737 MAX CC BY-SA 4.0; Delta 737-900ER CC BY 4.0; C-17 PD) e 3 imagens Flux local (cabine sem janelas com telas, assentos, estrutura em hangar; a 4a, 'asa voadora', saiu como avião tubo e foi descartada). Cenas novas em EDITOR VIDEOS/templates/scenes: rotulo-dado (caixa amarela/azul com slide-in) e spec-cards (cards pretos com filete amarelo); reaproveitada eco_manchete. Whisper medium GPU ok. 1 render, sem tela preta. Sem SFX de impacto, 3 whooshes suaves, música 8% com ducking. Pixabay key não estava em env; usada a dos scripts do 10/11.",
+ "estimativa_30min": {
+  "horas_maquina": 2.0,
+  "o_que_escala": "Estilo preencher-dados: edit.json = lista (mídia, rótulo, card) por frase. 30 min ≈ 450 planos: curadoria stock/Wikimedia (~1 h, aviação tem bastante material livre; renders de fabricante variam de licença), Flux local ~10-15 s/imagem, render draft ~25-35 min."
+ }
+}

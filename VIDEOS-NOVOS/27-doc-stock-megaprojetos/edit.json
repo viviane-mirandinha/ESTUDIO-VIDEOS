@@ -1,0 +1,1025 @@
+{
+ "version": 1,
+ "name": "27 - DOC STOCK MEGAPROJETOS - O avião sem janelas que está assustando a Boeing",
+ "estilo": "27-doc-stock-megaprojetos",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0d12"
+ },
+ "duration": 57.6,
+ "template": "generic",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "Innovation Core",
+  "canal_url": "https://www.youtube.com/channel/UC1cYR-ev0etAbjWoOkbUeQA",
+  "video": "https://youtu.be/H9LincTauEU",
+  "titulo": "America’s New Windowless Plane Is Shaking The Entire Aviation Industry",
+  "nota": "Estilo 27 (Flightside Insider/SIGNUM/Innovation Core/Polarisyn): stock Pixabay + fotos Wikimedia (JetZero/X-48 domínio público) + Flux local para cabine sem janelas; rótulo amarelo/azul, cards brancos, spec-cards, manchete."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.08,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 5.45,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 33.55,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 53.85,
+    "volume": 0.1,
+    "label": "whoosh suave"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Stock / fotos"
+  },
+  {
+   "id": "vinheta",
+   "name": "Vinheta"
+  },
+  {
+   "id": "manchete",
+   "name": "Manchete"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos / spec"
+  },
+  {
+   "id": "textos",
+   "name": "Cards de texto"
+  }
+ ],
+ "items": [
+  {
+   "id": "i1",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/b737.jpg",
+   "start": 0,
+   "dur": 2.3,
+   "props": {
+    "src": "img/b737.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s2",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo HÁ DÉCADAS",
+   "start": 1.5,
+   "dur": 0.8,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "HÁ DÉCADAS",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "v3",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/window.mp4",
+   "start": 2.3,
+   "dur": 1.4,
+   "props": {
+    "src": "clips/window.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "SEM JANELAS",
+   "start": 2.7,
+   "dur": 0.98,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SEM JANELAS",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "v5",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/airport2.mp4",
+   "start": 3.7,
+   "dur": 1.8,
+   "props": {
+    "src": "clips/airport2.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 4,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "s6",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo MONOPÓLIO",
+   "start": 4.6,
+   "dur": 0.9,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "MONOPÓLIO",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "i7",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/jz.jpg",
+   "start": 5.5,
+   "dur": 2.8,
+   "props": {
+    "src": "img/jz.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t8",
+   "type": "text",
+   "track": "textos",
+   "label": "JETZERO",
+   "start": 6.7,
+   "dur": 1.58,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "JETZERO",
+    "x": 640,
+    "y": 300,
+    "w": 1100,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s9",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo ASA VOADORA",
+   "start": 7.6,
+   "dur": 0.7,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "ASA VOADORA",
+     "cor": "azul",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "v10",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/engine.mp4",
+   "start": 8.3,
+   "dur": 3.3,
+   "props": {
+    "src": "clips/engine.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo COMBUSTÍVEL PELA METADE",
+   "start": 10.1,
+   "dur": 1.5,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "COMBUSTÍVEL PELA METADE",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "i12",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/x48sky.jpg",
+   "start": 11.6,
+   "dur": 2.3,
+   "props": {
+    "src": "img/x48sky.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "spec ASA / + FUSELAGEM",
+   "start": 11.6,
+   "dur": 2.3,
+   "props": {
+    "scene": "spec-cards",
+    "params": {
+     "itens": "ASA|+ FUSELAGEM",
+     "tempos": "0.95|1.3",
+     "x": 70,
+     "y": 150,
+     "size": 36
+    }
+   }
+  },
+  {
+   "id": "i14",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/x48f.jpg",
+   "start": 13.9,
+   "dur": 2.4,
+   "props": {
+    "src": "img/x48f.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo SUSTENTAÇÃO",
+   "start": 15.1,
+   "dur": 1.2,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "SUSTENTAÇÃO",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "v16",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/airport.mp4",
+   "start": 16.3,
+   "dur": 2.5,
+   "props": {
+    "src": "clips/airport.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo ARRASTO DO TUBO TRADICIONAL",
+   "start": 16.9,
+   "dur": 1.9,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "ARRASTO DO TUBO TRADICIONAL",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "i18",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_cabine_telas.jpg",
+   "start": 18.8,
+   "dur": 4.1,
+   "props": {
+    "src": "img/f_cabine_telas.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "s19",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "spec SEM JANELAS LATERAIS / TELAS / EXTERIOR EM TEMPO REAL",
+   "start": 18.8,
+   "dur": 4.1,
+   "props": {
+    "scene": "spec-cards",
+    "params": {
+     "itens": "SEM JANELAS LATERAIS|TELAS|EXTERIOR EM TEMPO REAL",
+     "tempos": "0.4|1.9|3.0",
+     "x": 70,
+     "y": 150,
+     "size": 36
+    }
+   }
+  },
+  {
+   "id": "i20",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/x48c.jpg",
+   "start": 22.9,
+   "dur": 3.1,
+   "props": {
+    "src": "img/x48c.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t21",
+   "type": "text",
+   "track": "textos",
+   "label": "IDEIAS ESTUDADAS",
+   "start": 23.9,
+   "dur": 2.08,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "IDEIAS ESTUDADAS",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i22",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_estrutura.jpg",
+   "start": 26.0,
+   "dur": 2.2,
+   "props": {
+    "src": "img/f_estrutura.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s23",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "spec MAIS LEVE / MAIS FORTE",
+   "start": 26.0,
+   "dur": 2.2,
+   "props": {
+    "scene": "spec-cards",
+    "params": {
+     "itens": "MAIS LEVE|MAIS FORTE",
+     "tempos": "1.3|1.85",
+     "x": 70,
+     "y": 150,
+     "size": 36
+    }
+   }
+  },
+  {
+   "id": "i24",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/delta.jpg",
+   "start": 28.2,
+   "dur": 2.7,
+   "props": {
+    "src": "img/delta.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "s25",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo DELTA",
+   "start": 28.7,
+   "dur": 2.2,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "DELTA",
+     "cor": "azul",
+     "pos": "esq",
+     "y": 545,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "s26",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo PARCERIA ESTRATÉGICA",
+   "start": 29.6,
+   "dur": 1.3,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "PARCERIA ESTRATÉGICA",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "v27",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/flight.mp4",
+   "start": 30.9,
+   "dur": 2.7,
+   "props": {
+    "src": "clips/flight.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "s28",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo FORÇA AÉREA DOS EUA",
+   "start": 31.1,
+   "dur": 2.5,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "FORÇA AÉREA DOS EUA",
+     "cor": "azul",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "i29",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/jz.jpg",
+   "start": 33.6,
+   "dur": 3.0,
+   "props": {
+    "src": "img/jz.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "s30",
+   "type": "scene",
+   "track": "manchete",
+   "label": "manchete 235 milhões",
+   "start": 33.6,
+   "dur": 3.0,
+   "props": {
+    "scene": "eco_manchete",
+    "params": {
+     "veiculo": "O DIÁRIO",
+     "secao": "AVIAÇÃO",
+     "titulo": "Força Aérea dos EUA investe 235 milhões de dólares no protótipo",
+     "destaque": "235 milhões de dólares",
+     "t_destaque": 34.1,
+     "rot": -2
+    }
+   }
+  },
+  {
+   "id": "v31",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/takeoff.mp4",
+   "start": 36.6,
+   "dur": 3.7,
+   "props": {
+    "src": "clips/takeoff.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "t32",
+   "type": "text",
+   "track": "textos",
+   "label": "PRIMEIRO VOO DE TESTE",
+   "start": 36.9,
+   "dur": 3.38,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PRIMEIRO VOO DE TESTE",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s33",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo 2027",
+   "start": 38.9,
+   "dur": 1.4,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "2027",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 60
+    }
+   }
+  },
+  {
+   "id": "v34",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/wing.mp4",
+   "start": 40.3,
+   "dur": 3.1,
+   "props": {
+    "src": "clips/wing.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t35",
+   "type": "text",
+   "track": "textos",
+   "label": "ENTRADA EM SERVIÇO",
+   "start": 40.6,
+   "dur": 2.78,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ENTRADA EM SERVIÇO",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s36",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo 2030",
+   "start": 42.3,
+   "dur": 1.1,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "2030",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 60
+    }
+   }
+  },
+  {
+   "id": "i37",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_assentos.jpg",
+   "start": 43.4,
+   "dur": 3.2,
+   "props": {
+    "src": "img/f_assentos.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t38",
+   "type": "text",
+   "track": "textos",
+   "label": "SE CERTIFICAREM",
+   "start": 43.6,
+   "dur": 1.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SE CERTIFICAREM",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s39",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo CUSTO POR ASSENTO CAI",
+   "start": 44.8,
+   "dur": 1.8,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "CUSTO POR ASSENTO CAI",
+     "cor": "amarelo",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "i40",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/b737.jpg",
+   "start": 46.6,
+   "dur": 3.5,
+   "props": {
+    "src": "img/b737.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t41",
+   "type": "text",
+   "track": "textos",
+   "label": "A BOEING PERDE A REFERÊNCIA",
+   "start": 47.1,
+   "dur": 2.98,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A BOEING PERDE A REFERÊNCIA",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 58,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s42",
+   "type": "scene",
+   "track": "rotulos",
+   "label": "rótulo BOEING 737",
+   "start": 48.4,
+   "dur": 1.7,
+   "props": {
+    "scene": "rotulo-dado",
+    "params": {
+     "texto": "BOEING 737",
+     "cor": "azul",
+     "pos": "esq",
+     "y": 620,
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "v43",
+   "type": "video",
+   "track": "fundo",
+   "label": "clips/sky.mp4",
+   "start": 50.1,
+   "dur": 1.7,
+   "props": {
+    "src": "clips/sky.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t44",
+   "type": "text",
+   "track": "textos",
+   "label": "O CÉU MUDA DE DONO",
+   "start": 50.3,
+   "dur": 1.48,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "O CÉU MUDA DE DONO",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i45",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/jz.jpg",
+   "start": 51.8,
+   "dur": 2.1,
+   "props": {
+    "src": "img/jz.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "cta",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA inscreva-se",
+   "start": 51.85,
+   "dur": 2.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 640,
+    "y": 600,
+    "w": 520,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "#c8281e",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i46",
+   "type": "image",
+   "track": "fundo",
+   "label": "img/f_cabine_telas.jpg",
+   "start": 53.9,
+   "dur": 3.7,
+   "props": {
+    "src": "img/f_cabine_telas.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t47",
+   "type": "text",
+   "track": "textos",
+   "label": "O FUTURO DA AVIAÇÃO",
+   "start": 54.1,
+   "dur": 3.45,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "O FUTURO DA AVIAÇÃO",
+    "x": 640,
+    "y": 290,
+    "w": 1100,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t48",
+   "type": "text",
+   "track": "textos",
+   "label": "NÃO TEM JANELAS, TEM TELAS",
+   "start": 55.4,
+   "dur": 2.15,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "NÃO TEM JANELAS, TEM TELAS",
+    "x": 640,
+    "y": 390,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffd400",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.4)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "vinheta",
+   "label": "vinheta leve",
+   "start": 0,
+   "dur": 57.6,
+   "props": {
+    "html": "<div class='vn'></div>",
+    "css": ".vn{width:100%;height:100%;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.42) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "w_sperm1.jpg": {
+  "fonte": "https://commons.wikimedia.org/wiki/File:Mother_and_baby_sperm_whale.jpg",
+  "licenca": "CC BY-SA 2.0",
+  "autor": "Gabriel Barathieu"
+ },
+ "w_sperm2.jpg": {
+  "fonte": "https://commons.wikimedia.org/wiki/File:Sperm_whale_mother_with_calf.jpg",
+  "licenca": "CC BY-SA 2.0",
+  "autor": "Gabriel Barathieu / Réunion Underwater Photography"
+ },
+ "p_bird.jpg": {
+  "fonte": "https://pixabay.com/photos/bird-zebra-finch-finch-7799648/",
+  "licenca": "Pixabay Content License"
+ },
+ "p_bird2.jpg": {
+  "fonte": "https://pixabay.com/photos/zebra-finch-bird-animal-wildlife-4287459/",
+  "licenca": "Pixabay Content License"
+ },
+ "p_bat.jpg": {
+  "fonte": "https://pixabay.com/photos/animals-bat-flying-dog-1081294/",
+  "licenca": "Pixabay Content License"
+ },
+ "p_chimp.jpg": {
+  "fonte": "https://pixabay.com/photos/monkey-animal-mammal-primate-3703230/",
+  "licenca": "Pixabay Content License"
+ },
+ "clips/oceano.mp4": {
+  "fonte": "https://pixabay.com/videos/id-185135/",
+  "licenca": "Pixabay Content License"
+ },
+ "clips/fazenda.mp4": {
+  "fonte": "https://pixabay.com/videos/id-186195/",
+  "licenca": "Pixabay Content License"
+ },
+ "clips/elefantes.mp4": {
+  "fonte": "https://pixabay.com/videos/id-336177/",
+  "licenca": "Pixabay Content License"
+ },
+ "clips/mergulho.mp4": {
+  "fonte": "https://pixabay.com/videos/id-345497/",
+  "licenca": "Pixabay Content License"
+ },
+ "clips/baleia_azul.mp4": {
+  "fonte": "https://pixabay.com/videos/id-117702/",
+  "licenca": "Pixabay Content License"
+ }
+}

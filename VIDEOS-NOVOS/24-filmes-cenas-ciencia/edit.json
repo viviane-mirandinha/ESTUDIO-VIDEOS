@@ -1,0 +1,792 @@
+{
+ "version": 1,
+ "name": "24 - FILMES BASTIDORES - Quando o diretor contratou um sargento de verdade",
+ "estilo": "24-filmes-cenas-ciencia",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 64.66,
+ "template": "generic",
+ "fonts": {
+  "Barlow": "fonts/BarlowCondensed-Bold.ttf",
+  "Outfit": "fonts/Outfit.ttf"
+ },
+ "referencia": {
+  "canal": "Director's Cut.",
+  "canal_url": "https://www.youtube.com/channel/UC0UMbbooWjYX6twoYAIC5OA",
+  "video": "https://youtu.be/gLtO6ZfKt3c",
+  "titulo": "When the Director Hires a REAL Drill Instructor",
+  "nota": "Stills em tela cheia com Ken Burns, card 'Capítulo N:' em sans condensada branca, rótulo de personagem centrado embaixo, fotos P&B de bastidor; frames do trailer só como still ≤2 s emoldurado."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.12,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Stills"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Kubrick 1949",
+   "start": 0.0,
+   "dur": 3.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/kub_1949.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "",
+     "nome": "Stanley Kubrick",
+     "sub": "o diretor",
+     "credito": "Domínio público",
+     "fade_in": 0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Vietnã 1968 (guerra de verdade)",
+   "start": 3.1,
+   "dur": 2.35,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/vn_patrol.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "",
+     "nome": "",
+     "sub": "",
+     "credito": "USMC Archives · CC BY 2.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Set escuro + 1985",
+   "start": 5.1,
+   "dur": 2.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_bastidores.jpg",
+     "motion": "zoom_in",
+     "amount": 0.06,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "1985",
+     "nome": "",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ermey retrato",
+   "start": 7.2,
+   "dur": 3.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/erm_618.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "R. Lee Ermey",
+     "sub": "ex-fuzileiro naval",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Vietnã 14 meses",
+   "start": 10.3,
+   "dur": 2.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/vn_mount.jpg",
+     "motion": "pan_left",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "14 meses de Vietnã",
+     "nome": "",
+     "sub": "",
+     "credito": "USMC Archives · CC BY 2.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Capacete do filme (expo)",
+   "start": 12.4,
+   "dur": 3.05,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/fmj_helm.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "Consultor técnico",
+     "nome": "",
+     "sub": "",
+     "credito": "Eric Steuer · CC BY 2.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: marcha",
+   "start": 15.1,
+   "dur": 1.91,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_12.jpg",
+     "motion": "zoom_in",
+     "amount": 0.04,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "Nascido para Matar",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Set ensaio (IA)",
+   "start": 16.66,
+   "dur": 3.55,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_set.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "Os ensaios",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: recrutas",
+   "start": 19.86,
+   "dur": 2.09,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_20.jpg",
+     "motion": "zoom_in",
+     "amount": 0.04,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "Os recrutas",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Recrutas (IA)",
+   "start": 21.6,
+   "dur": 1.81,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_recrutas.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "com educação",
+     "nome": "",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ermey falando às tropas",
+   "start": 23.06,
+   "dur": 1.49,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/erm_085.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "Ermey explodiu",
+     "sub": "",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: Hartman grita",
+   "start": 24.2,
+   "dur": 2.31,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_90.jpg",
+     "motion": "zoom_in",
+     "amount": 0.05,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "“Ninguém fala assim com um recruta!”",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Kubrick calado",
+   "start": 26.16,
+   "dur": 2.39,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/kub_a.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 40%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "",
+     "nome": "",
+     "sub": "",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ermey uniforme",
+   "start": 28.2,
+   "dur": 4.05,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/erm_uni.jpg",
+     "motion": "zoom_in",
+     "amount": 0.06,
+     "pos": "50% 30%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "R. Lee Ermey",
+     "sub": "o sargento",
+     "credito": "Zachary B · CC BY-SA 3.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Helicóptero do filme (expo)",
+   "start": 31.9,
+   "dur": 3.39,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/fmj_heli.jpg",
+     "motion": "pan_left",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "O atirador do helicóptero",
+     "sub": "",
+     "credito": "Matthew J. Cotter · CC BY-SA 2.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s16",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Roteiro (IA)",
+   "start": 34.94,
+   "dur": 1.99,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_roteiro.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "Não decorou falas",
+     "nome": "",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: ordens",
+   "start": 36.58,
+   "dur": 2.17,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_30.jpg",
+     "motion": "zoom_in",
+     "amount": 0.04,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "Ordens reais",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s18",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: extras",
+   "start": 38.4,
+   "dur": 2.15,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_46.jpg",
+     "motion": "zoom_in",
+     "amount": 0.04,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "Extras de verdade",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s19",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Trailer: insultos",
+   "start": 40.2,
+   "dur": 2.35,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/tr_88.jpg",
+     "motion": "zoom_in",
+     "amount": 0.04,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "",
+     "nome": "Insultos improvisados",
+     "sub": "",
+     "credito": "Trailer oficial · Warner Bros.",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s20",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Kubrick no set",
+   "start": 42.2,
+   "dur": 2.75,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/kub_spart.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "",
+     "nome": "",
+     "sub": "",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s21",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Claquete (IA)",
+   "start": 44.6,
+   "dur": 2.51,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_claquete.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s22",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Kubrick close",
+   "start": 46.76,
+   "dur": 2.79,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/kub_trailer.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "bw": 1,
+     "moldura": 0,
+     "centro": "",
+     "nome": "O próprio diretor",
+     "sub": "",
+     "credito": "Trailer Dr. Strangelove · domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s23",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ermey ódio?",
+   "start": 49.2,
+   "dur": 3.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/erm_618.jpg",
+     "motion": "zoom_out",
+     "amount": 0.1,
+     "pos": "50% 35%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "Ódio ou atuação?",
+     "nome": "",
+     "sub": "",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s24",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Elenco bastidores (IA)",
+   "start": 52.3,
+   "dur": 3.15,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_elenco.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "O elenco",
+     "sub": "nos bastidores",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s25",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Expo FMJ + inscreva-se",
+   "start": 55.1,
+   "dur": 3.45,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/fmj_tiff.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 1,
+     "centro": "Inscreva-se",
+     "nome": "",
+     "sub": "para mais bastidores que Hollywood esconde",
+     "credito": "Carlos Pacheco · CC BY 2.0",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s26",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Ermey com fuzileiros",
+   "start": 58.2,
+   "dur": 3.15,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/erm_dm.jpg",
+     "motion": "zoom_in",
+     "amount": 0.07,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "",
+     "nome": "R. Lee Ermey",
+     "sub": "",
+     "credito": "Domínio público",
+     "fade_in": 0.3,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s27",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Fecho",
+   "start": 61.0,
+   "dur": 3.66,
+   "props": {
+    "scene": "dc_still",
+    "params": {
+     "src": "img/f_bastidores.jpg",
+     "motion": "zoom_out",
+     "amount": 0.06,
+     "pos": "50% 50%",
+     "bw": 0,
+     "moldura": 0,
+     "centro": "O sargento que dirigiu a si mesmo",
+     "nome": "",
+     "sub": "",
+     "credito": "Ilustração IA",
+     "fade_in": 0.3,
+     "fade_out": 1.2
+    }
+   }
+  },
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo 1: O consultor",
+   "start": 5.2,
+   "dur": 1.95,
+   "props": {
+    "scene": "dc_capitulo",
+    "params": {
+     "n": "1",
+     "titulo": "O consultor",
+     "topo": 1
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo 2: O papel",
+   "start": 28.25,
+   "dur": 1.65,
+   "props": {
+    "scene": "dc_capitulo",
+    "params": {
+     "n": "2",
+     "titulo": "O papel",
+     "topo": 0
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo 3: Os bastidores",
+   "start": 49.25,
+   "dur": 1.65,
+   "props": {
+    "scene": "dc_capitulo",
+    "params": {
+     "n": "3",
+     "titulo": "Os bastidores",
+     "topo": 1
+    }
+   }
+  },
+  {
+   "id": "t1",
+   "type": "scene",
+   "track": "textos",
+   "label": "Takes: dezenas -> poucas",
+   "start": 43.3,
+   "dur": 3.4,
+   "props": {
+    "scene": "dc_troca",
+    "params": {
+     "de": "dezenas de takes",
+     "para": "poucas tomadas",
+     "t_risca": 1.3,
+     "t_para": 2.0
+    }
+   }
+  }
+ ]
+}

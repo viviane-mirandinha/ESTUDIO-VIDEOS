@@ -1,0 +1,13 @@
+{
+ "video": 26,
+ "estilo": "26-japones-reality-ia",
+ "inicio": "2026-10-22T15:17:47-03:00",
+ "fim": "2026-10-22T15:38:37-03:00",
+ "minutos": 20.8,
+ "render_segundos": 38,
+ "observacoes": "Família fictícia consistente (Mãe/Pai/Filho) com Flux Kontext local: 3 mestras t2i + 20 cenas Kontext (casal/trio com mestras costuradas), ~21 s/imagem na 4090. Timing por fala via ffprobe dos 20 tts + 0,25 s (bate com silencedetect). Legenda TV html (Nunito 900 60px branco/contorno preto, palavra-chave amarela, etiqueta colorida por personagem), apresentação vertical a.k.a. na 1ª aparição, selo do programa, card de episódio e próximo episódio. Kontext não esvazia tigela de pipoca: cena 'Acabou ontem' recortada no rosto do Pai. Sem SFX, sem música. 2 renders (1 correção: nome vertical cortado + selo quebrando linha).",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "imagens Kontext (~1 por fala, ~300-400 imagens em 30 min de diálogo = ~2 h de 4090) e o render; legenda/edição sai automática do roteiro 'Personagem: fala' + durações dos TTS"
+ }
+}

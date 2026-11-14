@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#bcd7e0;}
+#root{position:absolute;left:0;top:0;width:1280px;height:720px;overflow:hidden;background:#bcd7e0;font-family:Inter,Arial,sans-serif;color:#fff;}
+svg{position:absolute;left:0;top:0;width:1280px;height:720px;}
+#sv .nb{fill:#e3ddcf;stroke:#a89f8c;stroke-width:1.2px;vector-effect:non-scaling-stroke;}
+#sv .mu{fill:#f4efe4;stroke:#bfb39c;stroke-width:.6px;vector-effect:non-scaling-stroke;}
+#sv .spo{fill:none;stroke:#2d2f36;stroke-width:2.4px;vector-effect:non-scaling-stroke;}
+#sv .nbl{font:700 24px Inter,Arial;fill:#7d7566;letter-spacing:3px;text-anchor:middle;}
+#sv .oc{font:italic 700 24px Inter,Arial;fill:#6f97a6;letter-spacing:4px;text-anchor:middle;}
+#sv .ar{stroke:#d7263d;stroke-width:4px;vector-effect:non-scaling-stroke;stroke-linecap:round;}
+#sv .dot{fill:#d7263d;stroke:#fff;stroke-width:2px;vector-effect:non-scaling-stroke;}
+#vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 60%,rgba(20,30,40,.35) 100%);}
+.lab{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;font-weight:800;font-size:30px;letter-spacing:1px;line-height:1;padding:9px 14px 10px;background:#111318;border-left:6px solid #d7263d;opacity:0;visibility:hidden;}
+.lab:after{content:"";position:absolute;left:50%;bottom:-10px;margin-left:-9px;border:9px solid transparent;border-top:10px solid #111318;border-bottom:0;}
+.num{position:absolute;left:48px;bottom:44px;background:rgba(17,19,24,.92);padding:14px 22px 16px;border-top:5px solid #f2b632;opacity:0;visibility:hidden;}
+.num .a{font-weight:800;font-size:84px;line-height:.95;color:#f2b632;}
+.num .b{font-weight:700;font-size:28px;letter-spacing:2px;margin-top:8px;}
+.dc{position:absolute;inset:0;background:#14161b;opacity:0;visibility:hidden;
+ background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px;}
+.dc .dt{position:absolute;left:0;right:0;top:64px;text-align:center;font-weight:800;font-size:50px;letter-spacing:1px;}
+.dc .df{position:absolute;left:0;right:0;bottom:36px;text-align:center;font-size:24px;color:#8b8f98;letter-spacing:2px;}
+#dc1 .bar{position:absolute;left:400px;top:190px;width:110px;height:360px;border:5px solid #fff;box-sizing:border-box;border-radius:6px;overflow:hidden;}
+#dc1 .fill{position:absolute;left:0;right:0;bottom:0;height:0;background:#f2b632;}
+#dc1 .dv{position:absolute;left:580px;top:270px;font-weight:800;font-size:150px;line-height:1;}
+#dc1 .ds{position:absolute;left:584px;top:450px;font-weight:700;font-size:34px;color:#f2b632;letter-spacing:1px;}
+#dc2 .rw{position:absolute;left:150px;width:1000px;}
+#dc2 .rl{font-weight:800;font-size:32px;letter-spacing:1px;margin-bottom:12px;}
+#dc2 .bx{position:relative;height:64px;}
+#dc2 .b1{position:absolute;left:0;top:0;height:64px;width:0;background:#9aa0aa;border-radius:4px;}
+#dc2 .b2{position:absolute;left:0;top:0;height:64px;width:0;background:#f2b632;border-radius:4px;}
+#dc2 .b3{position:absolute;top:0;height:64px;width:0;border-radius:0 4px 4px 0;background:repeating-linear-gradient(45deg,rgba(242,182,50,.55) 0 12px,rgba(242,182,50,.25) 12px 24px);}
+#dc2 .tk{position:absolute;top:76px;font-size:26px;font-weight:700;color:#c9ccd2;transform:translateX(-50%);}
+#dc2 .dv{position:absolute;left:0;right:0;top:520px;text-align:center;font-weight:800;font-size:60px;color:#f2b632;}
+#cap{position:absolute;inset:0;background:#13284a;opacity:0;visibility:hidden;}
+#cap .k{position:absolute;left:120px;top:250px;font-weight:700;font-size:32px;letter-spacing:8px;color:#f2b632;}
+#cap .ln{position:absolute;left:120px;top:300px;height:6px;width:0;background:#f2b632;}
+#cap .t{position:absolute;left:120px;top:330px;font-weight:800;font-size:76px;letter-spacing:1px;}
+#pib{position:absolute;right:48px;top:150px;width:430px;background:rgba(17,19,24,.93);padding:26px 30px 30px;border-top:5px solid #f2b632;opacity:0;visibility:hidden;box-sizing:border-box;}
+#pib .a{font-weight:800;font-size:80px;line-height:1;color:#f2b632;}
+#pib .b{font-weight:700;font-size:30px;line-height:1.2;margin-top:10px;}
+#pib .sb{margin-top:22px;height:40px;background:#4a4e57;border-radius:4px;overflow:hidden;position:relative;}
+#pib .sb i{position:absolute;left:0;top:0;bottom:0;width:0;background:#f2b632;}
+#pib .sl{margin-top:8px;font-size:24px;font-weight:700;color:#c9ccd2;}
+#brw{position:absolute;inset:0;background:#13284a;opacity:0;visibility:hidden;}
+#br path{fill:#2a4370;stroke:#6b86b3;stroke-width:1px;}
+#br path.on{fill:#f2b632;stroke:#fff;}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<div id="mapw" style="visibility:hidden">
+<svg id="sv" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"><g id="cam"><g id="gnb"></g><g id="gmu"></g><path id="spo" class="spo"/><g id="gtx"></g><g id="gar"></g><g id="gdot"></g></g></svg>
+<div id="vig"></div>
+<div id="labs"></div>
+<div id="nums"></div>
+<div id="pib"><div class="a"></div><div class="b"></div><div class="sb"><i></i></div><div class="sl"></div></div>
+</div>
+<div id="dc1" class="dc"><div class="dt"></div><div class="bar"><div class="fill"></div></div><div class="dv"></div><div class="ds"></div><div class="df"></div></div>
+<div id="dc2" class="dc"><div class="dt"></div>
+ <div class="rw" style="top:190px"><div class="rl r1"></div><div class="bx"><div class="b1"></div></div></div>
+ <div class="rw" style="top:340px"><div class="rl r2"></div><div class="bx"><div class="b2"></div><div class="b3"></div><div class="tk t1"></div><div class="tk t2"></div><div class="tk t3"></div></div></div>
+ <div class="dv"></div></div>
+<div id="cap"><div class="k"></div><div class="ln"></div><div class="t"></div></div>
+<div id="brw"><svg id="br" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<!--__ITEMS__-->
+</div>
+<script>
+const EDIT=__EDIT__;
+const MAP=__MAP__;
+const ED=Object.fromEntries(EDIT.items.map(i=>[i.id,i]));
+const its=EDIT.items.filter(i=>i.by==="template"&&!i.hidden);
+const NS="http://www.w3.org/2000/svg";
+const tl=gsap.timeline({paused:true});
+function mk(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);parent.appendChild(e);return e;}
+const G=id=>document.getElementById(id);
+// mapa base
+MAP.nb.forEach(n=>{mk("path",{d:n[1],class:"nb"},G("gnb")); if(n[2]){const t=mk("text",{x:n[3],y:n[4],class:"nbl"},G("gtx"));t.textContent=n[2];}});
+const oc=mk("text",{x:MAP.oc[0],y:MAP.oc[1],class:"oc"},G("gtx"));oc.textContent=(ED.mapa&&ED.mapa.props.params.oceano)||"OCEANO ATLÂNTICO";
+const MU={};MAP.mun.forEach((m,i)=>{MU[m[0]]=mk("path",{d:m[1],class:"mu",id:"m"+m[0]},G("gmu"));});
+G("spo").setAttribute("d",MAP.sp);
+const NOMES={"são paulo":"3550308","capital":"3550308","campinas":"3509502","guarulhos":"3518800","sorocaba":"3552205","ribeirão preto":"3543402","são josé dos campos":"3549904"};
+const code=n=>NOMES[(n||"").toLowerCase()]||n;
+const VIS=(el,a,b,f)=>{f=f||.35;tl.set(el,{visibility:"visible"},a);tl.fromTo(el,{opacity:0},{opacity:1,duration:f},a);if(b!=null){tl.to(el,{opacity:0,duration:f},b-f);tl.set(el,{visibility:"hidden"},b);}};
+tl.set("#cam",{x:0,y:0,scale:1,svgOrigin:"0 0"},0);
+
+const RED="#d7263d";
+its.forEach(it=>{
+ const p=it.props||{},P=p.params||{},S=it.start,E=it.start+it.dur;
+ const sc=p.scene;
+ if(sc==="mapa"){tl.set("#mapw",{visibility:"visible"},S);tl.set("#mapw",{visibility:"hidden"},E);}
+ else if(sc==="camera"){
+  let cx,cy,s=+P.zoom||1,fx=+P.foco_x||640,fy=+P.foco_y||372;
+  if(P.alvo==="estado"){cx=640;cy=372;fx=640;fy=372;}
+  else if(P.alvo==="regiao"){cx=822;cy=359;}
+  else{const c=MAP.cities[code(P.alvo)];cx=c[0];cy=c[1];
+   const m=MU[code(P.alvo)]; if(m&&P.destacar!==false) tl.to(m,{fill:RED,duration:.6},S+.7);
+   const d=mk("circle",{cx:cx,cy:cy,r:3.2,class:"dot",opacity:0},G("gdot")); tl.to(d,{opacity:1,duration:.3},S+.7);}
+  const dur=+P.transicao||1.2;
+  if(P.corte) tl.set("#gtx",{opacity:s>1.5?0:1},S); else tl.to("#gtx",{opacity:s>1.5?0:1,duration:dur*.5},S);
+  if(P.corte) tl.set("#cam",{x:fx-s*cx,y:fy-s*cy,scale:s},S); else tl.to("#cam",{x:fx-s*cx,y:fy-s*cy,scale:s,duration:dur,ease:"power2.inOut"},S);
+  if(P.rotulo){const l=document.createElement("div");l.className="lab";l.textContent=P.rotulo;l.style.left=fx+"px";l.style.top=(fy-14)+"px";G("labs").appendChild(l);VIS(l,S+dur*.8,E);}
+ }
+ else if(sc==="numero"){const n=document.createElement("div");n.className="num";n.innerHTML='<div class="a"></div><div class="b"></div>';n.querySelector(".a").textContent=P.valor||"";n.querySelector(".b").textContent=P.legenda||"";G("nums").appendChild(n);VIS(n,S,E);tl.from(n,{y:30,duration:.5,ease:"power3.out"},S);}
+ else if(sc==="card-dado"){const c=G("dc1");c.querySelector(".dt").textContent=P.titulo;c.querySelector(".ds").textContent=P.sub;c.querySelector(".df").textContent=P.fonte;VIS(c,S,E);
+  const dv=c.querySelector(".dv");const o={_v:0};Object.defineProperty(o,"v",{get(){return this._v},set(x){this._v=x;dv.textContent=x.toFixed(1).replace(".",",")+"%";}});
+  const alvo=+P.valor||0;tl.fromTo(o,{v:0},{v:alvo,duration:1.4,ease:"power2.out"},S+.4);
+  tl.fromTo(c.querySelector(".fill"),{height:"0%"},{height:(alvo)+"%",duration:1.4,ease:"power2.out"},S+.4);
+  const so=+P.sub_em||0;tl.fromTo(c.querySelector(".ds"),{opacity:0,y:20},{opacity:1,y:0,duration:.5},S+so);}
+ else if(sc==="card-comparacao"){const c=G("dc2"),U=+P.unidade||300;c.querySelector(".dt").textContent=P.titulo;c.querySelector(".r1").textContent=P.rot_a;c.querySelector(".r2").textContent=P.rot_b;c.querySelector(".dv").textContent=P.valor;
+  const mn=+P.b_min||2,mx=+P.b_max||3;
+  [["t1",1],["t2",mn],["t3",mx]].forEach(([k,v])=>{const t=c.querySelector("."+k);t.textContent=v+"×";t.style.left=(v*U)+"px";});
+  VIS(c,S,E);tl.to(c.querySelector(".b1"),{width:U,duration:.8,ease:"power2.out"},S+.4);
+  tl.to(c.querySelector(".b2"),{width:mn*U,duration:1,ease:"power2.out"},S+.9);
+  tl.set(c.querySelector(".b3"),{left:mn*U},0);tl.to(c.querySelector(".b3"),{width:(mx-mn)*U,duration:.7,ease:"power2.out"},S+1.8);
+  tl.fromTo(c.querySelectorAll(".tk"),{opacity:0},{opacity:1,duration:.4,stagger:.3},S+1);
+  tl.fromTo(c.querySelector(".dv"),{opacity:0,y:20},{opacity:1,y:0,duration:.5},S+(+P.valor_em||2.2));}
+ else if(sc==="capitulo"){const c=G("cap");c.querySelector(".k").textContent=P.kicker;c.querySelector(".t").textContent=P.titulo;VIS(c,S,E);
+  tl.to(c.querySelector(".ln"),{width:520,duration:.7,ease:"power2.out"},S+.2);tl.from(c.querySelector(".t"),{opacity:0,x:-40,duration:.6},S+.35);}
+ else if(sc==="municipios"){const ks=Object.keys(MU),pal=(P.cores||"#f4c7c3,#fce8b2,#b7e1cd,#d7c4e8,#fbd5b5,#c9daf8").split(",");
+  const keep=new Set(Object.values(NOMES));
+  const arr=ks.filter(k=>!keep.has(k)).map(k=>MU[k]);
+  arr.forEach((m,i)=>{const h=(parseInt(m.id.slice(1))*2654435761>>>0)%pal.length;tl.to(m,{fill:pal[h],duration:.25},S+(i/arr.length)*(+P.duracao||1.6));});}
+ else if(sc==="pib"){const c=G("pib");c.querySelector(".a").textContent=P.valor;c.querySelector(".b").textContent=P.texto;c.querySelector(".sl").textContent=P.legenda;VIS(c,S,E);
+  tl.from(c,{x:40,duration:.5,ease:"power3.out"},S);tl.to(c.querySelector(".sb i"),{width:(+P.fracao*100)+"%",duration:1.2,ease:"power2.out"},S+.4);}
+ else if(sc==="setas"){const o=MAP.cities[code(P.origem)];(P.destinos||[]).forEach((n,i)=>{const d=MAP.cities[code(n)];
+   const l=mk("line",{x1:o[0],y1:o[1],x2:o[0],y2:o[1],class:"ar",opacity:0},G("gar"));
+   const c=mk("circle",{cx:o[0],cy:o[1],r:4.5,fill:RED,opacity:0},G("gar"));
+   const t=S+.3+i*.22;tl.set([l,c],{opacity:1},t);tl.to(l,{attr:{x2:d[0],y2:d[1]},duration:.8,ease:"power2.inOut"},t);tl.to(c,{attr:{cx:d[0],cy:d[1]},duration:.8,ease:"power2.inOut"},t);
+   tl.set([l,c],{opacity:0},E);});}
+ else if(sc==="brasil"){const g=G("br");MAP.br.forEach(b=>{const e=mk("path",{d:b[1]},g);if(b[0]===String(P.destaque||"35"))e.classList.add("on");});VIS(G("brwy")||G("brw"),S,E,.4);
+  tl.from(g.querySelector("path.on"),{opacity:0,duration:.6},S+.6);}
+});
+window.__timelines=window.__timelines||{};
+window.__timelines["main"]=tl;
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>
