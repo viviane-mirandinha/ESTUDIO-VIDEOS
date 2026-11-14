@@ -1,0 +1,458 @@
+{
+ "version": 1,
+ "name": "13 - 3D TECNICO - Como um pendrive guarda dados",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#07080b"
+ },
+ "duration": 64.0,
+ "template": "local",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf"
+ },
+ "build_script": "template.html (Three.js, cenas por tempo em renderAt)",
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 3D"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos 3D"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "cor_rotulo",
+   "type": "param",
+   "label": "Cor dos rótulos",
+   "props": {
+    "value": "#8dff4f"
+   }
+  },
+  {
+   "id": "sc_pendrive",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: pendrive inteiro",
+   "by": "template",
+   "start": 0,
+   "dur": 5.2,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sc_explode",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: pendrive explodido",
+   "by": "template",
+   "start": 5.2,
+   "dur": 7.6,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sc_dies",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: dies NAND + bits",
+   "by": "template",
+   "start": 12.8,
+   "dur": 3.0,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sc_celula",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: célula (gravar/ler/apagar)",
+   "by": "template",
+   "start": 15.8,
+   "dur": 36.2,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sc_final",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: pendrive final",
+   "by": "template",
+   "start": 52.0,
+   "dur": 12.0,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "L_pen",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo pendrive",
+   "start": 0.6,
+   "dur": 4.4,
+   "props": {
+    "text": "Pendrive USB",
+    "anchor": "pen",
+    "dx": -150,
+    "dy": -110
+   }
+  },
+  {
+   "id": "L_usb",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo USB",
+   "start": 6.4,
+   "dur": 6.0,
+   "props": {
+    "text": "Conector USB",
+    "anchor": "usb",
+    "dx": 40,
+    "dy": -120
+   }
+  },
+  {
+   "id": "L_ctrl",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo controlador",
+   "start": 8.0,
+   "dur": 4.4,
+   "props": {
+    "text": "Controlador",
+    "anchor": "ctrl",
+    "dx": 20,
+    "dy": 120
+   }
+  },
+  {
+   "id": "L_nand",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo NAND",
+   "start": 9.2,
+   "dur": 3.4,
+   "props": {
+    "text": "Memória flash NAND",
+    "anchor": "nand",
+    "dx": -180,
+    "dy": -120
+   }
+  },
+  {
+   "id": "L_bits",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo bits",
+   "start": 13.4,
+   "dur": 2.3,
+   "props": {
+    "text": "Bits: 0 ou 1",
+    "anchor": "bits",
+    "dx": 170,
+    "dy": -120
+   }
+  },
+  {
+   "id": "L_cel",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo célula",
+   "start": 16.3,
+   "dur": 6.4,
+   "props": {
+    "text": "1 célula = 1 bit",
+    "anchor": "cell",
+    "dx": -160,
+    "dy": -90
+   }
+  },
+  {
+   "id": "L_tr",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo transistor",
+   "start": 19.2,
+   "dur": 3.6,
+   "props": {
+    "text": "Transistor",
+    "anchor": "src",
+    "dx": -130,
+    "dy": 90
+   }
+  },
+  {
+   "id": "L_fg",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo porta flutuante",
+   "start": 20.3,
+   "dur": 8.7,
+   "props": {
+    "text": "Porta flutuante",
+    "anchor": "fg",
+    "dx": 230,
+    "dy": -40
+   }
+  },
+  {
+   "id": "L_ox",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo isolante",
+   "start": 21.0,
+   "dur": 8.0,
+   "props": {
+    "text": "Isolante (óxido)",
+    "anchor": "ox",
+    "dx": 230,
+    "dy": 60
+   }
+  },
+  {
+   "id": "L_v",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo tensão",
+   "start": 23.9,
+   "dur": 5.0,
+   "props": {
+    "text": "Tensão  +20 V",
+    "anchor": "cg",
+    "dx": -220,
+    "dy": -70
+   }
+  },
+  {
+   "id": "L_e",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo elétrons",
+   "start": 25.3,
+   "dur": 3.6,
+   "props": {
+    "text": "Elétrons",
+    "anchor": "elec",
+    "dx": -230,
+    "dy": 40
+   }
+  },
+  {
+   "id": "L_carga",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo carga presa",
+   "start": 29.5,
+   "dur": 3.7,
+   "props": {
+    "text": "Carga presa",
+    "anchor": "fg",
+    "dx": 220,
+    "dy": -60
+   }
+  },
+  {
+   "id": "L_read",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo leitura",
+   "start": 33.6,
+   "dur": 3.7,
+   "props": {
+    "text": "Leitura: corrente bloqueada → bit 0",
+    "anchor": "chan",
+    "dx": 0,
+    "dy": 130
+   }
+  },
+  {
+   "id": "L_off",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo sem energia",
+   "start": 38.9,
+   "dur": 6.2,
+   "props": {
+    "text": "Sem energia",
+    "anchor": "cg",
+    "dx": -220,
+    "dy": -70
+   }
+  },
+  {
+   "id": "L_keep",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo elétrons presos",
+   "start": 39.3,
+   "dur": 5.8,
+   "props": {
+    "text": "Elétrons continuam presos",
+    "anchor": "fg",
+    "dx": 220,
+    "dy": 40
+   }
+  },
+  {
+   "id": "L_er",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo apagar",
+   "start": 46.0,
+   "dur": 3.0,
+   "props": {
+    "text": "Apagar: tensão inversa",
+    "anchor": "sub",
+    "dx": -200,
+    "dy": 80
+   }
+  },
+  {
+   "id": "L_wear",
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "Rótulo desgaste",
+   "start": 49.3,
+   "dur": 2.6,
+   "props": {
+    "text": "Desgaste a cada ciclo",
+    "anchor": "ox",
+    "dx": 220,
+    "dy": 60
+   }
+  },
+  {
+   "id": "t_hist1",
+   "type": "text",
+   "track": "textos",
+   "label": "História 1",
+   "start": 52.4,
+   "dur": 4.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Memória flash",
+    "x": 640,
+    "y": 118,
+    "w": 900,
+    "size": 46,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 300,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_hist2",
+   "type": "text",
+   "track": "textos",
+   "label": "História 2",
+   "start": 53.5,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Fujio Masuoka · Toshiba · anos 1980",
+    "x": 640,
+    "y": 178,
+    "w": 1000,
+    "size": 28,
+    "color": "#8dff4f",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_cta1",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA 1",
+   "start": 60.4,
+   "dur": 3.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Inscreva-se",
+    "x": 640,
+    "y": 118,
+    "w": 900,
+    "size": 46,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 300,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_cta2",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA 2",
+   "start": 61.6,
+   "dur": 2.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "e comente o que devemos explicar a seguir",
+    "x": 640,
+    "y": 178,
+    "w": 1000,
+    "size": 26,
+    "color": "#8dff4f",
+    "font": "Inter",
+    "weight": 400,
+    "align": "center",
+    "shadow": true
+   }
+  }
+ ],
+ "estilo": "3D técnico",
+ "referencia": {
+  "video": "https://youtu.be/9kM3mnxrMMM",
+  "canal": "Branch Education",
+  "canal_url": "https://www.youtube.com/channel/UCdp4_l1vPmpN-gDbUwhaRUQ",
+  "titulo": "How do microSD Cards Store 2 TB in such a TINY space?",
+  "nota": "Branch Education"
+ }
+}

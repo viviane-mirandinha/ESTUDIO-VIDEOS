@@ -1,0 +1,328 @@
+{
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "audio": "voz.mp3",
+ "build_script": "VIDEOS/02-negocios/build.py",
+ "composition": "hf/index.html",
+ "cenas": [
+  {
+   "start": 0.0,
+   "dur": 6.05,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/hana.jpg",
+   "params": {
+    "kb": [
+     1.05,
+     1.18,
+     0,
+     -40
+    ]
+   }
+  },
+  {
+   "start": 0.4,
+   "dur": 4.0,
+   "tipo": "titulo",
+   "texto": "Nintendo: das cartas aos games"
+  },
+  {
+   "start": 5.85,
+   "dur": 4.35,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/koppai.jpg",
+   "params": {
+    "kb": [
+     1.15,
+     1.02,
+     30,
+     -10
+    ]
+   }
+  },
+  {
+   "start": 5.95,
+   "dur": 4.05,
+   "tipo": "data",
+   "texto": "1889"
+  },
+  {
+   "start": 7.9,
+   "dur": 2.15,
+   "tipo": "lower_third",
+   "texto": "Quioto, Japão",
+   "params": {
+    "sub": "sede original da Nintendo Koppai"
+   }
+  },
+  {
+   "start": 10.05,
+   "dur": 7.9,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/hanaold.jpg",
+   "params": {
+    "kb": [
+     1.0,
+     1.12,
+     0,
+     20
+    ]
+   }
+  },
+  {
+   "start": 10.25,
+   "dur": 4.35,
+   "tipo": "lower_third",
+   "texto": "Fusajiro Yamauchi",
+   "params": {
+    "sub": "fundador · 1889"
+   }
+  },
+  {
+   "start": 14.8,
+   "dur": 3.0,
+   "tipo": "lower_third",
+   "texto": "Hanafuda 花札",
+   "params": {
+    "sub": "baralho japonês feito à mão"
+   }
+  },
+  {
+   "start": 17.8,
+   "dur": 5.3,
+   "tipo": "grafico",
+   "params": {
+    "html": "<div class=\"bgblur\" style=\"background-image:url(media/hanaold.jpg)\"></div><div c..."
+   }
+  },
+  {
+   "start": 17.9,
+   "dur": 5.0,
+   "tipo": "data",
+   "texto": "1949"
+  },
+  {
+   "start": 23.0,
+   "dur": 4.7,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/taxi.jpg",
+   "params": {
+    "kb": [
+     1.02,
+     1.14,
+     -20,
+     20
+    ]
+   }
+  },
+  {
+   "start": 23.1,
+   "dur": 4.4,
+   "tipo": "data",
+   "texto": "Anos 1960"
+  },
+  {
+   "start": 27.5,
+   "dur": 3.5,
+   "tipo": "grafico",
+   "params": {
+    "html": "<div class=\"bgblur\" style=\"background-image:url(media/taxi.jpg)\"></div><div clas..."
+   }
+  },
+  {
+   "start": 30.9,
+   "dur": 2.35,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/lovetester.jpg",
+   "params": {
+    "kb": [
+     1.0,
+     1.08,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "start": 31.0,
+   "dur": 2.1,
+   "tipo": "lower_third",
+   "texto": "Gunpei Yokoi",
+   "params": {
+    "sub": "engenheiro e inventor da Nintendo"
+   }
+  },
+  {
+   "start": 33.05,
+   "dur": 3.05,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/gw0.jpg",
+   "params": {
+    "kb": [
+     1.05,
+     1.15,
+     0,
+     -20
+    ]
+   }
+  },
+  {
+   "start": 33.25,
+   "dur": 2.75,
+   "tipo": "lower_third",
+   "texto": "Game &amp; Watch",
+   "params": {
+    "sub": "1980 · portátil de bolso"
+   }
+  },
+  {
+   "start": 35.2,
+   "dur": 2.9,
+   "tipo": "titulo",
+   "texto": "Brinquedos eletrônicos"
+  },
+  {
+   "start": 35.95,
+   "dur": 2.4,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/gw1.jpg",
+   "params": {
+    "kb": [
+     1.12,
+     1.02,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "start": 38.2,
+   "dur": 7.55,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/dk.jpg",
+   "params": {
+    "kb": [
+     1.0,
+     1.1,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "start": 38.3,
+   "dur": 4.3,
+   "tipo": "data",
+   "texto": "1981"
+  },
+  {
+   "start": 40.5,
+   "dur": 2.9,
+   "tipo": "lower_third",
+   "texto": "Donkey Kong",
+   "params": {
+    "sub": "arcade · Nintendo"
+   }
+  },
+  {
+   "start": 43.5,
+   "dur": 2.1,
+   "tipo": "lower_third",
+   "texto": "Jumpman → Mario",
+   "params": {
+    "sub": "o herói que virou mascote"
+   }
+  },
+  {
+   "start": 45.6,
+   "dur": 4.35,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/famicom.jpg",
+   "params": {
+    "kb": [
+     1.0,
+     1.1,
+     30,
+     -30
+    ]
+   }
+  },
+  {
+   "start": 45.7,
+   "dur": 4.0,
+   "tipo": "data",
+   "texto": "1983"
+  },
+  {
+   "start": 47.8,
+   "dur": 2.0,
+   "tipo": "lower_third",
+   "texto": "Famicom",
+   "params": {
+    "sub": "Family Computer · Japão"
+   }
+  },
+  {
+   "start": 49.8,
+   "dur": 2.45,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/nes.jpg",
+   "params": {
+    "kb": [
+     1.1,
+     1.0,
+     -20,
+     20
+    ]
+   }
+  },
+  {
+   "start": 49.95,
+   "dur": 2.15,
+   "tipo": "lower_third",
+   "texto": "NES",
+   "params": {
+    "sub": "Nintendo Entertainment System · Ocidente"
+   }
+  },
+  {
+   "start": 52.1,
+   "dur": 4.75,
+   "tipo": "grafico",
+   "params": {
+    "html": "<div class=\"bgblur\" style=\"background-image:url(media/hq.jpg)\"></div><div class=..."
+   }
+  },
+  {
+   "start": 56.7,
+   "dur": 3.4,
+   "tipo": "foto_kenburns",
+   "src": "hf/media/hana.jpg",
+   "params": {
+    "kb": [
+     1.2,
+     1.05,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "start": 56.9,
+   "dur": 3.0,
+   "tipo": "titulo",
+   "texto": "Tudo começou com um jogo de cartas"
+  },
+  {
+   "start": 60.0,
+   "dur": 5.1,
+   "tipo": "end_card",
+   "params": {
+    "html": "<div class=\"bgblur\" style=\"background-image:url(media/hana.jpg);filter:blur(18px..."
+   }
+  }
+ ],
+ "estilo": "Documentário de negócios"
+}

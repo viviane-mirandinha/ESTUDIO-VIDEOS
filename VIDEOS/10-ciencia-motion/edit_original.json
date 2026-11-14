@@ -1,0 +1,101 @@
+{
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "audio": "voz.mp3",
+ "cenas": [
+  {
+   "id": "s1",
+   "start": 0,
+   "dur": 7.3,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "hook: abelha voa e some, flores murcham, '?'",
+   "src": "hf/index.html#s1"
+  },
+  {
+   "id": "s2a",
+   "start": 7.3,
+   "dur": 3.7,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "contador +20.000 especies, medalhoes de abelhas",
+   "src": "hf/index.html#s2a"
+  },
+  {
+   "id": "s2b",
+   "start": 11,
+   "dur": 6.5,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "abelha leva polen de flor em flor",
+   "src": "hf/index.html#s2b"
+  },
+  {
+   "id": "s3",
+   "start": 17.5,
+   "dur": 7.8,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "prato: 1/3 dos alimentos",
+   "src": "hf/index.html#s3"
+  },
+  {
+   "id": "s4",
+   "start": 25.3,
+   "dur": 9.3,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "medalhoes frutas/castanhas/vegetais -> afetados",
+   "src": "hf/index.html#s4"
+  },
+  {
+   "id": "s5",
+   "start": 34.6,
+   "dur": 9.6,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "trigo/arroz/milho + vento",
+   "src": "hf/index.html#s5"
+  },
+  {
+   "id": "s6",
+   "start": 44.2,
+   "dur": 10.4,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "resultado: variedade, preco, ecossistemas",
+   "src": "hf/index.html#s6"
+  },
+  {
+   "id": "s7",
+   "start": 54.6,
+   "dur": 5.1,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "globo: nao e o fim / crise grave",
+   "src": "hf/index.html#s7"
+  },
+  {
+   "id": "s8",
+   "start": 59.7,
+   "dur": 8.2,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "ameacas: pesticidas, habitat, clima",
+   "src": "hf/index.html#s8"
+  },
+  {
+   "id": "s9",
+   "start": 67.9,
+   "dur": 3.5,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "pequenos animais, grandes efeitos",
+   "src": "hf/index.html#s9"
+  },
+  {
+   "id": "s10",
+   "start": 71.4,
+   "dur": 9.63,
+   "tipo": "hyperframes-svg-motion",
+   "texto": "CTA inscreva-se + comente",
+   "src": "hf/index.html#s10"
+  }
+ ],
+ "build": "render.ps1 (hyperframes render -q draft --sdr + ffmpeg mux)",
+ "words": "words.json",
+ "estilo": "Ciência em motion 2D"
+}

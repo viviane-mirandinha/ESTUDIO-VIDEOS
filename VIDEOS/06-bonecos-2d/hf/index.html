@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#241433;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#241433;font-family:"Arial Black","Segoe UI",Arial,sans-serif;}
+.sc{position:absolute;inset:0;opacity:0;overflow:hidden}
+.sc svg.bg{position:absolute;inset:0;width:1280px;height:720px}
+.cam{position:absolute;inset:0;transform-origin:50% 55%}
+.card{display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 45%,#3a1746 0%,#1c0b24 75%)}
+.card h1{color:#fff;font-size:68px;line-height:1.12;text-align:center;width:1000px;margin:0;letter-spacing:1px;font-weight:900}
+.balao{position:absolute;background:#fff;color:#1c1c24;font-family:"Segoe UI",Arial,sans-serif;font-weight:600;font-size:30px;padding:16px 26px;border-radius:30px;box-shadow:0 6px 0 rgba(0,0,0,.18);white-space:nowrap}
+.balao:after{content:"";position:absolute;left:var(--tx,40px);bottom:-18px;border:12px solid transparent;border-top:14px solid #fff;border-bottom:0}
+.balao.pensa:after{display:none}
+.balao .d{position:absolute;background:#fff;border-radius:50%}
+.tag{position:absolute;color:#fff;font-weight:900}
+.lower{position:absolute;left:70px;bottom:70px;background:#ffcc33;color:#1c1424;padding:12px 26px;font-size:40px;font-weight:900;border-radius:6px}
+.lower small{display:block;font-family:"Segoe UI",Arial,sans-serif;font-weight:700;font-size:24px;color:#3a2a10}
+.ico{position:absolute;text-align:center;color:#fff;font-size:34px;font-weight:900;width:340px}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box img,.ed-box video{display:block}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="65.2" data-width="1280" data-height="720">
+<div id="stage"></div>
+
+</div>
+<script>
+const EDIT = {"version": 1, "name": "06 - Bonecos 2D - 11 dias sem dormir", "canvas": {"w": 1280, "h": 720, "fps": 30, "bg": "#241433"}, "duration": 65.2, "template": "local", "build_script": "template.html (local) -> build_from_edit.py -> hyperframes render -q draft", "audio": {"voice": {"src": "voz.mp3", "volume": 1.0, "start": 0}}, "tracks": [{"id": "fundo", "name": "Cenas 2D"}, {"id": "textos", "name": "Textos"}], "items": [{"id": "s01", "type": "scene", "track": "fundo", "by": "template", "label": "Título", "start": 0, "dur": 5.1, "props": {"scene": "card", "params": {"texto": "O QUE ACONTECE SE VOCÊ FICAR 11 DIAS SEM DORMIR?"}}}, {"id": "s02", "type": "scene", "track": "fundo", "by": "template", "label": "Quarto - decide", "start": 5.1, "dur": 2.5, "props": {"scene": "quarto", "params": {"balao": "Quanto tempo eu aguento acordado?"}}}, {"id": "s03", "type": "scene", "track": "fundo", "by": "template", "label": "Calendário 1964", "start": 7.6, "dur": 2.8, "props": {"scene": "calendario", "params": {"mes": "JANEIRO", "ano": "1964"}}}, {"id": "s04", "type": "scene", "track": "fundo", "by": "template", "label": "Randy San Diego", "start": 10.4, "dur": 5.1, "props": {"scene": "apresenta", "params": {"nome": "RANDY GARDNER", "sub": "17 anos · San Diego, EUA"}}}, {"id": "s05", "type": "scene", "track": "fundo", "by": "template", "label": "Feira de ciências", "start": 15.5, "dur": 3.5, "props": {"scene": "feira", "params": {"cartaz": "QUANTO TEMPO SEM DORMIR?", "placa": "FEIRA DE CIÊNCIAS"}}}, {"id": "s06", "type": "scene", "track": "fundo", "by": "template", "label": "Contador 264h", "start": 19.0, "dur": 5.1, "props": {"scene": "contador", "params": {"horas": 264, "dias": "≈ 11 DIAS SEM DORMIR"}}}, {"id": "s07", "type": "scene", "track": "fundo", "by": "template", "label": "Pesquisador", "start": 24.1, "dur": 5.5, "props": {"scene": "pesquisador", "params": {"nome": "WILLIAM DEMENT", "sub": "Pesquisador do sono · Stanford", "balao": "Vou acompanhar tudo."}}}, {"id": "s08", "type": "scene", "track": "fundo", "by": "template", "label": "Card corpo reclamou", "start": 29.6, "dur": 2.0, "props": {"scene": "card", "params": {"texto": "E O CORPO RECLAMOU."}}}, {"id": "s09", "type": "scene", "track": "fundo", "by": "template", "label": "Sintomas", "start": 31.6, "dur": 5.1, "props": {"scene": "sintomas", "params": {"i1": "MAU HUMOR", "i2": "CONCENTRAÇÃO", "i3": "MEMÓRIA"}}}, {"id": "s10", "type": "scene", "track": "fundo", "by": "template", "label": "Alucinações", "start": 36.7, "dur": 3.6, "props": {"scene": "alucina", "params": {"balao": "Isso... é real?", "rotulo": "ALUCINAÇÕES"}}}, {"id": "s11", "type": "scene", "track": "fundo", "by": "template", "label": "Dorme 14h", "start": 40.3, "dur": 5.1, "props": {"scene": "dorme", "params": {"horas": "14 HORAS SEGUIDAS"}}}, {"id": "s12", "type": "scene", "track": "fundo", "by": "template", "label": "Recuperou", "start": 45.4, "dur": 2.4, "props": {"scene": "acorda", "params": {"balao": "Ahh... bem melhor!"}}}, {"id": "s13", "type": "scene", "track": "fundo", "by": "template", "label": "Atenção perigoso", "start": 47.8, "dur": 5.1, "props": {"scene": "alerta", "params": {"titulo": "ATENÇÃO", "sub": "ESPECIALISTAS: REPETIR ISSO É PERIGOSO"}}}, {"id": "s14", "type": "scene", "track": "fundo", "by": "template", "label": "Sono essencial", "start": 52.9, "dur": 4.2, "props": {"scene": "essencial", "params": {"i1": "MEMÓRIA", "i2": "SAÚDE", "titulo": "O SONO É ESSENCIAL"}}}, {"id": "s15", "type": "scene", "track": "fundo", "by": "template", "label": "CTA", "start": 57.1, "dur": 8.1, "props": {"scene": "cta", "params": {"balao": "Quantas horas VOCÊ aguenta acordado?", "botao": "INSCREVA-SE"}}}]};
+const ED = Object.fromEntries(EDIT.items.map(i => [i.id, i]));
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:65.2,ease:"none"},0);
+window.__timelines["main"] = tl;
+const stage = document.getElementById("stage");
+const esc = s => String(s).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+/* ---------- personagem flat (sem contorno) ---------- */
+const SKIN="#f4c29a", SKIN2="#e0a87f";
+function boneco(id, o={}){
+  const shirt=o.shirt||"#e2412f", pants=o.pants||"#2b3a67", hair=o.hair||"#5b3420", bags=o.bags||0;
+  const mouth={ok:"M-16 34 Q0 46 16 34", bravo:"M-16 42 Q0 30 16 42", ufa:"M-18 34 Q0 52 18 34", o:"", reto:"M-14 38 L14 38"}[o.mood||"ok"];
+  const coat=o.coat?`<path d="M-62 -230 L62 -230 L70 -60 L-70 -60 Z" fill="#f2f4f7"/><path d="M-10 -230 L0 -150 L10 -230 Z" fill="#7fa3c9"/><rect x="-70" y="-75" width="140" height="14" fill="#dfe3ea"/>`:"";
+  const hairSvg=o.old
+    ? `<path d="M-56 -20 Q-60 -66 -20 -72 Q30 -80 56 -40 L58 -14 Q52 -44 40 -48 Q0 -40 -40 -50 Q-52 -40 -52 -14 Z" fill="#c9ccd3"/>`
+    : `<path d="M-58 -10 Q-66 -78 -8 -86 Q50 -92 62 -40 Q66 -20 58 -6 Q54 -40 36 -46 Q20 -30 -12 -44 Q-30 -30 -50 -40 Z" fill="${hair}"/>`;
+  const glasses=o.glasses?`<g fill="none" stroke="#2a2a33" stroke-width="4"><circle cx="-20" cy="0" r="15"/><circle cx="22" cy="0" r="15"/><path d="M-5 0 L7 0"/></g>`:"";
+  const eyes = o.mood==="dorme"
+    ? `<path d="M-30 2 Q-20 10 -10 2 M12 2 Q22 10 32 2" stroke="#2a1e1e" stroke-width="4" fill="none" stroke-linecap="round"/>`
+    : `<g class="eyes"><ellipse cx="-20" cy="0" rx="${o.mood==='o'?11:8}" ry="${o.mood==='o'?13:10}" fill="#fff"/><ellipse cx="22" cy="0" rx="${o.mood==='o'?11:8}" ry="${o.mood==='o'?13:10}" fill="#fff"/><circle class="pup" cx="-19" cy="1" r="${o.mood==='o'?4:5}" fill="#2a1e1e"/><circle class="pup" cx="23" cy="1" r="${o.mood==='o'?4:5}" fill="#2a1e1e"/></g>`;
+  const brows = o.mood==="bravo"
+    ? `<path d="M-34 -20 L-8 -12 M8 -12 L34 -20" stroke="${o.old?'#9a9ca3':hair}" stroke-width="6" stroke-linecap="round"/>`
+    : `<path d="M-32 -18 Q-20 -24 -8 -18 M10 -18 Q22 -24 34 -18" stroke="${o.old?'#9a9ca3':hair}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+  const bagSvg = bags? `<path d="M-32 12 Q-20 22 -8 12 M10 12 Q22 22 34 12" stroke="#8a5a7a" stroke-width="4" fill="none" opacity="${bags}"/>`:"";
+  const mouthSvg = o.mood==="o" ? `<ellipse cx="2" cy="40" rx="9" ry="12" fill="#7a2a2a"/>` : (o.mood==="dorme"? `<ellipse cx="2" cy="38" rx="6" ry="5" fill="#7a2a2a"/>` : `<path d="${mouth}" stroke="#7a2a2a" stroke-width="5" fill="none" stroke-linecap="round"/>`);
+  return `<g id="${id}">
+   <ellipse cx="0" cy="4" rx="70" ry="12" fill="#000" opacity=".18"/>
+   <g class="legs"><rect x="-38" y="-80" width="32" height="80" rx="8" fill="${pants}"/><rect x="6" y="-80" width="32" height="80" rx="8" fill="${pants}"/>
+     <rect x="-44" y="-10" width="40" height="14" rx="7" fill="#2a2a33"/><rect x="4" y="-10" width="40" height="14" rx="7" fill="#2a2a33"/></g>
+   <g class="armL" transform="translate(-52,-215)"><g class="armLi"><rect x="-16" y="0" width="30" height="62" rx="12" fill="${o.coat?'#f2f4f7':shirt}"/><rect x="-14" y="52" width="26" height="62" rx="12" fill="${SKIN}"/></g></g>
+   <g class="armR" transform="translate(52,-215)"><g class="armRi"><rect x="-14" y="0" width="30" height="62" rx="12" fill="${o.coat?'#f2f4f7':shirt}"/><rect x="-12" y="52" width="26" height="62" rx="12" fill="${SKIN}"/></g></g>
+   <path d="M-58 -225 Q0 -240 58 -225 L64 -74 L-64 -74 Z" fill="${shirt}"/>${coat}
+   <rect x="-16" y="-252" width="32" height="30" fill="${SKIN2}"/>
+   <g class="head" transform="translate(0,-310)">
+     <ellipse cx="-58" cy="6" rx="10" ry="16" fill="${SKIN2}"/><ellipse cx="60" cy="6" rx="10" ry="16" fill="${SKIN2}"/>
+     <ellipse cx="0" cy="4" rx="60" ry="68" fill="${SKIN}"/>${hairSvg}
+     ${eyes}${bagSvg}${brows}${glasses}
+     <path d="M2 10 Q8 22 0 24" stroke="${SKIN2}" stroke-width="4" fill="none"/>
+     ${mouthSvg}
+   </g></g>`;
+}
+/* ---------- cenários ---------- */
+const quarto = (tone="#5d5f94") => `
+  <rect width="1280" height="720" fill="${tone}"/>
+  <rect y="560" width="1280" height="160" fill="#3c3d6a"/><rect y="552" width="1280" height="10" fill="#4a4b7c"/>
+  <rect x="140" y="120" width="250" height="250" rx="8" fill="#9fc3e8"/><rect x="140" y="120" width="250" height="250" rx="8" fill="none" stroke="#e8e8f2" stroke-width="14"/>
+  <path d="M265 120 V370 M140 245 H390" stroke="#e8e8f2" stroke-width="10"/><circle cx="330" cy="170" r="22" fill="#f6f1c7"/>
+  <rect x="900" y="140" width="130" height="170" fill="#e86f5c"/><rect x="915" y="160" width="100" height="60" fill="#f6d06b"/><rect x="915" y="232" width="70" height="10" fill="#fff" opacity=".7"/>
+  <rect x="1060" y="190" width="90" height="110" fill="#6fc2a5"/>
+  <rect x="1060" y="440" width="120" height="120" rx="10" fill="#8a5a3c"/><path d="M1120 440 q-50 -70 -10 -140 q40 60 10 140 M1120 440 q60 -60 40 -120 q-40 40 -40 120" fill="#4e9a62"/>`;
+const pattern = (c1,c2) => `<defs><pattern id="pt${c1.slice(1)}" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="60" height="60" fill="${c1}"/><rect width="26" height="60" fill="${c2}"/></pattern></defs><rect width="1280" height="720" fill="url(#pt${c1.slice(1)})"/>`;
+
+function cena(it){
+  const P = it.props.params, S = it.start, D = it.dur, id = it.id;
+  const el = document.createElement("div"); el.className="sc"; el.id=id;
+  let svg="", html="", fx=()=>{};
+  const camera = (from=1, to=1.07, x=0) => tl.fromTo(`#${id} .cam`,{scale:from,x:0},{scale:to,x:x,duration:D,ease:"none"},S);
+  const blink = (sel,t) => tl.to(sel,{scaleY:.1,transformOrigin:"50% 50%",duration:.07,yoyo:true,repeat:1},t);
+  const pop = (sel,t,extra={}) => tl.fromTo(sel,{scale:0,opacity:0,transformOrigin:"50% 50%"},{scale:1,opacity:1,duration:.35,ease:"back.out(1.8)",...extra},t);
+  const balao = (txt, x, y, tx=40, pensa=false) => `<div class="balao ${pensa?'pensa':''}" style="left:${x}px;top:${y}px;--tx:${tx}px">${esc(txt)}${pensa?`<span class="d" style="width:18px;height:18px;left:${tx}px;bottom:-26px"></span><span class="d" style="width:10px;height:10px;left:${tx-14}px;bottom:-44px"></span>`:''}</div>`;
+  switch(P && it.props.scene){
+  case "card":
+    el.classList.add("card"); html=`<h1>${esc(P.texto)}</h1>`;
+    fx=()=>{ tl.fromTo(`#${id} h1`,{scale:.8,opacity:0},{scale:1,opacity:1,duration:.45,ease:"back.out(1.6)"},S+.05);
+             tl.fromTo(`#${id} h1`,{y:0},{y:-8,duration:D,ease:"none"},S); };
+    break;
+  case "quarto":
+    svg = quarto() + `<g transform="translate(640,600)">${boneco(id+"r")}</g>`;
+    html = balao(P.balao, 690, 150, 30, true);
+    fx=()=>{ camera(1,1.08); pop(`#${id} .balao`,S+.4); blink(`#${id}r .eyes`,S+1.3);
+             tl.fromTo(`#${id}r .armRi`,{rotation:0,svgOrigin:"0 0"},{rotation:-150,duration:.5,ease:"power2.out"},S+.2);
+             tl.to(`#${id}r .head`,{rotation:-6,svgOrigin:"0 30",duration:.6,yoyo:true,repeat:1},S+.6); };
+    break;
+  case "calendario":
+    svg = pattern("#22305a","#1e2a50") + `<g transform="translate(640,370)"><rect x="-210" y="-230" width="420" height="440" rx="20" fill="#fff"/><rect x="-210" y="-230" width="420" height="120" rx="20" fill="#e2412f"/><rect x="-210" y="-140" width="420" height="30" fill="#e2412f"/>
+      <circle cx="-120" cy="-240" r="16" fill="#9aa"/><circle cx="120" cy="-240" r="16" fill="#9aa"/>
+      <text x="0" y="-150" text-anchor="middle" font-size="58" fill="#fff" font-weight="900">${esc(P.mes)}</text>
+      <text class="ano" x="0" y="80" text-anchor="middle" font-size="150" fill="#1c1c2e" font-weight="900">${esc(P.ano)}</text>
+      <g class="page"><rect x="-210" y="-110" width="420" height="320" fill="#f2f2f6"/><text x="0" y="80" text-anchor="middle" font-size="150" fill="#bbb" font-weight="900">2026</text></g></g>`;
+    fx=()=>{ camera(1.05,1); pop(`#${id} svg g`,S,{duration:.5});
+             tl.to(`#${id} .page`,{y:-500,rotation:-25,opacity:0,svgOrigin:"0 -110",duration:.6,ease:"power2.in"},S+.7); };
+    break;
+  case "apresenta":
+    svg = `<rect width="1280" height="720" fill="#f7a35c"/><circle cx="1000" cy="200" r="110" fill="#ffe08a"/><rect y="470" width="1280" height="250" fill="#e8c27e"/><rect y="440" width="1280" height="40" fill="#5fb3c9"/>
+      <g fill="#3f7a4f"><rect x="160" y="200" width="20" height="280" fill="#8a5a3c"/><path d="M170 200 q-90 -10 -120 50 q70 -40 120 -50 q-30 -80 -110 -80 q80 20 110 80 q40 -90 130 -70 q-90 10 -130 70 q100 -10 130 60 q-60 -50 -130 -60z"/></g>
+      <g transform="translate(860,640)">${boneco(id+"r",{mood:"ok"})}</g>`;
+    html = `<div class="lower">${esc(P.nome)}<small>${esc(P.sub)}</small></div>`;
+    fx=()=>{ camera(1,1.06,-20);
+             tl.fromTo(`#${id}r`,{x:400},{x:0,duration:.9,ease:"power2.out"},S);
+             tl.fromTo(`#${id}r .legs rect:nth-child(odd)`,{y:0},{y:-10,duration:.15,yoyo:true,repeat:5},S);
+             tl.fromTo(`#${id} .lower`,{x:-600},{x:0,duration:.5,ease:"power3.out"},S+.6);
+             tl.fromTo(`#${id}r .armRi`,{rotation:0,svgOrigin:"0 0"},{rotation:-160,duration:.4,yoyo:true,repeat:3},S+1.5);
+             blink(`#${id}r .eyes`,S+3.4); };
+    break;
+  case "feira":
+    svg = `<rect width="1280" height="720" fill="#4b5a8c"/><rect y="560" width="1280" height="160" fill="#323c63"/>
+      <rect x="300" y="60" width="680" height="70" rx="10" fill="#ffcc33"/><text x="640" y="110" text-anchor="middle" font-size="40" fill="#2a1e1e" font-weight="900">${esc(P.placa)}</text>
+      <rect x="260" y="430" width="560" height="30" fill="#c58a54"/><rect x="280" y="460" width="20" height="110" fill="#8a5a3c"/><rect x="780" y="460" width="20" height="110" fill="#8a5a3c"/>
+      <g class="poster"><rect x="300" y="190" width="480" height="240" fill="#fff"/><rect x="300" y="190" width="160" height="240" fill="#e9eef7"/><rect x="620" y="190" width="160" height="240" fill="#e9eef7"/>
+      <text x="540" y="250" text-anchor="middle" font-size="26" fill="#e2412f" font-weight="900">${esc(P.cartaz).split(" ").slice(0,2).join(" ")}</text>
+      <text x="540" y="285" text-anchor="middle" font-size="26" fill="#e2412f" font-weight="900">${esc(P.cartaz).split(" ").slice(2).join(" ")}</text>
+      <circle cx="540" cy="360" r="46" fill="#2b3a67"/><path d="M540 328 V360 L566 374" stroke="#fff" stroke-width="7" fill="none"/>
+      <text x="380" y="330" text-anchor="middle" font-size="60">☕</text><text x="700" y="330" text-anchor="middle" font-size="54" fill="#5d5f94" font-weight="900">Zz</text></g>
+      <g transform="translate(1000,600)">${boneco(id+"r",{mood:"ufa"})}</g>`;
+    fx=()=>{ camera(1.02,1.1,-30); pop(`#${id} .poster`,S+.1,{duration:.5});
+             tl.fromTo(`#${id}r .armLi`,{rotation:0,svgOrigin:"0 0"},{rotation:70,duration:.4,ease:"power2.out"},S+.5);
+             blink(`#${id}r .eyes`,S+2); };
+    break;
+  case "contador":
+    svg = pattern("#1f5132","#1b4a2d") + `<g transform="translate(400,360)" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"><circle r="150"/><path class="pont" d="M0 0 V-110"/><path class="pont2" d="M0 0 H70"/>
+      ${Array.from({length:12},(_,i)=>`<path d="M0 -130 V-150" transform="rotate(${i*30})"/>`).join("")}</g>`;
+    html = `<div class="tag num" style="left:640px;top:200px;font-size:150px;line-height:1">0</div><div class="tag" style="left:650px;top:360px;font-size:60px">HORAS</div><div class="tag dias" style="left:650px;top:450px;font-size:38px;color:#ffcc33">${esc(P.dias)}</div>`;
+    fx=()=>{ const o={v:0}, n=el.getElementsByClassName("num")[0];
+             tl.to(o,{v:+P.horas,duration:2.4,ease:"power2.out",onUpdate:()=>{n.textContent=Math.round(o.v)}},S+.2);
+             tl.fromTo(`#${id} .pont`,{rotation:0,svgOrigin:"0 0"},{rotation:360*11,duration:2.6,ease:"power2.out"},S+.2);
+             tl.fromTo(`#${id} .pont2`,{rotation:0,svgOrigin:"0 0"},{rotation:360,duration:2.6,ease:"power2.out"},S+.2);
+             tl.fromTo(`#${id} .dias`,{opacity:0,y:20},{opacity:1,y:0,duration:.4},S+2.3); camera(1,1.05); };
+    break;
+  case "pesquisador":
+    svg = `<rect width="1280" height="720" fill="#d9dde6"/><rect y="560" width="1280" height="160" fill="#a9b0c2"/>
+      <rect x="80" y="110" width="360" height="230" rx="10" fill="#2c3350"/><path d="M110 300 L170 240 L230 270 L300 170 L360 220 L410 150" stroke="#6fe0a5" stroke-width="8" fill="none" class="graf"/>
+      <rect x="980" y="300" width="200" height="260" fill="#8fa0c2"/><rect x="1000" y="320" width="160" height="40" fill="#b8c4dc"/><rect x="1000" y="380" width="160" height="40" fill="#b8c4dc"/>
+      <g transform="translate(470,610) scale(.92)">${boneco(id+"r",{mood:"reto",bags:.5})}</g>
+      <g transform="translate(800,610)">${boneco(id+"p",{shirt:"#5b7fb5",pants:"#3a3a48",old:true,coat:true,glasses:true,mood:"ok"})}
+        <g class="prancheta" transform="translate(-80,-140)"><rect x="-30" y="-46" width="64" height="88" rx="6" fill="#a8743f"/><rect x="-22" y="-34" width="48" height="66" fill="#fff"/><path d="M-14 -20 H18 M-14 -6 H18 M-14 8 H10" stroke="#888" stroke-width="4"/></g></g>`;
+    html = `<div class="lower" style="left:auto;right:70px">${esc(P.nome)}<small>${esc(P.sub)}</small></div>` + balao(P.balao, 760, 140, 50);
+    fx=()=>{ camera(1,1.07,20);
+             tl.fromTo(`#${id}p`,{x:300,opacity:0},{x:0,opacity:1,duration:.7,ease:"power2.out"},S);
+             tl.fromTo(`#${id}p .armLi`,{rotation:0,svgOrigin:"0 0"},{rotation:40,duration:.4},S+.5);
+             tl.fromTo(`#${id} .graf`,{strokeDasharray:600,strokeDashoffset:600},{strokeDashoffset:0,duration:2.5,ease:"none"},S+.4);
+             tl.fromTo(`#${id} .lower`,{x:600},{x:0,duration:.5,ease:"power3.out"},S+1.6);
+             pop(`#${id} .balao`,S+3.2); blink(`#${id}p .eyes`,S+2.4); };
+    break;
+  case "sintomas":
+    svg = pattern("#1f2858","#1b2350") + `
+      <g transform="translate(230,300)" class="i1" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"><path d="M-80 0 a50 50 0 0 1 40 -60 a60 60 0 0 1 100 10 a40 40 0 0 1 20 70 h-150 a35 35 0 0 1 -10 -20z"/><path d="M-10 30 l-20 50 h30 l-15 45" stroke="#ffcc33"/></g>
+      <g transform="translate(640,300)" class="i2" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"><circle r="80"/><circle r="45"/><circle r="10" fill="#fff"/><path class="esc" d="M-100 -90 q60 30 30 60 q-40 40 40 50 q70 10 30 70" stroke="#e2412f"/></g>
+      <g transform="translate(1050,300)" class="i3" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"><path d="M0 -85 q-70 -10 -85 45 q-25 10 -10 50 q-10 45 50 50 q20 20 45 0 z M0 -85 q70 -10 85 45 q25 10 10 50 q10 45 -50 50 q-20 20 -45 0"/><text x="0" y="25" text-anchor="middle" font-size="80" fill="#ffcc33" stroke="none" font-weight="900">?</text></g>
+      <g transform="translate(640,720) scale(.6)">${boneco(id+"r",{mood:"bravo",bags:1})}</g>`;
+    html = `<div class="ico l1" style="left:60px;top:430px">${esc(P.i1)}</div><div class="ico l2" style="left:470px;top:430px">${esc(P.i2)}</div><div class="ico l3" style="left:880px;top:430px">${esc(P.i3)}</div>`;
+    fx=()=>{ camera(1,1.05);
+             tl.fromTo(`#${id}r`,{y:200},{y:0,duration:.5,ease:"power2.out"},S);
+             const t=[S+.2,S+1.8,S+4.2];
+             [1,2,3].forEach((k,j)=>{ pop(`#${id} .i${k}`,t[j]); tl.fromTo(`#${id} .l${k}`,{opacity:0,y:20},{opacity:1,y:0,duration:.3},t[j]+.15); });
+             tl.fromTo(`#${id} .esc`,{strokeDasharray:500,strokeDashoffset:500},{strokeDashoffset:0,duration:1},S+2.1);
+             tl.to(`#${id}r .head`,{rotation:5,svgOrigin:"0 40",duration:.25,yoyo:true,repeat:7},S+.6); };
+    break;
+  case "alucina":
+    svg = `<defs><radialGradient id="ag"><stop offset="0" stop-color="#8b3fd1"/><stop offset=".5" stop-color="#3d1f78"/><stop offset="1" stop-color="#140a2e"/></radialGradient></defs><rect width="1280" height="720" fill="url(#ag)"/>
+      <g class="esp">${[0,1,2,3,4,5].map(i=>`<circle cx="640" cy="360" r="${120+i*110}" fill="none" stroke="#c77dff" stroke-width="6" opacity="${.5-i*.07}"/>`).join("")}</g>
+      <g class="f1" transform="translate(250,250)"><path d="M-50 60 v-70 a50 50 0 0 1 100 0 v70 l-17 -15 l-17 15 l-16 -15 l-16 15 l-17 -15 z" fill="#fff" opacity=".9"/><circle cx="-18" cy="-10" r="8" fill="#140a2e"/><circle cx="18" cy="-10" r="8" fill="#140a2e"/></g>
+      <g class="f2" transform="translate(1030,230)"><path d="M-60 -50 h120 v60 q0 40 -20 60 q-10 30 -30 10 q-20 30 -30 0 q-30 10 -40 -40 z" fill="#ffcc33"/><circle r="30" cy="-10" fill="none" stroke="#2a1e1e" stroke-width="6"/><path d="M0 -10 v-18 M0 -10 h14" stroke="#2a1e1e" stroke-width="5"/></g>
+      <g class="f3" transform="translate(1040,560)"><path d="M0 0 q20 -60 0 -100 q60 20 60 80 q0 40 -60 20z" fill="#6fe0a5"/></g>
+      <g transform="translate(560,650)">${boneco(id+"r",{mood:"o",bags:1})}</g>`;
+    html = balao(P.balao, 640, 150, 30) + `<div class="tag rot" style="left:60px;top:600px;font-size:54px;color:#ffcc33">${esc(P.rotulo)}</div>`;
+    fx=()=>{ tl.fromTo(`#${id} .esp`,{scale:.8,svgOrigin:"640 360"},{scale:1.25,duration:D,ease:"none"},S);
+             tl.fromTo(`#${id} .esp`,{rotation:0,svgOrigin:"640 360"},{rotation:30,duration:D,ease:"none"},S);
+             ["f1","f2","f3"].forEach((f,i)=>tl.fromTo(`#${id} .${f}`,{y:30,rotation:-8},{y:-30,rotation:8,duration:.9,yoyo:true,repeat:3,ease:"sine.inOut"},S+i*.2));
+             tl.fromTo(`#${id}r .pup`,{x:-5},{x:5,duration:.3,yoyo:true,repeat:11},S);
+             pop(`#${id} .balao`,S+.6); tl.fromTo(`#${id} .rot`,{opacity:0,x:-40},{opacity:1,x:0,duration:.4},S+1); camera(1,1.08); };
+    break;
+  case "dorme":
+    svg = quarto("#2a2c55") + `<rect width="1280" height="720" fill="#0b0c2a" opacity=".45"/><circle cx="330" cy="170" r="22" fill="#f6f1c7"/>
+      <rect x="380" y="430" width="620" height="130" rx="20" fill="#8a5a3c"/><rect x="360" y="360" width="40" height="200" rx="12" fill="#6e452c"/>
+      <g transform="translate(650,445) rotate(-90)"><g transform="scale(.9)">${boneco(id+"r",{mood:"dorme",bags:.6})}</g></g>
+      <rect x="560" y="395" width="420" height="90" rx="30" fill="#5fb3c9"/><rect x="400" y="380" width="140" height="70" rx="30" fill="#f2f4f7"/>`;
+    html = `<div class="tag z z1" style="left:470px;top:250px;font-size:60px">Z</div><div class="tag z z2" style="left:520px;top:200px;font-size:46px">Z</div><div class="tag z z3" style="left:560px;top:160px;font-size:34px">z</div>
+      <div class="lower" style="left:auto;right:70px;top:70px;bottom:auto">${esc(P.horas)}</div>`;
+    fx=()=>{ camera(1.08,1);
+             [1,2,3].forEach(k=>tl.fromTo(`#${id} .z${k}`,{opacity:0,y:30},{opacity:1,y:-40,duration:1.2,repeat:3,ease:"none"},S+k*.3));
+             tl.fromTo(`#${id} .lower`,{y:-200},{y:0,duration:.5,ease:"power3.out"},S+2.5);
+             tl.to(`#${id}r .head`,{scale:1.03,svgOrigin:"0 60",duration:.8,yoyo:true,repeat:5},S); };
+    break;
+  case "acorda":
+    svg = quarto("#7d84c4") + `<circle cx="330" cy="170" r="40" fill="#ffe08a"/><g transform="translate(640,600)">${boneco(id+"r",{mood:"ufa"})}</g>
+      <g class="check" transform="translate(1000,120)"><circle r="56" fill="#3fbf6a"/><path d="M-26 0 l18 20 l32 -36" stroke="#fff" stroke-width="12" fill="none" stroke-linecap="round"/></g>`;
+    html = balao(P.balao, 700, 160, 30);
+    fx=()=>{ camera(1,1.06);
+             tl.fromTo(`#${id}r .armLi`,{rotation:0,svgOrigin:"0 0"},{rotation:160,duration:.5,ease:"power2.out"},S+.1);
+             tl.fromTo(`#${id}r .armRi`,{rotation:0,svgOrigin:"0 0"},{rotation:-160,duration:.5,ease:"power2.out"},S+.1);
+             pop(`#${id} .balao`,S+.4); pop(`#${id} .check`,S+.9); };
+    break;
+  case "alerta":
+    svg = pattern("#4a0f14","#420d12") + `<g class="tri" transform="translate(640,280)"><path d="M0 -170 L170 120 H-170 Z" fill="#ffcc33" stroke="#ffcc33" stroke-width="30" stroke-linejoin="round"/><rect x="-14" y="-80" width="28" height="120" rx="12" fill="#2a1e1e"/><circle cy="80" r="17" fill="#2a1e1e"/></g>`;
+    html = `<div class="tag tt" style="left:0;width:1280px;text-align:center;top:470px;font-size:80px">${esc(P.titulo)}</div><div class="tag ts" style="left:0;width:1280px;text-align:center;top:575px;font-size:36px;color:#ffcc33">${esc(P.sub)}</div>`;
+    fx=()=>{ pop(`#${id} .tri`,S+.1,{duration:.5}); tl.to(`#${id} .tri`,{scale:1.06,svgOrigin:"640 280",duration:.45,yoyo:true,repeat:7,ease:"sine.inOut"},S+.6);
+             tl.fromTo(`#${id} .tt`,{opacity:0,y:30},{opacity:1,y:0,duration:.35},S+.4); tl.fromTo(`#${id} .ts`,{opacity:0},{opacity:1,duration:.4},S+1.5); };
+    break;
+  case "essencial":
+    svg = pattern("#1f5132","#1b4a2d") + `
+      <g transform="translate(400,330)" class="e1" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"><path d="M0 -95 q-80 -10 -95 50 q-28 12 -12 56 q-12 50 56 56 q22 22 51 0 z M0 -95 q80 -10 95 50 q28 12 12 56 q12 50 -56 56 q-22 22 -51 0"/><path d="M0 -95 V68"/></g>
+      <g transform="translate(880,330)" class="e2"><path d="M0 90 C-160 -10 -110 -130 0 -60 C110 -130 160 -10 0 90 Z" fill="none" stroke="#fff" stroke-width="9"/><path d="M-90 0 h50 l20 -40 l25 70 l20 -30 h65" stroke="#ff6b6b" stroke-width="8" fill="none" stroke-linejoin="round" class="pulso"/></g>`;
+    html = `<div class="tag tt" style="left:0;width:1280px;text-align:center;top:60px;font-size:58px">${esc(P.titulo)}</div><div class="ico l1" style="left:230px;top:470px">${esc(P.i1)}</div><div class="ico l2" style="left:710px;top:470px">${esc(P.i2)}</div>`;
+    fx=()=>{ camera(1,1.05); tl.fromTo(`#${id} .tt`,{opacity:0,y:-30},{opacity:1,y:0,duration:.4},S);
+             pop(`#${id} .e1`,S+.8); tl.fromTo(`#${id} .l1`,{opacity:0},{opacity:1,duration:.3},S+1);
+             pop(`#${id} .e2`,S+2.6); tl.fromTo(`#${id} .l2`,{opacity:0},{opacity:1,duration:.3},S+2.8);
+             tl.fromTo(`#${id} .pulso`,{strokeDasharray:400,strokeDashoffset:400},{strokeDashoffset:0,duration:.9,repeat:1},S+2.8); };
+    break;
+  case "cta":
+    svg = quarto() + `<rect x="300" y="420" width="520" height="24" fill="#c58a54"/><rect x="320" y="444" width="18" height="120" fill="#8a5a3c"/><rect x="780" y="444" width="18" height="120" fill="#8a5a3c"/>
+      <rect x="420" y="250" width="290" height="170" rx="10" fill="#2a2a33"/><rect x="434" y="264" width="262" height="142" fill="#e9eef7"/>
+      <g class="btn" transform="translate(565,335)"><rect x="-105" y="-30" width="210" height="60" rx="10" fill="#e2412f"/><text y="11" text-anchor="middle" font-size="26" fill="#fff" font-weight="900">${esc(P.botao)}</text></g>
+      <path class="cur" d="M0 0 L0 36 L10 26 L18 42 L24 39 L16 24 L30 24 Z" fill="#fff" stroke="#2a2a33" stroke-width="3"/>
+      <g transform="translate(960,620)">${boneco(id+"r",{mood:"ok",bags:.3})}</g>`;
+    html = balao(P.balao, 620, 110, 330);
+    fx=()=>{ camera(1,1.08,-30);
+             tl.fromTo(`#${id} .cur`,{x:760,y:470},{x:600,y:345,duration:1.2,ease:"power2.inOut"},S+.6);
+             tl.to(`#${id} .btn`,{scale:.9,svgOrigin:"565 335",duration:.12,yoyo:true,repeat:1},S+1.9);
+             tl.to(`#${id} .btn rect`,{fill:"#8a8a94",duration:.1},S+2);
+             tl.to(`#${id} .btn text`,{opacity:.4,duration:.1},S+2);
+             pop(`#${id} .balao`,S+3);
+             tl.fromTo(`#${id}r .armLi`,{rotation:0,svgOrigin:"0 0"},{rotation:150,duration:.4,yoyo:true,repeat:5},S+3.2);
+             blink(`#${id}r .eyes`,S+5.5); };
+    break;
+  }
+  el.innerHTML = `<div class="cam">${svg?`<svg class="bg" viewBox="0 0 1280 720">${svg}</svg>`:""}${html}</div>`;
+  if(it.props.scene==="card") el.innerHTML = html;
+  stage.appendChild(el);
+  fx();
+  // corte seco com leve wipe (estilo do canal): entra deslizando 40px
+  tl.set(`#${id}`,{opacity:1},S);
+  tl.fromTo(`#${id}`,{x:40},{x:0,duration:.25,ease:"power2.out"},S);
+  tl.set(`#${id}`,{opacity:0},S+D);
+}
+EDIT.items.filter(i=>i.type==="scene" && i.by==="template" && !i.hidden).forEach(cena);
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+})();</script>
+</body></html>

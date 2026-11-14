@@ -1,0 +1,28 @@
+{
+ "video": 8,
+ "estilo": "PSICOLOGIA FILOSOFIA SOMBRIA (pinturas clássicas, Einzelgänger)",
+ "inicio": "2026-10-21T23:35:28.1381726-03:00",
+ "fim": "2026-10-21T23:51:54.7881401-03:00",
+ "minutos": 16.4,
+ "render_segundos": {
+  "render1": 120,
+  "render2_correcao": 88,
+  "obs": "inclui ~4,5 min de espera na fila .render-lock no 1º render"
+ },
+ "observacoes": "13 pinturas domínio público (Wikimedia, créditos em img/creditos.json) com Ken Burns lento + crossfade 0,2 s, grade escuro/dessaturado (P&B nas cenas de imaginação), vinheta+grão, Cormorant Garamond reta/itálica em 2 linhas escalonadas. Sem SFX, sem música. 1 re-render: texto sobreposto no bloco Sêneca e citação ilegível sobre Goya (ganhou faixa escura). Referência real é ensaio com clipes de desenho (Lula Molusco) — copiei ritmo/clima/título, troquei visual por pinturas como pedido. edit.json no formato do EDITOR VIDEOS (template generic), gerado por tools/make_edit.py.",
+ "estimativa_30min": {
+  "horas_maquina": 1.2,
+  "o_que_escala": "Escala linear: nº de pinturas (~1 a cada 5 s → ~360; reaproveitando com cortes/zoom diferentes ~150 únicas), download Wikimedia (~1,5 s/img + rate-limit 429), whisper small CPU (~1 min por 1 min de áudio → ~25-30 min), render draft (~1,5-2 min por min de vídeo → ~50-60 min, renderizar em blocos). Reaproveitado: grade/vinheta/grão, fontes, gerador make_edit.py (só trocar lista de cenas/textos), pipeline de mux. Gargalo humano/LLM: escolher pintura certa por frase — automatizável com tabela tema→busca Commons."
+ },
+ "tokens": {
+  "novos": 92407,
+  "totais": 3798537,
+  "cache_lido": 3706130,
+  "cache_gravado": 71553,
+  "saida": 20784,
+  "entrada": 70,
+  "passos": 35
+ },
+ "custo_usd": 1.73,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

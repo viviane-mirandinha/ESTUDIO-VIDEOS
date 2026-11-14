@@ -1,0 +1,431 @@
+{
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "audio": "voz.mp3",
+ "build_script": "build.py",
+ "hyperframes_project": "proj",
+ "cenas": [
+  {
+   "start": 0,
+   "dur": 7.6,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 2070.0,
+    "scale": 0.165
+   }
+  },
+  {
+   "start": 7.6,
+   "dur": 1.2,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 2070.0,
+    "scale": 0.18
+   }
+  },
+  {
+   "start": 8.8,
+   "dur": 2.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 600,
+    "cy": 300,
+    "scale": 0.95
+   }
+  },
+  {
+   "start": 10.9,
+   "dur": 0.7,
+   "tipo": "camera",
+   "params": {
+    "cx": 600,
+    "cy": 330,
+    "scale": 1.02
+   }
+  },
+  {
+   "start": 11.6,
+   "dur": 5.8,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 720.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 17.4,
+   "dur": 1.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 720.0,
+    "scale": 1.06
+   }
+  },
+  {
+   "start": 18.5,
+   "dur": 8.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 1320.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 26.6,
+   "dur": 1.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 1320.0,
+    "scale": 1.07
+   }
+  },
+  {
+   "start": 27.7,
+   "dur": 10.2,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 1920.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 37.9,
+   "dur": 1.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 1920.0,
+    "scale": 1.08
+   }
+  },
+  {
+   "start": 39.0,
+   "dur": 7.3,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 2520.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 46.3,
+   "dur": 1.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 2520.0,
+    "scale": 1.07
+   }
+  },
+  {
+   "start": 47.4,
+   "dur": 8.2,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 3120.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 55.6,
+   "dur": 4.7,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 3160.0,
+    "scale": 1.08
+   }
+  },
+  {
+   "start": 60.3,
+   "dur": 1.1,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 3240.0,
+    "scale": 1.1
+   }
+  },
+  {
+   "start": 61.4,
+   "dur": 2.2,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 3720.0,
+    "scale": 1.0
+   }
+  },
+  {
+   "start": 63.6,
+   "dur": 1.7,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 3720.0,
+    "scale": 1.06
+   }
+  },
+  {
+   "start": 65.3,
+   "dur": 1.9,
+   "tipo": "camera",
+   "params": {
+    "cx": 640,
+    "cy": 2070.0,
+    "scale": 0.165
+   }
+  },
+  {
+   "start": 13.6,
+   "dur": 3.7,
+   "tipo": "imagem",
+   "src": "proj/P/sup.jpg",
+   "texto": "Tubarões e baleias"
+  },
+  {
+   "start": 22.3,
+   "dur": 4.2,
+   "tipo": "imagem",
+   "src": "proj/P/bio.jpg",
+   "texto": "Criaturas bioluminescentes"
+  },
+  {
+   "start": 29.1,
+   "dur": 8.7,
+   "tipo": "imagem",
+   "src": "proj/P/lula.jpg",
+   "texto": "Lula-gigante"
+  },
+  {
+   "start": 39.3,
+   "dur": 6.9,
+   "tipo": "imagem",
+   "src": "proj/P/vent.jpg",
+   "texto": "Fontes hidrotermais"
+  },
+  {
+   "start": 48.0,
+   "dur": 8.4,
+   "tipo": "imagem",
+   "src": "proj/P/fossa.jpg",
+   "texto": "Fossa das Marianas"
+  },
+  {
+   "start": 56.5,
+   "dur": 3.7,
+   "tipo": "imagem",
+   "src": "proj/P/titanic.jpg",
+   "texto": "Titanic · ~3.800 m"
+  },
+  {
+   "start": 60.7,
+   "dur": 3.1,
+   "tipo": "imagem",
+   "src": "proj/P/unk.jpg",
+   "texto": "O que ainda não vimos"
+  },
+  {
+   "start": 33.6,
+   "dur": 4.2,
+   "tipo": "chip",
+   "texto": "2012 · filmada viva no Japão"
+  },
+  {
+   "start": 41.5,
+   "dur": 4.7,
+   "tipo": "chip",
+   "texto": "descobertas em 1977"
+  },
+  {
+   "start": 44.2,
+   "dur": 2.0,
+   "tipo": "chip",
+   "texto": "vida sem luz solar"
+  },
+  {
+   "start": 51.6,
+   "dur": 4.8,
+   "tipo": "chip",
+   "texto": "≈ 11.000 metros"
+  },
+  {
+   "start": 53.1,
+   "dur": 3.3,
+   "tipo": "chip",
+   "texto": "pressão esmagadora"
+  },
+  {
+   "start": 58.1,
+   "dur": 2.1,
+   "tipo": "chip",
+   "texto": "repousa a ~3.800 m"
+  },
+  {
+   "start": 1.3,
+   "dur": 6.6,
+   "tipo": "stat",
+   "texto": "70% do planeta é oceano"
+  },
+  {
+   "start": 3.5,
+   "dur": 4.4,
+   "tipo": "stat",
+   "texto": "+80% do fundo sem mapa detalhado"
+  },
+  {
+   "start": 13.68,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Tubarões",
+   "params": {
+    "camada": 1
+   }
+  },
+  {
+   "start": 14.62,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Baleias",
+   "params": {
+    "camada": 1
+   }
+  },
+  {
+   "start": 19.5,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Luz desaparece",
+   "params": {
+    "camada": 2
+   }
+  },
+  {
+   "start": 22.4,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Bioluminescência",
+   "params": {
+    "camada": 2
+   }
+  },
+  {
+   "start": 33.7,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Filmada em 2012",
+   "params": {
+    "camada": 3
+   }
+  },
+  {
+   "start": 29.16,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Lula-gigante",
+   "params": {
+    "camada": 3
+   }
+  },
+  {
+   "start": 41.56,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "1977",
+   "params": {
+    "camada": 4
+   }
+  },
+  {
+   "start": 44.7,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Vida sem sol",
+   "params": {
+    "camada": 4
+   }
+  },
+  {
+   "start": 39.4,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Fontes hidrotermais",
+   "params": {
+    "camada": 4
+   }
+  },
+  {
+   "start": 48.06,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Fossa das Marianas",
+   "params": {
+    "camada": 5
+   }
+  },
+  {
+   "start": 51.64,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "~11.000 m",
+   "params": {
+    "camada": 5
+   }
+  },
+  {
+   "start": 53.12,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Pressão esmagadora",
+   "params": {
+    "camada": 5
+   }
+  },
+  {
+   "start": 56.62,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Titanic (3.800 m)",
+   "params": {
+    "camada": 5
+   }
+  },
+  {
+   "start": 60.7,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "???",
+   "params": {
+    "camada": 6
+   }
+  },
+  {
+   "start": 61.86,
+   "dur": null,
+   "tipo": "destaque_item",
+   "texto": "Ainda não descoberto",
+   "params": {
+    "camada": 6
+   }
+  },
+  {
+   "start": 64.0,
+   "dur": 3.2,
+   "tipo": "cta",
+   "texto": "INSCREVA-SE / Qual camada te assustou mais?"
+  }
+ ],
+ "estilo": "Iceberg"
+}

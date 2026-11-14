@@ -1,0 +1,24 @@
+{
+ "video": 4,
+ "estilo": "Documentário histórico com fotos de arquivo em Ken Burns, tom sépia/vintage (Segredos do Dinheiro Antigo)",
+ "inicio": "2026-10-21T23:35:12-03:00",
+ "fim": "2026-10-21T23:50:41-03:00",
+ "minutos": 15.5,
+ "render_segundos": 49,
+ "observacoes": "17 fotos reais de domínio público (Wikimedia/LoC: Knickerbocker Trust, multidão do pânico 1907, J.P. Morgan 1902, Morgan Library, NYSE, Fed Board 1914, 12 bancos do Fed). Ken Burns via GSAP, tint sépia/verde, moldura arredondada + vinheta, grão SVG, flicker de projetor, crossfade 0.5s, sem texto/legenda/SFX (igual à ref). Atrasos: whisper falhou 2x por falta de RAM (13 sessões) — resolvido com áudio raw + 2 threads; Wikimedia API deu 429 — resolvido com Special:FilePath. edit.json v1 (template generic) validado com build_from_edit.py; hf/index.html atual é do build.py (tint/pan exatos). MP4 23 MB (grão pesa no crf 28).",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Linear com duração: nº de fotos (~1 a cada 3.5 s → ~500 cenas; com repetição/crops ~150-200 fotos únicas), busca/download Wikimedia com rate-limit (~40-60 min), whisper small CPU (~4-6 min), render draft (~49 s/min → ~25 min; full quality ~2-3x). Reaproveitado: build.py/edit.json, CSS de tint/vinheta/grão, script de busca. Gargalo real: curadoria de imagens que façam sentido com a fala (precisa de lista de queries por parágrafo; Claude ~80-120k tokens)."
+ },
+ "tokens": {
+  "novos": 95101,
+  "totais": 3337900,
+  "cache_lido": 3242799,
+  "cache_gravado": 73821,
+  "saida": 21218,
+  "entrada": 62,
+  "passos": 31
+ },
+ "custo_usd": 1.66,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

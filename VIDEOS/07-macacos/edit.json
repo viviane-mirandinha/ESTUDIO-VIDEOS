@@ -1,0 +1,576 @@
+{
+ "version": 1,
+ "name": "07 - METAFORA PERSONAGEM FIXO - Esquema de pirâmide explicado com macacos e bananas",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#ffffff"
+ },
+ "duration": 60.88,
+ "template": "local",
+ "fonts": {},
+ "head": "",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "a1",
+    "src": "sfx/whoosh.wav",
+    "start": 5.1,
+    "volume": 0.15,
+    "label": "whoosh s3"
+   },
+   {
+    "id": "a2",
+    "src": "sfx/whoosh.wav",
+    "start": 20.86,
+    "volume": 0.15,
+    "label": "whoosh s8"
+   },
+   {
+    "id": "a3",
+    "src": "sfx/whoosh.wav",
+    "start": 33.76,
+    "volume": 0.15,
+    "label": "whoosh s13"
+   },
+   {
+    "id": "a4",
+    "src": "sfx/whoosh.wav",
+    "start": 45.18,
+    "volume": 0.15,
+    "label": "whoosh s17"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "gorila+balao pensamento (banana=2 bananas)",
+   "start": 0,
+   "dur": 2.7,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "closeup gorila + texto",
+   "start": 2.7,
+   "dur": 2.52,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Bento + nome",
+   "start": 5.22,
+   "dur": 1.9,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s4",
+   "type": "scene",
+   "track": "fundo",
+   "label": "floresta, Bento entra",
+   "start": 7.12,
+   "dur": 3.38,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s5",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Bento x gorila, bananas x2",
+   "start": 10.5,
+   "dur": 2.84,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s6",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Bento + texto",
+   "start": 13.34,
+   "dur": 1.7,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s7",
+   "type": "scene",
+   "track": "fundo",
+   "label": "recrutamento em arvore",
+   "start": 15.04,
+   "dur": 5.94,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s8",
+   "type": "scene",
+   "track": "fundo",
+   "label": "cartela titulo + arvore X",
+   "start": 20.98,
+   "dur": 2.34,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s9",
+   "type": "scene",
+   "track": "fundo",
+   "label": "produto X / lucro X",
+   "start": 23.32,
+   "dur": 2.28,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "bananas novos->antigos",
+   "start": 25.6,
+   "dur": 4.44,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "piramide topo ganha",
+   "start": 30.04,
+   "dur": 2.06,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "zoom base perde",
+   "start": 32.1,
+   "dur": 1.78,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "piramide crescendo",
+   "start": 33.88,
+   "dur": 3.24,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "multidao some",
+   "start": 37.12,
+   "dur": 3.08,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "piramide desaba",
+   "start": 40.2,
+   "dur": 3.16,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s16",
+   "type": "scene",
+   "track": "fundo",
+   "label": "bananas em chamas",
+   "start": 43.36,
+   "dur": 1.94,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "fundo",
+   "label": "cartela sinais de alerta",
+   "start": 45.3,
+   "dur": 2.32,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s18",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Bento promessa + grafico",
+   "start": 47.62,
+   "dur": 2.38,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s19",
+   "type": "scene",
+   "track": "fundo",
+   "label": "balanca recrutar x vender",
+   "start": 50,
+   "dur": 4.36,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s20",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Bento grades CRIME",
+   "start": 54.36,
+   "dur": 3.1,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s21",
+   "type": "scene",
+   "track": "fundo",
+   "label": "CTA inscreva-se",
+   "start": 57.46,
+   "dur": 3.42,
+   "by": "template",
+   "props": {
+    "scene": "local",
+    "params": {}
+   }
+  },
+  {
+   "id": "s1_t1",
+   "type": "param",
+   "label": "Texto s1 #1",
+   "props": {
+    "value": "="
+   }
+  },
+  {
+   "id": "s2_t1",
+   "type": "param",
+   "label": "Texto s2 #1",
+   "props": {
+    "value": "sem fazer\nnada?"
+   }
+  },
+  {
+   "id": "s3_t1",
+   "type": "param",
+   "label": "Texto s3 #1",
+   "props": {
+    "value": "Bento"
+   }
+  },
+  {
+   "id": "s5_t1",
+   "type": "param",
+   "label": "Texto s5 #1",
+   "props": {
+    "value": "bananas em dobro"
+   }
+  },
+  {
+   "id": "s6_t1",
+   "type": "param",
+   "label": "Texto s6 #1",
+   "props": {
+    "value": "mas tem\num detalhe..."
+   }
+  },
+  {
+   "id": "s7_t1",
+   "type": "param",
+   "label": "Texto s7 #1",
+   "props": {
+    "value": "traga mais\nmacacos"
+   }
+  },
+  {
+   "id": "s7_t2",
+   "type": "param",
+   "label": "Texto s7 #2",
+   "props": {
+    "value": "e pague\npara entrar"
+   }
+  },
+  {
+   "id": "s8_t1",
+   "type": "param",
+   "label": "Texto s8 #1",
+   "props": {
+    "value": "só que não existe\nplantação nenhuma"
+   }
+  },
+  {
+   "id": "s9_t1",
+   "type": "param",
+   "label": "Texto s9 #1",
+   "props": {
+    "value": "produto"
+   }
+  },
+  {
+   "id": "s9_t2",
+   "type": "param",
+   "label": "Texto s9 #2",
+   "props": {
+    "value": "lucro real"
+   }
+  },
+  {
+   "id": "s10_t1",
+   "type": "param",
+   "label": "Texto s10 #1",
+   "props": {
+    "value": "antigos"
+   }
+  },
+  {
+   "id": "s10_t2",
+   "type": "param",
+   "label": "Texto s10 #2",
+   "props": {
+    "value": "novos"
+   }
+  },
+  {
+   "id": "s11_t1",
+   "type": "param",
+   "label": "Texto s11 #1",
+   "props": {
+    "value": "topo:\nganha"
+   }
+  },
+  {
+   "id": "s12_t1",
+   "type": "param",
+   "label": "Texto s12 #1",
+   "props": {
+    "value": "base:\nperde"
+   }
+  },
+  {
+   "id": "s13_t1",
+   "type": "param",
+   "label": "Texto s13 #1",
+   "props": {
+    "value": "precisa de novos macacos"
+   }
+  },
+  {
+   "id": "s14_t1",
+   "type": "param",
+   "label": "Texto s14 #1",
+   "props": {
+    "value": "a floresta é limitada"
+   }
+  },
+  {
+   "id": "s15_t1",
+   "type": "param",
+   "label": "Texto s15 #1",
+   "props": {
+    "value": "desaba!"
+   }
+  },
+  {
+   "id": "s16_t1",
+   "type": "param",
+   "label": "Texto s16 #1",
+   "props": {
+    "value": "perde tudo"
+   }
+  },
+  {
+   "id": "s17_t1",
+   "type": "param",
+   "label": "Texto s17 #1",
+   "props": {
+    "value": "sinais de alerta"
+   }
+  },
+  {
+   "id": "s18_t1",
+   "type": "param",
+   "label": "Texto s18 #1",
+   "props": {
+    "value": "fácil e\nrápido!"
+   }
+  },
+  {
+   "id": "s18_t2",
+   "type": "param",
+   "label": "Texto s18 #2",
+   "props": {
+    "value": "como ficar rico rápido?"
+   }
+  },
+  {
+   "id": "s19_t1",
+   "type": "param",
+   "label": "Texto s19 #1",
+   "props": {
+    "value": "recrutar"
+   }
+  },
+  {
+   "id": "s19_t2",
+   "type": "param",
+   "label": "Texto s19 #2",
+   "props": {
+    "value": "vender"
+   }
+  },
+  {
+   "id": "s20_t1",
+   "type": "param",
+   "label": "Texto s20 #1",
+   "props": {
+    "value": "no brasil:"
+   }
+  },
+  {
+   "id": "s20_t2",
+   "type": "param",
+   "label": "Texto s20 #2",
+   "props": {
+    "value": "crime"
+   }
+  },
+  {
+   "id": "s21_t1",
+   "type": "param",
+   "label": "Texto s21 #1",
+   "props": {
+    "value": "já viu um Bento\npor aí? comente!"
+   }
+  },
+  {
+   "id": "txt1",
+   "type": "text",
+   "track": "textos",
+   "label": "DA LIKE ",
+   "start": 38.6,
+   "dur": 3,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "NOVO TEXTO",
+    "x": 640,
+    "y": 540,
+    "size": 50,
+    "color": "#ffffff",
+    "weight": 900,
+    "bg": "rgba(0,0,0,.6)",
+    "font": "Inter",
+    "align": "center",
+    "highlight": [],
+    "hl_color": "#ffb020",
+    "w": ""
+   }
+  }
+ ],
+ "estilo": "Metáfora com personagem fixo",
+ "referencia": {
+  "video": "https://youtu.be/dB10EUmjHyc",
+  "canal": "Primate Economics",
+  "canal_url": "https://www.youtube.com/channel/UC14Fb2zWTEZklONPXFbLrTQ",
+  "titulo": "The Biggest Ponzi Scheme Explained with Bananas",
+  "nota": "Primate Economics"
+ }
+}

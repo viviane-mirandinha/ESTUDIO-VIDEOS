@@ -1,0 +1,24 @@
+{
+ "video": 5,
+ "estilo": "iceberg (Psychopoly)",
+ "inicio": "2026-10-21T23:35:18.4149715-03:00",
+ "fim": "2026-10-22T00:01:19.827388-03:00",
+ "minutos": 26.0,
+ "render_segundos": 37,
+ "observacoes": "Iceberg 100% SVG/HTML (build.py gera proj/index.html): 6 camadas com faixas que escurecem, itens em texto branco c/ sombra, item falado destacado (caixa amarela + zoom), camera desce camada a camada, painel de foto a direita + chips de fatos, medidor de profundidade, bolhas, CTA final com zoom-out. Imagens: 3 Flux/Pollinations (sup, bio, unk) + 4 Wikimedia Commons (lula Giant_squid_Ranheim, vent MARUM_Schwarzer_Raucher, titanic Titanic_wreck_bow, fossa Challenger_Deep_Dive Vescovo) - checar licenca/credito antes de publicar. Pollinations com rate-limit 1 img/45s por IP (compartilhado entre sessoes) atrasou ~10 min. Whisper small teve mkl_malloc (RAM) na 1a tentativa. Audio: voz + whoosh suave (ruido rosa filtrado) nas 8 descidas + drone 55Hz baixo. Render esperou ~10 min na fila do lock; render em si 37 s.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Reaproveita: build.py inteiro (motor de camera, estilo, SVG do iceberg - so aumentar numero de camadas/altura), mix de audio, fluxo. Escala com duracao: whisper (~1-2 min CPU), imagens (~1 por item; 30 min ~ 60-80 itens -> Pollinations 45 s/img ~ 1 h, ou Wikimedia mais rapido), lista de itens/camadas (tokens: ~150-250k para roteiro->itens->posicoes), render draft ~37 s/min -> ~20 min p/ 30 min. Sugestao: dividir iceberg em 8-10 camadas c/ 6-8 itens, itens/imagens gerados de um JSON."
+ },
+ "tokens": {
+  "novos": 120204,
+  "totais": 4759513,
+  "cache_lido": 4639309,
+  "cache_gravado": 86667,
+  "saida": 33455,
+  "entrada": 82,
+  "passos": 41
+ },
+ "custo_usd": 2.29,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

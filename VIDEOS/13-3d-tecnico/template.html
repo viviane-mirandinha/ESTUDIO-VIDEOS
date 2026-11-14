@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/"
+} }
+</script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#07080b;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#07080b;font-family:Inter,Arial,sans-serif;color:#fff;}
+#three-layer{position:absolute;left:0;top:0;width:1280px;height:720px;display:block;}
+#vign{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%);}
+#labels{position:absolute;inset:0;pointer-events:none}
+#labels svg{position:absolute;inset:0;width:1280px;height:720px}
+.lab{position:absolute;font-size:23px;font-weight:300;letter-spacing:.01em;white-space:nowrap;opacity:0;
+ text-shadow:0 0 8px rgba(0,0,0,.9),0 2px 3px rgba(0,0,0,.8)}
+#dip{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+ <canvas id="three-layer" width="1280" height="720"></canvas>
+ <div id="vign"></div>
+ <div id="labels"><svg id="lsvg" viewBox="0 0 1280 720"></svg></div>
+ <!--__ITEMS__-->
+ <div id="dip"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+window.__hfRender = window.__hfRender || null;
+const tl = gsap.timeline({paused:true, onUpdate:()=>{ if(window.__hfRender) window.__hfRender(tl.time()); }});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script type="module">
+import * as THREE from "three";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+const W=1280,H=720,DUR=__DUR__;
+const EDIT=__EDIT__;
+const ED=Object.fromEntries(EDIT.items.map(i=>[i.id,i]));
+const ACC=(ED.cor_rotulo&&ED.cor_rotulo.props.value)||"#8dff4f";
+const T_DIES=ED.sc_dies.start, T_CELL=ED.sc_celula.start, T_FIN=ED.sc_final.start;
+
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const lerp=(a,b,k)=>a+(b-a)*k;
+const sm=k=>{k=clamp(k);return k*k*(3-2*k);};
+const io=k=>{k=clamp(k);return -(Math.cos(Math.PI*k)-1)/2;};
+const seg=(t,a,b)=>sm((t-a)/(b-a));
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const R=rng(1313);
+
+// ---------- renderer ----------
+const canvas=document.getElementById("three-layer");
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1); renderer.setSize(W,H,false);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.05;
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene();
+scene.background=new THREE.Color("#07080b");
+scene.fog=new THREE.FogExp2("#07080b",0.028);
+const pm=new THREE.PMREMGenerator(renderer);
+scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;
+scene.environmentIntensity=0.45;
+const camera=new THREE.PerspectiveCamera(35,W/H,0.05,400);
+
+const amb=new THREE.AmbientLight("#9fb0c8",0.18); scene.add(amb);
+const key=new THREE.DirectionalLight("#fff4e6",2.4); key.castShadow=true;
+key.shadow.mapSize.set(2048,2048); Object.assign(key.shadow.camera,{left:-9,right:9,top:9,bottom:-9,near:0.5,far:40});
+key.shadow.bias=-0.0004; scene.add(key); scene.add(key.target);
+const rim=new THREE.DirectionalLight("#7fb0ff",0.55); scene.add(rim); scene.add(rim.target);
+
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(600,600),new THREE.MeshStandardMaterial({color:"#0c0e13",roughness:.75,metalness:.15}));
+floor.rotation.x=-Math.PI/2; floor.position.y=-1.3; floor.receiveShadow=true; scene.add(floor);
+
+const M=(o)=>new THREE.MeshStandardMaterial(o);
+const box=(w,h,d,mat,x=0,y=0,z=0,parent)=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;if(parent)parent.add(m);return m;};
+
+// ---------- PENDRIVE (P) ----------
+const P=new THREE.Group(); P.position.set(0,-0.93,0); scene.add(P);
+const mPCB=M({color:"#0e3a2b",roughness:.55,metalness:.15});
+const mGold=M({color:"#d9a441",roughness:.25,metalness:1});
+const mSteel=M({color:"#c9ccd2",roughness:.18,metalness:1});
+const mChip=M({color:"#121317",roughness:.35,metalness:.2});
+const mCase=new THREE.MeshPhysicalMaterial({color:"#1c1f27",roughness:.3,metalness:.1,clearcoat:1,clearcoatRoughness:.15});
+const pcb=box(3.6,0.07,1.2,mPCB,0,0,0,P);
+// traces
+for(let i=0;i<14;i++){const z=-0.5+i*0.077; box(1.0+R()*0.9,0.004,0.018,mGold,0.6+R()*0.2,0.037,z,P);}
+// USB connector
+const usb=new THREE.Group(); usb.position.set(2.3,0.12,0); P.add(usb);
+box(1.1,0.2,0.62,mSteel,0,0,0,usb);
+box(0.02,0.14,0.54,M({color:"#050505",roughness:.9}),0.56,0,0,usb);
+box(0.7,0.035,0.4,M({color:"#1d4fd8",roughness:.5}),0.18,-0.02,0,usb);
+for(const z of [-0.14,0.14]) box(0.12,0.01,0.08,M({color:"#050505"}),0.3,0.101,z,usb);
+// controller
+const ctrl=new THREE.Group(); ctrl.position.set(0.85,0.08,0); P.add(ctrl);
+box(0.55,0.08,0.55,mChip,0,0,0,ctrl);
+for(let i=0;i<8;i++){const o=-0.24+i*0.068; box(0.03,0.02,0.1,mGold,o,-0.03,0.31,ctrl);box(0.03,0.02,0.1,mGold,o,-0.03,-0.31,ctrl);box(0.1,0.02,0.03,mGold,0.31,-0.03,o,ctrl);box(0.1,0.02,0.03,mGold,-0.31,-0.03,o,ctrl);}
+// NAND
+const nand=new THREE.Group(); nand.position.set(-0.75,0.1,0); P.add(nand);
+box(1.5,0.12,0.9,mChip,0,0,0,nand);
+for(let i=0;i<14;i++){const o=-0.66+i*0.1; box(0.035,0.02,0.12,mGold,o,-0.05,0.5,nand);box(0.035,0.02,0.12,mGold,o,-0.05,-0.5,nand);}
+const dot=new THREE.Mesh(new THREE.CircleGeometry(0.04,20),M({color:"#2a2c33"})); dot.rotation.x=-Math.PI/2; dot.position.set(-0.62,0.061,0.33); nand.add(dot);
+// smd parts
+for(let i=0;i<10;i++) box(0.08,0.04,0.05,M({color:i%2?"#6b4a2b":"#2b2e36",roughness:.5}),-0.1+R()*0.5,0.055,-0.5+R()*1.0,P);
+box(0.12,0.06,0.08,M({color:"#ff3b30",emissive:"#ff2010",emissiveIntensity:1.5}),1.45,0.06,0.42,P);
+// casing
+const caseTop=box(3.1,0.26,1.42,mCase,-0.1,0.2,0,P);
+const caseBot=box(3.1,0.26,1.42,mCase,-0.1,-0.17,0,P);
+const ring=box(0.08,0.36,1.46,M({color:"#8d93a0",roughness:.25,metalness:1}),1.48,0.02,0,P);
+
+// ---------- DIES (D) ----------
+const D=new THREE.Group(); D.position.set(40,-1.25,0); scene.add(D);
+box(3.0,0.08,2.1,M({color:"#b87333",roughness:.3,metalness:1}),0,0.04,0,D);
+const mDie=new THREE.MeshPhysicalMaterial({color:"#b9a6ff",roughness:.22,metalness:.65,iridescence:1,iridescenceIOR:1.6,iridescenceThicknessRange:[200,800]});
+const dies=[]; for(let i=0;i<7;i++){const d=box(2.4,0.045,1.6,mDie,0,0.1+i*0.05,0,D); dies.push(d);}
+const bitCv=document.createElement("canvas"); bitCv.width=1024; bitCv.height=680;
+{const g=bitCv.getContext("2d"); g.fillStyle="rgba(0,0,0,0)"; g.fillRect(0,0,1024,680); g.font="300 40px Inter, Arial"; g.textAlign="center"; g.textBaseline="middle";
+ const r=rng(77); for(let y=0;y<12;y++)for(let x=0;x<18;x++){const b=r()<0.5?"0":"1"; g.fillStyle=b==="1"?ACC:"rgba(200,230,255,.85)"; g.fillText(b,30+x*54.5,30+y*55);}}
+const bitTex=new THREE.CanvasTexture(bitCv); bitTex.colorSpace=THREE.SRGBColorSpace;
+const bitMat=new THREE.MeshBasicMaterial({map:bitTex,transparent:true,opacity:0,depthWrite:false});
+const bits=new THREE.Mesh(new THREE.PlaneGeometry(2.3,1.53),bitMat); bits.rotation.x=-Math.PI/2; D.add(bits);
+
+// ---------- CELL (C) ----------
+const C=new THREE.Group(); C.position.set(80,0,0); scene.add(C);
+const mSub=M({color:"#3a4252",roughness:.55,metalness:.2,emissive:"#2a7bff",emissiveIntensity:0});
+const mSD=M({color:"#c07a3a",roughness:.35,metalness:.7});
+const mOx=new THREE.MeshPhysicalMaterial({color:"#a8dcff",roughness:.08,metalness:0,transparent:true,opacity:.55,clearcoat:1});
+const mFG=M({color:"#2f7a55",roughness:.35,metalness:.35});
+const mCG=M({color:"#b87333",roughness:.28,metalness:.9,emissive:ACC,emissiveIntensity:0});
+function cell(x,dim){
+  const g=new THREE.Group(); g.position.x=x; C.add(g);
+  box(7,1.2,2.6,mSub,0,-0.6,0,g);
+  box(1.6,0.5,2.62,mSD,-2.4,-0.24,0,g); box(1.6,0.5,2.62,mSD,2.4,-0.24,0,g);
+  box(3.0,0.16,2.6,mOx,0,0.08,0,g); box(3.0,0.5,2.6,mFG,0,0.41,0,g);
+  box(3.0,0.16,2.6,mOx,0,0.74,0,g); box(3.0,0.6,2.6,mCG,0,1.12,0,g);
+  box(0.35,1.5,0.35,mSD,-2.4,0.76,0,g); box(0.35,1.5,0.35,mSD,2.4,0.76,0,g);
+  return g;
+}
+cell(0); cell(-7.4); cell(7.4);
+// glow sprite
+const gCv=document.createElement("canvas"); gCv.width=gCv.height=64;
+{const g=gCv.getContext("2d"); const gr=g.createRadialGradient(32,32,0,32,32,32); gr.addColorStop(0,"rgba(120,220,255,1)"); gr.addColorStop(.35,"rgba(60,170,255,.55)"); gr.addColorStop(1,"rgba(40,120,255,0)"); g.fillStyle=gr; g.fillRect(0,0,64,64);}
+const gTex=new THREE.CanvasTexture(gCv);
+const eGeo=new THREE.SphereGeometry(0.055,14,10);
+function electron(){const g=new THREE.Group();
+  const m=new THREE.Mesh(eGeo,new THREE.MeshBasicMaterial({color:"#bff0ff",transparent:true}));
+  const s=new THREE.Sprite(new THREE.SpriteMaterial({map:gTex,blending:THREE.AdditiveBlending,transparent:true,depthWrite:false}));
+  s.scale.set(0.38,0.38,1); g.add(m); g.add(s); C.add(g); g.userData={m,s}; return g;}
+const setE=(e,op)=>{e.visible=op>0.01; e.userData.m.material.opacity=op; e.userData.s.material.opacity=op;};
+const ZF=1.36;
+const TRAP=[]; for(let i=0;i<26;i++){TRAP.push({e:electron(),x0:-1.3+R()*2.6,y0:-0.16+R()*0.12,x1:-1.3+R()*2.6,y1:0.24+R()*0.34,ph:R()*6.28,d:R()});}
+const FLOW=[]; for(let i=0;i<16;i++){FLOW.push({e:electron(),off:i/16,y:-0.2+R()*0.14,ph:R()*6.28});}
+const mDef=M({color:"#1b1206",roughness:.9});
+const DEF=[]; for(let i=0;i<34;i++){const d=box(0.04+R()*0.06,0.03+R()*0.05,0.02,mDef,-1.45+R()*2.9,0.02+R()*0.12,1.31,C); d.visible=false; DEF.push({m:d,k:R()});}
+
+// ---------- labels ----------
+const LABELS=EDIT.items.filter(i=>i.track==="rotulos");
+const lay=document.getElementById("labels"); const svg=document.getElementById("lsvg");
+const labEls=LABELS.map(L=>{const e=document.createElement("div"); e.className="lab"; e.style.color=ACC; e.textContent=L.props.text; lay.appendChild(e); return e;});
+const v3=new THREE.Vector3();
+const wp=(obj,x,y,z)=>{v3.set(x,y,z); return obj.localToWorld(v3.clone());};
+const ANCH={
+  pen:()=>wp(P,-0.4,0.35,0.7), usb:()=>wp(usb,0.1,0.1,0.3), ctrl:()=>wp(ctrl,0,0.05,0.28), nand:()=>wp(nand,-0.2,0.06,0.2),
+  bits:()=>wp(bits,0.6,0.3,0), cell:()=>wp(C,0,1.42,1.3), src:()=>wp(C,-2.4,-0.25,1.31), fg:()=>wp(C,1.2,0.41,1.31),
+  ox:()=>wp(C,1.25,0.08,1.31), cg:()=>wp(C,-1.0,1.25,1.31), elec:()=>wp(C,-0.7,0.42,ZF), chan:()=>wp(C,-0.3,-0.12,1.31), sub:()=>wp(C,0,-0.8,1.31)};
+function proj(p){const q=p.clone().project(camera); return [(q.x+1)/2*W,(1-q.y)/2*H,q.z];}
+
+// ---------- camera paths per scene ----------
+const SC=[
+ {g:"P",a:0,b:T_DIES,c:[0,-0.9,0],k:[[0,[5.6,1.4,5.2],[0,-0.95,0]],[5.2,[3.6,1.3,5.6],[0,-0.95,0]],[6.6,[2.8,2.6,4.6],[0.3,-0.9,0]],[8.4,[1.2,2.8,4.2],[0.4,-0.9,0]],[11.8,[-1.4,2.7,3.6],[-0.4,-0.9,0]],[T_DIES,[-0.75,0.15,0.35],[-0.75,-0.83,0]]]},
+ {g:"D",a:T_DIES,b:T_CELL,c:[40,-1,0],k:[[T_DIES,[44.2,2.2,4.8],[40,-0.6,0]],[T_CELL,[42.4,2.4,3.0],[40,-0.4,0]]]},
+ {g:"C",a:T_CELL,b:T_FIN,c:[80,0,0],k:[[T_CELL,[89,3.6,10.5],[80,0,0]],[19.2,[86,2.3,8.6],[80,0,0]],[23,[84.4,1.5,7.2],[80,0.2,0]],[29,[82.6,1.2,6.4],[80,0.25,0]],[33,[78.6,0.9,6.4],[80,0.05,0]],[37.3,[76.6,1.6,6.8],[80,0.15,0]],[42.2,[74.4,3.2,9.8],[80,0,0]],[45.3,[81,1.1,7.0],[80,0.1,0]],[49,[83.6,1.2,6.2],[80,0.1,0]],[T_FIN,[85.5,2.2,7.8],[80,0,0]]]},
+ {g:"P",a:T_FIN,b:DUR,c:[0,-0.9,0],k:[[T_FIN,[-4.6,1.1,4.8],[0,-0.95,0]],[57.4,[0.4,1.7,6.0],[0,-0.95,0]],[DUR,[5.2,1.0,4.2],[0.2,-0.95,0]]]},
+];
+function camAt(s,t){const k=s.k; if(t<=k[0][0]) return [k[0][1],k[0][2]];
+  for(let i=0;i<k.length-1;i++){const A=k[i],B=k[i+1]; if(t<=B[0]){const e=io((t-A[0])/(B[0]-A[0])); return [A[1].map((v,j)=>lerp(v,B[1][j],e)),A[2].map((v,j)=>lerp(v,B[2][j],e))];}}
+  const L=k[k.length-1]; return [L[1],L[2]];}
+const dip=document.getElementById("dip");
+
+function renderAt(t){
+  const s=SC.find(x=>t>=x.a&&t<x.b)||SC[SC.length-1];
+  const [cp,cl]=camAt(s,t); const sw=Math.sin(t*0.37)*0.05;
+  camera.position.set(cp[0]+sw,cp[1]+Math.sin(t*0.29)*0.03,cp[2]); camera.lookAt(cl[0],cl[1],cl[2]); camera.updateMatrixWorld(true);
+  P.visible=s.g==="P"; D.visible=s.g==="D"; C.visible=s.g==="C";
+  const c=s.c; key.target.position.set(c[0],c[1],c[2]); key.position.set(c[0]+5,c[1]+9,c[2]+6);
+  rim.target.position.set(c[0],c[1],c[2]); rim.position.set(c[0]-7,c[1]+3,c[2]-6);
+  // power off dims the lights
+  const off=s.g==="C"?seg(t,38.9,39.6)*(1-seg(t,44.8,45.6)):0;
+  key.intensity=2.4*(1-0.8*off); rim.intensity=0.55*(1-0.7*off); amb.intensity=0.18*(1-0.7*off); scene.environmentIntensity=0.45*(1-0.8*off);
+
+  // pendrive explode
+  let e=0, lift=0;
+  if(t<T_DIES){e=seg(t,5.2,6.6); lift=seg(t,6.4,7.6);} else {e=seg(t,52.6,54.0)*(1-seg(t,57.2,58.6)); lift=e;}
+  caseTop.position.set(-0.1,0.2+e*2.6,-e*0.4); caseTop.rotation.z=e*0.18;
+  caseBot.position.set(-0.1,-0.17-e*0.05,-e*2.4);
+  ring.position.set(1.48+e*0.0,0.02+e*2.6,-e*0.4); ring.rotation.z=e*0.18;
+  ctrl.position.y=0.08+lift*0.28; nand.position.y=0.1+lift*0.45; usb.position.x=2.3+lift*0.35;
+  P.rotation.y=(t>=T_FIN)?-0.15:0;
+
+  // dies stack explode + bits
+  const de=seg(t,T_DIES+0.3,T_DIES+1.4);
+  dies.forEach((d,i)=>{d.position.y=0.1+i*lerp(0.05,0.3,de);});
+  bits.position.y=0.1+6*lerp(0.05,0.3,de)+0.03;
+  bitMat.opacity=seg(t,T_DIES+0.8,T_DIES+1.4);
+
+  // cell: voltage + electrons
+  mCG.emissiveIntensity=0.22*seg(t,23.9,24.4)*(1-seg(t,28.6,29.2))*(0.75+0.25*Math.sin(t*9));
+  mSub.emissiveIntensity=0.35*seg(t,46.0,46.4)*(1-seg(t,48.6,49.1));
+  TRAP.forEach((q,i)=>{
+    const appear=seg(t,23.4+q.d*0.6,24.2+q.d*0.6);
+    const up=seg(t,25.1+i*0.12,25.1+i*0.12+0.9);
+    const down=seg(t,46.2+i*0.07,46.2+i*0.07+0.8);
+    let x=lerp(q.x0,q.x1,up), y=lerp(q.y0,q.y1,up);
+    if(up<1&&up>0) x+=Math.sin(up*Math.PI)*0.08*Math.sin(q.ph);
+    y=lerp(y,-0.75,down); x+=Math.sin(t*2.1+q.ph)*0.012*(up>=1?1:0);
+    q.e.position.set(x,y+Math.cos(t*1.7+q.ph)*0.01,ZF);
+    setE(q.e,appear*(1-seg(t,46.6+i*0.07,47.0+i*0.07)));
+  });
+  // channel current: free flow (transistor demo) then blocked during read
+  FLOW.forEach((f,i)=>{
+    const on1=seg(t,19.5,20.0)*(1-seg(t,22.6,23.1));
+    const on2=seg(t,33.6,34.1)*(1-seg(t,37.0,37.4));
+    let op=0,x=0;
+    if(on1>0){const u=((t-19.5)*0.55+f.off)%1; x=lerp(-2.6,2.6,u); op=on1*sm(Math.min(u,1-u)*8);}
+    else if(on2>0){const u=((t-33.6)*0.35+f.off)%1; x=lerp(-2.6,-0.8,u); op=on2*sm((1-u)*4)*sm(u*8);}
+    f.e.position.set(x,f.y+Math.sin(t*3+f.ph)*0.015,ZF); setE(f.e,op);
+  });
+  DEF.forEach(d=>{d.m.visible=t>=49.4+d.k*2.0&&t<T_FIN+1;});
+  mOx.color.set(t>=49.4&&t<T_FIN?"#c8b48a":"#a8dcff");
+
+  renderer.render(scene,camera);
+
+  // dips between scenes
+  let dp=0; for(const b of [T_DIES,T_CELL,T_FIN]) dp=Math.max(dp,1-clamp(Math.abs(t-b)/0.3));
+  dp=Math.max(dp,1-clamp(t/0.4),1-clamp((DUR-t)/0.6)); dip.style.opacity=sm(dp);
+
+  // labels + leader lines
+  let lines="";
+  LABELS.forEach((L,i)=>{const el=labEls[i]; const a=L.start,b=L.start+L.dur;
+    const op=L.hidden?0:Math.min(seg(t,a,a+0.3),1-seg(t,b-0.3,b));
+    if(op<=0||!ANCH[L.props.anchor]){el.style.opacity=0;return;}
+    const [x,y,z]=proj(ANCH[L.props.anchor]()); if(z>1){el.style.opacity=0;return;}
+    const lx=x+(L.props.dx||0), ly=y+(L.props.dy||0); const w=el.offsetWidth,h=el.offsetHeight;
+    const right=(L.props.dx||0)>=0; let left=right?lx+6:lx-w-6; left=clamp(left,30,W-30-w); const top=clamp(ly-h/2,24,H-24-h);
+    el.style.left=left+"px"; el.style.top=top+"px"; el.style.opacity=op;
+    const ex=right?left-4:left+w+4, ey=top+h/2; const dk=seg(t,a,a+0.5);
+    const mx=lerp(ex,x,dk), my=lerp(ey,y,dk);
+    lines+=`<g opacity="${op}"><line x1="${ex}" y1="${ey}" x2="${mx}" y2="${my}" stroke="${ACC}" stroke-width="1.6"/>`+
+      (dk>0.9?`<circle cx="${x}" cy="${y}" r="4" fill="${ACC}"/>`:"")+`</g>`;});
+  svg.innerHTML=lines;
+}
+window.__hfRender=renderAt;
+window.addEventListener("hf-seek",ev=>renderAt(ev.detail.time));
+renderAt(window.__hfThreeTime||0);
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

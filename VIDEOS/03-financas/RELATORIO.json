@@ -1,0 +1,24 @@
+{
+ "video": 3,
+ "estilo": "Finanças com stock footage + gráficos simples e cards de capítulo (Economics Explained)",
+ "inicio": "2026-10-21T23:35:11-03:00",
+ "fim": "2026-10-22T00:02:02-03:00",
+ "minutos": 26.9,
+ "render_segundos": 45,
+ "observacoes": "6 clipes de banco de vídeos (não incluídos no pacote) + 3 fotos Wikimedia (supermercado, feira, cédulas). 3 cenas novas reutilizáveis em EDITOR VIDEOS/templates/scenes: ee_capitulo (fita amarela + papel rasgado), ee_linha (line/area chart com marcas), ee_barras. Dados reais: Selic (BCB) e IPCA 1993-97 (IBGE); demais gráficos são simulação rotulada. Sem legendas (igual ref), 4 whooshes suaves. Atrasos: whisper falhou por RAM/PyAV (resolvido com áudio decodificado via ffmpeg + 2 threads); Pexels 401 (chave vazia) e Pollinations 402 (pago agora) -> fallback Wikimedia; yt-dlp só tinha video-only.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Render (~45 s/min de vídeo em draft => ~25 min p/ 30 min; standard ~2x), whisper (~1 min/min de áudio em CPU), busca/seleção de b-roll (~60 shots: maior gargalo sem chave Pexels) e escrita do plano de cenas. Reaproveitado: cenas ee_*, build.py, paleta/fontes, pipeline de mux."
+ },
+ "tokens": {
+  "novos": 132844,
+  "totais": 5109483,
+  "cache_lido": 4976639,
+  "cache_gravado": 97307,
+  "saida": 35449,
+  "entrada": 88,
+  "passos": 44
+ },
+ "custo_usd": 2.48,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

@@ -1,0 +1,24 @@
+{
+ "video": 11,
+ "estilo": "Mapas ilustrados / whiteboard (Geo Ilustrada)",
+ "inicio": "2026-10-21T23:35:42-03:00",
+ "fim": "2026-10-22T00:09:30-03:00",
+ "minutos": 34,
+ "render_segundos": 108,
+ "observacoes": "Tudo procedural (HyperFrames+GSAP+SVG), zero imagem externa. Mapa da Rússia gerado do countries50m.geojson (shapely, projeção senoidal) com filtro SVG 'rough' p/ traço desenhado à mão; notas manuscritas (Caveat) em mind-map com setas em L teal, títulos vermelhos sublinhado ondulado, cartão pergaminho, balão de pensamento, legenda grande branca/contorno/sombra teal. Cenas: 11 fusos, preenchimento, bonequinhos esparsos vs oeste denso (zoom), Urais, Moscou/SPb, Sibéria com neve+termômetro, Transiberiana com trem andando, expansão p/ leste com preenchimento laranja + setas, resumo e CTA. Whisper falhou 2x (mkl_malloc por RAM com 13 sessões e PyAV incompatível) → resolvido passando áudio raw numpy e cpu_threads=2. Render ficou ~10 min na fila do lock. 1 re-render (pontas de seta visíveis antes da hora). Sem SFX/música.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Reaproveita: template.html (mapa, câmera, notas, legendas, trem, ícones), mkmap.py (qualquer país), gen.py e pipeline whisper/render. Escala com a duração: roteiro de cenas/notas no gen.py (~25x mais itens; é o grosso do trabalho do Claude, ~60-90 min de sessão), novos doodles/ícones por tópico (~20-30 desenhos SVG), whisper (~3-4 min CPU) e render draft ~108 s/min → ~55 min para 30 min (mais ~2x em qualidade final). Recomendo dividir em capítulos de 3-5 min renderizados separados e concatenar."
+ },
+ "tokens": {
+  "novos": 116308,
+  "totais": 4946717,
+  "cache_lido": 4830409,
+  "cache_gravado": 81317,
+  "saida": 34903,
+  "entrada": 88,
+  "passos": 44
+ },
+ "custo_usd": 2.32,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

@@ -1,0 +1,24 @@
+{
+ "video": 9,
+ "estilo": "Comparação de tamanho 3D (Interplanetary) — Three.js",
+ "inicio": "2026-10-21T23:35:32.3594392-03:00",
+ "fim": "2026-10-21T23:44:23.8526561-03:00",
+ "minutos": 8.9,
+ "render_segundos": 121,
+ "observacoes": "Plano-sequência Three.js: Terra→Júpiter→Sol→Betelgeuse(+órbita de Marte)→UY Scuti, câmera recuando em escala log, rótulos serif + régua ←→ km + barra ciano 'A luz leva X'. Galáxia procedural de partículas no fim + CTA. Texturas Solar System Scope (CC BY 4.0), fundo Via Láctea procedural. Sem SFX/música. Whisper small travou por falta de memória (13 sessões) e PyAV quebrado -> passei áudio como numpy. Render 70,7s em 2 min (draft). Blackdetect: só fade proposital 58,6-59,5s. edit.json + template.html (template local) gerado e testado com build_from_edit.py.",
+ "estimativa_30min": {
+  "horas_maquina": 0.9,
+  "o_que_escala": "Reaproveita 100%: template.html (câmera log, rótulos, galáxia, fundo), pipeline whisper/mux. Escala com duração: lista de astros (30 min ≈ 40-60 objetos: luas, planetas, estrelas, nebulosas, galáxias) + keyframes de câmera derivados dos timings (dá pra gerar automático de words.json), mais texturas (Solar System Scope tem ~30; resto procedural/tinta). Render ~1,7 s por s de vídeo em draft → 30 min ≈ 50 min draft / ~1,5-2 h em qualidade final; whisper ~5 min. Trabalho de Claude ~1-1,5 h (montar tabela de astros + revisar)."
+ },
+ "tokens": {
+  "novos": 119491,
+  "totais": 5041883,
+  "cache_lido": 4922392,
+  "cache_gravado": 84368,
+  "saida": 35033,
+  "entrada": 90,
+  "passos": 45
+ },
+ "custo_usd": 2.36,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

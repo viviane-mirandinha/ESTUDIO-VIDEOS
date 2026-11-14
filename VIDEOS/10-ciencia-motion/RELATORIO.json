@@ -1,0 +1,24 @@
+{
+ "video": 10,
+ "estilo": "CIENCIA MOTION 2D (Kurzgesagt-like: vetor flat SVG, fundo escuro em gradiente, cores saturadas, tags pilula, parallax)",
+ "inicio": "2026-10-21T23:35:36-03:00",
+ "fim": "2026-10-22T00:00:26-03:00",
+ "minutos": 24.8,
+ "render_segundos": 98,
+ "observacoes": "Tudo procedural (HTML+SVG+GSAP, 1 arquivo hf/index.html, ~11 cenas, zero imagem externa, zero custo). Render draft 54s + re-render 44s (fix: orbita dos medalhoes e origem da fatia 1/3). Sem SFX/musica. Whisper precisou ler PCM cru (bug PyAV metadata_errors) e falhou 2x por falta de memoria commit com 13 sessoes. ~25 tool calls; maior custo de tokens = escrever o HTML (~15k tokens de saida). Sem personagem humano recorrente (ref tem); ilustracoes mais simples que a ref.",
+ "estimativa_30min": {
+  "horas_maquina": 0.5,
+  "o_que_escala": "Reaproveitado: biblioteca de simbolos (abelha, flor, medalhao, cards, tags, fundos, parallax, transicoes) e o build. Escala linear com a duracao: escrita de cenas (~1 cena/7s -> ~250 cenas em 30 min; ~350-500k tokens de saida se escrito a mao, ou ~4-6 h de sessao; recomendavel gerar cenas por templates JSON pra cair ~70%), whisper (~2 min CPU), render draft (~22x mais = ~15-20 min; standard ~40 min)."
+ },
+ "tokens": {
+  "novos": 115188,
+  "totais": 4503172,
+  "cache_lido": 4387984,
+  "cache_gravado": 79330,
+  "saida": 35778,
+  "entrada": 80,
+  "passos": 40
+ },
+ "custo_usd": 2.23,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

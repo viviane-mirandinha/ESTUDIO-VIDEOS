@@ -1,0 +1,705 @@
+{
+ "version": 1,
+ "name": "11 - Mapas Ilustrados - Por que a Rússia é tão grande e tão vazia",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#fdfdfa"
+ },
+ "duration": 74.0,
+ "template": "local",
+ "fonts": {
+  "Caveat": "fonts/Caveat.ttf",
+  "PatrickHand": "fonts/PatrickHand.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas do mapa"
+  },
+  {
+   "id": "textos",
+   "name": "Notas manuscritas"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda grande"
+  }
+ ],
+ "items": [
+  {
+   "id": "s_map",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Mapa desenhado",
+   "start": 0.2,
+   "dur": 73.8,
+   "props": {}
+  },
+  {
+   "id": "s_fusos",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "11 fusos",
+   "start": 1.0,
+   "dur": 5.4,
+   "props": {}
+  },
+  {
+   "id": "s_fill",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Mapa colorido",
+   "start": 6.9,
+   "dur": 67.1,
+   "props": {}
+  },
+  {
+   "id": "s_people",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Pessoas espalhadas",
+   "start": 15.3,
+   "dur": 6.9,
+   "props": {}
+  },
+  {
+   "id": "s_cam_w",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Zoom no oeste",
+   "start": 23.9,
+   "dur": 9.1,
+   "props": {
+    "scale": 1.75,
+    "cx": 470,
+    "cy": 440
+   }
+  },
+  {
+   "id": "s_dense",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Oeste cheio",
+   "start": 24.9,
+   "dur": 8.1,
+   "props": {}
+  },
+  {
+   "id": "s_ural",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Montes Urais",
+   "start": 28.2,
+   "dur": 4.8,
+   "props": {}
+  },
+  {
+   "id": "s_pins",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Moscou / S. Petersburgo",
+   "start": 30.6,
+   "dur": 2.4,
+   "props": {}
+  },
+  {
+   "id": "s_cam_s",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Zoom Sibéria",
+   "start": 33.2,
+   "dur": 11.7,
+   "props": {
+    "scale": 1.45,
+    "cx": 860,
+    "cy": 400
+   }
+  },
+  {
+   "id": "s_sib",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Sibéria + neve",
+   "start": 33.6,
+   "dur": 11.3,
+   "props": {}
+  },
+  {
+   "id": "s_rail",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Transiberiana",
+   "start": 48.3,
+   "dur": 15.3,
+   "props": {}
+  },
+  {
+   "id": "s_expand",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Expansão p/ leste",
+   "start": 55.6,
+   "dur": 8.0,
+   "props": {}
+  },
+  {
+   "id": "s_end",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "CTA final",
+   "start": 67.9,
+   "dur": 6.1,
+   "props": {}
+  },
+  {
+   "id": "n1",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "RÚSSIA",
+   "start": 0.0,
+   "dur": 6.5,
+   "props": {
+    "text": "RÚSSIA",
+    "x": 40,
+    "y": 22,
+    "size": 78,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n2",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "11 fusos horários",
+   "start": 1.3,
+   "dur": 5.2,
+   "props": {
+    "text": "11 fusos horários",
+    "x": 70,
+    "y": 120,
+    "size": 44,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n3",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "...mas pouca gente?",
+   "start": 3.1,
+   "dur": 3.4,
+   "props": {
+    "text": "...mas pouca gente?",
+    "x": 70,
+    "y": 178,
+    "size": 40,
+    "color": "#2a2a2a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n4",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Maior país do mundo",
+   "start": 6.7,
+   "dur": 6.4,
+   "props": {
+    "text": "Maior país do mundo",
+    "x": 40,
+    "y": 22,
+    "size": 66,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n5",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "≈ 17 milhões de km²",
+   "start": 9.5,
+   "dur": 3.6,
+   "props": {
+    "text": "≈ 17 milhões de km²",
+    "x": 70,
+    "y": 112,
+    "size": 46,
+    "color": "#2a2a2a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n6",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "População",
+   "start": 13.2,
+   "dur": 9.0,
+   "props": {
+    "text": "População",
+    "x": 40,
+    "y": 22,
+    "size": 66,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n7",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "≈ 146 milhões de pessoas",
+   "start": 15.2,
+   "dur": 7.0,
+   "props": {
+    "text": "≈ 146 milhões de pessoas",
+    "x": 70,
+    "y": 112,
+    "size": 44,
+    "color": "#2a2a2a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n8",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "território: GIGANTE",
+   "start": 18.8,
+   "dur": 3.4,
+   "props": {
+    "text": "território: GIGANTE",
+    "x": 70,
+    "y": 168,
+    "size": 44,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n9",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "população: pequena",
+   "start": 19.8,
+   "dur": 2.4,
+   "props": {
+    "text": "população: pequena",
+    "x": 70,
+    "y": 220,
+    "size": 30,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n10",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "O MOTIVO?",
+   "start": 22.4,
+   "dur": 2.2,
+   "props": {
+    "text": "O MOTIVO?",
+    "x": 470,
+    "y": 270,
+    "size": 110,
+    "color": "#d93a3a",
+    "kind": "bubble"
+   }
+  },
+  {
+   "id": "n11",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "A maioria vive no OESTE",
+   "start": 24.0,
+   "dur": 9.0,
+   "props": {
+    "text": "A maioria vive no OESTE",
+    "x": 40,
+    "y": 22,
+    "size": 60,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n12",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "a oeste dos Montes Urais",
+   "start": 28.3,
+   "dur": 4.7,
+   "props": {
+    "text": "a oeste dos Montes Urais",
+    "x": 70,
+    "y": 104,
+    "size": 40,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n13",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Sibéria",
+   "start": 33.4,
+   "dur": 11.5,
+   "props": {
+    "text": "Sibéria",
+    "x": 40,
+    "y": 22,
+    "size": 70,
+    "color": "#2f6fb5",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n14",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "frio extremo",
+   "start": 35.9,
+   "dur": 9.0,
+   "props": {
+    "text": "frio extremo",
+    "x": 70,
+    "y": 112,
+    "size": 42,
+    "color": "#2a2a2a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n15",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "PERMAFROST = solo congelado",
+   "start": 38.1,
+   "dur": 6.8,
+   "props": {
+    "text": "PERMAFROST = solo congelado",
+    "x": 70,
+    "y": 172,
+    "size": 36,
+    "color": "#2a2a2a",
+    "kind": "card"
+   }
+  },
+  {
+   "id": "n16",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "construir e viver: difícil e caro $$$",
+   "start": 41.3,
+   "dur": 3.6,
+   "props": {
+    "text": "construir e viver: difícil e caro $$$",
+    "x": 70,
+    "y": 250,
+    "size": 34,
+    "color": "#d93a3a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n17",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Ferrovia Transiberiana",
+   "start": 45.0,
+   "dur": 10.4,
+   "props": {
+    "text": "Ferrovia Transiberiana",
+    "x": 40,
+    "y": 22,
+    "size": 64,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n18",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Moscou → Vladivostok",
+   "start": 50.4,
+   "dur": 5.0,
+   "props": {
+    "text": "Moscou → Vladivostok",
+    "x": 70,
+    "y": 112,
+    "size": 42,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n19",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "+ 9.000 km",
+   "start": 53.3,
+   "dur": 2.1,
+   "props": {
+    "text": "+ 9.000 km",
+    "x": 70,
+    "y": 168,
+    "size": 52,
+    "color": "#2a2a2a",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n20",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Expansão para o leste",
+   "start": 55.6,
+   "dur": 8.0,
+   "props": {
+    "text": "Expansão para o leste",
+    "x": 40,
+    "y": 22,
+    "size": 64,
+    "color": "#d93a3a",
+    "kind": "title"
+   }
+  },
+  {
+   "id": "n21",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "a partir do séc. XVI",
+   "start": 58.1,
+   "dur": 5.5,
+   "props": {
+    "text": "a partir do séc. XVI",
+    "x": 70,
+    "y": 104,
+    "size": 40,
+    "color": "#2a2a2a",
+    "kind": "card"
+   }
+  },
+  {
+   "id": "n22",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "em busca de peles e recursos",
+   "start": 60.6,
+   "dur": 3.0,
+   "props": {
+    "text": "em busca de peles e recursos",
+    "x": 70,
+    "y": 178,
+    "size": 38,
+    "color": "#1f9e8f",
+    "kind": "branch"
+   }
+  },
+  {
+   "id": "n23",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "País gigante",
+   "start": 63.8,
+   "dur": 4.0,
+   "props": {
+    "text": "País gigante",
+    "x": 470,
+    "y": 230,
+    "size": 96,
+    "color": "#d93a3a",
+    "kind": "center"
+   }
+  },
+  {
+   "id": "n24",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "muito espaço",
+   "start": 65.3,
+   "dur": 2.5,
+   "props": {
+    "text": "muito espaço",
+    "x": 330,
+    "y": 400,
+    "size": 52,
+    "color": "#1f9e8f",
+    "kind": "center"
+   }
+  },
+  {
+   "id": "n25",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "pouca gente",
+   "start": 66.6,
+   "dur": 1.2,
+   "props": {
+    "text": "pouca gente",
+    "x": 860,
+    "y": 400,
+    "size": 52,
+    "color": "#1f9e8f",
+    "kind": "center"
+   }
+  },
+  {
+   "id": "n26",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "INSCREVA-SE",
+   "start": 68.2,
+   "dur": 5.8,
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 640,
+    "y": 300,
+    "size": 72,
+    "color": "#ffffff",
+    "kind": "button"
+   }
+  },
+  {
+   "id": "n27",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Qual país no próximo mapa?",
+   "start": 69.8,
+   "dur": 4.2,
+   "props": {
+    "text": "Qual país no próximo mapa?",
+    "x": 640,
+    "y": 450,
+    "size": 56,
+    "color": "#2a2a2a",
+    "kind": "center"
+   }
+  },
+  {
+   "id": "c1",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "17 MILHÕES DE KM²",
+   "start": 9.6,
+   "dur": 3.3,
+   "props": {
+    "text": "17 MILHÕES DE KM²"
+   }
+  },
+  {
+   "id": "c2",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "146 MILHÕES DE HABITANTES",
+   "start": 15.2,
+   "dur": 3.4,
+   "props": {
+    "text": "146 MILHÕES DE HABITANTES"
+   }
+  },
+  {
+   "id": "c3",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "SOLO CONGELADO",
+   "start": 38.2,
+   "dur": 2.8,
+   "props": {
+    "text": "SOLO CONGELADO"
+   }
+  },
+  {
+   "id": "c4",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "MAIS DE 9 MIL KM",
+   "start": 53.4,
+   "dur": 2.0,
+   "props": {
+    "text": "MAIS DE 9 MIL KM"
+   }
+  },
+  {
+   "id": "c5",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "MUITO ESPAÇO, POUCA GENTE",
+   "start": 63.8,
+   "dur": 3.8,
+   "props": {
+    "text": "MUITO ESPAÇO, POUCA GENTE"
+   }
+  }
+ ],
+ "build_script": "gen.py (gera template.html) -> EDITOR VIDEOS/build_from_edit.py",
+ "estilo": "Mapas ilustrados",
+ "referencia": {
+  "video": "https://youtu.be/WcjoERdBBTM",
+  "canal": "geo ilustrada",
+  "canal_url": "https://www.youtube.com/channel/UC59k9M9B_CQeCMaNu6A3orA",
+  "titulo": "Nova Ordem Mundial - Resumo Ilustrado (Geografia, Geopolítica)",
+  "nota": "Geo Ilustrada"
+ }
+}

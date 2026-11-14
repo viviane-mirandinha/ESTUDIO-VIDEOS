@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>@font-face{font-family:MB;src:url(fonts/Montserrat-Bold.ttf)}
+@font-face{font-family:MK;src:url(fonts/Montserrat-Black.ttf)}
+@font-face{font-family:MM;src:url(fonts/Montserrat-Medium.ttf)}
+html,body{margin:0;background:#0b0f17}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#0b0f17;font-family:MB,sans-serif;color:#fff}
+.clip{position:absolute;inset:0}
+.ph{overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transform-origin:50% 50%}
+.bgblur{position:absolute;inset:-40px;background-size:cover;background-position:center;filter:blur(14px) brightness(.32) saturate(.3)}
+.gr{overflow:hidden}
+/* lower third: barra índigo inclinada */
+.lt{inset:auto;left:70px;bottom:92px;transform:rotate(-3deg);transform-origin:left bottom}
+.ltn{position:relative;display:inline-block;padding:2px 14px 6px 10px}
+.ltn .bar{position:absolute;left:0;right:0;bottom:2px;height:46%;background:#5a3ff0;transform-origin:left center}
+.ltn .tx{position:relative;font-size:46px;letter-spacing:-.01em;text-shadow:0 3px 14px rgba(0,0,0,.55)}
+.lts{font-family:MM;font-size:20px;margin:6px 0 0 12px;color:#dfe4ee;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+/* data */
+.dt{inset:auto;left:70px;top:60px}
+.dtt{font-family:MK;font-size:76px;line-height:1;text-shadow:0 2px 4px rgba(0,0,0,.9),0 4px 26px rgba(0,0,0,.85)}
+.dt svg{display:block;margin-top:6px}
+.ul{fill:none;stroke:#f2c230;stroke-width:5;stroke-linecap:round;stroke-dasharray:700}
+.dt .ul{stroke-dasharray:300}
+/* título */
+.tt{display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(0,0,0,.45),rgba(0,0,0,0) 70%)}
+.ttt{font-size:44px;text-shadow:0 3px 18px rgba(0,0,0,.7);text-align:center;max-width:1080px}
+.tt.big .ttt{font-size:56px;font-family:MK}
+.tt svg{width:640px;height:20px;margin-top:8px}
+/* árvore */
+.tree{position:absolute;left:0;right:0;top:110px;display:flex;flex-direction:column;align-items:center}
+.node{background:rgba(15,20,32,.82);border:2px solid rgba(255,255,255,.18);border-radius:10px;padding:18px 40px;text-align:center;min-width:360px}
+.node b{display:block;font-size:36px}.node i{display:block;font-family:MM;font-style:normal;font-size:20px;color:#b9c2d3;margin-top:4px}
+.n2{border-color:#5a3ff0;box-shadow:0 0 0 2px #5a3ff0}
+.link path{stroke:#f2c230;stroke-width:4;stroke-dasharray:160;fill:none}
+.tag{margin-top:18px;background:#5a3ff0;padding:6px 18px;font-size:24px;transform:rotate(-2deg);transform-origin:left}
+/* cards negócios */
+.cards{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:70px}
+.cd{width:340px;height:300px;background:rgba(15,20,32,.85);border:2px solid rgba(255,255,255,.2);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.cd svg{width:120px;height:120px;fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round}
+.cd b{font-size:32px}
+.strike{position:absolute;top:50%;height:7px;width:380px;background:#e2463b;transform-origin:left center;border-radius:4px}
+.s1{left:calc(50% - 405px);transform:rotate(-8deg)}.s2{left:calc(50% + 35px);transform:rotate(-8deg)}
+.fail{position:absolute;bottom:80px;left:0;right:0;text-align:center;font-family:MK;font-size:40px;text-transform:uppercase;letter-spacing:.06em;color:#fff}
+/* timeline */
+.tline{position:absolute;left:60px;right:60px;top:300px;height:200px}
+.axis{position:absolute;left:20px;right:20px;top:40px;height:4px;background:#f2c230;transform-origin:left center}
+.pt{position:absolute;top:22px;width:220px;margin-left:-60px;display:flex;flex-direction:column;align-items:center}
+.dot{width:36px;height:36px;border-radius:50%;background:#5a3ff0;border:4px solid #fff;box-sizing:border-box}
+.pt b{font-family:MK;font-size:40px;margin-top:14px}.pt i{font-family:MM;font-style:normal;font-size:22px;color:#cfd6e3;margin-top:4px;text-align:center}
+/* end card */
+.endc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.endc .sub{background:#5a3ff0;font-family:MK;font-size:52px;padding:10px 40px;border-radius:8px;transform:rotate(-2deg)}
+.endc .q{font-size:40px;margin-top:40px;text-align:center}
+.endc svg{width:700px;height:20px;margin-top:10px}
+/* look de arquivo */
+.fx{position:absolute;inset:0;pointer-events:none}
+.vig{z-index:50;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+.grain{z-index:51;opacity:.08;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+</style></head><body>
+<div data-composition-id="main" data-duration="65.1" data-height="720" data-start="0" data-width="1280" id="root">
+<div class="clip ph" data-duration="6.05" data-ed="e1" data-start="0.00" data-track-index="0" id="p1"><img data-ed="e79" src="media/hana.jpg"/></div>
+<div class="clip tt" data-duration="4.00" data-ed="e2" data-start="0.40" data-track-index="9" id="tt2"><div class="ttt" data-ed="e33">Nintendo: das cartas aos games</div><svg preserveaspectratio="none" viewbox="0 0 600 20"><path class="ul" d="M4 12 C 160 4, 420 18, 596 8"></path></svg></div>
+<div class="clip ph" data-duration="4.35" data-ed="e3" data-start="5.85" data-track-index="1" id="p3"><img data-ed="e80" src="media/koppai.jpg"/></div>
+<div class="clip dt" data-duration="4.05" data-ed="e4" data-start="5.95" data-track-index="9" id="dt4"><div class="dtt" data-ed="e34">1889</div><svg height="20" viewbox="0 0 260 20" width="260"><path class="ul" d="M4 12 C 70 4, 170 18, 254 8"></path></svg></div>
+<div class="clip lt" data-duration="2.15" data-ed="e5" data-start="7.90" data-track-index="8" id="lt5"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e35">Quioto, Japão</span></div><div class="lts" data-ed="e36">sede original da Nintendo Koppai</div></div>
+<div class="clip ph" data-duration="7.90" data-ed="e6" data-start="10.05" data-track-index="0" id="p6"><img data-ed="e81" src="media/hanaold.jpg"/></div>
+<div class="clip lt" data-duration="4.35" data-ed="e7" data-start="10.25" data-track-index="8" id="lt7"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e37">Fusajiro Yamauchi</span></div><div class="lts" data-ed="e38">fundador · 1889</div></div>
+<div class="clip lt" data-duration="3.00" data-ed="e8" data-start="14.80" data-track-index="8" id="lt8"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e39">Hanafuda 花札</span></div><div class="lts" data-ed="e40">baralho japonês feito à mão</div></div>
+<div class="clip gr" data-duration="5.30" data-ed="e9" data-start="17.80" data-track-index="4" id="g9"><div class="bgblur" style="background-image:url(media/hanaold.jpg)"></div><div class="tree"><div class="node n1"><b data-ed="e41">Fusajiro Yamauchi</b><i data-ed="e42">fundador</i></div><svg class="link" height="160" viewbox="0 0 40 160" width="40"><path d="M20 0 V160"></path></svg><div class="node n2"><b data-ed="e43">Hiroshi Yamauchi</b><i data-ed="e44">neto · presidente</i></div><div class="tag" data-ed="e45">assume o comando</div></div></div>
+<div class="clip dt" data-duration="5.00" data-ed="e10" data-start="17.90" data-track-index="9" id="dt10"><div class="dtt" data-ed="e46">1949</div><svg height="20" viewbox="0 0 260 20" width="260"><path class="ul" d="M4 12 C 70 4, 170 18, 254 8"></path></svg></div>
+<div class="clip ph" data-duration="4.70" data-ed="e11" data-start="23.00" data-track-index="1" id="p11"><img data-ed="e82" src="media/taxi.jpg"/></div>
+<div class="clip dt" data-duration="4.40" data-ed="e12" data-start="23.10" data-track-index="9" id="dt12"><div class="dtt" data-ed="e47">Anos 1960</div><svg height="20" viewbox="0 0 260 20" width="260"><path class="ul" d="M4 12 C 70 4, 170 18, 254 8"></path></svg></div>
+<div class="clip gr" data-duration="3.50" data-ed="e13" data-start="27.50" data-track-index="4" id="g13"><div class="bgblur" style="background-image:url(media/taxi.jpg)"></div><div class="cards"><div class="cd c1"><svg viewbox="0 0 64 64"><path d="M10 38 L16 24 H48 L54 38 Z M8 38 H56 V48 H8 Z"></path><circle cx="18" cy="50" r="5"></circle><circle cx="46" cy="50" r="5"></circle><rect height="7" width="12" x="26" y="16"></rect></svg><b data-ed="e48">Táxis</b></div><div class="cd c2"><svg viewbox="0 0 64 64"><path d="M8 30 H56 C56 46 46 54 32 54 C18 54 8 46 8 30 Z"></path><path d="M14 30 C16 20 24 16 32 16 C40 16 48 20 50 30"></path></svg><b data-ed="e49">Arroz instantâneo</b></div><div class="strike s1"></div><div class="strike s2"></div><div class="fail" data-ed="e50">não deu certo</div></div></div>
+<div class="clip ph" data-duration="2.35" data-ed="e14" data-start="30.90" data-track-index="0" id="p14"><img data-ed="e83" src="media/lovetester.jpg"/></div>
+<div class="clip lt" data-duration="2.10" data-ed="e15" data-start="31.00" data-track-index="8" id="lt15"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e51">Gunpei Yokoi</span></div><div class="lts" data-ed="e52">engenheiro e inventor da Nintendo</div></div>
+<div class="clip ph" data-duration="3.05" data-ed="e16" data-start="33.05" data-track-index="1" id="p16"><img data-ed="e84" src="media/gw0.jpg"/></div>
+<div class="clip lt" data-duration="2.75" data-ed="e17" data-start="33.25" data-track-index="8" id="lt17"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e53">Game &amp; Watch</span></div><div class="lts" data-ed="e54">1980 · portátil de bolso</div></div>
+<div class="clip ph" data-duration="2.40" data-ed="e18" data-start="35.95" data-track-index="0" id="p18"><img data-ed="e85" src="media/gw1.jpg"/></div>
+<div class="clip tt" data-duration="2.90" data-ed="e19" data-start="35.20" data-track-index="9" id="tt19"><div class="ttt" data-ed="e55">Brinquedos eletrônicos</div><svg preserveaspectratio="none" viewbox="0 0 600 20"><path class="ul" d="M4 12 C 160 4, 420 18, 596 8"></path></svg></div>
+<div class="clip ph" data-duration="7.55" data-ed="e20" data-start="38.20" data-track-index="1" id="p20"><img data-ed="e86" src="media/dk.jpg"/></div>
+<div class="clip dt" data-duration="4.30" data-ed="e21" data-start="38.30" data-track-index="9" id="dt21"><div class="dtt" data-ed="e56">1981</div><svg height="20" viewbox="0 0 260 20" width="260"><path class="ul" d="M4 12 C 70 4, 170 18, 254 8"></path></svg></div>
+<div class="clip lt" data-duration="2.90" data-ed="e22" data-start="40.50" data-track-index="8" id="lt22"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e57">Donkey Kong</span></div><div class="lts" data-ed="e58">arcade · Nintendo</div></div>
+<div class="clip lt" data-duration="2.10" data-ed="e23" data-start="43.50" data-track-index="8" id="lt23"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e59">Jumpman → Mario</span></div><div class="lts" data-ed="e60">o herói que virou mascote</div></div>
+<div class="clip ph" data-duration="4.35" data-ed="e24" data-start="45.60" data-track-index="0" id="p24"><img data-ed="e87" src="media/famicom.jpg"/></div>
+<div class="clip dt" data-duration="4.00" data-ed="e25" data-start="45.70" data-track-index="9" id="dt25"><div class="dtt" data-ed="e61">1983</div><svg height="20" viewbox="0 0 260 20" width="260"><path class="ul" d="M4 12 C 70 4, 170 18, 254 8"></path></svg></div>
+<div class="clip lt" data-duration="2.00" data-ed="e26" data-start="47.80" data-track-index="8" id="lt26"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e62">Famicom</span></div><div class="lts" data-ed="e63">Family Computer · Japão</div></div>
+<div class="clip ph" data-duration="2.45" data-ed="e27" data-start="49.80" data-track-index="1" id="p27"><img data-ed="e88" src="media/nes.jpg"/></div>
+<div class="clip lt" data-duration="2.15" data-ed="e28" data-start="49.95" data-track-index="8" id="lt28"><div class="ltn"><span class="bar"></span><span class="tx" data-ed="e64">NES</span></div><div class="lts" data-ed="e65">Nintendo Entertainment System · Ocidente</div></div>
+<div class="clip gr" data-duration="4.75" data-ed="e29" data-start="52.10" data-track-index="4" id="g29"><div class="bgblur" style="background-image:url(media/hq.jpg)"></div><div class="tline"><div class="axis"></div><div class="pt pt0" style="left:80px"><span class="dot"></span><b data-ed="e66">1889</b><i data-ed="e67">Cartas</i></div><div class="pt pt1" style="left:340px"><span class="dot"></span><b data-ed="e68">1949</b><i data-ed="e69">Hiroshi</i></div><div class="pt pt2" style="left:600px"><span class="dot"></span><b data-ed="e70">1980</b><i data-ed="e71">Game &amp; Watch</i></div><div class="pt pt3" style="left:860px"><span class="dot"></span><b data-ed="e72">1981</b><i data-ed="e73">Donkey Kong</i></div><div class="pt pt4" style="left:1120px"><span class="dot"></span><b data-ed="e74">1983</b><i data-ed="e75">Famicom / NES</i></div></div></div>
+<div class="clip ph" data-duration="3.40" data-ed="e30" data-start="56.70" data-track-index="0" id="p30"><img data-ed="e89" src="media/hana.jpg"/></div>
+<div class="clip tt big" data-duration="3.00" data-ed="e31" data-start="56.90" data-track-index="9" id="tt31"><div class="ttt" data-ed="e76">Tudo começou com um jogo de cartas</div><svg preserveaspectratio="none" viewbox="0 0 600 20"><path class="ul" d="M4 12 C 160 4, 420 18, 596 8"></path></svg></div>
+<div class="clip gr" data-duration="5.10" data-ed="e32" data-start="60.00" data-track-index="6" id="g32"><div class="bgblur" style="background-image:url(media/hana.jpg);filter:blur(18px) brightness(.35) grayscale(1)"></div><div class="endc"><div class="sub" data-ed="e77">Inscreva-se</div><div class="q" data-ed="e78">Qual é o seu jogo favorito da Nintendo?</div><svg preserveaspectratio="none" viewbox="0 0 600 20"><path class="ul" d="M4 12 C 160 4, 420 18, 596 8"></path></svg></div></div>
+<div class="fx vig"></div><div class="fx grain"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.fromTo("#p1 img",{scale:1.05,x:0},{scale:1.18,x:-40,duration:6.05,ease:"none"},0.00);
+tl.fromTo("#tt2 .ttt",{opacity:0,y:14},{opacity:1,y:0,duration:0.6,ease:"power2.out"},0.40);
+tl.fromTo("#tt2 .ul",{strokeDashoffset:700},{strokeDashoffset:0,duration:0.8,ease:"power2.inOut"},0.70);
+tl.to("#tt2",{opacity:0,duration:0.35},4.05);
+tl.set("#tt2",{opacity:0},4.39);
+tl.to(".ph:first-child img",{scale:1.32,duration:0.35,ease:"power3.out"},4.45);
+tl.fromTo("#p3 img",{scale:1.15,x:30},{scale:1.02,x:-10,duration:4.35,ease:"none"},5.85);
+tl.fromTo("#p3",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},5.85);
+tl.fromTo("#dt4 .dtt",{opacity:0,y:20,scale:1.15},{opacity:1,y:0,scale:1,duration:0.7,ease:"power3.out"},5.95);
+tl.fromTo("#dt4 .ul",{strokeDashoffset:300},{strokeDashoffset:0,duration:0.6,ease:"power2.out"},6.30);
+tl.to("#dt4",{opacity:0,duration:0.3},9.70);
+tl.set("#dt4",{opacity:0},9.99);
+tl.fromTo("#lt5 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},7.90);
+tl.fromTo("#lt5 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},8.02);
+tl.fromTo("#lt5 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},8.20);
+tl.to("#lt5",{opacity:0,duration:0.3},9.75);
+tl.set("#lt5",{opacity:0},10.04);
+tl.fromTo("#p6 img",{scale:1.0,x:0},{scale:1.12,x:20,duration:7.90,ease:"none"},10.05);
+tl.fromTo("#p6",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},10.05);
+tl.fromTo("#lt7 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},10.25);
+tl.fromTo("#lt7 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},10.37);
+tl.fromTo("#lt7 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},10.55);
+tl.to("#lt7",{opacity:0,duration:0.3},14.30);
+tl.set("#lt7",{opacity:0},14.59);
+tl.fromTo("#lt8 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},14.80);
+tl.fromTo("#lt8 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},14.92);
+tl.fromTo("#lt8 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},15.10);
+tl.to("#lt8",{opacity:0,duration:0.3},17.50);
+tl.set("#lt8",{opacity:0},17.79);
+tl.fromTo("#g9",{opacity:0},{opacity:1,duration:0.4},17.80);
+tl.fromTo("#g9 .n1",{opacity:0,y:-20},{opacity:1,y:0,duration:0.5,ease:"power3.out"},18.0);
+tl.fromTo("#g9 .link path",{strokeDashoffset:160},{strokeDashoffset:0,duration:0.6},20.0);
+tl.fromTo("#g9 .n2",{opacity:0,y:20},{opacity:1,y:0,duration:0.5,ease:"power3.out"},20.7);
+tl.fromTo("#g9 .tag",{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:0.4,ease:"power3.out"},22.2);
+tl.fromTo("#g9 .bgblur",{scale:1.1},{scale:1.2,duration:5.3,ease:"none"},17.8);
+tl.fromTo("#dt10 .dtt",{opacity:0,y:20,scale:1.15},{opacity:1,y:0,scale:1,duration:0.7,ease:"power3.out"},17.90);
+tl.fromTo("#dt10 .ul",{strokeDashoffset:300},{strokeDashoffset:0,duration:0.6,ease:"power2.out"},18.25);
+tl.to("#dt10",{opacity:0,duration:0.3},22.60);
+tl.set("#dt10",{opacity:0},22.89);
+tl.fromTo("#p11 img",{scale:1.02,x:-20},{scale:1.14,x:20,duration:4.70,ease:"none"},23.00);
+tl.fromTo("#p11",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},23.00);
+tl.fromTo("#dt12 .dtt",{opacity:0,y:20,scale:1.15},{opacity:1,y:0,scale:1,duration:0.7,ease:"power3.out"},23.10);
+tl.fromTo("#dt12 .ul",{strokeDashoffset:300},{strokeDashoffset:0,duration:0.6,ease:"power2.out"},23.45);
+tl.to("#dt12",{opacity:0,duration:0.3},27.20);
+tl.set("#dt12",{opacity:0},27.49);
+tl.fromTo("#g13",{opacity:0},{opacity:1,duration:0.4},27.50);
+tl.fromTo("#g13 .c1",{opacity:0,y:30},{opacity:1,y:0,duration:0.45,ease:"power3.out"},27.6);
+tl.fromTo("#g13 .c2",{opacity:0,y:30},{opacity:1,y:0,duration:0.45,ease:"power3.out"},28.4);
+tl.fromTo("#g13 .strike",{scaleX:0},{scaleX:1,duration:0.3,ease:"power2.out",stagger:0.12},29.95);
+tl.fromTo("#g13 .fail",{opacity:0,y:10},{opacity:1,y:0,duration:0.35},30.1);
+tl.to("#g13 .cd",{opacity:0.45,duration:0.3},30.0);
+tl.fromTo("#p14 img",{scale:1.0,x:0},{scale:1.08,x:0,duration:2.35,ease:"none"},30.90);
+tl.fromTo("#p14",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},30.90);
+tl.fromTo("#lt15 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},31.00);
+tl.fromTo("#lt15 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},31.12);
+tl.fromTo("#lt15 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},31.30);
+tl.to("#lt15",{opacity:0,duration:0.3},32.80);
+tl.set("#lt15",{opacity:0},33.09);
+tl.fromTo("#p16 img",{scale:1.05,x:0},{scale:1.15,x:-20,duration:3.05,ease:"none"},33.05);
+tl.fromTo("#p16",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},33.05);
+tl.fromTo("#lt17 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},33.25);
+tl.fromTo("#lt17 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},33.37);
+tl.fromTo("#lt17 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},33.55);
+tl.to("#lt17",{opacity:0,duration:0.3},35.70);
+tl.set("#lt17",{opacity:0},35.99);
+tl.fromTo("#p18 img",{scale:1.12,x:0},{scale:1.02,x:0,duration:2.40,ease:"none"},35.95);
+tl.fromTo("#p18",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},35.95);
+tl.fromTo("#tt19 .ttt",{opacity:0,y:14},{opacity:1,y:0,duration:0.6,ease:"power2.out"},35.20);
+tl.fromTo("#tt19 .ul",{strokeDashoffset:700},{strokeDashoffset:0,duration:0.8,ease:"power2.inOut"},35.50);
+tl.to("#tt19",{opacity:0,duration:0.35},37.75);
+tl.set("#tt19",{opacity:0},38.09);
+tl.fromTo("#p20 img",{scale:1.0,x:0},{scale:1.1,x:0,duration:7.55,ease:"none"},38.20);
+tl.fromTo("#p20",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},38.20);
+tl.fromTo("#dt21 .dtt",{opacity:0,y:20,scale:1.15},{opacity:1,y:0,scale:1,duration:0.7,ease:"power3.out"},38.30);
+tl.fromTo("#dt21 .ul",{strokeDashoffset:300},{strokeDashoffset:0,duration:0.6,ease:"power2.out"},38.65);
+tl.to("#dt21",{opacity:0,duration:0.3},42.30);
+tl.set("#dt21",{opacity:0},42.59);
+tl.fromTo("#lt22 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},40.50);
+tl.fromTo("#lt22 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},40.62);
+tl.fromTo("#lt22 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},40.80);
+tl.to("#lt22",{opacity:0,duration:0.3},43.10);
+tl.set("#lt22",{opacity:0},43.39);
+tl.fromTo("#lt23 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},43.50);
+tl.fromTo("#lt23 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},43.62);
+tl.fromTo("#lt23 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},43.80);
+tl.to("#lt23",{opacity:0,duration:0.3},45.30);
+tl.set("#lt23",{opacity:0},45.59);
+tl.fromTo("#p24 img",{scale:1.0,x:30},{scale:1.1,x:-30,duration:4.35,ease:"none"},45.60);
+tl.fromTo("#p24",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},45.60);
+tl.fromTo("#dt25 .dtt",{opacity:0,y:20,scale:1.15},{opacity:1,y:0,scale:1,duration:0.7,ease:"power3.out"},45.70);
+tl.fromTo("#dt25 .ul",{strokeDashoffset:300},{strokeDashoffset:0,duration:0.6,ease:"power2.out"},46.05);
+tl.to("#dt25",{opacity:0,duration:0.3},49.40);
+tl.set("#dt25",{opacity:0},49.69);
+tl.fromTo("#lt26 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},47.80);
+tl.fromTo("#lt26 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},47.92);
+tl.fromTo("#lt26 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},48.10);
+tl.to("#lt26",{opacity:0,duration:0.3},49.50);
+tl.set("#lt26",{opacity:0},49.79);
+tl.fromTo("#p27 img",{scale:1.1,x:-20},{scale:1.0,x:20,duration:2.45,ease:"none"},49.80);
+tl.fromTo("#p27",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},49.80);
+tl.fromTo("#lt28 .bar",{scaleX:0},{scaleX:1,duration:0.45,ease:"power3.out"},49.95);
+tl.fromTo("#lt28 .tx",{opacity:0,x:-24},{opacity:1,x:0,duration:0.45,ease:"power3.out"},50.07);
+tl.fromTo("#lt28 .lts",{opacity:0,y:8},{opacity:1,y:0,duration:0.35},50.25);
+tl.to("#lt28",{opacity:0,duration:0.3},51.80);
+tl.set("#lt28",{opacity:0},52.09);
+tl.fromTo("#g29",{opacity:0},{opacity:1,duration:0.4},52.10);
+tl.fromTo("#g29 .axis",{scaleX:0},{scaleX:1,duration:1.2,ease:"power2.inOut"},52.3);
+tl.fromTo("#g29 .pt",{opacity:0,y:20},{opacity:1,y:0,duration:0.4,stagger:0.45,ease:"power3.out"},52.6);
+tl.fromTo("#g29 .bgblur",{scale:1.1},{scale:1.2,duration:4.8,ease:"none"},52.1);
+tl.fromTo("#p30 img",{scale:1.2,x:0},{scale:1.05,x:0,duration:3.40,ease:"none"},56.70);
+tl.fromTo("#p30",{opacity:0},{opacity:1,duration:0.45,ease:"power1.inOut"},56.70);
+tl.fromTo("#tt31 .ttt",{opacity:0,y:14},{opacity:1,y:0,duration:0.6,ease:"power2.out"},56.90);
+tl.fromTo("#tt31 .ul",{strokeDashoffset:700},{strokeDashoffset:0,duration:0.8,ease:"power2.inOut"},57.20);
+tl.to("#tt31",{opacity:0,duration:0.35},59.55);
+tl.set("#tt31",{opacity:0},59.89);
+tl.fromTo("#g32",{opacity:0},{opacity:1,duration:0.4},60.00);
+tl.fromTo("#g32 .sub",{opacity:0,y:20,scale:.9},{opacity:1,y:0,scale:1,duration:0.5,ease:"back.out(1.6)"},60.15);
+tl.fromTo("#g32 .q",{opacity:0,y:14},{opacity:1,y:0,duration:0.5},61.2);
+tl.fromTo("#g32 .ul",{strokeDashoffset:700},{strokeDashoffset:0,duration:0.9,ease:"power2.inOut"},61.6);
+tl.fromTo(".grain",{backgroundPosition:"0px 0px"},{backgroundPosition:"300px 200px",duration:65.1,ease:"steps(400)"},0);
+window.__timelines["main"] = tl;
+</script></body></html>

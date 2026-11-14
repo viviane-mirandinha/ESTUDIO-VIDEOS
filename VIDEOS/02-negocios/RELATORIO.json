@@ -1,0 +1,24 @@
+{
+ "video": 2,
+ "estilo": "documentario negocios (Business Casual / Magnates Media)",
+ "inicio": "2026-10-21T23:35:08.1889362-03:00",
+ "fim": "2026-10-22T00:07:25.4881265-03:00",
+ "minutos": 32.3,
+ "render_segundos": 99,
+ "observacoes": "11 fotos Wikimedia (PD/CC) + 4 motion graphics HTML/GSAP (arvore genealogica, cards tentativas falhas, linha do tempo, end card). Lower thirds com barra indigo inclinada, datas com sublinhado amarelo, arquivo P&B tom frio, Ken Burns, vinheta+grao. Sem SFX/musica. Sem foto livre de Fusajiro/Hiroshi Yamauchi e de arroz instantaneo -> substituidos por graficos. 1 re-render (contraste da data 1983 sobre fundo branco). Gargalos: rate-limit Wikimedia e falta de RAM p/ whisper com 13 sessoes paralelas. Render ~1.5x tempo real (draft, maquina compartilhada).",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Reaproveitado: build.py/style.css (componentes lower third, data, titulo, arvore, timeline, end card), pipeline whisper+mux. Escala com duracao: busca/curadoria de ~150-200 imagens de arquivo (maior custo, rate-limit Wikimedia), mapeamento cena<->fala (~5 cenas/min), whisper (~1 min CPU por 5 min audio), render draft ~1.5x duracao (~45-50 min p/ 30 min). Estimativa: ~45 min render + ~40 min busca imagens + ~30 min montagem automatizada + checagem; tokens crescem com nº de cenas (~25-30x este teste se feito cena a cena; usar tabela cena->query automatica para conter)."
+ },
+ "tokens": {
+  "novos": 104430,
+  "totais": 4395115,
+  "cache_lido": 4290685,
+  "cache_gravado": 75962,
+  "saida": 28388,
+  "entrada": 80,
+  "passos": 40
+ },
+ "custo_usd": 2.03,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

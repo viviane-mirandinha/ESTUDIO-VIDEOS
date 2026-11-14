@@ -1,0 +1,278 @@
+{
+ "version": 1,
+ "name": "06 - Bonecos 2D - 11 dias sem dormir",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#241433"
+ },
+ "duration": 65.2,
+ "template": "local",
+ "build_script": "template.html (local) -> build_from_edit.py -> hyperframes render -q draft",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 2D"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Título",
+   "start": 0,
+   "dur": 5.1,
+   "props": {
+    "scene": "card",
+    "params": {
+     "texto": "O QUE ACONTECE SE VOCÊ FICAR 11 DIAS SEM DORMIR?"
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Quarto - decide",
+   "start": 5.1,
+   "dur": 2.5,
+   "props": {
+    "scene": "quarto",
+    "params": {
+     "balao": "Quanto tempo eu aguento acordado?"
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Calendário 1964",
+   "start": 7.6,
+   "dur": 2.8,
+   "props": {
+    "scene": "calendario",
+    "params": {
+     "mes": "JANEIRO",
+     "ano": "1964"
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Randy San Diego",
+   "start": 10.4,
+   "dur": 5.1,
+   "props": {
+    "scene": "apresenta",
+    "params": {
+     "nome": "RANDY GARDNER",
+     "sub": "17 anos · San Diego, EUA"
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Feira de ciências",
+   "start": 15.5,
+   "dur": 3.5,
+   "props": {
+    "scene": "feira",
+    "params": {
+     "cartaz": "QUANTO TEMPO SEM DORMIR?",
+     "placa": "FEIRA DE CIÊNCIAS"
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Contador 264h",
+   "start": 19.0,
+   "dur": 5.1,
+   "props": {
+    "scene": "contador",
+    "params": {
+     "horas": 264,
+     "dias": "≈ 11 DIAS SEM DORMIR"
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Pesquisador",
+   "start": 24.1,
+   "dur": 5.5,
+   "props": {
+    "scene": "pesquisador",
+    "params": {
+     "nome": "WILLIAM DEMENT",
+     "sub": "Pesquisador do sono · Stanford",
+     "balao": "Vou acompanhar tudo."
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Card corpo reclamou",
+   "start": 29.6,
+   "dur": 2.0,
+   "props": {
+    "scene": "card",
+    "params": {
+     "texto": "E O CORPO RECLAMOU."
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Sintomas",
+   "start": 31.6,
+   "dur": 5.1,
+   "props": {
+    "scene": "sintomas",
+    "params": {
+     "i1": "MAU HUMOR",
+     "i2": "CONCENTRAÇÃO",
+     "i3": "MEMÓRIA"
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Alucinações",
+   "start": 36.7,
+   "dur": 3.6,
+   "props": {
+    "scene": "alucina",
+    "params": {
+     "balao": "Isso... é real?",
+     "rotulo": "ALUCINAÇÕES"
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Dorme 14h",
+   "start": 40.3,
+   "dur": 5.1,
+   "props": {
+    "scene": "dorme",
+    "params": {
+     "horas": "14 HORAS SEGUIDAS"
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Recuperou",
+   "start": 45.4,
+   "dur": 2.4,
+   "props": {
+    "scene": "acorda",
+    "params": {
+     "balao": "Ahh... bem melhor!"
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Atenção perigoso",
+   "start": 47.8,
+   "dur": 5.1,
+   "props": {
+    "scene": "alerta",
+    "params": {
+     "titulo": "ATENÇÃO",
+     "sub": "ESPECIALISTAS: REPETIR ISSO É PERIGOSO"
+    }
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "Sono essencial",
+   "start": 52.9,
+   "dur": 4.2,
+   "props": {
+    "scene": "essencial",
+    "params": {
+     "i1": "MEMÓRIA",
+     "i2": "SAÚDE",
+     "titulo": "O SONO É ESSENCIAL"
+    }
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "by": "template",
+   "label": "CTA",
+   "start": 57.1,
+   "dur": 8.1,
+   "props": {
+    "scene": "cta",
+    "params": {
+     "balao": "Quantas horas VOCÊ aguenta acordado?",
+     "botao": "INSCREVA-SE"
+    }
+   }
+  }
+ ],
+ "estilo": "Bonecos 2D",
+ "referencia": {
+  "video": "https://youtu.be/5153vDFmwBs",
+  "canal": "The Infographics Show",
+  "canal_url": "https://www.youtube.com/channel/UCfdNM3NAhaBOXCafH7krzrA",
+  "titulo": "You Need to stop Using INCOGNITO Mode Right Now",
+  "nota": "The Infographics Show"
+ }
+}

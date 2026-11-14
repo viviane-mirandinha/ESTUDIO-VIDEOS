@@ -1,0 +1,24 @@
+{
+ "video": 1,
+ "estilo": "MAPAS GEOPOLITICA (mapa escuro RealLifeLore + titulos/carimbos MemoriasDePez)",
+ "inicio": "2026-10-21T23:35:01.8343497-03:00",
+ "fim": "2026-10-22T00:10:17.773189-03:00",
+ "minutos": 35.3,
+ "render_segundos": 82,
+ "observacoes": "2 renders draft (41s cada, 72s de video). Mapa 100% vetorial (Natural Earth 50m -> SVG Mercator), camera por keyframes lon/lat/zoom, rotas Catmull-Rom com glow, paises acendendo, carimbos de data, corte lateral das eclusas, comparacao Panamax/Neopanamax, medidor de seca. Zero imagem externa. Atrasos: faster-whisper travava sem HF_HUB_OFFLINE=1 (~15 min perdidos); pacote av quebrado (decodificar wav). Referencia MemoriasDePez e whiteboard fundo branco (nao mapa escuro) - so tipografia/carimbos/balões foram herdados. Pendencia leve: tag FEBRE AMARELA encosta em ~22.000 MORTES (t~33s). Whoosh suave em 11 movimentos de camera. Projeto no formato do editor (template local + edit.json; textos, tempos e camera editaveis).",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Reaproveitado: template/motor de mapa (camera, rotas, highlights, labels, carimbos), gen_map, pipeline whisper/mux. Escala linear com a duracao: lista de cenas/keyframes (~1 beat a cada 4-6s => ~350 itens em 30 min, escrita por Claude = maior custo de tokens, ~10-15x este video), paineis especiais novos (diagramas tipo eclusas ~1 a cada 2-3 min), transcricao (~10 min CPU), render draft (~0.55x tempo real => ~17 min; render final HQ ~45-60 min). Dividir em capitulos de 3-5 min para paralelizar build e revisar contact-sheet por capitulo."
+ },
+ "tokens": {
+  "novos": 133151,
+  "totais": 4858639,
+  "cache_lido": 4725488,
+  "cache_gravado": 93992,
+  "saida": 39071,
+  "entrada": 88,
+  "passos": 44
+ },
+ "custo_usd": 2.48,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

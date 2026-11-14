@@ -1,0 +1,734 @@
+{
+ "version": 1,
+ "name": "08 - Psicologia Filosofia Sombria - Você sofre mais na imaginação",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#07080b"
+ },
+ "duration": 67.6,
+ "template": "generic",
+ "fonts": {
+  "Cormorant": "fonts/Cormorant.ttf",
+  "CormorantI": "fonts/CormorantItalic.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Pinturas"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta/grão"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "img01",
+   "type": "image",
+   "track": "fundo",
+   "label": "01_nightmare",
+   "start": 0.0,
+   "dur": 4.2,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "src": "img/g_01_nightmare.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img02",
+   "type": "image",
+   "track": "fundo",
+   "label": "14_seneca_bust",
+   "start": 4.0,
+   "dur": 5.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_14_seneca_bust.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img03",
+   "type": "image",
+   "track": "fundo",
+   "label": "03_letters",
+   "start": 9.4,
+   "dur": 4.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_03_letters.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img04",
+   "type": "image",
+   "track": "fundo",
+   "label": "04_goya",
+   "start": 13.6,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_04_goya.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img05",
+   "type": "image",
+   "track": "fundo",
+   "label": "05_triumph",
+   "start": 17.4,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_05_triumph.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img06",
+   "type": "image",
+   "track": "fundo",
+   "label": "06_monk",
+   "start": 21.8,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_06_monk.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img07",
+   "type": "image",
+   "track": "fundo",
+   "label": "07_wanderer",
+   "start": 26.4,
+   "dur": 5.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_07_wanderer.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img08",
+   "type": "image",
+   "track": "fundo",
+   "label": "08_medusa",
+   "start": 31.8,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_08_medusa.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img09",
+   "type": "image",
+   "track": "fundo",
+   "label": "09_socrates",
+   "start": 37.0,
+   "dur": 7.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_09_socrates.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img10",
+   "type": "image",
+   "track": "fundo",
+   "label": "10_moon",
+   "start": 44.4,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_10_moon.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img11",
+   "type": "image",
+   "track": "fundo",
+   "label": "11_isle",
+   "start": 47.6,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_11_isle.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img12",
+   "type": "image",
+   "track": "fundo",
+   "label": "12_melencolia",
+   "start": 52.2,
+   "dur": 9.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_12_melencolia.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img13",
+   "type": "image",
+   "track": "fundo",
+   "label": "13_sunset",
+   "start": 61.6,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_13_sunset.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "grade",
+   "type": "html",
+   "track": "visual",
+   "label": "vinheta + grão",
+   "start": 0,
+   "dur": 67.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720,
+    "html": "<div class='vg'></div><div class='gr'></div>",
+    "css": ".vg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%),linear-gradient(rgba(5,6,10,.25),rgba(5,6,10,.25))}.gr{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")}"
+   }
+  },
+  {
+   "id": "t01",
+   "type": "text",
+   "track": "textos",
+   "label": "Quantos desastres você j",
+   "start": 0.3,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Quantos desastres você já viveu hoje,",
+    "x": 640,
+    "y": 330,
+    "w": 1100,
+    "size": 50,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t02",
+   "type": "text",
+   "track": "textos",
+   "label": "só na sua cabeça?",
+   "start": 2.5,
+   "dur": 1.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "só na sua cabeça?",
+    "x": 760,
+    "y": 395,
+    "w": 1100,
+    "size": 54,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t03",
+   "type": "text",
+   "track": "textos",
+   "label": "SÊNECA",
+   "start": 4.6,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SÊNECA",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 92,
+    "color": "#c9a96e",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t04",
+   "type": "text",
+   "track": "textos",
+   "label": "filósofo estoico  ·  4 a",
+   "start": 5.4,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "filósofo estoico  ·  4 a.C. – 65 d.C.",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 32,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t05",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartas a Lucílio",
+   "start": 9.6,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Cartas a Lucílio",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 44,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t06",
+   "type": "text",
+   "track": "textos",
+   "label": "“Sofremos mais na imagin",
+   "start": 13.8,
+   "dur": 3.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "“Sofremos mais na imaginação",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 58,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false,
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4
+   }
+  },
+  {
+   "id": "t07",
+   "type": "text",
+   "track": "textos",
+   "label": "do que na realidade.”",
+   "start": 14.6,
+   "dur": 2.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "do que na realidade.”",
+    "x": 700,
+    "y": 390,
+    "w": 1100,
+    "size": 58,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false,
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4
+   }
+  },
+  {
+   "id": "t08",
+   "type": "text",
+   "track": "textos",
+   "label": "— Sêneca",
+   "start": 15.6,
+   "dur": 1.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "— Sêneca",
+    "x": 860,
+    "y": 460,
+    "w": 1100,
+    "size": 30,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false,
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4
+   }
+  },
+  {
+   "id": "t09",
+   "type": "text",
+   "track": "textos",
+   "label": "um sofrimento que ainda ",
+   "start": 22.9,
+   "dur": 3.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "um sofrimento que ainda não existe",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 44,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "o que depende de nós",
+   "start": 27.0,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "o que depende de nós",
+    "x": 560,
+    "y": 300,
+    "w": 1100,
+    "size": 50,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "o que não depende",
+   "start": 28.8,
+   "dur": 2.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "o que não depende",
+    "x": 740,
+    "y": 370,
+    "w": 1100,
+    "size": 50,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "PREMEDITATIO MALORUM",
+   "start": 37.8,
+   "dur": 6.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PREMEDITATIO MALORUM",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 56,
+    "color": "#c9a96e",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t13",
+   "type": "text",
+   "track": "textos",
+   "label": "imaginar o pior — com ca",
+   "start": 39.6,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "imaginar o pior — com calma — e se preparar",
+    "x": 640,
+    "y": 620,
+    "w": 1100,
+    "size": 30,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t14",
+   "type": "text",
+   "track": "textos",
+   "label": "voltar ao presente",
+   "start": 45.4,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "voltar ao presente",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 48,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t15",
+   "type": "text",
+   "track": "textos",
+   "label": "O medo vive no futuro.",
+   "start": 47.7,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "O medo vive no futuro.",
+    "x": 600,
+    "y": 320,
+    "w": 1100,
+    "size": 58,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t16",
+   "type": "text",
+   "track": "textos",
+   "label": "A vida acontece agora.",
+   "start": 50.0,
+   "dur": 2.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A vida acontece agora.",
+    "x": 700,
+    "y": 395,
+    "w": 1100,
+    "size": 58,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t17",
+   "type": "text",
+   "track": "textos",
+   "label": "Isso está acontecendo ag",
+   "start": 57.3,
+   "dur": 4.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Isso está acontecendo agora…",
+    "x": 600,
+    "y": 320,
+    "w": 1100,
+    "size": 52,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t18",
+   "type": "text",
+   "track": "textos",
+   "label": "ou só na minha cabeça?",
+   "start": 58.9,
+   "dur": 2.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ou só na minha cabeça?",
+    "x": 720,
+    "y": 390,
+    "w": 1100,
+    "size": 56,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t19",
+   "type": "text",
+   "track": "textos",
+   "label": "inscreva-se",
+   "start": 63.0,
+   "dur": 4.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "inscreva-se",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 40,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  }
+ ],
+ "build_script": "tools/make_edit.py",
+ "creditos": "img/creditos.json (Wikimedia Commons, domínio público)",
+ "estilo": "Psicologia sombria",
+ "referencia": {
+  "video": "https://youtu.be/1MgWadC7S4I",
+  "canal": "Einzelgänger",
+  "canal_url": "https://www.youtube.com/channel/UCybBViio_TH_uiFFDJuz5tg",
+  "titulo": "Why Squidward Is So Miserable",
+  "nota": "Einzelgänger"
+ }
+}

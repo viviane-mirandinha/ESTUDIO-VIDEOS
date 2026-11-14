@@ -1,0 +1,24 @@
+{
+ "video": 6,
+ "estilo": "Bonecos 2D flat animados (The Infographics Show)",
+ "inicio": "2026-10-21T23:35:26-03:00",
+ "fim": "2026-10-21T23:45:54-03:00",
+ "minutos": 10.5,
+ "render_segundos": 61,
+ "observacoes": "100% local: SVG próprio (função boneco() parametrizada: humor, olheiras, jaleco, óculos) + GSAP via HyperFrames template local lido do edit.json. 15 cenas (~4 s cada), 2 personagens consistentes (Randy e pesquisador), cards roxos caixa-alta, ícones line-art em fundo listrado, balões brancos. Sem imagens externas, sem SFX, sem música. Whisper falhou 2x por mkl_malloc (RAM concorrida) e PyAV; resolvido passando PCM numpy. Render 1m01s draft; fila do lock ~10 min.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Reaproveitado: função boneco(), cenários (quarto, laboratório, praia), pattern, cards, balões, pipeline edit.json->build->render. Escala com duração: nº de cenas (~4 s cada => ~450 cenas em 30 min; precisa biblioteca de ~30-40 cenários/poses e cenas geradas por script a partir do roteiro, não escritas à mão), whisper (~3-5 min CPU), render draft ~1 s por s de vídeo => ~30-40 min (standard ~2x). Tempo humano/Claude é o gargalo: escrever cenas sob medida; com biblioteca pronta ~1,5-2 h de máquina total."
+ },
+ "tokens": {
+  "novos": 106139,
+  "totais": 3918313,
+  "cache_lido": 3812174,
+  "cache_gravado": 74668,
+  "saida": 31397,
+  "entrada": 74,
+  "passos": 37
+ },
+ "custo_usd": 1.99,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

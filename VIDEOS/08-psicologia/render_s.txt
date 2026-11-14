@@ -1,0 +1,2 @@
+render_s=120
+render2_s=88

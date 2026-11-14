@@ -1,0 +1,187 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face{font-family:PH;src:url(fonts/PatrickHand.ttf)}
+html,body{margin:0;background:#fff}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#fff;font-family:PH,sans-serif;color:#111}
+.sc{position:absolute;inset:0;visibility:hidden;overflow:hidden}
+.p{position:absolute}
+.p>svg{display:block;width:100%;height:auto;overflow:visible}
+.t{position:absolute;text-transform:uppercase;text-align:center;line-height:1.05;letter-spacing:1px;white-space:nowrap}
+.sp{position:absolute;color:#f2df00;font-size:64px;font-weight:bold;line-height:1}
+.red{color:#d81f1f}.grn{color:#1d9a3a}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720"></div>
+<script>
+const EDIT = __EDIT__;
+const ED = Object.fromEntries(EDIT.items.map(i=>[i.id,i]));
+const X = id => (ED[id]&&!ED[id].hidden ? String(ED[id].props.value) : '').replace(/\n/g,'<br>');
+const T = Object.fromEntries(EDIT.items.filter(i=>i.type==='scene'&&!i.hidden).map(i=>[i.id,[i.start,i.dur]]));
+const DUR = __DUR__;
+const K = 'stroke="#111" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"';
+const MOUTH = {
+  smile:'<path d="M128 136 Q150 154 172 136" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>',
+  frown:'<path d="M132 148 Q150 134 168 148" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>',
+  open:'<ellipse cx="150" cy="142" rx="13" ry="10" fill="#6b1f1f" stroke="#111" stroke-width="5"/>',
+  neutral:'<path d="M136 142 L164 142" stroke="#111" stroke-width="6" stroke-linecap="round"/>',
+  sly:'<path d="M126 134 Q152 152 178 128" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>'
+};
+function G(o={}){
+  const fur=o.fur||'#7b4b2a', skin='#e2a983', suit=o.suit, body=suit?'#ffe14a':fur;
+  let s=`<svg viewBox="0 -25 300 385">`;
+  s+=`<path d="M105 285 L98 340 Q120 352 145 342 L148 295Z" fill="${suit?'#4a2e1a':fur}" ${K}/>`;
+  s+=`<path d="M195 285 L202 340 Q180 352 155 342 L152 295Z" fill="${suit?'#4a2e1a':fur}" ${K}/>`;
+  s+=`<path d="M88 140 Q30 210 38 330 Q58 348 78 334 Q76 250 112 190Z" fill="${body}" ${K}/>`;
+  s+=`<path d="M212 140 Q270 210 262 330 Q242 348 222 334 Q224 250 188 190Z" fill="${body}" ${K}/>`;
+  s+=`<ellipse cx="150" cy="215" rx="78" ry="92" fill="${body}" ${K}/>`;
+  if(suit){
+    s+=`<path d="M124 128 L150 205 L176 128Z" fill="#fff" ${K}/>`;
+    s+=`<path d="M144 140 L156 140 L161 222 L150 238 L139 222Z" fill="#fff6c8" stroke="#111" stroke-width="5" stroke-linejoin="round"/>`;
+    s+=`<path d="M145 165 q5 6 10 0 M144 190 q6 6 12 0 M144 212 q6 6 12 0" fill="none" stroke="#e0b800" stroke-width="4" stroke-linecap="round"/>`;
+    s+=`<path d="M124 128 L138 230 M176 128 L162 230" fill="none" stroke="#111" stroke-width="5"/>`;
+  } else {
+    s+=`<path d="M112 178 Q150 202 188 178" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>`;
+  }
+  s+=`<circle cx="94" cy="108" r="13" fill="${skin}" ${K}/><circle cx="206" cy="108" r="13" fill="${skin}" ${K}/>`;
+  s+=`<path d="M95 105 Q92 38 150 28 Q208 38 205 105 Q205 162 150 164 Q95 162 95 105Z" fill="${fur}" ${K}/>`;
+  s+=`<path d="M108 94 Q150 72 192 94 Q206 136 172 154 Q150 162 128 154 Q94 136 108 94Z" fill="${skin}" ${K}/>`;
+  s+= o.angry ? `<path d="M112 88 L144 101 M188 88 L156 101" stroke="#111" stroke-width="7" stroke-linecap="round"/>`
+              : `<path d="M110 95 Q130 84 150 93 Q170 84 190 95" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round"/>`;
+  s+=`<circle cx="134" cy="108" r="5.5" fill="#111"/><circle cx="166" cy="108" r="5.5" fill="#111"/>`;
+  s+=`<path d="M139 124 Q150 117 161 124" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/><circle cx="144" cy="127" r="2.5" fill="#111"/><circle cx="156" cy="127" r="2.5" fill="#111"/>`;
+  s+=MOUTH[o.mouth||'neutral'];
+  if(o.tear) s+=`<path d="M172 114 Q166 128 172 132 Q178 128 172 114Z" fill="#59b7ff" stroke="#111" stroke-width="3"/>`;
+  if(o.hat){
+    s+=`<path d="M106 54 Q104 -2 150 -6 Q196 -2 194 54Z" fill="#ffe14a" ${K}/>`;
+    s+=`<path d="M107 28 L193 28 L194 44 L106 44Z" fill="#111"/>`;
+    s+=`<ellipse cx="150" cy="55" rx="84" ry="14" fill="#ffe14a" ${K}/>`;
+  }
+  return s+'</svg>';
+}
+const BANANA=`<svg viewBox="0 0 200 100"><path d="M20 30 Q100 112 185 24 Q176 18 168 26 Q100 80 30 20Z" fill="#ffd21f" stroke="#111" stroke-width="6" stroke-linejoin="round"/><path d="M172 24 L184 10" stroke="#111" stroke-width="9" stroke-linecap="round"/><path d="M18 30 L26 22" stroke="#111" stroke-width="7" stroke-linecap="round"/></svg>`;
+const TREE=`<svg viewBox="0 0 200 300"><path d="M88 300 L94 170 L106 170 L112 300Z" fill="#7a4a24" ${K}/><path d="M100 20 C150 10 190 60 175 100 C200 140 160 190 120 175 C100 200 50 195 45 160 C5 150 10 90 40 80 C35 40 70 15 100 20Z" fill="#4caf3a" ${K}/></svg>`;
+const FLAME=`<svg viewBox="0 0 100 150"><path d="M50 5 C70 40 95 60 90 100 C88 135 65 148 50 148 C30 148 8 132 10 100 C12 75 30 70 32 45 C42 60 45 40 50 5Z" fill="#ff5a1f" stroke="#111" stroke-width="5" stroke-linejoin="round"/><path d="M50 60 C60 85 75 95 72 118 C70 138 30 140 28 118 C27 100 40 95 50 60Z" fill="#ffd21f"/></svg>`;
+const XRED=(w)=>`<svg viewBox="0 0 200 200"><path class="dr" d="M25 25 L175 175" stroke="#d81f1f" stroke-width="22" stroke-linecap="round" fill="none"/><path class="dr" d="M175 25 L25 175" stroke="#d81f1f" stroke-width="22" stroke-linecap="round" fill="none"/></svg>`;
+const ARROW=(len)=>`<svg viewBox="0 0 ${len} 60"><path class="dr" d="M5 30 Q${len/2} 5 ${len-25} 30" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M${len-45} 12 L${len-20} 31 L${len-48} 44" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+function P(html,x,y,w,cls='',st=''){return `<div class="p ${cls}" style="left:${x}px;top:${y}px;width:${w}px;${st}">${html}</div>`}
+function TX(txt,x,y,size,cls='',w=null){const ww=w?`width:${w}px;`:'';return `<div class="t ${cls}" style="left:${x}px;top:${y}px;font-size:${size}px;${ww}">${txt}</div>`}
+function SPK(x,y,s=64,ch='+'){return `<div class="sp spk" style="left:${x}px;top:${y}px;font-size:${s}px">${ch}</div>`}
+const GH=385/300; // altura/largura gorila
+function pyramid(rows,w,y0,dy,o={}){
+  let h='';
+  rows.forEach((n,r)=>{for(let i=0;i<n;i++){
+    const x=640-n*w*0.92/2+i*w*0.92;
+    const top=r===0&&o.bentoTop;
+    const mouth = o.baseSad && r===rows.length-1 ? 'frown' : (r===0?'sly':'smile');
+    h+=P(G(top?{suit:1,hat:1,angry:1,mouth:'sly'}:{mouth,tear:o.baseSad&&r===rows.length-1}),x,y0+r*dy,w,`row${r}`);
+  }});
+  return h;
+}
+function bananaPile(cx,cy,n,sz){
+  let h='';let k=0;
+  for(let r=0;k<n;r++){const c=Math.max(1,5-r);for(let i=0;i<c&&k<n;i++,k++){
+    const x=cx-c*sz*0.55/2+i*sz*0.55, y=cy-r*sz*0.28, rot=((k*37)%40)-20;
+    h+=P(BANANA,x,y,sz,'bn',`transform:rotate(${rot}deg)`);}}
+  return h;
+}
+const S={};
+S.s1=P(G({mouth:'smile'}),120,170,330,'ch')+
+ P('<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#fff" '+K+'/></svg>',440,250,34,'b1')+
+ P('<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#fff" '+K+'/></svg>',480,195,52,'b2')+
+ P('<svg viewBox="0 0 600 380"><path d="M90 190 C40 180 40 100 110 100 C110 40 200 30 230 70 C260 20 360 20 380 70 C420 30 520 50 510 120 C580 140 570 230 510 240 C520 300 430 330 380 290 C350 340 240 340 220 290 C170 330 80 300 100 250 C50 245 50 200 90 190Z" fill="#fff" '+K+'/></svg>',540,60,640,'cloud')+
+ P(BANANA,640,200,150,'c1')+TX(X('s1_t1'),815,170,110,'c2')+P(BANANA,890,170,150,'c3')+P(BANANA,900,245,150,'c3');
+S.s2=P(G({mouth:'open'}),40,90,640,'ch')+TX(X('s2_t1'),740,230,96,'tx');
+S.s3=P(G({suit:1,hat:1,angry:1,mouth:'sly'}),160,150,380,'ch')+TX(X('s3_t1'),700,250,170,'tx')+SPK(660,210)+SPK(1110,200)+SPK(690,440,50,'×')+SPK(1080,450,50,'×');
+S.s4=P(TREE,40,250,240)+P(TREE,980,230,260)+P(TREE,300,330,170)+P(TREE,820,340,160)+P(G({suit:1,hat:1,angry:1,mouth:'sly'}),490,230,300,'ch');
+S.s5=P(G({suit:1,hat:1,angry:1,mouth:'sly'}),60,250,300,'ch')+P(G({mouth:'open'}),920,250,300,'ch2')+
+ TX(X('s5_t1'),330,40,82,'tx')+SPK(300,50,54)+SPK(940,40,54)+
+ P(BANANA,420,330,140,'c1')+P(ARROW(160),570,340,150,'c2')+P(BANANA,730,290,140,'c3')+P(BANANA,740,370,140,'c3');
+S.s6=P(G({suit:1,hat:1,angry:1,mouth:'neutral'}),620,40,720,'ch')+TX(X('s6_t1'),80,240,100,'tx');
+S.s7=P(G({mouth:'smile'}),585,30,110,'row0')+
+ P(G({mouth:'smile'}),420,240,110,'row1')+P(G({mouth:'smile'}),750,240,110,'row1')+
+ [300,470,700,870].map(x=>P(G({mouth:'neutral'}),x,450,100,'row2')).join('')+
+ [470,800].map(x=>P(BANANA,x+20,190,70,'bn1')).join('')+
+ [320,490,720,890].map(x=>P(BANANA,x+10,410,60,'bn2')).join('')+
+ TX(X('s7_t1'),40,60,64,'tx')+TX(X('s7_t2'),880,60,64,'tx2',360);
+S.s8=TX(X('s8_t1'),190,70,96,'tx',900)+SPK(150,80)+SPK(1090,80)+SPK(170,230,50,'×')+SPK(1080,240,50,'×')+
+ P(TREE,520,330,220,'tr')+P(XRED(),510,390,240,'x')+P('<svg viewBox="0 0 1280 20"><path d="M0 10 L1280 10" stroke="#111" stroke-width="6"/></svg>',0,640,1280);
+S.s9=P('<svg viewBox="0 0 240 200"><path d="M20 60 L120 20 L220 60 L220 170 L120 195 L20 170Z" fill="#c8954f" '+K+'/><path d="M20 60 L120 100 L220 60 M120 100 L120 195" fill="none" '+K+'/></svg>',170,200,300,'bx')+
+ P(XRED(),190,190,260,'x1')+TX(X('s9_t1'),170,520,72,'tx1',300)+
+ P('<svg viewBox="0 0 300 220"><path d="M20 10 L20 200 L290 200" fill="none" '+K+'/><path class="dr" d="M30 170 L110 165 L170 172 L280 168" fill="none" stroke="#1d9a3a" stroke-width="8" stroke-linecap="round"/></svg>',800,200,320,'gr')+
+ P(XRED(),830,190,260,'x2')+TX(X('s9_t2'),800,520,72,'tx2',320);
+S.s10=P(G({mouth:'smile'}),110,230,290,'old')+P(G({mouth:'neutral'}),880,230,290,'nw')+
+ TX(X('s10_t1'),120,130,64,'grn')+TX(X('s10_t2'),900,130,64,'')+P(ARROW(400),440,330,400,'ar','transform:scaleX(-1)')+
+ P(BANANA,860,420,130,'mv')+P(BANANA,880,470,130,'mv');
+S.s11=pyramid([1,2,3,4],120,105,118,{bentoTop:1})+bananaPile(700,90,6,90)+TX(X('s11_t1'),60,110,84,'grn tx')+SPK(40,70,50);
+S.s12=`<div class="zoom" style="position:absolute;inset:0">`+pyramid([1,2,3,4],120,105,118,{bentoTop:1,baseSad:1})+`</div>`+TX(X('s12_t1'),1020,420,84,'red tx');
+S.s13=TX(X('s13_t1'),200,20,70,'tx',880)+SPK(150,20,54)+SPK(1090,20,54)+pyramid([1,2,3,4,5],95,105,98,{bentoTop:1});
+S.s14=(()=>{let h='';for(let r=0;r<4;r++)for(let i=0;i<10;i++)h+=P(G({mouth:['smile','neutral','open'][(r+i)%3]}),40+i*120+(r%2)*30,140+r*130,100,'cr cr'+r);return h})()+TX(X('s14_t1'),290,20,80,'tx',700);
+S.s15=pyramid([1,2,3,4],120,105,118,{bentoTop:1})+TX(X('s15_t1'),60,40,90,'red tx');
+S.s16=bananaPile(420,430,12,170)+[300,420,540,660].map((x,i)=>P(FLAME,x,370+(i%2)*30,110,'fl')).join('')+P(G({mouth:'frown',tear:1}),900,220,300,'ch')+TX(X('s16_t1'),840,100,80,'tx');
+S.s17=TX(X('s17_t1'),240,80,120,'tx',800)+SPK(170,90)+SPK(1060,90)+SPK(200,240,50,'×')+SPK(1040,240,50,'×')+
+ P('<svg viewBox="0 0 240 210"><path d="M120 12 L228 198 L12 198Z" fill="#ffd21f" '+K+' stroke-width="10"/><path d="M120 70 L120 140" stroke="#111" stroke-width="18" stroke-linecap="round"/><circle cx="120" cy="172" r="10" fill="#111"/></svg>',520,310,240,'wn');
+S.s18=P(G({suit:1,hat:1,angry:1,mouth:'open'}),60,260,290,'ch')+
+ P('<svg viewBox="0 0 300 140"><path d="M20 20 L280 20 L280 100 L120 100 L80 135 L85 100 L20 100Z" fill="#fff" '+K+'/></svg>',220,50,420,'bub')+TX(X('s18_t1'),260,72,46,'bubt',300)+
+ P('<svg viewBox="0 0 600 440"><rect x="10" y="10" width="580" height="420" rx="14" fill="#fff" stroke="#2c3a3a" stroke-width="16"/><rect x="60" y="50" width="480" height="50" rx="6" fill="#fff" '+K+' stroke-width="4"/><path d="M110 380 L110 150 M110 380 L520 380" fill="none" '+K+'/><path class="dr" d="M120 370 L500 160" fill="none" stroke="#1d9a3a" stroke-width="9" stroke-linecap="round"/></svg>',640,150,560,'br')+
+ TX(X('s18_t2'),710,203,30,'q');
+S.s19=P('<svg viewBox="0 0 700 420"><path d="M350 60 L350 380 M250 390 L450 390" '+K+' stroke-width="10" fill="none"/><path d="M290 395 L350 330 L410 395Z" fill="#c8954f" '+K+'/></svg>',290,240,700)+
+ `<div class="beam" style="position:absolute;left:290px;top:240px;width:700px;height:420px;transform-origin:350px 70px">`+
+ '<svg viewBox="0 0 700 420" style="position:absolute;inset:0;overflow:visible"><path d="M60 70 L640 70" stroke="#111" stroke-width="12" stroke-linecap="round"/><path d="M60 70 L20 200 M60 70 L100 200 M640 70 L600 200 M640 70 L680 200" stroke="#111" stroke-width="4"/><path d="M0 200 Q60 250 120 200Z M580 200 Q640 250 700 200Z" fill="#ddd" '+K+'/></svg>'+
+ `<div class="pl" style="position:absolute;left:0;top:96px;width:120px">${[0,1,2].map(i=>`<div class="p" style="left:${i*36}px;top:${(i%2)*-14}px;width:56px">${G({mouth:'smile'})}</div>`).join('')}</div>`+
+ P(BANANA,600,170,90)+`</div>`+
+ TX(X('s19_t1'),140,120,70,'red tx')+TX(X('s19_t2'),960,120,70,'tx');
+S.s20=P(G({suit:1,hat:1,angry:1,mouth:'frown'}),470,170,320,'ch')+
+ [0,1,2,3,4,5,6].map(i=>`<div class="bar" style="position:absolute;left:${430+i*66}px;top:120px;width:20px;height:560px;background:#3a3a3a;border-radius:10px;border:5px solid #111"></div>`).join('')+
+ `<div class="bar2" style="position:absolute;left:410px;top:120px;width:440px;height:22px;background:#3a3a3a;border:5px solid #111;border-radius:10px"></div>`+
+ TX(X('s20_t1'),60,140,72,'tx')+TX(X('s20_t2'),940,250,140,'red tx2')+SPK(900,230,54,'×')+SPK(1210,360,54,'×');
+S.s21=P(G({mouth:'smile'}),40,140,430,'ch')+
+ `<div class="sub" style="position:absolute;left:560px;top:150px;width:560px;height:150px;border:8px solid #111;border-radius:30px;background:#e62117;color:#fff;font-size:92px;text-align:center;line-height:150px;text-transform:uppercase">inscreva-se</div>`+
+ TX(X('s21_t1'),560,360,62,'tx',560)+P(G({suit:1,hat:1,angry:1,mouth:'sly'}),1080,500,200,'pk');
+
+const root=document.getElementById('root');
+Object.keys(S).forEach(id=>{const d=document.createElement('div');d.className='sc';d.id=id;d.innerHTML=S[id];root.appendChild(d);});
+
+// preparar paths desenhaveis
+document.querySelectorAll('.dr').forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+const q=(id,sel)=>document.querySelectorAll(sel.split(',').map(x=>'#'+id+' '+x.trim()).join(','));
+const pop=(id,sel,t,st=0.08)=>tl.from(q(id,sel),{scale:0.6,autoAlpha:0,duration:0.3,ease:'back.out(2.2)',stagger:st},t);
+const slide=(id,sel,t,x)=>tl.from(q(id,sel),{x,duration:0.45,ease:'power3.out'},t);
+const draw=(id,sel,t,d=0.5)=>tl.to(q(id,sel+' .dr'),{strokeDashoffset:0,duration:d,ease:'power2.inOut',stagger:0.15},t);
+const breathe=(id,sel,a,d)=>tl.to(q(id,sel),{scaleY:1.025,transformOrigin:'50% 100%',duration:0.6,ease:'sine.inOut',yoyo:true,repeat:Math.max(1,Math.floor(d/0.6)-1)},a);
+const twinkle=(id,a,d)=>{if(q(id,'.spk').length) tl.to(q(id,'.spk'),{rotate:45,scale:1.25,duration:0.4,ease:'sine.inOut',yoyo:true,repeat:Math.max(1,Math.floor(d/0.4)-1),stagger:0.1},a);};
+
+const A={
+ s1:(a,d)=>{pop('s1','.ch',a);pop('s1','.b1,.b2,.cloud',a+0.4,0.15);pop('s1','.c1',a+d*0.45);pop('s1','.c2,.c3',a+d*0.65,0.1);breathe('s1','.ch',a+0.3,d-0.3);},
+ s2:(a,d)=>{tl.fromTo(q('s2','.ch'),{scale:1},{scale:1.06,transformOrigin:'40% 40%',duration:d,ease:'none'},a);pop('s2','.tx',a+0.25);},
+ s3:(a,d)=>{slide('s3','.ch',a,-500);pop('s3','.tx',a+0.35);pop('s3','.spk',a+0.5);twinkle('s3',a+0.8,d-0.8);},
+ s4:(a,d)=>{pop('s4','.p:not(.ch)',a,0.06);tl.from(q('s4','.ch'),{x:700,duration:Math.min(1.6,d*0.5),ease:'power2.out'},a+0.2);tl.to(q('s4','.ch'),{y:-14,duration:0.18,yoyo:true,repeat:7,ease:'sine.inOut'},a+0.2);},
+ s5:(a,d)=>{slide('s5','.ch',a,-400);slide('s5','.ch2',a+0.15,400);pop('s5','.tx,.spk',a+0.3);pop('s5','.c1',a+d*0.35);draw('s5','.c2',a+d*0.45,0.4);pop('s5','.c3',a+d*0.6,0.12);twinkle('s5',a+0.6,d-0.6);},
+ s6:(a,d)=>{pop('s6','.tx',a+0.1);tl.from(q('s6','.ch'),{y:300,duration:0.5,ease:'back.out(1.4)'},a);},
+ s7:(a,d)=>{pop('s7','.row0',a);pop('s7','.tx',a+0.2);pop('s7','.row1',a+d*0.25,0.15);pop('s7','.bn1',a+d*0.38,0.1);pop('s7','.row2',a+d*0.55,0.1);pop('s7','.bn2',a+d*0.7,0.08);pop('s7','.tx2',a+d*0.7);tl.to(q('s7','.bn1,.bn2'),{y:-60,autoAlpha:0,duration:0.5,stagger:0.08},a+d*0.85);},
+ s8:(a,d)=>{pop('s8','.tx,.spk',a,0.05);pop('s8','.tr',a+d*0.3);draw('s8','.x',a+d*0.55,0.3);twinkle('s8',a+0.4,d-0.4);},
+ s9:(a,d)=>{pop('s9','.bx,.tx1',a);draw('s9','.x1',a+d*0.25,0.3);pop('s9','.gr,.tx2',a+d*0.45);draw('s9','.gr',a+d*0.5,0.4);draw('s9','.x2',a+d*0.72,0.3);},
+ s10:(a,d)=>{slide('s10','.old',a,-400);slide('s10','.nw',a,400);pop('s10','.t',a+0.3);draw('s10','.ar',a+0.5,0.5);tl.to(q('s10','.mv'),{x:-660,y:-40,duration:d*0.45,ease:'power1.inOut',stagger:0.25},a+d*0.35);},
+ s11:(a,d)=>{pop('s11','.row3',a,0.05);pop('s11','.row2',a+0.15,0.05);pop('s11','.row1',a+0.3,0.05);pop('s11','.row0',a+0.45);pop('s11','.bn',a+0.7,0.06);pop('s11','.tx,.spk',a+0.6);},
+ s12:(a,d)=>{tl.fromTo(q('s12','.zoom'),{scale:1},{scale:1.5,transformOrigin:'50% 92%',duration:Math.min(1.2,d*0.6),ease:'power2.inOut'},a);pop('s12','.tx',a+0.6);tl.to(q('s12','.row3'),{y:6,duration:0.12,yoyo:true,repeat:9},a+0.8);},
+ s13:(a,d)=>{pop('s13','.tx,.spk',a);[0,1,2,3,4].forEach(r=>pop('s13','.row'+r,a+0.2+r*d*0.15,0.04));},
+ s14:(a,d)=>{pop('s14','.tx',a);pop('s14','.cr',a,0.008);[3,2,1].forEach((r,i)=>tl.to(q('s14','.cr'+r),{autoAlpha:0,y:30,duration:0.3,stagger:0.03},a+d*(0.4+i*0.17)));},
+ s15:(a,d)=>{pop('s15','.tx',a+d*0.35);tl.to(q('s15','.row3'),{x:(j)=>((j*29)%80)-40,duration:0.08,yoyo:true,repeat:5},a);
+   [3,2,1,0].forEach((r,i)=>tl.to(q('s15','.row'+r),{y:700,rotate:(j)=>((j*53+r*17)%120)-60,duration:0.9,ease:'power2.in',stagger:0.05},a+0.45+i*0.12));},
+ s16:(a,d)=>{pop('s16','.bn',a,0.02);pop('s16','.fl',a+0.3,0.08);tl.to(q('s16','.fl'),{scaleY:1.15,transformOrigin:'50% 100%',duration:0.25,yoyo:true,repeat:Math.max(1,Math.floor(d/0.25)-1),stagger:0.07},a+0.6);slide('s16','.ch',a+0.2,400);pop('s16','.tx',a+0.5);},
+ s17:(a,d)=>{pop('s17','.tx,.spk',a);pop('s17','.wn',a+0.25);tl.to(q('s17','.wn'),{rotate:6,duration:0.15,yoyo:true,repeat:5},a+0.6);twinkle('s17',a+0.4,d-0.4);},
+ s18:(a,d)=>{slide('s18','.ch',a,-400);pop('s18','.bub,.bubt',a+0.3);pop('s18','.br,.q',a+d*0.3);draw('s18','.br',a+d*0.45,0.8);},
+ s19:(a,d)=>{pop('s19','.p,.beam,.t',a,0.05);tl.fromTo(q('s19','.beam'),{rotate:0},{rotate:-12,duration:0.9,ease:'bounce.out'},a+d*0.35);},
+ s20:(a,d)=>{pop('s20','.ch',a);pop('s20','.tx',a+0.1);tl.from(q('s20','.bar,.bar2'),{y:-720,duration:0.45,ease:'bounce.out',stagger:0.05},a+d*0.3);pop('s20','.tx2,.spk',a+d*0.55);twinkle('s20',a+d*0.6,d*0.4);},
+ s21:(a,d)=>{slide('s21','.ch',a,-500);pop('s21','.sub',a+0.3);pop('s21','.tx',a+0.6);tl.from(q('s21','.pk'),{y:260,duration:0.6,ease:'back.out(1.6)'},a+d*0.5);tl.to(q('s21','.sub'),{scale:1.06,duration:0.4,yoyo:true,repeat:Math.max(1,Math.floor(d/0.4)-3)},a+0.8);}
+};
+Object.keys(T).forEach(id=>{const [a,d]=T[id];tl.set('#'+id,{visibility:'visible'},a);tl.set('#'+id,{visibility:'hidden'},a+d);A[id](a,d);});
+tl.set({}, {}, DUR);
+window.__timelines["main"]=tl;
+</script>
+<!--__ITEMS__-->
+<!--__ITEMS_SCRIPT__-->
+</body></html>

@@ -1,0 +1,24 @@
+{
+ "video": 7,
+ "estilo": "Metáfora com personagem fixo 2D (Primate Economics) — macacos e bananas",
+ "inicio": "2026-10-21T23:35:26-03:00",
+ "fim": "2026-10-22T00:02:44.5943476-03:00",
+ "minutos": 27.5,
+ "render_segundos": 55,
+ "observacoes": "Tudo vetorial (SVG desenhado em código + GSAP), zero imagem externa. Personagem fixo Bento = gorila de terno/chapéu amarelo gerado pela mesma função G() em todas as cenas (consistência 100%). 21 cenas com corte seco casadas com âncoras da fala (faster-whisper). Whisper falhou 3x por falta de RAM (13 sessões simultâneas) e PyAV incompatível com mp3 — resolvido decodificando com ffmpeg p/ float32. Fila de render: ~5 min de espera no re-render. 1 re-render (texto cortado cena 7, balão cena 18). edit.json no formato EDITOR VIDEOS (template local: template.html, 21 cenas + 26 textos editáveis). Sem blackdetect.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Reaproveitado: função do gorila/Bento, banana, árvore, chamas, pirâmide, balança, cartelas com sparkles, build.py/conv.py/mux (custo zero). Escala com a duração: ~1 cena a cada 3 s => ~600 cenas para 30 min; cada cena nova de layout custa tokens de autoria (~40% das cenas são reaproveitáveis por variação de parâmetro). Render draft ~55 s/min => ~30 min de render; whisper ~3 min. Gargalo = autoria das cenas pelo Claude (~1,5-2 h de sessão, provavelmente em 3-4 blocos de ~8 min de roteiro), não a máquina."
+ },
+ "tokens": {
+  "novos": 127398,
+  "totais": 5491952,
+  "cache_lido": 5364554,
+  "cache_gravado": 87761,
+  "saida": 39543,
+  "entrada": 94,
+  "passos": 47
+ },
+ "custo_usd": 2.57,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

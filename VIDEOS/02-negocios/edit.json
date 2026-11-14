@@ -1,0 +1,1200 @@
+{
+ "version": 1,
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "template": "auto",
+ "name": "02 - DOCUMENTARIO NEGOCIOS - Como a Nintendo começou vendendo cartas de baralho",
+ "composition": "hf/template.ed.html",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "duration": 65.1,
+ "tracks": [
+  {
+   "id": "cenas",
+   "name": "Cenas"
+  },
+  {
+   "id": "imagens",
+   "name": "Imagens"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "e1",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 0.0,
+   "dur": 6.05,
+   "props": {
+    "ed": "e1",
+    "clip": true
+   }
+  },
+  {
+   "id": "e2",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Nintendo: das cartas aos games",
+   "start": 0.4,
+   "dur": 4.0,
+   "props": {
+    "ed": "e2",
+    "clip": true
+   }
+  },
+  {
+   "id": "e3",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 5.85,
+   "dur": 4.35,
+   "props": {
+    "ed": "e3",
+    "clip": true
+   }
+  },
+  {
+   "id": "e4",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "1889",
+   "start": 5.95,
+   "dur": 4.05,
+   "props": {
+    "ed": "e4",
+    "clip": true
+   }
+  },
+  {
+   "id": "e5",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Quioto, Japão sede original da Nintendo Koppai",
+   "start": 7.9,
+   "dur": 2.15,
+   "props": {
+    "ed": "e5",
+    "clip": true
+   }
+  },
+  {
+   "id": "e6",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 10.05,
+   "dur": 7.9,
+   "props": {
+    "ed": "e6",
+    "clip": true
+   }
+  },
+  {
+   "id": "e7",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Fusajiro Yamauchi fundador · 1889",
+   "start": 10.25,
+   "dur": 4.35,
+   "props": {
+    "ed": "e7",
+    "clip": true
+   }
+  },
+  {
+   "id": "e8",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Hanafuda 花札 baralho japonês feito à mão",
+   "start": 14.8,
+   "dur": 3.0,
+   "props": {
+    "ed": "e8",
+    "clip": true
+   }
+  },
+  {
+   "id": "e9",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Fusajiro Yamauchi fundador Hiroshi Yamauchi neto ·",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e9",
+    "clip": true
+   }
+  },
+  {
+   "id": "e10",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "1949",
+   "start": 17.9,
+   "dur": 5.0,
+   "props": {
+    "ed": "e10",
+    "clip": true
+   }
+  },
+  {
+   "id": "e11",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 23.0,
+   "dur": 4.7,
+   "props": {
+    "ed": "e11",
+    "clip": true
+   }
+  },
+  {
+   "id": "e12",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Anos 1960",
+   "start": 23.1,
+   "dur": 4.4,
+   "props": {
+    "ed": "e12",
+    "clip": true
+   }
+  },
+  {
+   "id": "e13",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Táxis Arroz instantâneo não deu certo",
+   "start": 27.5,
+   "dur": 3.5,
+   "props": {
+    "ed": "e13",
+    "clip": true
+   }
+  },
+  {
+   "id": "e14",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 30.9,
+   "dur": 2.35,
+   "props": {
+    "ed": "e14",
+    "clip": true
+   }
+  },
+  {
+   "id": "e15",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Gunpei Yokoi engenheiro e inventor da Nintendo",
+   "start": 31.0,
+   "dur": 2.1,
+   "props": {
+    "ed": "e15",
+    "clip": true
+   }
+  },
+  {
+   "id": "e16",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 33.05,
+   "dur": 3.05,
+   "props": {
+    "ed": "e16",
+    "clip": true
+   }
+  },
+  {
+   "id": "e17",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Game & Watch 1980 · portátil de bolso",
+   "start": 33.25,
+   "dur": 2.75,
+   "props": {
+    "ed": "e17",
+    "clip": true
+   }
+  },
+  {
+   "id": "e18",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 35.95,
+   "dur": 2.4,
+   "props": {
+    "ed": "e18",
+    "clip": true
+   }
+  },
+  {
+   "id": "e19",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Brinquedos eletrônicos",
+   "start": 35.2,
+   "dur": 2.9,
+   "props": {
+    "ed": "e19",
+    "clip": true
+   }
+  },
+  {
+   "id": "e20",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 38.2,
+   "dur": 7.55,
+   "props": {
+    "ed": "e20",
+    "clip": true
+   }
+  },
+  {
+   "id": "e21",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "1981",
+   "start": 38.3,
+   "dur": 4.3,
+   "props": {
+    "ed": "e21",
+    "clip": true
+   }
+  },
+  {
+   "id": "e22",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Donkey Kong arcade · Nintendo",
+   "start": 40.5,
+   "dur": 2.9,
+   "props": {
+    "ed": "e22",
+    "clip": true
+   }
+  },
+  {
+   "id": "e23",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Jumpman → Mario o herói que virou mascote",
+   "start": 43.5,
+   "dur": 2.1,
+   "props": {
+    "ed": "e23",
+    "clip": true
+   }
+  },
+  {
+   "id": "e24",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 45.6,
+   "dur": 4.35,
+   "props": {
+    "ed": "e24",
+    "clip": true
+   }
+  },
+  {
+   "id": "e25",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "1983",
+   "start": 45.7,
+   "dur": 4.0,
+   "props": {
+    "ed": "e25",
+    "clip": true
+   }
+  },
+  {
+   "id": "e26",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Famicom Family Computer · Japão",
+   "start": 47.8,
+   "dur": 2.0,
+   "props": {
+    "ed": "e26",
+    "clip": true
+   }
+  },
+  {
+   "id": "e27",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 49.8,
+   "dur": 2.45,
+   "props": {
+    "ed": "e27",
+    "clip": true
+   }
+  },
+  {
+   "id": "e28",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "NES Nintendo Entertainment System · Ocidente",
+   "start": 49.95,
+   "dur": 2.15,
+   "props": {
+    "ed": "e28",
+    "clip": true
+   }
+  },
+  {
+   "id": "e29",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "1889 Cartas 1949 Hiroshi 1980 Game & Watch 1981 Do",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e29",
+    "clip": true
+   }
+  },
+  {
+   "id": "e30",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "div",
+   "start": 56.7,
+   "dur": 3.4,
+   "props": {
+    "ed": "e30",
+    "clip": true
+   }
+  },
+  {
+   "id": "e31",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Tudo começou com um jogo de cartas",
+   "start": 56.9,
+   "dur": 3.0,
+   "props": {
+    "ed": "e31",
+    "clip": true
+   }
+  },
+  {
+   "id": "e32",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "Inscreva-se Qual é o seu jogo favorito da Nintendo",
+   "start": 60.0,
+   "dur": 5.1,
+   "props": {
+    "ed": "e32",
+    "clip": true
+   }
+  },
+  {
+   "id": "e33t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Nintendo: das cartas aos games",
+   "start": 0.4,
+   "dur": 4.0,
+   "props": {
+    "ed": "e33",
+    "text": "Nintendo: das cartas aos games"
+   }
+  },
+  {
+   "id": "e34t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1889",
+   "start": 5.95,
+   "dur": 4.05,
+   "props": {
+    "ed": "e34",
+    "text": "1889"
+   }
+  },
+  {
+   "id": "e35t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Quioto, Japão",
+   "start": 7.9,
+   "dur": 2.15,
+   "props": {
+    "ed": "e35",
+    "text": "Quioto, Japão"
+   }
+  },
+  {
+   "id": "e36t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "sede original da Nintendo Koppai",
+   "start": 7.9,
+   "dur": 2.15,
+   "props": {
+    "ed": "e36",
+    "text": "sede original da Nintendo Koppai"
+   }
+  },
+  {
+   "id": "e37t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Fusajiro Yamauchi",
+   "start": 10.25,
+   "dur": 4.35,
+   "props": {
+    "ed": "e37",
+    "text": "Fusajiro Yamauchi"
+   }
+  },
+  {
+   "id": "e38t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "fundador · 1889",
+   "start": 10.25,
+   "dur": 4.35,
+   "props": {
+    "ed": "e38",
+    "text": "fundador · 1889"
+   }
+  },
+  {
+   "id": "e39t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Hanafuda 花札",
+   "start": 14.8,
+   "dur": 3.0,
+   "props": {
+    "ed": "e39",
+    "text": "Hanafuda 花札"
+   }
+  },
+  {
+   "id": "e40t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "baralho japonês feito à mão",
+   "start": 14.8,
+   "dur": 3.0,
+   "props": {
+    "ed": "e40",
+    "text": "baralho japonês feito à mão"
+   }
+  },
+  {
+   "id": "e41t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Fusajiro Yamauchi",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e41",
+    "text": "Fusajiro Yamauchi"
+   }
+  },
+  {
+   "id": "e42t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "fundador",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e42",
+    "text": "fundador"
+   }
+  },
+  {
+   "id": "e43t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Hiroshi Yamauchi",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e43",
+    "text": "Hiroshi Yamauchi"
+   }
+  },
+  {
+   "id": "e44t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "neto · presidente",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e44",
+    "text": "neto · presidente"
+   }
+  },
+  {
+   "id": "e45t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "assume o comando",
+   "start": 17.8,
+   "dur": 5.3,
+   "props": {
+    "ed": "e45",
+    "text": "assume o comando"
+   }
+  },
+  {
+   "id": "e46t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1949",
+   "start": 17.9,
+   "dur": 5.0,
+   "props": {
+    "ed": "e46",
+    "text": "1949"
+   }
+  },
+  {
+   "id": "e47t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Anos 1960",
+   "start": 23.1,
+   "dur": 4.4,
+   "props": {
+    "ed": "e47",
+    "text": "Anos 1960"
+   }
+  },
+  {
+   "id": "e48t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Táxis",
+   "start": 27.5,
+   "dur": 3.5,
+   "props": {
+    "ed": "e48",
+    "text": "Táxis"
+   }
+  },
+  {
+   "id": "e49t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Arroz instantâneo",
+   "start": 27.5,
+   "dur": 3.5,
+   "props": {
+    "ed": "e49",
+    "text": "Arroz instantâneo"
+   }
+  },
+  {
+   "id": "e50t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "não deu certo",
+   "start": 27.5,
+   "dur": 3.5,
+   "props": {
+    "ed": "e50",
+    "text": "não deu certo"
+   }
+  },
+  {
+   "id": "e51t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Gunpei Yokoi",
+   "start": 31.0,
+   "dur": 2.1,
+   "props": {
+    "ed": "e51",
+    "text": "Gunpei Yokoi"
+   }
+  },
+  {
+   "id": "e52t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "engenheiro e inventor da Nintendo",
+   "start": 31.0,
+   "dur": 2.1,
+   "props": {
+    "ed": "e52",
+    "text": "engenheiro e inventor da Nintendo"
+   }
+  },
+  {
+   "id": "e53t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Game & Watch",
+   "start": 33.25,
+   "dur": 2.75,
+   "props": {
+    "ed": "e53",
+    "text": "Game & Watch"
+   }
+  },
+  {
+   "id": "e54t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1980 · portátil de bolso",
+   "start": 33.25,
+   "dur": 2.75,
+   "props": {
+    "ed": "e54",
+    "text": "1980 · portátil de bolso"
+   }
+  },
+  {
+   "id": "e55t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Brinquedos eletrônicos",
+   "start": 35.2,
+   "dur": 2.9,
+   "props": {
+    "ed": "e55",
+    "text": "Brinquedos eletrônicos"
+   }
+  },
+  {
+   "id": "e56t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1981",
+   "start": 38.3,
+   "dur": 4.3,
+   "props": {
+    "ed": "e56",
+    "text": "1981"
+   }
+  },
+  {
+   "id": "e57t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Donkey Kong",
+   "start": 40.5,
+   "dur": 2.9,
+   "props": {
+    "ed": "e57",
+    "text": "Donkey Kong"
+   }
+  },
+  {
+   "id": "e58t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "arcade · Nintendo",
+   "start": 40.5,
+   "dur": 2.9,
+   "props": {
+    "ed": "e58",
+    "text": "arcade · Nintendo"
+   }
+  },
+  {
+   "id": "e59t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Jumpman → Mario",
+   "start": 43.5,
+   "dur": 2.1,
+   "props": {
+    "ed": "e59",
+    "text": "Jumpman → Mario"
+   }
+  },
+  {
+   "id": "e60t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "o herói que virou mascote",
+   "start": 43.5,
+   "dur": 2.1,
+   "props": {
+    "ed": "e60",
+    "text": "o herói que virou mascote"
+   }
+  },
+  {
+   "id": "e61t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1983",
+   "start": 45.7,
+   "dur": 4.0,
+   "props": {
+    "ed": "e61",
+    "text": "1983"
+   }
+  },
+  {
+   "id": "e62t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Famicom",
+   "start": 47.8,
+   "dur": 2.0,
+   "props": {
+    "ed": "e62",
+    "text": "Famicom"
+   }
+  },
+  {
+   "id": "e63t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Family Computer · Japão",
+   "start": 47.8,
+   "dur": 2.0,
+   "props": {
+    "ed": "e63",
+    "text": "Family Computer · Japão"
+   }
+  },
+  {
+   "id": "e64t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "NES",
+   "start": 49.95,
+   "dur": 2.15,
+   "props": {
+    "ed": "e64",
+    "text": "NES"
+   }
+  },
+  {
+   "id": "e65t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Nintendo Entertainment System · Ocidente",
+   "start": 49.95,
+   "dur": 2.15,
+   "props": {
+    "ed": "e65",
+    "text": "Nintendo Entertainment System · Ocidente"
+   }
+  },
+  {
+   "id": "e66t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1889",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e66",
+    "text": "1889"
+   }
+  },
+  {
+   "id": "e67t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Cartas",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e67",
+    "text": "Cartas"
+   }
+  },
+  {
+   "id": "e68t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1949",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e68",
+    "text": "1949"
+   }
+  },
+  {
+   "id": "e69t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Hiroshi",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e69",
+    "text": "Hiroshi"
+   }
+  },
+  {
+   "id": "e70t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1980",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e70",
+    "text": "1980"
+   }
+  },
+  {
+   "id": "e71t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Game & Watch",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e71",
+    "text": "Game & Watch"
+   }
+  },
+  {
+   "id": "e72t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1981",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e72",
+    "text": "1981"
+   }
+  },
+  {
+   "id": "e73t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Donkey Kong",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e73",
+    "text": "Donkey Kong"
+   }
+  },
+  {
+   "id": "e74t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1983",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e74",
+    "text": "1983"
+   }
+  },
+  {
+   "id": "e75t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Famicom / NES",
+   "start": 52.1,
+   "dur": 4.75,
+   "props": {
+    "ed": "e75",
+    "text": "Famicom / NES"
+   }
+  },
+  {
+   "id": "e76t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Tudo começou com um jogo de cartas",
+   "start": 56.9,
+   "dur": 3.0,
+   "props": {
+    "ed": "e76",
+    "text": "Tudo começou com um jogo de cartas"
+   }
+  },
+  {
+   "id": "e77t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Inscreva-se",
+   "start": 60.0,
+   "dur": 5.1,
+   "props": {
+    "ed": "e77",
+    "text": "Inscreva-se"
+   }
+  },
+  {
+   "id": "e78t",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Qual é o seu jogo favorito da Nintendo?",
+   "start": 60.0,
+   "dur": 5.1,
+   "props": {
+    "ed": "e78",
+    "text": "Qual é o seu jogo favorito da Nintendo?"
+   }
+  },
+  {
+   "id": "e79i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "hana.jpg",
+   "start": 0.0,
+   "dur": 6.05,
+   "props": {
+    "ed": "e79",
+    "src": "hf/media/hana.jpg"
+   }
+  },
+  {
+   "id": "e80i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "koppai.jpg",
+   "start": 5.85,
+   "dur": 4.35,
+   "props": {
+    "ed": "e80",
+    "src": "hf/media/koppai.jpg"
+   }
+  },
+  {
+   "id": "e81i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "hanaold.jpg",
+   "start": 10.05,
+   "dur": 7.9,
+   "props": {
+    "ed": "e81",
+    "src": "hf/media/hanaold.jpg"
+   }
+  },
+  {
+   "id": "e82i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "taxi.jpg",
+   "start": 23.0,
+   "dur": 4.7,
+   "props": {
+    "ed": "e82",
+    "src": "hf/media/taxi.jpg"
+   }
+  },
+  {
+   "id": "e83i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "lovetester.jpg",
+   "start": 30.9,
+   "dur": 2.35,
+   "props": {
+    "ed": "e83",
+    "src": "hf/media/lovetester.jpg"
+   }
+  },
+  {
+   "id": "e84i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "gw0.jpg",
+   "start": 33.05,
+   "dur": 3.05,
+   "props": {
+    "ed": "e84",
+    "src": "hf/media/gw0.jpg"
+   }
+  },
+  {
+   "id": "e85i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "gw1.jpg",
+   "start": 35.95,
+   "dur": 2.4,
+   "props": {
+    "ed": "e85",
+    "src": "hf/media/gw1.jpg"
+   }
+  },
+  {
+   "id": "e86i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "dk.jpg",
+   "start": 38.2,
+   "dur": 7.55,
+   "props": {
+    "ed": "e86",
+    "src": "hf/media/dk.jpg"
+   }
+  },
+  {
+   "id": "e87i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "famicom.jpg",
+   "start": 45.6,
+   "dur": 4.35,
+   "props": {
+    "ed": "e87",
+    "src": "hf/media/famicom.jpg"
+   }
+  },
+  {
+   "id": "e88i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "nes.jpg",
+   "start": 49.8,
+   "dur": 2.45,
+   "props": {
+    "ed": "e88",
+    "src": "hf/media/nes.jpg"
+   }
+  },
+  {
+   "id": "e89i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "hana.jpg",
+   "start": 56.7,
+   "dur": 3.4,
+   "props": {
+    "ed": "e89",
+    "src": "hf/media/hana.jpg"
+   }
+  }
+ ],
+ "estilo": "Documentário de negócios",
+ "referencia": {
+  "video": "https://youtu.be/5jjdErDkDZE",
+  "canal": "Business Casual",
+  "canal_url": "https://www.youtube.com/channel/UC_E4px0RST-qFwXLJWBav8Q",
+  "titulo": "J.P. Morgan Documentary: How One Man Financed America",
+  "nota": "Business Casual / Magnates Media"
+ }
+}

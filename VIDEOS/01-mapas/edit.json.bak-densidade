@@ -1,0 +1,659 @@
+{
+ "version": 1,
+ "name": "01 - Mapas Geopolítica - Por que o Canal do Panamá é tão importante",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#070b10"
+ },
+ "duration": 72.4,
+ "template": "local",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Anton": "fonts/Anton-Regular.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "a0",
+    "src": "sfx/whoosh.wav",
+    "start": 0.2,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a1",
+    "src": "sfx/whoosh.wav",
+    "start": 2.5,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a2",
+    "src": "sfx/whoosh.wav",
+    "start": 8.6,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a3",
+    "src": "sfx/whoosh.wav",
+    "start": 16.6,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a4",
+    "src": "sfx/whoosh.wav",
+    "start": 21.4,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a5",
+    "src": "sfx/whoosh.wav",
+    "start": 25.4,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a6",
+    "src": "sfx/whoosh.wav",
+    "start": 34.9,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a7",
+    "src": "sfx/whoosh.wav",
+    "start": 37.4,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a8",
+    "src": "sfx/whoosh.wav",
+    "start": 44.9,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a9",
+    "src": "sfx/whoosh.wav",
+    "start": 56.5,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "a10",
+    "src": "sfx/whoosh.wav",
+    "start": 62.5,
+    "volume": 0.22,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Mapa"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "camera",
+   "type": "param",
+   "label": "Câmera [t0,t1,lon,lat,zoom]",
+   "props": {
+    "value": [
+     [
+      0,
+      0,
+      -80,
+      5,
+      0.32
+     ],
+     [
+      0.2,
+      2.4,
+      -79.75,
+      9.12,
+      14
+     ],
+     [
+      2.5,
+      4.8,
+      -80,
+      8,
+      0.45
+     ],
+     [
+      5.3,
+      8.5,
+      -78,
+      6,
+      0.5
+     ],
+     [
+      8.6,
+      10.4,
+      -78,
+      -6,
+      0.27
+     ],
+     [
+      16.6,
+      18.4,
+      -68,
+      -54,
+      1.6
+     ],
+     [
+      21.4,
+      23,
+      -90,
+      15,
+      0.42
+     ],
+     [
+      25.4,
+      27,
+      -79.8,
+      8.9,
+      7
+     ],
+     [
+      34.9,
+      36.3,
+      -88,
+      25,
+      0.62
+     ],
+     [
+      44.9,
+      46.3,
+      -80,
+      8.6,
+      6
+     ],
+     [
+      51.4,
+      52.6,
+      -80,
+      8.6,
+      4.5
+     ],
+     [
+      56.5,
+      58,
+      -79.78,
+      9.12,
+      26
+     ],
+     [
+      62.5,
+      64.8,
+      -78,
+      6,
+      0.3
+     ],
+     [
+      67.3,
+      69.5,
+      -78,
+      6,
+      0.24
+     ]
+    ]
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título",
+   "by": "template",
+   "start": 5.45,
+   "dur": 3.15,
+   "props": {
+    "text": "POR QUE O CANAL DO PANAMÁ É TÃO IMPORTANTE?",
+    "highlight": [
+     "CANAL DO PANAMÁ"
+    ]
+   }
+  },
+  {
+   "id": "m0",
+   "type": "text",
+   "track": "textos",
+   "label": "PANAMÁ",
+   "by": "template",
+   "start": 0.9,
+   "dur": 1.4,
+   "props": {
+    "text": "PANAMÁ",
+    "lon": -80.6,
+    "lat": 8.4,
+    "cls": "lab"
+   }
+  },
+  {
+   "id": "m1",
+   "type": "text",
+   "track": "textos",
+   "label": "80 KM",
+   "by": "template",
+   "start": 1.4,
+   "dur": 0.9,
+   "props": {
+    "text": "80 KM",
+    "lon": -79.35,
+    "lat": 9.2,
+    "cls": "tag red"
+   }
+  },
+  {
+   "id": "m2",
+   "type": "text",
+   "track": "textos",
+   "label": "OCEANO ATLÂNTICO",
+   "by": "template",
+   "start": 10.6,
+   "dur": 10.9,
+   "props": {
+    "text": "OCEANO ATLÂNTICO",
+    "lon": -45,
+    "lat": 22,
+    "cls": "lab ocean"
+   }
+  },
+  {
+   "id": "m3",
+   "type": "text",
+   "track": "textos",
+   "label": "OCEANO PACÍFICO",
+   "by": "template",
+   "start": 12.1,
+   "dur": 9.4,
+   "props": {
+    "text": "OCEANO PACÍFICO",
+    "lon": -105,
+    "lat": -5,
+    "cls": "lab ocean"
+   }
+  },
+  {
+   "id": "m4",
+   "type": "text",
+   "track": "textos",
+   "label": "AMÉRICA DO SUL",
+   "by": "template",
+   "start": 14.6,
+   "dur": 3.9,
+   "props": {
+    "text": "AMÉRICA DO SUL",
+    "lon": -60,
+    "lat": -12,
+    "cls": "lab"
+   }
+  },
+  {
+   "id": "m5",
+   "type": "text",
+   "track": "textos",
+   "label": "⚠ CABO HORN",
+   "by": "template",
+   "start": 17.4,
+   "dur": 4.4,
+   "props": {
+    "text": "⚠ CABO HORN",
+    "lon": -67,
+    "lat": -58.8,
+    "cls": "tag red"
+   }
+  },
+  {
+   "id": "m6",
+   "type": "text",
+   "track": "textos",
+   "label": "LONGA E ARRISCADA",
+   "by": "template",
+   "start": 19.6,
+   "dur": 2.2,
+   "props": {
+    "text": "LONGA E ARRISCADA",
+    "lon": -67,
+    "lat": -50.5,
+    "cls": "tag"
+   }
+  },
+  {
+   "id": "m7",
+   "type": "text",
+   "track": "textos",
+   "label": "FEBRE AMARELA",
+   "by": "template",
+   "start": 32.4,
+   "dur": 2.5,
+   "props": {
+    "text": "FEBRE AMARELA",
+    "lon": -82,
+    "lat": 7,
+    "cls": "tag"
+   }
+  },
+  {
+   "id": "m8",
+   "type": "text",
+   "track": "textos",
+   "label": "MALÁRIA",
+   "by": "template",
+   "start": 33.8,
+   "dur": 1.1,
+   "props": {
+    "text": "MALÁRIA",
+    "lon": -77.2,
+    "lat": 8,
+    "cls": "tag"
+   }
+  },
+  {
+   "id": "m9",
+   "type": "text",
+   "track": "textos",
+   "label": "ESTADOS UNIDOS",
+   "by": "template",
+   "start": 35.1,
+   "dur": 2.5,
+   "props": {
+    "text": "ESTADOS UNIDOS",
+    "lon": -98,
+    "lat": 39,
+    "cls": "lab big"
+   }
+  },
+  {
+   "id": "m10",
+   "type": "text",
+   "track": "textos",
+   "label": "CONTROLE TOTAL",
+   "by": "template",
+   "start": 48.6,
+   "dur": 2.9,
+   "props": {
+    "text": "CONTROLE TOTAL",
+    "lon": -80.1,
+    "lat": 7.4,
+    "cls": "tag blue"
+   }
+  },
+  {
+   "id": "m11",
+   "type": "text",
+   "track": "textos",
+   "label": "PANAMÁ",
+   "by": "template",
+   "start": 45.2,
+   "dur": 6.3,
+   "props": {
+    "text": "PANAMÁ",
+    "lon": -80.6,
+    "lat": 8.4,
+    "cls": "lab big"
+   }
+  },
+  {
+   "id": "m12",
+   "type": "text",
+   "track": "textos",
+   "label": "SECA",
+   "by": "template",
+   "start": 57.4,
+   "dur": 5,
+   "props": {
+    "text": "SECA",
+    "lon": -79.8,
+    "lat": 9.4,
+    "cls": "tag red"
+   }
+  },
+  {
+   "id": "m13",
+   "type": "text",
+   "track": "textos",
+   "label": "LAGO GATÚN",
+   "by": "template",
+   "start": 56.8,
+   "dur": 5.6,
+   "props": {
+    "text": "LAGO GATÚN",
+    "lon": -79.84,
+    "lat": 9.165,
+    "cls": "lab"
+   }
+  },
+  {
+   "id": "m14",
+   "type": "text",
+   "track": "textos",
+   "label": "PEQUENA FAIXA DE TERRA",
+   "by": "template",
+   "start": 62.7,
+   "dur": 4.6,
+   "props": {
+    "text": "PEQUENA FAIXA DE TERRA",
+    "lon": -79.7,
+    "lat": 6.8,
+    "cls": "tag"
+   }
+  },
+  {
+   "id": "m15",
+   "type": "text",
+   "track": "textos",
+   "label": "ENORME INFLUÊNCIA",
+   "by": "template",
+   "start": 64.6,
+   "dur": 2.7,
+   "props": {
+    "text": "ENORME INFLUÊNCIA",
+    "lon": -79.7,
+    "lat": -12,
+    "cls": "tag red"
+   }
+  },
+  {
+   "id": "s0",
+   "type": "text",
+   "track": "textos",
+   "label": "15 AGOSTO 1914",
+   "by": "template",
+   "start": 23.5,
+   "dur": 2.1,
+   "props": {
+    "text": "15 AGOSTO 1914",
+    "x": 640,
+    "y": 600,
+    "cls": "stamp"
+   }
+  },
+  {
+   "id": "s1",
+   "type": "text",
+   "track": "textos",
+   "label": "~21.000 KM",
+   "by": "template",
+   "start": 19.2,
+   "dur": 2.8,
+   "props": {
+    "text": "~21.000 KM",
+    "x": 940,
+    "y": 560,
+    "cls": "num"
+   }
+  },
+  {
+   "id": "s2",
+   "type": "text",
+   "track": "textos",
+   "label": "~8.400 KM",
+   "by": "template",
+   "start": 23,
+   "dur": 2.6,
+   "props": {
+    "text": "~8.400 KM",
+    "x": 940,
+    "y": 560,
+    "cls": "num"
+   }
+  },
+  {
+   "id": "s3",
+   "type": "text",
+   "track": "textos",
+   "label": "~22.000 MORTES",
+   "by": "template",
+   "start": 30.2,
+   "dur": 4.7,
+   "props": {
+    "text": "~22.000 MORTES",
+    "x": 640,
+    "y": 610,
+    "cls": "stamp"
+   }
+  },
+  {
+   "id": "s4",
+   "type": "text",
+   "track": "textos",
+   "label": "31 DEZEMBRO 1999",
+   "by": "template",
+   "start": 45.3,
+   "dur": 6.2,
+   "props": {
+    "text": "31 DEZEMBRO 1999",
+    "x": 640,
+    "y": 110,
+    "cls": "stamp"
+   }
+  },
+  {
+   "id": "s5",
+   "type": "text",
+   "track": "textos",
+   "label": "2016",
+   "by": "template",
+   "start": 52.2,
+   "dur": 4.3,
+   "props": {
+    "text": "2016",
+    "x": 640,
+    "y": 150,
+    "cls": "stamp"
+   }
+  },
+  {
+   "id": "s6",
+   "type": "text",
+   "track": "textos",
+   "label": "NAVIOS POR DIA: 36 → 22",
+   "by": "template",
+   "start": 60,
+   "dur": 2.4,
+   "props": {
+    "text": "NAVIOS POR DIA: 36 → 22",
+    "x": 560,
+    "y": 630,
+    "cls": "tag"
+   }
+  },
+  {
+   "id": "frc",
+   "type": "html",
+   "track": "visual",
+   "label": "Card França",
+   "by": "template",
+   "start": 26,
+   "dur": 8.8,
+   "props": {}
+  },
+  {
+   "id": "usa",
+   "type": "html",
+   "track": "visual",
+   "label": "Card EUA",
+   "by": "template",
+   "start": 35,
+   "dur": 2.55,
+   "props": {}
+  },
+  {
+   "id": "locks",
+   "type": "html",
+   "track": "visual",
+   "label": "Corte eclusas",
+   "by": "template",
+   "start": 37.55,
+   "dur": 7.45,
+   "props": {}
+  },
+  {
+   "id": "ships",
+   "type": "html",
+   "track": "visual",
+   "label": "Navios 2016",
+   "by": "template",
+   "start": 53.4,
+   "dur": 3.1,
+   "props": {}
+  },
+  {
+   "id": "gauge",
+   "type": "html",
+   "track": "visual",
+   "label": "Medidor seca",
+   "by": "template",
+   "start": 57.3,
+   "dur": 5.1,
+   "props": {}
+  },
+  {
+   "id": "cta",
+   "type": "html",
+   "track": "visual",
+   "label": "CTA",
+   "by": "template",
+   "start": 67.4,
+   "dur": 5,
+   "props": {}
+  }
+ ],
+ "estilo": "Mapas geopolítica",
+ "referencia": {
+  "video": "https://youtu.be/5tOluVWOnCo",
+  "canal": "Memorias de Pez",
+  "canal_url": "https://www.youtube.com/channel/UCPH3Oz99Y_jrVBCQMjQZNSg",
+  "titulo": "✅ RESUMEN de los 4 AÑOS de guerra entre RUSIA y UCRANIA",
+  "nota": "MemoriasDePez / RealLifeLore"
+ },
+ "regras": {
+  "broll_primeiro": false,
+  "sem_animacao": false,
+  "intervalo_min": 2,
+  "max_pct": 25
+ }
+}

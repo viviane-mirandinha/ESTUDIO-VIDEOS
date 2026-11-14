@@ -1,0 +1,24 @@
+{
+ "video": 13,
+ "estilo": "3D tecnico (Branch Education) - Three.js",
+ "inicio": "2026-10-21T23:35:47.5256329-03:00",
+ "fim": "2026-10-21T23:56:42.6835587-03:00",
+ "minutos": 20.9,
+ "render_segundos": 294,
+ "observacoes": "Cena 100% Three.js procedural (pendrive explodido, dies NAND iridescentes, celula floating-gate em corte com eletrons). Rotulos verdes com linha projetados do 3D, camera sempre em movimento, dips pretos entre escalas. Render draft 4m40s para 64s com 13 sessoes concorrentes. Whisper falhou 2x por falta de memoria (concorrencia) e PyAV incompativel (resolvido com audio raw). Sem SFX/musica. Sem re-render.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "Reaproveita: template.html (materiais, luz, piso, sistema de rotulos/camera/eletrons) e pipeline edit.json. Escala com a duracao: modelagem de novos objetos/cenas (~1 cena nova a cada 1-2 min de fala = maior custo em tokens), keyframes de camera e rotulos (linear), render (~4.5 min por minuto de video em draft com maquina carregada => ~2.2 h para 30 min; ~1 h sozinha na fila), whisper ~1 min/30 min. Tokens: ~60-90k nesta versao; 30 min estimado 0.6-1M tokens."
+ },
+ "tokens": {
+  "novos": 124948,
+  "totais": 4136559,
+  "cache_lido": 4011611,
+  "cache_gravado": 89154,
+  "saida": 35722,
+  "entrada": 72,
+  "passos": 36
+ },
+ "custo_usd": 2.23,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

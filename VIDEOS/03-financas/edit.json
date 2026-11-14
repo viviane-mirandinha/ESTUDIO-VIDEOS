@@ -1,0 +1,750 @@
+{
+ "version": 1,
+ "name": "03 - Finanças Stock Footage - O que é inflação e por que seu dinheiro vale menos",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0e12"
+ },
+ "duration": 64.49,
+ "template": "generic",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Barlow Condensed": "fonts/BarlowCondensed-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 5.9,
+    "volume": 0.15,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 26.7,
+    "volume": 0.15,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh2",
+    "src": "sfx/whoosh.wav",
+    "start": 34.3,
+    "volume": 0.15,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh3",
+    "src": "sfx/whoosh.wav",
+    "start": 59.4,
+    "volume": 0.15,
+    "label": "whoosh suave"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Stock footage / fotos"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos e capítulos"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "v_dinheiro",
+   "type": "video",
+   "track": "fundo",
+   "label": "paying-money-stocks",
+   "start": 0,
+   "dur": 3.66,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/paying-money-stocks.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v_notas",
+   "type": "video",
+   "track": "fundo",
+   "label": "money-overlays-6",
+   "start": 3.62,
+   "dur": 2.43,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/money-overlays-6.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_out",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "t_inflacao",
+   "type": "text",
+   "track": "textos",
+   "label": "INFLAÇÃO",
+   "start": 4.4,
+   "dur": 1.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "INFLAÇÃO",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 170,
+    "color": "#ffffff",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "i_mercado",
+   "type": "image",
+   "track": "fundo",
+   "label": "supermarket",
+   "start": 6,
+   "dur": 7.55,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/supermarket.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "cap1",
+   "type": "scene",
+   "track": "visual",
+   "label": "Capítulo 1",
+   "start": 6,
+   "dur": 4.35,
+   "props": {
+    "scene": "ee_capitulo",
+    "params": {
+     "cap": "Capítulo 1",
+     "texto": "O que é inflação? É o aumento geral e contínuo dos preços.",
+     "escuro": 0.5,
+     "x": 300,
+     "y": 220
+    }
+   }
+  },
+  {
+   "id": "t_preco",
+   "type": "text",
+   "track": "textos",
+   "label": "R$ 100",
+   "start": 12.3,
+   "dur": 1.2,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "R$ 100",
+    "x": 640,
+    "y": 380,
+    "w": 360,
+    "size": 110,
+    "color": "#111111",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "#d8c34a",
+    "pad": 14,
+    "radius": 0,
+    "shadow": false
+   }
+  },
+  {
+   "id": "g_preco",
+   "type": "scene",
+   "track": "visual",
+   "label": "Gráfico preço x poder de compra",
+   "start": 13.5,
+   "dur": 10.95,
+   "props": {
+    "scene": "ee_linha",
+    "params": {
+     "titulo": "R$ 100 com inflação de 5% ao ano",
+     "fonte": "Simulação: inflação constante de 5% a.a.",
+     "xlabels": [
+      "Hoje",
+      "Ano 1",
+      "Ano 2",
+      "Ano 3",
+      "Ano 4",
+      "Ano 5",
+      "Ano 6",
+      "Ano 7",
+      "Ano 8",
+      "Ano 9",
+      "Ano 10"
+     ],
+     "ymin": 50,
+     "ymax": 170,
+     "series": [
+      {
+       "nome": "Preço do mesmo item",
+       "cor": "#d8c34a",
+       "valores": [
+        100,
+        105,
+        110.2,
+        115.8,
+        121.6,
+        127.6,
+        134,
+        140.7,
+        147.7,
+        155.1,
+        162.9
+       ]
+      },
+      {
+       "nome": "O que R$ 100 compram",
+       "cor": "#3f8fb0",
+       "valores": [
+        100,
+        95.2,
+        90.7,
+        86.4,
+        82.3,
+        78.4,
+        74.6,
+        71.1,
+        67.7,
+        64.5,
+        61.4
+       ]
+      }
+     ],
+     "etapas": [
+      [
+       19.9,
+       0.1
+      ],
+      [
+       23.4,
+       1
+      ]
+     ],
+     "marcas": [
+      {
+       "i": 0,
+       "t": 14.1,
+       "texto": "R$ 100"
+      },
+      {
+       "i": 1,
+       "t": 19.9,
+       "texto": "R$ 105"
+      },
+      {
+       "i": 10,
+       "t": 23.4,
+       "texto": "R$ 163"
+      },
+      {
+       "i": 10,
+       "serie": 1,
+       "t": 23.6,
+       "texto": "R$ 61",
+       "baixo": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "v_preocupado",
+   "type": "video",
+   "track": "fundo",
+   "label": "dollars-money-stocks",
+   "start": 24.4,
+   "dur": 2.45,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/dollars-money-stocks.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "t_perda",
+   "type": "text",
+   "track": "textos",
+   "label": "−4,111%",
+   "start": 24.5,
+   "dur": 2.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "−4,8%",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 190,
+    "color": "#d8c34a",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#ffb020"
+   }
+  },
+  {
+   "id": "t_perda2",
+   "type": "text",
+   "track": "textos",
+   "label": "de poder de compra em 2 anos",
+   "start": 25.7,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "de poder de compra em 2 anos",
+    "x": 640,
+    "y": 450,
+    "w": 1100,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 0,
+    "radius": 0,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#ffb020"
+   }
+  },
+  {
+   "id": "i_feira",
+   "type": "image",
+   "track": "fundo",
+   "label": "feira",
+   "start": 26.8,
+   "dur": 7.65,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/feira.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "cap2",
+   "type": "scene",
+   "track": "visual",
+   "label": "Capítulo 2",
+   "start": 26.8,
+   "dur": 7.65,
+   "props": {
+    "scene": "ee_capitulo",
+    "params": {
+     "cap": "Capítulo 2",
+     "texto": "O que causa a inflação?",
+     "itens": "Custos de produção mais altos|Demanda maior do que a oferta|Muito dinheiro circulando",
+     "tempos": "27.86|30.24|32.46",
+     "escuro": 0.45,
+     "x": 300,
+     "y": 170
+    }
+   }
+  },
+  {
+   "id": "v_mercado",
+   "type": "video",
+   "track": "fundo",
+   "label": "market-background-clips",
+   "start": 34.4,
+   "dur": 4.45,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/market-background-clips.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "cap3",
+   "type": "scene",
+   "track": "visual",
+   "label": "Capítulo 3",
+   "start": 34.4,
+   "dur": 4.45,
+   "props": {
+    "scene": "ee_capitulo",
+    "params": {
+     "cap": "Capítulo 3",
+     "texto": "Como combater? Os bancos centrais aumentam os juros.",
+     "escuro": 0.5,
+     "x": 300,
+     "y": 220
+    }
+   }
+  },
+  {
+   "id": "g_selic",
+   "type": "scene",
+   "track": "visual",
+   "label": "Gráfico Selic",
+   "start": 38.8,
+   "dur": 4.65,
+   "props": {
+    "scene": "ee_linha",
+    "params": {
+     "titulo": "Taxa Selic",
+     "fonte": "Fonte: Banco Central do Brasil (Copom)",
+     "yfmt": "%",
+     "xlabels": [
+      "jan/21",
+      "dez/21",
+      "ago/22",
+      "dez/23",
+      "mai/24",
+      "dez/24",
+      "jun/25"
+     ],
+     "ymin": 0,
+     "ymax": 16,
+     "series": [
+      {
+       "nome": "Meta da taxa Selic (% ao ano)",
+       "cor": "#d8c34a",
+       "valores": [
+        2,
+        9.25,
+        13.75,
+        11.75,
+        10.5,
+        12.25,
+        15
+       ]
+      }
+     ],
+     "etapas": [
+      [
+       42.4,
+       1
+      ]
+     ],
+     "marcas": [
+      {
+       "i": 0,
+       "t": 39.6,
+       "texto": "2%",
+       "baixo": false
+      },
+      {
+       "i": 6,
+       "t": 42.4,
+       "texto": "15%"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "v_credito",
+   "type": "video",
+   "track": "fundo",
+   "label": "credit-bills-atm-money",
+   "start": 43.4,
+   "dur": 2.35,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/credit-bills-atm-money.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_credito",
+   "type": "text",
+   "track": "textos",
+   "label": "Crédito mais caro → consumo es",
+   "start": 43.5,
+   "dur": 2.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Crédito mais caro → consumo esfria",
+    "x": 640,
+    "y": 610,
+    "w": 760,
+    "size": 46,
+    "color": "#111111",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "#d8c34a",
+    "pad": 14,
+    "radius": 0,
+    "shadow": false
+   }
+  },
+  {
+   "id": "g_ipca",
+   "type": "scene",
+   "track": "visual",
+   "label": "Gráfico IPCA 1993-97",
+   "start": 45.7,
+   "dur": 5.55,
+   "props": {
+    "scene": "ee_barras",
+    "params": {
+     "titulo": "Inflação anual no Brasil (IPCA)",
+     "fonte": "Fonte: IBGE",
+     "labels": [
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997"
+     ],
+     "valores": [
+      2477,
+      916,
+      22.4,
+      9.6,
+      5.2
+     ],
+     "fmt": "%",
+     "cor": "#d8c34a",
+     "cor_base": "#3f8fb0",
+     "destaque": 1,
+     "nota": "PLANO REAL · JUL/1994",
+     "t_nota": 47.9
+    }
+   }
+  },
+  {
+   "id": "v_relogio",
+   "type": "video",
+   "track": "fundo",
+   "label": "clock-rotating-business-real",
+   "start": 51.2,
+   "dur": 3.75,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "clips/clock-rotating-business-real.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 0,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_parado",
+   "type": "text",
+   "track": "textos",
+   "label": "Dinheiro parado perde valor",
+   "start": 52.2,
+   "dur": 2.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Dinheiro parado perde valor",
+    "x": 640,
+    "y": 610,
+    "w": 700,
+    "size": 54,
+    "color": "#111111",
+    "font": "Barlow Condensed",
+    "weight": 700,
+    "align": "center",
+    "bg": "#d8c34a",
+    "pad": 14,
+    "radius": 0,
+    "shadow": false
+   }
+  },
+  {
+   "id": "g_parado",
+   "type": "scene",
+   "track": "visual",
+   "label": "Gráfico parado x investido",
+   "start": 54.9,
+   "dur": 4.65,
+   "props": {
+    "scene": "ee_linha",
+    "params": {
+     "titulo": "Poder de compra de R$ 100 em 10 anos",
+     "fonte": "Simulação: inflação de 5% a.a.; investimento rendendo 4% a.a. acima da inflação",
+     "xlabels": [
+      "Hoje",
+      "Ano 2",
+      "Ano 4",
+      "Ano 6",
+      "Ano 8",
+      "Ano 10"
+     ],
+     "ymin": 50,
+     "ymax": 160,
+     "series": [
+      {
+       "nome": "Investido",
+       "cor": "#d8c34a",
+       "valores": [
+        100,
+        108.2,
+        117,
+        126.5,
+        136.9,
+        148
+       ]
+      },
+      {
+       "nome": "Dinheiro parado",
+       "cor": "#3f8fb0",
+       "valores": [
+        100,
+        90.7,
+        82.3,
+        74.6,
+        67.7,
+        61.4
+       ]
+      }
+     ],
+     "etapas": [
+      [
+       58.3,
+       1
+      ]
+     ],
+     "marcas": [
+      {
+       "i": 5,
+       "t": 58.3,
+       "texto": "R$ 148"
+      },
+      {
+       "i": 5,
+       "serie": 1,
+       "t": 58.5,
+       "texto": "R$ 61",
+       "baixo": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "i_reais",
+   "type": "image",
+   "track": "fundo",
+   "label": "reais",
+   "start": 59.5,
+   "dur": 4.99,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/reais.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "cap_fim",
+   "type": "scene",
+   "track": "visual",
+   "label": "Fim / CTA",
+   "start": 59.5,
+   "dur": 5.59,
+   "props": {
+    "scene": "ee_capitulo",
+    "params": {
+     "cap": "Inscreva-se",
+     "texto": "Quer entender mais de economia? Inscreva-se no canal e comente sua dúvida!",
+     "escuro": 0.5,
+     "x": 300,
+     "y": 220
+    }
+   }
+  }
+ ],
+ "_origem": {
+  "build_script": "build.py",
+  "cenas": [
+   "ee_capitulo",
+   "ee_linha",
+   "ee_barras"
+  ]
+ },
+ "estilo": "Finanças com stock footage",
+ "referencia": {
+  "video": "https://youtu.be/FZWLIOKUcIo",
+  "canal": "Economics Explained",
+  "canal_url": "https://www.youtube.com/channel/UCZ4AMrDcNrfy3X6nsU8-rPg",
+  "titulo": "Living Paycheck to Paycheck? So Is Everyone Else",
+  "nota": "Economics Explained"
+ }
+}

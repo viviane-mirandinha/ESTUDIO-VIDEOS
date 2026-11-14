@@ -1,0 +1,620 @@
+{
+ "version": 1,
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "template": "auto",
+ "name": "05 - ICEBERG - Iceberg dos mistérios do oceano",
+ "composition": "proj/template.ed.html",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "duration": 67.2,
+ "tracks": [
+  {
+   "id": "cenas",
+   "name": "Cenas"
+  },
+  {
+   "id": "imagens",
+   "name": "Imagens"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "e1t",
+   "type": "param",
+   "label": "Texto: CAMADA 1 · SUPERFÍCIE",
+   "props": {
+    "ed": "e1",
+    "value": "CAMADA 1 · SUPERFÍCIE"
+   }
+  },
+  {
+   "id": "e2t",
+   "type": "param",
+   "label": "Texto: Tartarugas",
+   "props": {
+    "ed": "e2",
+    "value": "Tartarugas"
+   }
+  },
+  {
+   "id": "e3t",
+   "type": "param",
+   "label": "Texto: Tubarões",
+   "props": {
+    "ed": "e3",
+    "value": "Tubarões"
+   }
+  },
+  {
+   "id": "e4t",
+   "type": "param",
+   "label": "Texto: Baleias",
+   "props": {
+    "ed": "e4",
+    "value": "Baleias"
+   }
+  },
+  {
+   "id": "e5t",
+   "type": "param",
+   "label": "Texto: Golfinhos",
+   "props": {
+    "ed": "e5",
+    "value": "Golfinhos"
+   }
+  },
+  {
+   "id": "e6t",
+   "type": "param",
+   "label": "Texto: Corais",
+   "props": {
+    "ed": "e6",
+    "value": "Corais"
+   }
+  },
+  {
+   "id": "e7t",
+   "type": "param",
+   "label": "Texto: Polvos",
+   "props": {
+    "ed": "e7",
+    "value": "Polvos"
+   }
+  },
+  {
+   "id": "e8t",
+   "type": "param",
+   "label": "Texto: CAMADA 2 · ZONA DO CREPÚSCULO",
+   "props": {
+    "ed": "e8",
+    "value": "CAMADA 2 · ZONA DO CREPÚSCULO"
+   }
+  },
+  {
+   "id": "e9t",
+   "type": "param",
+   "label": "Texto: Luz desaparece",
+   "props": {
+    "ed": "e9",
+    "value": "Luz desaparece"
+   }
+  },
+  {
+   "id": "e10t",
+   "type": "param",
+   "label": "Texto: Peixe-machado",
+   "props": {
+    "ed": "e10",
+    "value": "Peixe-machado"
+   }
+  },
+  {
+   "id": "e11t",
+   "type": "param",
+   "label": "Texto: Bioluminescência",
+   "props": {
+    "ed": "e11",
+    "value": "Bioluminescência"
+   }
+  },
+  {
+   "id": "e12t",
+   "type": "param",
+   "label": "Texto: Águas-vivas",
+   "props": {
+    "ed": "e12",
+    "value": "Águas-vivas"
+   }
+  },
+  {
+   "id": "e13t",
+   "type": "param",
+   "label": "Texto: Peixe-lanterna",
+   "props": {
+    "ed": "e13",
+    "value": "Peixe-lanterna"
+   }
+  },
+  {
+   "id": "e14t",
+   "type": "param",
+   "label": "Texto: CAMADA 3 · LENDAS VIVAS",
+   "props": {
+    "ed": "e14",
+    "value": "CAMADA 3 · LENDAS VIVAS"
+   }
+  },
+  {
+   "id": "e15t",
+   "type": "param",
+   "label": "Texto: Filmada em 2012",
+   "props": {
+    "ed": "e15",
+    "value": "Filmada em 2012"
+   }
+  },
+  {
+   "id": "e16t",
+   "type": "param",
+   "label": "Texto: Peixe-remo",
+   "props": {
+    "ed": "e16",
+    "value": "Peixe-remo"
+   }
+  },
+  {
+   "id": "e17t",
+   "type": "param",
+   "label": "Texto: Lula-gigante",
+   "props": {
+    "ed": "e17",
+    "value": "Lula-gigante"
+   }
+  },
+  {
+   "id": "e18t",
+   "type": "param",
+   "label": "Texto: Kraken",
+   "props": {
+    "ed": "e18",
+    "value": "Kraken"
+   }
+  },
+  {
+   "id": "e19t",
+   "type": "param",
+   "label": "Texto: Lula-colossal",
+   "props": {
+    "ed": "e19",
+    "value": "Lula-colossal"
+   }
+  },
+  {
+   "id": "e20t",
+   "type": "param",
+   "label": "Texto: CAMADA 4 · SEM LUZ DO SOL",
+   "props": {
+    "ed": "e20",
+    "value": "CAMADA 4 · SEM LUZ DO SOL"
+   }
+  },
+  {
+   "id": "e21t",
+   "type": "param",
+   "label": "Texto: 1977",
+   "props": {
+    "ed": "e21",
+    "value": "1977"
+   }
+  },
+  {
+   "id": "e22t",
+   "type": "param",
+   "label": "Texto: Vida sem sol",
+   "props": {
+    "ed": "e22",
+    "value": "Vida sem sol"
+   }
+  },
+  {
+   "id": "e23t",
+   "type": "param",
+   "label": "Texto: Fontes hidrotermais",
+   "props": {
+    "ed": "e23",
+    "value": "Fontes hidrotermais"
+   }
+  },
+  {
+   "id": "e24t",
+   "type": "param",
+   "label": "Texto: Fumarolas negras",
+   "props": {
+    "ed": "e24",
+    "value": "Fumarolas negras"
+   }
+  },
+  {
+   "id": "e25t",
+   "type": "param",
+   "label": "Texto: Vermes-tubulares",
+   "props": {
+    "ed": "e25",
+    "value": "Vermes-tubulares"
+   }
+  },
+  {
+   "id": "e26t",
+   "type": "param",
+   "label": "Texto: CAMADA 5 · O ABISMO",
+   "props": {
+    "ed": "e26",
+    "value": "CAMADA 5 · O ABISMO"
+   }
+  },
+  {
+   "id": "e27t",
+   "type": "param",
+   "label": "Texto: Challenger Deep",
+   "props": {
+    "ed": "e27",
+    "value": "Challenger Deep"
+   }
+  },
+  {
+   "id": "e28t",
+   "type": "param",
+   "label": "Texto: Fossa das Marianas",
+   "props": {
+    "ed": "e28",
+    "value": "Fossa das Marianas"
+   }
+  },
+  {
+   "id": "e29t",
+   "type": "param",
+   "label": "Texto: ~11.000 m",
+   "props": {
+    "ed": "e29",
+    "value": "~11.000 m"
+   }
+  },
+  {
+   "id": "e30t",
+   "type": "param",
+   "label": "Texto: Pressão esmagadora",
+   "props": {
+    "ed": "e30",
+    "value": "Pressão esmagadora"
+   }
+  },
+  {
+   "id": "e31t",
+   "type": "param",
+   "label": "Texto: Titanic (3.800 m)",
+   "props": {
+    "ed": "e31",
+    "value": "Titanic (3.800 m)"
+   }
+  },
+  {
+   "id": "e32t",
+   "type": "param",
+   "label": "Texto: CAMADA ??? · O DESCONHECIDO",
+   "props": {
+    "ed": "e32",
+    "value": "CAMADA ??? · O DESCONHECIDO"
+   }
+  },
+  {
+   "id": "e33t",
+   "type": "param",
+   "label": "Texto: Ainda não descoberto",
+   "props": {
+    "ed": "e33",
+    "value": "Ainda não descoberto"
+   }
+  },
+  {
+   "id": "e34t",
+   "type": "param",
+   "label": "Texto: ICEBERG DOS\nMISTÉRIOS DO OCEANO",
+   "props": {
+    "ed": "e34",
+    "value": "ICEBERG DOS\nMISTÉRIOS DO OCEANO"
+   }
+  },
+  {
+   "id": "e35t",
+   "type": "param",
+   "label": "Texto: 70%",
+   "props": {
+    "ed": "e35",
+    "value": "70%"
+   }
+  },
+  {
+   "id": "e36t",
+   "type": "param",
+   "label": "Texto: do planeta é oceano",
+   "props": {
+    "ed": "e36",
+    "value": "do planeta é oceano"
+   }
+  },
+  {
+   "id": "e37t",
+   "type": "param",
+   "label": "Texto: +80%",
+   "props": {
+    "ed": "e37",
+    "value": "+80%"
+   }
+  },
+  {
+   "id": "e38t",
+   "type": "param",
+   "label": "Texto: do fundo sem mapa detalhado",
+   "props": {
+    "ed": "e38",
+    "value": "do fundo sem mapa detalhado"
+   }
+  },
+  {
+   "id": "e39t",
+   "type": "param",
+   "label": "Texto: Tubarões e baleias",
+   "props": {
+    "ed": "e39",
+    "value": "Tubarões e baleias"
+   }
+  },
+  {
+   "id": "e40t",
+   "type": "param",
+   "label": "Texto: Criaturas bioluminescentes",
+   "props": {
+    "ed": "e40",
+    "value": "Criaturas bioluminescentes"
+   }
+  },
+  {
+   "id": "e41t",
+   "type": "param",
+   "label": "Texto: Lula-gigante",
+   "props": {
+    "ed": "e41",
+    "value": "Lula-gigante"
+   }
+  },
+  {
+   "id": "e42t",
+   "type": "param",
+   "label": "Texto: Fontes hidrotermais",
+   "props": {
+    "ed": "e42",
+    "value": "Fontes hidrotermais"
+   }
+  },
+  {
+   "id": "e43t",
+   "type": "param",
+   "label": "Texto: Fossa das Marianas",
+   "props": {
+    "ed": "e43",
+    "value": "Fossa das Marianas"
+   }
+  },
+  {
+   "id": "e44t",
+   "type": "param",
+   "label": "Texto: Titanic · ~3.800 m",
+   "props": {
+    "ed": "e44",
+    "value": "Titanic · ~3.800 m"
+   }
+  },
+  {
+   "id": "e45t",
+   "type": "param",
+   "label": "Texto: O que ainda não vimos",
+   "props": {
+    "ed": "e45",
+    "value": "O que ainda não vimos"
+   }
+  },
+  {
+   "id": "e46t",
+   "type": "param",
+   "label": "Texto: 2012 · filmada viva no Japão",
+   "props": {
+    "ed": "e46",
+    "value": "2012 · filmada viva no Japão"
+   }
+  },
+  {
+   "id": "e47t",
+   "type": "param",
+   "label": "Texto: descobertas em 1977",
+   "props": {
+    "ed": "e47",
+    "value": "descobertas em 1977"
+   }
+  },
+  {
+   "id": "e48t",
+   "type": "param",
+   "label": "Texto: vida sem luz solar",
+   "props": {
+    "ed": "e48",
+    "value": "vida sem luz solar"
+   }
+  },
+  {
+   "id": "e49t",
+   "type": "param",
+   "label": "Texto: ≈ 11.000 metros",
+   "props": {
+    "ed": "e49",
+    "value": "≈ 11.000 metros"
+   }
+  },
+  {
+   "id": "e50t",
+   "type": "param",
+   "label": "Texto: pressão esmagadora",
+   "props": {
+    "ed": "e50",
+    "value": "pressão esmagadora"
+   }
+  },
+  {
+   "id": "e51t",
+   "type": "param",
+   "label": "Texto: repousa a ~3.800 m",
+   "props": {
+    "ed": "e51",
+    "value": "repousa a ~3.800 m"
+   }
+  },
+  {
+   "id": "e52t",
+   "type": "param",
+   "label": "Texto: PROFUNDIDADE: 0 m",
+   "props": {
+    "ed": "e52",
+    "value": "PROFUNDIDADE: 0 m"
+   }
+  },
+  {
+   "id": "e53t",
+   "type": "param",
+   "label": "Texto: INSCREVA-SE",
+   "props": {
+    "ed": "e53",
+    "value": "INSCREVA-SE"
+   }
+  },
+  {
+   "id": "e54t",
+   "type": "param",
+   "label": "Texto: Qual camada te assustou mais? Comente!",
+   "props": {
+    "ed": "e54",
+    "value": "Qual camada te assustou mais? Comente!"
+   }
+  },
+  {
+   "id": "e55i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "sup.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e55",
+    "src": "proj/P/sup.jpg"
+   }
+  },
+  {
+   "id": "e56i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "bio.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e56",
+    "src": "proj/P/bio.jpg"
+   }
+  },
+  {
+   "id": "e57i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "lula.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e57",
+    "src": "proj/P/lula.jpg"
+   }
+  },
+  {
+   "id": "e58i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "vent.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e58",
+    "src": "proj/P/vent.jpg"
+   }
+  },
+  {
+   "id": "e59i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "fossa.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e59",
+    "src": "proj/P/fossa.jpg"
+   }
+  },
+  {
+   "id": "e60i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "titanic.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e60",
+    "src": "proj/P/titanic.jpg"
+   }
+  },
+  {
+   "id": "e61i",
+   "type": "image",
+   "track": "imagens",
+   "by": "template",
+   "label": "unk.jpg",
+   "start": 0,
+   "dur": 67.2,
+   "props": {
+    "ed": "e61",
+    "src": "proj/P/unk.jpg"
+   }
+  }
+ ],
+ "estilo": "Iceberg",
+ "referencia": {
+  "video": "https://youtu.be/qpxGbLQn2E4",
+  "canal": "Psychopoly",
+  "canal_url": "https://www.youtube.com/channel/UCeIKdSZRSAUm88iS4G9_ohA",
+  "titulo": "The Full World Conspiracy Iceberg",
+  "nota": "Psychopoly"
+ }
+}

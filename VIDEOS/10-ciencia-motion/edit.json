@@ -1,0 +1,453 @@
+{
+ "version": 1,
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30
+ },
+ "template": "auto",
+ "name": "10 - CIENCIA MOTION 2D - O que aconteceria se todas as abelhas sumissem",
+ "composition": "hf/template.ed.html",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "duration": 81.0,
+ "auto_mode": "raw",
+ "tracks": [
+  {
+   "id": "cenas",
+   "name": "Cenas"
+  },
+  {
+   "id": "imagens",
+   "name": "Imagens"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "cena_s1",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s1",
+   "start": 0.0,
+   "dur": 7.3,
+   "props": {}
+  },
+  {
+   "id": "cena_s2a",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s2a",
+   "start": 7.3,
+   "dur": 3.7,
+   "props": {}
+  },
+  {
+   "id": "cena_s2b",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s2b",
+   "start": 11.0,
+   "dur": 6.5,
+   "props": {}
+  },
+  {
+   "id": "cena_s3",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s3",
+   "start": 17.5,
+   "dur": 7.8,
+   "props": {}
+  },
+  {
+   "id": "cena_s4",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s4",
+   "start": 25.3,
+   "dur": 9.3,
+   "props": {}
+  },
+  {
+   "id": "cena_s5",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s5",
+   "start": 34.6,
+   "dur": 9.6,
+   "props": {}
+  },
+  {
+   "id": "cena_s6",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s6",
+   "start": 44.2,
+   "dur": 10.4,
+   "props": {}
+  },
+  {
+   "id": "cena_s7",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s7",
+   "start": 54.6,
+   "dur": 5.1,
+   "props": {}
+  },
+  {
+   "id": "cena_s8",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s8",
+   "start": 59.7,
+   "dur": 8.2,
+   "props": {}
+  },
+  {
+   "id": "cena_s9",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s9",
+   "start": 67.9,
+   "dur": 3.5,
+   "props": {}
+  },
+  {
+   "id": "cena_s10",
+   "type": "legacy",
+   "track": "cenas",
+   "by": "template",
+   "label": "s10",
+   "start": 71.4,
+   "dur": 9.7,
+   "props": {}
+  },
+  {
+   "id": "r0",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "E se as abelhas sumissem?",
+   "start": 0.0,
+   "dur": 7.3,
+   "props": {
+    "raw": 0,
+    "text": "E se as abelhas sumissem?"
+   }
+  },
+  {
+   "id": "r1",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "mais complicado do que parece…",
+   "start": 0.0,
+   "dur": 7.3,
+   "props": {
+    "raw": 1,
+    "text": "mais complicado do que parece…"
+   }
+  },
+  {
+   "id": "r2",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Espécies de abelhas",
+   "start": 7.3,
+   "dur": 3.7,
+   "props": {
+    "raw": 2,
+    "text": "Espécies de abelhas"
+   }
+  },
+  {
+   "id": "r3",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "0",
+   "start": 7.3,
+   "dur": 3.7,
+   "props": {
+    "raw": 3,
+    "text": "0"
+   }
+  },
+  {
+   "id": "r4",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "espécies",
+   "start": 7.3,
+   "dur": 3.7,
+   "props": {
+    "raw": 4,
+    "text": "espécies"
+   }
+  },
+  {
+   "id": "r5",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Polinização",
+   "start": 11.0,
+   "dur": 6.5,
+   "props": {
+    "raw": 5,
+    "text": "Polinização"
+   }
+  },
+  {
+   "id": "r6",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "de flor em flor",
+   "start": 11.0,
+   "dur": 6.5,
+   "props": {
+    "raw": 6,
+    "text": "de flor em flor"
+   }
+  },
+  {
+   "id": "r7",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1/3 dos alimentos",
+   "start": 17.5,
+   "dur": 7.8,
+   "props": {
+    "raw": 7,
+    "text": "1/3 dos alimentos"
+   }
+  },
+  {
+   "id": "r8",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "1/3",
+   "start": 17.5,
+   "dur": 7.8,
+   "props": {
+    "raw": 8,
+    "text": "1/3"
+   }
+  },
+  {
+   "id": "r9",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "polinizadores",
+   "start": 17.5,
+   "dur": 7.8,
+   "props": {
+    "raw": 9,
+    "text": "polinizadores"
+   }
+  },
+  {
+   "id": "r10",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Frutas, castanhas e vegetais",
+   "start": 25.3,
+   "dur": 9.3,
+   "props": {
+    "raw": 10,
+    "text": "Frutas, castanhas e vegetais"
+   }
+  },
+  {
+   "id": "r11",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "MUITO AFETADOS",
+   "start": 25.3,
+   "dur": 9.3,
+   "props": {
+    "raw": 11,
+    "text": "MUITO AFETADOS"
+   }
+  },
+  {
+   "id": "r12",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Polinizados pelo vento",
+   "start": 34.6,
+   "dur": 9.6,
+   "props": {
+    "raw": 12,
+    "text": "Polinizados pelo vento"
+   }
+  },
+  {
+   "id": "r13",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "não dependem tanto das abelhas",
+   "start": 34.6,
+   "dur": 9.6,
+   "props": {
+    "raw": 13,
+    "text": "não dependem tanto das abelhas"
+   }
+  },
+  {
+   "id": "r14",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "O resultado?",
+   "start": 44.2,
+   "dur": 10.4,
+   "props": {
+    "raw": 14,
+    "text": "O resultado?"
+   }
+  },
+  {
+   "id": "r15",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "10",
+   "start": 44.2,
+   "dur": 10.4,
+   "props": {
+    "raw": 15,
+    "text": "10"
+   }
+  },
+  {
+   "id": "r16",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Não seria o fim da humanidade…",
+   "start": 54.6,
+   "dur": 5.1,
+   "props": {
+    "raw": 16,
+    "text": "Não seria o fim da humanidade…"
+   }
+  },
+  {
+   "id": "r17",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "…mas seria uma crise grave",
+   "start": 54.6,
+   "dur": 5.1,
+   "props": {
+    "raw": 17,
+    "text": "…mas seria uma crise grave"
+   }
+  },
+  {
+   "id": "r18",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Ameaças às abelhas",
+   "start": 59.7,
+   "dur": 8.2,
+   "props": {
+    "raw": 18,
+    "text": "Ameaças às abelhas"
+   }
+  },
+  {
+   "id": "r19",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Pequenos animais",
+   "start": 67.9,
+   "dur": 3.5,
+   "props": {
+    "raw": 19,
+    "text": "Pequenos animais"
+   }
+  },
+  {
+   "id": "r20",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "grandes efeitos",
+   "start": 67.9,
+   "dur": 3.5,
+   "props": {
+    "raw": 20,
+    "text": "grandes efeitos"
+   }
+  },
+  {
+   "id": "r21",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "INSCREVA-SE",
+   "start": 71.4,
+   "dur": 9.7,
+   "props": {
+    "raw": 21,
+    "text": "INSCREVA-SE"
+   }
+  },
+  {
+   "id": "r22",
+   "type": "text",
+   "track": "textos",
+   "by": "template",
+   "label": "Como podemos proteger as abelhas? Coment",
+   "start": 71.4,
+   "dur": 9.7,
+   "props": {
+    "raw": 22,
+    "text": "Como podemos proteger as abelhas? Comente!"
+   }
+  }
+ ],
+ "estilo": "Ciência em motion 2D",
+ "referencia": {
+  "video": "https://youtu.be/_y9JuojAIg0",
+  "canal": "Kurzgesagt – In a Nutshell",
+  "canal_url": "https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q",
+  "titulo": "We Finally Know More About Humanity’s First Civilization",
+  "nota": "Kurzgesagt"
+ }
+}

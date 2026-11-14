@@ -1,0 +1,177 @@
+{
+ "version": 1,
+ "name": "09 - Tamanho 3D - Da Terra a UY Scuti",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 70.7,
+ "template": "local",
+ "head": "",
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cena 3D"
+  },
+  {
+   "id": "textos",
+   "name": "Rótulos"
+  }
+ ],
+ "items": [
+  {
+   "id": "lab_earth",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Terra",
+   "start": 0.3,
+   "dur": 58.7,
+   "by": "template",
+   "props": {
+    "text": "Terra",
+    "sub": "O nosso planeta",
+    "km": "12.742 km",
+    "light": "A luz leva 0,04 s para cruzar",
+    "measure_at": 4.0,
+    "fact": "",
+    "fact_at": 0
+   }
+  },
+  {
+   "id": "lab_jup",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Júpiter",
+   "start": 9.3,
+   "dur": 49.7,
+   "by": "template",
+   "props": {
+    "text": "Júpiter",
+    "sub": "O maior planeta do Sistema Solar",
+    "km": "139.820 km",
+    "light": "A luz leva 0,47 s para cruzar",
+    "measure_at": 10.4,
+    "fact": "cabem mais de 1.000 Terras dentro dele",
+    "fact_at": 13.2
+   }
+  },
+  {
+   "id": "lab_sun",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Sol",
+   "start": 17.0,
+   "dur": 42.0,
+   "by": "template",
+   "props": {
+    "text": "Sol",
+    "sub": "A nossa estrela",
+    "km": "1.392.700 km",
+    "light": "A luz leva 4,6 s para cruzar",
+    "measure_at": 19.4,
+    "fact": "≈ 1,3 milhão de Terras caberiam dentro",
+    "fact_at": 22.8
+   }
+  },
+  {
+   "id": "lab_bet",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo Betelgeuse",
+   "start": 30.9,
+   "dur": 28.1,
+   "by": "template",
+   "props": {
+    "text": "Betelgeuse",
+    "sub": "Supergigante vermelha · constelação de Órion",
+    "km": "~1,06 bilhão de km*",
+    "light": "A luz leva ~59 min para cruzar",
+    "measure_at": 33.0,
+    "fact": "raio > 700× o do Sol · tamanho incerto",
+    "fact_at": 35.6
+   }
+  },
+  {
+   "id": "lab_uy",
+   "type": "text",
+   "track": "textos",
+   "label": "Rótulo UY Scuti",
+   "start": 47.5,
+   "dur": 11.5,
+   "by": "template",
+   "props": {
+    "text": "UY Scuti",
+    "sub": "Hipergigante vermelha · constelação do Escudo",
+    "km": "~1,4 bilhão de km*",
+    "light": "A luz leva ~1 h 17 min para cruzar",
+    "measure_at": 49.6,
+    "fact": "≈ 1.000× o raio do Sol (grande margem de erro)",
+    "fact_at": 50.8
+   }
+  },
+  {
+   "id": "galaxia",
+   "type": "text",
+   "track": "textos",
+   "label": "Via Láctea",
+   "start": 59.6,
+   "dur": 4.4,
+   "by": "template",
+   "props": {
+    "text": "VIA LÁCTEA",
+    "sub": "~100.000 anos-luz de diâmetro · centenas de bilhões de estrelas"
+   }
+  },
+  {
+   "id": "cta",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA final",
+   "start": 63.8,
+   "dur": 6.9,
+   "by": "template",
+   "props": {
+    "text": "Qual astro mais te impressionou?",
+    "button": "COMENTE · INSCREVA-SE"
+   }
+  },
+  {
+   "id": "cena3d",
+   "type": "html",
+   "track": "fundo",
+   "label": "Cena 3D (câmera Terra→UY Scuti→galáxia, keyframes KF no template)",
+   "start": 0,
+   "dur": 70.7,
+   "by": "template",
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "fonte_escala",
+   "type": "param",
+   "label": "Tamanho das letras (1 = original, 1.8 = grande)",
+   "props": {
+    "value": 1.8
+   }
+  }
+ ],
+ "notes": "Render teste feito de proj/index.html via render.ps1; template.html + assets/ = versão editável (build_from_edit.py).",
+ "estilo": "Comparação de tamanho 3D",
+ "referencia": {
+  "video": "https://youtu.be/2D9vHQOaauM",
+  "canal": "Interplanetary",
+  "canal_url": "https://www.youtube.com/channel/UCSaCQr2ppyNUY_kjnWY1yVQ",
+  "titulo": "Universe Size Comparison | Solar System To Observable Universe | True Scale",
+  "nota": "Interplanetary"
+ }
+}

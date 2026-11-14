@@ -1,0 +1,472 @@
+{
+ "version": 1,
+ "name": "04 - Dinheiro Antigo - J.P. Morgan salvou os bancos em 1907",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0a08"
+ },
+ "duration": 61.24,
+ "template": "generic",
+ "head": "<style>#s0 img,#s0{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s1 img,#s1{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s2 img,#s2{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s3 img,#s3{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s4 img,#s4{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s5 img,#s5{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s6 img,#s6{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s7 img,#s7{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s8 img,#s8{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s9 img,#s9{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s10 img,#s10{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s11 img,#s11{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s12 img,#s12{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s13 img,#s13{filter:grayscale(1) sepia(.5) contrast(1.25) brightness(.75)}\n#s14 img,#s14{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s15 img,#s15{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s16 img,#s16{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}</style>",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fotos de arquivo (Ken Burns)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / grão"
+  }
+ ],
+ "items": [
+  {
+   "id": "s0",
+   "type": "image",
+   "track": "fundo",
+   "label": "Broad Street, NY 1900s",
+   "start": 0.0,
+   "dur": 3.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.13,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s1",
+   "type": "image",
+   "track": "fundo",
+   "label": "NYSE sepia",
+   "start": 3.3,
+   "dur": 4.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/11.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s2",
+   "type": "image",
+   "track": "fundo",
+   "label": "Knickerbocker Trust exterior",
+   "start": 7.1,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.16,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s3",
+   "type": "image",
+   "track": "fundo",
+   "label": "correntistas na porta",
+   "start": 11.2,
+   "dur": 3.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s4",
+   "type": "image",
+   "track": "fundo",
+   "label": "multidao panico 1907",
+   "start": 14.0,
+   "dur": 3.0,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.19,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Knickerbocker com fila",
+   "start": 16.5,
+   "dur": 3.0,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/14.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_right",
+    "motion_amount": 0.11,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s6",
+   "type": "image",
+   "track": "fundo",
+   "label": "cartoon ursos Wall St 1907",
+   "start": 19.0,
+   "dur": 2.6,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.11,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s7",
+   "type": "image",
+   "track": "fundo",
+   "label": "retrato J.P. Morgan",
+   "start": 21.1,
+   "dur": 4.7,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s8",
+   "type": "image",
+   "track": "fundo",
+   "label": "caricatura Morgan 1902",
+   "start": 25.3,
+   "dur": 2.7,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/15.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s9",
+   "type": "image",
+   "track": "fundo",
+   "label": "biblioteca Morgan",
+   "start": 27.5,
+   "dur": 6.8,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/08.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.15,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s10",
+   "type": "image",
+   "track": "fundo",
+   "label": "bolsa NY desenho",
+   "start": 33.8,
+   "dur": 3.9,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/10.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.13,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s11",
+   "type": "image",
+   "track": "fundo",
+   "label": "NYSE close",
+   "start": 37.2,
+   "dur": 2.4,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/11.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_left",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s12",
+   "type": "image",
+   "track": "fundo",
+   "label": "multidao close",
+   "start": 39.1,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_right",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s13",
+   "type": "image",
+   "track": "fundo",
+   "label": "Morgan close - um unico homem",
+   "start": 42.6,
+   "dur": 3.7,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.22,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s14",
+   "type": "image",
+   "track": "fundo",
+   "label": "Federal Reserve Board 1914",
+   "start": 45.8,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/12.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.13,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s15",
+   "type": "image",
+   "track": "fundo",
+   "label": "12 bancos do Fed",
+   "start": 49.9,
+   "dur": 6.5,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/13.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.16,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s16",
+   "type": "image",
+   "track": "fundo",
+   "label": "Knickerbocker - encerramento",
+   "start": 55.9,
+   "dur": 5.34,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.17,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + moldura",
+   "start": 0,
+   "dur": 61.24,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vig'></div>",
+    "css": ".vig{width:1236px;height:684px;border-radius:22px;box-shadow:inset 0 0 140px 40px rgba(0,0,0,.75);background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684
+   }
+  },
+  {
+   "id": "grao",
+   "type": "html",
+   "track": "visual",
+   "label": "Grão de filme",
+   "start": 0,
+   "dur": 61.24,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<svg width='1280' height='720' style='opacity:.16;mix-blend-mode:overlay'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fade_final",
+   "type": "html",
+   "track": "visual",
+   "label": "Fade p/ preto",
+   "start": 59.940000000000005,
+   "dur": 1.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div style='width:1280px;height:720px;background:#000'></div>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  }
+ ],
+ "_origem": {
+  "build_script": "build.py",
+  "composicao_render_teste": "hf/index.html (gerado por build.py)"
+ },
+ "estilo": "Canal de história simples",
+ "referencia": {
+  "video": "https://youtu.be/rk5kCGZoxgc",
+  "canal": "Segredos do Dinheiro Antigo",
+  "canal_url": "https://www.youtube.com/channel/UCKqWZdkxZLii5YXzj54UOoQ",
+  "titulo": "A História Sombria de Como a Era Dourada da América Chegou ao Fim | Documentário",
+  "nota": "Segredos do Dinheiro Antigo"
+ }
+}

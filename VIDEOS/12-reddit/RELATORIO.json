@@ -1,0 +1,24 @@
+{
+ "video": 12,
+ "estilo": "Reddit story — card do post + legenda palavra-por-palavra sobre gameplay",
+ "inicio": "2026-10-22T00:10:49-03:00",
+ "fim": "2026-10-22T00:16:49-03:00",
+ "minutos": 6.0,
+ "render_segundos": 48,
+ "observacoes": "Sessão anterior caiu sem deixar arquivos; refeito do zero (início = retomada). Template generic do editor (edit.json + build_from_edit.py), sem template local. Gameplay: Roblox parkour no-copyright do estoque D:\u000bideos\\ROBLOX (não havia Minecraft local); botão 'Hide UI' do jogo aparece no topo. Ref @DrovenMC: Minecraft cru, sem legenda no meio; aqui adicionada legenda grande Montserrat Black com contorno e destaque amarelo em palavras-chave. Sem SFX/música. 62 s, 0 trechos pretos, 20 MB.",
+ "estimativa_30min": {
+  "horas_maquina": 0.5,
+  "o_que_escala": "Render ~linear com duração (48 s/min de vídeo → ~25 min para 30 min), whisper small CPU ~1 min/min de áudio (~15-30 min), corte do gameplay (ffmpeg, ~2 min). Reaproveitado 100%: card Reddit, estilo de legenda, edit.json/build — custo de tokens quase fixo (só trocar título do card). Precisa de gameplay ≥30 min (há vídeos de 1 h no D:)."
+ },
+ "tokens": {
+  "novos": 96167,
+  "totais": 3378489,
+  "cache_lido": 3282322,
+  "cache_gravado": 81359,
+  "saida": 14746,
+  "entrada": 62,
+  "passos": 32
+ },
+ "custo_usd": 1.6,
+ "custo_base": "API Opus 5.5: in 4, out 20, cache read 0.20, cache write 1h 8 US$/1M"
+}

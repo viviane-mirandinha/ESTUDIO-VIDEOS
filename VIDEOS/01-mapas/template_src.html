@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face{font-family:'Inter';src:url('fonts/Inter.ttf');font-weight:100 900;}
+@font-face{font-family:'Anton';src:url('fonts/Anton-Regular.ttf');}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#070b10;}
+#root{position:absolute;left:0;top:0;width:1280px;height:720px;overflow:hidden;font-family:'Inter',sans-serif;color:#e8eef5;
+ background:radial-gradient(ellipse at 50% 45%,#0f1823 0%,#070b10 75%);}
+svg#map{position:absolute;left:0;top:0;width:1280px;height:720px;}
+.land{fill:#1a2430;stroke:#3b4d61;stroke-width:0.8;vector-effect:non-scaling-stroke;stroke-linejoin:round;}
+.grat{fill:none;stroke:#16222f;stroke-width:1;vector-effect:non-scaling-stroke;}
+.route{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke;}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.65) 100%);pointer-events:none;}
+.it{position:absolute;opacity:0;will-change:transform,opacity;}
+.lab{font-weight:800;font-size:17px;letter-spacing:3px;text-transform:uppercase;white-space:nowrap;color:#dfe8f2;
+ text-shadow:0 2px 8px #000,0 0 2px #000;transform:translate(-50%,-50%);}
+.lab.ocean{color:#5d7a96;font-weight:600;font-size:20px;letter-spacing:8px;font-style:italic}
+.lab.big{font-family:Anton;font-size:44px;letter-spacing:2px;font-weight:400}
+.tag{font-family:Anton;font-size:30px;letter-spacing:1px;padding:4px 16px 6px;background:#f3f3f3;color:#111;border-radius:8px;white-space:nowrap;
+ box-shadow:0 8px 24px rgba(0,0,0,.6);transform:translate(-50%,-50%);}
+.tag.red{background:#e63946;color:#fff}
+.tag.blue{background:#2b6cb0;color:#fff}
+.stamp{font-family:Anton;color:#ff3b4a;font-size:64px;letter-spacing:2px;white-space:nowrap;text-shadow:0 4px 18px rgba(0,0,0,.9);transform:translate(-50%,-50%);}
+.title{font-family:Anton;font-size:76px;line-height:1.02;text-align:center;width:1100px;left:90px;top:220px;text-shadow:0 6px 30px #000;}
+.title b{color:#ff3b4a;font-weight:400}
+.dot{fill:#fff;}
+.flag{width:150px;height:100px;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.7);display:flex;overflow:hidden;border:3px solid #fff;}
+.card{background:#0d141c;border:2px solid #2a3a4b;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.8);}
+.cap{font-family:Anton;font-size:26px;letter-spacing:1px;color:#fff;text-align:center;}
+.num{font-family:Anton;font-size:58px;color:#fff;white-space:nowrap;text-shadow:0 4px 16px #000;transform:translate(-50%,-50%);}
+.num small{font-size:26px;color:#9fb3c8;margin-left:8px}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<svg id="map" viewBox="0 0 1280 720">
+ <defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ </defs>
+ <g id="cam">
+  <g id="grat"></g>
+  <g id="lands">__PATHS__</g>
+  <path id="lake" d="" fill="#2f7fc1" opacity="0"/>
+  <g id="routes"></g>
+  <g id="dots"></g>
+ </g>
+</svg>
+<div id="labels"></div>
+<div class="vig"></div>
+
+<!-- titulo -->
+<div class="it title" id="ttl" data-in="5.45" data-out="8.6">POR QUE O <b>CANAL DO PANAMÁ</b><br>É TÃO IMPORTANTE?</div>
+
+<!-- franca -->
+<div class="it" id="frc" data-in="26.0" data-out="34.8" style="left:120px;top:110px">
+ <div class="flag"><div style="flex:1;background:#1f4fa8"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#e63946"></div></div>
+ <div class="cap" style="width:150px;margin-top:10px">FRANÇA<br><span style="color:#9fb3c8;font-size:20px">1881 – 1889</span></div>
+ <svg id="frx" width="150" height="100" style="position:absolute;left:0;top:0;opacity:0"><path d="M18 14 L132 86 M132 14 L18 86" stroke="#ff3b4a" stroke-width="14" stroke-linecap="round"/></svg>
+</div>
+<!-- eua -->
+<div class="it" id="usa" data-in="35.0" data-out="37.55" style="left:1010px;top:110px">
+ <div class="flag" style="flex-direction:column;position:relative">
+  <div style="flex:1;background:#b22234"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#b22234"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#b22234"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#b22234"></div>
+  <div style="position:absolute;left:0;top:0;width:62px;height:54px;background:#3c3b6e"></div></div>
+ <div class="cap" style="width:150px;margin-top:10px">EUA<br><span style="color:#9fb3c8;font-size:20px">1904 – 1914</span></div>
+</div>
+
+<!-- eclusas: corte lateral -->
+<div class="it card" id="locks" data-in="37.55" data-out="45.0" style="left:70px;top:70px;width:1140px;height:580px">
+ <svg width="1140" height="580" viewBox="0 0 1140 580">
+  <text x="40" y="60" font-family="Anton" font-size="38" fill="#fff">COMO FUNCIONAM AS <tspan fill="#ff3b4a">ECLUSAS</tspan></text>
+  <rect x="0" y="420" width="1140" height="160" fill="#0f2a44"/>
+  <path d="M0 420 L200 420 L200 380 L260 380 L260 340 L320 340 L320 300 L380 300 L380 260 L760 260 L760 300 L820 300 L820 360 L880 360 L880 420 L1140 420 L1140 580 L0 580 Z" fill="#2a3a2e"/>
+  <rect id="wAtl" x="0" y="400" width="200" height="20" fill="#2f7fc1"/>
+  <rect x="200" y="350" width="60" height="30" fill="#2f7fc1" opacity=".85"/>
+  <rect x="260" y="310" width="60" height="30" fill="#2f7fc1" opacity=".85"/>
+  <rect x="320" y="270" width="60" height="30" fill="#2f7fc1" opacity=".85"/>
+  <rect x="380" y="230" width="380" height="30" fill="#2f7fc1"/>
+  <rect x="760" y="270" width="60" height="30" fill="#2f7fc1" opacity=".85"/>
+  <rect x="820" y="330" width="60" height="30" fill="#2f7fc1" opacity=".85"/>
+  <rect x="880" y="400" width="260" height="20" fill="#2f7fc1"/>
+  <g stroke="#cfd8e3" stroke-width="5"><line x1="200" y1="330" x2="200" y2="420"/><line x1="260" y1="290" x2="260" y2="380"/><line x1="320" y1="250" x2="320" y2="340"/><line x1="380" y1="210" x2="380" y2="300"/><line x1="760" y1="210" x2="760" y2="300"/><line x1="820" y1="250" x2="820" y2="360"/><line x1="880" y1="330" x2="880" y2="420"/></g>
+  <text x="40" y="470" font-family="Inter" font-weight="800" font-size="18" letter-spacing="3" fill="#8fb3d6">ATLÂNTICO</text>
+  <text x="960" y="470" font-family="Inter" font-weight="800" font-size="18" letter-spacing="3" fill="#8fb3d6">PACÍFICO</text>
+  <text id="lkGat" x="470" y="200" font-family="Anton" font-size="34" fill="#fff" opacity="0">LAGO GATÚN</text>
+  <g id="lkArr" opacity="0"><line x1="150" y1="400" x2="150" y2="240" stroke="#ff3b4a" stroke-width="4"/><path d="M138 254 L150 232 L162 254 Z" fill="#ff3b4a"/>
+   <text x="70" y="225" font-family="Anton" font-size="42" fill="#ff3b4a">+26 M</text></g>
+  <text id="lkCom" x="200" y="130" font-family="Inter" font-weight="800" font-size="18" letter-spacing="3" fill="#cfd8e3" opacity="0">COMPORTAS GIGANTES ↓</text>
+  <g id="ship"><path d="M-44 0 L40 0 L52 -14 L-52 -14 Z" fill="#e8eef5"/><rect x="-30" y="-30" width="34" height="16" fill="#ff3b4a"/><rect x="10" y="-26" width="14" height="12" fill="#cfd8e3"/></g>
+ </svg>
+</div>
+
+<!-- navios 2016 -->
+<div class="it card" id="ships" data-in="53.4" data-out="56.5" style="left:140px;top:250px;width:1000px;height:330px">
+ <svg width="1000" height="330" viewBox="0 0 1000 330">
+  <g id="sh1" transform="translate(40,70)"><path d="M0 0 L700 0 Q760 0 765 41 Q760 82 700 82 L0 82 Z" fill="#5d7a96"/>
+   <text x="20" y="-14" font-family="Inter" font-weight="800" font-size="18" letter-spacing="2" fill="#9fb3c8">PANAMAX · 294 M</text></g>
+  <g id="sh2" transform="translate(40,200)" opacity="0"><path d="M0 0 L880 0 Q945 0 950 62 Q945 124 880 124 L0 124 Z" fill="#ff3b4a"/>
+   <text x="20" y="-14" font-family="Inter" font-weight="800" font-size="18" letter-spacing="2" fill="#ffb3b9">NEOPANAMAX · 366 M</text></g>
+ </svg>
+</div>
+
+<!-- seca: medidor -->
+<div class="it card" id="gauge" data-in="57.3" data-out="62.4" style="left:1060px;top:150px;width:150px;height:420px">
+ <div class="cap" style="font-size:18px;margin-top:14px;letter-spacing:2px">NÍVEL DO<br>LAGO</div>
+ <div style="position:absolute;left:45px;top:90px;width:60px;height:300px;background:#0a1117;border:2px solid #2a3a4b;border-radius:6px;overflow:hidden">
+  <div id="gLvl" style="position:absolute;left:0;bottom:0;width:100%;height:85%;background:#2f7fc1"></div></div>
+</div>
+
+<!-- CTA -->
+<div class="it" id="cta" data-in="67.4" data-out="99" style="left:0;top:0;width:1280px;height:720px">
+ <div style="position:absolute;left:640px;top:300px;transform:translate(-50%,-50%);font-family:Anton;font-size:64px;text-align:center;white-space:nowrap;text-shadow:0 6px 30px #000">QUAL LUGAR NO <span style="color:#ff3b4a">PRÓXIMO MAPA</span>?</div>
+ <div id="sub" style="position:absolute;left:640px;top:430px;transform:translate(-50%,-50%);font-family:Anton;font-size:34px;letter-spacing:1px;background:#e63946;padding:10px 34px 12px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.6)">INSCREVA-SE</div>
+</div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true, onUpdate:()=>{ if(window.__hfRender) window.__hfRender(tl.time()); }});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+const K=20, NS='http://www.w3.org/2000/svg';
+const mx=lon=>(lon+180)*K, my=lat=>-Math.log(Math.tan(Math.PI/4+Math.max(-80,Math.min(80,lat))*Math.PI/360))*180/Math.PI*K;
+const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}, eo=x=>1-Math.pow(1-clamp(x),3);
+const $=id=>document.getElementById(id);
+// graticule
+(()=>{let d='';for(let lo=-180;lo<=0;lo+=10)d+=`M${mx(lo)},${my(80)}L${mx(lo)},${my(-75)}`;for(let la=-70;la<=80;la+=10)d+=`M${mx(-180)},${my(la)}L${mx(0)},${my(la)}`;
+ const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('class','grat');$('grat').appendChild(p);})();
+// smooth path from lon/lat list (catmull-rom)
+function spath(pts){const P=pts.map(([lo,la])=>[mx(lo),my(la)]);let d=`M${P[0][0]},${P[0][1]}`;
+ for(let i=0;i<P.length-1;i++){const p0=P[i-1]||P[i],p1=P[i],p2=P[i+1],p3=P[i+2]||p2;
+  d+=`C${p1[0]+(p2[0]-p0[0])/6},${p1[1]+(p2[1]-p0[1])/6} ${p2[0]-(p3[0]-p1[0])/6},${p2[1]-(p3[1]-p1[1])/6} ${p2[0]},${p2[1]}`;}return d;}
+const NY=[-74,40.6],SF=[-122.5,37.8],PAN=[-79.7,9.1];
+const R={ // id: [pts, color, width, t0, t1, out]
+ horn:[[NY,[-70,34],[-62,22],[-48,6],[-34.5,-7],[-38,-20],[-48,-31],[-56,-40],[-63,-50],[-67.3,-57],[-75,-53.5],[-77,-45],[-75.5,-30],[-75,-15],[-84,-2],[-96,9],[-108,18],[-117,29],SF],'#ff3b4a',3.5,12.9,18.3,22.0],
+ pan:[[NY,[-73,30],[-74,20.2],[-78,14],[-79.92,9.5],[-79.6,8.8],[-81,6.8],[-90,10.5],[-104,17.5],[-116,28],SF],'#3ddc84',3.5,22.0,24.6,25.6],
+ canal:[[[-79.93,9.42],[-79.92,9.33],[-79.91,9.27],[-79.86,9.19],[-79.76,9.15],[-79.69,9.12],[-79.65,9.06],[-79.61,9.02],[-79.59,8.99],[-79.56,8.94],[-79.52,8.86]],'#4fb3ff',4,1.3,2.5,99],
+ us:[[[-77,38.9],[-80,30],[-81,20],[-79.8,9.3]],'#ffffff',3,35.0,36.6,37.6],
+};
+const FAN=[[-150,32],[-150,12],[-150,-15],[-5,48],[-5,30],[-30,-30],[-74,40.6],[-90,29.5],[-72,-33],[-118,34]];
+FAN.forEach((e,i)=>{R['f'+i]=[[PAN,[(PAN[0]+e[0])/2+(i%2?6:-6),(PAN[1]+e[1])/2+(i%3?4:-4)],e],'#ffc94a',2.2,2.6+i*0.12,4.6+i*0.12,5.5];
+ R['g'+i]=[[PAN,[(PAN[0]+e[0])/2+(i%2?6:-6),(PAN[1]+e[1])/2+(i%3?4:-4)],e],'#ffc94a',2.2,62.7+i*0.1,64.6+i*0.1,67.4];});
+const RP={};
+for(const k in R){const [pts,c,w]=R[k];const p=document.createElementNS(NS,'path');p.setAttribute('d',spath(pts));p.setAttribute('class','route');
+ p.setAttribute('stroke',c);p.setAttribute('stroke-width',w);if(k!=='canal')p.setAttribute('filter','url(#glow)');$('routes').appendChild(p);
+ const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
+ const dt=document.createElementNS(NS,'circle');dt.setAttribute('class','dot');dt.setAttribute('fill',c);$('dots').appendChild(dt);RP[k]={p,L,dt};}
+// lake
+$('lake').setAttribute('d',spath([[-80.02,9.2],[-79.95,9.27],[-79.88,9.25],[-79.8,9.2],[-79.72,9.17],[-79.68,9.12],[-79.74,9.08],[-79.85,9.07],[-79.96,9.1],[-80.03,9.15],[-80.02,9.2]])+'Z');
+// labels on map: [text, lon, lat, in, out, cls]
+const LB=[
+ ['PANAMÁ',-80.6,8.4,0.9,2.3,'lab'],['80 KM',-79.35,9.2,1.4,2.3,'tag red'],
+ ['OCEANO ATLÂNTICO',-45,22,10.6,21.5,'lab ocean'],['OCEANO PACÍFICO',-105,-5,12.1,21.5,'lab ocean'],
+ ['AMÉRICA DO SUL',-60,-12,14.6,18.5,'lab'],['⚠ CABO HORN',-67,-58.8,17.4,21.8,'tag red'],
+ ['LONGA E ARRISCADA',-67,-50.5,19.6,21.8,'tag'],
+ ['FEBRE AMARELA',-82.6,10.3,32.4,34.9,'tag'],['MALÁRIA',-77.2,8.0,33.8,34.9,'tag'],
+ ['ESTADOS UNIDOS',-98,39,35.1,37.6,'lab big'],
+ ['CONTROLE TOTAL',-80.1,7.4,48.6,51.5,'tag blue'],['PANAMÁ',-80.6,8.4,45.2,51.5,'lab big'],
+ ['SECA',-79.8,9.4,57.4,62.4,'tag red'],['LAGO GATÚN',-79.84,9.165,56.8,62.4,'lab'],
+ ['PEQUENA FAIXA DE TERRA',-79.7,6.8,62.7,67.3,'tag'],['ENORME INFLUÊNCIA',-79.7,-12,64.6,67.3,'tag red'],
+];
+LB.forEach(l=>{const d=document.createElement('div');d.className='it '+l[5];d.textContent=l[0];d.dataset.in=l[3];d.dataset.out=l[4];d.dataset.lon=l[1];d.dataset.lat=l[2];$('labels').appendChild(d);});
+// free screen items: stamps/numbers
+const SC=[['15 AGOSTO 1914',640,600,23.5,25.6,'stamp'],['~21.000 KM',940,560,19.2,22.0,'num'],['~8.400 KM',940,560,23.0,25.6,'num'],
+ ['~22.000 MORTES',640,610,30.2,34.9,'stamp'],['31 DEZEMBRO 1999',640,110,45.3,51.5,'stamp'],['2016',640,150,52.2,56.5,'stamp'],
+ ['NAVIOS POR DIA: 36 → 22',560,630,60.0,62.4,'tag']];
+SC.forEach(l=>{const d=document.createElement('div');d.className='it '+l[5];d.innerHTML=l[0];d.dataset.in=l[3];d.dataset.out=l[4];d.style.left=l[1]+'px';d.style.top=l[2]+'px';$('labels').appendChild(d);});
+// highlights: [ADM0_A3, color, in, out]
+const HL=[['PAN','#d9a21b',0.6,5.2],['PAN','#d9a21b',22.0,34.9],['PAN','#e63946',45.2,51.5],['PAN','#3e6e4a',56.6,67.3],
+ ['USA','#2b6cb0',35.0,37.6],['BRA','#c9a227',14.6,18.5],['ARG','#c9a227',14.6,18.5],['CHL','#c9a227',14.6,18.5],['PER','#c9a227',14.6,18.5],['COL','#c9a227',14.6,18.5],['VEN','#c9a227',14.6,18.5],['BOL','#c9a227',14.6,18.5],['ECU','#c9a227',14.6,18.5],['PRY','#c9a227',14.6,18.5],['URY','#c9a227',14.6,18.5],['GUY','#c9a227',14.6,18.5],['SUR','#c9a227',14.6,18.5]];
+const hex=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16)), mix=(a,b,k)=>{const A=hex(a),B=hex(b);return `rgb(${A.map((v,i)=>Math.round(v+(B[i]-v)*k)).join(',')})`;};
+// camera keys [t0,t1, lon,lat,scale]
+const CAM=[[0,0,-80,5,0.32],[0.2,2.4,-79.75,9.12,14],[2.5,4.8,-80,8,0.45],[5.3,8.5,-78,6,0.5],[8.6,10.4,-78,-6,0.27],
+ [16.6,18.4,-68,-54,1.6],[21.4,23.0,-90,15,0.42],[25.4,27.0,-79.8,8.9,7],[34.9,36.3,-88,25,0.62],[44.9,46.3,-80,8.6,6],
+ [51.4,52.6,-80,8.6,4.5],[56.5,58.0,-79.78,9.12,26],[62.5,64.8,-78,6,0.3],[67.3,69.5,-78,6,0.24]];
+function cam(t){let c=CAM[0].slice(2);for(const k of CAM){if(t>=k[1]){c=k.slice(2);continue;}if(t>k[0]){const e=ease((t-k[0])/(k[1]-k[0]));
+ const a=[mx(c[0]),my(c[1])],b=[mx(k[2]),my(k[3])];const s=Math.exp(Math.log(c[2])+(Math.log(k[4])-Math.log(c[2]))*e);
+ return [a[0]+(b[0]-a[0])*e,a[1]+(b[1]-a[1])*e,s];}break;}
+ // slow drift after settle
+ let last=0;for(const k of CAM)if(t>=k[1])last=k[1];const dr=1+0.012*Math.min(6,t-last);return [mx(c[0]),my(c[1]),c[2]*dr];}
+function vis(el,t){const a=+el.dataset.in,b=+el.dataset.out;if(t<a-0.01||t>b+0.35)return 0;return Math.min(eo((t-a)/0.35),1-clamp((t-b)/0.35));}
+const lands={};document.querySelectorAll('#lands path').forEach(p=>lands[p.id.slice(2)]=p);
+function renderAt(t){
+ const [cx,cy,s]=cam(t);$('cam').setAttribute('transform',`translate(640,360) scale(${s}) translate(${-cx},${-cy})`);
+ const dim=(t>5.4&&t<8.7)||(t>37.7&&t<45)||(t>53.5&&t<56.5)||t>67.5?0.35:1;$('map').style.opacity=dim;
+ for(const id in lands)lands[id].style.fill='#1a2430';
+ HL.forEach(([id,c,a,b])=>{if(!lands[id])return;const k=Math.min(eo((t-a)/0.6),1-clamp((t-b)/0.5));if(k>0)lands[id].style.fill=mix('#1a2430',c,k*(0.75+0.12*Math.sin(t*3)));});
+ for(const k in R){const [, , w,a,b,o]=R[k];const r=RP[k];const p=clamp((t-a)/(b-a)),pe=ease(p);const fade=1-clamp((t-o)/0.5);
+  r.p.style.strokeDashoffset=r.L*(1-pe);r.p.style.opacity=t<a?0:fade;r.p.style.strokeWidth=w/s+'px';r.p.setAttribute('stroke-width',w/s);
+  if(t>a&&t<b+0.3&&fade>0){const q=r.p.getPointAtLength(r.L*pe);r.dt.setAttribute('cx',q.x);r.dt.setAttribute('cy',q.y);r.dt.setAttribute('r',6/s);r.dt.style.opacity=fade;}else r.dt.style.opacity=0;}
+ $('lake').setAttribute('opacity',t>56.6&&t<62.6?0.9:0);
+ const dry=clamp((t-57.6)/3.2);$('lake').setAttribute('fill',mix('#2f7fc1','#8a7650',dry*0.7));
+ $('lake').setAttribute('transform',`translate(${mx(-79.85)},${my(9.16)}) scale(${1-0.28*dry}) translate(${-mx(-79.85)},${-my(9.16)})`);
+ document.querySelectorAll('.it').forEach(el=>{const v=vis(el,t);el.style.opacity=v;
+  if(el.dataset.lon){const X=640+(mx(+el.dataset.lon)-cx)*s,Y=360+(my(+el.dataset.lat)-cy)*s;el.style.left=X+'px';el.style.top=Y+(1-v)*14+'px';}
+  else if(el.classList.contains('stamp')){el.style.transform=`translate(-50%,-50%) scale(${1+0.6*(1-eo((t-el.dataset.in)/0.25))}) rotate(-3deg)`;}
+  else if(!el.classList.contains('lab')&&!el.classList.contains('tag')&&!el.classList.contains('num'))el.style.transform=`translateY(${(1-v)*24}px)`;});
+ $('frx').style.opacity=clamp((t-28.5)/0.2);
+ // locks
+ const sp=clamp((t-38.3)/6.0);const sx=150+sp*(560-150);const steps=[[200,350],[260,310],[320,270],[380,230]];let wy=400;for(const [x,y] of steps){if(sx+20>=x)wy=y;}
+ $('ship').setAttribute('transform',`translate(${sx},${wy+2*Math.sin(t*4)})`);
+ $('lkCom').setAttribute('opacity',clamp((t-39.4)/0.4));$('lkArr').setAttribute('opacity',clamp((t-42.1)/0.4));$('lkGat').setAttribute('opacity',clamp((t-43.9)/0.4));
+ // ships
+ $('sh2').setAttribute('opacity',clamp((t-54.5)/0.4));$('sh2').setAttribute('transform',`translate(40,200) scale(${0.85+0.15*eo((t-54.5)/0.6)},1)`);
+ $('gLvl').style.height=(85-45*dry)+'%';$('gLvl').style.background=mix('#2f7fc1','#b0884a',dry);
+ $('sub').style.transform=`translate(-50%,-50%) scale(${1+0.06*Math.sin(Math.max(0,t-67.6)*5)})`;
+}
+window.__hfRender=t=>renderAt(t);window.addEventListener("hf-seek",e=>renderAt(e.detail.time));renderAt(0);
+</script>
+</body></html>
