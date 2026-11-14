@@ -1,0 +1,923 @@
+{
+ "version": 1,
+ "name": "40 - 24-10-2026 - DESPACHO DE GUERRA - Dia D as primeiras 24 horas",
+ "estilo": "40-despacho-de-guerra",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#2c3026"
+ },
+ "duration": 79.0,
+ "template": "local",
+ "fonts": {
+  "Courier Prime": "fonts/CourierPrime-Bold.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf",
+  "Bebas Neue": "fonts/BebasNeue-Regular.ttf"
+ },
+ "referencia": {
+  "canal": "Kings and Generals",
+  "canal_url": "https://www.youtube.com/channel/UCMmaBzfCCwZ2KqaBJjkj0fw",
+  "video": "https://youtu.be/hHqJ6pgdE-c",
+  "titulo": "Six-Day War (1967) - Third Arab–Israeli War DOCUMENTARY",
+  "canais": [
+   "Kings and Generals",
+   "Real Time History"
+  ],
+  "videos": [
+   "https://youtu.be/hHqJ6pgdE-c",
+   "https://youtu.be/h7wiiKSYrv8"
+  ],
+  "nota": "guerra contada por dias/horas: mapa de front com setas e ícones, fotos de arquivo P&B pousadas sobre papel com vinheta, etiqueta de lugar+data no canto, cartões de citação em papel, dissolves; aqui virou despacho datilografado com carimbos de hora"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.wav",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.5,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 8.85,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 24.75,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 43.35,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 57.35,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 71.95,
+    "volume": 0.16,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "visual",
+   "name": "Cenas"
+  },
+  {
+   "id": "textos",
+   "name": "Textos fixos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s00",
+   "type": "scene",
+   "track": "visual",
+   "label": "Título",
+   "by": "template",
+   "start": 0,
+   "dur": 9.0,
+   "props": {
+    "cena": "titulo",
+    "kicker": "BOLETIM DE GUERRA",
+    "linha": "06 JUN 1944 — NORMANDIA, FRANÇA",
+    "titulo": "DIA D: AS PRIMEIRAS 24 HORAS",
+    "t_titulo": 3.4,
+    "rodape": "RELATO EM DESPACHOS · HORA A HORA",
+    "t_rodape": 6.3,
+    "carimbo": "URGENTE",
+    "t_carimbo": 7.7
+   }
+  },
+  {
+   "id": "d1",
+   "type": "scene",
+   "track": "visual",
+   "label": "Despacho 1",
+   "by": "template",
+   "start": 9.0,
+   "dur": 3.6,
+   "props": {
+    "cena": "despacho",
+    "origem": "FRENTE OCIDENTAL · NORMANDIA",
+    "numero": "DESPACHO Nº 1",
+    "texto": "PLANADORES BRITÂNICOS NA PONTE DO CANAL DE CAEN.",
+    "hora": "00h16",
+    "t_hora": 3.05
+   }
+  },
+  {
+   "id": "m1",
+   "type": "scene",
+   "track": "visual",
+   "label": "Mapa — ponte do canal de Caen",
+   "by": "template",
+   "start": 12.6,
+   "dur": 6.9,
+   "props": {
+    "cena": "mapa",
+    "centro0": [
+     -0.6,
+     49.33
+    ],
+    "zoom0": 1.2,
+    "centro": [
+     -0.31,
+     49.23
+    ],
+    "zoom": 2.1,
+    "nomes": [
+     {
+      "t": "CANAL DA MANCHA",
+      "p": [
+       -0.9,
+       49.68
+      ],
+      "size": 24,
+      "cor": "#3e4d52",
+      "it": 1
+     },
+     {
+      "t": "NORMANDIA",
+      "p": [
+       -0.75,
+       49.12
+      ],
+      "size": 30,
+      "cor": "#2a3020"
+     },
+     {
+      "t": "COTENTIN",
+      "p": [
+       -1.55,
+       49.5
+      ],
+      "size": 20,
+      "cor": "#2a3020"
+     }
+    ],
+    "setas": [
+     {
+      "de": [
+       -0.02,
+       49.45
+      ],
+      "para": [
+       -0.265,
+       49.25
+      ],
+      "t": 0.5,
+      "dur": 1.0,
+      "curva": -1,
+      "w": 7
+     }
+    ],
+    "marcas": [
+     {
+      "p": [
+       -0.274,
+       49.242
+      ],
+      "t": "PONTE DO CANAL DE CAEN",
+      "at": 1.0,
+      "ancora": "start",
+      "dx": 14,
+      "dy": 6
+     },
+     {
+      "p": [
+       -0.37,
+       49.183
+      ],
+      "t": "CAEN",
+      "at": 2.4,
+      "cor": "r"
+     }
+    ],
+    "foto": {
+     "src": "img/pegasus.jpg",
+     "x": 70,
+     "y": 70,
+     "w": 400,
+     "h": 280,
+     "rot": -3,
+     "at": 2.6,
+     "legenda": "Ponte do canal · junho 1944"
+    },
+    "carimbo": "TOMADA",
+    "t_carimbo": 5.7,
+    "car_x": 760,
+    "car_y": 470
+   }
+  },
+  {
+   "id": "m2",
+   "type": "scene",
+   "track": "visual",
+   "label": "Mapa — paraquedistas",
+   "by": "template",
+   "start": 19.5,
+   "dur": 5.4,
+   "props": {
+    "cena": "mapa",
+    "centro0": [
+     -0.7,
+     49.32
+    ],
+    "zoom0": 1.3,
+    "centro": [
+     -1.25,
+     49.37
+    ],
+    "zoom": 1.9,
+    "nomes": [
+     {
+      "t": "CANAL DA MANCHA",
+      "p": [
+       -0.9,
+       49.68
+      ],
+      "size": 24,
+      "cor": "#3e4d52",
+      "it": 1
+     },
+     {
+      "t": "NORMANDIA",
+      "p": [
+       -0.75,
+       49.12
+      ],
+      "size": 30,
+      "cor": "#2a3020"
+     },
+     {
+      "t": "COTENTIN",
+      "p": [
+       -1.55,
+       49.5
+      ],
+      "size": 20,
+      "cor": "#2a3020"
+     }
+    ],
+    "paras": [
+     {
+      "c": [
+       -1.3,
+       49.37
+      ],
+      "r": [
+       0.13,
+       0.07
+      ],
+      "n": 34,
+      "t": 1.2,
+      "spread": 2.6,
+      "seed": 11
+     }
+    ],
+    "marcas": [
+     {
+      "p": [
+       -1.18,
+       49.42
+      ],
+      "t": "UTAH",
+      "at": 0.2,
+      "cor": "k",
+      "dy": -22
+     }
+    ],
+    "foto": {
+     "src": "img/eisenhower.jpg",
+     "x": 830,
+     "y": 80,
+     "w": 380,
+     "h": 280,
+     "rot": 3,
+     "at": 1.6,
+     "legenda": "Eisenhower e paraquedistas · 5 jun"
+    }
+   }
+  },
+  {
+   "id": "d2",
+   "type": "scene",
+   "track": "visual",
+   "label": "Despacho 2",
+   "by": "template",
+   "start": 24.9,
+   "dur": 3.5,
+   "props": {
+    "cena": "despacho",
+    "origem": "FRENTE OCIDENTAL · NORMANDIA",
+    "numero": "DESPACHO Nº 2",
+    "texto": "FROTA ALIADA DIANTE DA COSTA. NAVIOS ABREM FOGO.",
+    "hora": "AMANHECER",
+    "t_hora": 2.75
+   }
+  },
+  {
+   "id": "f1",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto — frota",
+   "by": "template",
+   "start": 28.4,
+   "dur": 3.8,
+   "props": {
+    "cena": "foto",
+    "src": "img/navios.jpg",
+    "legenda": "Normandia · 6 de junho de 1944",
+    "rot": -1.5,
+    "destaque": "≈ 7.000 EMBARCAÇÕES",
+    "t_dest": 0.5,
+    "dest_x": 640,
+    "dest_y": 440,
+    "dest_size": 46
+   }
+  },
+  {
+   "id": "m3",
+   "type": "scene",
+   "track": "visual",
+   "label": "Mapa — hora H",
+   "by": "template",
+   "start": 32.2,
+   "dur": 7.6,
+   "props": {
+    "cena": "mapa",
+    "centro0": [
+     -0.75,
+     49.36
+    ],
+    "zoom0": 1.02,
+    "centro": [
+     -0.95,
+     49.38
+    ],
+    "zoom": 1.35,
+    "nomes": [
+     {
+      "t": "CANAL DA MANCHA",
+      "p": [
+       -0.9,
+       49.68
+      ],
+      "size": 24,
+      "cor": "#3e4d52",
+      "it": 1
+     },
+     {
+      "t": "NORMANDIA",
+      "p": [
+       -0.75,
+       49.12
+      ],
+      "size": 30,
+      "cor": "#2a3020"
+     },
+     {
+      "t": "COTENTIN",
+      "p": [
+       -1.55,
+       49.5
+      ],
+      "size": 20,
+      "cor": "#2a3020"
+     }
+    ],
+    "navios": [
+     {
+      "de": [
+       -1.25,
+       49.62
+      ],
+      "ate": [
+       -0.2,
+       49.5
+      ],
+      "n": 46,
+      "t": 0.0,
+      "fogo": 0.2,
+      "seed": 21
+     }
+    ],
+    "setas": [
+     {
+      "de": [
+       -1.16,
+       49.550000000000004
+      ],
+      "para": [
+       -1.18,
+       49.432
+      ],
+      "t": 6.0,
+      "dur": 0.8
+     },
+     {
+      "de": [
+       -0.85,
+       49.5
+      ],
+      "para": [
+       -0.87,
+       49.382
+      ],
+      "t": 6.4,
+      "dur": 0.8
+     }
+    ],
+    "marcas": [
+     {
+      "p": [
+       -1.18,
+       49.42
+      ],
+      "t": "UTAH",
+      "at": 6.3,
+      "cor": "k",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.87,
+       49.37
+      ],
+      "t": "OMAHA",
+      "at": 6.7,
+      "cor": "k",
+      "dy": -18
+     }
+    ],
+    "carimbo": "06h30 · HORA H",
+    "t_carimbo": 2.4,
+    "car_x": 90,
+    "car_y": 500
+   }
+  },
+  {
+   "id": "f2",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto — Omaha",
+   "by": "template",
+   "start": 39.8,
+   "dur": 3.7,
+   "props": {
+    "cena": "foto",
+    "src": "img/omaha.jpg",
+    "legenda": "Praia de Omaha · 6 de junho de 1944",
+    "rot": 1.8,
+    "carimbo": "RESISTÊNCIA MAIS DURA",
+    "t_carimbo": 2.0,
+    "car_x": 110,
+    "car_y": 470
+   }
+  },
+  {
+   "id": "d3",
+   "type": "scene",
+   "track": "visual",
+   "label": "Despacho 3",
+   "by": "template",
+   "start": 43.5,
+   "dur": 3.9,
+   "props": {
+    "cena": "despacho",
+    "origem": "FRENTE OCIDENTAL · NORMANDIA",
+    "numero": "DESPACHO Nº 3",
+    "texto": "BRITÂNICOS E CANADENSES EM GOLD, JUNO E SWORD.",
+    "hora": "07h25",
+    "t_hora": 2.75
+   }
+  },
+  {
+   "id": "m4",
+   "type": "scene",
+   "track": "visual",
+   "label": "Mapa — Gold, Juno, Sword",
+   "by": "template",
+   "start": 47.4,
+   "dur": 3.6,
+   "props": {
+    "cena": "mapa",
+    "centro0": [
+     -0.8,
+     49.36
+    ],
+    "zoom0": 1.2,
+    "centro": [
+     -0.6,
+     49.34
+    ],
+    "zoom": 1.5,
+    "nomes": [
+     {
+      "t": "CANAL DA MANCHA",
+      "p": [
+       -0.9,
+       49.68
+      ],
+      "size": 24,
+      "cor": "#3e4d52",
+      "it": 1
+     },
+     {
+      "t": "NORMANDIA",
+      "p": [
+       -0.75,
+       49.12
+      ],
+      "size": 30,
+      "cor": "#2a3020"
+     },
+     {
+      "t": "COTENTIN",
+      "p": [
+       -1.55,
+       49.5
+      ],
+      "size": 20,
+      "cor": "#2a3020"
+     }
+    ],
+    "setas": [
+     {
+      "de": [
+       -0.5499999999999999,
+       49.470000000000006
+      ],
+      "para": [
+       -0.57,
+       49.352000000000004
+      ],
+      "t": 1.5,
+      "dur": 0.6
+     },
+     {
+      "de": [
+       -0.41,
+       49.465
+      ],
+      "para": [
+       -0.43,
+       49.347
+      ],
+      "t": 1.8,
+      "dur": 0.6
+     },
+     {
+      "de": [
+       -0.27999999999999997,
+       49.425000000000004
+      ],
+      "para": [
+       -0.3,
+       49.307
+      ],
+      "t": 2.5,
+      "dur": 0.6
+     }
+    ],
+    "marcas": [
+     {
+      "p": [
+       -1.18,
+       49.42
+      ],
+      "t": "UTAH",
+      "at": 0,
+      "cor": "g",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.87,
+       49.37
+      ],
+      "t": "OMAHA",
+      "at": 0,
+      "cor": "g",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.57,
+       49.34
+      ],
+      "t": "GOLD",
+      "at": 1.9,
+      "cor": "k",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.43,
+       49.335
+      ],
+      "t": "JUNO",
+      "at": 2.2,
+      "cor": "k",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.3,
+       49.295
+      ],
+      "t": "SWORD",
+      "at": 2.9,
+      "cor": "k",
+      "dy": -18
+     }
+    ]
+   }
+  },
+  {
+   "id": "tg",
+   "type": "scene",
+   "track": "visual",
+   "label": "Telegrama — Rommel",
+   "by": "template",
+   "start": 51.0,
+   "dur": 6.5,
+   "props": {
+    "cena": "telegrama",
+    "titulo": "TELEGRAMA",
+    "sub": "06 JUN 1944 · DEFESA ALEMÃ",
+    "tiras": [
+     {
+      "t": "COMANDANTE ALEMÃO DA COSTA: ERWIN ROMMEL",
+      "at": 0.3,
+      "cps": 30
+     },
+     {
+      "t": "NÃO ESTÁ NA FRENTE",
+      "at": 2.6
+     },
+     {
+      "t": "FOI À ALEMANHA · ANIVERSÁRIO DA ESPOSA",
+      "at": 3.6,
+      "cps": 30
+     }
+    ],
+    "carimbo": "AUSENTE",
+    "t_carimbo": 3.0
+   }
+  },
+  {
+   "id": "d4",
+   "type": "scene",
+   "track": "visual",
+   "label": "Despacho 4",
+   "by": "template",
+   "start": 57.5,
+   "dur": 3.7,
+   "props": {
+    "cena": "despacho",
+    "origem": "FRENTE OCIDENTAL · NORMANDIA",
+    "numero": "DESPACHO Nº 4",
+    "texto": "BALANÇO DAS PRIMEIRAS 24 HORAS.",
+    "hora": "FIM DO DIA",
+    "t_hora": 2.3
+   }
+  },
+  {
+   "id": "f3",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto — Sword",
+   "by": "template",
+   "start": 61.2,
+   "dur": 4.1,
+   "props": {
+    "cena": "foto",
+    "src": "img/sword.jpg",
+    "legenda": "Praia de Sword · 6 jun 1944",
+    "rot": -2,
+    "w": 520,
+    "h": 470,
+    "dx": -170,
+    "destaque": "156.000\nSOLDADOS\nNA FRANÇA",
+    "t_dest": 0.6,
+    "dest_x": 760,
+    "dest_y": 170,
+    "dest_size": 48,
+    "dest_min": 280
+   }
+  },
+  {
+   "id": "f4",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto — Juno",
+   "by": "template",
+   "start": 65.3,
+   "dur": 3.0,
+   "props": {
+    "cena": "foto",
+    "src": "img/juno.jpg",
+    "legenda": "Praia de Juno · 6 de junho de 1944",
+    "rot": 1.5,
+    "destaque": "≈ 10.000 BAIXAS ALIADAS",
+    "t_dest": 0.4,
+    "dest_x": 520,
+    "dest_y": 440,
+    "dest_size": 44
+   }
+  },
+  {
+   "id": "m5",
+   "type": "scene",
+   "track": "visual",
+   "label": "Mapa — Caen",
+   "by": "template",
+   "start": 68.3,
+   "dur": 3.8,
+   "props": {
+    "cena": "mapa",
+    "centro0": [
+     -0.6,
+     49.3
+    ],
+    "zoom0": 1.3,
+    "centro": [
+     -0.45,
+     49.25
+    ],
+    "zoom": 1.75,
+    "nomes": [
+     {
+      "t": "CANAL DA MANCHA",
+      "p": [
+       -0.9,
+       49.68
+      ],
+      "size": 24,
+      "cor": "#3e4d52",
+      "it": 1
+     },
+     {
+      "t": "NORMANDIA",
+      "p": [
+       -0.75,
+       49.12
+      ],
+      "size": 30,
+      "cor": "#2a3020"
+     },
+     {
+      "t": "COTENTIN",
+      "p": [
+       -1.55,
+       49.5
+      ],
+      "size": 20,
+      "cor": "#2a3020"
+     }
+    ],
+    "marcas": [
+     {
+      "p": [
+       -0.57,
+       49.34
+      ],
+      "t": "GOLD",
+      "at": 0,
+      "cor": "g",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.43,
+       49.335
+      ],
+      "t": "JUNO",
+      "at": 0,
+      "cor": "g",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.3,
+       49.295
+      ],
+      "t": "SWORD",
+      "at": 0,
+      "cor": "g",
+      "dy": -18
+     },
+     {
+      "p": [
+       -0.37,
+       49.183
+      ],
+      "t": "CAEN · AINDA ALEMÃ",
+      "at": 0.3,
+      "cor": "r",
+      "anel": 1,
+      "dy": -34
+     }
+    ],
+    "carimbo": "NÃO TOMADA",
+    "t_carimbo": 1.8,
+    "car_x": 820,
+    "car_y": 480
+   }
+  },
+  {
+   "id": "fim",
+   "type": "scene",
+   "track": "visual",
+   "label": "Encerramento",
+   "by": "template",
+   "start": 72.1,
+   "dur": 6.9,
+   "props": {
+    "cena": "fim",
+    "kicker": "BOLETIM DE GUERRA · ENCERRAMENTO",
+    "frase": "A PORTA DA EUROPA OCUPADA ESTAVA ABERTA.",
+    "fecho": "FIM DA TRANSMISSÃO",
+    "t_fecho": 3.1,
+    "carimbo": "06 JUN 1944",
+    "t_carimbo": 4.6
+   }
+  },
+  {
+   "id": "tag",
+   "type": "text",
+   "track": "textos",
+   "label": "Etiqueta fixa",
+   "by": "template",
+   "start": 9.0,
+   "dur": 63.1,
+   "props": {
+    "text": "NORMANDIA · 06 JUN 1944"
+   }
+  },
+  {
+   "id": "regua",
+   "type": "scene",
+   "track": "textos",
+   "label": "Régua 24 h",
+   "by": "template",
+   "start": 9.0,
+   "dur": 63.1,
+   "props": {
+    "marcas": [
+     {
+      "t": 11.9,
+      "h": 0.27,
+      "rotulo": "00h16"
+     },
+     {
+      "t": 27.5,
+      "h": 5.9,
+      "rotulo": "AMANHECER"
+     },
+     {
+      "t": 34.4,
+      "h": 6.5,
+      "rotulo": "06h30 · HORA H"
+     },
+     {
+      "t": 46.0,
+      "h": 7.42,
+      "rotulo": "07h25"
+     },
+     {
+      "t": 59.6,
+      "h": 24,
+      "rotulo": "FIM DO DIA"
+     }
+    ]
+   }
+  }
+ ]
+}

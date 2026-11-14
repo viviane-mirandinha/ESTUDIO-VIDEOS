@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#15120e;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#15120e;}
+#board{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#2a241c 0%,#1a1611 60%,#0e0c09 100%);}
+#grain,#fibers{position:absolute;inset:0;pointer-events:none;}
+#grain{z-index:50;mix-blend-mode:overlay;opacity:.55}
+.shot{position:absolute;inset:0;opacity:0;}
+.shot .cam{position:absolute;inset:0;transform-origin:50% 50%;}
+.pos{position:absolute;visibility:hidden;}
+.jit,.rot{position:relative;width:100%;height:100%;}
+.body{position:relative;width:100%;height:100%;overflow:hidden;}
+.body img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) sepia(.28) contrast(1.12) brightness(.98);}
+.foto .rot{filter:drop-shadow(5px 0 0 #f4efe3) drop-shadow(-5px 0 0 #f4efe3) drop-shadow(0 5px 0 #f4efe3) drop-shadow(0 -5px 0 #f4efe3) drop-shadow(0 14px 14px rgba(0,0,0,.55));}
+.papel .rot{filter:drop-shadow(0 10px 10px rgba(0,0,0,.5));}
+.strip .body{background:#eee5cf;color:#1b1814;font-family:'Courier Prime',monospace;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:1px;}
+.strip.preta .body{background:#141210;color:#f1eadb;}
+.strip.amarela .body{background:#e2b33c;color:#16130f;}
+.strip.vermelha .body{background:#b8302a;color:#f6efe2;}
+.tape{position:absolute;width:118px;height:34px;background:rgba(226,214,178,.78);box-shadow:0 1px 2px rgba(0,0,0,.25);z-index:5;}
+.ransom{display:flex;gap:6px;align-items:center;justify-content:center;height:100%;}
+.ransom span{display:inline-block;padding:4px 10px;line-height:1;box-shadow:0 6px 8px rgba(0,0,0,.45);}
+.stamp .body{overflow:visible;}
+.stamp .body div{border:7px solid #c0352c;color:#c0352c;font-family:'Anton',sans-serif;font-size:74px;letter-spacing:6px;padding:2px 22px;text-align:center;opacity:.92;mix-blend-mode:normal;}
+.mapa .body{background:#e8dcc0;}
+.mapa .body img{filter:sepia(.35) contrast(1.02);}
+.lbl{position:absolute;font-family:'Courier Prime',monospace;font-weight:700;font-size:24px;color:#16130f;background:#eee5cf;padding:3px 10px;box-shadow:0 4px 6px rgba(0,0,0,.4);white-space:nowrap;}
+svg text{font-family:'Courier Prime',monospace;font-weight:700;}
+#credito{position:absolute;right:22px;bottom:14px;font-family:'Courier Prime',monospace;font-size:24px;color:#d8cfbd;opacity:0;z-index:60;text-shadow:0 2px 4px #000;}
+@font-face{font-family:'DM Serif Display';src:url('m/fonts/DMSerifDisplay-Regular.ttf');font-weight:100 900;}@font-face{font-family:'Courier Prime';src:url('m/fonts/CourierPrime-Bold.ttf');font-weight:100 900;}@font-face{font-family:'Anton';src:url('m/fonts/Anton-Regular.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="67.6" data-width="1280" data-height="720">
+<div style="display:none"><img src="m/img/titanic.jpg"><img src="m/img/iceberg.jpg"><img src="m/img/pintura.jpg"><img src="m/img/botes.jpg"><img src="m/img/jornal.jpg"><img src="m/img/carpathia.jpg"><img src="m/img/destrocos.jpg"><img src="m/img/jornaleiro.jpg"><img src="m/img/mapa.svg"></div>
+<div id="board"></div>
+<svg id="fibers" width="1280" height="720"><filter id="fib"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.08" numOctaves="3" seed="11"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .47  0 0 0 0 .36  0 0 0 .16 0"/></filter><rect width="1280" height="720" filter="url(#fib)"/></svg>
+<div id="stage"></div>
+<svg id="grain" width="1280" height="720"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .45  0 0 0 0 .38  0 0 0 .5 0"/></filter><rect id="grr" width="1300" height="740" filter="url(#gr)"/></svg>
+<div id="credito"></div>
+
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:67.6,ease:"none"},0);
+window.__timelines["main"] = tl;
+(function(){
+const EDIT={"version": 1, "name": "38 - 24-10-2026 - COLAGEM DE PAPEL - Como o Titanic afundou em 1 minuto", "estilo": "38-colagem-de-papel", "grupo": "ESTILOS NOVOS", "canvas": {"w": 1280, "h": 720, "fps": 30, "bg": "#15120e"}, "duration": 67.6, "template": "local", "fonts": {"DM Serif Display": "fonts/DMSerifDisplay-Regular.ttf", "Courier Prime": "fonts/CourierPrime-Bold.ttf", "Anton": "fonts/Anton-Regular.ttf"}, "referencia": {"canal": "Ordinary Origins", "canal_url": "https://www.youtube.com/@OrdinaryOrigins", "video": "https://www.youtube.com/watch?v=x5ireg7miPU", "titulo": "How the Hamburger Conquered the World | A Paper-Cut History", "canal_2": "Fakeplastictree", "video_2": "https://www.youtube.com/watch?v=CMqw9usH8-8", "titulo_2": "Motion Graphic | Collage", "nota": "documentario em colagem de papel: fotos antigas P&B recortadas com borda branca, papel rasgado, fita adesiva, letras de jornal estilo bilhete de resgate, fundo escuro com textura, movimento stop-motion em passos (12 qps) e tremor dos recortes"}, "audio": {"voice": {"src": "voz.wav", "volume": 1.0, "start": 0}, "music": {"src": "musica.wav", "volume": 0.1, "start": 0, "fade_out": 2.0, "duck": true}, "extra": [{"id": "w0", "src": "sfx/whoosh.wav", "start": 6.3, "volume": 0.16, "label": "whoosh"}, {"id": "w1", "src": "sfx/whoosh.wav", "start": 24.4, "volume": 0.16, "label": "whoosh"}, {"id": "w2", "src": "sfx/whoosh.wav", "start": 40.4, "volume": 0.16, "label": "whoosh"}, {"id": "w3", "src": "sfx/whoosh.wav", "start": 48.2, "volume": 0.16, "label": "whoosh"}, {"id": "w4", "src": "sfx/whoosh.wav", "start": 52.8, "volume": 0.16, "label": "whoosh"}, {"id": "w5", "src": "sfx/whoosh.wav", "start": 60.0, "volume": 0.16, "label": "whoosh"}, {"id": "p0", "src": "sfx/papel.wav", "start": 0.1, "volume": 0.1, "label": "papel"}, {"id": "p1", "src": "sfx/papel.wav", "start": 0.7, "volume": 0.1, "label": "papel"}, {"id": "p2", "src": "sfx/papel.wav", "start": 3.1, "volume": 0.1, "label": "papel"}, {"id": "p3", "src": "sfx/papel.wav", "start": 4.85, "volume": 0.1, "label": "papel"}, {"id": "p4", "src": "sfx/papel.wav", "start": 6.5, "volume": 0.1, "label": "papel"}, {"id": "p5", "src": "sfx/papel.wav", "start": 9.35, "volume": 0.1, "label": "papel"}, {"id": "p6", "src": "sfx/papel.wav", "start": 10.4, "volume": 0.1, "label": "papel"}, {"id": "p7", "src": "sfx/papel.wav", "start": 11.6, "volume": 0.1, "label": "papel"}, {"id": "p8", "src": "sfx/papel.wav", "start": 12.95, "volume": 0.1, "label": "papel"}, {"id": "p9", "src": "sfx/papel.wav", "start": 14.05, "volume": 0.1, "label": "papel"}, {"id": "p10", "src": "sfx/papel.wav", "start": 15.7, "volume": 0.1, "label": "papel"}, {"id": "p11", "src": "sfx/papel.wav", "start": 17.2, "volume": 0.1, "label": "papel"}, {"id": "p12", "src": "sfx/papel.wav", "start": 18.6, "volume": 0.1, "label": "papel"}, {"id": "p13", "src": "sfx/papel.wav", "start": 20.8, "volume": 0.1, "label": "papel"}, {"id": "p14", "src": "sfx/papel.wav", "start": 22.8, "volume": 0.1, "label": "papel"}, {"id": "p15", "src": "sfx/papel.wav", "start": 25.9, "volume": 0.1, "label": "papel"}, {"id": "p16", "src": "sfx/papel.wav", "start": 28.6, "volume": 0.1, "label": "papel"}, {"id": "p17", "src": "sfx/papel.wav", "start": 30.6, "volume": 0.1, "label": "papel"}, {"id": "p18", "src": "sfx/papel.wav", "start": 33.4, "volume": 0.1, "label": "papel"}, {"id": "p19", "src": "sfx/papel.wav", "start": 34.6, "volume": 0.1, "label": "papel"}, {"id": "p20", "src": "sfx/papel.wav", "start": 38.7, "volume": 0.1, "label": "papel"}, {"id": "p21", "src": "sfx/papel.wav", "start": 40.6, "volume": 0.1, "label": "papel"}, {"id": "p22", "src": "sfx/papel.wav", "start": 42.5, "volume": 0.1, "label": "papel"}, {"id": "p23", "src": "sfx/papel.wav", "start": 46.7, "volume": 0.1, "label": "papel"}, {"id": "p24", "src": "sfx/papel.wav", "start": 48.3, "volume": 0.1, "label": "papel"}, {"id": "p25", "src": "sfx/papel.wav", "start": 48.7, "volume": 0.1, "label": "papel"}, {"id": "p26", "src": "sfx/papel.wav", "start": 50.6, "volume": 0.1, "label": "papel"}, {"id": "p27", "src": "sfx/papel.wav", "start": 52.9, "volume": 0.1, "label": "papel"}, {"id": "p28", "src": "sfx/papel.wav", "start": 53.4, "volume": 0.1, "label": "papel"}, {"id": "p29", "src": "sfx/papel.wav", "start": 56.0, "volume": 0.1, "label": "papel"}, {"id": "p30", "src": "sfx/papel.wav", "start": 58.0, "volume": 0.1, "label": "papel"}, {"id": "p31", "src": "sfx/papel.wav", "start": 60.4, "volume": 0.1, "label": "papel"}, {"id": "p32", "src": "sfx/papel.wav", "start": 61.95, "volume": 0.1, "label": "papel"}, {"id": "p33", "src": "sfx/papel.wav", "start": 64.0, "volume": 0.1, "label": "papel"}]}, "tracks": [{"id": "fundo", "name": "Cenas em colagem"}], "items": [{"id": "s01", "type": "scene", "track": "fundo", "label": "Gancho: 2h40", "start": 0, "dur": 6.3, "by": "template", "props": {"scene": "gancho", "params": {"numero": "2H40", "rot1": "“PRATICAMENTE INAFUNDÁVEL”", "rot2": "NO FUNDO DO MAR", "t_foto": 0.1, "t_num": 0.7, "t_rot1": 3.1, "t_rot2": 4.85}}}, {"id": "s02", "type": "scene", "track": "fundo", "label": "10/04/1912 - partida", "start": 6.3, "dur": 9.2, "by": "template", "props": {"scene": "partida", "params": {"data": "10 ABR 1912", "rotulo": "O MAIOR NAVIO DO MUNDO", "origem": "SOUTHAMPTON", "destino": "NOVA YORK", "viagem": "1ª VIAGEM", "t_data": 0.2, "t_foto": 0.7, "t_rot": 4.1, "t_mapa": 5.3, "t_ori": 5.6, "t_fim": 8.0, "t_dest": 6.65, "t_viagem": 7.75}}}, {"id": "s03", "type": "scene", "track": "fundo", "label": "23:40 - iceberg", "start": 15.5, "dur": 8.9, "by": "template", "props": {"scene": "iceberg", "params": {"dias": "4 DIAS DEPOIS", "hora": "23:40", "local": "ATLÂNTICO NORTE", "tarde": "TARDE DEMAIS", "t_dias": 0.2, "t_hora": 1.7, "t_x": 3.1, "t_ice": 5.3, "t_tarde": 7.3}}}, {"id": "s04", "type": "scene", "track": "fundo", "label": "Casco: 5 compartimentos", "start": 24.4, "dur": 11.5, "by": "template", "props": {"scene": "casco", "params": {"lado": "LADO DIREITO (ESTIBORDO)", "n_comp": "5 COMPARTIMENTOS", "aguenta": "AGUENTAVA 4 ALAGADOS", "com5": "COM 5...", "carimbo": "CONDENADO", "t_ice": 0.5, "t_lado": 1.5, "t_comp": 4.15, "t_aguenta": 6.2, "t_quatro": 7.2, "t_com5": 9.0, "t_carimbo": 10.2}}}, {"id": "s05", "type": "scene", "track": "fundo", "label": "A proa afunda", "start": 35.9, "dur": 4.5, "by": "template", "props": {"scene": "alaga", "params": {"rotulo": "A PROA AFUNDA", "t_agua": 1.0, "passo": 0.4, "t_proa": 2.8, "t_rot": 2.9}}}, {"id": "s06", "type": "scene", "track": "fundo", "label": "Botes x pessoas", "start": 40.4, "dur": 7.8, "by": "template", "props": {"scene": "botes", "params": {"botes": 1178, "bordo": 2224, "l1": "LUGARES NOS BOTES", "n1": "1.178", "l2": "PESSOAS A BORDO", "n2": "+2.200", "t_foto": 0.2, "t_b1": 2.1, "t_b2": 6.3}}}, {"id": "s07", "type": "scene", "track": "fundo", "label": "2:20 - parte em dois", "start": 48.2, "dur": 4.6, "by": "template", "props": {"scene": "parte", "params": {"hora": "2:20", "rotulo": "PARTIDO EM DOIS", "credito": "pintura: Willy Stöwer, 1912", "t_foto": 0.1, "t_hora": 0.5, "t_parte": 2.4, "t_some": 3.25}}}, {"id": "s08", "type": "scene", "track": "fundo", "label": "Mortos e sobreviventes", "start": 52.8, "dur": 7.2, "by": "template", "props": {"scene": "balanco", "params": {"mortos": "+1.500 MORTOS", "navio": "CARPATHIA", "sobrev": "≈700 SOBREVIVENTES", "t_jornal": 0.1, "t_mortos": 0.6, "t_carp": 3.2, "t_sobrev": 5.2}}}, {"id": "s09", "type": "scene", "track": "fundo", "label": "1985 - destroços", "start": 60.0, "dur": 7.6, "by": "template", "props": {"scene": "fundo", "params": {"ano": "1985", "prof": "QUASE 4.000 M", "credito": "Fotos: Wikimedia Commons (domínio público)", "t_foto": 0.4, "t_ano": 1.95, "t_prof": 4.0, "t_cred": 5.0}}}]}; const DUR=67.6;
+const M=s=>'m/'+s;
+/* ---------- utilidades ---------- */
+function rng(seed){let s=(seed*2654435761)>>>0||1;return()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296;};}
+function torn(seed,amp,n){amp=amp||1.4;n=n||10;const r=rng(seed),p=[];
+  for(let i=0;i<n;i++)p.push([i/n*100,r()*amp]);for(let i=0;i<n;i++)p.push([100-r()*amp,i/n*100]);
+  for(let i=0;i<n;i++)p.push([100-i/n*100,100-r()*amp]);for(let i=0;i<n;i++)p.push([r()*amp,100-i/n*100]);
+  return 'polygon('+p.map(q=>q[0].toFixed(2)+'% '+q[1].toFixed(2)+'%').join(',')+')';}
+let SEED=1; const JIT=[];
+function add(sc,o){const id='e'+(SEED++);const d=document.createElement('div');d.id=id;d.className='pos '+(o.cls||'');
+  const w=o.w,h=o.h;d.style.cssText=`left:${o.x-w/2}px;top:${o.y-h/2}px;width:${w}px;height:${h}px;z-index:${o.z||1};`;
+  const clip=o.clip===false?'':`clip-path:${o.clip||torn(SEED*7+3,o.amp||1.2,o.n||10)};`;
+  d.innerHTML=`<div class="jit"><div class="rot" style="transform:rotate(${o.rot||0}deg)"><div class="body" style="${clip}${o.style||''}">${o.html||''}</div>${o.extra||''}</div></div>`;
+  sc.appendChild(d);JIT.push(d.firstChild);return '#'+id;}
+function tape(seed,x,y,rot){const r=rng(seed);return `<div class="tape" style="left:${x}px;top:${y}px;transform:rotate(${rot}deg);clip-path:${torn(seed,3,6)}"></div>`;}
+function foto(sc,o){const t=o.tape===false?'':tape(SEED*13,-30,-12,-38)+tape(SEED*17,o.w-88,o.h-22,-32);
+  return add(sc,Object.assign({cls:'foto',html:`<img src="${M(o.src)}" style="object-position:${o.op||'50% 50%'}">`,extra:t},o));}
+function strip(sc,o){const fs=o.size||30;const cls='papel strip '+(o.cor||'');
+  const w=o.w||Math.max(160,o.text.length*fs*0.64+50);return add(sc,Object.assign({},o,{cls,w,h:o.h||fs*1.9,html:`<div style="font-size:${fs}px;padding:0 14px">${o.text}</div>`,amp:o.amp||5,n:o.n||12}));}
+const PAP=[['#eee5cf','#16130f'],['#141210','#f1eadb'],['#e2b33c','#16130f'],['#d9d4c7','#2a2620'],['#b8302a','#f6efe2'],['#f4efe3','#16130f']];
+const FON=["'Anton',sans-serif","'DM Serif Display',serif","'Courier Prime',monospace"];
+function ransom(sc,o){const r=rng(o.seed||5);let h='';[...o.text].forEach((c,i)=>{if(c===' '){h+='<span style="box-shadow:none;width:14px;padding:0"></span>';return;}
+  const p=o.cor?[o.cor,'#f6efe2']:PAP[Math.floor(r()*PAP.length)],f=FON[Math.floor(r()*FON.length)];
+  h+=`<span class="rl" style="background:${p[0]};color:${p[1]};font-family:${f};font-size:${o.size*(0.85+r()*0.3)}px;transform:rotate(${(r()-.5)*14}deg) translateY(${(r()-.5)*14}px);clip-path:${torn(i*31+(o.seed||5),4,4)}">${c}</span>`;});
+  return add(sc,Object.assign({},o,{cls:'papel',clip:false,style:'overflow:visible',html:`<div class="ransom">${h}</div>`}));}
+function stamp(sc,o){return add(sc,Object.assign({cls:'stamp',clip:false,html:`<div>${o.text}</div>`},o));}
+/* entrada stop-motion: some do lado e chega em "passos" (12 qps) */
+function show(sel,t,from,d){from=from||'up';d=d||0.5;const m={up:[0,90],down:[0,-90],left:[-260,0],right:[260,0],drop:[0,-40],none:[0,0]}[from];
+  tl.set(sel,{visibility:'visible'},t);
+  if(from==='drop') tl.fromTo(sel,{scale:1.25,x:0,y:m[1],opacity:1},{scale:1,y:0,duration:.33,ease:'steps(4)'},t);
+  else tl.fromTo(sel,{x:m[0],y:m[1]},{x:0,y:0,duration:d,ease:'steps('+Math.max(3,Math.round(d*12))+')'},t);}
+function hide(sel,t,to){to=to||'down';const m={down:[0,820],left:[-1400,0],right:[1400,0],up:[0,-820]}[to];
+  tl.to(sel,{x:m[0],y:m[1],duration:.5,ease:'steps(6)'},t);}
+function shot(it){const s=document.createElement('div');s.className='shot';s.id='sh_'+it.id;s.innerHTML='<div class="cam"></div>';
+  document.getElementById('stage').appendChild(s);const S=+it.start,D=+it.dur;
+  tl.set(s,{opacity:1},S);tl.set(s,{opacity:0},S+D);
+  tl.fromTo(s.firstChild,{scale:1},{scale:1.045,duration:D,ease:'none'},S);return s.firstChild;}
+
+/* ---------- cenas ---------- */
+const SC={};
+SC.gancho=(it,p,S)=>{const c=shot(it);
+  const f=foto(c,{src:'img/titanic.jpg',x:560,y:400,w:820,h:430,rot:-3,op:'50% 60%'});show(f,S+p.t_foto,'up',.6);
+  const n=ransom(c,{text:p.numero,x:1000,y:150,w:420,h:130,size:84,seed:3,z:4});show(n,S+p.t_num,'drop');
+  const r1=strip(c,{text:p.rot1,x:640,y:610,size:32,rot:-1.5,z:5});show(r1,S+p.t_rot1,'left',.42);
+  const mar=add(c,{cls:'papel',x:640,y:960,w:1500,h:420,z:3,style:'background:#22313a',amp:3,n:16});
+  tl.set(mar,{visibility:'visible'},S+p.t_rot2-.05);tl.fromTo(mar,{y:0},{y:-250,duration:.6,ease:'steps(7)'},S+p.t_rot2-.05);
+  tl.to(f,{y:70,rotation:5,duration:.6,ease:'steps(7)'},S+p.t_rot2);
+  tl.to(r1,{opacity:0,duration:.05},S+p.t_rot2+.3);
+  const r2=strip(c,{text:p.rot2,x:640,y:610,size:32,rot:1.5,cor:'preta',z:6});show(r2,S+p.t_rot2+.35,'right',.42);};
+
+let MAPA=null;
+function mapa(c,S,t){const m=foto(c,{src:'img/mapa.svg',x:640,y:370,w:1080,h:540,rot:-1,tape:true,cls:'foto mapa',amp:1,n:14});
+  show(m,S+t,'right',.5);return m;}
+const PX=(x,y)=>[640-540+x*1.5,370-270+y*1.5];
+SC.partida=(it,p,S)=>{const c=shot(it);
+  const d=ransom(c,{text:p.data,x:640,y:110,w:1000,h:120,size:70,seed:9,z:7});show(d,S+p.t_data,'drop');
+  const f=foto(c,{src:'img/titanic.jpg',x:640,y:410,w:900,h:500,rot:2,op:'50% 60%',z:4});show(f,S+p.t_foto,'up',.6);
+  const r=strip(c,{text:p.rotulo,x:640,y:640,size:32,rot:-1,cor:'amarela',z:6});show(r,S+p.t_rot,'left',.42);
+  hide(f,S+p.t_mapa-.1,'left');hide(r,S+p.t_mapa-.1,'left');tl.to(d,{opacity:0,duration:.1},S+p.t_mapa-.1);
+  mapa(c,S,p.t_mapa);
+  const [sx,sy]=PX(644.8,124.9),[nx,ny]=PX(64,239.5);
+  const svg=add(c,{cls:'',clip:false,x:640,y:360,w:1280,h:720,z:8,style:'overflow:visible',html:`<svg width="1280" height="720"><path id="rota1" d="M${sx},${sy} C${sx-260},${sy-40} ${nx+360},${ny-120} ${nx},${ny}" fill="none" stroke="#b8302a" stroke-width="6" stroke-dasharray="16 10"/><circle cx="${sx}" cy="${sy}" r="11" fill="#b8302a" stroke="#f4efe3" stroke-width="4"/><circle cx="${nx}" cy="${ny}" r="11" fill="#16130f" stroke="#f4efe3" stroke-width="4"/></svg>`});
+  tl.set(svg,{visibility:'visible'},S+p.t_ori);
+  tl.fromTo(svg+' #rota1',{attr:{'stroke-dashoffset':2000},strokeDasharray:'2000 2000'},{attr:{'stroke-dashoffset':0},duration:p.t_fim-p.t_ori,ease:'steps(20)'},S+p.t_ori);
+  const lo=strip(c,{text:p.origem,x:sx-60,y:sy-58,size:24,rot:-2,z:9});show(lo,S+p.t_ori,'drop');
+  const ld=strip(c,{text:p.destino,x:nx+90,y:ny+52,size:24,rot:2,z:9});show(ld,S+p.t_dest,'drop');
+  const pv=strip(c,{text:p.viagem,x:640,y:655,size:30,rot:-1,cor:'preta',z:10});show(pv,S+p.t_viagem,'up',.42);};
+
+SC.iceberg=(it,p,S)=>{const c=shot(it);
+  const m=foto(c,{src:'img/mapa.svg',x:640,y:370,w:1080,h:540,rot:-1,cls:'foto mapa',amp:1,n:14});tl.set(m,{visibility:'visible'},S);
+  const [sx,sy]=PX(644.8,124.9),[wx,wy]=PX(256.4,228);
+  const svg=add(c,{clip:false,x:640,y:360,w:1280,h:720,z:8,style:'overflow:visible',html:`<svg width="1280" height="720"><path id="rota2" d="M${sx},${sy} C${sx-200},${sy-30} ${wx+220},${wy-90} ${wx},${wy}" fill="none" stroke="#b8302a" stroke-width="6" stroke-dasharray="16 10"/><circle cx="${sx}" cy="${sy}" r="11" fill="#b8302a" stroke="#f4efe3" stroke-width="4"/><g id="xis" transform="translate(${wx},${wy})"><path d="M-22,-22 L22,22 M22,-22 L-22,22" stroke="#16130f" stroke-width="12" stroke-linecap="square"/><path d="M-22,-22 L22,22 M22,-22 L-22,22" stroke="#b8302a" stroke-width="7"/></g></svg>`});
+  tl.set(svg,{visibility:'visible'},S);tl.set(svg+' #xis',{opacity:0},S);
+  tl.fromTo(svg+' #rota2',{attr:{'stroke-dashoffset':1400},strokeDasharray:'1400 1400'},{attr:{'stroke-dashoffset':0},duration:p.t_x,ease:'steps(16)'},S);
+  tl.fromTo(svg+' #xis',{opacity:1,scale:1.6},{scale:1,duration:.25,ease:'steps(3)'},S+p.t_x);
+  const d=strip(c,{text:p.dias,x:330,y:150,size:34,rot:-3,cor:'preta',z:9});show(d,S+p.t_dias,'drop');
+  const h=ransom(c,{text:p.hora,x:960,y:160,w:380,h:120,size:80,seed:21,z:9});show(h,S+p.t_hora,'drop');
+  const lx=strip(c,{text:p.local,x:wx+20,y:wy+64,size:24,rot:2,z:9});show(lx,S+p.t_x+.2,'drop');
+  const ib=foto(c,{src:'img/iceberg.jpg',x:820,y:420,w:780,h:442,rot:3,z:12,amp:0,
+    clip:'polygon(3% 80%,7% 63%,15% 57%,22% 55%,29% 49%,35% 35%,40% 22%,44% 12%,47% 7%,50% 14%,53% 21%,57% 30%,62% 37%,69% 40%,76% 44%,83% 47%,89% 52%,94% 60%,97% 80%,80% 83%,60% 81%,40% 84%,20% 81%)',tape:false});
+  show(ib,S+p.t_ice,'right',.55);
+  const td=ransom(c,{text:p.tarde,x:640,y:640,w:760,h:120,size:74,seed:44,cor:'#b8302a',z:14});show(td,S+p.t_tarde,'drop');};
+
+/* navio em corte lateral (papel creme), proa à direita */
+function navioSVG(nComp){const x0=110,x1=1170,yT=330,yB=470;let comp='';const cw=(x1-60-x0)/nComp;
+  for(let i=0;i<nComp;i++){const x=x0+20+i*cw;comp+=`<rect class="cp" data-i="${nComp-1-i}" x="${x+3}" y="${yT+40}" width="${cw-6}" height="${yB-yT-50}" fill="#d9ccae" stroke="#5b5144" stroke-width="2"/>`;}
+  return `<svg width="1280" height="720" viewBox="0 0 1280 720" style="overflow:visible">
+  <g id="nav"><path d="M${x0},${yT} L${x1},${yT-20} L${x1+30},${yT-24} L${x1-40},${yB} L${x0+50},${yB} Q${x0},${yB-30} ${x0},${yT} Z" fill="#eee5cf" stroke="#2a251e" stroke-width="4"/>
+  <rect x="${x0+120}" y="${yT-60}" width="${x1-x0-300}" height="62" fill="#eee5cf" stroke="#2a251e" stroke-width="3"/>
+  ${[0,1,2,3].map(k=>`<rect x="${x0+250+k*170}" y="${yT-180}" width="52" height="122" fill="#c9893a" stroke="#2a251e" stroke-width="3"/><rect x="${x0+250+k*170}" y="${yT-180}" width="52" height="24" fill="#16130f"/>`).join('')}
+  <g id="comps">${comp}</g>
+  <path d="M${x0},${yT+40} H${x1-20}" stroke="#2a251e" stroke-width="3"/>
+  <path id="rasgo" d="M${x1-30},${yT+90} l-30,10 l-24,-8 l-30,12 l-26,-6 l-28,10 l-30,-7 l-26,11 l-30,-8 l-26,9 l-30,-6 l-24,8" fill="none" stroke="#b8302a" stroke-width="7" stroke-linejoin="bevel"/></g>
+  <path d="M0,${yB-40} H1280" stroke="#4d7f99" stroke-width="3" stroke-dasharray="14 10" opacity=".9"/></svg>`;}
+SC.casco=(it,p,S)=>{const c=shot(it);const N=16;
+  const nv=add(c,{cls:'papel',clip:false,x:640,y:360,w:1280,h:720,z:3,style:'overflow:visible',html:navioSVG(N)});show(nv,S,'none');
+  tl.set(nv+' #rasgo',{strokeDasharray:'400 400',attr:{'stroke-dashoffset':400}},S);
+  const ib=foto(c,{src:'img/iceberg.jpg',x:1250,y:520,w:300,h:170,rot:-4,z:6,tape:false,clip:'polygon(3% 80%,15% 57%,29% 49%,40% 22%,47% 7%,57% 30%,69% 40%,83% 47%,94% 60%,97% 80%,60% 81%,20% 81%)'});
+  tl.set(ib,{visibility:'visible'},S+p.t_ice);tl.fromTo(ib,{x:200},{x:-400,duration:p.t_comp-p.t_ice,ease:'steps(24)'},S+p.t_ice);
+  tl.to(nv+' #rasgo',{attr:{'stroke-dashoffset':0},duration:1.6,ease:'steps(12)'},S+p.t_ice+.3);
+  const ld=strip(c,{text:p.lado,x:900,y:110,size:28,rot:2,z:8});show(ld,S+p.t_lado,'drop');
+  for(let k=0;k<5;k++) tl.to(nv+` .cp[data-i="${k}"]`,{attr:{fill:'#b8302a'},duration:.01},S+p.t_comp+k*.12);
+  const lc=ransom(c,{text:p.n_comp,x:520,y:110,w:900,h:110,size:52,seed:61,z:8});show(lc,S+p.t_comp+.2,'drop');tl.to(ld,{opacity:0,duration:.05},S+p.t_comp);
+  tl.to([ld,lc],{opacity:0,duration:.1},S+p.t_aguenta-.15);
+  const ag=strip(c,{text:p.aguenta,x:400,y:600,size:32,rot:-2,cor:'amarela',z:9});show(ag,S+p.t_aguenta,'left',.42);
+  const br=add(c,{clip:false,x:640,y:360,w:1280,h:720,z:7,style:'overflow:visible',html:(()=>{const x0=110,x1=1170,cw=(x1-60-x0)/N;const xa=x0+20+(N-4)*cw,xb=x0+20+N*cw;return `<svg width="1280" height="720"><path d="M${xa},${505} V${525} H${xb} V${505}" fill="none" stroke="#e2b33c" stroke-width="8"/></svg>`;})()});
+  show(br,S+p.t_quatro,'none');
+  const cc=strip(c,{text:p.com5,x:930,y:600,size:32,rot:1.5,cor:'preta',z:9});show(cc,S+p.t_com5,'right',.42);
+  const st=stamp(c,{text:p.carimbo,x:640,y:200,w:600,h:120,rot:-8,z:12});show(st,S+p.t_carimbo,'drop');};
+
+SC.alaga=(it,p,S)=>{const c=shot(it);const N=16;
+  const nv=add(c,{cls:'papel',clip:false,x:640,y:360,w:1280,h:720,z:3,style:'overflow:visible',html:navioSVG(N)});show(nv,S,'none');
+  tl.set(nv+' #rasgo',{opacity:0},S);
+  for(let k=0;k<5;k++) tl.set(nv+` .cp[data-i="${k}"]`,{attr:{fill:'#3f6f8a'}},S);
+  for(let k=5;k<9;k++) tl.to(nv+` .cp[data-i="${k}"]`,{attr:{fill:'#3f6f8a'},duration:.01},S+p.t_agua+(k-5)*p.passo);
+  const mar=add(c,{cls:'papel',x:640,y:700,w:1400,h:300,z:5,style:'background:#22313a;opacity:.92',amp:3,n:16});show(mar,S,'none');
+  tl.to(nv+' #nav',{rotation:7,transformOrigin:'60% 60%',y:60,duration:.8,ease:'steps(9)'},S+p.t_proa);
+  const r=strip(c,{text:p.rotulo,x:640,y:120,size:34,rot:-1.5,cor:'preta',z:9});show(r,S+p.t_rot,'drop');};
+
+SC.botes=(it,p,S)=>{const c=shot(it);
+  const f=foto(c,{src:'img/botes.jpg',x:640,y:210,w:860,h:330,rot:-2,op:'50% 40%'});show(f,S+p.t_foto,'up',.5);
+  const full=660,bx=200;
+  const b1=add(c,{cls:'papel',x:bx+full*p.botes/p.bordo/2,y:470,w:full*p.botes/p.bordo,h:70,z:4,style:'background:#e2b33c',amp:3});
+  const b2=add(c,{cls:'papel',x:bx+full/2,y:590,w:full,h:70,z:4,style:'background:#b8302a',amp:3});
+  [[b1,p.t_b1],[b2,p.t_b2]].forEach(([b,t])=>{tl.set(b,{visibility:'visible'},S+t);tl.fromTo(b,{scaleX:0,transformOrigin:'0% 50%'},{scaleX:1,duration:.6,ease:'steps(7)'},S+t);});
+  const l1=strip(c,{text:p.l1,x:bx+170,y:418,size:24,rot:-1,z:6});show(l1,S+p.t_b1,'drop');
+  const n1=ransom(c,{text:p.n1,x:bx+full*p.botes/p.bordo+130,y:470,w:250,h:90,size:56,seed:71,z:6});show(n1,S+p.t_b1+.5,'drop');
+  const l2=strip(c,{text:p.l2,x:bx+150,y:538,size:24,rot:1,z:6});show(l2,S+p.t_b2,'drop');
+  const n2=ransom(c,{text:p.n2,x:bx+full+120,y:590,w:240,h:90,size:56,seed:77,z:6});show(n2,S+p.t_b2+.5,'drop');};
+
+SC.parte=(it,p,S)=>{const c=shot(it);
+  const half=(side)=>side==='L'?'polygon(0% 0%,51% 0%,49% 12%,53% 25%,48% 38%,52% 50%,47% 63%,52% 76%,49% 88%,51% 100%,0% 100%)':'polygon(51% 0%,100% 0%,100% 100%,51% 100%,49% 88%,52% 76%,47% 63%,52% 50%,48% 38%,53% 25%,49% 12%)';
+  const o={src:'img/pintura.jpg',x:640,y:380,w:960,h:540,rot:0,tape:false};
+  const fl=foto(c,Object.assign({},o,{clip:half('L')})),fr=foto(c,Object.assign({},o,{clip:half('R')}));
+  show(fl,S+p.t_foto,'up',.5);show(fr,S+p.t_foto,'up',.5);
+  const h=ransom(c,{text:p.hora,x:1050,y:110,w:360,h:120,size:80,seed:88,z:6});show(h,S+p.t_hora,'drop');
+  tl.to(fl,{x:-70,rotation:-7,duration:.45,ease:'steps(5)'},S+p.t_parte);tl.to(fr,{x:70,rotation:8,duration:.45,ease:'steps(5)'},S+p.t_parte);
+  tl.to(fl,{y:820,rotation:-14,duration:.9,ease:'steps(10)'},S+p.t_some);tl.to(fr,{y:820,rotation:16,duration:.9,ease:'steps(10)'},S+p.t_some+.1);
+  const r=strip(c,{text:p.rotulo,x:640,y:650,size:32,rot:-1.5,cor:'preta',z:8});show(r,S+p.t_parte,'left',.42);
+  const cr=strip(c,{text:p.credito,x:250,y:690,size:24,rot:0,z:8});show(cr,S+p.t_foto+.3,'none');};
+
+SC.balanco=(it,p,S)=>{const c=shot(it);
+  const j=foto(c,{src:'img/jornal.jpg',x:330,y:380,w:420,h:548,rot:-4,op:'50% 20%'});show(j,S+p.t_jornal,'left',.5);
+  const m=strip(c,{text:p.mortos,x:330,y:640,size:40,rot:-3,cor:'vermelha',z:6});show(m,S+p.t_mortos,'drop');
+  const cp=foto(c,{src:'img/carpathia.jpg',x:870,y:300,w:640,h:350,rot:3,z:4});show(cp,S+p.t_carp,'right',.5);
+  const ln=strip(c,{text:p.navio,x:760,y:110,size:30,rot:-2,cor:'preta',z:6});show(ln,S+p.t_carp+.3,'drop');
+  const sv=strip(c,{text:p.sobrev,x:880,y:540,size:38,rot:2,cor:'amarela',z:6});show(sv,S+p.t_sobrev,'drop');};
+
+SC.fundo=(it,p,S)=>{const c=shot(it);
+  const w=foto(c,{src:'img/destrocos.jpg',x:520,y:380,w:820,h:574,rot:-2});show(w,S+p.t_foto,'up',.6);
+  const a=ransom(c,{text:p.ano,x:1050,y:150,w:360,h:130,size:96,seed:95,z:6});show(a,S+p.t_ano,'drop');
+  const g=add(c,{cls:'papel',x:1090,y:430,w:120,h:420,z:5,style:'background:#eee5cf',amp:5,html:`<svg width="120" height="420">${[0,1,2,3,4].map(k=>`<path d="M0,${20+k*95} H${k%2?30:50}" stroke="#2a251e" stroke-width="4"/><text x="56" y="${27+k*95}" font-size="22" fill="#2a251e">${k}k</text>`).join('')}</svg>`});
+  show(g,S+p.t_ano+.6,'right',.42);
+  const mk=add(c,{cls:'papel',clip:false,x:1030,y:252,w:50,h:30,z:7,style:'overflow:visible',html:`<svg width="50" height="30"><path d="M0,15 L40,0 V30 Z" fill="#b8302a" stroke="#f4efe3" stroke-width="3"/></svg>`});
+  show(mk,S+p.t_ano+.8,'none');tl.to(mk,{y:3.8*95,duration:p.t_prof-p.t_ano-.8,ease:'steps(16)'},S+p.t_ano+.8);
+  const pf=strip(c,{text:p.prof,x:800,y:612,size:36,rot:-2,cor:'preta',z:8});show(pf,S+p.t_prof,'left',.42);
+  const cr=document.getElementById('credito');cr.textContent=p.credito;tl.to(cr,{opacity:1,duration:.4},S+p.t_cred);};
+
+EDIT.items.filter(i=>i.type==='scene'&&!i.hidden).forEach(it=>{const f=SC[it.props.scene];if(f)f(it,it.props.params||{},+it.start,+it.dur);});
+
+/* tremor stop-motion: cada recorte "respira" 12x por segundo (semente fixa, determinístico) */
+function hs(a,b){const x=Math.sin(a*12.9898+b*78.233)*43758.5453;return x-Math.floor(x);}
+const grr=document.getElementById('grr');
+tl.to({p:0},{p:1,duration:DUR,ease:'none',onUpdate(){const f=Math.floor(tl.time()*12);
+  for(let i=0;i<JIT.length;i++){const e=JIT[i];e.style.transform=`translate(${(hs(f,i)-.5)*3}px,${(hs(f,i+99)-.5)*3}px) rotate(${(hs(f,i+7)-.5)*0.9}deg)`;}
+  grr.setAttribute('transform',`translate(${-(hs(f,1)*20)},${-(hs(f,2)*20)})`);}},0);
+})();
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+})();</script>
+</body></html>

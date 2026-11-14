@@ -1,0 +1,66 @@
+[
+ {
+  "arquivo": "img/titanic.jpg",
+  "titulo": "File:RMS Titanic 3 (cropped to ship).jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:RMS_Titanic_3_(cropped_to_ship).jpg",
+  "autor": "Francis Godolphin Osbourne Stuart",
+  "licenca": "Public domain",
+  "data": "10 April 1912date QS:P571,+1912-04-10T00"
+ },
+ {
+  "arquivo": "img/iceberg.jpg",
+  "titulo": "File:Titanic iceberg.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Titanic_iceberg.jpg",
+  "autor": "The chief steward of the liner Prinz Adalbert",
+  "licenca": "Public domain",
+  "data": "1912-04-15"
+ },
+ {
+  "arquivo": "img/pintura.jpg",
+  "titulo": "File:Titanic sinking, painting by Willy Stöwer.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Titanic_sinking,_painting_by_Willy_St%C3%B6wer.jpg",
+  "autor": "Willy Stöwer",
+  "licenca": "Public domain",
+  "data": "1912date QS:P571,+1912-00-00T00:00:00Z/9"
+ },
+ {
+  "arquivo": "img/botes.jpg",
+  "titulo": "File:Carpathia - Titanic lifeboats.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Carpathia_-_Titanic_lifeboats.jpg",
+  "autor": "HO, The New York Times",
+  "licenca": "Public domain",
+  "data": "1912-04-18"
+ },
+ {
+  "arquivo": "img/jornal.jpg",
+  "titulo": "File:Titanic-NYT.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Titanic-NYT.jpg",
+  "autor": "Original uploader was Dsarokin at en.wikipedia",
+  "licenca": "Public domain",
+  "data": "1912-04-16"
+ },
+ {
+  "arquivo": "img/carpathia.jpg",
+  "titulo": "File:RMS Carpathia.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:RMS_Carpathia.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "data": "Unknown date"
+ },
+ {
+  "arquivo": "img/destrocos.jpg",
+  "titulo": "File:Titanic wreck bow.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Titanic_wreck_bow.jpg",
+  "autor": "Courtesy of NOAA/Institute for Exploration/University of Rhode Island (NOAA/IFE/URI).",
+  "licenca": "Public domain",
+  "data": "2004-06"
+ },
+ {
+  "arquivo": "img/jornaleiro.jpg",
+  "titulo": "File:Titanic paperboy crop.jpg",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Titanic_paperboy_crop.jpg",
+  "autor": "Unknown authorUnknown author",
+  "licenca": "Public domain",
+  "data": "1912-04-16"
+ }
+]

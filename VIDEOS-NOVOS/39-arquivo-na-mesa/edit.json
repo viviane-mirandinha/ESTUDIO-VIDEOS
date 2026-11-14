@@ -1,0 +1,1536 @@
+{
+ "version": 1,
+ "name": "39 - 24-10-2026 - ARQUIVO NA MESA - O roubo da Mona Lisa em 1911",
+ "estilo": "39-arquivo-na-mesa",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#120c08"
+ },
+ "duration": 70.26,
+ "template": "local",
+ "fonts": {
+  "Courier Prime": "fonts/CourierPrime-Bold.ttf",
+  "Caveat": "fonts/Caveat.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf",
+  "Inter": "fonts/Inter.ttf",
+  "Cormorant Garamond": "fonts/CormorantGaramond-700.ttf"
+ },
+ "referencia": {
+  "canal": "Red File",
+  "canal_url": "https://www.youtube.com/channel/UCNpjH9MosivtBOa45Hbu39g",
+  "video": "https://youtu.be/udbDpAkUh10",
+  "titulo": "56-Year-Old Man Has No Idea Police Just Connected His DNA to a 1996 Murder",
+  "canal2": "Dead Signal Investigation",
+  "canal2_url": "https://www.youtube.com/channel/UC-WT_x7Tpo-C1_XNJFik4ag",
+  "video2": "https://youtu.be/zAoOy28kpqo",
+  "titulo2": "Long Island File Zero",
+  "nota": "dossiê de investigação: mesa escura à luz de luminária, pastas, fotos reais, lupa, fichas datilografadas, legenda pequena centralizada embaixo, cortes lentos"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.wav",
+   "volume": 0.13,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 4.4,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 6.9,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 13.3,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 21.0,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 26.8,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 34.3,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w6",
+    "src": "sfx/whoosh.wav",
+    "start": 41.2,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w7",
+    "src": "sfx/whoosh.wav",
+    "start": 46.1,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w8",
+    "src": "sfx/whoosh.wav",
+    "start": 53.9,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w9",
+    "src": "sfx/whoosh.wav",
+    "start": 60.1,
+    "volume": 0.12,
+    "label": "whoosh"
+   },
+   {
+    "id": "w10",
+    "src": "sfx/whoosh.wav",
+    "start": 64.5,
+    "volume": 0.12,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "camera",
+   "name": "Câmera"
+  },
+  {
+   "id": "mesa",
+   "name": "Objetos na mesa"
+  },
+  {
+   "id": "fios",
+   "name": "Fios vermelhos"
+  },
+  {
+   "id": "tela",
+   "name": "Cartão final"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "pasta",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Pasta do dossiê",
+   "start": 0.0,
+   "dur": 70.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "pasta",
+     "x": 720,
+     "y": 560,
+     "w": 780,
+     "h": 540,
+     "rot": -4,
+     "aba": "DOSSIÊ 1911/08",
+     "texto": "MUSEU DO LOUVRE\nOCORRÊNCIA: FURTO\nOBRA: LA GIOCONDA\n(MONA LISA)"
+    }
+   }
+  },
+  {
+   "id": "st_conf",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Carimbo CONFIDENCIAL",
+   "start": 1.0,
+   "dur": 69.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "carimbo",
+     "x": 800,
+     "y": 700,
+     "rot": -13,
+     "texto": "CONFIDENCIAL",
+     "size": 70
+    }
+   }
+  },
+  {
+   "id": "ficha1",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Ficha: Paris, 21 ago 1911",
+   "start": 2.0,
+   "dur": 68.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "ficha",
+     "x": 520,
+     "y": 1020,
+     "w": 600,
+     "h": 300,
+     "rot": 3,
+     "texto": "PARIS - SEG., 21 AGO 1911\nLOUVRE FECHADO AO PÚBLICO",
+     "t_tipo": 0.3
+    }
+   }
+  },
+  {
+   "id": "mona",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Mona Lisa",
+   "start": 7.3,
+   "dur": 62.96,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 1330,
+     "y": 470,
+     "w": 320,
+     "h": 493,
+     "rot": 5,
+     "src": "img/mona.jpg",
+     "legenda": "La Gioconda",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "beroud",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Louis Béroud",
+   "start": 13.9,
+   "dur": 56.36,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 1780,
+     "y": 390,
+     "w": 280,
+     "h": 364,
+     "rot": -6,
+     "src": "img/beroud.jpg",
+     "legenda": "Louis Béroud, pintor",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "vazio",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: parede vazia (1911)",
+   "start": 16.6,
+   "dur": 53.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 1960,
+     "y": 860,
+     "w": 330,
+     "h": 477,
+     "rot": 3,
+     "src": "img/vazio.jpg",
+     "legenda": "Salon Carré, 1911",
+     "fita": 0
+    }
+   }
+  },
+  {
+   "id": "circ",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Círculo nos ganchos",
+   "start": 18.9,
+   "dur": 51.36,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "circulo",
+     "x": 1960,
+     "y": 800,
+     "w": 190,
+     "h": 150,
+     "rot": 0
+    }
+   }
+  },
+  {
+   "id": "n_ganchos",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: 4 ganchos de ferro",
+   "start": 19.2,
+   "dur": 51.06,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 2280,
+     "y": 640,
+     "rot": -7,
+     "texto": "só 4 ganchos de ferro!",
+     "cor": "#c0171f",
+     "size": 46
+    }
+   }
+  },
+  {
+   "id": "ficha2",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Ficha: museu fechado 1 semana",
+   "start": 21.4,
+   "dur": 48.86,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "ficha",
+     "x": 1560,
+     "y": 1100,
+     "w": 520,
+     "h": 230,
+     "rot": -3,
+     "texto": "LOUVRE FECHADO\nPOR 1 SEMANA",
+     "t_tipo": 0.1
+    }
+   }
+  },
+  {
+   "id": "moldura",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Moldura vazia",
+   "start": 23.6,
+   "dur": 46.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "moldura",
+     "x": 1110,
+     "y": 1160,
+     "w": 300,
+     "h": 380,
+     "rot": -8
+    }
+   }
+  },
+  {
+   "id": "n_moldura",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: moldura na escada",
+   "start": 24.6,
+   "dur": 45.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 1110,
+     "y": 1405,
+     "rot": -4,
+     "texto": "achada numa escada do Louvre",
+     "cor": "#1b2a6b",
+     "size": 38
+    }
+   }
+  },
+  {
+   "id": "picasso",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Picasso",
+   "start": 27.8,
+   "dur": 42.46,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 560,
+     "y": 1450,
+     "w": 250,
+     "h": 366,
+     "rot": -5,
+     "src": "img/picasso.jpg",
+     "legenda": "Pablo Picasso",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "apollinaire",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Apollinaire",
+   "start": 29.8,
+   "dur": 40.46,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 900,
+     "y": 1480,
+     "w": 250,
+     "h": 369,
+     "rot": 4,
+     "src": "img/apollinaire.jpg",
+     "legenda": "Guillaume Apollinaire",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "n_interr",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: interrogado",
+   "start": 28.6,
+   "dur": 41.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 560,
+     "y": 1215,
+     "rot": -3,
+     "texto": "interrogado",
+     "cor": "#1b2a6b",
+     "size": 40
+    }
+   }
+  },
+  {
+   "id": "n_preso",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: preso",
+   "start": 30.9,
+   "dur": 39.36,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 930,
+     "y": 1245,
+     "rot": 3,
+     "texto": "chegou a ser preso",
+     "cor": "#1b2a6b",
+     "size": 40
+    }
+   }
+  },
+  {
+   "id": "st_ino1",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Carimbo INOCENTE 1",
+   "start": 33.0,
+   "dur": 37.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "carimbo",
+     "x": 560,
+     "y": 1520,
+     "rot": -16,
+     "texto": "INOCENTE",
+     "size": 50
+    }
+   }
+  },
+  {
+   "id": "st_ino2",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Carimbo INOCENTE 2",
+   "start": 33.25,
+   "dur": 37.01,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "carimbo",
+     "x": 900,
+     "y": 1550,
+     "rot": 10,
+     "texto": "INOCENTE",
+     "size": 50
+    }
+   }
+  },
+  {
+   "id": "peruggia",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Vincenzo Peruggia (ficha 1909)",
+   "start": 35.1,
+   "dur": 35.16,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 1640,
+     "y": 1520,
+     "w": 380,
+     "h": 444,
+     "rot": -2,
+     "src": "img/peruggia.jpg",
+     "legenda": "Vincenzo Peruggia",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "n_peru",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: ex-funcionário",
+   "start": 37.0,
+   "dur": 33.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 2030,
+     "y": 1340,
+     "rot": -5,
+     "texto": "trabalhou no Louvre",
+     "cor": "#c0171f",
+     "size": 44
+    }
+   }
+  },
+  {
+   "id": "n_vidro",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: vidros de proteção",
+   "start": 38.7,
+   "dur": 31.56,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 2060,
+     "y": 1420,
+     "rot": -5,
+     "texto": "instalava vidros de proteção",
+     "cor": "#c0171f",
+     "size": 38
+    }
+   }
+  },
+  {
+   "id": "tempo",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Linha do tempo 1911 -> 1913",
+   "start": 41.4,
+   "dur": 28.86,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "tempo",
+     "x": 2500,
+     "y": 1180,
+     "w": 560,
+     "h": 250,
+     "rot": 2,
+     "a": "AGO 1911",
+     "b": "DEZ 1913",
+     "texto": "+ DE 2 ANOS",
+     "sub": "escondida no quarto dele, em Paris",
+     "t_linha": 0.9,
+     "t_sub": 3.2
+    }
+   }
+  },
+  {
+   "id": "excelsior",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Recorte: Excelsior, dez 1913",
+   "start": 46.4,
+   "dur": 23.86,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "recorte",
+     "x": 2620,
+     "y": 560,
+     "w": 430,
+     "h": 627,
+     "rot": -3,
+     "src": "img/excelsior.jpg"
+    }
+   }
+  },
+  {
+   "id": "n_flor",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: Florença",
+   "start": 48.6,
+   "dur": 21.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 2220,
+     "y": 330,
+     "rot": -6,
+     "texto": "dez. 1913 - Florença",
+     "cor": "#1b2a6b",
+     "size": 44
+    }
+   }
+  },
+  {
+   "id": "n_geri",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Nota: Alfredo Geri",
+   "start": 51.9,
+   "dur": 18.36,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "nota",
+     "x": 2240,
+     "y": 420,
+     "rot": -4,
+     "texto": "negociante: Alfredo Geri",
+     "cor": "#1b2a6b",
+     "size": 38
+    }
+   }
+  },
+  {
+   "id": "uffizi",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Mona Lisa na Uffizi (1913)",
+   "start": 54.3,
+   "dur": 15.96,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 2860,
+     "y": 1560,
+     "w": 360,
+     "h": 482,
+     "rot": 4,
+     "src": "img/uffizi.jpg",
+     "legenda": "Galeria Uffizi, 1913",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "st_aut",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Carimbo VERDADEIRO",
+   "start": 57.0,
+   "dur": 13.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "carimbo",
+     "x": 2860,
+     "y": 1650,
+     "rot": -12,
+     "texto": "VERDADEIRO",
+     "size": 56
+    }
+   }
+  },
+  {
+   "id": "st_preso",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Carimbo PRESO",
+   "start": 58.6,
+   "dur": 11.66,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "carimbo",
+     "x": 1640,
+     "y": 1600,
+     "rot": -9,
+     "texto": "PRESO",
+     "size": 84
+    }
+   }
+  },
+  {
+   "id": "recuperada",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Foto: Mona Lisa recuperada",
+   "start": 60.4,
+   "dur": 9.86,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "foto",
+     "x": 960,
+     "y": 330,
+     "w": 300,
+     "h": 385,
+     "rot": -7,
+     "src": "img/recuperada.jpg",
+     "legenda": "Mona Lisa recuperada",
+     "fita": 1
+    }
+   }
+  },
+  {
+   "id": "ficha3",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Ficha: jan 1914 de volta ao Louvre",
+   "start": 61.0,
+   "dur": 9.26,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "ficha",
+     "x": 1180,
+     "y": 760,
+     "w": 520,
+     "h": 230,
+     "rot": -2,
+     "texto": "JAN 1914\nDE VOLTA AO LOUVRE",
+     "t_tipo": 0.1
+    }
+   }
+  },
+  {
+   "id": "lupa1",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Lupa na Mona Lisa",
+   "start": 8.4,
+   "dur": 3.9,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "lupa",
+     "alvo": "mona",
+     "r": 105,
+     "zoom": 2.1,
+     "x0": 1250,
+     "y0": 360,
+     "x1": 1400,
+     "y1": 560,
+     "t0": 0.0,
+     "t1": 3.2,
+     "fim": 3.9
+    }
+   }
+  },
+  {
+   "id": "lupa2",
+   "type": "scene",
+   "track": "mesa",
+   "label": "Lupa nos ganchos",
+   "start": 19.6,
+   "dur": 1.9,
+   "by": "template",
+   "props": {
+    "scene": "mesa",
+    "params": {
+     "kind": "lupa",
+     "alvo": "vazio",
+     "r": 100,
+     "zoom": 2.0,
+     "x0": 2080,
+     "y0": 930,
+     "x1": 1960,
+     "y1": 800,
+     "t0": 0.0,
+     "t1": 1.2,
+     "fim": 1.9
+    }
+   }
+  },
+  {
+   "id": "f1",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio picasso -> apollinaire",
+   "start": 30.6,
+   "dur": 39.66,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "picasso",
+     "b": "apollinaire"
+    }
+   }
+  },
+  {
+   "id": "f2",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio peruggia -> mona",
+   "start": 39.8,
+   "dur": 30.46,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "peruggia",
+     "b": "mona"
+    }
+   }
+  },
+  {
+   "id": "f3",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio peruggia -> vazio",
+   "start": 40.2,
+   "dur": 30.06,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "peruggia",
+     "b": "vazio"
+    }
+   }
+  },
+  {
+   "id": "f4",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio peruggia -> moldura",
+   "start": 40.5,
+   "dur": 29.76,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "peruggia",
+     "b": "moldura"
+    }
+   }
+  },
+  {
+   "id": "f5",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio excelsior -> n_flor",
+   "start": 49.0,
+   "dur": 21.26,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "excelsior",
+     "b": "n_flor"
+    }
+   }
+  },
+  {
+   "id": "f6",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio excelsior -> uffizi",
+   "start": 55.0,
+   "dur": 15.26,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "excelsior",
+     "b": "uffizi"
+    }
+   }
+  },
+  {
+   "id": "f7",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio uffizi -> peruggia",
+   "start": 59.0,
+   "dur": 11.26,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "uffizi",
+     "b": "peruggia"
+    }
+   }
+  },
+  {
+   "id": "f8",
+   "type": "scene",
+   "track": "fios",
+   "label": "Fio recuperada -> mona",
+   "start": 62.6,
+   "dur": 7.66,
+   "by": "template",
+   "props": {
+    "scene": "fio",
+    "params": {
+     "a": "recuperada",
+     "b": "mona"
+    }
+   }
+  },
+  {
+   "id": "cam00",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 0",
+   "start": 0.0,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 760,
+     "y": 640,
+     "zoom": 1.3,
+     "rot": -2,
+     "mov": 0.1
+    }
+   }
+  },
+  {
+   "id": "cam01",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 1",
+   "start": 4.5,
+   "dur": 2.5,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 560,
+     "y": 1000,
+     "zoom": 1.45,
+     "rot": 1,
+     "mov": 1.3
+    }
+   }
+  },
+  {
+   "id": "cam02",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 2",
+   "start": 7.0,
+   "dur": 6.4,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1330,
+     "y": 480,
+     "zoom": 1.25,
+     "rot": 2,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam03",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 3",
+   "start": 13.4,
+   "dur": 3.0,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1800,
+     "y": 420,
+     "zoom": 1.45,
+     "rot": -1,
+     "mov": 1.1
+    }
+   }
+  },
+  {
+   "id": "cam04",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 4",
+   "start": 16.4,
+   "dur": 4.7,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 2020,
+     "y": 800,
+     "zoom": 1.3,
+     "rot": 1,
+     "mov": 1.2
+    }
+   }
+  },
+  {
+   "id": "cam05",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 5",
+   "start": 21.1,
+   "dur": 5.8,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1360,
+     "y": 1140,
+     "zoom": 1.1,
+     "rot": -1,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam06",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 6",
+   "start": 26.9,
+   "dur": 7.5,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 760,
+     "y": 1420,
+     "zoom": 1.15,
+     "rot": 0,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam07",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 7",
+   "start": 34.4,
+   "dur": 5.0,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1720,
+     "y": 1480,
+     "zoom": 1.25,
+     "rot": -1,
+     "mov": 1.3
+    }
+   }
+  },
+  {
+   "id": "cam08",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 8",
+   "start": 39.4,
+   "dur": 1.9,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1500,
+     "y": 1050,
+     "zoom": 0.62,
+     "rot": 0,
+     "mov": 1.3
+    }
+   }
+  },
+  {
+   "id": "cam09",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 9",
+   "start": 41.3,
+   "dur": 4.9,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 2500,
+     "y": 1200,
+     "zoom": 1.35,
+     "rot": 1,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam10",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 10",
+   "start": 46.2,
+   "dur": 7.8,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 2450,
+     "y": 520,
+     "zoom": 1.12,
+     "rot": -2,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam11",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 11",
+   "start": 54.0,
+   "dur": 4.1,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 2700,
+     "y": 1560,
+     "zoom": 1.15,
+     "rot": 2,
+     "mov": 1.3
+    }
+   }
+  },
+  {
+   "id": "cam12",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 12",
+   "start": 58.1,
+   "dur": 2.1,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1700,
+     "y": 1520,
+     "zoom": 1.25,
+     "rot": -1,
+     "mov": 1.0
+    }
+   }
+  },
+  {
+   "id": "cam13",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 13",
+   "start": 60.2,
+   "dur": 4.4,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1100,
+     "y": 480,
+     "zoom": 0.95,
+     "rot": 1,
+     "mov": 1.4
+    }
+   }
+  },
+  {
+   "id": "cam14",
+   "type": "scene",
+   "track": "camera",
+   "label": "Câmera 14",
+   "start": 64.6,
+   "dur": 5.66,
+   "by": "template",
+   "props": {
+    "scene": "camera",
+    "params": {
+     "x": 1600,
+     "y": 1000,
+     "zoom": 0.41,
+     "rot": 0,
+     "mov": 3.2
+    }
+   }
+  },
+  {
+   "id": "lg00",
+   "type": "text",
+   "track": "legenda",
+   "label": "Paris, segunda-feira, 21 de ag",
+   "start": 0.0,
+   "dur": 4.6,
+   "by": "template",
+   "props": {
+    "text": "Paris, segunda-feira, 21 de agosto de 1911."
+   }
+  },
+  {
+   "id": "lg01",
+   "type": "text",
+   "track": "legenda",
+   "label": "O Louvre está fechado ao públi",
+   "start": 4.82,
+   "dur": 2.18,
+   "by": "template",
+   "props": {
+    "text": "O Louvre está fechado ao público."
+   }
+  },
+  {
+   "id": "lg02",
+   "type": "text",
+   "track": "legenda",
+   "label": "E um homem sai do museu com a ",
+   "start": 7.18,
+   "dur": 4.72,
+   "by": "template",
+   "props": {
+    "text": "E um homem sai do museu com a Mona Lisa escondida debaixo do avental."
+   }
+  },
+  {
+   "id": "lg03",
+   "type": "text",
+   "track": "legenda",
+   "label": "Ninguém percebe.",
+   "start": 12.2,
+   "dur": 1.1,
+   "by": "template",
+   "props": {
+    "text": "Ninguém percebe."
+   }
+  },
+  {
+   "id": "lg04",
+   "type": "text",
+   "track": "legenda",
+   "label": "Só no dia seguinte o pintor Lo",
+   "start": 13.46,
+   "dur": 3.04,
+   "by": "template",
+   "props": {
+    "text": "Só no dia seguinte o pintor Louis Béroud chega para pintar a sala"
+   }
+  },
+  {
+   "id": "lg05",
+   "type": "text",
+   "track": "legenda",
+   "label": "e encontra, no lugar do quadro",
+   "start": 16.56,
+   "dur": 4.44,
+   "by": "template",
+   "props": {
+    "text": "e encontra, no lugar do quadro, apenas quatro ganchos de ferro na parede."
+   }
+  },
+  {
+   "id": "lg06",
+   "type": "text",
+   "track": "legenda",
+   "label": "O museu fecha por uma semana.",
+   "start": 21.26,
+   "dur": 2.14,
+   "by": "template",
+   "props": {
+    "text": "O museu fecha por uma semana."
+   }
+  },
+  {
+   "id": "lg07",
+   "type": "text",
+   "track": "legenda",
+   "label": "A moldura vazia aparece numa e",
+   "start": 23.52,
+   "dur": 3.08,
+   "by": "template",
+   "props": {
+    "text": "A moldura vazia aparece numa escada do próprio Louvre."
+   }
+  },
+  {
+   "id": "lg08",
+   "type": "text",
+   "track": "legenda",
+   "label": "A polícia chega a interrogar P",
+   "start": 26.9,
+   "dur": 2.4,
+   "by": "template",
+   "props": {
+    "text": "A polícia chega a interrogar Pablo Picasso,"
+   }
+  },
+  {
+   "id": "lg09",
+   "type": "text",
+   "track": "legenda",
+   "label": "e o poeta Guillaume Apollinair",
+   "start": 29.36,
+   "dur": 2.84,
+   "by": "template",
+   "props": {
+    "text": "e o poeta Guillaume Apollinaire chega a ser preso."
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "Os dois eram inocentes.",
+   "start": 32.38,
+   "dur": 2.02,
+   "by": "template",
+   "props": {
+    "text": "Os dois eram inocentes."
+   }
+  },
+  {
+   "id": "lg11",
+   "type": "text",
+   "track": "legenda",
+   "label": "O ladrão era Vincenzo Peruggia",
+   "start": 34.56,
+   "dur": 1.79,
+   "by": "template",
+   "props": {
+    "text": "O ladrão era Vincenzo Peruggia,"
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "um italiano que tinha trabalha",
+   "start": 36.42,
+   "dur": 4.68,
+   "by": "template",
+   "props": {
+    "text": "um italiano que tinha trabalhado no Louvre, instalando vidros de proteção nos quadros."
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "Por mais de dois anos, a Mona ",
+   "start": 41.34,
+   "dur": 4.66,
+   "by": "template",
+   "props": {
+    "text": "Por mais de dois anos, a Mona Lisa ficou escondida no quarto dele, em Paris."
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "Em dezembro de 1913,",
+   "start": 46.3,
+   "dur": 2.05,
+   "by": "template",
+   "props": {
+    "text": "Em dezembro de 1913,"
+   }
+  },
+  {
+   "id": "lg15",
+   "type": "text",
+   "track": "legenda",
+   "label": "Peruggia levou o quadro para F",
+   "start": 48.46,
+   "dur": 4.19,
+   "by": "template",
+   "props": {
+    "text": "Peruggia levou o quadro para Florença e tentou vendê-lo ao negociante Alfredo Geri."
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "Geri chamou o diretor da Galer",
+   "start": 52.74,
+   "dur": 3.36,
+   "by": "template",
+   "props": {
+    "text": "Geri chamou o diretor da Galeria Uffizi."
+   }
+  },
+  {
+   "id": "lg17",
+   "type": "text",
+   "track": "legenda",
+   "label": "O quadro era verdadeiro.",
+   "start": 56.26,
+   "dur": 1.94,
+   "by": "template",
+   "props": {
+    "text": "O quadro era verdadeiro."
+   }
+  },
+  {
+   "id": "lg18",
+   "type": "text",
+   "track": "legenda",
+   "label": "E Peruggia foi preso.",
+   "start": 58.3,
+   "dur": 1.8,
+   "by": "template",
+   "props": {
+    "text": "E Peruggia foi preso."
+   }
+  },
+  {
+   "id": "lg19",
+   "type": "text",
+   "track": "legenda",
+   "label": "Em janeiro de 1914,",
+   "start": 60.28,
+   "dur": 2.17,
+   "by": "template",
+   "props": {
+    "text": "Em janeiro de 1914,"
+   }
+  },
+  {
+   "id": "lg20",
+   "type": "text",
+   "track": "legenda",
+   "label": "a Mona Lisa voltou ao Louvre.",
+   "start": 62.56,
+   "dur": 2.14,
+   "by": "template",
+   "props": {
+    "text": "a Mona Lisa voltou ao Louvre."
+   }
+  },
+  {
+   "id": "lg21",
+   "type": "text",
+   "track": "legenda",
+   "label": "E o roubo ajudou a transformá-",
+   "start": 64.82,
+   "dur": 3.78,
+   "by": "template",
+   "props": {
+    "text": "E o roubo ajudou a transformá-la no quadro mais famoso do mundo."
+   }
+  },
+  {
+   "id": "final",
+   "type": "scene",
+   "track": "tela",
+   "label": "Cartão final",
+   "start": 65.6,
+   "dur": 4.66,
+   "by": "template",
+   "props": {
+    "scene": "final",
+    "params": {
+     "titulo": "O ROUBO DA MONA LISA",
+     "sub": "PARIS · 1911 – 1914",
+     "carimbo": "CASO ENCERRADO"
+    }
+   }
+  },
+  {
+   "id": "canto",
+   "type": "param",
+   "label": "Rótulo do canto",
+   "props": {
+    "value": "ARQUIVO 1911/08 · CONFIDENCIAL"
+   }
+  },
+  {
+   "id": "cor_fio",
+   "type": "param",
+   "label": "Cor do fio/carimbo",
+   "props": {
+    "value": "#b3121b"
+   }
+  }
+ ]
+}

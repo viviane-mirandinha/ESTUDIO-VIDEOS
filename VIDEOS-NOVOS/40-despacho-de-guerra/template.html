@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#2c3026;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#2c3026;}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;overflow:hidden;}
+.desk{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#4a4f3e 0%,#363a2d 55%,#22251c 100%);}
+.desk:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 9px);}
+.paper{position:absolute;background:#e9dfc6;box-shadow:0 18px 40px rgba(0,0,0,.55),0 2px 4px rgba(0,0,0,.4);}
+.paper:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(255,250,235,.0) 50%,rgba(120,90,40,.28) 100%);pointer-events:none;}
+.tw{font-family:'Courier Prime',monospace;font-weight:700;color:#24221c;white-space:pre-wrap;}
+.tw span{opacity:0;}
+.hd{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.06em;color:#3c4a2e;text-transform:uppercase;}
+.stamp{position:absolute;font-family:'Bebas Neue',sans-serif;color:#a3271f;border:5px double #a3271f;padding:4px 18px 0;letter-spacing:.08em;opacity:0;white-space:nowrap;filter:url(#rough);mix-blend-mode:multiply;}
+.rule{height:0;border-top:3px solid #3c4a2e;border-bottom:1px solid #3c4a2e;padding-top:3px;}
+.cur{display:inline-block;width:.55em;height:1em;background:#24221c;vertical-align:-0.12em;opacity:0;}
+.photo{position:absolute;background:#efe7d3;padding:14px 14px 50px;box-shadow:0 22px 45px rgba(0,0,0,.6);}
+.photo .im{width:100%;height:100%;background-size:cover;background-position:center;filter:grayscale(1) sepia(.35) contrast(1.12) brightness(.95);}
+.photo .cap{position:absolute;left:16px;right:16px;bottom:10px;font-size:22px;}
+.clip{position:absolute;width:34px;height:70px;border:5px solid #8d8f86;border-radius:17px;top:-28px;left:40px;}
+.tag{position:absolute;left:28px;top:24px;background:#1f2219;color:#e9dfc6;font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;letter-spacing:.12em;padding:6px 14px 7px;opacity:0;}
+.tag b{color:#c9a94d;}
+#regua{position:absolute;left:140px;right:140px;bottom:22px;height:44px;opacity:0;}
+#regua .bar{position:absolute;left:0;right:0;top:20px;height:3px;background:#e9dfc6;opacity:.8;}
+#regua .tk{position:absolute;top:13px;width:2px;height:17px;background:#e9dfc6;opacity:.7;}
+#regua .tl{position:absolute;top:30px;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;color:#e9dfc6;opacity:.75;transform:translateX(-50%);}
+#regua .mk{position:absolute;top:0;left:0;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:15px solid #c9a94d;transform:translateX(-10px);}
+#regua .lb{position:absolute;top:-30px;left:0;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.06em;color:#c9a94d;white-space:nowrap;}
+#regua .fill{position:absolute;left:0;top:20px;height:3px;background:#c9a94d;width:0;}
+.mapwrap{position:absolute;left:0;top:0;width:1280px;height:720px;transform-origin:0 0;}
+.lbl{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.06em;}
+#grain{position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:multiply;}
+#vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(10,10,5,.55) 100%);}
+#flick{position:absolute;inset:0;pointer-events:none;background:#fff8e0;opacity:0;mix-blend-mode:overlay;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<svg width="0" height="0" style="position:absolute"><defs>
+<filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+<pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><line x1="0" y1="0" x2="0" y2="10" stroke="#5d6b70" stroke-width="1.3" opacity=".35"/></pattern>
+<marker id="ahG" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f5a8a"/></marker>
+<marker id="ahR" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a3271f"/></marker>
+</defs></svg>
+<div style="display:none"><img src="img/pegasus.jpg"><img src="img/eisenhower.jpg"><img src="img/navios.jpg"><img src="img/omaha.jpg"><img src="img/juno.jpg"><img src="img/sword.jpg"></div>
+<div id="stage"></div>
+<div class="tag" id="tag"></div>
+<div id="regua"><div class="bar"></div><div class="fill"></div><div class="mk"><div class="lb"></div></div></div>
+<svg id="grain" width="1280" height="720"><filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .25  0 0 0 0 .15  0 0 0 .7 0"/></filter><rect width="1280" height="720" filter="url(#gf)"/></svg>
+<div id="vig"></div>
+<div id="flick"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__;
+window.MAPA={path:"M-35.1,492.8L-30.7,532.4L-53.1,541.1L-72.2,527.3L-110.4,527.3L-146.4,535.9L-138.5,465.1L-67.7,473.8L-35.1,492.8Z M-287.9,285.6L-305.8,337.4L-352.8,319.9L-356.4,306.3L-303.2,276.1L-292.3,276.4L-287.9,285.6Z M-367.5,-1389.0L-405.6,-1356.0L-526.6,-1322.8L-578.7,-1288.9L-670.1,-1212.3L-687.7,-1206.0L-825.5,-1224.4L-928.1,-1323.6L-993.7,-1364.3L-1020.7,-1368.9L-1048.8,-1356.8L-1108.6,-1344.4L-1169.7,-1346.5L-1138.5,-1392.4L-1096.2,-1418.0L-1191.0,-1435.8L-1217.4,-1449.7L-1247.4,-1481.8L-1321.7,-1487.3L-1357.2,-1479.2L-1417.0,-1436.7L-1511.6,-1391.5L-1625.5,-1454.1L-1647.8,-1481.6L-1647.2,-1534.6L-1664.3,-1576.5L-1695.9,-1591.3L-1655.5,-1646.0L-1606.7,-1682.3L-1499.4,-1718.5L-1336.9,-1804.3L-1245.8,-1840.8L-1161.1,-1903.8L-1126.1,-1942.3L-1100.7,-1994.8L-1075.5,-2059.4L-1039.5,-2111.8L-1074.4,-2124.3L-1090.0,-2163.8L-1085.8,-2203.9L-1069.7,-2239.5L-1084.1,-2284.1L-1109.8,-2330.7L-1108.3,-2367.0L-1101.6,-2405.8L-1166.9,-2403.7L-1232.1,-2391.6L-1291.2,-2364.1L-1348.4,-2326.7L-1399.3,-2319.8L-1398.5,-2349.7L-1376.4,-2386.7L-1318.8,-2439.4L-1257.0,-2483.2L-1235.0,-2516.4L-1217.8,-2555.0L-1187.1,-2586.0L-1106.4,-2644.6L-951.9,-2710.5L-928.9,-2714.3L-868.3,-2706.7L-808.8,-2716.6L-756.6,-2740.3L-704.6,-2745.5L-587.6,-2677.1L-622.4,-2782.8L-570.7,-2808.1L-495.9,-2712.6L-468.0,-2702.5L-409.4,-2716.4L-432.0,-2732.5L-458.4,-2733.5L-493.1,-2747.9L-522.2,-2778.5L-570.7,-2875.8L-568.1,-2933.5L-535.4,-2993.6L-499.3,-3048.8L-529.6,-3059.8L-553.9,-3080.9L-560.8,-3136.2L-551.3,-3185.0L-486.3,-3228.1L-467.1,-3293.6L-459.0,-3365.5L-469.8,-3398.5L-534.3,-3393.2L-565.6,-3379.8L-593.8,-3358.5L-622.6,-3359.7L-702.2,-3439.3L-747.7,-3499.5L-829.1,-3626.9L-840.7,-3703.1L-775.5,-3867.3L-674.8,-3972.3L-556.1,-4008.9L-579.1,-4015.9L-759.8,-4017.3L-819.4,-4004.5L-874.7,-3961.5L-905.8,-3948.4L-938.6,-3943.5L-968.5,-3922.1L-997.7,-3892.5L-1028.0,-3873.5L-1088.4,-3878.4L-1117.7,-3872.2L-1138.7,-3889.3L-1156.3,-3917.7L-1179.4,-3925.3L-1205.1,-3916.6L-1259.5,-3878.3L-1314.5,-3855.7L-1381.2,-3879.8L-1468.4,-3924.8L-1485.7,-3908.4L-1505.0,-3866.7L-1516.1,-3801.5L-1578.1,-3858.1L-1631.0,-3933.7L-1648.7,-3981.3L-1650.0,-4034.7L-1621.3,-4055.5L-1590.2,-4036.5L-1543.8,-4163.4L-1451.4,-4328.6L-1418.8,-4377.0L-1396.1,-4440.2L-1400.0,-4481.6L-1420.4,-4516.5L-1506.2,-4595.9L-1505.1,-4660.4L-1495.9,-4733.4L-1472.5,-4777.2L-1462.7,-4785.5L-1348.6,-4784.3L-1393.1,-4806.9L-1481.8,-4872.8L-1480.2,-4896.2L-1459.4,-4957.2L-1469.0,-4951.0L-1488.0,-4922.8L-1524.3,-4854.7L-1546.4,-4838.8L-1609.1,-4822.6L-1620.5,-4789.0L-1630.6,-4780.3L-1661.9,-4776.5L-1671.5,-4745.1L-1678.5,-4743.2L-1687.3,-4776.9L-1688.2,-4832.9L-1675.7,-4884.4L-1651.9,-4924.6L-1560.1,-5016.2L-1604.8,-4987.9L-1706.1,-4903.3L-1757.9,-4847.7L-1771.7,-4828.9L-1776.1,-4813.1L-1775.8,-4794.9L-1752.5,-4697.0L-1759.2,-4651.7L-1846.5,-4352.3L-1863.1,-4322.3L-1878.2,-4306.6L-1892.6,-4303.0L-1935.7,-4308.7L-1954.9,-4331.1L-1954.7,-4356.6L-1946.7,-4394.7L-1910.5,-4536.7L-1894.7,-4576.2L-1871.4,-4612.9L-1819.9,-4677.1L-1821.2,-4681.3L-1855.4,-4668.7L-1870.0,-4672.9L-1880.5,-4685.6L-1873.7,-4876.1L-1845.9,-4938.8L-1835.5,-5029.9L-1811.4,-5108.0L-1783.5,-5164.8L-1762.3,-5237.6L-1730.3,-5269.9L-1721.7,-5319.4L-1685.8,-5373.0L-1658.1,-5429.0L-1673.0,-5423.5L-1850.5,-5277.7L-1895.6,-5251.1L-1957.3,-5258.2L-2004.4,-5274.6L-2041.2,-5309.1L-2057.7,-5375.4L-2103.2,-5377.1L-2142.0,-5388.6L-2141.6,-5397.5L-2091.4,-5433.6L-2011.0,-5446.0L-1935.7,-5503.7L-2002.7,-5542.8L-1997.0,-5555.1L-1938.6,-5588.4L-1864.4,-5699.9L-1849.3,-5802.4L-1884.8,-5850.6L-1897.7,-5882.2L-1968.6,-5917.4L-1980.4,-5962.4L-1972.2,-5987.6L-1949.0,-6012.1L-1914.2,-6031.2L-1859.5,-6049.5L-1909.1,-6069.1L-1927.6,-6092.2L-1941.7,-6125.7L-1943.0,-6145.1L-1917.3,-6231.6L-1902.3,-6267.3L-1873.1,-6312.7L-1740.3,-6310.2L-1725.0,-6330.3L-1710.0,-6331.0L-1642.1,-6312.7L-1652.2,-6332.5L-1763.2,-6440.4L-1773.2,-6461.0L-1741.5,-6519.2L-1739.2,-6545.1L-1743.8,-6572.8L-1734.8,-6593.9L-1699.6,-6603.9L-1592.3,-6602.9L-1565.9,-6612.7L-1577.9,-6640.8L-1602.9,-6677.7L-1607.8,-6708.6L-1601.9,-6736.0L-1600.5,-6791.0L-1595.7,-6815.4L-1570.2,-6851.8L-1549.1,-6862.7L-1523.0,-6869.0L-1464.1,-6856.8L-1441.7,-6842.1L-1415.9,-6807.3L-1396.9,-6810.2L-1323.5,-6847.9L-1301.5,-6853.3L-1271.4,-6809.6L-1146.2,-6844.5L-977.7,-6860.1L-876.4,-6883.1L-769.8,-6891.4L-670.3,-6917.5L-564.8,-6905.5L-561.2,-6890.4L-566.8,-6869.3L-593.8,-6811.7L-589.4,-6747.3L-595.4,-6727.8L-607.6,-6703.7L-646.3,-6658.8L-748.0,-6594.6L-934.4,-6447.1L-1044.5,-6373.9L-1059.7,-6338.6L-1067.8,-6289.7L-1001.9,-6279.9L-976.5,-6263.3L-992.2,-6238.4L-1089.8,-6152.0L-1118.5,-6073.9L-1043.7,-6076.6L-982.1,-6091.7L-859.3,-6140.4L-743.8,-6176.6L-688.4,-6178.1L-580.6,-6149.2L-556.0,-6148.3L-510.3,-6161.6L-464.0,-6164.0L-150.6,-6155.0L-63.5,-6172.0L-5.9,-6151.7L42.3,-6101.1L88.1,-6007.8L86.7,-5992.3L59.0,-5949.8L7.9,-5896.4L-36.0,-5823.0L-48.9,-5783.4L-57.5,-5740.1L-71.5,-5700.0L-158.9,-5511.8L-244.0,-5407.5L-282.1,-5333.4L-329.1,-5274.4L-374.2,-5237.3L-422.5,-5212.6L-561.9,-5186.1L-600.9,-5167.2L-647.4,-5134.6L-696.3,-5118.6L-639.0,-5120.6L-582.2,-5138.7L-478.8,-5145.3L-359.8,-5083.0L-370.8,-5032.0L-418.6,-4991.6L-527.2,-4985.3L-628.9,-4895.6L-674.7,-4868.0L-723.1,-4854.3L-783.6,-4858.4L-893.5,-4882.4L-941.6,-4907.5L-898.1,-4866.5L-848.8,-4845.2L-562.5,-4794.8L-545.3,-4800.0L-454.1,-4853.3L-332.4,-4854.1L-100.9,-4756.3L-34.2,-4681.5L61.3,-4574.3L113.3,-4532.5L150.9,-4494.6L174.0,-4437.7L218.8,-4250.0L270.0,-4066.6L337.0,-3867.9L367.4,-3812.7L407.3,-3774.0L609.6,-3685.0L654.6,-3655.5L733.1,-3569.9L808.8,-3478.7L879.2,-3408.7L955.2,-3352.0L918.4,-3322.5L893.2,-3276.2L912.0,-3213.2L943.0,-3153.0L1003.8,-3056.7L1057.4,-2951.7L1037.7,-2967.5L1016.9,-2976.3L988.4,-2973.6L960.7,-2978.7L909.4,-3011.6L860.1,-3052.0L762.2,-3035.8L707.7,-3043.0L660.5,-3041.9L750.0,-3018.6L848.0,-3017.0L1064.1,-2840.7L1137.1,-2736.3L1180.6,-2598.2L1151.0,-2536.1L1105.0,-2495.9L1062.1,-2450.0L1021.9,-2398.1L1141.6,-2321.8L1167.5,-2324.1L1194.0,-2334.8L1219.4,-2360.7L1262.3,-2423.8L1284.5,-2446.3L1359.1,-2454.4L1421.7,-2449.6L1484.0,-2435.6L1538.8,-2440.0L1649.3,-2413.0L1706.1,-2388.5L1846.6,-2278.5L1877.0,-2218.4L1891.0,-2140.7L1892.6,-2054.5L1869.0,-1975.8L1841.8,-1904.7L1825.1,-1812.9L1813.2,-1779.8L1796.6,-1753.9L1722.1,-1681.5L1672.6,-1651.7L1651.7,-1664.7L1629.4,-1662.9L1627.0,-1645.5L1650.6,-1608.5L1650.9,-1563.9L1606.9,-1530.9L1562.2,-1516.8L1487.4,-1534.4L1383.5,-1472.8L1458.2,-1441.2L1473.2,-1407.5L1454.6,-1348.4L1407.6,-1322.0L1355.6,-1310.3L1302.2,-1307.5L1258.1,-1293.0L1215.8,-1265.1L1268.9,-1280.0L1305.8,-1267.0L1328.9,-1217.2L1349.9,-1202.9L1453.7,-1181.7L1518.0,-1181.8L1642.1,-1193.9L1701.6,-1193.6L1722.8,-1184.6L1723.2,-1143.4L1714.0,-1042.0L1697.5,-1021.1L1533.2,-936.0L1499.4,-876.5L1490.0,-840.5L1393.8,-846.9L1348.8,-808.8L1270.9,-783.5L1210.7,-756.6L1151.8,-722.6L1103.4,-712.4L894.0,-752.8L767.6,-749.4L596.3,-714.3L552.2,-720.1L486.1,-753.8L418.4,-776.5L340.4,-786.6L273.2,-817.7L315.1,-757.8L221.8,-700.1L178.8,-688.6L134.2,-690.4L43.0,-674.8L-41.5,-682.8L-28.8,-641.7L-6.2,-606.0L-24.5,-590.4L-44.0,-586.5L-204.9,-613.5L-227.7,-608.4L-247.5,-583.5L-306.1,-596.9L-362.9,-639.0L-423.4,-667.2L-486.9,-680.4L-537.3,-675.8L-744.8,-609.6L-786.1,-543.2L-806.9,-448.9L-836.8,-365.3L-885.6,-300.8L-943.8,-292.4L-998.5,-337.0L-1102.6,-386.3L-1138.0,-419.5L-1149.2,-421.5L-1160.8,-409.6L-1201.7,-394.6L-1243.9,-393.9L-1309.0,-380.6L-1422.3,-340.6L-1468.1,-313.4L-1566.5,-238.5L-1586.5,-217.8L-1622.3,-142.2L-1676.9,-128.9L-1726.9,-177.3L-1783.8,-194.2L-1843.8,-177.7L-1880.1,-151.9L-1897.1,-172.8L-1897.6,-215.8L-1853.8,-267.0L-1736.8,-305.7L-1634.2,-406.1L-1583.8,-467.3L-1563.9,-501.7L-1539.3,-523.6L-1507.1,-531.9L-1490.6,-570.0L-1348.0,-722.9L-1336.3,-757.9L-1329.2,-820.7L-1317.4,-881.1L-1201.4,-920.2L-1146.0,-1047.1L-1130.7,-1057.2L-968.9,-1080.5L-848.8,-1078.6L-729.7,-1053.8L-668.6,-1051.5L-607.2,-1060.1L-559.1,-1094.4L-476.8,-1218.0L-430.5,-1272.4L-377.4,-1321.5L-327.8,-1377.6L-247.3,-1481.6L-301.7,-1445.8L-367.5,-1389.0Z M452.8,-655.1L409.9,-627.9L396.4,-596.1L386.0,-583.5L357.6,-575.3L329.6,-575.1L222.6,-639.0L197.9,-636.1L222.4,-665.4L288.8,-689.2L326.2,-720.6L412.6,-690.1L452.8,-655.1Z M4897.6,1781.9L4835.8,1817.6L4821.7,1848.8L4797.5,1890.1L4758.1,1907.5L4718.5,1913.2L4686.4,1907.8L4668.1,1891.3L4669.0,1875.9L4652.0,1862.8L4609.8,1863.2L4566.2,1891.6L4531.4,1938.0L4542.2,1964.0L4574.2,1970.9L4582.7,1981.1L4582.7,1994.5L4571.4,2010.6L4557.9,2038.0L4490.6,2119.8L4422.7,2202.4L4411.9,2227.4L4390.3,2244.8L4304.0,2288.9L4294.9,2306.5L4290.1,2380.2L4280.4,2440.6L4216.4,2497.6L4152.7,2554.2L4136.8,2588.9L4125.2,2629.0L4105.2,2674.2L4101.3,2698.1L4133.5,2737.1L4129.8,2769.3L4119.5,2815.2L4088.9,2847.7L4055.1,2866.1L4055.8,2916.0L4073.8,2923.0L4114.7,2919.3L4172.5,2883.1L4210.1,2836.5L4188.0,2792.3L4185.2,2783.7L4190.6,2773.3L4235.2,2725.2L4290.0,2696.3L4366.5,2690.9L4458.5,2707.9L4467.7,2715.0L4463.3,2744.5L4471.9,2788.0L4488.6,2818.5L4465.7,2905.0L4482.9,2932.2L4509.7,2964.6L4529.8,2994.2L4558.7,3021.5L4584.4,3067.4L4593.2,3093.4L4552.1,3138.5L4482.3,3180.9L4474.4,3208.0L4475.4,3238.8L4483.2,3263.1L4521.7,3294.3L4563.1,3365.0L4589.4,3428.0L4646.9,3488.4L4661.0,3506.3L4657.4,3521.4L4642.2,3547.1L4622.5,3632.9L4599.0,3646.6L4572.8,3652.1L4501.6,3715.0L4469.9,3707.4L4424.8,3708.2L4391.8,3728.9L4395.4,3768.1L4424.4,3803.9L4441.4,3843.0L4448.4,3883.6L4480.5,3913.7L4525.7,3931.6L4551.6,3932.9L4568.5,3943.7L4578.7,3957.6L4598.1,4044.6L4586.4,4066.4L4562.1,4075.7L4547.6,4111.5L4518.5,4164.3L4502.0,4206.7L4520.2,4244.0L4528.1,4271.6L4518.3,4300.0L4531.3,4344.3L4565.6,4388.2L4658.9,4449.8L4745.5,4499.9L4772.3,4508.3L4889.3,4476.0L4908.6,4478.8L4922.9,4517.2L4929.1,4543.1L4916.0,4582.0L4884.3,4635.7L4850.0,4678.4L4829.2,4714.8L4833.5,4747.8L4834.9,4791.7L4807.0,4804.8L4806.1,4796.1L4794.6,4788.7L4784.7,4793.1L4777.0,4802.6L4775.8,4819.5L4716.3,4847.6L4675.3,4876.7L4513.1,5050.4L4437.3,5101.3L4422.3,5132.0L4406.9,5189.4L4362.4,5238.6L4323.4,5262.0L4226.7,5286.1L4129.8,5338.3L4086.0,5315.8L3972.9,5318.2L3902.2,5255.3L3766.6,5215.4L3722.4,5123.9L3660.6,5117.9L3620.0,5120.7L3595.9,5106.8L3589.6,5075.6L3589.0,5045.5L3546.1,5059.3L3513.3,5059.3L3493.7,5071.4L3478.3,5085.3L3460.0,5076.4L3449.4,5079.4L3450.4,5097.1L3411.0,5101.5L3368.3,5090.7L3256.2,5043.4L3239.0,5036.2L3161.2,5017.9L3129.8,4999.0L3104.3,4952.3L3084.9,4937.5L3073.4,4928.6L3000.8,4952.2L2975.5,4989.0L2936.2,5032.1L2667.0,5243.2L2617.8,5331.7L2560.9,5462.0L2556.4,5522.8L2581.0,5717.1L2635.7,5819.2L2642.7,5842.8L2612.3,5842.9L2561.4,5830.1L2519.1,5814.4L2478.8,5823.2L2440.0,5844.3L2406.1,5857.0L2381.7,5860.6L2365.5,5872.8L2357.6,5897.1L2356.0,5914.1L2313.2,5909.9L2214.1,5874.9L2125.0,5850.8L2072.8,5878.2L2039.2,5903.9L2015.5,5899.9L1997.6,5873.0L1985.5,5846.6L1950.6,5822.4L1871.9,5786.0L1876.0,5768.4L1889.4,5744.0L1889.0,5728.9L1873.8,5706.4L1801.3,5682.4L1767.1,5676.3L1745.4,5692.9L1729.7,5713.2L1689.3,5638.6L1660.6,5623.4L1617.1,5620.9L1567.3,5598.2L1515.6,5569.1L1389.8,5522.7L1355.2,5517.1L1341.3,5524.5L1332.1,5552.2L1327.1,5630.8L1321.8,5639.4L1263.5,5642.1L1191.5,5631.1L1158.6,5636.6L1129.2,5636.8L1101.5,5616.0L977.3,5639.8L956.7,5628.2L926.7,5592.8L893.3,5564.1L867.3,5549.5L845.2,5532.6L825.1,5529.9L794.4,5546.2L752.1,5553.1L716.9,5551.0L698.1,5553.4L619.4,5466.4L607.9,5442.6L568.7,5436.0L520.3,5435.0L396.6,5378.6L340.3,5348.3L332.0,5330.3L332.8,5315.8L323.1,5318.9L305.8,5344.7L296.7,5365.7L284.6,5369.6L266.9,5366.3L250.4,5354.5L240.4,5339.3L251.2,5312.6L270.0,5277.9L277.9,5240.1L276.1,5206.3L244.9,5184.6L198.9,5175.6L165.3,5173.0L121.4,5153.7L100.7,5139.8L80.5,5102.1L79.8,5074.8L163.1,5050.6L238.2,4951.7L309.3,4592.6L360.7,4168.0L398.9,4087.8L447.0,4065.7L408.1,4007.4L383.8,4036.9L373.6,4068.3L360.8,4083.9L389.6,3694.7L410.1,3552.2L444.9,3402.8L516.2,3462.1L575.3,3522.2L605.9,3574.4L644.6,3748.2L673.8,3784.7L717.6,3821.3L700.3,3781.3L670.2,3750.8L623.1,3519.1L593.5,3453.5L547.5,3398.3L399.4,3282.1L386.1,3259.6L378.9,3215.2L427.9,3217.1L470.2,3238.7L465.1,3213.8L452.6,3187.9L432.9,3093.7L416.6,2873.8L418.8,2836.2L411.5,2790.0L364.1,2779.7L326.2,2777.8L285.5,2759.5L83.7,2629.9L14.6,2496.2L-56.0,2397.5L-72.9,2354.4L-71.8,2310.8L-35.3,2218.6L-67.6,2160.4L-99.1,2148.8L-126.5,2120.0L-101.7,2072.0L-81.1,2041.3L-39.7,2033.0L14.5,2043.1L65.9,2070.9L106.2,2078.3L-13.0,2003.8L-206.3,2028.9L-248.0,2019.3L-283.2,2002.7L-297.0,1948.0L-269.5,1923.3L-244.6,1877.7L-272.8,1845.7L-309.3,1833.6L-366.6,1834.2L-420.0,1843.9L-433.5,1825.5L-400.9,1774.7L-428.6,1756.1L-465.6,1764.8L-519.2,1775.3L-570.5,1759.4L-618.9,1701.7L-651.0,1702.1L-673.1,1709.2L-705.8,1687.0L-740.3,1681.4L-764.9,1688.8L-797.6,1655.7L-998.9,1589.3L-1085.8,1581.2L-1165.5,1611.2L-1209.4,1600.8L-1241.7,1557.9L-1268.7,1485.9L-1397.2,1430.4L-1371.7,1394.0L-1311.9,1385.4L-1243.0,1360.1L-1218.3,1327.7L-1272.1,1290.0L-1311.8,1280.7L-1328.3,1267.1L-1345.1,1233.3L-1321.3,1217.8L-1304.5,1226.0L-1256.1,1230.9L-1173.2,1222.5L-1204.1,1188.4L-1236.2,1180.8L-1250.9,1172.2L-1318.3,1168.5L-1349.0,1180.2L-1417.9,1175.8L-1432.8,1138.9L-1440.0,1107.2L-1418.6,1036.7L-1321.6,973.7L-1079.8,904.8L-975.7,914.9L-903.6,902.5L-817.1,859.1L-779.0,821.9L-656.1,799.9L-539.3,839.4L-431.5,988.6L-380.1,1039.1L-254.0,951.4L-66.3,954.0L-27.5,1003.5L-11.9,961.8L22.7,913.0L50.2,935.2L64.2,965.4L262.3,956.8L293.6,948.0L240.4,912.6L196.9,827.7L187.9,515.5L133.0,428.3L69.9,289.1L40.9,206.5L38.2,177.9L47.9,136.7L125.4,139.0L185.2,149.4L299.1,118.2L354.0,139.6L350.8,204.0L367.5,285.4L386.6,324.7L415.5,369.5L507.3,365.4L606.5,391.7L731.7,395.8L914.7,441.2L992.7,414.9L1068.1,358.8L1211.9,321.9L1223.3,302.4L1140.6,310.2L1064.7,274.7L1054.4,236.1L1063.2,201.4L1094.0,121.6L1313.9,-4.2L1471.5,-41.4L1636.1,-110.7L1718.9,-181.7L1773.6,-273.4L1791.2,-293.6L1813.9,-310.5L1792.8,-343.3L1807.1,-693.7L1822.5,-756.8L1854.6,-808.3L1903.5,-848.2L1977.6,-891.4L2250.6,-951.1L2291.1,-975.2L2296.8,-937.8L2316.7,-889.8L2330.4,-863.6L2319.0,-829.4L2327.9,-801.2L2365.0,-750.4L2411.2,-702.6L2452.3,-672.0L2463.9,-675.4L2494.5,-684.1L2546.1,-715.4L2589.1,-725.3L2613.7,-701.3L2627.6,-687.7L2654.7,-633.6L2662.3,-577.2L2674.4,-530.2L2696.3,-511.2L2778.6,-505.0L2839.2,-487.6L2855.3,-471.9L2876.0,-367.6L2887.3,-352.8L2902.5,-365.1L2917.4,-382.3L2938.1,-385.0L2973.7,-378.4L3020.6,-376.4L3069.0,-364.9L3135.8,-306.0L3133.3,-286.5L3120.2,-252.4L3115.7,-225.2L3127.2,-214.2L3144.8,-186.1L3140.6,-153.6L3123.4,-130.8L3116.4,-112.1L3116.6,-99.8L3122.8,-89.7L3136.5,-80.8L3235.2,-68.8L3325.5,-80.8L3382.3,-114.0L3392.1,-148.9L3408.2,-188.4L3442.1,-221.5L3465.5,-232.6L3487.0,-219.0L3450.9,-80.2L3477.3,-44.8L3481.1,8.2L3490.6,54.6L3522.8,53.7L3562.0,62.3L3589.6,79.5L3621.9,107.1L3668.5,132.4L3701.2,141.3L3713.0,162.5L3739.4,187.1L3781.0,238.5L3818.1,272.8L3836.1,272.6L3870.8,259.1L3922.1,250.5L3962.7,251.2L3980.0,277.3L4019.9,289.4L4034.0,299.0L4049.7,317.0L4076.3,324.2L4108.3,317.0L4131.8,293.0L4163.1,282.2L4194.4,285.8L4212.4,299.0L4246.7,318.5L4266.1,314.2L4304.9,326.3L4343.9,364.2L4360.4,402.3L4364.6,423.2L4381.5,445.9L4446.9,548.4L4467.9,553.4L4490.6,537.9L4505.4,515.8L4526.7,511.4L4561.1,521.6L4583.2,533.2L4593.8,577.6L4601.2,586.0L4616.1,576.5L4642.5,574.4L4684.7,585.3L4742.9,572.8L4789.3,554.3L4813.1,555.0L4851.4,606.7L4895.2,626.1L4991.6,641.7L5095.1,666.1L5135.7,685.8L5163.4,695.5L5166.2,764.1L5157.9,774.4L5054.9,911.9L5011.4,961.1L4989.3,1031.2L4974.2,1138.9L4943.7,1241.1L4898.1,1338.1L4881.5,1410.9L4893.9,1459.4L4886.2,1535.7L4858.1,1639.6L4853.5,1718.0L4871.9,1771.0L4897.6,1781.9Z",lon0:-1.95,lat1:49.85,k:0.6507742172658509,s:786.7552008300298,ox:0.0,oy:5.960159626487155};
+const M=window.MAPA;
+const stage=document.getElementById('stage');
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function rng(seed){ let s=seed; return ()=>{ s=(s*16807)%2147483647; return (s-1)/2147483646; }; }
+const P=(lon,lat)=>[M.ox+(lon-M.lon0)*M.k*M.s, M.oy+(M.lat1-lat)*M.s];
+const items=EDIT.items.filter(i=>i.by==='template' && !i.hidden);
+const get=id=>EDIT.items.find(i=>i.id===id);
+
+// ---------- helpers
+function typeInto(el,text,t0,cps,cursor){
+  el.innerHTML='';
+  const chars=[...text];
+  chars.forEach((c,i)=>{const sp=document.createElement('span');sp.textContent=c;el.appendChild(sp);tl.set(sp,{opacity:1},t0+i/cps);});
+  if(cursor){const cu=document.createElement('i');cu.className='cur';el.appendChild(cu);
+    const tEnd=t0+chars.length/cps; tl.set(cu,{opacity:1},t0);
+    for(let t=tEnd;t<tEnd+2.4;t+=0.5){tl.set(cu,{opacity:0},t+0.25);tl.set(cu,{opacity:1},t+0.5);} tl.set(cu,{opacity:0},tEnd+2.4);}
+  return t0+chars.length/cps;
+}
+function stamp(parent,text,t,css){
+  const s=document.createElement('div');s.className='stamp';s.textContent=text;Object.assign(s.style,css||{});parent.appendChild(s);
+  const rot=parseFloat((css&&css['--rot'])||-8);
+  tl.fromTo(s,{opacity:0,scale:1.7,rotation:rot},{opacity:.92,scale:1,rotation:rot,duration:.18,ease:"power3.in"},t);
+  return s;
+}
+function shot(it){
+  const d=document.createElement('div');d.className='shot';d.id=it.id;stage.appendChild(d);
+  const a=it.start,b=it.start+it.dur,fd=(it.props&&it.props.fade!=null)?it.props.fade:0.35;
+  tl.fromTo(d,{opacity:0},{opacity:1,duration:fd,ease:"none"},Math.max(0,a-fd/2));
+  tl.to(d,{opacity:0,duration:fd,ease:"none"},b-fd/2);
+  return d;
+}
+
+// ---------- title
+function sTitulo(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const pa=document.createElement('div');pa.className='paper';Object.assign(pa.style,{left:'170px',top:'95px',width:'940px',height:'520px',transform:'rotate(-1.2deg)'});d.appendChild(pa);
+  pa.innerHTML=`<div class="hd" style="position:absolute;left:50px;top:34px;font-size:30px">${esc(p.kicker)}</div>
+  <div class="rule" style="position:absolute;left:50px;right:50px;top:88px"></div>
+  <div class="tw" id="${it.id}_l" style="position:absolute;left:50px;top:112px;font-size:28px"></div>
+  <div class="tw" id="${it.id}_t" style="position:absolute;left:50px;right:50px;top:190px;font-size:72px;line-height:1.08;color:#1d1b16"></div>
+  <div class="rule" style="position:absolute;left:50px;right:50px;bottom:70px"></div>
+  <div class="tw" id="${it.id}_r" style="position:absolute;left:50px;bottom:24px;font-size:22px;color:#4b4638"></div>`;
+  typeInto(pa.querySelector('#'+it.id+'_l'),p.linha,S+0.3,26);
+  typeInto(pa.querySelector('#'+it.id+'_t'),p.titulo,S+(p.t_titulo||3.4),20,true);
+  typeInto(pa.querySelector('#'+it.id+'_r'),p.rodape,S+(p.t_rodape||6.2),34);
+  stamp(pa,p.carimbo,S+(p.t_carimbo||7.6),{right:'60px',top:'40px',fontSize:'58px','--rot':-9});
+  tl.fromTo(pa,{scale:1.0},{scale:1.04,duration:it.dur,ease:"none"},S);
+}
+// ---------- dispatch card
+function sDespacho(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const pa=document.createElement('div');pa.className='paper';Object.assign(pa.style,{left:'240px',top:'130px',width:'800px',height:'430px',transform:'rotate(1deg)'});d.appendChild(pa);
+  pa.innerHTML=`<div class="hd" style="position:absolute;left:46px;top:26px;font-size:22px;color:#6a6450">${esc(p.origem)}</div>
+  <div class="rule" style="position:absolute;left:46px;right:46px;top:66px"></div>
+  <div class="hd" id="${it.id}_n" style="position:absolute;left:46px;top:80px;font-size:104px;line-height:1.1">${esc(p.numero)}</div>
+  <div class="rule" style="position:absolute;left:46px;right:46px;top:222px"></div>
+  <div class="tw" id="${it.id}_x" style="position:absolute;left:46px;right:46px;top:246px;font-size:30px;line-height:1.35"></div>`;
+  tl.fromTo(pa.querySelector('#'+it.id+'_n'),{opacity:0,y:18},{opacity:1,y:0,duration:.45,ease:"power2.out"},S+0.15);
+  typeInto(pa.querySelector('#'+it.id+'_x'),p.texto,S+0.6,24,true);
+  stamp(pa,p.hora,S+p.t_hora,{right:'40px',bottom:'34px',fontSize:'76px','--rot':-7});
+  tl.fromTo(pa,{y:30,rotation:2.5},{y:0,rotation:1,duration:.6,ease:"power2.out"},S-0.15);
+}
+// ---------- photo
+function sFoto(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const w=p.w||820,h=p.h||470;
+  const ph=document.createElement('div');ph.className='photo';Object.assign(ph.style,{left:(640-w/2-14+(p.dx||0))+'px',top:(p.top||60)+'px',width:w+'px',height:h+'px'});d.appendChild(ph);
+  ph.innerHTML=`<div class="im" style="background-image:url('m/${p.src}')"></div><div class="clip"></div><div class="tw cap" id="${it.id}_c"></div>`;
+  typeInto(ph.querySelector('#'+it.id+'_c'),p.legenda,S+0.5,30);
+  tl.fromTo(ph,{rotation:p.rot||-2,scale:1.0},{rotation:(p.rot||-2)*0.5,scale:1.05,duration:it.dur+0.4,ease:"none"},S-0.2);
+  tl.fromTo(ph.querySelector('.im'),{backgroundPosition:'50% 40%'},{backgroundPosition:'50% 60%',duration:it.dur,ease:"none"},S);
+  if(p.destaque){
+    const box=document.createElement('div');box.className='paper';Object.assign(box.style,{left:(p.dest_x||760)+'px',top:(p.dest_y||470)+'px',padding:'16px 26px',transform:'rotate(2deg)',background:'#e9dfc6'});d.appendChild(box);
+    box.innerHTML=`<div class="tw" id="${it.id}_d" style="font-size:${p.dest_size||52}px;color:#1d1b16;min-width:${p.dest_min||300}px"></div>`;
+    tl.fromTo(box,{opacity:0,y:20},{opacity:1,y:0,duration:.3},S+p.t_dest-0.25);
+    typeInto(box.querySelector('#'+it.id+'_d'),p.destaque,S+p.t_dest,18,true);
+  }
+  if(p.carimbo) stamp(d,p.carimbo,S+p.t_carimbo,{left:(p.car_x||120)+'px',top:(p.car_y||480)+'px',fontSize:'60px',background:'rgba(233,223,198,.85)','--rot':-6});
+}
+// ---------- map
+function sMapa(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const wrap=document.createElement('div');wrap.className='mapwrap';d.appendChild(wrap);
+  const z0=p.zoom0||p.zoom||1, z1=p.zoom||1, c=P(p.centro[0],p.centro[1]), c0=P((p.centro0||p.centro)[0],(p.centro0||p.centro)[1]);
+  const zs=z1; const fs=n=>n/zs;
+  let svg=`<svg width="1280" height="720" viewBox="0 0 1280 720" style="position:absolute;left:0;top:0;overflow:visible">
+   <rect x="-400" y="-400" width="2080" height="1520" fill="#a9b3a6"/><rect x="-400" y="-400" width="2080" height="1520" fill="url(#hatch)"/>
+   <path d="${M.path}" fill="#7f8a5a" stroke="#2d3322" stroke-width="${fs(2.2)}" stroke-linejoin="round"/>
+   <path d="${M.path}" fill="none" stroke="#e9dfc6" stroke-width="${fs(7)}" opacity=".25"/>`;
+  (p.nomes||[]).forEach(n=>{const q=P(n.p[0],n.p[1]);svg+=`<text x="${q[0]}" y="${q[1]}" class="lbl" font-size="${fs(n.size||20)}" fill="${n.cor||'#2a3020'}" text-anchor="middle" letter-spacing="${fs(3)}" opacity=".85" font-style="${n.it?'italic':'normal'}">${esc(n.t)}</text>`;});
+  svg+='<g id="'+it.id+'_dyn"></g></svg>';
+  wrap.innerHTML=svg;
+  const dyn=wrap.querySelector('#'+it.id+'_dyn');
+  const NS='http://www.w3.org/2000/svg';
+  const mk=(tag,attrs)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);dyn.appendChild(e);return e;};
+  // navios
+  (p.navios||[]).forEach(nv=>{const r=rng(nv.seed||5);for(let i=0;i<nv.n;i++){const lon=nv.de[0]+(nv.ate[0]-nv.de[0])*r(),lat=nv.de[1]+(nv.ate[1]-nv.de[1])*r();const q=P(lon,lat);
+    const g=mk('g',{opacity:0});const b=document.createElementNS(NS,'path');b.setAttribute('d',`M${q[0]-fs(9)},${q[1]} L${q[0]+fs(9)},${q[1]} L${q[0]+fs(6)},${q[1]+fs(4)} L${q[0]-fs(6)},${q[1]+fs(4)}Z`);b.setAttribute('fill','#2a3a52');g.appendChild(b);
+    tl.to(g,{opacity:1,duration:.2},S+nv.t+i*0.04);
+    if(nv.fogo!=null){const tq=P(lon+(r()-.5)*0.08,lat-0.12-r()*0.06);const ln=document.createElementNS(NS,'line');ln.setAttribute('x1',q[0]);ln.setAttribute('y1',q[1]);ln.setAttribute('x2',tq[0]);ln.setAttribute('y2',tq[1]);ln.setAttribute('stroke','#c9a94d');ln.setAttribute('stroke-width',fs(1.6));ln.setAttribute('stroke-dasharray',fs(5)+' '+fs(5));ln.setAttribute('opacity',0);g.appendChild(ln);
+      const tf=S+nv.fogo+r()*1.2;tl.to(ln,{opacity:.9,duration:.08},tf);tl.to(ln,{opacity:0,duration:.3},tf+0.35);}
+  }});
+  // paraquedistas espalhados
+  (p.paras||[]).forEach(pr=>{const r=rng(pr.seed||3);for(let i=0;i<pr.n;i++){const lon=pr.c[0]+(r()-.5)*pr.r[0]*2,lat=pr.c[1]+(r()-.5)*pr.r[1]*2;const q=P(lon,lat);
+    const g=mk('g',{opacity:0});g.innerHTML=`<path d="M${q[0]-fs(7)},${q[1]-fs(6)} Q${q[0]},${q[1]-fs(16)} ${q[0]+fs(7)},${q[1]-fs(6)} Z" fill="#e9dfc6" stroke="#2f5a8a" stroke-width="${fs(1.5)}"/><line x1="${q[0]-fs(7)}" y1="${q[1]-fs(6)}" x2="${q[0]}" y2="${q[1]+fs(2)}" stroke="#2f5a8a" stroke-width="${fs(1)}"/><line x1="${q[0]+fs(7)}" y1="${q[1]-fs(6)}" x2="${q[0]}" y2="${q[1]+fs(2)}" stroke="#2f5a8a" stroke-width="${fs(1)}"/><circle cx="${q[0]}" cy="${q[1]+fs(3)}" r="${fs(2.6)}" fill="#2f5a8a"/>`;
+    const ti=S+pr.t+r()*pr.spread;tl.fromTo(g,{opacity:0,y:-fs(14)},{opacity:1,y:0,duration:.35},ti);}});
+  // setas
+  (p.setas||[]).forEach(a=>{const q0=P(a.de[0],a.de[1]),q1=P(a.para[0],a.para[1]);const mx=(q0[0]+q1[0])/2+(a.curva||0)*fs(60),my=(q0[1]+q1[1])/2;
+    const red=a.cor==='r';const pa=mk('path',{d:`M${q0[0]},${q0[1]} Q${mx},${my} ${q1[0]},${q1[1]}`,fill:'none',stroke:red?'#a3271f':'#2f5a8a','stroke-width':fs(a.w||9),'stroke-linecap':'round','marker-end':red?'url(#ahR)':'url(#ahG)'});
+    const L=pa.getTotalLength();pa.style.strokeDasharray=L+' '+L;tl.fromTo(pa,{strokeDashoffset:L,opacity:1},{strokeDashoffset:0,duration:a.dur||0.8,ease:"power2.inOut"},S+a.t);
+    tl.set(pa,{opacity:0},S-0.5);tl.set(pa,{opacity:1},S+a.t);});
+  // marcadores
+  (p.marcas||[]).forEach(m=>{const q=P(m.p[0],m.p[1]);const g=mk('g',{opacity:0});
+    const cor=m.cor==='r'?'#a3271f':(m.cor==='g'?'#3c4a2e':'#1d1b16');
+    let inner=`<circle cx="${q[0]}" cy="${q[1]}" r="${fs(m.anel?26:7)}" fill="${m.anel?'none':cor}" stroke="${cor}" stroke-width="${fs(m.anel?4:2)}"/>`;
+    const ax=q[0]+fs(m.dx||0),ay=q[1]+fs(m.dy!=null?m.dy:-18);
+    inner+=`<text x="${ax}" y="${ay}" class="lbl" text-anchor="${m.ancora||'middle'}" font-size="${fs(m.size||24)}" fill="${cor}" stroke="#e9dfc6" stroke-width="${fs(5)}" paint-order="stroke">${esc(m.t)}</text>`;
+    g.innerHTML=inner;tl.fromTo(g,{opacity:0},{opacity:1,duration:.3},S+m.at);});
+  // camera
+  const tx=z=>[640-z*c[0],360-z*c[1]];const t0=[640-z0*c0[0],360-z0*c0[1]],t1=tx(z1);
+  tl.fromTo(wrap,{x:t0[0],y:t0[1],scale:z0},{x:t1[0],y:t1[1],scale:z1,duration:it.dur+0.3,ease:"sine.inOut"},S-0.15);
+  // foto presa no mapa
+  if(p.foto){const f=p.foto;const ph=document.createElement('div');ph.className='photo';Object.assign(ph.style,{left:f.x+'px',top:f.y+'px',width:f.w+'px',height:f.h+'px',opacity:0});d.appendChild(ph);
+    ph.innerHTML=`<div class="im" style="background-image:url('m/${f.src}')"></div><div class="clip"></div><div class="tw cap" id="${it.id}_fc" style="font-size:18px"></div>`;
+    tl.fromTo(ph,{opacity:0,y:40,rotation:f.rot||3},{opacity:1,y:0,rotation:f.rot||3,duration:.45,ease:"power2.out"},S+f.at);
+    typeInto(ph.querySelector('#'+it.id+'_fc'),f.legenda,S+f.at+0.4,32);}
+  if(p.carimbo) stamp(d,p.carimbo,S+p.t_carimbo,{left:(p.car_x||90)+'px',top:(p.car_y||520)+'px',fontSize:(p.car_size||66)+'px',background:'rgba(233,223,198,.88)','--rot':-6});
+}
+// ---------- telegram strips
+function sTelegrama(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const pa=document.createElement('div');pa.className='paper';Object.assign(pa.style,{left:'150px',top:'70px',width:'980px',height:'560px',background:'#e3d7b3',transform:'rotate(-.8deg)'});d.appendChild(pa);
+  pa.innerHTML=`<div class="hd" style="position:absolute;left:44px;top:24px;font-size:56px;color:#3c4a2e">${esc(p.titulo)}</div>
+   <div class="hd" style="position:absolute;right:44px;top:44px;font-size:20px;color:#6a6450;text-align:right">${esc(p.sub)}</div>
+   <div class="rule" style="position:absolute;left:44px;right:44px;top:110px"></div>`;
+  (p.tiras||[]).forEach((t,i)=>{const s=document.createElement('div');Object.assign(s.style,{position:'absolute',left:'60px',top:(150+i*96)+'px',background:'#f4eedb',padding:'12px 18px',boxShadow:'0 2px 3px rgba(0,0,0,.25)',transform:`rotate(${[-.6,.5,-.3,.4][i%4]}deg)`,opacity:0});
+    s.innerHTML=`<div class="tw" style="font-size:36px"></div>`;pa.appendChild(s);
+    tl.set(s,{opacity:1},S+t.at);typeInto(s.firstChild,t.t,S+t.at,t.cps||26);});
+  if(p.carimbo) stamp(pa,p.carimbo,S+p.t_carimbo,{right:'50px',bottom:'34px',fontSize:'64px','--rot':-8});
+}
+// ---------- final
+function sFim(it){
+  const p=it.props,d=shot(it),S=it.start;
+  d.innerHTML='<div class="desk"></div>';
+  const pa=document.createElement('div');pa.className='paper';Object.assign(pa.style,{left:'190px',top:'120px',width:'900px',height:'470px',transform:'rotate(.8deg)'});d.appendChild(pa);
+  pa.innerHTML=`<div class="hd" style="position:absolute;left:50px;top:30px;font-size:26px;color:#6a6450">${esc(p.kicker)}</div>
+  <div class="rule" style="position:absolute;left:50px;right:50px;top:76px"></div>
+  <div class="tw" id="${it.id}_a" style="position:absolute;left:50px;right:50px;top:110px;font-size:58px;line-height:1.15;color:#1d1b16"></div>
+  <div class="tw" id="${it.id}_b" style="position:absolute;left:50px;bottom:40px;font-size:34px;color:#3c4a2e"></div>`;
+  typeInto(pa.querySelector('#'+it.id+'_a'),p.frase,S+0.2,22);
+  typeInto(pa.querySelector('#'+it.id+'_b'),p.fecho,S+p.t_fecho,16,true);
+  stamp(pa,p.carimbo,S+p.t_carimbo,{right:'50px',bottom:'30px',fontSize:'60px','--rot':-10});
+  tl.fromTo(pa,{scale:1.0},{scale:1.035,duration:it.dur,ease:"none"},S);
+  tl.to(d,{opacity:0,duration:1.0,ease:"none"},DUR-1.0);
+}
+const F={titulo:sTitulo,despacho:sDespacho,foto:sFoto,mapa:sMapa,telegrama:sTelegrama,fim:sFim};
+items.forEach(it=>{const k=it.props&&it.props.cena; if(F[k]) F[k](it);});
+
+// ---------- tag fixa
+const tg=get('tag');
+if(tg&&!tg.hidden){const el=document.getElementById('tag');el.innerHTML=esc(tg.props.text).replace(/·/,'<b>·</b>');
+  tl.fromTo(el,{opacity:0,x:-20},{opacity:1,x:0,duration:.4},tg.start);tl.to(el,{opacity:0,duration:.4},tg.start+tg.dur-0.4);}
+// ---------- régua 24h
+const rg=get('regua');
+if(rg&&!rg.hidden){const R=document.getElementById('regua'),Wr=1000;
+  for(let h=0;h<=24;h+=3){const k=document.createElement('div');k.className='tk';k.style.left=(h/24*Wr)+'px';R.appendChild(k);
+    const l=document.createElement('div');l.className='tl';l.style.left=(h/24*Wr)+'px';l.textContent=String(h).padStart(2,'0')+'h';R.appendChild(l);}
+  const mkr=R.querySelector('.mk'),lb=R.querySelector('.lb'),fill=R.querySelector('.fill');
+  tl.fromTo(R,{opacity:0},{opacity:1,duration:.4},rg.start);tl.to(R,{opacity:0,duration:.4},rg.start+rg.dur-0.4);
+  tl.set(mkr,{x:0},0);tl.set(fill,{width:0},0);
+  lb.remove();const ms=rg.props.marcas;
+  ms.forEach((m,i)=>{const x=m.h/24*Wr;tl.to(mkr,{x:x,duration:.9,ease:"power2.inOut"},m.t);tl.to(fill,{width:x,duration:.9,ease:"power2.inOut"},m.t);
+    const l=document.createElement('div');l.className='lb';l.textContent=m.rotulo;l.style.opacity=0;mkr.appendChild(l);
+    tl.set(l,{opacity:1},m.t+0.3);if(ms[i+1])tl.set(l,{opacity:0},ms[i+1].t+0.3);});
+}
+// ---------- tremor de projetor (determinístico)
+const r=rng(77);const fl=document.getElementById('flick');
+for(let t=0;t<DUR;t+=0.12){tl.set(fl,{opacity:r()*0.07},t);}
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

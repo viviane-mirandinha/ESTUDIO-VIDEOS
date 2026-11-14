@@ -1,0 +1,536 @@
+{
+ "version": 1,
+ "name": "38 - 24-10-2026 - COLAGEM DE PAPEL - Como o Titanic afundou em 1 minuto",
+ "estilo": "38-colagem-de-papel",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#15120e"
+ },
+ "duration": 67.6,
+ "template": "local",
+ "fonts": {
+  "DM Serif Display": "fonts/DMSerifDisplay-Regular.ttf",
+  "Courier Prime": "fonts/CourierPrime-Bold.ttf",
+  "Anton": "fonts/Anton-Regular.ttf"
+ },
+ "referencia": {
+  "canal": "Ordinary Origins",
+  "canal_url": "https://www.youtube.com/@OrdinaryOrigins-t4c",
+  "canal_url_2": "https://www.youtube.com/@abhijeetsinghvirdi",
+  "video": "https://www.youtube.com/watch?v=x5ireg7miPU",
+  "titulo": "How the Hamburger Conquered the World | A Paper-Cut History",
+  "canal_2": "Fakeplastictree",
+  "video_2": "https://www.youtube.com/watch?v=CMqw9usH8-8",
+  "titulo_2": "Motion Graphic | Collage",
+  "nota": "documentario em colagem de papel: fotos antigas P&B recortadas com borda branca, papel rasgado, fita adesiva, letras de jornal estilo bilhete de resgate, fundo escuro com textura, movimento stop-motion em passos (12 qps) e tremor dos recortes"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.wav",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 6.3,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 24.4,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 40.4,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 48.2,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 52.8,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 60.0,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "p0",
+    "src": "sfx/papel.wav",
+    "start": 0.1,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p1",
+    "src": "sfx/papel.wav",
+    "start": 0.7,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p2",
+    "src": "sfx/papel.wav",
+    "start": 3.1,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p3",
+    "src": "sfx/papel.wav",
+    "start": 4.85,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p4",
+    "src": "sfx/papel.wav",
+    "start": 6.5,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p5",
+    "src": "sfx/papel.wav",
+    "start": 9.35,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p6",
+    "src": "sfx/papel.wav",
+    "start": 10.4,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p7",
+    "src": "sfx/papel.wav",
+    "start": 11.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p8",
+    "src": "sfx/papel.wav",
+    "start": 12.95,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p9",
+    "src": "sfx/papel.wav",
+    "start": 14.05,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p10",
+    "src": "sfx/papel.wav",
+    "start": 15.7,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p11",
+    "src": "sfx/papel.wav",
+    "start": 17.2,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p12",
+    "src": "sfx/papel.wav",
+    "start": 18.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p13",
+    "src": "sfx/papel.wav",
+    "start": 20.8,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p14",
+    "src": "sfx/papel.wav",
+    "start": 22.8,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p15",
+    "src": "sfx/papel.wav",
+    "start": 25.9,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p16",
+    "src": "sfx/papel.wav",
+    "start": 28.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p17",
+    "src": "sfx/papel.wav",
+    "start": 30.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p18",
+    "src": "sfx/papel.wav",
+    "start": 33.4,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p19",
+    "src": "sfx/papel.wav",
+    "start": 34.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p20",
+    "src": "sfx/papel.wav",
+    "start": 38.7,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p21",
+    "src": "sfx/papel.wav",
+    "start": 40.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p22",
+    "src": "sfx/papel.wav",
+    "start": 42.5,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p23",
+    "src": "sfx/papel.wav",
+    "start": 46.7,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p24",
+    "src": "sfx/papel.wav",
+    "start": 48.3,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p25",
+    "src": "sfx/papel.wav",
+    "start": 48.7,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p26",
+    "src": "sfx/papel.wav",
+    "start": 50.6,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p27",
+    "src": "sfx/papel.wav",
+    "start": 52.9,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p28",
+    "src": "sfx/papel.wav",
+    "start": 53.4,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p29",
+    "src": "sfx/papel.wav",
+    "start": 56.0,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p30",
+    "src": "sfx/papel.wav",
+    "start": 58.0,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p31",
+    "src": "sfx/papel.wav",
+    "start": 60.4,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p32",
+    "src": "sfx/papel.wav",
+    "start": 61.95,
+    "volume": 0.1,
+    "label": "papel"
+   },
+   {
+    "id": "p33",
+    "src": "sfx/papel.wav",
+    "start": 64.0,
+    "volume": 0.1,
+    "label": "papel"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas em colagem"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Gancho: 2h40",
+   "start": 0,
+   "dur": 6.3,
+   "by": "template",
+   "props": {
+    "scene": "gancho",
+    "params": {
+     "numero": "2H40",
+     "rot1": "“PRATICAMENTE INAFUNDÁVEL”",
+     "rot2": "NO FUNDO DO MAR",
+     "t_foto": 0.1,
+     "t_num": 0.7,
+     "t_rot1": 3.1,
+     "t_rot2": 4.85
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "10/04/1912 - partida",
+   "start": 6.3,
+   "dur": 9.2,
+   "by": "template",
+   "props": {
+    "scene": "partida",
+    "params": {
+     "data": "10 ABR 1912",
+     "rotulo": "O MAIOR NAVIO DO MUNDO",
+     "origem": "SOUTHAMPTON",
+     "destino": "NOVA YORK",
+     "viagem": "1ª VIAGEM",
+     "t_data": 0.2,
+     "t_foto": 0.7,
+     "t_rot": 4.1,
+     "t_mapa": 5.3,
+     "t_ori": 5.6,
+     "t_fim": 8.0,
+     "t_dest": 6.65,
+     "t_viagem": 7.75
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "23:40 - iceberg",
+   "start": 15.5,
+   "dur": 8.9,
+   "by": "template",
+   "props": {
+    "scene": "iceberg",
+    "params": {
+     "dias": "4 DIAS DEPOIS",
+     "hora": "23:40",
+     "local": "ATLÂNTICO NORTE",
+     "tarde": "TARDE DEMAIS",
+     "t_dias": 0.2,
+     "t_hora": 1.7,
+     "t_x": 3.1,
+     "t_ice": 5.3,
+     "t_tarde": 7.3
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Casco: 5 compartimentos",
+   "start": 24.4,
+   "dur": 11.5,
+   "by": "template",
+   "props": {
+    "scene": "casco",
+    "params": {
+     "lado": "LADO DIREITO (ESTIBORDO)",
+     "n_comp": "5 COMPARTIMENTOS",
+     "aguenta": "AGUENTAVA 4 ALAGADOS",
+     "com5": "COM 5...",
+     "carimbo": "CONDENADO",
+     "t_ice": 0.5,
+     "t_lado": 1.5,
+     "t_comp": 4.15,
+     "t_aguenta": 6.2,
+     "t_quatro": 7.2,
+     "t_com5": 9.0,
+     "t_carimbo": 10.2
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "A proa afunda",
+   "start": 35.9,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "scene": "alaga",
+    "params": {
+     "rotulo": "A PROA AFUNDA",
+     "t_agua": 1.0,
+     "passo": 0.4,
+     "t_proa": 2.8,
+     "t_rot": 2.9
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Botes x pessoas",
+   "start": 40.4,
+   "dur": 7.8,
+   "by": "template",
+   "props": {
+    "scene": "botes",
+    "params": {
+     "botes": 1178,
+     "bordo": 2224,
+     "l1": "LUGARES NOS BOTES",
+     "n1": "1.178",
+     "l2": "PESSOAS A BORDO",
+     "n2": "+2.200",
+     "t_foto": 0.2,
+     "t_b1": 2.1,
+     "t_b2": 6.3
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "2:20 - parte em dois",
+   "start": 48.2,
+   "dur": 4.6,
+   "by": "template",
+   "props": {
+    "scene": "parte",
+    "params": {
+     "hora": "2:20",
+     "rotulo": "PARTIDO EM DOIS",
+     "credito": "pintura: Willy Stöwer, 1912",
+     "t_foto": 0.1,
+     "t_hora": 0.5,
+     "t_parte": 2.4,
+     "t_some": 3.25
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Mortos e sobreviventes",
+   "start": 52.8,
+   "dur": 7.2,
+   "by": "template",
+   "props": {
+    "scene": "balanco",
+    "params": {
+     "mortos": "+1.500 MORTOS",
+     "navio": "CARPATHIA",
+     "sobrev": "≈700 SOBREVIVENTES",
+     "t_jornal": 0.1,
+     "t_mortos": 0.6,
+     "t_carp": 3.2,
+     "t_sobrev": 5.2
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "1985 - destroços",
+   "start": 60.0,
+   "dur": 7.6,
+   "by": "template",
+   "props": {
+    "scene": "fundo",
+    "params": {
+     "ano": "1985",
+     "prof": "QUASE 4.000 M",
+     "credito": "Fotos: Wikimedia Commons (domínio público)",
+     "t_foto": 0.4,
+     "t_ano": 1.95,
+     "t_prof": 4.0,
+     "t_cred": 5.0
+    }
+   }
+  }
+ ]
+}
