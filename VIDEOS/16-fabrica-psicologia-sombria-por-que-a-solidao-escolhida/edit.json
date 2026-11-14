@@ -1,0 +1,384 @@
+{
+ "version": 1,
+ "name": "16 - 22-10-2026 - MENTE SOMBRIA - Schopenhauer Solidão Escolhida X Isolamento",
+ "estilo": "Psicologia sombria",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#07080b"
+ },
+ "duration": 63.55,
+ "template": "generic",
+ "fonts": {
+  "Cormorant": "fonts/Cormorant.ttf",
+  "CormorantI": "fonts/CormorantItalic.ttf"
+ },
+ "head": "<style>#img01 img,#img01{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img02 img,#img02{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img03 img,#img03{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img04 img,#img04{filter:grayscale(1) contrast(1.15) brightness(.75)}\n#img05 img,#img05{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img06 img,#img06{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img07 img,#img07{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img08 img,#img08{filter:grayscale(.5) sepia(.12) contrast(1.08) brightness(.82) saturate(.85)}\n#img09 img,#img09{filter:grayscale(1) contrast(1.15) brightness(.75)}</style>",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Pinturas"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta/grão"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "img01",
+   "type": "image",
+   "track": "fundo",
+   "label": "Você já se perguntou por que algumas pes",
+   "start": 0,
+   "dur": 7.48,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "src": "img/01.jpeg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img02",
+   "type": "image",
+   "track": "fundo",
+   "label": "Ele via solidão como um estado de liberd",
+   "start": 7.28,
+   "dur": 7.94,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img03",
+   "type": "image",
+   "track": "fundo",
+   "label": "Quando alguém opta pela solidão, faz uma",
+   "start": 15.02,
+   "dur": 7.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img04",
+   "type": "image",
+   "track": "fundo",
+   "label": "O isolamento, por outro lado, é imposto ",
+   "start": 22.32,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img05",
+   "type": "image",
+   "track": "fundo",
+   "label": "Se essa reflexão te tocou, deixa o like.",
+   "start": 26.92,
+   "dur": 7.94,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img06",
+   "type": "image",
+   "track": "fundo",
+   "label": "A solidão escolhida permite que uma pess",
+   "start": 34.66,
+   "dur": 6.08,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img07",
+   "type": "image",
+   "track": "fundo",
+   "label": "Ela oferece um espaço seguro para pensar",
+   "start": 40.54,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img08",
+   "type": "image",
+   "track": "fundo",
+   "label": "O isolamento, porém, é frequentemente ma",
+   "start": 46.34,
+   "dur": 6.12,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "img09",
+   "type": "image",
+   "track": "fundo",
+   "label": "A solidão pode ser uma escolha poderosa.",
+   "start": 52.26,
+   "dur": 11.29,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/09.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "grade",
+   "type": "html",
+   "track": "visual",
+   "label": "vinheta + grão",
+   "start": 0,
+   "dur": 63.55,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720,
+    "html": "<div class='vg'></div><div class='gr'></div>",
+    "css": ".vg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%),linear-gradient(rgba(5,6,10,.25),rgba(5,6,10,.25))}.gr{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")}"
+   }
+  },
+  {
+   "id": "t01",
+   "type": "text",
+   "track": "textos",
+   "label": "Schopenhauer:",
+   "start": 0.4,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Schopenhauer:",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 54,
+    "color": "#ece4d4",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t02",
+   "type": "text",
+   "track": "textos",
+   "label": "Solidão Escolhida X Isol",
+   "start": 1.6,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Solidão Escolhida X Isolamento",
+    "x": 760,
+    "y": 395,
+    "w": 1100,
+    "size": 56,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t03",
+   "type": "text",
+   "track": "textos",
+   "label": "ELE VIA SOLIDÃO COMO UM",
+   "start": 7.78,
+   "dur": 3.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ELE VIA SOLIDÃO COMO UM",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 50,
+    "color": "#c9a96e",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t04",
+   "type": "text",
+   "track": "textos",
+   "label": "SE ESSA REFLEXÃO TE TOCO",
+   "start": 27.42,
+   "dur": 3.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SE ESSA REFLEXÃO TE TOCOU",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 50,
+    "color": "#c9a96e",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t05",
+   "type": "text",
+   "track": "textos",
+   "label": "O ISOLAMENTO, PORÉM, É F",
+   "start": 46.84,
+   "dur": 3.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "O ISOLAMENTO, PORÉM, É FREQUENTEMENTE",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 50,
+    "color": "#c9a96e",
+    "font": "Cormorant",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t06",
+   "type": "text",
+   "track": "textos",
+   "label": "deixa o like se fez sent",
+   "start": 29.56,
+   "dur": 3.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "deixa o like se fez sentido",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 30,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  },
+  {
+   "id": "t07",
+   "type": "text",
+   "track": "textos",
+   "label": "inscreva-se",
+   "start": 59.55,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "inscreva-se",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 44,
+    "color": "#ece4d4",
+    "font": "CormorantI",
+    "weight": 500,
+    "align": "center",
+    "shadow": true,
+    "upper": false
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/estilos/psicologia-sombria/preencher.py",
+  "creditos": "img/creditos.json"
+ },
+ "referencia": {
+  "video": "https://youtu.be/1MgWadC7S4I",
+  "canal": "Einzelgänger",
+  "canal_url": "https://www.youtube.com/channel/UCybBViio_TH_uiFFDJuz5tg",
+  "titulo": "Why Squidward Is So Miserable",
+  "nota": "Einzelgänger"
+ }
+}

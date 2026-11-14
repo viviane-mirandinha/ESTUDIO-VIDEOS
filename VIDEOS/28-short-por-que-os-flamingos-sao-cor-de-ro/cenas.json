@@ -1,0 +1,1126 @@
+{
+ "estado": "pronto",
+ "estilo": "short-documentario",
+ "titulo": "Por Que Flamingos São Cor-de-Rosa?",
+ "voz": "voz.mp3",
+ "duracao_voz": 49.704,
+ "permite_video": true,
+ "vertical": true,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 2.24,
+   "texto": "Flamingos são cor -de -rosa por uma razão.",
+   "query": "Flamingo reason",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/15_Dehavilland_D.H._95_Flamingo_%28c-n_95005%29_%2815650368688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/34/15_Dehavilland_D.H._95_Flamingo_%28c-n_95005%29_%2815650368688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "15 Dehavilland D.H. 95 Flamingo (c-n 95005) (15650368688).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:15_Dehavilland_D.H._95_Flamingo_(c-n_95005)_(15650368688).jpg",
+     "w": 1609,
+     "h": 875,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Roadside_flamingo_statue%2C_Frog_City%2C_Route_41%2C_Florida_LOC_36720113913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Roadside_flamingo_statue%2C_Frog_City%2C_Route_41%2C_Florida_LOC_36720113913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Roadside flamingo statue, Frog City, Route 41, Florida LOC 36720113913.jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Roadside_flamingo_statue,_Frog_City,_Route_41,_Florida_LOC_36720113913.jpg",
+     "w": 1024,
+     "h": 713,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/A_flamingo_%286124598661%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/36/A_flamingo_%286124598661%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "A flamingo (6124598661).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_flamingo_(6124598661).jpg",
+     "w": 1435,
+     "h": 2110,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Aircraft_of_the_Royal_Air_Force_1939-1945-_De_Havilland_Dh_95_Flamingo_and_Hertfordshire._CH5854.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/11/Aircraft_of_the_Royal_Air_Force_1939-1945-_De_Havilland_Dh_95_Flamingo_and_Hertfordshire._CH5854.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Aircraft of the Royal Air Force 1939-1945- De Havilland Dh 95 Flamingo and Hertfordshire. CH5854.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Aircraft_of_the_Royal_Air_Force_1939-1945-_De_Havilland_Dh_95_Flamingo_and_Hertfordshire._CH5854.jpg",
+     "w": 800,
+     "h": 612,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/BFW_%28Udet%29_U_12a_%27Flamingo%27%2C_1929_bei_Hachtel_notgelandet_%281b%29.jpg/1920px-BFW_%28Udet%29_U_12a_%27Flamingo%27%2C_1929_bei_Hachtel_notgelandet_%281b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/BFW_%28Udet%29_U_12a_%27Flamingo%27%2C_1929_bei_Hachtel_notgelandet_%281b%29.jpg/330px-BFW_%28Udet%29_U_12a_%27Flamingo%27%2C_1929_bei_Hachtel_notgelandet_%281b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "BFW (Udet) U 12a 'Flamingo', 1929 bei Hachtel notgelandet (1b).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:BFW_(Udet)_U_12a_%27Flamingo%27,_1929_bei_Hachtel_notgelandet_(1b).jpg",
+     "w": 2074,
+     "h": 1400,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bayerische_Flugzeugwerke_%28BFW%29_Flamingo_%281927%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bayerische_Flugzeugwerke_%28BFW%29_Flamingo_%281927%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bayerische Flugzeugwerke (BFW) Flamingo (1927).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bayerische_Flugzeugwerke_(BFW)_Flamingo_(1927).jpg",
+     "w": 1152,
+     "h": 994,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "15 Dehavilland D.H. 95 Flamingo (c-n 95005) (15650368688).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:15_Dehavilland_D.H._95_Flamingo_(c-n_95005)_(15650368688).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/15_Dehavilland_D.H._95_Flamingo_%28c-n_95005%29_%2815650368688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/34/15_Dehavilland_D.H._95_Flamingo_%28c-n_95005%29_%2815650368688%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/01-2ee325.jpg"
+   }
+  },
+  {
+   "i": 1,
+   "s": 2.96,
+   "e": 5.6,
+   "texto": "Dieta rica em carotenoides faz eles brilharem.",
+   "query": "flamingo Carotenoids diet",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg/1920px-Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg/330px-Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Franklin's Gulls Huron Wetland Management District South Dakota (51914903975).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_(51914903975).jpg",
+     "w": 4397,
+     "h": 2747,
+     "nota": 5
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Greater_Flamingos_on_the_lake.jpg/1920px-Greater_Flamingos_on_the_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Greater_Flamingos_on_the_lake.jpg/330px-Greater_Flamingos_on_the_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Greater Flamingos on the lake.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Greater_Flamingos_on_the_lake.jpg",
+     "w": 4889,
+     "h": 3264,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Franklin's Gulls Huron Wetland Management District South Dakota (51914903975).jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_(51914903975).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg/1920px-Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg/330px-Franklin%27s_Gulls_Huron_Wetland_Management_District_South_Dakota_%2851914903975%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/02-821a3c.jpg"
+   }
+  },
+  {
+   "i": 2,
+   "s": 6.22,
+   "e": 8.02,
+   "texto": "Comem pequenos crustáceos,",
+   "query": "flamingo Crustaceans feeding",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Feeding_time_in_the_highlands.jpg/1920px-Feeding_time_in_the_highlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Feeding_time_in_the_highlands.jpg/330px-Feeding_time_in_the_highlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Feeding time in the highlands.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Feeding_time_in_the_highlands.jpg",
+     "w": 3840,
+     "h": 5760,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Greater_Flamingos_on_the_lake.jpg/1920px-Greater_Flamingos_on_the_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Greater_Flamingos_on_the_lake.jpg/330px-Greater_Flamingos_on_the_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Greater Flamingos on the lake.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Greater_Flamingos_on_the_lake.jpg",
+     "w": 4889,
+     "h": 3264,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg/1920px-Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg/330px-Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Phoenicopterus ruber (greater flamingo) 1.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_ruber_(greater_flamingo)_1.jpg",
+     "w": 2769,
+     "h": 1977,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg/1920px-Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg/330px-Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Phoenicopterus ruber (greater flamingo) 2.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_ruber_(greater_flamingo)_2.jpg",
+     "w": 2493,
+     "h": 1863,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Shrinking_Lake_Urmia_%28MODIS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Shrinking_Lake_Urmia_%28MODIS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Shrinking Lake Urmia (MODIS).jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Shrinking_Lake_Urmia_(MODIS).jpg",
+     "w": 1213,
+     "h": 834,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Feeding time in the highlands.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Feeding_time_in_the_highlands.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Feeding_time_in_the_highlands.jpg/1920px-Feeding_time_in_the_highlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Feeding_time_in_the_highlands.jpg/330px-Feeding_time_in_the_highlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/03-b9389b.jpg"
+   }
+  },
+  {
+   "i": 3,
+   "s": 8.06,
+   "e": 9.68,
+   "texto": "poluentes o tornam rosa.",
+   "query": "flamingo Pollution turning",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/04-2c319e.jpg"
+   }
+  },
+  {
+   "i": 4,
+   "s": 10.49,
+   "e": 12.44,
+   "texto": "Penas internas ficam vermelho carmim,",
+   "query": "flamingo Red internal feathers",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/05-773ed2.jpg"
+   }
+  },
+  {
+   "i": 5,
+   "s": 12.56,
+   "e": 17.44,
+   "texto": "as externas preto. Cor do bico e pernas igual a duas penas internas.",
+   "query": "flamingo Black external feathers",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/06-659d7d.jpg"
+   }
+  },
+  {
+   "i": 6,
+   "s": 18.08,
+   "e": 20.92,
+   "texto": "Juvenis nascem castanho -acinzentados vão rosando.",
+   "query": "flamingo Juveniles brown",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/07-05FlamingosPlcns2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/05/07-05FlamingosPlcns2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "07-05FlamingosPlcns2.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:07-05FlamingosPlcns2.jpg",
+     "w": 1000,
+     "h": 590,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Ardea_cinerea%2C_Krefeld_%28DE%29_--_2024_--_0240.jpg/1920px-Ardea_cinerea%2C_Krefeld_%28DE%29_--_2024_--_0240.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Ardea_cinerea%2C_Krefeld_%28DE%29_--_2024_--_0240.jpg/330px-Ardea_cinerea%2C_Krefeld_%28DE%29_--_2024_--_0240.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Ardea cinerea, Krefeld (DE) -- 2024 -- 0240.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea,_Krefeld_(DE)_--_2024_--_0240.jpg",
+     "w": 2110,
+     "h": 3164,
+     "nota": 0
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "07-05FlamingosPlcns2.jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:07-05FlamingosPlcns2.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/07-05FlamingosPlcns2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/05/07-05FlamingosPlcns2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/07-7a0940.jpg"
+   }
+  },
+  {
+   "i": 7,
+   "s": 21.67,
+   "e": 23.6,
+   "texto": "Na guiana francesa nidificam,",
+   "query": "flamingo French Guiana nesting",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/08-5530d4.jpg"
+   }
+  },
+  {
+   "i": 8,
+   "s": 23.64,
+   "e": 29.28,
+   "texto": "ameaças à sobrevivência. Estabelecimento de plantações ameaça habitats naturais.",
+   "query": "flamingo Agriculture threats",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/09-08c362.jpg"
+   }
+  },
+  {
+   "i": 9,
+   "s": 30.0,
+   "e": 33.24,
+   "texto": "Caça e captura de ovos prejudicam população do Brasil,",
+   "query": "flamingo Brasil hunting",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg/1920px-A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg/330px-A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A Painting in Flight - A Greater Flamingo in the Sky (49883524576).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_(49883524576).jpg",
+     "w": 3709,
+     "h": 2473,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A Painting in Flight - A Greater Flamingo in the Sky (49883524576).jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_(49883524576).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg/1920px-A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg/330px-A_Painting_in_Flight_-_A_Greater_Flamingo_in_the_Sky_%2849883524576%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/10-2a3818.jpg"
+   }
+  },
+  {
+   "i": 10,
+   "s": 33.38,
+   "e": 36.16,
+   "texto": "preservação necessária para manter espécie viva.",
+   "query": "flamingo Conservation needed",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bird-lore_%281901%29_%2814569240447%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bird-lore_%281901%29_%2814569240447%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bird-lore (1901) (14569240447).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1901)_(14569240447).jpg",
+     "w": 1856,
+     "h": 1282,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Bird-lore_%281913%29_%2814569066987%29.jpg/1920px-Bird-lore_%281913%29_%2814569066987%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Bird-lore_%281913%29_%2814569066987%29.jpg/330px-Bird-lore_%281913%29_%2814569066987%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bird-lore (1913) (14569066987).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1913)_(14569066987).jpg",
+     "w": 1984,
+     "h": 2428,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Bird-lore_%281915%29_%2814753084504%29.jpg/1920px-Bird-lore_%281915%29_%2814753084504%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Bird-lore_%281915%29_%2814753084504%29.jpg/330px-Bird-lore_%281915%29_%2814753084504%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bird-lore (1915) (14753084504).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1915)_(14753084504).jpg",
+     "w": 2074,
+     "h": 3094,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Bird-lore_%281918%29_%2814563714538%29.jpg/1920px-Bird-lore_%281918%29_%2814563714538%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Bird-lore_%281918%29_%2814563714538%29.jpg/330px-Bird-lore_%281918%29_%2814563714538%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bird-lore (1918) (14563714538).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1918)_(14563714538).jpg",
+     "w": 2832,
+     "h": 2122,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Bird-lore_%281918%29_%2814563922067%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Bird-lore_%281918%29_%2814563922067%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bird-lore (1918) (14563922067).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1918)_(14563922067).jpg",
+     "w": 1832,
+     "h": 2262,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Bird-lore_%281919%29_%2814775247823%29.jpg/1920px-Bird-lore_%281919%29_%2814775247823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Bird-lore_%281919%29_%2814775247823%29.jpg/330px-Bird-lore_%281919%29_%2814775247823%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bird-lore (1919) (14775247823).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1919)_(14775247823).jpg",
+     "w": 2672,
+     "h": 1796,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Bird-lore (1901) (14569240447).jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Bird-lore_(1901)_(14569240447).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bird-lore_%281901%29_%2814569240447%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bird-lore_%281901%29_%2814569240447%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/11-5090f2.jpg"
+   }
+  },
+  {
+   "i": 11,
+   "s": 36.84,
+   "e": 39.62,
+   "texto": "Dieta altera pigmentação de penas internas.",
+   "query": "flamingo Feather pigment change",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg/1920px-Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg/330px-Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Pink Flamingos Wading Through a Salt Water Lake.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg",
+     "w": 2145,
+     "h": 1427,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg/1920px-Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg/330px-Phoenicopterus_ruber_%28greater_flamingo%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Phoenicopterus ruber (greater flamingo) 1.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_ruber_(greater_flamingo)_1.jpg",
+     "w": 2769,
+     "h": 1977,
+     "nota": 1
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg/1920px-Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg/330px-Phoenicopterus_ruber_%28greater_flamingo%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Phoenicopterus ruber (greater flamingo) 2.jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Phoenicopterus_ruber_(greater_flamingo)_2.jpg",
+     "w": 2493,
+     "h": 1863,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Pink Flamingos Wading Through a Salt Water Lake.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg/1920px-Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg/330px-Pink_Flamingos_Wading_Through_a_Salt_Water_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/12-9ea089.jpg"
+   }
+  },
+  {
+   "i": 12,
+   "s": 40.46,
+   "e": 42.54,
+   "texto": "Compostos químicos podem descolorir.",
+   "query": "flamingo Chemicals decolorizing",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+    "licenca": "CC BY 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/13-7493c3.jpg"
+   }
+  },
+  {
+   "i": 13,
+   "s": 43.3,
+   "e": 45.56,
+   "texto": "Flamingos mais vibrantes são saudáveis.",
+   "query": "flamingo Vibrant health",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/1920px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/330px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "The dance of desire Flamingos in their deepest pink.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg",
+     "w": 6000,
+     "h": 4000,
+     "nota": 3
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "The dance of desire Flamingos in their deepest pink.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/1920px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/330px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/14-fedace.jpg"
+   }
+  },
+  {
+   "i": 14,
+   "s": 46.56,
+   "e": 48.54,
+   "texto": "Preservação é crucial para a cor natural.",
+   "query": "flamingo Natural color preservation",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-12).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-12).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-16).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-16).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-20%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-20).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-20).jpg",
+     "w": 3500,
+     "h": 2333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-22%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-22).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-22).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-25%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-25).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-25).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/1920px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg/330px-Biodiversity_-_Pink_flamingos_%28P-046108-00-26%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Biodiversity - Pink flamingos (P-046108-00-26).jpg",
+     "licenca": "CC BY 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Biodiversity_-_Pink_flamingos_(P-046108-00-26).jpg",
+     "w": 3500,
+     "h": 2334,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "The dance of desire Flamingos in their deepest pink.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/1920px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg/330px-The_dance_of_desire_Flamingos_in_their_deepest_pink.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/14-fedace.jpg",
+    "repetida": true
+   }
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.14,
+  "voz": 0.21,
+  "whisper": 0.18,
+  "imagens": 1.17
+ },
+ "obs": [
+  "fatos de referência: Wikipedia “Flamingo-americano” (https://pt.wikipedia.org/wiki/Flamingo-americano)",
+  "roteiro pelo Ollama qwen2.5:7b (91 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (49.7s)",
+  "14 imagens/clipes para 15 cenas (Wikimedia)"
+ ],
+ "inicio": "2026-10-22T22:33:37-03:00"
+}

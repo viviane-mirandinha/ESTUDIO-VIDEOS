@@ -1,0 +1,15 @@
+{
+ "modo": "tema",
+ "tema": "Por que a Torre Eiffel quase foi demolida",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "broll-documentario",
+ "duracao": 40.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "CURIOSIDADES DO MUNDO",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": true,
+ "criado": "2026-10-22T20:52:37"
+}

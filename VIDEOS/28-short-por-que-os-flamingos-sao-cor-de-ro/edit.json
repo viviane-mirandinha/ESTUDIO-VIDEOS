@@ -1,0 +1,523 @@
+{
+ "version": 1,
+ "name": "28 - 22-10-2026 - CURIOSIDADES RÁPIDAS - Por Que Flamingos São Cor-de-Rosa",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#05060a"
+ },
+ "duration": 51.5,
+ "template": "generic",
+ "fonts": {
+  "Preset": "fonts/burbank-big-condensed-black.otf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas (fotos / clipes)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / flash"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "c0",
+   "track": "fundo",
+   "label": "Flamingos são cor -de -rosa por uma razã",
+   "start": 0.0,
+   "dur": 3.21,
+   "in": "none",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/01-2ee325.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c1",
+   "track": "fundo",
+   "label": "Dieta rica em carotenoides faz eles bril",
+   "start": 2.96,
+   "dur": 3.51,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/02-821a3c.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c2",
+   "track": "fundo",
+   "label": "Comem pequenos crustáceos,",
+   "start": 6.22,
+   "dur": 2.09,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/03-b9389b.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "c3",
+   "track": "fundo",
+   "label": "poluentes o tornam rosa.",
+   "start": 8.06,
+   "dur": 2.68,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/04-2c319e.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c4",
+   "track": "fundo",
+   "label": "Penas internas ficam vermelho carmim,",
+   "start": 10.49,
+   "dur": 2.32,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/05-773ed2.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c5",
+   "track": "fundo",
+   "label": "as externas preto. Cor do bico e pernas ",
+   "start": 12.56,
+   "dur": 5.77,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/06-659d7d.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "fl5",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 12.51,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1080px;height:1920px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c6",
+   "track": "fundo",
+   "label": "Juvenis nascem castanho -acinzentados vã",
+   "start": 18.08,
+   "dur": 3.84,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/07-7a0940.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "c7",
+   "track": "fundo",
+   "label": "Na guiana francesa nidificam,",
+   "start": 21.67,
+   "dur": 2.22,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/08-5530d4.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_down",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c8",
+   "track": "fundo",
+   "label": "ameaças à sobrevivência. Estabelecimento",
+   "start": 23.64,
+   "dur": 6.61,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/09-08c362.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c9",
+   "track": "fundo",
+   "label": "Caça e captura de ovos prejudicam popula",
+   "start": 30.0,
+   "dur": 3.63,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/10-2a3818.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c10",
+   "track": "fundo",
+   "label": "preservação necessária para manter espéc",
+   "start": 33.38,
+   "dur": 3.71,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/11-5090f2.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "fl10",
+   "type": "html",
+   "track": "visual",
+   "label": "Flash",
+   "start": 33.33,
+   "dur": 0.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class='fl'></div>",
+    "css": ".fl{width:1080px;height:1920px;background:#fff;opacity:.5}",
+    "fill": true
+   }
+  },
+  {
+   "id": "c11",
+   "track": "fundo",
+   "label": "Dieta altera pigmentação de penas intern",
+   "start": 36.84,
+   "dur": 3.87,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/12-9ea089.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.21
+   }
+  },
+  {
+   "id": "c12",
+   "track": "fundo",
+   "label": "Compostos químicos podem descolorir.",
+   "start": 40.46,
+   "dur": 3.09,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/13-7493c3.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.14
+   }
+  },
+  {
+   "id": "c13",
+   "track": "fundo",
+   "label": "Flamingos mais vibrantes são saudáveis.",
+   "start": 43.3,
+   "dur": 3.51,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/14-fedace.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.182
+   }
+  },
+  {
+   "id": "c14",
+   "track": "fundo",
+   "label": "Preservação é crucial para a cor natural",
+   "start": 46.56,
+   "dur": 4.94,
+   "in": "fade",
+   "out": "none",
+   "type": "image",
+   "props": {
+    "src": "img/14-fedace.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.119
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + degradê",
+   "start": 0,
+   "dur": 51.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vg'></div>",
+    "fill": true,
+    "css": ".vg{width:1080px;height:1920px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%),linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 30%),linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%)}"
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título (topo)",
+   "start": 0,
+   "dur": 49.9,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "Por Que Flamingos São Cor-de-Rosa?",
+    "x": 540.0,
+    "y": 250,
+    "w": 960,
+    "size": 76,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "bg": "rgba(0,0,0,.62)",
+    "pad": 18,
+    "radius": 22,
+    "shadow": false,
+    "line": 1.05,
+    "highlight": [],
+    "hl_color": "#ffd400"
+   }
+  },
+  {
+   "id": "selo",
+   "type": "text",
+   "track": "textos",
+   "label": "Selo do canal",
+   "start": 0,
+   "dur": 49.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CURIOSIDADES RÁPIDAS",
+    "x": 540.0,
+    "y": 1760,
+    "w": 700,
+    "size": 40,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "bg": "rgba(0,0,0,.45)",
+    "pad": 6,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 49.9,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "words_file": "words.json",
+    "per_group": 2,
+    "x": 540.0,
+    "y": 1080,
+    "size": 108,
+    "color": "#ffffff",
+    "dim": "rgba(255,255,255,.62)",
+    "hl_color": "#ffd400",
+    "keywords": [
+     "cor-de-rosa",
+     "carotenoides",
+     "poluentes",
+     "vermelho-carmim",
+     "preto",
+     "rosando",
+     "amenaças",
+     "plantações",
+     "caça",
+     "preservação"
+    ],
+    "font": "Preset",
+    "weight": 900,
+    "stroke": "#000000",
+    "stroke_w": 7,
+    "upper": true
+   }
+  },
+  {
+   "id": "fim_fundo",
+   "type": "html",
+   "track": "visual",
+   "label": "Cartão final (fundo)",
+   "start": 49.9,
+   "dur": 1.6,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class='ff'></div>",
+    "css": ".ff{width:1080px;height:1920px;background:rgba(5,6,10,.8)}",
+    "fill": true
+   }
+  },
+  {
+   "id": "fim_canal",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: canal",
+   "start": 50.1,
+   "dur": 1.4,
+   "in": "pop",
+   "out": "none",
+   "props": {
+    "text": "CURIOSIDADES RÁPIDAS",
+    "x": 540.0,
+    "y": 844.8,
+    "w": 960,
+    "size": 96,
+    "color": "#ffffff",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "upper": true,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim_insc",
+   "type": "text",
+   "track": "textos",
+   "label": "Cartão final: chamada",
+   "start": 50.3,
+   "dur": 1.2,
+   "in": "slide_up",
+   "out": "none",
+   "props": {
+    "text": "Segue para mais",
+    "x": 540.0,
+    "y": 994.8,
+    "w": 860,
+    "size": 56,
+    "color": "#111111",
+    "font": "Preset",
+    "weight": 900,
+    "align": "center",
+    "bg": "#ffd400",
+    "pad": 12,
+    "radius": 40,
+    "shadow": false,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/lib/preencher_preset.py",
+  "preset": {
+   "formato": "short",
+   "cor_destaque": "#ffd400",
+   "cor_texto": "#ffffff",
+   "fundo": "#05060a",
+   "fonte": "condensada",
+   "legenda": true,
+   "legenda_pos": "centro",
+   "legenda_palavras": 2,
+   "legenda_tamanho": 0,
+   "legenda_caixa": false,
+   "titulo_fixo": true,
+   "zoom": 0.14,
+   "flash_cada": 5,
+   "vinheta": true,
+   "cartao_final": true,
+   "cta": false,
+   "transicao": 0.25
+  },
+  "creditos": "img/creditos.json"
+ },
+ "estilo": "Short documentário",
+ "ferramenta": "Fábrica de Shorts"
+}

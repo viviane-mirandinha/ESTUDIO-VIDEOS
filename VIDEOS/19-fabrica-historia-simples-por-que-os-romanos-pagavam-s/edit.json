@@ -1,0 +1,333 @@
+{
+ "version": 1,
+ "name": "19 - 22-10-2026 - SEGREDOS DO DINHEIRO ANTIGO - Salário em sal Por que os romanos pagavam assim",
+ "estilo": "Canal de história simples",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0a08"
+ },
+ "duration": 32.78,
+ "template": "generic",
+ "fonts": {
+  "Cormorant": "fonts/Cormorant.ttf",
+  "CormorantI": "fonts/CormorantItalic.ttf"
+ },
+ "head": "<style>#s0 img,#s0{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s1 img,#s1{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s2 img,#s2{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s3 img,#s3{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s4 img,#s4{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s5 img,#s5{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s6 img,#s6{filter:grayscale(1) sepia(.5) contrast(1.25) brightness(.75)}</style>",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fotos de arquivo (Ken Burns)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / grão"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s0",
+   "type": "image",
+   "track": "fundo",
+   "label": "O exército romano tinha um segredo milen",
+   "start": 0.0,
+   "dur": 3.86,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/01.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s1",
+   "type": "image",
+   "track": "fundo",
+   "label": "Eles não pagavam soldos em moedas, mas s",
+   "start": 3.36,
+   "dur": 4.76,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_right",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s2",
+   "type": "image",
+   "track": "fundo",
+   "label": "Sim, você ouviu bem. O salário dos legio",
+   "start": 7.62,
+   "dur": 5.38,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s3",
+   "type": "image",
+   "track": "fundo",
+   "label": "sal grosso, conhecido como salarium. Por",
+   "start": 12.5,
+   "dur": 4.78,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_left",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s4",
+   "type": "image",
+   "track": "fundo",
+   "label": "Para manter a lealdade ao império e gara",
+   "start": 16.78,
+   "dur": 6.22,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s5",
+   "type": "image",
+   "track": "fundo",
+   "label": "E esse hábito influenciou nosso próprio ",
+   "start": 22.5,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_up",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s6",
+   "type": "image",
+   "track": "fundo",
+   "label": "Se essa parte te surpreendeu, deixe o li",
+   "start": 26.8,
+   "dur": 5.98,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + moldura",
+   "start": 0,
+   "dur": 32.78,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vig'></div>",
+    "css": ".vig{width:1236px;height:684px;border-radius:22px;box-shadow:inset 0 0 140px 40px rgba(0,0,0,.75);background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684
+   }
+  },
+  {
+   "id": "grao",
+   "type": "html",
+   "track": "visual",
+   "label": "Grão de filme",
+   "start": 0,
+   "dur": 32.78,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<svg width='1280' height='720' style='opacity:.16;mix-blend-mode:overlay'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fade_final",
+   "type": "html",
+   "track": "visual",
+   "label": "Fade p/ preto",
+   "start": 31.48,
+   "dur": 1.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div style='width:1280px;height:720px;background:#000'></div>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título",
+   "start": 0.4,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Salário em sal: Por que os romanos pagavam assim?",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 56,
+    "color": "#eadfc4",
+    "font": "Cormorant",
+    "weight": 600,
+    "align": "center",
+    "bg": "rgba(0,0,0,.5)",
+    "pad": 16,
+    "radius": 6,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "cta0",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA like 1",
+   "start": 30.22,
+   "dur": 3.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Deixa o like pra apoiar o canal",
+    "x": 640,
+    "y": 640,
+    "w": 900,
+    "size": 28,
+    "color": "#eadfc4",
+    "font": "CormorantI",
+    "weight": 600,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 10,
+    "radius": 6,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim",
+   "type": "text",
+   "track": "textos",
+   "label": "Encerramento",
+   "start": 28.58,
+   "dur": 2.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SEGREDOS DO DINHEIRO ANTIGO",
+    "x": 640,
+    "y": 360,
+    "w": 1000,
+    "size": 48,
+    "color": "#eadfc4",
+    "font": "Cormorant",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/estilos/historia-simples/preencher.py",
+  "creditos": "img/creditos.json"
+ },
+ "referencia": {
+  "canal": "Segredos do Dinheiro Antigo",
+  "canal_url": "https://www.youtube.com/channel/UCKqWZdkxZLii5YXzj54UOoQ",
+  "video": "https://youtu.be/rk5kCGZoxgc",
+  "titulo": "A História Sombria de Como a Era Dourada da América Chegou ao Fim | Documentário"
+ }
+}

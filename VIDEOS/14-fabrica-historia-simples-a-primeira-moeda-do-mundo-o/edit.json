@@ -1,0 +1,532 @@
+{
+ "version": 1,
+ "name": "14 - 22-10-2026 - SEGREDOS DO DINHEIRO ANTIGO - A primeira moeda do mundo e seu rei rico",
+ "estilo": "Canal de história simples",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0b0a08"
+ },
+ "duration": 72.6,
+ "template": "generic",
+ "fonts": {
+  "Cormorant": "fonts/Cormorant.ttf",
+  "CormorantI": "fonts/CormorantItalic.ttf"
+ },
+ "head": "<style>#s0 img,#s0{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s1 img,#s1{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s2 img,#s2{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s3 img,#s3{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s4 img,#s4{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s5 img,#s5{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s6 img,#s6{filter:grayscale(1) sepia(.5) contrast(1.25) brightness(.75)}\n#s7 img,#s7{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s8 img,#s8{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s9 img,#s9{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s10 img,#s10{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s11 img,#s11{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}\n#s12 img,#s12{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s13 img,#s13{filter:grayscale(1) sepia(.5) contrast(1.25) brightness(.75)}\n#s14 img,#s14{filter:grayscale(1) sepia(.55) contrast(1.1) brightness(.92)}\n#s15 img,#s15{filter:grayscale(1) sepia(.35) hue-rotate(40deg) contrast(1.08) brightness(.9)}</style>",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fotos de arquivo (Ken Burns)"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta / grão"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s0",
+   "type": "image",
+   "track": "fundo",
+   "label": "Na antiga Lídia, século VI a .C., surge ",
+   "start": 0.0,
+   "dur": 5.9,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/01.png",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s1",
+   "type": "image",
+   "track": "fundo",
+   "label": "O rei Creso, governante rico e poderoso,",
+   "start": 5.4,
+   "dur": 3.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_right",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s2",
+   "type": "image",
+   "track": "fundo",
+   "label": "cria uma moeda que mudará a história da ",
+   "start": 8.2,
+   "dur": 4.1,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s3",
+   "type": "image",
+   "track": "fundo",
+   "label": "O estáter de ouro é pequeno, mas imponen",
+   "start": 11.8,
+   "dur": 3.94,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_left",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s4",
+   "type": "image",
+   "track": "fundo",
+   "label": "A primeira moeda oficial do mundo, garan",
+   "start": 15.24,
+   "dur": 4.88,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Diferente das barras de metal bruto usad",
+   "start": 19.62,
+   "dur": 3.42,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_up",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s6",
+   "type": "image",
+   "track": "fundo",
+   "label": "o estáter trazia segurança e praticidade",
+   "start": 22.54,
+   "dur": 7.96,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s7",
+   "type": "image",
+   "track": "fundo",
+   "label": "O rei Creso não se contenta em enriquece",
+   "start": 30.0,
+   "dur": 4.1,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/08.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_down",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s8",
+   "type": "image",
+   "track": "fundo",
+   "label": "Ele faz fortuna com minas de ouro e prat",
+   "start": 33.6,
+   "dur": 6.12,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/09.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s9",
+   "type": "image",
+   "track": "fundo",
+   "label": "Tanta riqueza torna o nome dele sinônimo",
+   "start": 39.22,
+   "dur": 4.17,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/10.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_right",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s10",
+   "type": "image",
+   "track": "fundo",
+   "label": "A expressão rico como Creso nasce aqui, ",
+   "start": 42.89,
+   "dur": 5.59,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/11.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s11",
+   "type": "image",
+   "track": "fundo",
+   "label": "A Lídia cai em mãos persas, mas a inovaç",
+   "start": 47.98,
+   "dur": 5.16,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/13.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_left",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s12",
+   "type": "image",
+   "track": "fundo",
+   "label": "Gregos e romanos adotam a ideia, espalha",
+   "start": 52.64,
+   "dur": 5.18,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/13.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_in",
+    "motion_amount": 0.14,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s13",
+   "type": "image",
+   "track": "fundo",
+   "label": "O legado de Creso vive. Transformando o ",
+   "start": 57.32,
+   "dur": 6.98,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/16.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_up",
+    "motion_amount": 0.18,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s14",
+   "type": "image",
+   "track": "fundo",
+   "label": "Se essa parte te surpreendeu, deixa o li",
+   "start": 63.8,
+   "dur": 4.16,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/16.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "zoom_out",
+    "motion_amount": 0.12,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "s15",
+   "type": "image",
+   "track": "fundo",
+   "label": "A história do dinheiro é cheia de curios",
+   "start": 67.46,
+   "dur": 5.14,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/16.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684,
+    "radius": 22,
+    "motion": "pan_down",
+    "motion_amount": 0.2,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta + moldura",
+   "start": 0,
+   "dur": 72.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vig'></div>",
+    "css": ".vig{width:1236px;height:684px;border-radius:22px;box-shadow:inset 0 0 140px 40px rgba(0,0,0,.75);background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1236,
+    "h": 684
+   }
+  },
+  {
+   "id": "grao",
+   "type": "html",
+   "track": "visual",
+   "label": "Grão de filme",
+   "start": 0,
+   "dur": 72.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<svg width='1280' height='720' style='opacity:.16;mix-blend-mode:overlay'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fade_final",
+   "type": "html",
+   "track": "visual",
+   "label": "Fade p/ preto",
+   "start": 71.3,
+   "dur": 1.3,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div style='width:1280px;height:720px;background:#000'></div>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "titulo",
+   "type": "text",
+   "track": "textos",
+   "label": "Título",
+   "start": 0.4,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A primeira moeda do mundo e seu rei rico",
+    "x": 640,
+    "y": 560,
+    "w": 1100,
+    "size": 56,
+    "color": "#eadfc4",
+    "font": "Cormorant",
+    "weight": 600,
+    "align": "center",
+    "bg": "rgba(0,0,0,.5)",
+    "pad": 16,
+    "radius": 6,
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "cta0",
+   "type": "text",
+   "track": "textos",
+   "label": "CTA like 1",
+   "start": 66.58,
+   "dur": 3.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Deixa o like pra apoiar o canal",
+    "x": 640,
+    "y": 640,
+    "w": 900,
+    "size": 28,
+    "color": "#eadfc4",
+    "font": "CormorantI",
+    "weight": 600,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 10,
+    "radius": 6,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim",
+   "type": "text",
+   "track": "textos",
+   "label": "Encerramento",
+   "start": 68.4,
+   "dur": 2.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SEGREDOS DO DINHEIRO ANTIGO",
+    "x": 640,
+    "y": 360,
+    "w": 1000,
+    "size": 48,
+    "color": "#eadfc4",
+    "font": "Cormorant",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  }
+ ],
+ "_origem": {
+  "fabrica": "EDITOR VIDEOS/fabrica/estilos/historia-simples/preencher.py",
+  "creditos": "img/creditos.json"
+ },
+ "referencia": {
+  "video": "https://youtu.be/rk5kCGZoxgc",
+  "canal": "Segredos do Dinheiro Antigo",
+  "canal_url": "https://www.youtube.com/channel/UCKqWZdkxZLii5YXzj54UOoQ",
+  "titulo": "A História Sombria de Como a Era Dourada da América Chegou ao Fim | Documentário",
+  "nota": "Segredos do Dinheiro Antigo"
+ }
+}

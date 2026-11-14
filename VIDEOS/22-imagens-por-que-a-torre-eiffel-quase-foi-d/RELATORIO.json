@@ -1,0 +1,22 @@
+{
+ "video": 22,
+ "estilo": "B-roll documentário (fotos e clipes com movimento, legenda e títulos)",
+ "ferramenta": "Vídeo com imagens",
+ "titulo": "Por que a Torre Eiffel quase sumiu?",
+ "canal": "CURIOSIDADES DO MUNDO",
+ "inicio": "2026-10-22T20:52:38-03:00",
+ "fim": "2026-10-22T20:56:03-03:00",
+ "minutos": 2.05,
+ "minutos_por_etapa": {
+  "roteiro": 0.1,
+  "voz": 0.17,
+  "whisper": 0.12,
+  "imagens": 0.66,
+  "montar_render": 1.0
+ },
+ "render_segundos": 59,
+ "duracao_video": 39.41,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "VÍDEO COM IMAGENS (zero token Claude, só Python local): fatos de referência: Wikipedia “Torre Eiffel” (https://pt.wikipedia.org/wiki/Torre_Eiffel); roteiro pelo Ollama qwen2.5:7b (82 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (35.8s); 7 imagens/clipes para 8 cenas (Wikimedia); 8 cenas; edit.json por estilos/broll-documentario/preencher.py"
+}

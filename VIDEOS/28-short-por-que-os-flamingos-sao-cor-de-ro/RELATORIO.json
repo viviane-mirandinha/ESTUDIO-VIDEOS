@@ -1,0 +1,22 @@
+{
+ "video": 28,
+ "estilo": "Short documentário (fotos e clipes em pé, legenda grande no centro)",
+ "ferramenta": "Fábrica de Shorts",
+ "titulo": "Por Que Flamingos São Cor-de-Rosa?",
+ "canal": "CURIOSIDADES RÁPIDAS",
+ "inicio": "2026-10-22T22:33:37-03:00",
+ "fim": "2026-10-22T22:36:21-03:00",
+ "minutos": 2.74,
+ "minutos_por_etapa": {
+  "roteiro": 0.14,
+  "voz": 0.21,
+  "whisper": 0.18,
+  "imagens": 1.17,
+  "montar_render": 1.04
+ },
+ "render_segundos": 61,
+ "duracao_video": 51.5,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "FÁBRICA DE SHORTS (9:16) (zero token Claude, só Python local): fatos de referência: Wikipedia “Flamingo-americano” (https://pt.wikipedia.org/wiki/Flamingo-americano); roteiro pelo Ollama qwen2.5:7b (91 palavras) — CONFIRA OS FATOS antes de publicar; voz: edge (49.7s); 14 imagens/clipes para 15 cenas (Wikimedia); 15 cenas; edit.json por estilos/short-documentario/preencher.py"
+}

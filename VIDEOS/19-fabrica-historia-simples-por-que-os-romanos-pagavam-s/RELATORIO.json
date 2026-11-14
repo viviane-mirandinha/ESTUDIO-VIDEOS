@@ -1,0 +1,23 @@
+{
+ "video": 19,
+ "estilo": "Canal de história simples (fotos de arquivo em Ken Burns, sépia)",
+ "fabrica": "historia-simples",
+ "titulo": "Salário em sal: Por que os romanos pagavam assim?",
+ "canal": "SEGREDOS DO DINHEIRO ANTIGO",
+ "inicio": "2026-10-22T03:15:10-03:00",
+ "fim": "2026-10-22T03:17:31-03:00",
+ "minutos": 2.35,
+ "minutos_por_etapa": {
+  "roteiro": 0.08,
+  "tts": 0.8,
+  "whisper": 0.18,
+  "imagens": 0.51,
+  "edit_json": 0.0,
+  "render": 0.78
+ },
+ "render_segundos": 46,
+ "duracao_video": 32.78,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "MODO FÁBRICA (zero token Claude, só Python local): roteiro pelo Ollama qwen2.5:7b (70 palavras) — revisar fatos antes de publicar; voz: edge (31.6s); 6 imagens Wikimedia Commons (img/creditos.json) para 7 shots; busca pelo Ollama; 7 shots; edit.json por estilos/historia-simples/preencher.py; render build_from_edit.py"
+}

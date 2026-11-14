@@ -1,0 +1,683 @@
+{
+ "estado": "pronto",
+ "estilo": "broll-documentario",
+ "titulo": "Por que a Torre Eiffel quase sumiu?",
+ "voz": "voz.mp3",
+ "duracao_voz": 35.808,
+ "permite_video": true,
+ "cenas": [
+  {
+   "i": 0,
+   "s": 0.0,
+   "e": 4.02,
+   "texto": "A Torre Eiffel chegou quase perto de ser desmantelada em 1909.",
+   "query": "gladiator arena battle",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Arena_Pula.jpg/1920px-Arena_Pula.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Arena_Pula.jpg/330px-Arena_Pula.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Arena Pula.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Arena_Pula.jpg",
+     "w": 3096,
+     "h": 4128,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Pula%27s_Arena.jpg/1920px-Pula%27s_Arena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Pula%27s_Arena.jpg/330px-Pula%27s_Arena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Pula's Arena.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Pula%27s_Arena.jpg",
+     "w": 4128,
+     "h": 3096,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851233583658%29.jpg/1920px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851233583658%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851233583658%29.jpg/330px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851233583658%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Relief depicting a battle scene between Amazon and Achillia (51233583658).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_(51233583658).jpg",
+     "w": 5827,
+     "h": 3761,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149344%29.jpg/1920px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149344%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149344%29.jpg/330px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149344%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Relief depicting a battle scene between Amazon and Achillia (51234149344).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_(51234149344).jpg",
+     "w": 5825,
+     "h": 3794,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149369%29.jpg/1920px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149369%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149369%29.jpg/330px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234149369%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Relief depicting a battle scene between Amazon and Achillia (51234149369).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_(51234149369).jpg",
+     "w": 5649,
+     "h": 2871,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234441350%29.jpg/1920px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234441350%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234441350%29.jpg/330px-Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_%2851234441350%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Relief depicting a battle scene between Amazon and Achillia (51234441350).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_(51234441350).jpg",
+     "w": 5481,
+     "h": 2079,
+     "nota": 2
+    },
+    {
+     "tipo": "video",
+     "fonte": "YouTube CC",
+     "url": "https://www.youtube.com/watch?v=nDPc0FFn_Rs",
+     "thumb": "https://i.ytimg.com/vi/nDPc0FFn_Rs/hqdefault.jpg",
+     "titulo": "Battle Arena | D&D/TTRPG Battle/Combat/ Epic Fight Music | 1 Hour | Copyright free",
+     "licenca": "CC BY (Creative Commons Attribution)",
+     "autor": "RPG Soundtracks",
+     "licenca_url": "https://creativecommons.org/licenses/by/3.0/",
+     "pagina": "https://www.youtube.com/watch?v=nDPc0FFn_Rs",
+     "w": 1920,
+     "h": 1080,
+     "dur": 3670,
+     "nota": 3,
+     "_ytcc": true
+    },
+    {
+     "tipo": "video",
+     "fonte": "YouTube CC",
+     "url": "https://www.youtube.com/watch?v=t9eJHzrk1o8",
+     "thumb": "https://i.ytimg.com/vi/t9eJHzrk1o8/hqdefault.jpg",
+     "titulo": "Gladiator Arena Fights - 2 fights without Overwhelm (disaster) and 2 fights with Overwhelm (success)",
+     "licenca": "CC BY (Creative Commons Attribution)",
+     "autor": "Business Games",
+     "licenca_url": "https://creativecommons.org/licenses/by/3.0/",
+     "pagina": "https://www.youtube.com/watch?v=t9eJHzrk1o8",
+     "w": 1920,
+     "h": 1080,
+     "dur": 1683,
+     "nota": 3,
+     "_ytcc": true
+    },
+    {
+     "tipo": "video",
+     "fonte": "YouTube CC",
+     "url": "https://www.youtube.com/watch?v=6PiNc3hPhWM",
+     "thumb": "https://i.ytimg.com/vi/6PiNc3hPhWM/hqdefault.jpg",
+     "titulo": "Gladiator's Arena | Easy Cheap Fast Platinum! | 100% Trophy Guide",
+     "licenca": "CC BY (Creative Commons Attribution)",
+     "autor": "Pozermobil",
+     "licenca_url": "https://creativecommons.org/licenses/by/3.0/",
+     "pagina": "https://www.youtube.com/watch?v=6PiNc3hPhWM",
+     "w": 1920,
+     "h": 1080,
+     "dur": 143,
+     "nota": 3,
+     "_ytcc": true
+    },
+    {
+     "tipo": "video",
+     "fonte": "YouTube CC",
+     "url": "https://www.youtube.com/watch?v=5926t3aEgwc",
+     "thumb": "https://i.ytimg.com/vi/5926t3aEgwc/hqdefault.jpg",
+     "titulo": "21 Most Powerful Roman Gladiator Types Explained In 19 Minutes  #RomanGladiators",
+     "licenca": "CC BY (Creative Commons Attribution)",
+     "autor": "Jay Uncovers",
+     "licenca_url": "https://creativecommons.org/licenses/by/3.0/",
+     "pagina": "https://www.youtube.com/watch?v=5926t3aEgwc",
+     "w": 1920,
+     "h": 1080,
+     "dur": 1144,
+     "nota": 3,
+     "_ytcc": true
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Bouwwerkzaamheden op de achtergrond de Eiffeltoren, Bestanddeelnr 255-8666.jpg",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Bouwwerkzaamheden_op_de_achtergrond_de_Eiffeltoren,_Bestanddeelnr_255-8666.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bouwwerkzaamheden_op_de_achtergrond_de_Eiffeltoren%2C_Bestanddeelnr_255-8666.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bouwwerkzaamheden_op_de_achtergrond_de_Eiffeltoren%2C_Bestanddeelnr_255-8666.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/01-564a09.jpg"
+   }
+  },
+  {
+   "i": 1,
+   "s": 5.16,
+   "e": 10.34,
+   "texto": "Originalmente projetada para permanecer apenas 20 anos, a estrutura foi salvaguardada graças",
+   "query": "Gustave Eiffel",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/M._Gustave_Eiffel_%2814382067242%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/83/M._Gustave_Eiffel_%2814382067242%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "M. Gustave Eiffel (14382067242) (cropped).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:M._Gustave_Eiffel_(14382067242)_(cropped).jpg",
+     "w": 1379,
+     "h": 1798,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Alexandre_Gustave_Eiffel.001_-_Torre_Eiffel.jpg/1920px-Alexandre_Gustave_Eiffel.001_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Alexandre_Gustave_Eiffel.001_-_Torre_Eiffel.jpg/330px-Alexandre_Gustave_Eiffel.001_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Alexandre Gustave Eiffel.001 - Torre Eiffel.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Alexandre_Gustave_Eiffel.001_-_Torre_Eiffel.jpg",
+     "w": 3864,
+     "h": 5152,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Alexandre_Gustave_Eiffel.002_-_Torre_Eiffel.jpg/1920px-Alexandre_Gustave_Eiffel.002_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Alexandre_Gustave_Eiffel.002_-_Torre_Eiffel.jpg/330px-Alexandre_Gustave_Eiffel.002_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Alexandre Gustave Eiffel.002 - Torre Eiffel.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Alexandre_Gustave_Eiffel.002_-_Torre_Eiffel.jpg",
+     "w": 3864,
+     "h": 5152,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Alexandre_Gustave_Eiffel.003_-_Torre_Eiffel.jpg/1920px-Alexandre_Gustave_Eiffel.003_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Alexandre_Gustave_Eiffel.003_-_Torre_Eiffel.jpg/330px-Alexandre_Gustave_Eiffel.003_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Alexandre Gustave Eiffel.003 - Torre Eiffel.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Alexandre_Gustave_Eiffel.003_-_Torre_Eiffel.jpg",
+     "w": 3864,
+     "h": 5152,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Alexandre_Gustave_Eiffel.006_-_Torre_Eiffel.jpg/1920px-Alexandre_Gustave_Eiffel.006_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Alexandre_Gustave_Eiffel.006_-_Torre_Eiffel.jpg/330px-Alexandre_Gustave_Eiffel.006_-_Torre_Eiffel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Alexandre Gustave Eiffel.006 - Torre Eiffel.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Alexandre_Gustave_Eiffel.006_-_Torre_Eiffel.jpg",
+     "w": 2592,
+     "h": 4608,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Bust_of_Gustave_Eiffel%2C_by_sculptor_Antoine_Bourdelle.jpg/1920px-Bust_of_Gustave_Eiffel%2C_by_sculptor_Antoine_Bourdelle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Bust_of_Gustave_Eiffel%2C_by_sculptor_Antoine_Bourdelle.jpg/330px-Bust_of_Gustave_Eiffel%2C_by_sculptor_Antoine_Bourdelle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Bust of Gustave Eiffel, by sculptor Antoine Bourdelle.jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bust_of_Gustave_Eiffel,_by_sculptor_Antoine_Bourdelle.jpg",
+     "w": 2560,
+     "h": 1920,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "M. Gustave Eiffel (14382067242) (cropped).jpg",
+    "licenca": "CC BY 2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:M._Gustave_Eiffel_(14382067242)_(cropped).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/M._Gustave_Eiffel_%2814382067242%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/83/M._Gustave_Eiffel_%2814382067242%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/02-80c6d8.jpg"
+   }
+  },
+  {
+   "i": 2,
+   "s": 10.34,
+   "e": 15.16,
+   "texto": "à sua utilidade na radiotelegrafia e no serviço internacional de tempo após 1910.",
+   "query": "radio equipment",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b5/000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "000Design of mathematical algorithms for the functioning of radio-electronic equipment.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg",
+     "w": 1090,
+     "h": 1528,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/84/Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Design of mathematical algorithms for the functioning of radio-electronic equipment.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg",
+     "w": 1090,
+     "h": 1528,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/John_Hammond_with_radio_equipment%2C_photo_by_Kadel_and_Herbert.jpg/1920px-John_Hammond_with_radio_equipment%2C_photo_by_Kadel_and_Herbert.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/John_Hammond_with_radio_equipment%2C_photo_by_Kadel_and_Herbert.jpg/330px-John_Hammond_with_radio_equipment%2C_photo_by_Kadel_and_Herbert.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "John Hammond with radio equipment, photo by Kadel and Herbert.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:John_Hammond_with_radio_equipment,_photo_by_Kadel_and_Herbert.jpg",
+     "w": 2316,
+     "h": 1892,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Amateur_radio_equipment_-_Yamamoto_Musen%2C_Akihabara_Radio_Center_%282011-03-11_10.47.24_by_Hikosaemon%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Amateur_radio_equipment_-_Yamamoto_Musen%2C_Akihabara_Radio_Center_%282011-03-11_10.47.24_by_Hikosaemon%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Amateur radio equipment - Yamamoto Musen, Akihabara Radio Center (2011-03-11 10.47.24 by Hikosaemon).jpg",
+     "licenca": "CC BY 2.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Amateur_radio_equipment_-_Yamamoto_Musen,_Akihabara_Radio_Center_(2011-03-11_10.47.24_by_Hikosaemon).jpg",
+     "w": 1920,
+     "h": 1080,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Interior_of_Gliwice_Radio_station_01.jpg/1920px-Interior_of_Gliwice_Radio_station_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Interior_of_Gliwice_Radio_station_01.jpg/330px-Interior_of_Gliwice_Radio_station_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Interior of Gliwice Radio station 01.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_Gliwice_Radio_station_01.jpg",
+     "w": 4968,
+     "h": 3312,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Interior_of_Gliwice_Radio_station_08.jpg/1920px-Interior_of_Gliwice_Radio_station_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Interior_of_Gliwice_Radio_station_08.jpg/330px-Interior_of_Gliwice_Radio_station_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Interior of Gliwice Radio station 08.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_Gliwice_Radio_station_08.jpg",
+     "w": 5472,
+     "h": 3648,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "000Design of mathematical algorithms for the functioning of radio-electronic equipment.jpg",
+    "licenca": "CC0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/b5/000Design_of_mathematical_algorithms_for_the_functioning_of_radio-electronic_equipment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "src": "img/03-bd132b.jpg"
+   }
+  },
+  {
+   "i": 3,
+   "s": 16.18,
+   "e": 20.2,
+   "texto": "O engenheiro Gustave Eiffel usou seu apartamento no topo para observações",
+   "query": "Eiffel Tower apartment top",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg/1920px-Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg/330px-Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Le sommet de la Tour Eiffel. Coupe dessinéee par M. Rouillard.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg",
+     "w": 2310,
+     "h": 3535,
+     "nota": 4
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Le sommet de la Tour Eiffel. Coupe dessinéee par M. Rouillard.jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg/1920px-Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg/330px-Le_sommet_de_la_Tour_Eiffel._Coupe_dessin%C3%A9ee_par_M._Rouillard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/04-625ed8.jpg"
+   }
+  },
+  {
+   "i": 4,
+   "s": 20.2,
+   "e": 23.06,
+   "texto": "meteorológicas e experimentos sobre resistência do ar.",
+   "query": "air resistance experiments",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light%2C_hot-air%2C_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_%2814756617322%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light%2C_hot-air%2C_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_%2814756617322%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A system of instruction in X-ray methods and medical uses of light, hot-air, vibration and high-frequency currents - a pictorial system of teaching by clinical instruction plates with explanatory text (14756617322).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light,_hot-air,_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_(14756617322).jpg",
+     "w": 3104,
+     "h": 1890,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814760983625%29.jpg/1920px-A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814760983625%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814760983625%29.jpg/330px-A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814760983625%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A study of the various experiments for the determination of the resistance of electric cars and trains (1912) (14760983625).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_(1912)_(14760983625).jpg",
+     "w": 2462,
+     "h": 3284,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814780854153%29.jpg/1920px-A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814780854153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814780854153%29.jpg/330px-A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_%281912%29_%2814780854153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "A study of the various experiments for the determination of the resistance of electric cars and trains (1912) (14780854153).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:A_study_of_the_various_experiments_for_the_determination_of_the_resistance_of_electric_cars_and_trains_(1912)_(14780854153).jpg",
+     "w": 2462,
+     "h": 3333,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bouncing_ball_strobe_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bouncing_ball_strobe_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "titulo": "Bouncing ball strobe edit.jpg",
+     "licenca": "CC BY-SA 3.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Bouncing_ball_strobe_edit.jpg",
+     "w": 1800,
+     "h": 1159,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Train_resistance_-_a_consideration_of_its_elements_and_a_discussion_of_experiments_made_with_the_university_dynamometer_car_%281900%29_%2814758037392%29.jpg/1920px-Train_resistance_-_a_consideration_of_its_elements_and_a_discussion_of_experiments_made_with_the_university_dynamometer_car_%281900%29_%2814758037392%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Train_resistance_-_a_consideration_of_its_elements_and_a_discussion_of_experiments_made_with_the_university_dynamometer_car_%281900%29_%2814758037392%29.jpg/330px-Train_resistance_-_a_consideration_of_its_elements_and_a_discussion_of_experiments_made_with_the_university_dynamometer_car_%281900%29_%2814758037392%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Train resistance - a consideration of its elements and a discussion of experiments made with the university dynamometer car (1900) (14758037392).jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Train_resistance_-_a_consideration_of_its_elements_and_a_discussion_of_experiments_made_with_the_university_dynamometer_car_(1900)_(14758037392).jpg",
+     "w": 2976,
+     "h": 1877,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/ARMY_WARFIGHTING_EXPERIMENT_2017_-_TESTING_THE_NEXT_GENERATION_OF_TECHNOLOGY_MOD_45162460.jpg/1920px-ARMY_WARFIGHTING_EXPERIMENT_2017_-_TESTING_THE_NEXT_GENERATION_OF_TECHNOLOGY_MOD_45162460.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/ARMY_WARFIGHTING_EXPERIMENT_2017_-_TESTING_THE_NEXT_GENERATION_OF_TECHNOLOGY_MOD_45162460.jpg/330px-ARMY_WARFIGHTING_EXPERIMENT_2017_-_TESTING_THE_NEXT_GENERATION_OF_TECHNOLOGY_MOD_45162460.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "ARMY WARFIGHTING EXPERIMENT 2017 - TESTING THE NEXT GENERATION OF TECHNOLOGY MOD 45162460.jpg",
+     "licenca": "OGL v1.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:ARMY_WARFIGHTING_EXPERIMENT_2017_-_TESTING_THE_NEXT_GENERATION_OF_TECHNOLOGY_MOD_45162460.jpg",
+     "w": 3000,
+     "h": 1843,
+     "nota": 1
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "A system of instruction in X-ray methods and medical uses of light, hot-air, vibration and high-frequency currents - a pictorial system of teaching by clinical instruction plates with explanatory text (14756617322).jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light,_hot-air,_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_(14756617322).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light%2C_hot-air%2C_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_%2814756617322%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/A_system_of_instruction_in_X-ray_methods_and_medical_uses_of_light%2C_hot-air%2C_vibration_and_high-frequency_currents_-_a_pictorial_system_of_teaching_by_clinical_instruction_plates_with_explanatory_text_%2814756617322%29.jpg/330px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/05-a43ca3.jpg"
+   }
+  },
+  {
+   "i": 5,
+   "s": 23.66,
+   "e": 28.08,
+   "texto": "A torre, que ultrapassou o Monumento de Washington em altura em 1889,",
+   "query": "Washington Monument",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/WashMonument_WhiteHouse.jpg/1920px-WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/WashMonument_WhiteHouse.jpg/330px-WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "WashMonument WhiteHouse.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:WashMonument_WhiteHouse.jpg",
+     "w": 3008,
+     "h": 1960,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Washington_Monument%2C_Western_Maryland%2C_Angled_View.jpg/1920px-Washington_Monument%2C_Western_Maryland%2C_Angled_View.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Washington_Monument%2C_Western_Maryland%2C_Angled_View.jpg/330px-Washington_Monument%2C_Western_Maryland%2C_Angled_View.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Washington Monument, Western Maryland, Angled View.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Washington_Monument,_Western_Maryland,_Angled_View.jpg",
+     "w": 4191,
+     "h": 3353,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Washington_Monument-Philadelphia-27527.jpg/1920px-Washington_Monument-Philadelphia-27527.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Washington_Monument-Philadelphia-27527.jpg/330px-Washington_Monument-Philadelphia-27527.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Washington Monument-Philadelphia-27527.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Washington_Monument-Philadelphia-27527.jpg",
+     "w": 2600,
+     "h": 1950,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Washington_Monument_in_2007.jpg/1920px-Washington_Monument_in_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Washington_Monument_in_2007.jpg/330px-Washington_Monument_in_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Washington Monument in 2007.jpg",
+     "licenca": "Public domain",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Washington_Monument_in_2007.jpg",
+     "w": 2592,
+     "h": 1944,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Washington_Monument_in_2017%2C_NW_side.jpg/1920px-Washington_Monument_in_2017%2C_NW_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Washington_Monument_in_2017%2C_NW_side.jpg/330px-Washington_Monument_in_2017%2C_NW_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Washington Monument in 2017, NW side.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Washington_Monument_in_2017,_NW_side.jpg",
+     "w": 2825,
+     "h": 4251,
+     "nota": 4
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Washington_monument%2C_boonesboro_md.jpg/1920px-Washington_monument%2C_boonesboro_md.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Washington_monument%2C_boonesboro_md.jpg/330px-Washington_monument%2C_boonesboro_md.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Washington monument, boonesboro md.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Washington_monument,_boonesboro_md.jpg",
+     "w": 2336,
+     "h": 4160,
+     "nota": 4
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "WashMonument WhiteHouse.jpg",
+    "licenca": "Public domain",
+    "pagina": "https://commons.wikimedia.org/wiki/File:WashMonument_WhiteHouse.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/WashMonument_WhiteHouse.jpg/1920px-WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/WashMonument_WhiteHouse.jpg/330px-WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/06-d5a0ce.jpg"
+   }
+  },
+  {
+   "i": 6,
+   "s": 28.5,
+   "e": 31.1,
+   "texto": "se tornou um ícone cultural global da França.",
+   "query": "Paris landmark",
+   "candidatos": [
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/1920px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/330px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Guide to Paris and its Exhibition, 1878. With plan of Paris - The British Library.jpg",
+     "licenca": "No restrictions",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Guide_to_Paris_and_its_Exhibition,_1878._With_plan_of_Paris_-_The_British_Library.jpg",
+     "w": 5580,
+     "h": 4400,
+     "nota": 3
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_01.jpg/1920px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_01.jpg/330px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "HK 中環 Central 畢打街 Pedder Street The Landmark Atrium mall shop Roger Vivier Paris window display March 2026 N13P 01.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_01.jpg",
+     "w": 3060,
+     "h": 4080,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_02.jpg/1920px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_02.jpg/330px-HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "HK 中環 Central 畢打街 Pedder Street The Landmark Atrium mall shop Roger Vivier Paris window display March 2026 N13P 02.jpg",
+     "licenca": "CC0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:HK_%E4%B8%AD%E7%92%B0_Central_%E7%95%A2%E6%89%93%E8%A1%97_Pedder_Street_The_Landmark_Atrium_mall_shop_Roger_Vivier_Paris_window_display_March_2026_N13P_02.jpg",
+     "w": 3060,
+     "h": 4080,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris%2C_Eiffelturm%2C_Aufzug_--_2014_--_1297.jpg/1920px-Paris%2C_Eiffelturm%2C_Aufzug_--_2014_--_1297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris%2C_Eiffelturm%2C_Aufzug_--_2014_--_1297.jpg/330px-Paris%2C_Eiffelturm%2C_Aufzug_--_2014_--_1297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Paris, Eiffelturm, Aufzug -- 2014 -- 1297.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Paris,_Eiffelturm,_Aufzug_--_2014_--_1297.jpg",
+     "w": 3648,
+     "h": 5472,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Paris%2C_Eiffelturm%2C_Pfeiler_--_2014_--_1260.jpg/1920px-Paris%2C_Eiffelturm%2C_Pfeiler_--_2014_--_1260.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Paris%2C_Eiffelturm%2C_Pfeiler_--_2014_--_1260.jpg/330px-Paris%2C_Eiffelturm%2C_Pfeiler_--_2014_--_1260.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Paris, Eiffelturm, Pfeiler -- 2014 -- 1260.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Paris,_Eiffelturm,_Pfeiler_--_2014_--_1260.jpg",
+     "w": 5472,
+     "h": 3648,
+     "nota": 2
+    },
+    {
+     "tipo": "image",
+     "fonte": "Wikimedia",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Paris%2C_Eiffelturm%2C_Strukturdetail_--_2014_--_1258.jpg/1920px-Paris%2C_Eiffelturm%2C_Strukturdetail_--_2014_--_1258.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Paris%2C_Eiffelturm%2C_Strukturdetail_--_2014_--_1258.jpg/330px-Paris%2C_Eiffelturm%2C_Strukturdetail_--_2014_--_1258.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "titulo": "Paris, Eiffelturm, Strukturdetail -- 2014 -- 1258.jpg",
+     "licenca": "CC BY-SA 4.0",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Paris,_Eiffelturm,_Strukturdetail_--_2014_--_1258.jpg",
+     "w": 5434,
+     "h": 3623,
+     "nota": 2
+    }
+   ],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Guide to Paris and its Exhibition, 1878. With plan of Paris - The British Library.jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Guide_to_Paris_and_its_Exhibition,_1878._With_plan_of_Paris_-_The_British_Library.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/1920px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/330px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-5b575b.jpg"
+   }
+  },
+  {
+   "i": 7,
+   "s": 31.46,
+   "e": 34.7,
+   "texto": "Se essa parte te surpreendeu, deixe o like!",
+   "query": "",
+   "candidatos": [],
+   "escolha": {
+    "tipo": "image",
+    "fonte": "Wikimedia",
+    "titulo": "Guide to Paris and its Exhibition, 1878. With plan of Paris - The British Library.jpg",
+    "licenca": "No restrictions",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Guide_to_Paris_and_its_Exhibition,_1878._With_plan_of_Paris_-_The_British_Library.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/1920px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg/330px-Guide_to_Paris_and_its_Exhibition%2C_1878._With_plan_of_Paris_-_The_British_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "src": "img/07-5b575b.jpg",
+    "repetida": true
+   }
+  }
+ ],
+ "minutos": {
+  "roteiro": 0.1,
+  "voz": 0.17,
+  "whisper": 0.12,
+  "imagens": 0.66
+ },
+ "obs": [
+  "fatos de referência: Wikipedia “Torre Eiffel” (https://pt.wikipedia.org/wiki/Torre_Eiffel)",
+  "roteiro pelo Ollama qwen2.5:7b (82 palavras) — CONFIRA OS FATOS antes de publicar",
+  "voz: edge (35.8s)",
+  "7 imagens/clipes para 8 cenas (Wikimedia)"
+ ],
+ "inicio": "2026-10-22T20:52:38-03:00"
+}

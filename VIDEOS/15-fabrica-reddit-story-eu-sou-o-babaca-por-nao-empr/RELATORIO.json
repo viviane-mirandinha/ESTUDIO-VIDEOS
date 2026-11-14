@@ -1,0 +1,23 @@
+{
+ "video": 15,
+ "estilo": "Reddit story (card do post + legenda palavra-por-palavra sobre gameplay)",
+ "fabrica": "reddit-story",
+ "titulo": "Eu sou babaca por não emprestar casa pra irmã casar",
+ "canal": "HISTORIAS DO REDDIT",
+ "inicio": "2026-10-22T01:49:18-03:00",
+ "fim": "2026-10-22T01:50:31-03:00",
+ "minutos": 1.21,
+ "minutos_por_etapa": {
+  "roteiro": 0.0,
+  "tts": 0.0,
+  "whisper": 0.18,
+  "imagens": 0.06,
+  "edit_json": 0.18,
+  "render": 0.79
+ },
+ "render_segundos": 47,
+ "duracao_video": 49.87,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "MODO FÁBRICA (zero token Claude, só Python local): roteiro reaproveitado da pasta; voz: reaproveitada (48.7s); gameplay sem copyright do estoque estoque/gameplay; 9 shots; edit.json por estilos/reddit-story/preencher.py; render build_from_edit.py"
+}

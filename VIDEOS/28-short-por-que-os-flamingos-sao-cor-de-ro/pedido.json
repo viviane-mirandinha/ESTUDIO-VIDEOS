@@ -1,0 +1,15 @@
+{
+ "modo": "tema",
+ "tema": "Por que os flamingos são cor-de-rosa",
+ "roteiro": "",
+ "audio": null,
+ "estilo": "short-documentario",
+ "duracao": 40.0,
+ "voz": "edge:pt-BR-AntonioNeural",
+ "canal": "CURIOSIDADES RÁPIDAS",
+ "titulo": "",
+ "modelo": "qwen2.5:7b",
+ "idioma": "pt-BR",
+ "conferir": false,
+ "criado": "2026-10-22T22:30:42"
+}

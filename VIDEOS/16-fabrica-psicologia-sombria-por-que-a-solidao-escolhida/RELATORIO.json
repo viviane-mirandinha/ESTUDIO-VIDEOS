@@ -1,0 +1,23 @@
+{
+ "video": 16,
+ "estilo": "Psicologia / filosofia sombria (pinturas clássicas, Einzelgänger)",
+ "fabrica": "psicologia-sombria",
+ "titulo": "Schopenhauer: Solidão Escolhida X Isolamento",
+ "canal": "MENTE SOMBRIA",
+ "inicio": "2026-10-22T01:54:15-03:00",
+ "fim": "2026-10-22T01:56:54-03:00",
+ "minutos": 2.65,
+ "minutos_por_etapa": {
+  "roteiro": 0.12,
+  "tts": 0.83,
+  "whisper": 1.14,
+  "imagens": 0.56,
+  "edit_json": 0.0,
+  "render": 0.0
+ },
+ "render_segundos": 0,
+ "duracao_video": 63.55,
+ "tokens": 0,
+ "custo_usd": 0,
+ "observacoes": "MODO FÁBRICA (zero token Claude, só Python local): roteiro pelo Ollama mistral-small3.1:latest (156 palavras) — revisar fatos antes de publicar; voz: edge (62.4s); 6 imagens Wikimedia Commons (img/creditos.json) para 9 shots; busca pelo Ollama; 9 shots; edit.json por estilos/psicologia-sombria/preencher.py; render build_from_edit.py"
+}
