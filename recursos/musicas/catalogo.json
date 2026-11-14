@@ -1,0 +1,528 @@
+{
+ "scp-x6x-hopes.mp3": {
+  "titulo": "SCP-x6x (Hopes)",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000012",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "suspense",
+   "triste"
+  ],
+  "uso": "mistério com violoncelo, narração de história",
+  "duracao": 210,
+  "bpm": "66",
+  "credito": "Music: \"SCP-x6x (Hopes)\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "scp-x5x-outer-thoughts.mp3": {
+  "titulo": "SCP-x5x (Outer Thoughts)",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000011",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "suspense"
+  ],
+  "uso": "mistério leve, crime, enigmas",
+  "duracao": 216,
+  "bpm": "102",
+  "credito": "Music: \"SCP-x5x (Outer Thoughts)\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "stay-the-course.mp3": {
+  "titulo": "Stay the Course",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900018",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "suspense"
+  ],
+  "uso": "tensão lenta, documentário investigativo",
+  "duracao": 272,
+  "bpm": "60",
+  "credito": "Music: \"Stay the Course\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "man-down.mp3": {
+  "titulo": "Man Down",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700086",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "suspense",
+   "triste"
+  ],
+  "uso": "tensão sombria, drama real",
+  "duracao": 199,
+  "bpm": "53",
+  "credito": "Music: \"Man Down\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "intrepid.mp3": {
+  "titulo": "Intrepid",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500062",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "suspense"
+  ],
+  "uso": "mistério antigo, história sombria",
+  "duracao": 191,
+  "bpm": "60",
+  "credito": "Music: \"Intrepid\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "scp-x2x-unseen-presence.mp3": {
+  "titulo": "SCP-x2x (Unseen Presence)",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000008",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "terror"
+  ],
+  "uso": "terror, presença sinistra",
+  "duracao": 293,
+  "bpm": null,
+  "credito": "Music: \"SCP-x2x (Unseen Presence)\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "scp-x1x-gateway-to-hell.mp3": {
+  "titulo": "SCP-x1x (Gateway to Hell)",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000007",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "terror"
+  ],
+  "uso": "terror pesado",
+  "duracao": 352,
+  "bpm": "90",
+  "credito": "Music: \"SCP-x1x (Gateway to Hell)\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "shadowlands-5-antechamber.mp3": {
+  "titulo": "Shadowlands 5 - Antechamber",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700038",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "terror",
+   "suspense"
+  ],
+  "uso": "ambiente tenso, assombrado",
+  "duracao": 178,
+  "bpm": null,
+  "credito": "Music: \"Shadowlands 5 - Antechamber\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "shadowlands-1-horizon.mp3": {
+  "titulo": "Shadowlands 1 - Horizon",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700034",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "terror",
+   "triste"
+  ],
+  "uso": "sombrio submerso",
+  "duracao": 220,
+  "bpm": null,
+  "credito": "Music: \"Shadowlands 1 - Horizon\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "rynos-theme.mp3": {
+  "titulo": "Rynos Theme",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600016",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "epico",
+   "acao"
+  ],
+  "uso": "épico, guerra, impérios",
+  "duracao": 186,
+  "bpm": "128",
+  "credito": "Music: \"Rynos Theme\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "undaunted.mp3": {
+  "titulo": "Undaunted",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400025",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "epico"
+  ],
+  "uso": "tambores grandes, batalhas, história militar",
+  "duracao": 213,
+  "bpm": "95",
+  "credito": "Music: \"Undaunted\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "final-battle-of-the-dark-wizards.mp3": {
+  "titulo": "Final Battle of the Dark Wizards",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500085",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "epico",
+   "suspense"
+  ],
+  "uso": "tensão que cresce, grandes conflitos",
+  "duracao": 272,
+  "bpm": "112",
+  "credito": "Music: \"Final Battle of the Dark Wizards\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "tempting-secrets.mp3": {
+  "titulo": "Tempting Secrets",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300038",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "epico",
+   "suspense"
+  ],
+  "uso": "segredos, conspirações, poder",
+  "duracao": 182,
+  "bpm": null,
+  "credito": "Music: \"Tempting Secrets\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "killers.mp3": {
+  "titulo": "Killers",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600024",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "epico",
+   "acao"
+  ],
+  "uso": "grandioso e intenso",
+  "duracao": 305,
+  "bpm": "105",
+  "credito": "Music: \"Killers\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "night-vigil.mp3": {
+  "titulo": "Night Vigil",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900047",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "triste",
+   "epico"
+  ],
+  "uso": "lamento, tragédia, homenagem",
+  "duracao": 288,
+  "bpm": "54",
+  "credito": "Music: \"Night Vigil\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "bittersweet.mp3": {
+  "titulo": "Bittersweet",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700004",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "triste",
+   "calmo"
+  ],
+  "uso": "emocionante, nostálgico",
+  "duracao": 202,
+  "bpm": "73",
+  "credito": "Music: \"Bittersweet\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "disquiet.mp3": {
+  "titulo": "Disquiet",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500036",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "triste",
+   "suspense"
+  ],
+  "uso": "inquietação suave",
+  "duracao": 185,
+  "bpm": "70",
+  "credito": "Music: \"Disquiet\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "lost-time.mp3": {
+  "titulo": "Lost Time",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500032",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "triste"
+  ],
+  "uso": "perda, melancolia",
+  "duracao": 227,
+  "bpm": "55",
+  "credito": "Music: \"Lost Time\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "heavy-heart.mp3": {
+  "titulo": "Heavy Heart",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600002",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "triste"
+  ],
+  "uso": "triste com esperança",
+  "duracao": 297,
+  "bpm": "110",
+  "credito": "Music: \"Heavy Heart\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "ether-vox.mp3": {
+  "titulo": "Ether Vox",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000022",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "calmo"
+  ],
+  "uso": "documentário calmo, natureza, curiosidades",
+  "duracao": 206,
+  "bpm": "60",
+  "credito": "Music: \"Ether Vox\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "immersed.mp3": {
+  "titulo": "Immersed",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600010",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "calmo",
+   "tecnologia"
+  ],
+  "uso": "minimalista, ciência",
+  "duracao": 249,
+  "bpm": "64",
+  "credito": "Music: \"Immersed\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "floating-cities.mp3": {
+  "titulo": "Floating Cities",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600018",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "calmo",
+   "tecnologia"
+  ],
+  "uso": "futuro, ciência, espaço",
+  "duracao": 184,
+  "bpm": "120",
+  "credito": "Music: \"Floating Cities\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "late-night-radio.mp3": {
+  "titulo": "Late Night Radio",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100003",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "calmo"
+  ],
+  "uso": "relaxado, histórias do dia a dia",
+  "duracao": 264,
+  "bpm": "72",
+  "credito": "Music: \"Late Night Radio\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "evening.mp3": {
+  "titulo": "Evening",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300002",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "calmo",
+   "leve"
+  ],
+  "uso": "leve e agradável",
+  "duracao": 186,
+  "bpm": "101",
+  "credito": "Music: \"Evening\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "brain-dance.mp3": {
+  "titulo": "Brain Dance",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300006",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "tecnologia"
+  ],
+  "uso": "tecnologia, mente, ciência",
+  "duracao": 215,
+  "bpm": "124",
+  "credito": "Music: \"Brain Dance\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "rising-tide.mp3": {
+  "titulo": "Rising Tide",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900010",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "tecnologia",
+   "suspense"
+  ],
+  "uso": "ritmo constante, negócios e tecnologia",
+  "duracao": 277,
+  "bpm": "106",
+  "credito": "Music: \"Rising Tide\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "ethernight-club.mp3": {
+  "titulo": "Ethernight Club",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100002",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "tecnologia"
+  ],
+  "uso": "eletrônico noturno, internet",
+  "duracao": 306,
+  "bpm": "117",
+  "credito": "Music: \"Ethernight Club\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "twisting.mp3": {
+  "titulo": "Twisting",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1800009",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "tecnologia",
+   "suspense"
+  ],
+  "uso": "ritmo de investigação",
+  "duracao": 318,
+  "bpm": "108",
+  "credito": "Music: \"Twisting\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "hot-pursuit.mp3": {
+  "titulo": "Hot Pursuit",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700084",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "acao"
+  ],
+  "uso": "perseguição, esportes, ranking",
+  "duracao": 169,
+  "bpm": "122",
+  "credito": "Music: \"Hot Pursuit\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "obliteration.mp3": {
+  "titulo": "Obliteration",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700042",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "acao"
+  ],
+  "uso": "energia alta, guerra, esportes",
+  "duracao": 149,
+  "bpm": "140",
+  "credito": "Music: \"Obliteration\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "miami-nights-extended-theme.mp3": {
+  "titulo": "Miami Nights - Extended Theme",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700078",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "acao",
+   "leve"
+  ],
+  "uso": "ritmo moderno, rankings",
+  "duracao": 201,
+  "bpm": "105",
+  "credito": "Music: \"Miami Nights - Extended Theme\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "death-and-axes.mp3": {
+  "titulo": "Death and Axes",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700049",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "acao",
+   "epico"
+  ],
+  "uso": "batalha, guerreiros",
+  "duracao": 168,
+  "bpm": "140",
+  "credito": "Music: \"Death and Axes\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "newer-wave.mp3": {
+  "titulo": "Newer Wave",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000024",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "leve",
+   "tecnologia"
+  ],
+  "uso": "otimista, ritmo anos 80",
+  "duracao": 175,
+  "bpm": "110",
+  "credito": "Music: \"Newer Wave\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "pleasant-porridge.mp3": {
+  "titulo": "Pleasant Porridge",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100004",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "leve",
+   "calmo"
+  ],
+  "uso": "leve e simpático",
+  "duracao": 171,
+  "bpm": "119",
+  "credito": "Music: \"Pleasant Porridge\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "bleeping-demo.mp3": {
+  "titulo": "Bleeping Demo",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2000021",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "leve",
+   "tecnologia"
+  ],
+  "uso": "curiosidades, jogos",
+  "duracao": 214,
+  "bpm": "74",
+  "credito": "Music: \"Bleeping Demo\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ },
+ "cloud-dancer.mp3": {
+  "titulo": "Cloud Dancer",
+  "autor": "Kevin MacLeod (incompetech.com)",
+  "licenca": "CC BY 4.0",
+  "link": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300007",
+  "licenca_link": "https://creativecommons.org/licenses/by/4.0/",
+  "climas": [
+   "leve",
+   "acao"
+  ],
+  "uso": "energia positiva, esportes",
+  "duracao": 220,
+  "bpm": "214",
+  "credito": "Music: \"Cloud Dancer\" by Kevin MacLeod (incompetech.com) — licensed under Creative Commons: By Attribution 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+ }
+}

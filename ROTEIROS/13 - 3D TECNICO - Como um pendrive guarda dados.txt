@@ -1,0 +1,13 @@
+Como um pendrive guarda as suas fotos mesmo sem bateria e sem energia?
+
+Dentro dele há o conector USB, o controlador e os chips de memória flash do tipo NAND. Os dados são bits: zeros ou uns. Cada bit fica guardado em uma célula, e cada célula tem um transistor com uma porta flutuante, isolada.
+
+Para gravar um bit, uma tensão força elétrons a atravessar o isolante e ficarem presos na porta flutuante. Essa carga presa muda o comportamento do transistor, e na hora da leitura o controlador detecta essa diferença.
+
+E aqui está o segredo: os elétrons continuam presos mesmo sem energia. É por isso que o pendrive guarda os dados desligado.
+
+Para apagar, é preciso aplicar uma tensão que remove os elétrons. Mas cada ciclo desgasta um pouco a célula.
+
+Essa memória foi inventada por Fujio Masuoka, da Toshiba, nos anos 1980.
+
+Quer entender mais tecnologias do dia a dia? Inscreva-se no canal e comente o que devemos explicar a seguir!
