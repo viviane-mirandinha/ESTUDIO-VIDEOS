@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<style>
+@font-face{font-family:'Outfit';src:url('m/fonts/Outfit.ttf');font-weight:100 900;}@font-face{font-family:'Cormorant';src:url('m/fonts/CormorantGaramond.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#000000;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#000000;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="66.0" data-width="1280" data-height="720">
+<div id="s01_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s01_clip" class="clip" data-start="0.000" data-duration="4.650" data-track-index="1" style="width:100%;height:100%;position:relative">
+<div id="s01" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1"></div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300"></div>
+</div>
+
+</div></div>
+<div id="s02_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s02_clip" class="clip" data-start="3.600" data-duration="5.550" data-track-index="2" style="width:100%;height:100%;position:relative">
+<div id="s02" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/eht_1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Sagitário A*</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">buraco negro supermassivo</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">EHT Collaboration · CC BY 4.0</div>
+</div>
+
+</div></div>
+<div id="s03_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s03_clip" class="clip" data-start="8.100" data-duration="3.950" data-track-index="3" style="width:100%;height:100%;position:relative">
+<div id="s03" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#0f1b30 0%,#060a14 75%)">
+ <canvas class="st" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div class="fr" style="position:absolute;left:90px;top:110px;right:90px;bottom:110px;border:1px solid rgba(90,200,230,.45);clip-path:polygon(0 0,140px 0,170px 18px,100% 18px,100% 100%,0 100%);"></div>
+ <div class="fr2" style="position:absolute;left:90px;top:110px;width:140px;height:2px;background:rgba(90,200,230,.8)"></div>
+ <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Outfit',sans-serif">
+  <div style="display:flex;align-items:baseline;gap:26px"><span class="v" style="font-size:150px;font-weight:200;line-height:1">4</span><span class="u" style="font-size:80px;font-weight:200">milhões</span></div>
+  <div class="l" style="font-size:40px;font-weight:300;color:#bfe6f2;letter-spacing:.08em;margin-top:14px">de massas solares</div>
+ </div>
+</div>
+
+</div></div>
+<div id="s04_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s04_clip" class="clip" data-start="11.000" data-duration="3.450" data-track-index="4" style="width:100%;height:100%;position:relative">
+<div id="s04" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Sagitário A*</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">a luz não escapa dele</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300">Simulação ilustrativa</div>
+</div>
+
+</div></div>
+<div id="s05_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s05_clip" class="clip" data-start="13.400" data-duration="3.650" data-track-index="5" style="width:100%;height:100%;position:relative">
+<div id="s05" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/gc_1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Centro da galáxia</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">NASA/JPL-Caltech/ESA/CXC/STScI</div>
+</div>
+
+</div></div>
+<div id="s06_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s06_clip" class="clip" data-start="16.000" data-duration="7.250" data-track-index="6" style="width:100%;height:100%;position:relative">
+<div id="s06" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Estrelas jovens</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">órbitas em elipses ao redor do gigante</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300">Simulação ilustrativa</div>
+</div>
+
+</div></div>
+<div id="s07_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s07_clip" class="clip" data-start="22.200" data-duration="9.050" data-track-index="7" style="width:100%;height:100%;position:relative">
+<div id="s07" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/chandra_0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Gás interestelar</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">brilhando em raios-X</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">NASA/CXC/Caltech/M. Muno et al.</div>
+</div>
+
+</div></div>
+<div id="s08_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s08_clip" class="clip" data-start="30.200" data-duration="4.850" data-track-index="8" style="width:100%;height:100%;position:relative">
+<div id="s08" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/meerkat_1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Campos magnéticos</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">NASA, ESA, CSA, STScI, SARAO</div>
+</div>
+
+</div></div>
+<div id="s09_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s09_clip" class="clip" data-start="34.000" data-duration="5.050" data-track-index="9" style="width:100%;height:100%;position:relative">
+<div id="s09" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Jatos de energia</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">por anos-luz</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300">Simulação ilustrativa</div>
+</div>
+
+</div></div>
+<div id="s10_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s10_clip" class="clip" data-start="38.000" data-duration="4.350" data-track-index="10" style="width:100%;height:100%;position:relative">
+<div id="s10" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/alma_1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Event Horizon Telescope</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">ESO/C. Malin · CC BY 4.0</div>
+</div>
+
+</div></div>
+<div id="s11_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s11_clip" class="clip" data-start="41.300" data-duration="4.150" data-track-index="11" style="width:100%;height:100%;position:relative">
+<div id="s11" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/eht_0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">A sombra do horizonte de eventos</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">Sagitário A*</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">EHT Collaboration · CC BY 4.0</div>
+</div>
+
+</div></div>
+<div id="s12_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s12_clip" class="clip" data-start="44.400" data-duration="4.650" data-track-index="12" style="width:100%;height:100%;position:relative">
+<div id="s12" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/vlt_1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Very Large Telescope</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">ESO/Y. Beletsky · CC BY 4.0</div>
+</div>
+
+</div></div>
+<div id="s13_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s13_clip" class="clip" data-start="48.000" data-duration="3.350" data-track-index="13" style="width:100%;height:100%;position:relative">
+<div id="s13" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Estrela S2</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">trinta anos de observação</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300">Simulação ilustrativa</div>
+</div>
+
+</div></div>
+<div id="s14_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s14_clip" class="clip" data-start="50.300" data-duration="3.150" data-track-index="14" style="width:100%;height:100%;position:relative">
+<div id="s14" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/einst_0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1">Albert Einstein</div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em">relatividade geral</div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">Herman Mishkin · domínio público</div>
+</div>
+
+</div></div>
+<div id="s15_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s15_clip" class="clip" data-start="52.400" data-duration="5.650" data-track-index="15" style="width:100%;height:100%;position:relative">
+<div id="s15" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/gc_0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1"></div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">NASA/JPL-Caltech/S. Stolovy</div>
+</div>
+
+</div></div>
+<div id="s16_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s16_clip" class="clip" data-start="57.000" data-duration="5.750" data-track-index="16" style="width:100%;height:100%;position:relative">
+<div id="s16" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <canvas class="gl" width="1280" height="720" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.6) 100%)"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1"></div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300"></div>
+</div>
+
+</div></div>
+<div id="s17_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="s17_clip" class="clip" data-start="61.700" data-duration="4.300" data-track-index="17" style="width:100%;height:100%;position:relative">
+<div id="s17" class="cz-foto" style="position:absolute;inset:0;overflow:hidden;background:#000">
+ <img class="ph" src="m/img/mw_0.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:contrast(1.08) saturate(1.08) brightness(.96);transform-origin:50% 50%">
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)"></div>
+ <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
+ <div class="lb" style="position:absolute;left:56px;bottom:48px;max-width:820px;color:#fff;font-family:'Outfit',sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.8)">
+  <div class="nm" style="font-size:40px;font-weight:300;letter-spacing:.04em;line-height:1.1"></div>
+  <div class="sb" style="font-size:26px;font-weight:300;color:#cfd8e6;margin-top:6px;letter-spacing:.02em"></div>
+ </div>
+ <div class="cr" style="position:absolute;right:40px;bottom:40px;color:rgba(255,255,255,.72);font-family:'Outfit',sans-serif;font-size:24px;font-weight:300;text-shadow:0 2px 8px rgba(0,0,0,.9)">ESO/Y. Beletsky · CC BY 4.0</div>
+</div>
+
+</div></div>
+<div id="c1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="c1_clip" class="clip" data-start="0.300" data-duration="3.400" data-track-index="18" style="width:100%;height:100%;position:relative">
+<div id="c1" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 60%)">
+ <div class="t" style="font-family:'Cormorant',serif;font-weight:400;font-size:68px;letter-spacing:.2em;text-transform:uppercase;color:#f3efe6;text-align:center;max-width:1160px;line-height:1.15;text-shadow:0 2px 24px rgba(0,0,0,.85)">O centro da Via Láctea</div>
+ <div class="ln" style="width:220px;height:1px;background:rgba(232,210,160,.8);margin:22px 0 18px"></div>
+ <div class="s" style="font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:.08em;color:#e8d2a0;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.9)">um monstro silencioso</div>
+</div>
+
+</div></div>
+<div id="c2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="c2_clip" class="clip" data-start="52.800" data-duration="4.400" data-track-index="19" style="width:100%;height:100%;position:relative">
+<div id="c2" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 60%)">
+ <div class="t" style="font-family:'Cormorant',serif;font-weight:400;font-size:68px;letter-spacing:.2em;text-transform:uppercase;color:#f3efe6;text-align:center;max-width:1160px;line-height:1.15;text-shadow:0 2px 24px rgba(0,0,0,.85)">Uma pergunta aberta</div>
+ <div class="ln" style="width:220px;height:1px;background:rgba(232,210,160,.8);margin:22px 0 18px"></div>
+ <div class="s" style="font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:.08em;color:#e8d2a0;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.9)">o que alimenta o gigante?</div>
+</div>
+
+</div></div>
+<div id="c3_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="c3_clip" class="clip" data-start="57.500" data-duration="4.200" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="c3" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 60%)">
+ <div class="t" style="font-family:'Cormorant',serif;font-weight:400;font-size:68px;letter-spacing:.2em;text-transform:uppercase;color:#f3efe6;text-align:center;max-width:1160px;line-height:1.15;text-shadow:0 2px 24px rgba(0,0,0,.85)">Inscreva-se</div>
+ <div class="ln" style="width:220px;height:1px;background:rgba(232,210,160,.8);margin:22px 0 18px"></div>
+ <div class="s" style="font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:.08em;color:#e8d2a0;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.9)">números que desafiam a imaginação</div>
+</div>
+
+</div></div>
+<div id="c4_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="c4_clip" class="clip" data-start="62.100" data-duration="3.200" data-track-index="21" style="width:100%;height:100%;position:relative">
+<div id="c4" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 60%)">
+ <div class="t" style="font-family:'Cormorant',serif;font-weight:400;font-size:68px;letter-spacing:.2em;text-transform:uppercase;color:#f3efe6;text-align:center;max-width:1160px;line-height:1.15;text-shadow:0 2px 24px rgba(0,0,0,.85)">Mais segredos</div>
+ <div class="ln" style="width:220px;height:1px;background:rgba(232,210,160,.8);margin:22px 0 18px"></div>
+ <div class="s" style="font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:34px;letter-spacing:.08em;color:#e8d2a0;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.9)">do que contamos</div>
+</div>
+
+</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:66.0,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+(function(tl, P){ const S=0.0, D=4.65, id="#s01", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "voo", "seed": 1, "nome": "", "sub": "", "credito": "", "fade_in": 0, "fade_out": 0});
+
+
+(function(tl, P){ const S=3.6, D=5.55, id="#s02";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/eht_1.jpg", "motion": "zoom_in", "amount": 0.1, "pos": "50% 50%", "nome": "Sagitário A*", "sub": "buraco negro supermassivo", "credito": "EHT Collaboration · CC BY 4.0", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=8.1, D=3.95, id="#s03", R=document.querySelector(id);
+  const c=R.querySelector(".st"), x=c.getContext("2d"), W=c.width, H=c.height; let s=(+P.seed||5)*9973;
+  const r=()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const st=[];for(let i=0;i<420;i++)st.push([r()*W,r()*H,.4+r()*1.4,r()*6.28,.2+r()*.8]);
+  const draw=t=>{x.clearRect(0,0,W,H);for(const q of st){const a=q[4]*(.55+.45*Math.sin(t*1.5+q[3]));x.fillStyle="rgba(220,235,255,"+a.toFixed(3)+")";x.beginPath();x.arc((q[0]-t*6*q[2]+W)%W,q[1],q[2],0,6.283);x.fill();}};
+  const o={_t:0};Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;draw(v)}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+  const v=R.querySelector(".v"), num=parseFloat(String(P.valor).replace(",","."));
+  if(!isNaN(num)&&String(num)===String(P.valor)){const cn={_n:0};Object.defineProperty(cn,"n",{get(){return this._n},set(x){this._n=x;v.textContent=Math.round(x);}});tl.fromTo(cn,{n:0},{n:num,duration:Math.min(1.6,D*.5),ease:"power2.out",immediateRender:true},S+.3);}
+  tl.fromTo(id,{opacity:0},{opacity:1,duration:.8,immediateRender:true},S);
+  tl.fromTo(id+" .fr, "+id+" .fr2",{opacity:0},{opacity:1,duration:1},S+.2);
+  tl.fromTo(id+" .u",{opacity:0,x:-20},{opacity:1,x:0,duration:.8,immediateRender:true},S+.6);
+  tl.fromTo(id+" .l",{opacity:0,y:12},{opacity:1,y:0,duration:.8,immediateRender:true},S+1.0);
+})(window.__timelines.main, {"valor": "4", "unidade": "milhões", "legenda": "de massas solares", "seed": 5});
+
+
+(function(tl, P){ const S=11.0, D=3.45, id="#s04", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "buraco", "seed": 3, "nome": "Sagitário A*", "sub": "a luz não escapa dele", "credito": "Simulação ilustrativa", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=13.4, D=3.65, id="#s05";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/gc_1.jpg", "motion": "zoom_out", "amount": 0.09, "pos": "50% 50%", "nome": "Centro da galáxia", "sub": "", "credito": "NASA/JPL-Caltech/ESA/CXC/STScI", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=16.0, D=7.25, id="#s06", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "orbitas", "seed": 4, "nome": "Estrelas jovens", "sub": "órbitas em elipses ao redor do gigante", "credito": "Simulação ilustrativa", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=22.2, D=9.05, id="#s07";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/chandra_0.jpg", "motion": "zoom_in", "amount": 0.12, "pos": "50% 45%", "nome": "Gás interestelar", "sub": "brilhando em raios-X", "credito": "NASA/CXC/Caltech/M. Muno et al.", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=30.2, D=4.85, id="#s08";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/meerkat_1.jpg", "motion": "pan_left", "amount": 0.1, "pos": "50% 50%", "nome": "Campos magnéticos", "sub": "", "credito": "NASA, ESA, CSA, STScI, SARAO", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=34.0, D=5.05, id="#s09", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "jato", "seed": 5, "nome": "Jatos de energia", "sub": "por anos-luz", "credito": "Simulação ilustrativa", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=38.0, D=4.35, id="#s10";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/alma_1.jpg", "motion": "zoom_in", "amount": 0.08, "pos": "50% 50%", "nome": "Event Horizon Telescope", "sub": "", "credito": "ESO/C. Malin · CC BY 4.0", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=41.3, D=4.15, id="#s11";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/eht_0.jpg", "motion": "zoom_in", "amount": 0.1, "pos": "50% 50%", "nome": "A sombra do horizonte de eventos", "sub": "Sagitário A*", "credito": "EHT Collaboration · CC BY 4.0", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=44.4, D=4.65, id="#s12";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/vlt_1.jpg", "motion": "pan_right", "amount": 0.08, "pos": "50% 50%", "nome": "Very Large Telescope", "sub": "", "credito": "ESO/Y. Beletsky · CC BY 4.0", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=48.0, D=3.35, id="#s13", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "s2", "seed": 6, "nome": "Estrela S2", "sub": "trinta anos de observação", "credito": "Simulação ilustrativa", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=50.3, D=3.15, id="#s14";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/einst_0.jpg", "motion": "zoom_in", "amount": 0.06, "pos": "50% 22%", "nome": "Albert Einstein", "sub": "relatividade geral", "credito": "Herman Mishkin · domínio público", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=52.4, D=5.65, id="#s15";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/gc_0.jpg", "motion": "zoom_in", "amount": 0.1, "pos": "50% 50%", "nome": "", "sub": "", "credito": "NASA/JPL-Caltech/S. Stolovy", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=57.0, D=5.75, id="#s16", R=document.querySelector(id), W=1280, H=720;
+  const fi=+P.fade_in||0, fo=+P.fade_out||0;
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) R.querySelector(".lb").style.display="none";
+  if(!P.sub) R.querySelector(".sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+  if(!window.THREE) return;
+  const T=THREE; let sd=(+P.seed||1)*7919+13;
+  const rnd=()=>{sd|=0;sd=sd+0x6D2B79F5|0;let t=Math.imul(sd^sd>>>15,1|sd);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const gau=()=>{let u=0;for(let i=0;i<4;i++)u+=rnd();return (u-2)/1.15;};
+  const ren=new T.WebGLRenderer({canvas:R.querySelector(".gl"),antialias:true,preserveDrawingBuffer:true});
+  ren.setSize(W,H,false); ren.setClearColor(0x000000,1);
+  const sc=new T.Scene(), cam=new T.PerspectiveCamera(45,W/H,.05,2000);
+  const tex=(f)=>{const c=document.createElement("canvas");c.width=c.height=128;f(c.getContext("2d"));return new T.CanvasTexture(c);};
+  const dot=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(255,255,255,1)");g.addColorStop(.25,"rgba(255,255,255,.6)");g.addColorStop(1,"rgba(255,255,255,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const glow=(col)=>tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,col(1));g.addColorStop(.2,col(.55));g.addColorStop(.5,col(.15));g.addColorStop(1,col(0));x.fillStyle=g;x.fillRect(0,0,128,128);});
+  const pts=(pos,col,size,att)=>{const g=new T.BufferGeometry();g.setAttribute("position",new T.Float32BufferAttribute(pos,3));g.setAttribute("color",new T.Float32BufferAttribute(col,3));
+    return new T.Points(g,new T.PointsMaterial({size,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending,sizeAttenuation:att!==false}));};
+  {const p=[],c=[];for(let i=0;i<5000;i++){const u=rnd()*2-1,th=rnd()*6.283,r=600+rnd()*300,s=Math.sqrt(1-u*u);p.push(r*s*Math.cos(th),r*u,r*s*Math.sin(th));const k=.35+rnd()*.65,w=rnd();c.push(k*(w<.15?1:.85),k*(w<.15?.85:.9),k*(w<.15?.6:1));}
+   sc.add(pts(p,c,2.2,false));}
+  const sprite=(texr,s,op)=>{const m=new T.Sprite(new T.SpriteMaterial({map:texr,transparent:true,depthWrite:false,blending:T.AdditiveBlending,opacity:op==null?1:op}));m.scale.set(s,s,1);return m;};
+  let upd=()=>{};
+  const M=P.modo||"voo";
+  if(M==="voo"){
+    const g=new T.Group(); sc.add(g); const p=[],c=[];
+    for(let i=0;i<42000;i++){ const arm=i%2, rr=Math.pow(rnd(),.55)*70, th=arm*Math.PI+rr*.19+gau()*.32*(1+8/(rr+4)), sp=gau()*(1.2+rr*.05);
+      const x=rr*Math.cos(th)+sp, z=rr*Math.sin(th)+gau()*(1.2+rr*.05), y=gau()*(rr<10?2.2*(1-rr/12)+.4:.5);
+      p.push(x,y,z); const core=Math.max(0,1-rr/14), hii=rnd()<.035&&rr>14;
+      if(hii)c.push(1,.35,.55); else c.push(.55+.45*core,.6+.32*core,1-.45*core);}
+    g.add(pts(p,c,.42)); g.add(sprite(glow(a=>"rgba(255,214,150,"+a+")"),34,1)); g.add(sprite(glow(a=>"rgba(255,245,225,"+a+")"),9,1));
+    const alt=(+P.seed||1)%2===0;
+    upd=t=>{const k=t/Math.max(D,1), e=k*k*(3-2*k); g.rotation.y=t*.035;
+      if(!alt){cam.position.set(0,52-34*e,118-78*e);} else {const a=.6+t*.06;cam.position.set(Math.sin(a)*78,26-8*e,Math.cos(a)*78);}
+      cam.lookAt(0,0,0);};
+  } else if(M==="buraco"||M==="jato"){
+    sc.add(new T.Mesh(new T.SphereGeometry(1,64,32),new T.MeshBasicMaterial({color:0x000000})));
+    const ring=tex(x=>{const g=x.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.36,"rgba(0,0,0,0)");g.addColorStop(.40,"rgba(255,235,200,1)");g.addColorStop(.47,"rgba(255,170,80,.55)");g.addColorStop(.7,"rgba(200,90,30,.12)");g.addColorStop(1,"rgba(0,0,0,0)");x.fillStyle=g;x.fillRect(0,0,128,128);});
+    sc.add(sprite(ring,6.6,1));
+    const disk=new T.Group(); disk.rotation.x=1.36; disk.rotation.z=.12; sc.add(disk);
+    const N=26000, r0=new Float32Array(N), a0=new Float32Array(N), hy=new Float32Array(N), c=[], p=new Float32Array(N*3);
+    for(let i=0;i<N;i++){ r0[i]=1.55+Math.pow(rnd(),1.6)*5.5; a0[i]=rnd()*6.283; hy[i]=gau()*.03*r0[i]; const h=Math.max(0,1-(r0[i]-1.5)/5.5);
+      c.push(1*(.45+.55*h),(.2+.7*h*h),(.06+.6*h*h*h)); }
+    const dg=new T.BufferGeometry(); dg.setAttribute("position",new T.BufferAttribute(p,3)); dg.setAttribute("color",new T.Float32BufferAttribute(c,3));
+    disk.add(new T.Points(dg,new T.PointsMaterial({size:.06,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})));
+    let jet=null; const JN=14000; let ju,jr,ja,jp;
+    if(M==="jato"){ ju=new Float32Array(JN); jr=new Float32Array(JN); ja=new Float32Array(JN); jp=new Float32Array(JN*3); const jc=[];
+      for(let i=0;i<JN;i++){ju[i]=rnd();jr[i]=Math.abs(gau())*.5;ja[i]=rnd()*6.283;const b=.5+rnd()*.5;jc.push(.55*b,.75*b,1*b);}
+      const jg=new T.BufferGeometry(); jg.setAttribute("position",new T.BufferAttribute(jp,3)); jg.setAttribute("color",new T.Float32BufferAttribute(jc,3));
+      jet=new T.Points(jg,new T.PointsMaterial({size:.24,map:dot,vertexColors:true,transparent:true,depthWrite:false,blending:T.AdditiveBlending})); jet.rotation.z=.12; sc.add(jet); }
+    upd=t=>{ for(let i=0;i<N;i++){const a=a0[i]+t*1.1/Math.pow(r0[i],1.5);p[i*3]=r0[i]*Math.cos(a);p[i*3+1]=r0[i]*Math.sin(a);p[i*3+2]=hy[i];} dg.attributes.position.needsUpdate=true;
+      if(jet){ for(let i=0;i<JN;i++){ const u=(ju[i]+t*.22)%1, sg=i%2?1:-1, y=sg*(1.1+u*16), rr=jr[i]*(.6+u*3.6); jp[i*3]=rr*Math.cos(ja[i]+t);jp[i*3+1]=y;jp[i*3+2]=rr*Math.sin(ja[i]+t);} jet.geometry.attributes.position.needsUpdate=true; }
+      const k=t/Math.max(D,1), dist=M==="jato"?(30-6*k):(13-3.5*k), a=.3+t*.05, el=M==="jato"?.12:.1;
+      cam.position.set(Math.sin(a)*dist*Math.cos(el),dist*Math.sin(el),Math.cos(a)*dist*Math.cos(el)); cam.lookAt(0,0,0); };
+  } else {
+    const s2=M==="s2"; sc.add(new T.Mesh(new T.SphereGeometry(.22,32,16),new T.MeshBasicMaterial({color:0}))); sc.add(sprite(glow(a=>"rgba(255,170,90,"+(a*.8)+")"),2.4,1));
+    const orbs=[], n=s2?12:16;
+    for(let i=0;i<n;i++){ const hi=s2&&i===0; const a=hi?8:3+rnd()*9, e=hi?.88:.3+rnd()*.6, Pp=hi?8:5+a*1.1, M0=hi?-2.2:rnd()*6.283;
+      const q=new T.Quaternion().setFromEuler(new T.Euler(hi?.9:rnd()*3.14,hi?.4:rnd()*6.28,hi?.2:rnd()*6.28));
+      const b=a*Math.sqrt(1-e*e), line=[]; for(let k=0;k<=256;k++){const E=k/256*6.2832;const v=new T.Vector3(a*(Math.cos(E)-e),b*Math.sin(E),0).applyQuaternion(q);line.push(v.x,v.y,v.z);}
+      const lg=new T.BufferGeometry(); lg.setAttribute("position",new T.Float32BufferAttribute(line,3));
+      sc.add(new T.Line(lg,new T.LineBasicMaterial({color:hi?0xffc861:0x6fa8ff,transparent:true,opacity:hi?.95:(s2?.14:.32),blending:T.AdditiveBlending})));
+      const st=sprite(glow(x=>hi?"rgba(255,215,140,"+x+")":"rgba(190,220,255,"+x+")"),hi?1.6:.9,s2&&!hi?.4:1); sc.add(st);
+      orbs.push({a,b,e,Pp,M0,q,st}); }
+    upd=t=>{ for(const o of orbs){ const Mm=o.M0+6.2832*t/o.Pp; let E=o.e>.8?Math.PI:Mm; for(let k=0;k<12;k++)E-=(E-o.e*Math.sin(E)-Mm)/(1-o.e*Math.cos(E));
+        o.st.position.copy(new T.Vector3(o.a*(Math.cos(E)-o.e),o.b*Math.sin(E),0).applyQuaternion(o.q));}
+      const k=t/Math.max(D,1), dist=s2?(19-3*k):(30-6*k), a=.5+t*.06; cam.position.set(Math.sin(a)*dist,dist*.38,Math.cos(a)*dist); cam.lookAt(0,0,0); };
+  }
+  const o={_t:-1}; Object.defineProperty(o,"t",{get(){return this._t},set(v){this._t=v;upd(v);ren.render(sc,cam);}});
+  tl.fromTo(o,{t:0},{t:D,duration:D,ease:"none",immediateRender:true},S);
+})(window.__timelines.main, {"modo": "voo", "seed": 2, "nome": "", "sub": "", "credito": "", "fade_in": 1.0, "fade_out": 0});
+
+
+(function(tl, P){ const S=61.7, D=4.3, id="#s17";
+  const a=+P.amount||0.08, fi=+P.fade_in||0, fo=+P.fade_out||0;
+  const m=P.motion||"zoom_in"; let f={scale:1+a,xPercent:0,yPercent:0}, t={scale:1+a,xPercent:0,yPercent:0};
+  if(m==="zoom_in"){f.scale=1.0;t.scale=1+a;} else if(m==="zoom_out"){f.scale=1+a;t.scale=1.0;}
+  else if(m==="pan_left"){f.xPercent=a*40;t.xPercent=-a*40;} else if(m==="pan_right"){f.xPercent=-a*40;t.xPercent=a*40;}
+  else if(m==="pan_up"){f.yPercent=a*40;t.yPercent=-a*40;}
+  tl.fromTo(id+" .ph",f,{...t,duration:D,ease:"none",immediateRender:true},S);
+  if(fi>0) tl.fromTo(id,{opacity:0},{opacity:1,duration:fi,ease:"sine.inOut",immediateRender:true},S);
+  if(fo>0) tl.to(id,{opacity:0,duration:fo,ease:"sine.inOut"},S+D-fo);
+  if(!P.nome) document.querySelector(id+" .lb").style.display="none";
+  if(!P.sub) document.querySelector(id+" .sb").style.display="none";
+  tl.fromTo(id+" .lb",{opacity:0,y:14},{opacity:1,y:0,duration:1.0,ease:"power2.out",immediateRender:true},S+Math.min(1.0,D*.25));
+  tl.to(id+" .lb",{opacity:0,duration:.6},S+D-.9);
+  tl.fromTo(id+" .cr",{opacity:0},{opacity:1,duration:1.0,immediateRender:true},S+Math.min(1.0,D*.25));
+})(window.__timelines.main, {"src": "m/img/mw_0.jpg", "motion": "zoom_out", "amount": 0.1, "pos": "50% 50%", "nome": "", "sub": "", "credito": "ESO/Y. Beletsky · CC BY 4.0", "fade_in": 1.0, "fade_out": 1.2});
+
+
+(function(tl, P){ const S=0.3, D=3.4, id="#c1", F=Math.min(+P.fade||1.5,D/3);
+  if(!P.sub){document.querySelector(id+" .s").style.display="none";}
+  tl.fromTo(id+" .t",{opacity:0,letterSpacing:"0.32em"},{opacity:1,letterSpacing:"0.2em",duration:F+1,ease:"power2.out",immediateRender:true},S);
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:F,ease:"power2.inOut",immediateRender:true},S+.4);
+  tl.fromTo(id+" .s",{opacity:0,y:10},{opacity:1,y:0,duration:F,ease:"power2.out",immediateRender:true},S+.7);
+  tl.to(id,{opacity:0,duration:Math.min(1,F),ease:"sine.in"},S+D-Math.min(1,F));
+})(window.__timelines.main, {"titulo": "O centro da Via Láctea", "sub": "um monstro silencioso", "fade": 1.5});
+
+
+(function(tl, P){ const S=52.8, D=4.4, id="#c2", F=Math.min(+P.fade||1.5,D/3);
+  if(!P.sub){document.querySelector(id+" .s").style.display="none";}
+  tl.fromTo(id+" .t",{opacity:0,letterSpacing:"0.32em"},{opacity:1,letterSpacing:"0.2em",duration:F+1,ease:"power2.out",immediateRender:true},S);
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:F,ease:"power2.inOut",immediateRender:true},S+.4);
+  tl.fromTo(id+" .s",{opacity:0,y:10},{opacity:1,y:0,duration:F,ease:"power2.out",immediateRender:true},S+.7);
+  tl.to(id,{opacity:0,duration:Math.min(1,F),ease:"sine.in"},S+D-Math.min(1,F));
+})(window.__timelines.main, {"titulo": "Uma pergunta aberta", "sub": "o que alimenta o gigante?", "fade": 1.5});
+
+
+(function(tl, P){ const S=57.5, D=4.2, id="#c3", F=Math.min(+P.fade||1.5,D/3);
+  if(!P.sub){document.querySelector(id+" .s").style.display="none";}
+  tl.fromTo(id+" .t",{opacity:0,letterSpacing:"0.32em"},{opacity:1,letterSpacing:"0.2em",duration:F+1,ease:"power2.out",immediateRender:true},S);
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:F,ease:"power2.inOut",immediateRender:true},S+.4);
+  tl.fromTo(id+" .s",{opacity:0,y:10},{opacity:1,y:0,duration:F,ease:"power2.out",immediateRender:true},S+.7);
+  tl.to(id,{opacity:0,duration:Math.min(1,F),ease:"sine.in"},S+D-Math.min(1,F));
+})(window.__timelines.main, {"titulo": "Inscreva-se", "sub": "números que desafiam a imaginação", "fade": 1.5});
+
+
+(function(tl, P){ const S=62.1, D=3.2, id="#c4", F=Math.min(+P.fade||1.5,D/3);
+  if(!P.sub){document.querySelector(id+" .s").style.display="none";}
+  tl.fromTo(id+" .t",{opacity:0,letterSpacing:"0.32em"},{opacity:1,letterSpacing:"0.2em",duration:F+1,ease:"power2.out",immediateRender:true},S);
+  tl.fromTo(id+" .ln",{scaleX:0},{scaleX:1,duration:F,ease:"power2.inOut",immediateRender:true},S+.4);
+  tl.fromTo(id+" .s",{opacity:0,y:10},{opacity:1,y:0,duration:F,ease:"power2.out",immediateRender:true},S+.7);
+  tl.to(id,{opacity:0,duration:Math.min(1,F),ease:"sine.in"},S+D-Math.min(1,F));
+})(window.__timelines.main, {"titulo": "Mais segredos", "sub": "do que contamos", "fade": 1.5});
+
+})();</script>
+</body></html>

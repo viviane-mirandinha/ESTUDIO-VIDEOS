@@ -1,0 +1,541 @@
+{
+ "version": 1,
+ "name": "11 - TERROR CREEPY ESCURO - Três noites numa casa no fim da estrada",
+ "estilo": "11-terror-creepy-escuro",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#05070a"
+ },
+ "duration": 59.88,
+ "template": "generic",
+ "fonts": {
+  "Anton": "fonts/Anton-Regular.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "Mr. Nightmare",
+  "canal_url": "https://www.youtube.com/@MrNightmare",
+  "video": "https://youtu.be/LPrD0f-bP2k",
+  "titulo": "3 Terrifying TRUE Fall Camping Horror Stories",
+  "nota": "também Chilling Scares (-fAZza2tUU0) e Marcos Campos; ver ESTILOS-NOVOS/11-terror-creepy-escuro/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.08,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": false
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 33.6,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 55.25,
+    "volume": 0.12,
+    "label": "whoosh suave"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Planos escuros"
+  },
+  {
+   "id": "textos",
+   "name": "Títulos / print"
+  },
+  {
+   "id": "overlay",
+   "name": "Vinheta/flicker"
+  }
+ ],
+ "items": [
+  {
+   "id": "pl1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_estrada.jpg",
+   "start": 0,
+   "dur": 6.1,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_estrada.jpg",
+     "mov": "push",
+     "amt": 0.08,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti1",
+   "type": "scene",
+   "track": "textos",
+   "label": "título RELATO #1",
+   "start": 0.15,
+   "dur": 5.8,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "RELATO #1",
+     "titulo": "Três noites na casa do fim da estrada",
+     "cor": "#c1121f",
+     "fundo": "escuro",
+     "y": 50,
+     "tam": 96,
+     "tam_tit": 54,
+     "t_tit": 0.7
+    }
+   }
+  },
+  {
+   "id": "pl2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano p_casa.jpg",
+   "start": 6.1,
+   "dur": 4.9,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/p_casa.jpg",
+     "mov": "pan_r",
+     "amt": 0.08,
+     "brilho": 0.55,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "fo1",
+   "type": "scene",
+   "track": "textos",
+   "label": "print relato fórum",
+   "start": 6.1,
+   "dur": 4.9,
+   "props": {
+    "scene": "terror_forum",
+    "params": {
+     "usuario": "u/anonimo_rural",
+     "data": "postado às 03:12",
+     "sub": "r/relatosreais",
+     "titulo": "Três noites numa casa no fim da estrada",
+     "texto": "Cheguei na sexta, cansado, achando que o silêncio ia curar a insônia.",
+     "votos": "4,1 mil",
+     "t_cursor": 1.2
+    }
+   }
+  },
+  {
+   "id": "pl3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_janela.jpg",
+   "start": 11.0,
+   "dur": 3.35,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_janela.jpg",
+     "mov": "push",
+     "amt": 0.07,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti2",
+   "type": "scene",
+   "track": "textos",
+   "label": "título NOITE 1",
+   "start": 11.05,
+   "dur": 3.25,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "NOITE 1",
+     "titulo": "só o vento nas frestas",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 74,
+     "tam": 88,
+     "tam_tit": 52,
+     "t_tit": 1.9
+    }
+   }
+  },
+  {
+   "id": "pl4",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_corredor.jpg",
+   "start": 14.35,
+   "dur": 4.25,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_corredor.jpg",
+     "mov": "push",
+     "amt": 0.12,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti3",
+   "type": "scene",
+   "track": "textos",
+   "label": "título NOITE 2",
+   "start": 14.4,
+   "dur": 4.15,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "NOITE 2",
+     "titulo": "03:00 da manhã",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 50,
+     "tam": 88,
+     "tam_tit": 52,
+     "t_tit": 2.8
+    }
+   }
+  },
+  {
+   "id": "pl5",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_lanterna.jpg",
+   "start": 18.6,
+   "dur": 3.4,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_lanterna.jpg",
+     "mov": "pan_r",
+     "amt": 0.1,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "pl6",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_pegadas.jpg",
+   "start": 22.0,
+   "dur": 6.3,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_pegadas.jpg",
+     "mov": "push",
+     "amt": 0.14,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti4",
+   "type": "scene",
+   "track": "textos",
+   "label": "título PEGADAS DESCALÇAS",
+   "start": 24.2,
+   "dur": 4.0,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "PEGADAS DESCALÇAS",
+     "titulo": "vindo do porão",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 80,
+     "tam": 64,
+     "tam_tit": 40,
+     "t_tit": 1.8
+    }
+   }
+  },
+  {
+   "id": "pl7",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_cadeira.jpg",
+   "start": 28.3,
+   "dur": 5.45,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_cadeira.jpg",
+     "mov": "pan_l",
+     "amt": 0.1,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti4b",
+   "type": "scene",
+   "track": "textos",
+   "label": "título TRANQUEI O PORÃO",
+   "start": 30.4,
+   "dur": 3.25,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "TRANQUEI O PORÃO",
+     "titulo": "com a cadeira da cozinha",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 80,
+     "tam": 64,
+     "tam_tit": 40,
+     "t_tit": 1.9
+    }
+   }
+  },
+  {
+   "id": "pl8",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano p_porao2.jpg",
+   "start": 33.75,
+   "dur": 4.15,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/p_porao2.jpg",
+     "mov": "push",
+     "amt": 0.1,
+     "brilho": 0.5,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti5",
+   "type": "scene",
+   "track": "textos",
+   "label": "título NOITE 3",
+   "start": 33.8,
+   "dur": 4.05,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "NOITE 3",
+     "titulo": "",
+     "cor": "#c1121f",
+     "fundo": "escuro",
+     "y": 50,
+     "tam": 110,
+     "tam_tit": 52,
+     "t_tit": 0.7
+    }
+   }
+  },
+  {
+   "id": "pl9",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_fresta.jpg",
+   "start": 37.9,
+   "dur": 3.75,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_fresta.jpg",
+     "mov": "push",
+     "amt": 0.1,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti6",
+   "type": "scene",
+   "track": "textos",
+   "label": "título PODRE. DOCE.",
+   "start": 38.4,
+   "dur": 3.2,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "PODRE. DOCE.",
+     "titulo": "",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 80,
+     "tam": 72,
+     "tam_tit": 52,
+     "t_tit": 0.7
+    }
+   }
+  },
+  {
+   "id": "pl10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_macaneta.jpg",
+   "start": 41.65,
+   "dur": 3.35,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_macaneta.jpg",
+     "mov": "push",
+     "amt": 0.16,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "pl11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_sombra.jpg",
+   "start": 45.0,
+   "dur": 4.8,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_sombra.jpg",
+     "mov": "push",
+     "amt": 0.06,
+     "brilho": 0.85,
+     "nevoa": 0.3,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti7",
+   "type": "scene",
+   "track": "textos",
+   "label": "título O MEU PRÓPRIO ROSTO",
+   "start": 46.7,
+   "dur": 3.05,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "O MEU PRÓPRIO ROSTO",
+     "titulo": "usando a minha camiseta",
+     "cor": "#c1121f",
+     "fundo": "nenhum",
+     "y": 84,
+     "tam": 60,
+     "tam_tit": 36,
+     "t_tit": 2.3
+    }
+   }
+  },
+  {
+   "id": "pl12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_fuga.jpg",
+   "start": 49.8,
+   "dur": 5.55,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_fuga.jpg",
+     "mov": "pull",
+     "amt": 0.1,
+     "brilho": 0.82,
+     "nevoa": 0.45,
+     "tint": "rgba(11,16,32,.35)"
+    }
+   }
+  },
+  {
+   "id": "ti8",
+   "type": "scene",
+   "track": "textos",
+   "label": "título NÃO TRANQUE A PORTA",
+   "start": 53.0,
+   "dur": 2.35,
+   "props": {
+    "scene": "terror_titulo",
+    "params": {
+     "numero": "NÃO TRANQUE A PORTA",
+     "titulo": "CORRA.",
+     "cor": "#c1121f",
+     "fundo": "escuro",
+     "y": 50,
+     "tam": 84,
+     "tam_tit": 76,
+     "t_tit": 1.6
+    }
+   }
+  },
+  {
+   "id": "in1",
+   "type": "scene",
+   "track": "textos",
+   "label": "inscreva-se",
+   "start": 55.35,
+   "dur": 4.53,
+   "props": {
+    "scene": "fern_inscreva",
+    "params": {
+     "linha1": "MAIS RELATOS QUE NÃO DEIXAM VOCÊ DORMIR",
+     "botao": "INSCREVA-SE",
+     "feito": "INSCRITO",
+     "cor": "#c1121f",
+     "t_click": 1.6
+    }
+   }
+  },
+  {
+   "id": "fx1",
+   "type": "scene",
+   "track": "overlay",
+   "label": "vinheta + flicker VHS",
+   "start": 0,
+   "dur": 59.88,
+   "props": {
+    "scene": "terror_flicker",
+    "params": {
+     "forca": 0.14,
+     "passo": 0.08
+    }
+   }
+  }
+ ]
+}

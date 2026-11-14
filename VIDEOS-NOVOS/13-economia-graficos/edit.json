@@ -1,0 +1,1077 @@
+{
+ "version": 1,
+ "name": "13 - ECONOMIA GRAFICOS - Por que o carro novo ficou tão caro",
+ "estilo": "13-economia-graficos",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 79.5,
+ "template": "generic",
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Barlow Condensed": "fonts/BarlowCondensed-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "Economics Explained",
+  "canal_url": "https://www.youtube.com/@EconomicsExplained",
+  "video": "https://youtu.be/2a0veEb3znU",
+  "titulo": "How Old Money Kills Economies",
+  "nota": "B-roll escurecido + tabelas/barras/linha com título amarelo-claro, cartões de capítulo em papel rasgado com fita amarela, fotos em cartão caindo, manchete com marca-texto (How Money Works)."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "B-roll / fotos"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "f01",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll dash1_720.mp4",
+   "start": 0.0,
+   "dur": 9.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/dash1_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f02",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto real1.jpg",
+   "start": 9.0,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/real1.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.75,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f03",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll traf1_720.mp4",
+   "start": 14.7,
+   "dur": 4.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/traf1_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f04",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll fab0_720.mp4",
+   "start": 18.6,
+   "dur": 3.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/fab0_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.5,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f05",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto patio.jpg",
+   "start": 22.0,
+   "dur": 5.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/patio.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f06",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto real0.jpg",
+   "start": 27.3,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/real0.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.5,
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f07",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll money0_720.mp4",
+   "start": 30.3,
+   "dur": 4.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/money0_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.7,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f08",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto parts0.jpg",
+   "start": 34.1,
+   "dur": 3.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/parts0.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f09",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto escap.jpg",
+   "start": 37.3,
+   "dur": 4.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/escap.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.75,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f10",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto crash1.jpg",
+   "start": 41.8,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/crash1.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.7,
+    "motion": "pan_left",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f11",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto loja.jpg",
+   "start": 46.0,
+   "dur": 4.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/loja.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f12",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll dash0_720.mp4",
+   "start": 50.3,
+   "dur": 4.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/dash0_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f13",
+   "type": "image",
+   "track": "fundo",
+   "label": "Foto touch2.jpg",
+   "start": 54.2,
+   "dur": 5.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/touch2.jpg",
+    "fill": true,
+    "fit": "cover",
+    "opacity": 0.75,
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "f14",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll show_720.mp4",
+   "start": 58.9,
+   "dur": 4.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/show_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.8,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f15",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll night1_720.mp4",
+   "start": 62.9,
+   "dur": 5.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/night1_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.7,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f16",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll dealer0_720.mp4",
+   "start": 67.8,
+   "dur": 4.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/dealer0_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.85,
+    "motion": "none",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "f17",
+   "type": "video",
+   "track": "fundo",
+   "label": "B-roll night0_720.mp4",
+   "start": 71.6,
+   "dur": 7.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/night0_720.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0,
+    "opacity": 0.6,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t01",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: 2019",
+   "start": 0.15,
+   "dur": 3.65,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "2019",
+    "x": 300,
+    "y": 330,
+    "w": 400,
+    "size": 130,
+    "color": "#efe08f",
+    "font": "Barlow Condensed",
+    "weight": 800,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "p01",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto-cartão: Hatch compacto",
+   "start": 0.3,
+   "dur": 3.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_foto",
+    "params": {
+     "src": "img/hatch2.jpg",
+     "legenda": "Hatch compacto",
+     "x": 820,
+     "y": 330,
+     "w": 540,
+     "h": 330,
+     "rot": -3,
+     "t_in": 0.3
+    }
+   }
+  },
+  {
+   "id": "g01",
+   "type": "scene",
+   "track": "visual",
+   "label": "Barras: preço do hatch",
+   "start": 3.6,
+   "dur": 5.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_barras",
+    "params": {
+     "titulo": "Preço de um hatch compacto",
+     "labels": [
+      "2019",
+      "Hoje"
+     ],
+     "valores": [
+      55,
+      90
+     ],
+     "textos": [
+      "R$ 55 mil",
+      "+ de R$ 90 mil"
+     ],
+     "tempos": [
+      4.3,
+      8.3
+     ],
+     "destaque": 1
+    }
+   }
+  },
+  {
+   "id": "g02",
+   "type": "scene",
+   "track": "visual",
+   "label": "Tabela: salário x carro",
+   "start": 9.0,
+   "dur": 5.95,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_tabela",
+    "params": {
+     "titulo": "Quanto subiu",
+     "colunas": [
+      "",
+      "Alta"
+     ],
+     "linhas": [
+      [
+       "Salário mínimo",
+       "cerca de 50%"
+      ],
+      [
+       "Carro",
+       "mais de 60%"
+      ]
+     ],
+     "tempos": [
+      10.9,
+      13.9
+     ],
+     "destaque": 1,
+     "t_destaque": 14.25
+    }
+   }
+  },
+  {
+   "id": "t02",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: Por quê?",
+   "start": 14.85,
+   "dur": 1.05,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Por quê?",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 110,
+    "color": "#efe08f",
+    "font": "Barlow Condensed",
+    "weight": 800,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Primeiro",
+   "start": 15.8,
+   "dur": 3.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_capitulo",
+    "params": {
+     "cap": "Primeiro",
+     "texto": "A cadeia quebrou na pandemia.",
+     "itens": "",
+     "tempos": "",
+     "escuro": 0.45,
+     "x": 300,
+     "y": 230
+    }
+   }
+  },
+  {
+   "id": "p02",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto-cartão: Faltou chip",
+   "start": 18.75,
+   "dur": 3.55,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_foto",
+    "params": {
+     "src": "img/chip2.jpg",
+     "legenda": "Faltou chip",
+     "x": 270,
+     "y": 330,
+     "w": 340,
+     "h": 240,
+     "rot": -5,
+     "t_in": 19.2
+    }
+   }
+  },
+  {
+   "id": "p03",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto-cartão: Parou a linha",
+   "start": 18.75,
+   "dur": 3.55,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_foto",
+    "params": {
+     "src": "img/linha.jpg",
+     "legenda": "Parou a linha",
+     "x": 650,
+     "y": 370,
+     "w": 340,
+     "h": 240,
+     "rot": 3,
+     "t_in": 19.85
+    }
+   }
+  },
+  {
+   "id": "p04",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto-cartão: Estoque zerou",
+   "start": 18.75,
+   "dur": 3.55,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_foto",
+    "params": {
+     "src": "img/empty0.jpg",
+     "legenda": "Estoque zerou",
+     "x": 1020,
+     "y": 320,
+     "w": 340,
+     "h": 240,
+     "rot": -2,
+     "t_in": 20.85
+    }
+   }
+  },
+  {
+   "id": "t03",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: As montadoras",
+   "start": 22.3,
+   "dur": 5.2,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "As montadoras",
+    "x": 640,
+    "y": 170,
+    "w": 1100,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Barlow Condensed",
+    "weight": 800,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "t04",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: ▲ MAIS LUCRO",
+   "start": 24.0,
+   "dur": 3.5,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "▲ MAIS LUCRO",
+    "x": 640,
+    "y": 310,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "▲"
+    ],
+    "hl_color": "#3ddc84"
+   }
+  },
+  {
+   "id": "t05",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: ▼ MENOS CARROS",
+   "start": 25.5,
+   "dur": 2.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "▼ MENOS CARROS",
+    "x": 640,
+    "y": 420,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "▼"
+    ],
+    "hl_color": "#ff5a4f"
+   }
+  },
+  {
+   "id": "t06",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: ▲ MAIS CAROS",
+   "start": 26.5,
+   "dur": 1.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "▲ MAIS CAROS",
+    "x": 640,
+    "y": 530,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "▲"
+    ],
+    "hl_color": "#3ddc84"
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Segundo",
+   "start": 27.3,
+   "dur": 3.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_capitulo",
+    "params": {
+     "cap": "Segundo",
+     "texto": "O real desvalorizou.",
+     "itens": "",
+     "tempos": "",
+     "escuro": 0.45,
+     "x": 300,
+     "y": 230
+    }
+   }
+  },
+  {
+   "id": "g03",
+   "type": "scene",
+   "track": "visual",
+   "label": "Linha: dólar 4 → 5,50",
+   "start": 30.3,
+   "dur": 4.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_linha",
+    "params": {
+     "titulo": "Dólar em reais",
+     "xlabels": [
+      "antes",
+      "depois"
+     ],
+     "ymin": 3,
+     "ymax": 6,
+     "valores": [
+      4,
+      5.5
+     ],
+     "rotulos": [
+      "R$ 4,00",
+      "R$ 5,50"
+     ],
+     "tempos": [
+      32.4,
+      33.3
+     ]
+    }
+   }
+  },
+  {
+   "id": "p05",
+   "type": "scene",
+   "track": "visual",
+   "label": "Foto-cartão: Peças importadas",
+   "start": 34.15,
+   "dur": 3.35,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_foto",
+    "params": {
+     "src": "img/parts2.jpg",
+     "legenda": "Peças importadas",
+     "x": 640,
+     "y": 300,
+     "w": 520,
+     "h": 320,
+     "rot": -3,
+     "t_in": 34.15
+    }
+   }
+  },
+  {
+   "id": "t07",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: ▲ ENCARECERAM NA HORA",
+   "start": 35.6,
+   "dur": 1.8,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "▲ ENCARECERAM NA HORA",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 52,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "▲"
+    ],
+    "hl_color": "#ff5a4f"
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Terceiro",
+   "start": 37.3,
+   "dur": 8.7,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_capitulo",
+    "params": {
+     "cap": "Terceiro",
+     "texto": "A lei mudou.",
+     "itens": "Novas regras de emissões|Controle de estabilidade obrigatório|Produção mais cara",
+     "tempos": "39.5|41.95|44.1",
+     "escuro": 0.45,
+     "x": 70,
+     "y": 140
+    }
+   }
+  },
+  {
+   "id": "t08",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: Tecnologia custa caro",
+   "start": 46.2,
+   "dur": 4.1,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Tecnologia custa caro",
+    "x": 640,
+    "y": 280,
+    "w": 1100,
+    "size": 64,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "caro"
+    ],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "t09",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: e o consumidor pagou a conta",
+   "start": 48.2,
+   "dur": 2.1,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "e o consumidor pagou a conta",
+    "x": 640,
+    "y": 390,
+    "w": 1100,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "pagou a conta"
+    ],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "c4",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Quarto",
+   "start": 50.3,
+   "dur": 8.7,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_capitulo",
+    "params": {
+     "cap": "Quarto",
+     "texto": "O gosto mudou. Ninguém quer mais carro “pelado”.",
+     "itens": "Central multimídia|Câmera de ré|Teto solar",
+     "tempos": "54.36|55.76|56.74",
+     "escuro": 0.45,
+     "x": 70,
+     "y": 110
+    }
+   }
+  },
+  {
+   "id": "g04",
+   "type": "scene",
+   "track": "visual",
+   "label": "Manchete: luxo disfarçado",
+   "start": 59.0,
+   "dur": 3.95,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_manchete",
+    "params": {
+     "veiculo": "GAZETA DO MERCADO",
+     "secao": "AUTOMÓVEIS",
+     "titulo": "O carro de entrada virou carro de luxo disfarçado",
+     "destaque": "carro de luxo disfarçado",
+     "t_destaque": 61.0
+    }
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: Resultado",
+   "start": 63.0,
+   "dur": 1.2,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Resultado",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 96,
+    "color": "#efe08f",
+    "font": "Barlow Condensed",
+    "weight": 800,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "g05",
+   "type": "scene",
+   "track": "visual",
+   "label": "Número: 72 meses",
+   "start": 64.1,
+   "dur": 3.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "contador",
+    "params": {
+     "numero": 72,
+     "sufixo": "",
+     "legenda": "meses de parcela: a nova normalidade",
+     "cor": "#efe08f",
+     "fundo": "rgba(6,9,12,.72)"
+    }
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: Acha que vai baixar?",
+   "start": 68.0,
+   "dur": 3.6,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "Acha que vai baixar?",
+    "x": 640,
+    "y": 520,
+    "w": 1100,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "Texto: A indústria agradece.",
+   "start": 69.7,
+   "dur": 1.9,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "A indústria agradece.",
+    "x": 640,
+    "y": 620,
+    "w": 1100,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 6,
+    "shadow": true,
+    "highlight": [
+     "agradece."
+    ],
+    "hl_color": "#efe08f"
+   }
+  },
+  {
+   "id": "c5",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Inscreva-se",
+   "start": 71.7,
+   "dur": 7.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "scene": "eco_capitulo",
+    "params": {
+     "cap": "Inscreva-se",
+     "texto": "para ver o gráfico da depreciação real.",
+     "itens": "Próximo vídeo: quais modelos ainda valem a pena",
+     "tempos": "75.1",
+     "escuro": 0.45,
+     "x": 300,
+     "y": 230
+    }
+   }
+  }
+ ]
+}

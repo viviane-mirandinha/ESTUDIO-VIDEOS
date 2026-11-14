@@ -1,0 +1,13 @@
+{
+ "video": 10,
+ "estilo": "10-caso-medico",
+ "inicio": "2026-10-22T15:07:13-03:00",
+ "fim": "2026-10-22T15:17:03-03:00",
+ "minutos": 9.8,
+ "render_segundos": 51,
+ "observacoes": "Retomado da tentativa travada: words.json, cenas (paciente, ecg-traco, tabela-exame, fe-barra, card-termo) e candidatos Pixabay reaproveitados. Wikimedia RM vinha em GIF pequeno/429: trocado por coração 3D cinza gerado no Flux local (ComfyUI, 9 s/img) + manchas vermelhas em HTML para o realce tardio. Removidas faixas normais numéricas da tabela (não estão na fala). 2 renders (2º: caixas escuras atrás de texto sobre lata/CTA). Sem música, sem SFX. Imagens: Pixabay (licença Pixabay) + Flux local.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "cenas HTML são preencher-dados (tabela/termo/ECG/barra) e escalam direto; gargalo é biblioteca de órgãos 3D/b-roll hospitalar (Flux local resolve órgãos em ~10 s) e render ~1 min por minuto de vídeo"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "video": 14,
+ "estilo": "14-tipografia-cinetica-filosofia",
+ "inicio": "2026-10-22T13:57:40-03:00",
+ "fim": "2026-10-22T14:09:37-03:00",
+ "minutos": 11.9,
+ "render_segundos": 71,
+ "observacoes": "45 grupos de texto sincronizados ao words.json (whisper large-v3 GPU); cenas novas kin_grupo e kin_serifa em EDITOR VIDEOS/templates/scenes; 16 b-rolls Pixabay dessaturados + 2 retratos Wikimedia domínio público; piano Esther Abrami sem direitos; 1 re-render para aumentar a serifa das citações (58->74/84/96px).",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "Quase tudo automático: grupos de 1-4 palavras saem do words.json por regra (pontuação), destaque = palavra mais longa/substantivo; b-roll por palavra-chave no Pixabay (banco de ~40 clipes escuros reaproveitável). Render ~1,1 s por segundo de vídeo -> 30 min ~35 min de render."
+ }
+}

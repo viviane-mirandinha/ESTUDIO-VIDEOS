@@ -1,0 +1,13 @@
+{
+    "video":  9,
+    "estilo":  "09-desastre-fotos-cartoes (Fascinating Horror / Plainly Difficult)",
+    "inicio":  "2026-10-22T16:10:40Z",
+    "fim":  "2026-10-22T16:34:29Z",
+    "minutos":  23.8,
+    "render_segundos":  117,
+    "observacoes":  "Voz conferida (words.json = roteiro Hillsborough). whisper large-v3 GPU. Fotos Wikimedia Commons (img/creditos.json): fotos de 640px (memoriais geograph, mural, sede da polícia) deram 429 repetido no upload.wikimedia -\u003e fallback justica.jpg. Fotos tratadas em PIL (sépia leve 55% + vinheta) em montar_edit.py. Cenas novas no editor: fh-cartao, fh-numero, fh-lista, fh-planta (diagrama Leppings Lane com multidão animada portão C -\u003e túnel -\u003e setores 3/4 -\u003e grades), fh-fim. Sem legenda, sem SFX, música do 02 a 0,08 duck. Sem foto de vítima. 1 render, blackdetect limpo. Memorial de Anfield mostra \u002796\u0027 (97ª vítima reconhecida em 2021).",
+    "estimativa_30min":  {
+                             "horas_maquina":  0.7,
+                             "o_que_escala":  "Estrutura fixa em 5 atos: cartões (data/número/lista) vêm de dados; fotos por busca Commons/arquivo (gargalo: 429 e pouca foto livre do evento em si). Diagrama é o único bloco sob medida por tema (template de planta/rota/seção parametrizável resolve a maioria). Render ~1,8 s por segundo de vídeo."
+                         }
+}

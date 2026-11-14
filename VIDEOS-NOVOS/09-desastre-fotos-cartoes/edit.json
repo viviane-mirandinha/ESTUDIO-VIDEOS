@@ -1,0 +1,478 @@
+{
+ "version": 1,
+ "name": "09 - DESASTRE FOTOS CARTOES - Hillsborough 1989 o desastre que mudou os estádios",
+ "estilo": "09-desastre-fotos-cartoes",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 66.31,
+ "template": "generic",
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.08,
+   "start": 0,
+   "fade_out": 2.5,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fotos / cartões"
+  },
+  {
+   "id": "visual",
+   "name": "Vinheta"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão data",
+   "start": 0.0,
+   "dur": 5.75,
+   "props": {
+    "scene": "fh-cartao",
+    "params": {
+     "linha1": "15 de abril de 1989",
+     "linha2": "Sheffield · Inglaterra",
+     "linha3": "15h06",
+     "t2": 2.1,
+     "t3": 3.7
+    }
+   }
+  },
+  {
+   "id": "f1",
+   "type": "image",
+   "track": "fundo",
+   "label": "Estádio Hillsborough",
+   "start": 5.45,
+   "dur": 6.15,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_estadio1991.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "label": "Semifinal da Copa da Ing",
+   "start": 6.4,
+   "dur": 4.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Semifinal da Copa da Inglaterra · Liverpool x Nottingham Forest",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 34,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "n1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão 97",
+   "start": 11.3,
+   "dur": 4.65,
+   "props": {
+    "scene": "fh-numero",
+    "params": {
+     "numero": "97",
+     "texto": "torcedores do Liverpool morreram",
+     "sub": "esmagados nas arquibancadas",
+     "t_texto": 0.7,
+     "t_sub": 2.4,
+     "bg": "img/p_estadio1991.jpg"
+    }
+   }
+  },
+  {
+   "id": "d1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Diagrama Leppings Lane",
+   "start": 15.85,
+   "dur": 12.15,
+   "props": {
+    "scene": "fh-planta",
+    "params": {
+     "t_portao": 1.35,
+     "t_tunel": 4.1,
+     "t_setores": 6.35,
+     "t_grades": 9.25
+    }
+   }
+  },
+  {
+   "id": "n2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão 6 minutos",
+   "start": 27.9,
+   "dur": 5.25,
+   "props": {
+    "scene": "fh-numero",
+    "params": {
+     "numero": "6",
+     "texto": "minutos de jogo",
+     "sub": "enquanto gente morria encostada na grade",
+     "t_texto": 1.6,
+     "t_sub": 3.0,
+     "bg": "img/p_estadio1991.jpg"
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão inquérito",
+   "start": 33.0,
+   "dur": 4.3,
+   "props": {
+    "scene": "fh-cartao",
+    "params": {
+     "linha1": "O inquérito inicial",
+     "linha2": "culpou os torcedores: embriaguez e invasão",
+     "linha3": "",
+     "t2": 1.1
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Cartão 23 anos",
+   "start": 37.2,
+   "dur": 2.75,
+   "props": {
+    "scene": "fh-cartao",
+    "params": {
+     "linha1": "23 anos depois",
+     "linha2": "Painel Independente · 2012",
+     "linha3": "",
+     "t2": 1.3
+    }
+   }
+  },
+  {
+   "id": "f3",
+   "type": "image",
+   "track": "fundo",
+   "label": "Relatório do Painel 2012",
+   "start": 39.85,
+   "dur": 2.15,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_rel_painel.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "l1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Lista painel",
+   "start": 41.85,
+   "dur": 6.5,
+   "props": {
+    "scene": "fh-lista",
+    "params": {
+     "titulo": "O que o painel provou",
+     "item1": "164 depoimentos da polícia foram alterados",
+     "item2": "o socorro demorou a chegar",
+     "item3": "até 41 vítimas tinham chance de sobreviver",
+     "t1": 0.6,
+     "t2": 2.6,
+     "t3": 4.3,
+     "bg": "img/p_justica.jpg"
+    }
+   }
+  },
+  {
+   "id": "f4",
+   "type": "image",
+   "track": "fundo",
+   "label": "Mural / justiça",
+   "start": 48.25,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_justica.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "A mentira oficial caiu",
+   "start": 48.6,
+   "dur": 1.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A mentira oficial caiu",
+    "x": 640,
+    "y": 600,
+    "w": 652,
+    "size": 52,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "f5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Estádio hoje",
+   "start": 50.2,
+   "dur": 2.05,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_estadio_hoje.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t5a",
+   "type": "text",
+   "track": "textos",
+   "label": "Fim das grades",
+   "start": 51.1,
+   "dur": 1.05,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Fim das grades",
+    "x": 640,
+    "y": 630,
+    "w": 388,
+    "size": 44,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "f5b",
+   "type": "image",
+   "track": "fundo",
+   "label": "Assentos numerados",
+   "start": 52.1,
+   "dur": 1.95,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_arquibancada.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t5b",
+   "type": "text",
+   "track": "textos",
+   "label": "Assentos numerados",
+   "start": 52.6,
+   "dur": 1.35,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Assentos numerados",
+    "x": 640,
+    "y": 630,
+    "w": 476,
+    "size": 44,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "f6",
+   "type": "image",
+   "track": "fundo",
+   "label": "Relatório Taylor",
+   "start": 53.9,
+   "dur": 1.85,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_rel_taylor.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "t6",
+   "type": "text",
+   "track": "textos",
+   "label": "Relatório Taylor · 1989-",
+   "start": 54.3,
+   "dur": 1.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Relatório Taylor · 1989-1990",
+    "x": 640,
+    "y": 655,
+    "w": 584,
+    "size": 36,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "f7",
+   "type": "image",
+   "track": "fundo",
+   "label": "Memorial",
+   "start": 55.6,
+   "dur": 3.05,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/p_memorial_anfield.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "label": "97 vidas",
+   "start": 57.2,
+   "dur": 1.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "97 vidas",
+    "x": 640,
+    "y": 590,
+    "w": 368,
+    "size": 72,
+    "color": "#f2ede4",
+    "font": "Georgia",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.55)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true
+   }
+  },
+  {
+   "id": "fim",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Tela final",
+   "start": 58.5,
+   "dur": 7.81,
+   "props": {
+    "scene": "fh-fim",
+    "params": {
+     "bg": "img/p_estadio_2024.jpg",
+     "capa": "img/p_rel_taylor.jpg",
+     "t_inscreva": 5.0
+    }
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "visual",
+   "label": "Vinheta",
+   "start": 0,
+   "dur": 66.31,
+   "props": {
+    "fill": true,
+    "html": "<div class='vh'></div>",
+    "css": ".vh{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}"
+   }
+  }
+ ],
+ "referencia": {
+  "canal": "Fascinating Horror",
+  "canal_url": "https://www.youtube.com/@FascinatingHorror",
+  "video": "https://youtu.be/u0zpUOe8q_o",
+  "titulo": "New Zealand's Costliest Earthquake | Fascinating Horror",
+  "nota": "Também Scary Interesting / Plainly Difficult (diagrama). Fotos Wikimedia Commons (img/creditos.json)."
+ }
+}

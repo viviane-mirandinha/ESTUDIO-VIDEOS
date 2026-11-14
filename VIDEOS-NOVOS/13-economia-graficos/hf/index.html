@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}@font-face{font-family:'Barlow Condensed';src:url('m/fonts/BarlowCondensed-Bold.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#000000;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#000000;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="79.5" data-width="1280" data-height="720">
+<div id="f01_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f01_mv" class="ed-mv"><video id="f01" class="clip" data-start="0.000" data-duration="9.300" data-track-index="1" src="m/clips/dash1_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f02_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.75;"><div id="f02_mv" class="ed-mv"><img id="f02" class="clip" data-start="9.000" data-duration="6.000" data-track-index="2" src="m/img/real1.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f03_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f03_mv" class="ed-mv"><video id="f03" class="clip" data-start="14.700" data-duration="4.200" data-track-index="3" src="m/clips/traf1_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f04_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.5;"><div id="f04_mv" class="ed-mv"><video id="f04" class="clip" data-start="18.600" data-duration="3.700" data-track-index="4" src="m/clips/fab0_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f05_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f05_mv" class="ed-mv"><img id="f05" class="clip" data-start="22.000" data-duration="5.600" data-track-index="5" src="m/img/patio.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f06_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.5;"><div id="f06_mv" class="ed-mv"><img id="f06" class="clip" data-start="27.300" data-duration="3.400" data-track-index="6" src="m/img/real0.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f07_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f07_mv" class="ed-mv"><video id="f07" class="clip" data-start="30.300" data-duration="4.100" data-track-index="7" src="m/clips/money0_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f08_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.55;"><div id="f08_mv" class="ed-mv"><img id="f08" class="clip" data-start="34.100" data-duration="3.500" data-track-index="8" src="m/img/parts0.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f09_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.75;"><div id="f09_mv" class="ed-mv"><img id="f09" class="clip" data-start="37.300" data-duration="4.900" data-track-index="9" src="m/img/escap.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f10_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f10_mv" class="ed-mv"><img id="f10" class="clip" data-start="41.800" data-duration="4.500" data-track-index="10" src="m/img/crash1.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f11_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f11_mv" class="ed-mv"><img id="f11" class="clip" data-start="46.000" data-duration="4.600" data-track-index="11" src="m/img/loja.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f12_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f12_mv" class="ed-mv"><video id="f12" class="clip" data-start="50.300" data-duration="4.300" data-track-index="12" src="m/clips/dash0_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f13_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.75;"><div id="f13_mv" class="ed-mv"><img id="f13" class="clip" data-start="54.200" data-duration="5.100" data-track-index="13" src="m/img/touch2.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="f14_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.8;"><div id="f14_mv" class="ed-mv"><video id="f14" class="clip" data-start="58.900" data-duration="4.300" data-track-index="14" src="m/clips/show_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f15_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.7;"><div id="f15_mv" class="ed-mv"><video id="f15" class="clip" data-start="62.900" data-duration="5.100" data-track-index="15" src="m/clips/night1_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f16_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.85;"><div id="f16_mv" class="ed-mv"><video id="f16" class="clip" data-start="67.800" data-duration="4.100" data-track-index="16" src="m/clips/dealer0_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="f17_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:0.6;"><div id="f17_mv" class="ed-mv"><video id="f17" class="clip" data-start="71.600" data-duration="7.900" data-track-index="17" src="m/clips/night0_720.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="p01_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="p01_clip" class="clip" data-start="0.300" data-duration="3.500" data-track-index="18" style="width:100%;height:100%;position:relative">
+<div id="p01" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="m/img/hatch2.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">Hatch compacto</div>
+  </div>
+</div>
+
+</div></div>
+<div id="g01_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="g01_clip" class="clip" data-start="3.600" data-duration="5.600" data-track-index="19" style="width:100%;height:100%;position:relative">
+<div id="g01" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff">
+  <div style="position:absolute;inset:0;background:rgba(6,9,12,.74)"></div>
+  <div class="hd" style="position:absolute;left:0;right:0;top:40px;text-align:center;font-family:'Barlow Condensed',Inter;font-size:60px;font-weight:700;color:#efe08f">Preço de um hatch compacto</div>
+  <div class="bars" style="position:absolute;left:300px;right:300px;top:170px;bottom:110px;display:flex;align-items:flex-end;gap:90px;border-bottom:3px solid rgba(255,255,255,.4)"></div>
+  <div class="nota" style="position:absolute;font-family:'Barlow Condensed',Inter;font-size:44px;font-weight:700;color:#111;background:#efe08f;padding:4px 18px"></div>
+</div>
+
+</div></div>
+<div id="g02_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="g02_clip" class="clip" data-start="9.000" data-duration="5.950" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="g02" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff">
+  <div class="ov" style="position:absolute;inset:0;background:rgba(6,9,12,.74)"></div>
+  <div class="bx" style="position:absolute;left:250px;width:780px;top:150px">
+    <div class="hd" style="text-align:center;font-family:'Barlow Condensed',Inter;font-weight:700;font-size:60px;color:#efe08f;margin-bottom:26px">Quanto subiu</div>
+    <div class="th" style="display:flex;font-size:26px;font-weight:700;color:#d9d9d9;border-bottom:2px solid #efe08f;padding:0 24px 10px"></div>
+    <div class="rows"></div>
+  </div>
+</div>
+
+</div></div>
+<div id="p02_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="p02_clip" class="clip" data-start="18.750" data-duration="3.550" data-track-index="21" style="width:100%;height:100%;position:relative">
+<div id="p02" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="m/img/chip2.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">Faltou chip</div>
+  </div>
+</div>
+
+</div></div>
+<div id="p03_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="p03_clip" class="clip" data-start="18.750" data-duration="3.550" data-track-index="22" style="width:100%;height:100%;position:relative">
+<div id="p03" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="m/img/linha.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">Parou a linha</div>
+  </div>
+</div>
+
+</div></div>
+<div id="p04_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="p04_clip" class="clip" data-start="18.750" data-duration="3.550" data-track-index="23" style="width:100%;height:100%;position:relative">
+<div id="p04" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="m/img/empty0.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">Estoque zerou</div>
+  </div>
+</div>
+
+</div></div>
+<div id="g03_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="g03_clip" class="clip" data-start="30.300" data-duration="4.000" data-track-index="24" style="width:100%;height:100%;position:relative">
+<div id="g03" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff">
+  <div style="position:absolute;inset:0;background:rgba(6,9,12,.8)"></div>
+  <div class="hd" style="position:absolute;left:0;right:0;top:40px;text-align:center;font-family:'Barlow Condensed',Inter;font-size:60px;font-weight:700;color:#efe08f">Dólar em reais</div>
+  <svg class="ch" width="1280" height="720" style="position:absolute;inset:0;overflow:visible"></svg>
+</div>
+
+</div></div>
+<div id="p05_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="p05_clip" class="clip" data-start="34.150" data-duration="3.350" data-track-index="25" style="width:100%;height:100%;position:relative">
+<div id="p05" style="position:absolute;inset:0;pointer-events:none">
+  <div class="card" style="position:absolute;background:#f6f3ec;padding:14px 14px 0;box-shadow:0 22px 50px rgba(0,0,0,.6)">
+    <div class="ph" style="overflow:hidden"><img class="im" src="m/img/parts2.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="lb" style="font-family:'Barlow Condensed',Inter,Arial;font-weight:700;font-size:34px;color:#1b1b18;padding:8px 6px 10px;text-align:center">Peças importadas</div>
+  </div>
+</div>
+
+</div></div>
+<div id="g04_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="g04_clip" class="clip" data-start="59.000" data-duration="3.950" data-track-index="26" style="width:100%;height:100%;position:relative">
+<div id="g04" style="position:absolute;inset:0">
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,.45)"></div>
+  <div class="pg" style="position:absolute;left:190px;top:110px;width:900px;background:#f3f0e8;color:#141414;padding:30px 46px 36px;box-shadow:0 26px 60px rgba(0,0,0,.6);font-family:Georgia,'Times New Roman',serif">
+    <div style="text-align:center;font-size:44px;font-weight:700;letter-spacing:.06em;border-bottom:4px double #141414;padding-bottom:10px">GAZETA DO MERCADO</div>
+    <div style="font-family:Inter,Arial;font-size:24px;font-weight:800;color:#b3261e;letter-spacing:.12em;margin:18px 0 8px">AUTOMÓVEIS</div>
+    <div class="tt" style="font-size:58px;font-weight:700;line-height:1.12"></div>
+    <div style="margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 30px">
+      <div style="height:12px;background:#cfcabd"></div><div style="height:12px;background:#cfcabd"></div>
+      <div style="height:12px;background:#cfcabd;width:90%"></div><div style="height:12px;background:#cfcabd;width:80%"></div>
+      <div style="height:12px;background:#cfcabd;width:70%"></div><div style="height:12px;background:#cfcabd;width:85%"></div>
+    </div>
+  </div>
+</div>
+
+</div></div>
+<div id="g05_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="g05_clip" class="clip" data-start="64.100" data-duration="3.800" data-track-index="27" style="width:100%;height:100%;position:relative">
+<div id="g05" style="position:absolute;inset:0;background:rgba(6,9,12,.72);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Inter,Arial,sans-serif">
+  <div class="n" style="color:#efe08f;font-size:calc(720px*0.16);font-weight:900;font-variant-numeric:tabular-nums">0</div>
+  <div style="color:#ddd;font-size:calc(720px*0.05);margin-top:8px">meses de parcela: a nova normalidade</div>
+</div>
+
+</div></div>
+<div id="t01_box" class="ed-box" style="left:300.0px;top:330.0px;transform:translate(-50%,-50%);width:400.0px;z-index:31;"><div id="t01" class="clip" data-start="0.150" data-duration="3.650" data-track-index="28" style="font-size:130.0px;color:#efe08f;font-weight:800;text-align:center;font-family:'Barlow Condensed',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">2019</div></div>
+<div id="t02_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t02" class="clip" data-start="14.850" data-duration="1.050" data-track-index="29" style="font-size:110.0px;color:#efe08f;font-weight:800;text-align:center;font-family:'Barlow Condensed',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">Por quê?</div></div>
+<div id="c1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="c1_clip" class="clip" data-start="15.800" data-duration="3.000" data-track-index="30" style="width:100%;height:100%;position:relative">
+<div id="c1" class="eecap" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif">
+  <div class="ov" style="position:absolute;inset:0;background:#000"></div>
+  <div class="grp" style="position:absolute;width:660px">
+    <div class="paper" style="position:relative;margin-top:44px;background:#f2efe6;color:#1f1f1c;padding:46px 40px 34px;font-size:34px;line-height:1.3;font-weight:500;
+      clip-path:polygon(0 2%,6% 0,18% 1.5%,33% 0,51% 1.2%,70% 0,86% 1.6%,100% 0,99% 22%,100% 48%,98.6% 75%,100% 100%,82% 98.4%,64% 100%,45% 98.6%,26% 100%,9% 98.2%,0 100%,1.2% 70%,0 41%,1% 18%);
+      box-shadow:0 18px 40px rgba(0,0,0,.5)">
+      <div class="txt">A cadeia quebrou na pandemia.</div>
+      <ul class="lst" style="margin:18px 0 0;padding:0;list-style:none;font-size:30px;font-weight:700"></ul>
+    </div>
+    <div class="tape" style="position:absolute;left:-26px;top:0;background:#d8c34a;color:#1d1c17;font-weight:800;font-size:48px;padding:8px 36px 8px 28px;transform:rotate(-2deg);transform-origin:0 50%;
+      clip-path:polygon(0 4%,3% 0,97% 6%,100% 0,98% 50%,100% 100%,96% 94%,4% 100%,0 96%,2% 50%);box-shadow:0 4px 10px rgba(0,0,0,.3)">Primeiro</div>
+  </div>
+</div>
+
+</div></div>
+<div id="t03_box" class="ed-box" style="left:640.0px;top:170.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t03" class="clip" data-start="22.300" data-duration="5.200" data-track-index="31" style="font-size:64.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Barlow Condensed',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">As montadoras</div></div>
+<div id="t04_box" class="ed-box" style="left:640.0px;top:310.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t04" class="clip" data-start="24.000" data-duration="3.500" data-track-index="32" style="font-size:56.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);"><span class="ed-hl" style="color:#3ddc84">▲</span> MAIS LUCRO</div></div>
+<div id="t05_box" class="ed-box" style="left:640.0px;top:420.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t05" class="clip" data-start="25.500" data-duration="2.000" data-track-index="33" style="font-size:56.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);"><span class="ed-hl" style="color:#ff5a4f">▼</span> MENOS CARROS</div></div>
+<div id="t06_box" class="ed-box" style="left:640.0px;top:530.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t06" class="clip" data-start="26.500" data-duration="1.000" data-track-index="34" style="font-size:56.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);"><span class="ed-hl" style="color:#3ddc84">▲</span> MAIS CAROS</div></div>
+<div id="c2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="c2_clip" class="clip" data-start="27.300" data-duration="3.200" data-track-index="35" style="width:100%;height:100%;position:relative">
+<div id="c2" class="eecap" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif">
+  <div class="ov" style="position:absolute;inset:0;background:#000"></div>
+  <div class="grp" style="position:absolute;width:660px">
+    <div class="paper" style="position:relative;margin-top:44px;background:#f2efe6;color:#1f1f1c;padding:46px 40px 34px;font-size:34px;line-height:1.3;font-weight:500;
+      clip-path:polygon(0 2%,6% 0,18% 1.5%,33% 0,51% 1.2%,70% 0,86% 1.6%,100% 0,99% 22%,100% 48%,98.6% 75%,100% 100%,82% 98.4%,64% 100%,45% 98.6%,26% 100%,9% 98.2%,0 100%,1.2% 70%,0 41%,1% 18%);
+      box-shadow:0 18px 40px rgba(0,0,0,.5)">
+      <div class="txt">O real desvalorizou.</div>
+      <ul class="lst" style="margin:18px 0 0;padding:0;list-style:none;font-size:30px;font-weight:700"></ul>
+    </div>
+    <div class="tape" style="position:absolute;left:-26px;top:0;background:#d8c34a;color:#1d1c17;font-weight:800;font-size:48px;padding:8px 36px 8px 28px;transform:rotate(-2deg);transform-origin:0 50%;
+      clip-path:polygon(0 4%,3% 0,97% 6%,100% 0,98% 50%,100% 100%,96% 94%,4% 100%,0 96%,2% 50%);box-shadow:0 4px 10px rgba(0,0,0,.3)">Segundo</div>
+  </div>
+</div>
+
+</div></div>
+<div id="t07_box" class="ed-box" style="left:640.0px;top:640.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t07" class="clip" data-start="35.600" data-duration="1.800" data-track-index="36" style="font-size:52.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);"><span class="ed-hl" style="color:#ff5a4f">▲</span> ENCARECERAM NA HORA</div></div>
+<div id="c3_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="c3_clip" class="clip" data-start="37.300" data-duration="8.700" data-track-index="37" style="width:100%;height:100%;position:relative">
+<div id="c3" class="eecap" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif">
+  <div class="ov" style="position:absolute;inset:0;background:#000"></div>
+  <div class="grp" style="position:absolute;width:660px">
+    <div class="paper" style="position:relative;margin-top:44px;background:#f2efe6;color:#1f1f1c;padding:46px 40px 34px;font-size:34px;line-height:1.3;font-weight:500;
+      clip-path:polygon(0 2%,6% 0,18% 1.5%,33% 0,51% 1.2%,70% 0,86% 1.6%,100% 0,99% 22%,100% 48%,98.6% 75%,100% 100%,82% 98.4%,64% 100%,45% 98.6%,26% 100%,9% 98.2%,0 100%,1.2% 70%,0 41%,1% 18%);
+      box-shadow:0 18px 40px rgba(0,0,0,.5)">
+      <div class="txt">A lei mudou.</div>
+      <ul class="lst" style="margin:18px 0 0;padding:0;list-style:none;font-size:30px;font-weight:700"></ul>
+    </div>
+    <div class="tape" style="position:absolute;left:-26px;top:0;background:#d8c34a;color:#1d1c17;font-weight:800;font-size:48px;padding:8px 36px 8px 28px;transform:rotate(-2deg);transform-origin:0 50%;
+      clip-path:polygon(0 4%,3% 0,97% 6%,100% 0,98% 50%,100% 100%,96% 94%,4% 100%,0 96%,2% 50%);box-shadow:0 4px 10px rgba(0,0,0,.3)">Terceiro</div>
+  </div>
+</div>
+
+</div></div>
+<div id="t08_box" class="ed-box" style="left:640.0px;top:280.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t08" class="clip" data-start="46.200" data-duration="4.100" data-track-index="38" style="font-size:64.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">Tecnologia custa <span class="ed-hl" style="color:#efe08f">caro</span></div></div>
+<div id="t09_box" class="ed-box" style="left:640.0px;top:390.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t09" class="clip" data-start="48.200" data-duration="2.100" data-track-index="39" style="font-size:56.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">e o consumidor <span class="ed-hl" style="color:#efe08f">pagou a conta</span></div></div>
+<div id="c4_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="c4_clip" class="clip" data-start="50.300" data-duration="8.700" data-track-index="40" style="width:100%;height:100%;position:relative">
+<div id="c4" class="eecap" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif">
+  <div class="ov" style="position:absolute;inset:0;background:#000"></div>
+  <div class="grp" style="position:absolute;width:660px">
+    <div class="paper" style="position:relative;margin-top:44px;background:#f2efe6;color:#1f1f1c;padding:46px 40px 34px;font-size:34px;line-height:1.3;font-weight:500;
+      clip-path:polygon(0 2%,6% 0,18% 1.5%,33% 0,51% 1.2%,70% 0,86% 1.6%,100% 0,99% 22%,100% 48%,98.6% 75%,100% 100%,82% 98.4%,64% 100%,45% 98.6%,26% 100%,9% 98.2%,0 100%,1.2% 70%,0 41%,1% 18%);
+      box-shadow:0 18px 40px rgba(0,0,0,.5)">
+      <div class="txt">O gosto mudou. Ninguém quer mais carro “pelado”.</div>
+      <ul class="lst" style="margin:18px 0 0;padding:0;list-style:none;font-size:30px;font-weight:700"></ul>
+    </div>
+    <div class="tape" style="position:absolute;left:-26px;top:0;background:#d8c34a;color:#1d1c17;font-weight:800;font-size:48px;padding:8px 36px 8px 28px;transform:rotate(-2deg);transform-origin:0 50%;
+      clip-path:polygon(0 4%,3% 0,97% 6%,100% 0,98% 50%,100% 100%,96% 94%,4% 100%,0 96%,2% 50%);box-shadow:0 4px 10px rgba(0,0,0,.3)">Quarto</div>
+  </div>
+</div>
+
+</div></div>
+<div id="t10_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t10" class="clip" data-start="63.000" data-duration="1.200" data-track-index="41" style="font-size:96.0px;color:#efe08f;font-weight:800;text-align:center;font-family:'Barlow Condensed',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">Resultado</div></div>
+<div id="t11_box" class="ed-box" style="left:640.0px;top:520.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t11" class="clip" data-start="68.000" data-duration="3.600" data-track-index="42" style="font-size:60.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">Acha que vai baixar?</div></div>
+<div id="t12_box" class="ed-box" style="left:640.0px;top:620.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="t12" class="clip" data-start="69.700" data-duration="1.900" data-track-index="43" style="font-size:60.0px;color:#ffffff;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:6.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">A indústria <span class="ed-hl" style="color:#efe08f">agradece.</span></div></div>
+<div id="c5_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:31;"><div id="c5_clip" class="clip" data-start="71.700" data-duration="7.600" data-track-index="44" style="width:100%;height:100%;position:relative">
+<div id="c5" class="eecap" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif">
+  <div class="ov" style="position:absolute;inset:0;background:#000"></div>
+  <div class="grp" style="position:absolute;width:660px">
+    <div class="paper" style="position:relative;margin-top:44px;background:#f2efe6;color:#1f1f1c;padding:46px 40px 34px;font-size:34px;line-height:1.3;font-weight:500;
+      clip-path:polygon(0 2%,6% 0,18% 1.5%,33% 0,51% 1.2%,70% 0,86% 1.6%,100% 0,99% 22%,100% 48%,98.6% 75%,100% 100%,82% 98.4%,64% 100%,45% 98.6%,26% 100%,9% 98.2%,0 100%,1.2% 70%,0 41%,1% 18%);
+      box-shadow:0 18px 40px rgba(0,0,0,.5)">
+      <div class="txt">para ver o gráfico da depreciação real.</div>
+      <ul class="lst" style="margin:18px 0 0;padding:0;list-style:none;font-size:30px;font-weight:700"></ul>
+    </div>
+    <div class="tape" style="position:absolute;left:-26px;top:0;background:#d8c34a;color:#1d1c17;font-weight:800;font-size:48px;padding:8px 36px 8px 28px;transform:rotate(-2deg);transform-origin:0 50%;
+      clip-path:polygon(0 4%,3% 0,97% 6%,100% 0,98% 50%,100% 100%,96% 94%,4% 100%,0 96%,2% 50%);box-shadow:0 4px 10px rgba(0,0,0,.3)">Inscreva-se</div>
+  </div>
+</div>
+
+</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:79.5,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.fromTo("#f01_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.000);
+tl.to("#f01_box",{...{opacity:0},duration:0.350,ease:"power2.in"},8.950);
+tl.fromTo("#f01_mv",{scale:1},{...{scale:1.06},duration:9.300,ease:"none",immediateRender:false},0.000);
+tl.fromTo("#f02_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},9.000);
+tl.set("#f02_box",{opacity:0},0);
+tl.to("#f02_box",{...{opacity:0},duration:0.350,ease:"power2.in"},14.650);
+tl.fromTo("#f02_mv",{scale:1},{...{scale:1.08},duration:6.000,ease:"none",immediateRender:false},9.000);
+tl.set("#f02_mv",{scale:1},0);
+tl.fromTo("#f03_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},14.700);
+tl.set("#f03_box",{opacity:0},0);
+tl.to("#f03_box",{...{opacity:0},duration:0.350,ease:"power2.in"},18.550);
+tl.fromTo("#f03_mv",{scale:1},{...{scale:1.06},duration:4.200,ease:"none",immediateRender:false},14.700);
+tl.set("#f03_mv",{scale:1},0);
+tl.fromTo("#f04_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},18.600);
+tl.set("#f04_box",{opacity:0},0);
+tl.to("#f04_box",{...{opacity:0},duration:0.350,ease:"power2.in"},21.950);
+tl.fromTo("#f05_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},22.000);
+tl.set("#f05_box",{opacity:0},0);
+tl.to("#f05_box",{...{opacity:0},duration:0.350,ease:"power2.in"},27.250);
+tl.fromTo("#f05_mv",{scale:1},{...{scale:1.08},duration:5.600,ease:"none",immediateRender:false},22.000);
+tl.set("#f05_mv",{scale:1},0);
+tl.fromTo("#f06_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},27.300);
+tl.set("#f06_box",{opacity:0},0);
+tl.to("#f06_box",{...{opacity:0},duration:0.350,ease:"power2.in"},30.350);
+tl.fromTo("#f06_mv",{scale:1.08,xPercent:4.0},{...{scale:1.08,xPercent:-4.0},duration:3.400,ease:"none",immediateRender:false},27.300);
+tl.set("#f06_mv",{scale:1.08,xPercent:4.0},0);
+tl.fromTo("#f07_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},30.300);
+tl.set("#f07_box",{opacity:0},0);
+tl.to("#f07_box",{...{opacity:0},duration:0.350,ease:"power2.in"},34.050);
+tl.fromTo("#f08_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},34.100);
+tl.set("#f08_box",{opacity:0},0);
+tl.to("#f08_box",{...{opacity:0},duration:0.350,ease:"power2.in"},37.250);
+tl.fromTo("#f08_mv",{scale:1},{...{scale:1.08},duration:3.500,ease:"none",immediateRender:false},34.100);
+tl.set("#f08_mv",{scale:1},0);
+tl.fromTo("#f09_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},37.300);
+tl.set("#f09_box",{opacity:0},0);
+tl.to("#f09_box",{...{opacity:0},duration:0.350,ease:"power2.in"},41.850);
+tl.fromTo("#f09_mv",{scale:1},{...{scale:1.08},duration:4.900,ease:"none",immediateRender:false},37.300);
+tl.set("#f09_mv",{scale:1},0);
+tl.fromTo("#f10_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},41.800);
+tl.set("#f10_box",{opacity:0},0);
+tl.to("#f10_box",{...{opacity:0},duration:0.350,ease:"power2.in"},45.950);
+tl.fromTo("#f10_mv",{scale:1.08,xPercent:4.0},{...{scale:1.08,xPercent:-4.0},duration:4.500,ease:"none",immediateRender:false},41.800);
+tl.set("#f10_mv",{scale:1.08,xPercent:4.0},0);
+tl.fromTo("#f11_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.000);
+tl.set("#f11_box",{opacity:0},0);
+tl.to("#f11_box",{...{opacity:0},duration:0.350,ease:"power2.in"},50.250);
+tl.fromTo("#f11_mv",{scale:1},{...{scale:1.08},duration:4.600,ease:"none",immediateRender:false},46.000);
+tl.set("#f11_mv",{scale:1},0);
+tl.fromTo("#f12_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},50.300);
+tl.set("#f12_box",{opacity:0},0);
+tl.to("#f12_box",{...{opacity:0},duration:0.350,ease:"power2.in"},54.250);
+tl.fromTo("#f12_mv",{scale:1},{...{scale:1.06},duration:4.300,ease:"none",immediateRender:false},50.300);
+tl.set("#f12_mv",{scale:1},0);
+tl.fromTo("#f13_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},54.200);
+tl.set("#f13_box",{opacity:0},0);
+tl.to("#f13_box",{...{opacity:0},duration:0.350,ease:"power2.in"},58.950);
+tl.fromTo("#f13_mv",{scale:1},{...{scale:1.08},duration:5.100,ease:"none",immediateRender:false},54.200);
+tl.set("#f13_mv",{scale:1},0);
+tl.fromTo("#f14_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},58.900);
+tl.set("#f14_box",{opacity:0},0);
+tl.to("#f14_box",{...{opacity:0},duration:0.350,ease:"power2.in"},62.850);
+tl.fromTo("#f15_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.900);
+tl.set("#f15_box",{opacity:0},0);
+tl.to("#f15_box",{...{opacity:0},duration:0.350,ease:"power2.in"},67.650);
+tl.fromTo("#f15_mv",{scale:1},{...{scale:1.06},duration:5.100,ease:"none",immediateRender:false},62.900);
+tl.set("#f15_mv",{scale:1},0);
+tl.fromTo("#f16_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},67.800);
+tl.set("#f16_box",{opacity:0},0);
+tl.to("#f16_box",{...{opacity:0},duration:0.350,ease:"power2.in"},71.550);
+tl.fromTo("#f17_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},71.600);
+tl.set("#f17_box",{opacity:0},0);
+tl.to("#f17_box",{...{opacity:0},duration:0.350,ease:"power2.in"},79.150);
+tl.fromTo("#f17_mv",{scale:1},{...{scale:1.06},duration:7.900,ease:"none",immediateRender:false},71.600);
+tl.set("#f17_mv",{scale:1},0);
+
+(function(tl, P){ const S=0.3, D=3.5, id="#p01";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"src": "m/img/hatch2.jpg", "legenda": "Hatch compacto", "x": 820, "y": 330, "w": 540, "h": 330, "rot": -3, "t_in": 0.3, "pos": "50% 50%"});
+
+
+(function(tl, P){ const S=3.6, D=5.6, id="#g01";
+  const box=document.querySelector(id+" .bars"), mx=Math.max(...P.valores), H=360;
+  P.valores.forEach((v,i)=>{const c=document.createElement("div");c.style.cssText="flex:1;position:relative;height:100%;display:flex;align-items:flex-end";
+    const hh=Math.max(3,H*v/mx);
+    const b=document.createElement("div");b.style.cssText="width:100%;height:"+hh+"px;transform-origin:50% 100%;background:"+(i===P.destaque?P.cor:P.cor_base);
+    const val=document.createElement("div");val.style.cssText="position:absolute;left:-40px;right:-40px;bottom:"+(hh+12)+"px;text-align:center;font-family:'Barlow Condensed',Inter;font-weight:700;font-size:56px";
+    val.textContent=(P.textos&&P.textos[i])||v.toLocaleString("pt-BR");
+    const lb=document.createElement("div");lb.style.cssText="position:absolute;left:-40px;right:-40px;bottom:-52px;text-align:center;font-size:30px;font-weight:700;color:#e3e6ea";lb.textContent=P.labels[i];
+    c.append(b,val,lb);box.appendChild(c);
+    const t=(P.tempos&&P.tempos[i]!=null)?P.tempos[i]:S+.5+i*.35;
+    tl.set(b,{scaleY:0},0); tl.set(val,{opacity:0},0); tl.set(lb,{opacity:0},0);
+    tl.fromTo(lb,{opacity:0},{opacity:1,duration:.3,immediateRender:false},Math.min(t,S+.4));
+    tl.fromTo(b,{scaleY:0},{scaleY:1,duration:.7,ease:"power3.out",immediateRender:false},t);
+    tl.fromTo(val,{opacity:0,y:12},{opacity:1,y:0,duration:.3,immediateRender:false},t+.45);});
+  const nt=document.querySelector(id+" .nota");
+  if(!P.nota) nt.style.display="none";
+  const col=box.children[P.destaque]||box.lastChild; nt.style.left=(300+col.offsetLeft+col.offsetWidth+20)+"px"; nt.style.top="250px";
+  tl.set(nt,{opacity:0},0); tl.fromTo(nt,{opacity:0,x:-20},{opacity:1,x:0,duration:.4,immediateRender:false},P.t_nota||S+1.5);
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Preço de um hatch compacto", "labels": ["2019", "Hoje"], "valores": [55, 90], "textos": ["R$ 55 mil", "+ de R$ 90 mil"], "tempos": [4.3, 8.3], "cor": "#efe08f", "cor_base": "#4a7d8f", "destaque": 1, "nota": "", "t_nota": 0, "fundo": "rgba(6,9,12,.74)"});
+
+
+(function(tl, P){ const S=9.0, D=5.95, id="#g02";
+  const th=document.querySelector(id+" .th"), rows=document.querySelector(id+" .rows");
+  P.colunas.forEach((c,i)=>{const d=document.createElement("div");d.textContent=c;d.style.cssText="flex:"+(i?2:3)+";white-space:nowrap;text-align:"+(i?"right":"left");th.appendChild(d);});
+  P.linhas.forEach((l,r)=>{const row=document.createElement("div");row.style.cssText="position:relative;display:flex;font-size:44px;font-weight:700;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.15)";
+    const hl=document.createElement("div");hl.style.cssText="position:absolute;inset:4px 0;background:#efe08f;transform-origin:0 50%;z-index:0";row.appendChild(hl);
+    l.forEach((c,i)=>{const d=document.createElement("div");d.textContent=c;d.style.cssText="position:relative;z-index:1;flex:"+(i?2:3)+";white-space:nowrap;text-align:"+(i?"right":"left");row.appendChild(d);});
+    rows.appendChild(row);
+    const t=(P.tempos[r]!=null?P.tempos[r]:S+.6+r*.4);
+    tl.set(row,{opacity:0},0); tl.fromTo(row,{opacity:0,x:-30},{opacity:1,x:0,duration:.4,ease:"power2.out",immediateRender:false},t);
+    tl.set(hl,{scaleX:0},0);
+    if(r===P.destaque&&P.t_destaque){tl.to(hl,{scaleX:1,duration:.45,ease:"power2.inOut"},P.t_destaque);tl.to(row,{color:"#111",duration:.2},P.t_destaque+.15);}
+  });
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo(id+" .hd",{opacity:0,y:-20},{opacity:1,y:0,duration:.5,immediateRender:false},S+.1); tl.set(id+" .hd",{opacity:0},0);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Quanto subiu", "colunas": ["", "Alta"], "linhas": [["Salário mínimo", "cerca de 50%"], ["Carro", "mais de 60%"]], "tempos": [10.9, 13.9], "destaque": 1, "t_destaque": 14.25, "fundo": "rgba(6,9,12,.74)"});
+
+
+(function(tl, P){ const S=18.75, D=3.55, id="#p02";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"src": "m/img/chip2.jpg", "legenda": "Faltou chip", "x": 270, "y": 330, "w": 340, "h": 240, "rot": -5, "t_in": 19.2, "pos": "50% 50%"});
+
+
+(function(tl, P){ const S=18.75, D=3.55, id="#p03";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"src": "m/img/linha.jpg", "legenda": "Parou a linha", "x": 650, "y": 370, "w": 340, "h": 240, "rot": 3, "t_in": 19.85, "pos": "50% 50%"});
+
+
+(function(tl, P){ const S=18.75, D=3.55, id="#p04";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"src": "m/img/empty0.jpg", "legenda": "Estoque zerou", "x": 1020, "y": 320, "w": 340, "h": 240, "rot": -2, "t_in": 20.85, "pos": "50% 50%"});
+
+
+(function(tl, P){ const S=30.3, D=4.0, id="#g03", NS="http://www.w3.org/2000/svg";
+  const svg=document.querySelector(id+" .ch"), X0=240, X1=1040, Y0=600, Y1=200, n=P.valores.length;
+  const mk=(t,a,par)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(par||svg).appendChild(e);return e;};
+  const xs=i=>X0+(X1-X0)*i/(n-1), ys=v=>Y0-(Y0-Y1)*(v-P.ymin)/(P.ymax-P.ymin);
+  for(let k=0;k<=4;k++){const y=Y0-(Y0-Y1)*k/4;mk("line",{x1:X0-40,x2:X1+40,y1:y,y2:y,stroke:"#fff",opacity:k?0.1:0.35,"stroke-width":k?1:2});}
+  const T=P.valores.map((v,i)=>(P.tempos&&P.tempos[i]!=null)?P.tempos[i]:S+.6+i*1.2);
+  P.xlabels.forEach((l,i)=>{const t=mk("text",{x:xs(i),y:Y0+48,fill:"#e3e6ea","font-size":30,"font-weight":700,"text-anchor":"middle"});t.textContent=l;tl.set(t,{opacity:0},0);tl.to(t,{opacity:1,duration:.3},Math.min(T[i],S+.4));});
+  const pts=P.valores.map((v,i)=>[xs(i),ys(v)]);
+  const ar=mk("path",{d:"M"+pts.map(p=>p.join(",")).join(" L")+" L"+X1+","+Y0+" L"+X0+","+Y0+" Z",fill:P.cor,opacity:0});
+  const ln=mk("path",{d:"M"+pts.map(p=>p.join(",")).join(" L"),fill:"none",stroke:P.cor,"stroke-width":7,"stroke-linecap":"round","stroke-linejoin":"round"});
+  const L=ln.getTotalLength(); ln.style.strokeDasharray=L; tl.set(ln,{strokeDashoffset:L},0);
+  let acc=0; const seg=[0]; for(let i=1;i<n;i++){acc+=Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]);seg.push(acc);}
+  for(let i=1;i<n;i++){const a=Math.max(T[i-1]+.05,T[i]-1.0);tl.to(ln,{strokeDashoffset:L-seg[i],duration:T[i]-a,ease:"power1.inOut"},a);}
+  tl.to(ar,{opacity:.16,duration:.6},T[n-1]);
+  pts.forEach((p,i)=>{const c=mk("circle",{cx:p[0],cy:p[1],r:11,fill:"#0b0e12",stroke:P.cor,"stroke-width":5});
+    const tx=(P.rotulos&&P.rotulos[i])||""; const w=tx.length*21+36, bx=Math.min(Math.max(p[0]-w/2,40),1240-w), by=p[1]-84;
+    const r=mk("rect",{x:bx,y:by,width:w,height:56,rx:8,fill:P.cor}); const t=mk("text",{x:bx+w/2,y:by+40,"font-size":38,"font-weight":800,fill:"#111","text-anchor":"middle"});t.textContent=tx;
+    [c,r,t].forEach(e=>{tl.set(e,{opacity:0},0);tl.to(e,{opacity:1,duration:.3},T[i]);});
+    if(i===n-1){tl.fromTo(c,{attr:{r:11}},{attr:{r:17},duration:.5,repeat:3,yoyo:true,immediateRender:false},T[i]+.3);}});
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Dólar em reais", "xlabels": ["antes", "depois"], "ymin": 3, "ymax": 6, "valores": [4, 5.5], "rotulos": ["R$ 4,00", "R$ 5,50"], "tempos": [32.4, 33.3], "cor": "#efe08f", "fundo": "rgba(6,9,12,.8)"});
+
+
+(function(tl, P){ const S=34.15, D=3.35, id="#p05";
+  const c=document.querySelector(id+" .card"), ph=document.querySelector(id+" .ph"), im=document.querySelector(id+" .im");
+  ph.style.width=P.w+"px"; ph.style.height=P.h+"px"; im.style.objectPosition=P.pos;
+  if(!P.legenda) document.querySelector(id+" .lb").style.display="none";
+  c.style.left=(P.x-P.w/2-14)+"px"; c.style.top=(P.y-P.h/2-14)+"px";
+  const T=P.t_in||S;
+  tl.set(c,{opacity:0},0);
+  tl.fromTo(c,{opacity:0,y:-140,rotation:P.rot*3,scale:1.25},{opacity:1,y:0,rotation:P.rot,scale:1,duration:.55,ease:"power3.out",immediateRender:false},T);
+  tl.fromTo(im,{scale:1.0},{scale:1.08,duration:Math.max(.5,S+D-T),ease:"none",immediateRender:false},T);
+  tl.to(c,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"src": "m/img/parts2.jpg", "legenda": "Peças importadas", "x": 640, "y": 300, "w": 520, "h": 320, "rot": -3, "t_in": 34.15, "pos": "50% 50%"});
+
+
+(function(tl, P){ const S=59.0, D=3.95, id="#g04";
+  const tt=document.querySelector(id+" .tt"), e=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  const k=P.destaque?P.titulo.indexOf(P.destaque):-1;
+  tt.innerHTML = k<0? e(P.titulo) : e(P.titulo.slice(0,k))+'<span class="mk" style="background-image:linear-gradient(#ffd400,#ffd400);background-repeat:no-repeat;background-size:0% 100%;padding:0 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone">'+e(P.destaque)+'</span>'+e(P.titulo.slice(k+P.destaque.length));
+  const pg=document.querySelector(id+" .pg");
+  tl.set(id,{opacity:0},0); tl.fromTo(id,{opacity:0},{opacity:1,duration:.3,immediateRender:false},S);
+  tl.fromTo(pg,{scale:1.35,rotation:P.rot-6,y:40},{scale:1,rotation:P.rot,y:0,duration:.6,ease:"power3.out",immediateRender:false},S);
+  tl.to(pg,{scale:1.06,duration:Math.max(.5,D-.6),ease:"none"},S+.6);
+  const mk=document.querySelector(id+" .mk");
+  if(mk){tl.set(mk,{backgroundSize:"0% 100%"},0);tl.to(mk,{backgroundSize:"100% 100%",duration:.7,ease:"power2.inOut"},P.t_destaque||S+1);}
+  tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"veiculo": "GAZETA DO MERCADO", "secao": "AUTOMÓVEIS", "titulo": "O carro de entrada virou carro de luxo disfarçado", "destaque": "carro de luxo disfarçado", "t_destaque": 61.0, "rot": -2});
+
+
+(function(tl, P){ const S=64.1, D=3.8; const el=document.querySelector("#g05 .n"); const o={v:0};
+  const f=()=>{el.textContent=(P.prefixo||"")+Math.round(o.v).toLocaleString("pt-BR")+(P.sufixo||"");};
+  tl.fromTo(o,{v:0},{v:+P.numero||0,duration:Math.max(.5,D*.6),ease:"power2.out",onUpdate:f,immediateRender:false},S+.1);
+  tl.set(o,{v:0,onComplete:f},0);
+})(window.__timelines.main, {"numero": 72, "prefixo": "", "sufixo": "", "legenda": "meses de parcela: a nova normalidade", "cor": "#efe08f", "fundo": "rgba(6,9,12,.72)"});
+
+tl.fromTo("#t01_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.150);
+tl.set("#t01_box",{opacity:0,y:50},0);
+tl.to("#t01_box",{...{opacity:0},duration:0.350,ease:"power2.in"},3.450);
+tl.fromTo("#t02_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},14.850);
+tl.set("#t02_box",{opacity:0,y:50},0);
+tl.to("#t02_box",{...{opacity:0},duration:0.350,ease:"power2.in"},15.550);
+
+(function(tl, P){ const S=15.8, D=3.0, id="#c1";
+  const g=document.querySelector(id+" .grp"); g.style.left=P.x+"px"; g.style.top=P.y+"px";
+  const its=(P.itens||"").split("|").filter(Boolean), ts=(P.tempos||"").split("|").map(Number);
+  const ul=document.querySelector(id+" .lst");
+  its.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML='<span style="display:inline-block;width:14px;height:14px;background:#d8c34a;margin-right:14px;transform:rotate(45deg)"></span>'+t;li.style.margin="10px 0";ul.appendChild(li);
+    tl.fromTo(li,{opacity:0,x:-24},{opacity:1,x:0,duration:.45,ease:"power2.out",immediateRender:false},(ts[i]||S+1+i)-.05); tl.set(li,{opacity:0},0);});
+  tl.fromTo(id+" .ov",{opacity:0},{opacity:P.escuro,duration:.5,immediateRender:false},S);
+  tl.fromTo(id+" .paper",{opacity:0,y:80,rotation:-7},{opacity:1,y:0,rotation:-1,duration:.6,ease:"back.out(1.4)",immediateRender:false},S+.1);
+  tl.fromTo(id+" .tape",{opacity:0,scaleX:.2},{opacity:1,scaleX:1,duration:.4,ease:"power3.out",immediateRender:false},S+.4);
+  tl.fromTo(id+" .txt",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.5);
+  tl.to(id+" .grp",{x:900,y:-160,rotation:24,scale:.6,opacity:0,duration:.5,ease:"power2.in"},S+D-.5);
+  tl.to(id+" .ov",{opacity:0,duration:.4},S+D-.4);
+  tl.set(id+" .ov,"+id+" .paper,"+id+" .tape,"+id+" .txt",{opacity:0},0);
+})(window.__timelines.main, {"cap": "Primeiro", "texto": "A cadeia quebrou na pandemia.", "itens": "", "tempos": "", "escuro": 0.45, "x": 300, "y": 230});
+
+tl.fromTo("#t03_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},22.300);
+tl.set("#t03_box",{opacity:0,y:50},0);
+tl.to("#t03_box",{...{opacity:0},duration:0.350,ease:"power2.in"},27.150);
+tl.fromTo("#t04_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},24.000);
+tl.set("#t04_box",{opacity:0,y:50},0);
+tl.to("#t04_box",{...{opacity:0},duration:0.350,ease:"power2.in"},27.150);
+tl.fromTo("#t05_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},25.500);
+tl.set("#t05_box",{opacity:0,y:50},0);
+tl.to("#t05_box",{...{opacity:0},duration:0.350,ease:"power2.in"},27.150);
+tl.fromTo("#t06_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},26.500);
+tl.set("#t06_box",{opacity:0,y:50},0);
+tl.to("#t06_box",{...{opacity:0},duration:0.333,ease:"power2.in"},27.167);
+
+(function(tl, P){ const S=27.3, D=3.2, id="#c2";
+  const g=document.querySelector(id+" .grp"); g.style.left=P.x+"px"; g.style.top=P.y+"px";
+  const its=(P.itens||"").split("|").filter(Boolean), ts=(P.tempos||"").split("|").map(Number);
+  const ul=document.querySelector(id+" .lst");
+  its.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML='<span style="display:inline-block;width:14px;height:14px;background:#d8c34a;margin-right:14px;transform:rotate(45deg)"></span>'+t;li.style.margin="10px 0";ul.appendChild(li);
+    tl.fromTo(li,{opacity:0,x:-24},{opacity:1,x:0,duration:.45,ease:"power2.out",immediateRender:false},(ts[i]||S+1+i)-.05); tl.set(li,{opacity:0},0);});
+  tl.fromTo(id+" .ov",{opacity:0},{opacity:P.escuro,duration:.5,immediateRender:false},S);
+  tl.fromTo(id+" .paper",{opacity:0,y:80,rotation:-7},{opacity:1,y:0,rotation:-1,duration:.6,ease:"back.out(1.4)",immediateRender:false},S+.1);
+  tl.fromTo(id+" .tape",{opacity:0,scaleX:.2},{opacity:1,scaleX:1,duration:.4,ease:"power3.out",immediateRender:false},S+.4);
+  tl.fromTo(id+" .txt",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.5);
+  tl.to(id+" .grp",{x:900,y:-160,rotation:24,scale:.6,opacity:0,duration:.5,ease:"power2.in"},S+D-.5);
+  tl.to(id+" .ov",{opacity:0,duration:.4},S+D-.4);
+  tl.set(id+" .ov,"+id+" .paper,"+id+" .tape,"+id+" .txt",{opacity:0},0);
+})(window.__timelines.main, {"cap": "Segundo", "texto": "O real desvalorizou.", "itens": "", "tempos": "", "escuro": 0.45, "x": 300, "y": 230});
+
+tl.fromTo("#t07_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.600);
+tl.set("#t07_box",{opacity:0,y:50},0);
+tl.to("#t07_box",{...{opacity:0},duration:0.350,ease:"power2.in"},37.050);
+
+(function(tl, P){ const S=37.3, D=8.7, id="#c3";
+  const g=document.querySelector(id+" .grp"); g.style.left=P.x+"px"; g.style.top=P.y+"px";
+  const its=(P.itens||"").split("|").filter(Boolean), ts=(P.tempos||"").split("|").map(Number);
+  const ul=document.querySelector(id+" .lst");
+  its.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML='<span style="display:inline-block;width:14px;height:14px;background:#d8c34a;margin-right:14px;transform:rotate(45deg)"></span>'+t;li.style.margin="10px 0";ul.appendChild(li);
+    tl.fromTo(li,{opacity:0,x:-24},{opacity:1,x:0,duration:.45,ease:"power2.out",immediateRender:false},(ts[i]||S+1+i)-.05); tl.set(li,{opacity:0},0);});
+  tl.fromTo(id+" .ov",{opacity:0},{opacity:P.escuro,duration:.5,immediateRender:false},S);
+  tl.fromTo(id+" .paper",{opacity:0,y:80,rotation:-7},{opacity:1,y:0,rotation:-1,duration:.6,ease:"back.out(1.4)",immediateRender:false},S+.1);
+  tl.fromTo(id+" .tape",{opacity:0,scaleX:.2},{opacity:1,scaleX:1,duration:.4,ease:"power3.out",immediateRender:false},S+.4);
+  tl.fromTo(id+" .txt",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.5);
+  tl.to(id+" .grp",{x:900,y:-160,rotation:24,scale:.6,opacity:0,duration:.5,ease:"power2.in"},S+D-.5);
+  tl.to(id+" .ov",{opacity:0,duration:.4},S+D-.4);
+  tl.set(id+" .ov,"+id+" .paper,"+id+" .tape,"+id+" .txt",{opacity:0},0);
+})(window.__timelines.main, {"cap": "Terceiro", "texto": "A lei mudou.", "itens": "Novas regras de emissões|Controle de estabilidade obrigatório|Produção mais cara", "tempos": "39.5|41.95|44.1", "escuro": 0.45, "x": 70, "y": 140});
+
+tl.fromTo("#t08_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.200);
+tl.set("#t08_box",{opacity:0,y:50},0);
+tl.to("#t08_box",{...{opacity:0},duration:0.350,ease:"power2.in"},49.950);
+tl.fromTo("#t09_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},48.200);
+tl.set("#t09_box",{opacity:0,y:50},0);
+tl.to("#t09_box",{...{opacity:0},duration:0.350,ease:"power2.in"},49.950);
+
+(function(tl, P){ const S=50.3, D=8.7, id="#c4";
+  const g=document.querySelector(id+" .grp"); g.style.left=P.x+"px"; g.style.top=P.y+"px";
+  const its=(P.itens||"").split("|").filter(Boolean), ts=(P.tempos||"").split("|").map(Number);
+  const ul=document.querySelector(id+" .lst");
+  its.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML='<span style="display:inline-block;width:14px;height:14px;background:#d8c34a;margin-right:14px;transform:rotate(45deg)"></span>'+t;li.style.margin="10px 0";ul.appendChild(li);
+    tl.fromTo(li,{opacity:0,x:-24},{opacity:1,x:0,duration:.45,ease:"power2.out",immediateRender:false},(ts[i]||S+1+i)-.05); tl.set(li,{opacity:0},0);});
+  tl.fromTo(id+" .ov",{opacity:0},{opacity:P.escuro,duration:.5,immediateRender:false},S);
+  tl.fromTo(id+" .paper",{opacity:0,y:80,rotation:-7},{opacity:1,y:0,rotation:-1,duration:.6,ease:"back.out(1.4)",immediateRender:false},S+.1);
+  tl.fromTo(id+" .tape",{opacity:0,scaleX:.2},{opacity:1,scaleX:1,duration:.4,ease:"power3.out",immediateRender:false},S+.4);
+  tl.fromTo(id+" .txt",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.5);
+  tl.to(id+" .grp",{x:900,y:-160,rotation:24,scale:.6,opacity:0,duration:.5,ease:"power2.in"},S+D-.5);
+  tl.to(id+" .ov",{opacity:0,duration:.4},S+D-.4);
+  tl.set(id+" .ov,"+id+" .paper,"+id+" .tape,"+id+" .txt",{opacity:0},0);
+})(window.__timelines.main, {"cap": "Quarto", "texto": "O gosto mudou. Ninguém quer mais carro “pelado”.", "itens": "Central multimídia|Câmera de ré|Teto solar", "tempos": "54.36|55.76|56.74", "escuro": 0.45, "x": 70, "y": 110});
+
+tl.fromTo("#t10_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},63.000);
+tl.set("#t10_box",{opacity:0,y:50},0);
+tl.to("#t10_box",{...{opacity:0},duration:0.350,ease:"power2.in"},63.850);
+tl.fromTo("#t11_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},68.000);
+tl.set("#t11_box",{opacity:0,y:50},0);
+tl.to("#t11_box",{...{opacity:0},duration:0.350,ease:"power2.in"},71.250);
+tl.fromTo("#t12_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},69.700);
+tl.set("#t12_box",{opacity:0,y:50},0);
+tl.to("#t12_box",{...{opacity:0},duration:0.350,ease:"power2.in"},71.250);
+
+(function(tl, P){ const S=71.7, D=7.6, id="#c5";
+  const g=document.querySelector(id+" .grp"); g.style.left=P.x+"px"; g.style.top=P.y+"px";
+  const its=(P.itens||"").split("|").filter(Boolean), ts=(P.tempos||"").split("|").map(Number);
+  const ul=document.querySelector(id+" .lst");
+  its.forEach((t,i)=>{const li=document.createElement("li");li.innerHTML='<span style="display:inline-block;width:14px;height:14px;background:#d8c34a;margin-right:14px;transform:rotate(45deg)"></span>'+t;li.style.margin="10px 0";ul.appendChild(li);
+    tl.fromTo(li,{opacity:0,x:-24},{opacity:1,x:0,duration:.45,ease:"power2.out",immediateRender:false},(ts[i]||S+1+i)-.05); tl.set(li,{opacity:0},0);});
+  tl.fromTo(id+" .ov",{opacity:0},{opacity:P.escuro,duration:.5,immediateRender:false},S);
+  tl.fromTo(id+" .paper",{opacity:0,y:80,rotation:-7},{opacity:1,y:0,rotation:-1,duration:.6,ease:"back.out(1.4)",immediateRender:false},S+.1);
+  tl.fromTo(id+" .tape",{opacity:0,scaleX:.2},{opacity:1,scaleX:1,duration:.4,ease:"power3.out",immediateRender:false},S+.4);
+  tl.fromTo(id+" .txt",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.5);
+  tl.to(id+" .grp",{x:900,y:-160,rotation:24,scale:.6,opacity:0,duration:.5,ease:"power2.in"},S+D-.5);
+  tl.to(id+" .ov",{opacity:0,duration:.4},S+D-.4);
+  tl.set(id+" .ov,"+id+" .paper,"+id+" .tape,"+id+" .txt",{opacity:0},0);
+})(window.__timelines.main, {"cap": "Inscreva-se", "texto": "para ver o gráfico da depreciação real.", "itens": "Próximo vídeo: quais modelos ainda valem a pena", "tempos": "75.1", "escuro": 0.45, "x": 300, "y": 230});
+
+})();</script>
+</body></html>

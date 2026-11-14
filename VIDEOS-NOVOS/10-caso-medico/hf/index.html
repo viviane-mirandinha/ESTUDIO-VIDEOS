@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#111114;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#111114;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}.vin{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}.rt{position:absolute;inset:0}.rt i{position:absolute;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;background:radial-gradient(circle,rgba(227,52,47,.75),rgba(227,52,47,0) 70%);mix-blend-mode:screen}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="68.3" data-width="1280" data-height="720">
+<div id="im1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im1_mv" class="ed-mv"><img id="im1" class="clip" data-start="0.000" data-duration="2.100" data-track-index="1" src="m/img/xray_corpo.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="sc3_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="sc3_clip" class="clip" data-start="2.100" data-duration="3.900" data-track-index="2" style="width:100%;height:100%;position:relative">
+<div id="sc3" class="pc" style="position:absolute;inset:0;background:#111114;font-family:Oswald,Inter,sans-serif;overflow:hidden">
+  <div class="pc-img"><img src="m/img/corpo_azul.jpg"></div>
+  <div class="pc-in">
+    <div class="pc-rot">PACIENTE</div>
+    <div class="pc-ini">M.</div>
+    <div class="pc-l pc-idade"><span>IDADE</span>36 anos</div>
+    <div class="pc-l pc-sexo"><span>SEXO</span>masculino</div>
+    <div class="pc-q"></div>
+  </div>
+</div>
+<style>
+#sc3 .pc-img{position:absolute;right:0;top:0;width:55%;height:100%;-webkit-mask-image:linear-gradient(to right,transparent,#000 40%);mask-image:linear-gradient(to right,transparent,#000 40%)}
+#sc3 .pc-img img{width:100%;height:100%;object-fit:cover;opacity:.9}
+#sc3 .pc-in{position:absolute;left:100px;top:50%;transform:translateY(-50%);width:620px}
+#sc3 .pc-rot{font:700 28px Inter,sans-serif;letter-spacing:.3em;color:#5bc0eb}
+#sc3 .pc-ini{font-weight:700;font-size:150px;line-height:1;color:#fff;margin:6px 0 18px}
+#sc3 .pc-l{font:600 48px Inter,sans-serif;color:#fff;border-top:2px solid #2a2a31;padding:10px 0;text-transform:uppercase}
+#sc3 .pc-l span{display:inline-block;width:150px;font:600 24px Inter,sans-serif;letter-spacing:.2em;color:#8d909a;vertical-align:middle}
+#sc3 .pc-q{font:500 30px Inter,sans-serif;color:#e3342f;margin-top:12px}
+</style>
+
+</div></div>
+<div id="im4_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im4_mv" class="ed-mv"><img id="im4" class="clip" data-start="6.000" data-duration="5.000" data-track-index="3" src="m/img/lata.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="im9_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im9_mv" class="ed-mv"><img id="im9" class="clip" data-start="11.000" data-duration="6.150" data-track-index="4" src="m/img/corpo_coracao.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="sc18_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="sc18_clip" class="clip" data-start="17.150" data-duration="6.100" data-track-index="5" style="width:100%;height:100%;position:relative">
+<div id="sc18" class="eg" style="position:absolute;inset:0;background:#0d0e11;overflow:hidden;font-family:Oswald,Inter,sans-serif">
+  <svg class="eg-svg" width="1280" height="720" viewBox="0 0 1280 720"></svg>
+  <div class="eg-h"><div class="eg-t">ELETROCARDIOGRAMA</div><div class="eg-s">ECG · atividade elétrica do coração</div></div>
+</div>
+<style>
+#sc18 .eg-svg{position:absolute;inset:0}
+#sc18 .eg-h{position:absolute;left:70px;top:44px}
+#sc18 .eg-t{font-weight:700;font-size:60px;color:#fff;letter-spacing:.01em}
+#sc18 .eg-s{font:500 28px Inter,sans-serif;color:#8d909a;margin-top:2px}
+</style>
+
+</div></div>
+<div id="sc21_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="sc21_clip" class="clip" data-start="23.250" data-duration="6.200" data-track-index="6" style="width:100%;height:100%;position:relative">
+<div id="sc21" class="tx" style="position:absolute;inset:0;background:#111114;font-family:Inter,Arial,sans-serif">
+  <div class="tx-h"><div class="tx-t">ECOCARDIOGRAMA</div><div class="tx-s">ultrassom do coração</div></div>
+  <div class="tx-tab"></div>
+</div>
+<style>
+#sc21 .tx-h{position:absolute;left:90px;top:56px;right:90px}
+#sc21 .tx-t{font:700 64px Oswald,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.01em}
+#sc21 .tx-s{font:500 28px Inter,sans-serif;color:#5bc0eb;margin-top:2px}
+#sc21 .tx-tab{position:absolute;left:90px;right:90px;top:220px}
+#sc21 .tx-r{display:grid;grid-template-columns:1.4fr 1fr .9fr;align-items:center;border-bottom:2px solid #2a2a31;padding:18px 8px}
+#sc21 .tx-r.cab{border-bottom:3px solid #5bc0eb;padding:8px}
+#sc21 .tx-r.cab div{font:700 24px Inter,sans-serif;color:#8d909a;letter-spacing:.15em}
+#sc21 .tx-r .n{font:600 34px Inter,sans-serif;color:#e8e8ec}
+#sc21 .tx-r .n small{display:block;font:500 24px Inter,sans-serif;color:#8d909a;margin-top:2px}
+#sc21 .tx-r .v{font:700 42px Oswald,Inter,sans-serif;text-transform:uppercase}
+#sc21 .tx-r .v.ruim{color:#e3342f} #sc21 .tx-r .v.ok{color:#5bc0eb}
+#sc21 .tx-r .o{font:500 30px Inter,sans-serif;color:#5bc0eb}
+#sc21 .tx-r .fl{display:inline-block;margin-left:14px;font:700 24px Inter,sans-serif;color:#fff;background:#e3342f;border-radius:6px;padding:2px 10px;vertical-align:middle;letter-spacing:.05em}
+</style>
+
+</div></div>
+<div id="im22_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im22_mv" class="ed-mv"><img id="im22" class="clip" data-start="29.450" data-duration="6.300" data-track-index="7" src="m/img/rm_cardiaca.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="im26_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im26_mv" class="ed-mv"><img id="im26" class="clip" data-start="35.750" data-duration="5.200" data-track-index="8" src="m/img/cafeina.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="vd30_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vd30_mv" class="ed-mv"><video id="vd30" class="clip" data-start="40.950" data-duration="5.850" data-track-index="9" src="m/clips/coracao3d.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vd32_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vd32_mv" class="ed-mv"><video id="vd32" class="clip" data-start="46.800" data-duration="5.050" data-track-index="10" src="m/clips/uti.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="sc39_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="sc39_clip" class="clip" data-start="51.850" data-duration="4.450" data-track-index="11" style="width:100%;height:100%;position:relative">
+<div id="sc39" class="fe" style="position:absolute;inset:0;background:#111114;font-family:Oswald,Inter,sans-serif">
+  <div class="fe-h"><div class="fe-t">FRAÇÃO DE EJEÇÃO</div><div class="fe-s">6 meses de abstinência total</div></div>
+  <div class="fe-num"><span class="fe-v">0</span>%</div>
+  <div class="fe-bar"><div class="fe-norm"><span>NORMAL</span></div><div class="fe-fill"></div><div class="fe-mk fe-mk0"><b></b><i>internação</i></div></div>
+  <div class="fe-esc"><span>0%</span><span>100%</span></div>
+</div>
+<style>
+#sc39 .fe-h{position:absolute;left:100px;top:60px}
+#sc39 .fe-t{font-weight:700;font-size:64px;color:#fff}
+#sc39 .fe-s{font:500 30px Inter,sans-serif;color:#5bc0eb;margin-top:2px}
+#sc39 .fe-num{position:absolute;right:100px;top:60px;font-weight:700;font-size:150px;line-height:1;color:#e3342f}
+#sc39 .fe-bar{position:absolute;left:100px;right:100px;top:400px;height:70px;background:#1f1f25;border-radius:10px}
+#sc39 .fe-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:#e3342f;border-radius:10px}
+#sc39 .fe-norm{position:absolute;top:-14px;bottom:-14px;border:3px dashed #5bc0eb;border-radius:10px}
+#sc39 .fe-norm span{position:absolute;top:-44px;left:0;right:0;text-align:center;font:700 26px Inter,sans-serif;color:#5bc0eb;letter-spacing:.15em}
+#sc39 .fe-mk{position:absolute;top:84px;transform:translateX(-50%);text-align:center}
+#sc39 .fe-mk b{display:block;margin:0 auto;width:4px;height:30px;background:#e3342f}
+#sc39 .fe-mk i{display:block;font:500 26px Inter,sans-serif;font-style:normal;color:#c9ccd4;white-space:nowrap;margin-top:4px}
+#sc39 .fe-esc{position:absolute;left:100px;right:100px;top:560px;display:flex;justify-content:space-between;font:500 24px Inter,sans-serif;color:#6d707a}
+</style>
+
+</div></div>
+<div id="vd40_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vd40_mv" class="ed-mv"><video id="vd40" class="clip" data-start="56.300" data-duration="5.150" data-track-index="12" src="m/clips/coracao_ecg.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="im44_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;opacity:1.0;"><div id="im44_mv" class="ed-mv"><img id="im44" class="clip" data-start="61.450" data-duration="4.050" data-track-index="13" src="m/img/lata.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="sc48_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="sc48_clip" class="clip" data-start="65.500" data-duration="2.800" data-track-index="14" style="width:100%;height:100%;position:relative">
+<div id="sc48" class="ct" style="position:absolute;inset:0;background:#111114;font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot"></div>
+    <div class="ct-termo" style="color:#ffffff">INSCREVA-SE</div>
+    <div class="ct-exp" style="color:#5bc0eb">para mais relatórios clínicos</div>
+    <div class="ct-nota"></div>
+  </div>
+</div>
+<style>
+#sc48 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc48 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc48.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc48.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc48 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc48 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc48 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc48 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="sc2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sc2_clip" class="clip" data-start="0.000" data-duration="2.100" data-track-index="15" style="width:100%;height:100%;position:relative">
+<div id="sc2" class="ct" style="position:absolute;inset:0;background:rgba(17,17,20,0);font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot"></div>
+    <div class="ct-termo" style="color:#ffffff">CASO ILUSTRATIVO</div>
+    <div class="ct-exp" style="color:#5bc0eb">relatório clínico</div>
+    <div class="ct-nota"></div>
+  </div>
+</div>
+<style>
+#sc2 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc2 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc2.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc2.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc2 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc2 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc2 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc2 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="vinheta_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="vinheta" class="clip" data-start="0.000" data-duration="68.300" data-track-index="16" style="width:100%;height:100%"><div class='vin'></div></div></div>
+<div id="dm5_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="dm5" class="clip" data-start="6.000" data-duration="5.000" data-track-index="17" style="width:100%;height:100%"><div style='width:100%;height:100%;background:rgba(8,8,10,0.45)'></div></div></div>
+<div id="dm10_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="dm10" class="clip" data-start="11.000" data-duration="6.150" data-track-index="18" style="width:100%;height:100%"><div style='width:100%;height:100%;background:rgba(8,8,10,0.35)'></div></div></div>
+<div id="sc19_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sc19_clip" class="clip" data-start="18.300" data-duration="2.600" data-track-index="19" style="width:100%;height:100%;position:relative">
+<div id="sc19" class="ct" style="position:absolute;inset:0;background:rgba(17,17,20,0);font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot"></div>
+    <div class="ct-termo" style="color:#ffffff">BLOQUEIO DE RAMO DIREITO</div>
+    <div class="ct-exp" style="color:#5bc0eb">o sinal elétrico chega atrasado ao lado direito</div>
+    <div class="ct-nota"></div>
+  </div>
+</div>
+<style>
+#sc19 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc19 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc19.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc19.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc19 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc19 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc19 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc19 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="sc20_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sc20_clip" class="clip" data-start="20.900" data-duration="2.350" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="sc20" class="ct" style="position:absolute;inset:0;background:rgba(17,17,20,0);font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot"></div>
+    <div class="ct-termo" style="color:#ff5a52">EXTRASSÍSTOLES VENTRICULARES</div>
+    <div class="ct-exp" style="color:#5bc0eb">batimentos extras, fora de hora, vindos dos ventrículos</div>
+    <div class="ct-nota"></div>
+  </div>
+</div>
+<style>
+#sc20 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc20 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc20.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc20.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc20 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc20 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc20 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc20 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="sc25_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sc25_clip" class="clip" data-start="31.400" data-duration="4.350" data-track-index="21" style="width:100%;height:100%;position:relative">
+<div id="sc25" class="ct" style="position:absolute;inset:0;background:rgba(17,17,20,0);font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot"></div>
+    <div class="ct-termo" style="color:#ffffff">REALCE TARDIO DIFUSO</div>
+    <div class="ct-exp" style="color:#5bc0eb">lesão espalhada pelo músculo do coração (miocárdio)</div>
+    <div class="ct-nota">padrão NÃO isquêmico: não foi infarto</div>
+  </div>
+</div>
+<style>
+#sc25 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc25 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc25.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc25.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc25 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc25 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc25 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc25 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="rt23_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="rt23" class="clip" data-start="31.600" data-duration="4.150" data-track-index="22" style="width:100%;height:100%"><div class='rt'><i style='left:560px;top:380px'></i><i style='left:690px;top:450px'></i><i style='left:600px;top:520px'></i><i style='left:740px;top:330px'></i></div></div></div>
+<div id="sc31_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sc31_clip" class="clip" data-start="40.950" data-duration="5.850" data-track-index="23" style="width:100%;height:100%;position:relative">
+<div id="sc31" class="ct" style="position:absolute;inset:0;background:rgba(17,17,20,0);font-family:Oswald,Inter,Arial,sans-serif">
+  <div class="ct-grad"></div>
+  <div class="ct-in">
+    <div class="ct-rot">DIAGNÓSTICO</div>
+    <div class="ct-termo" style="color:#ffffff">CARDIOMIOPATIA DILATADA TÓXICA</div>
+    <div class="ct-exp" style="color:#5bc0eb">o músculo do coração dilatou e ficou fraco</div>
+    <div class="ct-nota">induzida por estimulantes</div>
+  </div>
+</div>
+<style>
+#sc31 .ct-grad{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(to top,rgba(8,8,10,.92),rgba(8,8,10,.6) 55%,rgba(8,8,10,0))}
+#sc31 .ct-in{position:absolute;left:80px;right:80px;bottom:70px;text-align:center}
+#sc31.ct[data-pos="centro"] .ct-in{bottom:auto;top:50%;transform:translateY(-50%)}
+#sc31.ct[data-pos="centro"] .ct-grad{height:100%;background:rgba(8,8,10,.55)}
+#sc31 .ct-rot{font:600 30px Inter,Arial,sans-serif;letter-spacing:.25em;color:#e3342f;text-transform:uppercase;margin-bottom:6px}
+#sc31 .ct-termo{font-weight:700;font-size:76px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 18px rgba(0,0,0,.7)}
+#sc31 .ct-exp{font:500 36px Inter,Arial,sans-serif;margin-top:12px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#sc31 .ct-nota{font:500 28px Inter,Arial,sans-serif;color:#c9ccd4;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+</style>
+
+</div></div>
+<div id="dm33_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="dm33" class="clip" data-start="46.800" data-duration="5.050" data-track-index="24" style="width:100%;height:100%"><div style='width:100%;height:100%;background:rgba(8,8,10,0.5)'></div></div></div>
+<div id="dm45_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="dm45" class="clip" data-start="61.450" data-duration="4.050" data-track-index="25" style="width:100%;height:100%"><div style='width:100%;height:100%;background:rgba(8,8,10,0.55)'></div></div></div>
+<div id="tx6_box" class="ed-box" style="left:900.0px;top:300.0px;transform:translate(-50%,-50%);width:640.0px;z-index:31;"><div id="tx6" class="clip" data-start="6.850" data-duration="4.150" data-track-index="26" style="font-size:92.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">3 LITROS / DIA</div></div>
+<div id="tx7_box" class="ed-box" style="left:900.0px;top:395.0px;transform:translate(-50%,-50%);width:640.0px;z-index:31;"><div id="tx7" class="clip" data-start="7.750" data-duration="3.250" data-track-index="27" style="font-size:40.0px;color:#5bc0eb;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">de energético</div></div>
+<div id="tx8_box" class="ed-box" style="left:900.0px;top:480.0px;transform:translate(-50%,-50%);width:640.0px;z-index:31;"><div id="tx8" class="clip" data-start="9.000" data-duration="2.000" data-track-index="28" style="font-size:56.0px;color:#e3342f;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DURANTE 2 ANOS</div></div>
+<div id="tx11_box" class="ed-box" style="left:640.0px;top:80.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tx11" class="clip" data-start="11.000" data-duration="6.150" data-track-index="29" style="font-size:60.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">QUEIXA PRINCIPAL</div></div>
+<div id="tx12_box" class="ed-box" style="left:330.0px;top:250.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx12" class="clip" data-start="11.950" data-duration="5.200" data-track-index="30" style="font-size:50.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">PALPITAÇÕES</div></div>
+<div id="tx13_box" class="ed-box" style="left:330.0px;top:312.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx13" class="clip" data-start="12.300" data-duration="4.850" data-track-index="31" style="font-size:26.0px;color:#5bc0eb;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">coração disparado</div></div>
+<div id="tx14_box" class="ed-box" style="left:330.0px;top:400.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx14" class="clip" data-start="13.000" data-duration="4.150" data-track-index="32" style="font-size:50.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DISPNEIA</div></div>
+<div id="tx15_box" class="ed-box" style="left:330.0px;top:462.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx15" class="clip" data-start="13.400" data-duration="3.750" data-track-index="33" style="font-size:26.0px;color:#5bc0eb;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">falta de ar aos mínimos esforços</div></div>
+<div id="tx16_box" class="ed-box" style="left:330.0px;top:550.0px;transform:translate(-50%,-50%);width:560.0px;z-index:31;"><div id="tx16" class="clip" data-start="15.100" data-duration="2.050" data-track-index="34" style="font-size:50.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(227,52,47,.88);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DOR TORÁCICA NOTURNA</div></div>
+<div id="tx17_box" class="ed-box" style="left:330.0px;top:612.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx17" class="clip" data-start="15.500" data-duration="1.650" data-track-index="35" style="font-size:26.0px;color:#c9ccd4;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">dor no peito à noite</div></div>
+<div id="tx24_box" class="ed-box" style="left:640.0px;top:90.0px;transform:translate(-50%,-50%);width:900.0px;z-index:31;"><div id="tx24" class="clip" data-start="29.500" data-duration="1.900" data-track-index="36" style="font-size:60.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">RESSONÂNCIA CARDÍACA</div></div>
+<div id="tx27_box" class="ed-box" style="left:640.0px;top:80.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tx27" class="clip" data-start="35.800" data-duration="5.150" data-track-index="37" style="font-size:60.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">EXAME TOXICOLÓGICO</div></div>
+<div id="tx28_box" class="ed-box" style="left:640.0px;top:560.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tx28" class="clip" data-start="37.400" data-duration="3.550" data-track-index="38" style="font-size:88.0px;color:#e3342f;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">CAFEÍNA</div></div>
+<div id="tx29_box" class="ed-box" style="left:640.0px;top:650.0px;transform:translate(-50%,-50%);width:700.0px;z-index:31;"><div id="tx29" class="clip" data-start="37.900" data-duration="3.050" data-track-index="39" style="font-size:36.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">muito acima do normal</div></div>
+<div id="tx34_box" class="ed-box" style="left:640.0px;top:80.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tx34" class="clip" data-start="46.850" data-duration="5.000" data-track-index="40" style="font-size:60.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">TRATAMENTO</div></div>
+<div id="tx35_box" class="ed-box" style="left:640.0px;top:200.0px;transform:translate(-50%,-50%);width:760.0px;z-index:31;"><div id="tx35" class="clip" data-start="46.900" data-duration="4.950" data-track-index="41" style="font-size:50.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">INTERNAÇÃO EM UTI</div></div>
+<div id="tx36_box" class="ed-box" style="left:640.0px;top:300.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:31;"><div id="tx36" class="clip" data-start="47.900" data-duration="3.950" data-track-index="42" style="font-size:34.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SUPORTE INOTRÓPICO  ·  remédio que reforça a batida</div></div>
+<div id="tx37_box" class="ed-box" style="left:640.0px;top:400.0px;transform:translate(-50%,-50%);width:860.0px;z-index:31;"><div id="tx37" class="clip" data-start="49.000" data-duration="2.850" data-track-index="43" style="font-size:50.0px;color:#5bc0eb;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">BETABLOQUEADOR EM ALTA DOSE</div></div>
+<div id="tx38_box" class="ed-box" style="left:640.0px;top:500.0px;transform:translate(-50%,-50%);width:900.0px;z-index:31;"><div id="tx38" class="clip" data-start="50.550" data-duration="1.300" data-track-index="44" style="font-size:50.0px;color:#e3342f;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DESMAME RIGOROSO</div></div>
+<div id="tx41_box" class="ed-box" style="left:830.0px;top:120.0px;transform:translate(-50%,-50%);width:760.0px;z-index:31;"><div id="tx41" class="clip" data-start="56.350" data-duration="1.850" data-track-index="45" style="font-size:56.0px;color:#5bc0eb;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">ARRITMIAS CONTROLADAS</div></div>
+<div id="tx42_box" class="ed-box" style="left:830.0px;top:480.0px;transform:translate(-50%,-50%);width:780.0px;z-index:31;"><div id="tx42" class="clip" data-start="58.200" data-duration="3.250" data-track-index="46" style="font-size:64.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">O CORAÇÃO SE RECUPERA</div></div>
+<div id="tx43_box" class="ed-box" style="left:830.0px;top:575.0px;transform:translate(-50%,-50%);width:760.0px;z-index:31;"><div id="tx43" class="clip" data-start="59.700" data-duration="1.750" data-track-index="47" style="font-size:36.0px;color:#5bc0eb;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">se a agressão parar a tempo</div></div>
+<div id="tx46_box" class="ed-box" style="left:900.0px;top:280.0px;transform:translate(-50%,-50%);width:640.0px;z-index:31;"><div id="tx46" class="clip" data-start="61.500" data-duration="4.000" data-track-index="48" style="font-size:52.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">CONHECE ALGUÉM QUE EXAGERA NO ENERGÉTICO?</div></div>
+<div id="tx47_box" class="ed-box" style="left:900.0px;top:470.0px;transform:translate(-50%,-50%);width:600.0px;z-index:31;"><div id="tx47" class="clip" data-start="64.450" data-duration="1.050" data-track-index="49" style="font-size:60.0px;color:#5bc0eb;font-weight:700;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;background:rgba(10,10,12,.78);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">MANDE ESTE VÍDEO</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:68.3,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.fromTo("#im1_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.000);
+tl.fromTo("#im1_mv",{scale:1},{...{scale:1.1},duration:2.100,ease:"none",immediateRender:false},0.000);
+
+(function(tl, P){ const S=2.1, D=3.9;
+  if(!P.img) document.querySelector("#sc3 .pc-img").style.display="none";
+  if(!P.queixa) document.querySelector("#sc3 .pc-q").style.display="none";
+  tl.set("#sc3 .pc-rot,#sc3 .pc-ini,#sc3 .pc-l,#sc3 .pc-q",{opacity:0},0);
+  tl.fromTo("#sc3 .pc-img img",{scale:1.12},{scale:1,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo("#sc3 .pc-rot",{opacity:0},{opacity:1,duration:.35,immediateRender:false},S+.05);
+  tl.fromTo("#sc3 .pc-ini",{opacity:0,x:-40},{opacity:1,x:0,duration:.5,ease:"power3.out",immediateRender:false},S+.25);
+  tl.fromTo("#sc3 .pc-idade",{opacity:0,y:20},{opacity:1,y:0,duration:.4,immediateRender:false},S+(+P.t_idade||1));
+  tl.fromTo("#sc3 .pc-sexo",{opacity:0,y:20},{opacity:1,y:0,duration:.4,immediateRender:false},S+(+P.t_sexo||2));
+  tl.fromTo("#sc3 .pc-q",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_sexo||2)+.5);
+})(window.__timelines.main, {"rotulo": "PACIENTE", "iniciais": "M.", "idade": "36 anos", "sexo": "masculino", "queixa": "", "img": "m/img/corpo_azul.jpg", "t_idade": 1.3, "t_sexo": 2.6, "fundo": "#111114"});
+
+tl.fromTo("#im4_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},6.000);
+tl.set("#im4_box",{opacity:0},0);
+tl.fromTo("#im4_mv",{scale:1},{...{scale:1.12},duration:5.000,ease:"none",immediateRender:false},6.000);
+tl.set("#im4_mv",{scale:1},0);
+tl.fromTo("#im9_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.000);
+tl.set("#im9_box",{opacity:0},0);
+tl.fromTo("#im9_mv",{scale:1},{...{scale:1.1},duration:6.150,ease:"none",immediateRender:false},11.000);
+tl.set("#im9_mv",{scale:1},0);
+
+(function(tl, P){ const S=17.15, D=6.1; const NS="http://www.w3.org/2000/svg";
+  const svg=document.querySelector("#sc18 .eg-svg"); const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e;};
+  for(let x=0;x<=1280;x+=32) el("line",{x1:x,y1:0,x2:x,y2:720,stroke:x%160==0?"#2a1c1f":"#1a1416","stroke-width":x%160==0?2:1});
+  for(let y=0;y<=720;y+=32) el("line",{x1:0,y1:y,x2:1280,y2:y,stroke:y%160==0?"#2a1c1f":"#1a1416","stroke-width":y%160==0?2:1});
+  const B=430, ext=P.extras||[]; let pts=[[0,B]], x=20; const marks=[];
+  for(let i=0;i<9;i++){
+    if(ext.indexOf(i)>=0){ // extrassistole ventricular: precoce, larga, sem P
+      x-=26; pts.push([x,B],[x+10,B+8],[x+26,B-210],[x+46,B+120],[x+66,B+10],[x+84,B],[x+104,B+40],[x+134,B+50],[x+160,B]); marks.push(x+40); x+=200;
+    } else { // bloqueio de ramo direito: QRS alargado em M (rsR')
+      pts.push([x,B],[x+10,B-18],[x+22,B],[x+34,B],[x+40,B+14],[x+48,B-110],[x+56,B-20],[x+64,B-150],[x+74,B+30],[x+82,B],[x+104,B],[x+120,B-34],[x+138,B],[x+158,B]); x+=158;
+    }
+  }
+  pts.push([1300,B]);
+  const path=el("path",{d:"M"+pts.map(p=>p.join(",")).join(" L"),fill:"none",stroke:P.cor,"stroke-width":5,"stroke-linejoin":"round","stroke-linecap":"round",style:"filter:drop-shadow(0 0 8px "+P.cor+")"});
+  const L=path.getTotalLength(); path.style.strokeDasharray=L; path.style.strokeDashoffset=L;
+  const rings=marks.map(mx=>el("ellipse",{cx:mx,cy:B-40,rx:70,ry:190,fill:"none",stroke:P.cor_alerta,"stroke-width":5,opacity:0}));
+  tl.set(path,{strokeDashoffset:L},0);
+  tl.fromTo(path,{strokeDashoffset:L},{strokeDashoffset:0,duration:+P.varredura||D*.7,ease:"none",immediateRender:false},S+.1);
+  tl.set("#sc18 .eg-t,#sc18 .eg-s",{opacity:0},0);
+  tl.fromTo("#sc18 .eg-t",{opacity:0,y:-20},{opacity:1,y:0,duration:.45,immediateRender:false},S+.05);
+  tl.fromTo("#sc18 .eg-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.35);
+  rings.forEach((r,i)=>{ tl.set(r,{opacity:0},0); tl.fromTo(r,{opacity:0,scale:.6,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:.4,ease:"power2.out",immediateRender:false},S+(+P.t_alerta||2)+i*.25); });
+})(window.__timelines.main, {"titulo": "ELETROCARDIOGRAMA", "sub": "ECG · atividade elétrica do coração", "cor": "#5bc0eb", "cor_alerta": "#e3342f", "extras": [4, 6], "t_alerta": 3.0, "varredura": 4.6, "fundo": "#0d0e11"});
+
+
+(function(tl, P){ const S=23.25; const tab=document.querySelector("#sc21 .tx-tab");
+  const e=s=>String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  if(!P.sub) document.querySelector("#sc21 .tx-s").style.display="none";
+  let h='<div class="tx-r cab">'+(P.cab||[]).map(c=>'<div>'+e(c)+'</div>').join("")+'</div>';
+  (P.linhas||[]).forEach((l,i)=>{ const bad=l.status&&l.status!="ok";
+    h+='<div class="tx-r ln" id="sc21_l'+i+'"><div class="n">'+e(l.nome)+(l.det?'<small>'+e(l.det)+'</small>':'')+'</div><div class="v '+(bad?'ruim':'ok')+'">'+e(l.valor)+(bad&&l.flag?'<span class="fl">'+e(l.flag)+'</span>':'')+'</div><div class="o">'+e(l.normal)+'</div></div>'; });
+  tab.innerHTML=h;
+  tl.set("#sc21 .tx-t,#sc21 .tx-s,#sc21 .tx-r",{opacity:0},0);
+  tl.fromTo("#sc21 .tx-t",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,ease:"power3.out",immediateRender:false},S+.05);
+  tl.fromTo("#sc21 .tx-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.3);
+  tl.fromTo("#sc21 .tx-r.cab",{opacity:0},{opacity:1,duration:.35,immediateRender:false},S+.35);
+  (P.linhas||[]).forEach((l,i)=>{ tl.fromTo("#sc21_l"+i,{opacity:0,x:40},{opacity:1,x:0,duration:.4,ease:"power2.out",immediateRender:false},S+(l.t!=null?+l.t:0.6+i*.6)); });
+})(window.__timelines.main, {"titulo": "ECOCARDIOGRAMA", "sub": "ultrassom do coração", "cab": ["EXAME", "RESULTADO", ""], "linhas": [{"nome": "FE", "det": "fração de ejeção: quanto sangue sai a cada batida", "valor": "35%", "normal": "", "status": "ruim", "flag": "BAIXA", "t": 1.6}, {"nome": "Contração", "det": "hipocinesia global", "valor": "fraca", "normal": "", "status": "ruim", "flag": "", "t": 3.35}, {"nome": "Cavidades", "det": "câmaras do coração", "valor": "dilatadas", "normal": "", "status": "ruim", "flag": "", "t": 4.95}], "fundo": "#111114"});
+
+tl.fromTo("#im22_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},29.450);
+tl.set("#im22_box",{opacity:0},0);
+tl.fromTo("#im22_mv",{scale:1},{...{scale:1.03},duration:6.300,ease:"none",immediateRender:false},29.450);
+tl.set("#im22_mv",{scale:1},0);
+tl.fromTo("#im26_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.750);
+tl.set("#im26_box",{opacity:0},0);
+tl.fromTo("#im26_mv",{scale:1},{...{scale:1.12},duration:5.200,ease:"none",immediateRender:false},35.750);
+tl.set("#im26_mv",{scale:1},0);
+tl.fromTo("#vd30_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},40.950);
+tl.set("#vd30_box",{opacity:0},0);
+tl.fromTo("#vd30_mv",{scale:1},{...{scale:1.05},duration:5.850,ease:"none",immediateRender:false},40.950);
+tl.set("#vd30_mv",{scale:1},0);
+tl.fromTo("#vd32_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.800);
+tl.set("#vd32_box",{opacity:0},0);
+tl.fromTo("#vd32_mv",{scale:1},{...{scale:1.05},duration:5.050,ease:"none",immediateRender:false},46.800);
+tl.set("#vd32_mv",{scale:1},0);
+
+(function(tl, P){ const S=51.85, D=4.45; const q=s=>document.querySelector("#sc39 "+s);
+  const de=+P.de, pa=+P.para; q(".fe-norm").style.left=P.normal_min+"%"; q(".fe-norm").style.width=(P.normal_max-P.normal_min)+"%";
+  q(".fe-mk0").style.left=de+"%";
+  const o={v:0}; const upd=()=>{ q(".fe-v").textContent=Math.round(o.v); q(".fe-fill").style.width=o.v+"%";
+    const t=Math.max(0,Math.min(1,(o.v-de)/Math.max(1,pa-de))); const c=t<1?"#e3342f":"#f2a33a"; q(".fe-fill").style.background=o.v>de+0.5?"linear-gradient(90deg,#e3342f "+(de/o.v*100)+"%,#f2a33a)":"#e3342f"; q(".fe-num").style.color=o.v>de+0.5?"#f2a33a":"#e3342f"; };
+  tl.set("#sc39 .fe-t,#sc39 .fe-s,#sc39 .fe-norm,#sc39 .fe-mk0",{opacity:0},0);
+  tl.fromTo("#sc39 .fe-t",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,immediateRender:false},S+.05);
+  tl.fromTo("#sc39 .fe-s",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.3);
+  tl.fromTo("#sc39 .fe-norm",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+.4);
+  tl.fromTo(o,{v:0},{v:de,duration:.9,ease:"power2.out",onUpdate:upd,immediateRender:false},S+.3);
+  tl.fromTo("#sc39 .fe-mk0",{opacity:0},{opacity:1,duration:.3,immediateRender:false},S+1.2);
+  tl.fromTo(o,{v:de},{v:pa,duration:1.4,ease:"power1.inOut",onUpdate:upd,immediateRender:false},S+(+P.t_sobe||2));
+})(window.__timelines.main, {"titulo": "FRAÇÃO DE EJEÇÃO", "sub": "6 meses de abstinência total", "de": 35, "para": 50, "normal_min": 55, "normal_max": 70, "rot_de": "internação", "rot_para": "6 meses depois", "t_sobe": 2.0, "fundo": "#111114"});
+
+tl.fromTo("#vd40_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},56.300);
+tl.set("#vd40_box",{opacity:0},0);
+tl.fromTo("#vd40_mv",{scale:1},{...{scale:1.05},duration:5.150,ease:"none",immediateRender:false},56.300);
+tl.set("#vd40_mv",{scale:1},0);
+tl.fromTo("#im44_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},61.450);
+tl.set("#im44_box",{opacity:0},0);
+tl.fromTo("#im44_mv",{scale:1.1},{...{scale:1},duration:4.050,ease:"none",immediateRender:false},61.450);
+tl.set("#im44_mv",{scale:1.1},0);
+
+(function(tl, P){ const S=65.5, D=2.8; const r=document.getElementById("sc48"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc48 .ct-rot,#sc48 .ct-termo,#sc48 .ct-exp,#sc48 .ct-nota,#sc48 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc48 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc48 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc48 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc48 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc48 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "", "termo": "INSCREVA-SE", "expansao": "para mais relatórios clínicos", "nota": "", "cor": "#ffffff", "cor_exp": "#5bc0eb", "fundo": "#111114", "pos": "centro", "t_termo": 0.1, "t_exp": 0.6, "t_nota": 1.2});
+
+
+(function(tl, P){ const S=0.0, D=2.1; const r=document.getElementById("sc2"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc2 .ct-rot,#sc2 .ct-termo,#sc2 .ct-exp,#sc2 .ct-nota,#sc2 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc2 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc2 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc2 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc2 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc2 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "", "termo": "CASO ILUSTRATIVO", "expansao": "relatório clínico", "nota": "", "cor": "#ffffff", "cor_exp": "#5bc0eb", "fundo": "rgba(17,17,20,0)", "pos": "baixo", "t_termo": 0.1, "t_exp": 0.85, "t_nota": 1.2});
+
+tl.fromTo("#dm5_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},6.000);
+tl.set("#dm5_box",{opacity:0},0);
+tl.fromTo("#dm10_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.000);
+tl.set("#dm10_box",{opacity:0},0);
+
+(function(tl, P){ const S=18.3, D=2.6; const r=document.getElementById("sc19"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc19 .ct-rot,#sc19 .ct-termo,#sc19 .ct-exp,#sc19 .ct-nota,#sc19 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc19 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc19 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc19 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc19 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc19 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "", "termo": "BLOQUEIO DE RAMO DIREITO", "expansao": "o sinal elétrico chega atrasado ao lado direito", "nota": "", "cor": "#ffffff", "cor_exp": "#5bc0eb", "fundo": "rgba(17,17,20,0)", "pos": "baixo", "t_termo": 0.1, "t_exp": 0.7, "t_nota": 1.2});
+
+
+(function(tl, P){ const S=20.9, D=2.35; const r=document.getElementById("sc20"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc20 .ct-rot,#sc20 .ct-termo,#sc20 .ct-exp,#sc20 .ct-nota,#sc20 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc20 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc20 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc20 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc20 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc20 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "", "termo": "EXTRASSÍSTOLES VENTRICULARES", "expansao": "batimentos extras, fora de hora, vindos dos ventrículos", "nota": "", "cor": "#ff5a52", "cor_exp": "#5bc0eb", "fundo": "rgba(17,17,20,0)", "pos": "baixo", "t_termo": 0.1, "t_exp": 0.6, "t_nota": 1.2});
+
+
+(function(tl, P){ const S=31.4, D=4.35; const r=document.getElementById("sc25"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc25 .ct-rot,#sc25 .ct-termo,#sc25 .ct-exp,#sc25 .ct-nota,#sc25 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc25 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc25 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc25 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc25 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc25 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "", "termo": "REALCE TARDIO DIFUSO", "expansao": "lesão espalhada pelo músculo do coração (miocárdio)", "nota": "padrão NÃO isquêmico: não foi infarto", "cor": "#ffffff", "cor_exp": "#5bc0eb", "fundo": "rgba(17,17,20,0)", "pos": "baixo", "t_termo": 0.1, "t_exp": 0.9, "t_nota": 2.45});
+
+tl.fromTo("#rt23_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},31.600);
+tl.set("#rt23_box",{opacity:0},0);
+
+(function(tl, P){ const S=40.95, D=5.85; const r=document.getElementById("sc31"); r.setAttribute("data-pos",P.pos||"baixo");
+  if(!P.rotulo) r.querySelector(".ct-rot").style.display="none";
+  if(!P.expansao) r.querySelector(".ct-exp").style.display="none";
+  if(!P.nota) r.querySelector(".ct-nota").style.display="none";
+  tl.set("#sc31 .ct-rot,#sc31 .ct-termo,#sc31 .ct-exp,#sc31 .ct-nota,#sc31 .ct-grad",{opacity:0},0);
+  tl.fromTo("#sc31 .ct-grad",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S);
+  tl.fromTo("#sc31 .ct-rot",{opacity:0,y:10},{opacity:1,y:0,duration:.4,immediateRender:false},S+.05);
+  tl.fromTo("#sc31 .ct-termo",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},S+(+P.t_termo||0));
+  tl.fromTo("#sc31 .ct-exp",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power2.out",immediateRender:false},S+(+P.t_exp||0));
+  tl.fromTo("#sc31 .ct-nota",{opacity:0},{opacity:1,duration:.4,immediateRender:false},S+(+P.t_nota||0));
+})(window.__timelines.main, {"rotulo": "DIAGNÓSTICO", "termo": "CARDIOMIOPATIA DILATADA TÓXICA", "expansao": "o músculo do coração dilatou e ficou fraco", "nota": "induzida por estimulantes", "cor": "#ffffff", "cor_exp": "#5bc0eb", "fundo": "rgba(17,17,20,0)", "pos": "baixo", "t_termo": 0.7, "t_exp": 1.6, "t_nota": 2.95});
+
+tl.fromTo("#dm33_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.800);
+tl.set("#dm33_box",{opacity:0},0);
+tl.fromTo("#dm45_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},61.450);
+tl.set("#dm45_box",{opacity:0},0);
+tl.fromTo("#tx6_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},6.850);
+tl.set("#tx6_box",{opacity:0,y:50},0);
+tl.to("#tx6_box",{...{opacity:0},duration:0.350,ease:"power2.in"},10.650);
+tl.fromTo("#tx7_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},7.750);
+tl.set("#tx7_box",{opacity:0},0);
+tl.to("#tx7_box",{...{opacity:0},duration:0.350,ease:"power2.in"},10.650);
+tl.fromTo("#tx8_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},9.000);
+tl.set("#tx8_box",{opacity:0,y:50},0);
+tl.to("#tx8_box",{...{opacity:0},duration:0.350,ease:"power2.in"},10.650);
+tl.fromTo("#tx11_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.000);
+tl.set("#tx11_box",{opacity:0,y:50},0);
+tl.to("#tx11_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx12_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.950);
+tl.set("#tx12_box",{opacity:0,x:80},0);
+tl.to("#tx12_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx13_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},12.300);
+tl.set("#tx13_box",{opacity:0},0);
+tl.to("#tx13_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx14_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},13.000);
+tl.set("#tx14_box",{opacity:0,x:80},0);
+tl.to("#tx14_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx15_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},13.400);
+tl.set("#tx15_box",{opacity:0},0);
+tl.to("#tx15_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx16_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},15.100);
+tl.set("#tx16_box",{opacity:0,x:80},0);
+tl.to("#tx16_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx17_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},15.500);
+tl.set("#tx17_box",{opacity:0},0);
+tl.to("#tx17_box",{...{opacity:0},duration:0.350,ease:"power2.in"},16.800);
+tl.fromTo("#tx24_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},29.500);
+tl.set("#tx24_box",{opacity:0,y:50},0);
+tl.to("#tx24_box",{...{opacity:0},duration:0.350,ease:"power2.in"},31.050);
+tl.fromTo("#tx27_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.800);
+tl.set("#tx27_box",{opacity:0,y:50},0);
+tl.to("#tx27_box",{...{opacity:0},duration:0.350,ease:"power2.in"},40.600);
+tl.fromTo("#tx28_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},37.400);
+tl.set("#tx28_box",{opacity:0,y:50},0);
+tl.to("#tx28_box",{...{opacity:0},duration:0.350,ease:"power2.in"},40.600);
+tl.fromTo("#tx29_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},37.900);
+tl.set("#tx29_box",{opacity:0},0);
+tl.to("#tx29_box",{...{opacity:0},duration:0.350,ease:"power2.in"},40.600);
+tl.fromTo("#tx34_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.850);
+tl.set("#tx34_box",{opacity:0,y:50},0);
+tl.to("#tx34_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.500);
+tl.fromTo("#tx35_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.900);
+tl.set("#tx35_box",{opacity:0,x:80},0);
+tl.to("#tx35_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.500);
+tl.fromTo("#tx36_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},47.900);
+tl.set("#tx36_box",{opacity:0,x:80},0);
+tl.to("#tx36_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.500);
+tl.fromTo("#tx37_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},49.000);
+tl.set("#tx37_box",{opacity:0,x:80},0);
+tl.to("#tx37_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.500);
+tl.fromTo("#tx38_box",{opacity:0,x:80},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},50.550);
+tl.set("#tx38_box",{opacity:0,x:80},0);
+tl.to("#tx38_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.500);
+tl.fromTo("#tx41_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},56.350);
+tl.set("#tx41_box",{opacity:0,y:50},0);
+tl.to("#tx41_box",{...{opacity:0},duration:0.350,ease:"power2.in"},57.850);
+tl.fromTo("#tx42_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},58.200);
+tl.set("#tx42_box",{opacity:0,y:50},0);
+tl.to("#tx42_box",{...{opacity:0},duration:0.350,ease:"power2.in"},61.100);
+tl.fromTo("#tx43_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},59.700);
+tl.set("#tx43_box",{opacity:0},0);
+tl.to("#tx43_box",{...{opacity:0},duration:0.350,ease:"power2.in"},61.100);
+tl.fromTo("#tx46_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},61.500);
+tl.set("#tx46_box",{opacity:0,y:50},0);
+tl.to("#tx46_box",{...{opacity:0},duration:0.350,ease:"power2.in"},65.150);
+tl.fromTo("#tx47_box",{opacity:0,y:50},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},64.450);
+tl.set("#tx47_box",{opacity:0,y:50},0);
+tl.to("#tx47_box",{...{opacity:0},duration:0.350,ease:"power2.in"},65.150);
+})();</script>
+</body></html>

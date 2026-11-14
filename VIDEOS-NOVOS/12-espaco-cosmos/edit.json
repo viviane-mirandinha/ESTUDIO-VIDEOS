@@ -1,0 +1,474 @@
+{
+ "version": 1,
+ "name": "12 - ESPACO COSMOS - O que existe no centro da Via Láctea",
+ "estilo": "12-espaco-cosmos",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 66.0,
+ "template": "generic",
+ "fonts": {
+  "Outfit": "fonts/Outfit.ttf",
+  "Cormorant": "fonts/CormorantGaramond.ttf"
+ },
+ "head": "<script src=\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\"></script>",
+ "referencia": {
+  "canal": "Astrum",
+  "canal_url": "https://www.youtube.com/@astrumspace",
+  "video": "https://youtu.be/T9HLYPn59S4",
+  "titulo": "Euclid Studied Our Galactic Centre. This Is What It Found.",
+  "nota": "Imagens reais NASA/ESA/ESO/EHT com pan/zoom lento + 3D Three.js, nome do objeto no canto, crédito, capítulos em serifa (History of the Universe)."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.14,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas / mídia"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "s01",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D galáxia (voo ao centro)",
+   "start": 0.0,
+   "dur": 4.65,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "voo",
+     "seed": 1,
+     "nome": "",
+     "sub": "",
+     "credito": "",
+     "fade_in": 0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s02",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto eht_1.jpg",
+   "start": 3.6,
+   "dur": 5.55,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/eht_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "Sagitário A*",
+     "sub": "buraco negro supermassivo",
+     "credito": "EHT Collaboration · CC BY 4.0",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s03",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Número 4 milhões",
+   "start": 8.1,
+   "dur": 3.95,
+   "props": {
+    "scene": "cosmos_numero",
+    "params": {
+     "valor": "4",
+     "unidade": "milhões",
+     "legenda": "de massas solares",
+     "seed": 5
+    }
+   }
+  },
+  {
+   "id": "s04",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D buraco negro + disco",
+   "start": 11.0,
+   "dur": 3.45,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "buraco",
+     "seed": 3,
+     "nome": "Sagitário A*",
+     "sub": "a luz não escapa dele",
+     "credito": "Simulação ilustrativa",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s05",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto gc_1.jpg",
+   "start": 13.4,
+   "dur": 3.65,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/gc_1.jpg",
+     "motion": "zoom_out",
+     "amount": 0.09,
+     "pos": "50% 50%",
+     "nome": "Centro da galáxia",
+     "sub": "",
+     "credito": "NASA/JPL-Caltech/ESA/CXC/STScI",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s06",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D órbitas estrelas S",
+   "start": 16.0,
+   "dur": 7.25,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "orbitas",
+     "seed": 4,
+     "nome": "Estrelas jovens",
+     "sub": "órbitas em elipses ao redor do gigante",
+     "credito": "Simulação ilustrativa",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s07",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto chandra_0.jpg",
+   "start": 22.2,
+   "dur": 9.05,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/chandra_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.12,
+     "pos": "50% 45%",
+     "nome": "Gás interestelar",
+     "sub": "brilhando em raios-X",
+     "credito": "NASA/CXC/Caltech/M. Muno et al.",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s08",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto meerkat_1.jpg",
+   "start": 30.2,
+   "dur": 4.85,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/meerkat_1.jpg",
+     "motion": "pan_left",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "Campos magnéticos",
+     "sub": "",
+     "credito": "NASA, ESA, CSA, STScI, SARAO",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s09",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D jatos",
+   "start": 34.0,
+   "dur": 5.05,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "jato",
+     "seed": 5,
+     "nome": "Jatos de energia",
+     "sub": "por anos-luz",
+     "credito": "Simulação ilustrativa",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto alma_1.jpg",
+   "start": 38.0,
+   "dur": 4.35,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/alma_1.jpg",
+     "motion": "zoom_in",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "nome": "Event Horizon Telescope",
+     "sub": "",
+     "credito": "ESO/C. Malin · CC BY 4.0",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s11",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto eht_0.jpg",
+   "start": 41.3,
+   "dur": 4.15,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/eht_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "A sombra do horizonte de eventos",
+     "sub": "Sagitário A*",
+     "credito": "EHT Collaboration · CC BY 4.0",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s12",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto vlt_1.jpg",
+   "start": 44.4,
+   "dur": 4.65,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/vlt_1.jpg",
+     "motion": "pan_right",
+     "amount": 0.08,
+     "pos": "50% 50%",
+     "nome": "Very Large Telescope",
+     "sub": "",
+     "credito": "ESO/Y. Beletsky · CC BY 4.0",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s13",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D órbita S2",
+   "start": 48.0,
+   "dur": 3.35,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "s2",
+     "seed": 6,
+     "nome": "Estrela S2",
+     "sub": "trinta anos de observação",
+     "credito": "Simulação ilustrativa",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s14",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto einst_0.jpg",
+   "start": 50.3,
+   "dur": 3.15,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/einst_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.06,
+     "pos": "50% 22%",
+     "nome": "Albert Einstein",
+     "sub": "relatividade geral",
+     "credito": "Herman Mishkin · domínio público",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s15",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto gc_0.jpg",
+   "start": 52.4,
+   "dur": 5.65,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/gc_0.jpg",
+     "motion": "zoom_in",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "",
+     "sub": "",
+     "credito": "NASA/JPL-Caltech/S. Stolovy",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s16",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D galáxia (CTA)",
+   "start": 57.0,
+   "dur": 5.75,
+   "props": {
+    "scene": "cosmos_three",
+    "params": {
+     "modo": "voo",
+     "seed": 2,
+     "nome": "",
+     "sub": "",
+     "credito": "",
+     "fade_in": 1.0,
+     "fade_out": 0
+    }
+   }
+  },
+  {
+   "id": "s17",
+   "type": "scene",
+   "track": "fundo",
+   "label": "Foto mw_0.jpg",
+   "start": 61.7,
+   "dur": 4.3,
+   "props": {
+    "scene": "cosmos_foto",
+    "params": {
+     "src": "img/mw_0.jpg",
+     "motion": "zoom_out",
+     "amount": 0.1,
+     "pos": "50% 50%",
+     "nome": "",
+     "sub": "",
+     "credito": "ESO/Y. Beletsky · CC BY 4.0",
+     "fade_in": 1.0,
+     "fade_out": 1.2
+    }
+   }
+  },
+  {
+   "id": "c1",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: O centro da Via Láctea",
+   "start": 0.3,
+   "dur": 3.4,
+   "props": {
+    "scene": "cosmos_capitulo",
+    "params": {
+     "titulo": "O centro da Via Láctea",
+     "sub": "um monstro silencioso",
+     "fade": 1.5
+    }
+   }
+  },
+  {
+   "id": "c2",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Uma pergunta aberta",
+   "start": 52.8,
+   "dur": 4.4,
+   "props": {
+    "scene": "cosmos_capitulo",
+    "params": {
+     "titulo": "Uma pergunta aberta",
+     "sub": "o que alimenta o gigante?",
+     "fade": 1.5
+    }
+   }
+  },
+  {
+   "id": "c3",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Inscreva-se",
+   "start": 57.5,
+   "dur": 4.2,
+   "props": {
+    "scene": "cosmos_capitulo",
+    "params": {
+     "titulo": "Inscreva-se",
+     "sub": "números que desafiam a imaginação",
+     "fade": 1.5
+    }
+   }
+  },
+  {
+   "id": "c4",
+   "type": "scene",
+   "track": "textos",
+   "label": "Capítulo: Mais segredos",
+   "start": 62.1,
+   "dur": 3.2,
+   "props": {
+    "scene": "cosmos_capitulo",
+    "params": {
+     "titulo": "Mais segredos",
+     "sub": "do que contamos",
+     "fade": 1.5
+    }
+   }
+  }
+ ]
+}

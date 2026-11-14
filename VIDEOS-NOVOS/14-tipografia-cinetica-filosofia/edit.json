@@ -1,0 +1,1376 @@
+{
+ "version": 1,
+ "name": "14 - TIPOGRAFIA CINETICA FILOSOFIA - Você não controla o que acontece, só a sua resposta",
+ "estilo": "14-tipografia-cinetica-filosofia",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 69.6,
+ "template": "generic",
+ "fonts": {
+  "Montserrat": "fonts/Montserrat-Black.ttf",
+  "Cormorant": "fonts/CormorantGaramond.ttf"
+ },
+ "referencia": {
+  "canal": "Pursuit of Wonder",
+  "canal_url": "https://www.youtube.com/@PursuitofWonder",
+  "video": "https://youtu.be/jDU6kdoBegc",
+  "titulo": "The Andromeda Paradox: A Theory That Proves Your Future Self Already Exists",
+  "nota": "Tipografia cinética sobre preto/b-roll escuro dessaturado (Pursuit of Wonder + canais stoic): 1-4 palavras por vez sincronizadas ao whisper, destaque dourado, citações em serifa com autor (Einzelgänger), piano baixo."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.12,
+   "start": 0,
+   "fade_out": 2.5,
+   "duck": true
+  },
+  "extra": []
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "B-roll / retratos"
+  },
+  {
+   "id": "grade",
+   "name": "Vinheta + grão"
+  },
+  {
+   "id": "textos",
+   "name": "Tipografia"
+  }
+ ],
+ "items": [
+  {
+   "id": "k00",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Você não controla",
+   "start": 0,
+   "dur": 0.96,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Você não controla",
+     "tempos": "0.0,0.2,0.44",
+     "destaque": "controla",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k01",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: o que acontece.",
+   "start": 0.96,
+   "dur": 0.96,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "o que acontece.",
+     "tempos": "0.08,0.14,0.24",
+     "destaque": "",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k02",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Controla apenas",
+   "start": 1.92,
+   "dur": 1.06,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Controla apenas",
+     "tempos": "0.08,0.78",
+     "destaque": "",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k03",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: a sua resposta.",
+   "start": 2.98,
+   "dur": 1.52,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "a sua resposta.",
+     "tempos": "0.08,0.44,0.74",
+     "destaque": "resposta",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k04",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: A maioria das pessoas",
+   "start": 4.5,
+   "dur": 1.42,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "A maioria das pessoas",
+     "tempos": "0.08,0.36,0.68,1.08",
+     "destaque": "",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k05",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: gasta energia",
+   "start": 5.92,
+   "dur": 1.02,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "gasta energia",
+     "tempos": "0.08,0.92",
+     "destaque": "energia",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k06",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: lutando contra o vento.",
+   "start": 6.94,
+   "dur": 1.74,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "lutando contra o vento.",
+     "tempos": "0.08,0.92,1.24,1.42",
+     "destaque": "vento",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k07",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O estoico",
+   "start": 8.68,
+   "dur": 0.9,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O estoico",
+     "tempos": "0.08,0.46",
+     "destaque": "estoico",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k08",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: ajusta a vela.",
+   "start": 9.58,
+   "dur": 1.6,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "ajusta a vela.",
+     "tempos": "0.08,0.98,0.98",
+     "destaque": "vela",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k09",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Epicteto ensinou:",
+   "start": 11.18,
+   "dur": 1.4,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Epicteto ensinou:",
+     "tempos": "0.08,0.74",
+     "destaque": "Epicteto",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "q10",
+   "type": "scene",
+   "track": "textos",
+   "label": "Citação: Há coisas que dependem de nós,",
+   "start": 12.58,
+   "dur": 3.92,
+   "props": {
+    "scene": "kin_serifa",
+    "params": {
+     "texto": "Há coisas que dependem de nós, e coisas que não dependem.",
+     "tempos": "0.08,0.42,0.68,1.0,1.52,1.7,1.92,2.36,2.7,3.1,3.28",
+     "autor": "Epicteto",
+     "alinhar": "esquerda",
+     "tamanho": 84,
+     "cor": "#f4f1ea",
+     "cor_autor": "#e8b547"
+    }
+   }
+  },
+  {
+   "id": "k11",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O trânsito,",
+   "start": 16.5,
+   "dur": 1.08,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O trânsito,",
+     "tempos": "0.08,0.44",
+     "destaque": "",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k12",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: a chuva,",
+   "start": 17.58,
+   "dur": 0.82,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "a chuva,",
+     "tempos": "0.08,0.28",
+     "destaque": "",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k13",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: a opinião alheia,",
+   "start": 18.4,
+   "dur": 1.32,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "a opinião alheia,",
+     "tempos": "0.08,0.32,0.88",
+     "destaque": "",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k14",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: a doença —",
+   "start": 19.72,
+   "dur": 0.76,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "a doença —",
+     "tempos": "0.08,0.24,0.24",
+     "destaque": "",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k15",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: tudo isso é externo.",
+   "start": 20.48,
+   "dur": 1.78,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "tudo isso é externo.",
+     "tempos": "0.08,0.46,0.84,1.16",
+     "destaque": "externo",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k16",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Seu julgamento,",
+   "start": 22.26,
+   "dur": 1.48,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Seu julgamento,",
+     "tempos": "0.08,0.66",
+     "destaque": "julgamento",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k17",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: sua ação,",
+   "start": 23.74,
+   "dur": 0.88,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "sua ação,",
+     "tempos": "0.08,0.42",
+     "destaque": "ação",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k18",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: seu silêncio —",
+   "start": 24.62,
+   "dur": 1.0,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "seu silêncio —",
+     "tempos": "0.08,0.32,0.32",
+     "destaque": "silêncio",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k19",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: isso é interno.",
+   "start": 25.62,
+   "dur": 1.06,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "isso é interno.",
+     "tempos": "0.08,0.46,0.58",
+     "destaque": "interno",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k20",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Quando você confunde",
+   "start": 26.68,
+   "dur": 1.38,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Quando você confunde",
+     "tempos": "0.08,0.54,0.82",
+     "destaque": "confunde",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k21",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: as duas categorias,",
+   "start": 28.06,
+   "dur": 1.18,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "as duas categorias,",
+     "tempos": "0.08,0.16,0.36",
+     "destaque": "",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k22",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: nasce a ansiedade.",
+   "start": 29.24,
+   "dur": 1.96,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "nasce a ansiedade.",
+     "tempos": "0.08,0.82,1.14",
+     "destaque": "ansiedade",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k23",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Quando você separa,",
+   "start": 31.2,
+   "dur": 1.36,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Quando você separa,",
+     "tempos": "0.08,0.52,0.82",
+     "destaque": "separa",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k24",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: nasce a liberdade.",
+   "start": 32.56,
+   "dur": 1.72,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "nasce a liberdade.",
+     "tempos": "0.08,0.72,0.9",
+     "destaque": "liberdade",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "q25",
+   "type": "scene",
+   "track": "textos",
+   "label": "Citação: Imagine perder o emprego.",
+   "start": 34.28,
+   "dur": 1.74,
+   "props": {
+    "scene": "kin_serifa",
+    "params": {
+     "texto": "Imagine perder o emprego.",
+     "tempos": "0.08,0.6,0.9,1.22",
+     "autor": "",
+     "alinhar": "centro",
+     "tamanho": 96,
+     "cor": "#f4f1ea",
+     "cor_autor": "#e8b547"
+    }
+   }
+  },
+  {
+   "id": "k26",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O fato é externo.",
+   "start": 36.02,
+   "dur": 1.82,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O fato é externo.",
+     "tempos": "0.08,0.54,0.86,1.14",
+     "destaque": "externo",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k27",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O desespero",
+   "start": 37.84,
+   "dur": 1.08,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O desespero",
+     "tempos": "0.08,0.42",
+     "destaque": "desespero",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k28",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: é uma escolha sua.",
+   "start": 38.92,
+   "dur": 1.3,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "é uma escolha sua.",
+     "tempos": "0.08,0.16,0.34,0.82",
+     "destaque": "escolha",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k29",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: A coragem de recomeçar",
+   "start": 40.22,
+   "dur": 1.52,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "A coragem de recomeçar",
+     "tempos": "0.08,0.3,0.82,1.0",
+     "destaque": "recomeçar",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k30",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: também.",
+   "start": 41.74,
+   "dur": 0.68,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "também.",
+     "tempos": "0.08",
+     "destaque": "",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k31",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Marco Aurélio escreveu:",
+   "start": 42.42,
+   "dur": 1.52,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Marco Aurélio escreveu:",
+     "tempos": "0.08,0.54,1.0",
+     "destaque": "Marco Aurélio",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "q32",
+   "type": "scene",
+   "track": "textos",
+   "label": "Citação: Se algo externo te perturba, a",
+   "start": 43.94,
+   "dur": 6.2,
+   "props": {
+    "scene": "kin_serifa",
+    "params": {
+     "texto": "Se algo externo te perturba, a dor não vem da coisa, mas do seu julgamento sobre ela.",
+     "tempos": "0.08,0.46,0.74,1.38,1.46,2.18,2.52,2.78,2.98,3.26,3.44,3.94,4.34,4.5,4.74,5.4,5.76",
+     "autor": "Marco Aurélio",
+     "alinhar": "esquerda",
+     "tamanho": 74,
+     "cor": "#f4f1ea",
+     "cor_autor": "#e8b547"
+    }
+   }
+  },
+  {
+   "id": "k33",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: E esse julgamento",
+   "start": 50.14,
+   "dur": 1.38,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "E esse julgamento",
+     "tempos": "0.08,0.52,0.8",
+     "destaque": "julgamento",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k34",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: você muda agora.",
+   "start": 51.52,
+   "dur": 1.68,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "você muda agora.",
+     "tempos": "0.08,0.58,1.14",
+     "destaque": "agora",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k35",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: A vida te dá",
+   "start": 53.2,
+   "dur": 1.42,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "A vida te dá",
+     "tempos": "0.08,0.5,0.82,1.16",
+     "destaque": "",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k36",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: o cenário.",
+   "start": 54.62,
+   "dur": 0.84,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "o cenário.",
+     "tempos": "0.08,0.3",
+     "destaque": "cenário",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k37",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O roteiro é seu.",
+   "start": 55.46,
+   "dur": 1.82,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O roteiro é seu.",
+     "tempos": "0.08,0.52,1.1,1.4",
+     "destaque": "seu",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k38",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Se você gostou dessa clareza,",
+   "start": 57.28,
+   "dur": 2.14,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Se você gostou dessa clareza,",
+     "tempos": "0.08,0.48,0.72,1.32,1.52",
+     "destaque": "clareza",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k39",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: se inscreva",
+   "start": 59.42,
+   "dur": 1.0,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "se inscreva",
+     "tempos": "0.08,0.44",
+     "destaque": "inscreva",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k40",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: para treinar a mente todo dia.",
+   "start": 60.42,
+   "dur": 2.12,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "para treinar a mente todo dia.",
+     "tempos": "0.08,0.26,0.8,0.92,1.2,1.64",
+     "destaque": "mente",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k41",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: O controle que você busca",
+   "start": 62.54,
+   "dur": 1.68,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "O controle que você busca",
+     "tempos": "0.08,0.46,0.94,1.14,1.36",
+     "destaque": "controle",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k42",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: não está lá fora.",
+   "start": 64.22,
+   "dur": 1.58,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "não está lá fora.",
+     "tempos": "0.08,0.6,0.88,1.1",
+     "destaque": "",
+     "efeito": "scale",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k43",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: Está no próximo pensamento",
+   "start": 65.8,
+   "dur": 1.92,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "Está no próximo pensamento",
+     "tempos": "0.08,0.68,0.88,1.26",
+     "destaque": "pensamento",
+     "efeito": "blur",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "k44",
+   "type": "scene",
+   "track": "textos",
+   "label": "Texto: que você escolher ter.",
+   "start": 67.72,
+   "dur": 1.88,
+   "props": {
+    "scene": "kin_grupo",
+    "params": {
+     "texto": "que você escolher ter.",
+     "tempos": "0.08,0.3,0.54,1.18",
+     "destaque": "escolher",
+     "efeito": "slide",
+     "tamanho": 104,
+     "cor": "#f4f1ea",
+     "cor_destaque": "#e8b547",
+     "y": 360
+    }
+   }
+  },
+  {
+   "id": "v01",
+   "type": "video",
+   "track": "fundo",
+   "label": "Tempestade (o que acontece)",
+   "start": 0,
+   "dur": 4.9,
+   "in": "none",
+   "props": {
+    "src": "clips/b01.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v02",
+   "type": "video",
+   "track": "fundo",
+   "label": "Vento nas árvores",
+   "start": 4.5,
+   "dur": 4.6,
+   "in": "fade",
+   "props": {
+    "src": "clips/b02.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 3,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v03",
+   "type": "video",
+   "track": "fundo",
+   "label": "Veleiro (ajusta a vela)",
+   "start": 8.7,
+   "dur": 2.9,
+   "in": "fade",
+   "props": {
+    "src": "clips/b03.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 4,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v04",
+   "type": "video",
+   "track": "fundo",
+   "label": "Trânsito",
+   "start": 16.5,
+   "dur": 1.5,
+   "in": "fade",
+   "props": {
+    "src": "clips/b04.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v05",
+   "type": "video",
+   "track": "fundo",
+   "label": "Chuva na janela",
+   "start": 17.6,
+   "dur": 1.2,
+   "in": "fade",
+   "props": {
+    "src": "clips/b05.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 4,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v06",
+   "type": "video",
+   "track": "fundo",
+   "label": "Multidão (opinião alheia)",
+   "start": 18.4,
+   "dur": 1.7,
+   "in": "fade",
+   "props": {
+    "src": "clips/b06.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v07",
+   "type": "video",
+   "track": "fundo",
+   "label": "Hospital (doença)",
+   "start": 19.7,
+   "dur": 2.9,
+   "in": "fade",
+   "props": {
+    "src": "clips/b07.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v08",
+   "type": "video",
+   "track": "fundo",
+   "label": "Silhueta (interno)",
+   "start": 22.2,
+   "dur": 4.9,
+   "in": "fade",
+   "props": {
+    "src": "clips/b08.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v09",
+   "type": "video",
+   "track": "fundo",
+   "label": "Homem ansioso",
+   "start": 26.7,
+   "dur": 4.9,
+   "in": "fade",
+   "props": {
+    "src": "clips/b09.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v10",
+   "type": "video",
+   "track": "fundo",
+   "label": "Pássaros (liberdade)",
+   "start": 31.2,
+   "dur": 3.4,
+   "in": "fade",
+   "props": {
+    "src": "clips/b10.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 3,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v12",
+   "type": "video",
+   "track": "fundo",
+   "label": "Homem desesperado",
+   "start": 37.8,
+   "dur": 2.8,
+   "in": "fade",
+   "props": {
+    "src": "clips/b12.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 3,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v13",
+   "type": "video",
+   "track": "fundo",
+   "label": "Nascer do sol (recomeçar)",
+   "start": 40.2,
+   "dur": 2.6,
+   "in": "fade",
+   "props": {
+    "src": "clips/b13.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 3,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v17",
+   "type": "video",
+   "track": "fundo",
+   "label": "Caminhando (muda agora)",
+   "start": 50.1,
+   "dur": 3.5,
+   "in": "fade",
+   "props": {
+    "src": "clips/b17.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v14",
+   "type": "video",
+   "track": "fundo",
+   "label": "Cortina de teatro (cenário)",
+   "start": 53.2,
+   "dur": 4.5,
+   "in": "fade",
+   "props": {
+    "src": "clips/b14.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 1,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v15",
+   "type": "video",
+   "track": "fundo",
+   "label": "Mar (treinar a mente)",
+   "start": 57.3,
+   "dur": 5.6,
+   "in": "fade",
+   "props": {
+    "src": "clips/b15.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 3,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "v16",
+   "type": "video",
+   "track": "fundo",
+   "label": "Homem diante do mar (final)",
+   "start": 62.5,
+   "dur": 7.1,
+   "in": "fade",
+   "props": {
+    "src": "clips/b16.mp4",
+    "fill": true,
+    "fit": "cover",
+    "trim": 2,
+    "volume": 0,
+    "speed": 1,
+    "opacity": 0.55,
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "i01",
+   "type": "image",
+   "track": "fundo",
+   "label": "Epicteto (gravura 1715)",
+   "start": 11.1,
+   "dur": 5.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/epicteto.jpg",
+    "fit": "cover",
+    "x": 1010,
+    "y": 360,
+    "w": 540,
+    "h": 720,
+    "opacity": 0.6,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "i02",
+   "type": "image",
+   "track": "fundo",
+   "label": "Marco Aurélio (busto, Munique)",
+   "start": 42.4,
+   "dur": 8.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/marco.jpg",
+    "fit": "cover",
+    "x": 1010,
+    "y": 360,
+    "w": 540,
+    "h": 720,
+    "opacity": 0.6,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "grade",
+   "type": "html",
+   "track": "grade",
+   "label": "Vinheta + grão",
+   "start": 0,
+   "dur": 69.6,
+   "props": {
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720,
+    "html": "<div class='vg'></div><div class='gr'></div>",
+    "css": ".vg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 35%,rgba(0,0,0,.85) 100%)}.gr{position:absolute;inset:0;opacity:.12;mix-blend-mode:screen;background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='256' height='256'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='256' height='256' filter='url(%23n)'/></svg>\")}"
+   }
+  }
+ ]
+}
