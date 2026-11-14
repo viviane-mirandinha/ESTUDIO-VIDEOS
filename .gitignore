@@ -1,0 +1,86 @@
+﻿# Ambientes e dependencias (nunca subir)
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# Pastas de cache/pessoais do editor
+editor/config.json
+editor/.pedidos/
+**/.editor_cache/
+**/.editor_hist/
+**/.editor_preview/
+**/ref/
+
+# chaves de API e configuracoes pessoais (nunca subir)
+.env
+.env.*
+!.env.example
+editor/ajustes.json
+
+# logs e filas de trabalho
+*.log
+**/claude-log.jsonl
+editor/jobs*.json
+
+# VIDEOS: so as pastas 01 a 53
+VIDEOS/*
+!VIDEOS/01-*/
+!VIDEOS/02-*/
+!VIDEOS/03-*/
+!VIDEOS/04-*/
+!VIDEOS/05-*/
+!VIDEOS/06-*/
+!VIDEOS/07-*/
+!VIDEOS/08-*/
+!VIDEOS/09-*/
+!VIDEOS/10-*/
+!VIDEOS/11-*/
+!VIDEOS/12-*/
+!VIDEOS/13-*/
+!VIDEOS/14-*/
+!VIDEOS/15-*/
+!VIDEOS/16-*/
+!VIDEOS/17-*/
+!VIDEOS/18-*/
+!VIDEOS/19-*/
+!VIDEOS/20-*/
+!VIDEOS/21-*/
+!VIDEOS/22-*/
+!VIDEOS/23-*/
+!VIDEOS/24-*/
+!VIDEOS/25-*/
+!VIDEOS/26-*/
+!VIDEOS/27-*/
+!VIDEOS/28-*/
+!VIDEOS/29-*/
+!VIDEOS/30-*/
+!VIDEOS/31-*/
+!VIDEOS/32-*/
+!VIDEOS/33-*/
+!VIDEOS/34-*/
+!VIDEOS/35-*/
+!VIDEOS/36-*/
+!VIDEOS/37-*/
+!VIDEOS/38-*/
+!VIDEOS/39-*/
+!VIDEOS/40-*/
+!VIDEOS/41-*/
+!VIDEOS/42-*/
+!VIDEOS/43-*/
+!VIDEOS/44-*/
+!VIDEOS/45-*/
+!VIDEOS/46-*/
+!VIDEOS/47-*/
+!VIDEOS/48-*/
+!VIDEOS/49-*/
+!VIDEOS/50-*/
+!VIDEOS/51-*/
+!VIDEOS/52-*/
+!VIDEOS/53-*/
+
+# cache pessoal do editor
+editor/.cache/
+
+# arquivo grande demais para o GitHub (>100 MB)
+VIDEOS-NOVOS/32-documentario-mapa-3d-sem-gelo/voz.wav
