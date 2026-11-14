@@ -1,0 +1,38 @@
+<!--params {"src":"","legenda":"LEGENDA","sub":"","lado":"esq","ang":-20,"cor":"#e8a33d","larg":560,"t_txt":0.4}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 40% 55%,#132231 0%,#070a0e 62%,#030405 100%)">
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div class="floor" style="position:absolute;left:-20%;right:-20%;bottom:-6%;height:46%;background:repeating-linear-gradient(90deg,rgba(120,160,200,.07) 0 1px,transparent 1px 80px),repeating-linear-gradient(0deg,rgba(120,160,200,.07) 0 1px,transparent 1px 80px);transform:perspective(600px) rotateX(62deg);transform-origin:50% 0;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 60%)"></div>
+ <div class="stage" style="position:absolute;inset:0;perspective:1500px">
+  <div class="fr" style="position:absolute;top:50%;width:{{p.larg}}px;transform-style:preserve-3d">
+   <div class="pic" style="position:relative;border:5px solid #dfe3e8;border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.8),0 0 60px rgba(120,170,220,.18);-webkit-box-reflect:below 14px linear-gradient(transparent 62%,rgba(255,255,255,.22))">
+    <img src="{{p.src}}" style="display:block;width:100%;height:auto;filter:contrast(1.05) saturate(.9)">
+    <div class="sh" style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.28) 48%,rgba(255,255,255,0) 60%);background-size:300% 100%"></div>
+   </div>
+  </div>
+ </div>
+ <div class="txt" style="position:absolute;top:50%;transform:translateY(-50%);width:520px">
+  <div class="bar" style="width:70px;height:6px;background:{{p.cor}};margin-bottom:22px"></div>
+  <h2 style="margin:0;font:800 56px/1.06 Inter,'Helvetica Neue',Arial,sans-serif;color:#fff;letter-spacing:.03em;text-shadow:0 0 26px rgba(160,200,255,.25)">{{p.legenda}}</h2>
+  <p style="margin:16px 0 0;font:500 30px/1.3 Inter,'Helvetica Neue',Arial,sans-serif;color:#a9b4c0">{{p.sub}}</p>
+ </div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)"></div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const fr=R.querySelector(".fr"), tx=R.querySelector(".txt"), a=+P.ang, L=+P.larg;
+  if(P.lado==="dir"){ fr.style.left=(W*0.70-L/2)+"px"; tx.style.left="80px"; }
+  else if(P.lado==="centro"){ fr.style.left=(W/2-L/2)+"px"; tx.style.left="0"; tx.style.width=W+"px"; tx.style.top="86%"; tx.style.textAlign="center"; R.querySelector(".bar").style.margin="0 auto 14px"; R.querySelector("p").style.display="none"; R.querySelector("h2").style.fontSize="52px"; }
+  else { fr.style.left=(W*0.32-L/2)+"px"; tx.style.left=(W*0.32+L/2+70)+"px"; tx.style.width=(W-(W*0.32+L/2+70)-50)+"px"; }
+  const aa=P.lado==="dir"?-a:a, cy=P.lado==="centro"?-58:0;
+  tl.fromTo(fr,{rotationY:aa*1.5,rotationX:6,z:-420,yPercent:-50,y:cy+30,opacity:0},{rotationY:aa,rotationX:3,z:0,yPercent:-50,y:cy,opacity:1,duration:1.2,ease:"power3.out",immediateRender:false},S);
+  tl.to(fr,{rotationY:aa*0.45,z:60,duration:Math.max(.5,D-1.2),ease:"sine.inOut"},S+1.2);
+  tl.fromTo(R.querySelector(".sh"),{backgroundPosition:"130% 0"},{backgroundPosition:"-30% 0",duration:2.2,ease:"sine.inOut",immediateRender:false},S+.7);
+  tl.fromTo(tx.children,{opacity:0,x:-24},{opacity:1,x:0,duration:.6,stagger:.18,ease:"power2.out",immediateRender:false},S+(+P.t_txt)); tl.set(tx.children,{opacity:0},0);
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,t=>{ FERN.fog(fc,t,41,"rgba(140,175,210,A)",.8); FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>

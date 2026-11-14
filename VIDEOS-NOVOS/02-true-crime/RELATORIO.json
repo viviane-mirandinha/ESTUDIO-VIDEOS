@@ -1,0 +1,13 @@
+{
+ "video": 2,
+ "estilo": "02 - True crime arquivo (Dieck Docs / Ossos Perdidos)",
+ "inicio": "2026-10-22T10:31:53-03:00",
+ "fim": "2026-10-22T11:13:12-03:00",
+ "minutos": 41.3,
+ "render_segundos": 59,
+ "observacoes": "Template generic + 2 cenas novas (EDITOR VIDEOS/templates/scenes/capitulo-vermelho.html e mapa-whitechapel.html). 14 imagens Wikimedia Commons (creditos em img/creditos.json). Gargalo: Commons devolveu HTTP 429 em massa (4 agentes em paralelo) -> ~25 min só baixando imagens; sessão caiu 2x. Sem foto conhecida de Kosminski: usada gravura de Doré (rua de imigrantes). 1 re-render: cenas sem fill (mapa deslocado) e recorte do retrato de Warren.",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "30 min = ~350 fotos/cards: busca Commons com cache + 1 req/3 s (~20-30 min), whisper 1 min, render ~15-20 min; capítulos/mapa são cenas parametrizadas, entra fácil na fábrica (preencher.py tipo historia-simples)."
+ }
+}

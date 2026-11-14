@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#000000;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#000000;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}.ofd{position:absolute;inset:0;background:radial-gradient(ellipse at 35% 50%,#1a0204 0%,#000 65%)}.ofr{position:absolute;inset:0;border:6px solid #e8101a;box-shadow:0 0 40px rgba(232,16,26,.5)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="72.5" data-width="1280" data-height="720">
+<div id="vid1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid1_mv" class="ed-mv"><video id="vid1" class="clip" data-start="0.000" data-duration="6.900" data-track-index="1" src="m/clips/intro.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid6_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid6_mv" class="ed-mv"><video id="vid6" class="clip" data-start="8.400" data-duration="4.500" data-track-index="2" src="m/clips/c5_live.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid7_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid7_mv" class="ed-mv"><video id="vid7" class="clip" data-start="12.900" data-duration="2.500" data-track-index="3" src="m/clips/c5_replay.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid14_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid14_mv" class="ed-mv"><video id="vid14" class="clip" data-start="16.900" data-duration="3.500" data-track-index="4" src="m/clips/c4_live.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid15_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid15_mv" class="ed-mv"><video id="vid15" class="clip" data-start="20.400" data-duration="3.700" data-track-index="5" src="m/clips/c4_replay.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid22_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid22_mv" class="ed-mv"><video id="vid22" class="clip" data-start="25.600" data-duration="5.200" data-track-index="6" src="m/clips/c3_live.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid23_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid23_mv" class="ed-mv"><video id="vid23" class="clip" data-start="30.800" data-duration="2.900" data-track-index="7" src="m/clips/c3_replay.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid30_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid30_mv" class="ed-mv"><video id="vid30" class="clip" data-start="35.200" data-duration="7.000" data-track-index="8" src="m/clips/c2_live.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid31_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid31_mv" class="ed-mv"><video id="vid31" class="clip" data-start="42.200" data-duration="3.200" data-track-index="9" src="m/clips/c2_replay.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid38_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid38_mv" class="ed-mv"><video id="vid38" class="clip" data-start="46.900" data-duration="6.900" data-track-index="10" src="m/clips/c1_live.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid43_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid43_mv" class="ed-mv"><video id="vid43" class="clip" data-start="53.800" data-duration="5.100" data-track-index="11" src="m/clips/c1_real.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="vid46_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="vid46_mv" class="ed-mv"><video id="vid46" class="clip" data-start="58.900" data-duration="3.100" data-track-index="12" src="m/clips/c1_replay.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="htm50_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="htm50" class="clip" data-start="62.000" data-duration="10.500" data-track-index="13" style="width:100%;height:100%"><div class='ofd'></div></div></div>
+<div id="sce2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce2_clip" class="clip" data-start="0.000" data-duration="6.900" data-track-index="14" style="width:100%;height:100%;position:relative">
+<div id="sce2" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">DVR · 4 CÂMERAS</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce8_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce8_clip" class="clip" data-start="8.400" data-duration="7.000" data-track-index="15" style="width:100%;height:100%;position:relative">
+<div id="sce8" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">CAM 02 · CORREDOR B</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce9_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce9_clip" class="clip" data-start="10.800" data-duration="2.100" data-track-index="16" style="width:100%;height:100%;position:relative">
+<div id="sce9" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce10_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce10_clip" class="clip" data-start="13.000" data-duration="2.400" data-track-index="17" style="width:100%;height:100%;position:relative">
+<div id="sce10" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce16_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce16_clip" class="clip" data-start="16.900" data-duration="7.200" data-track-index="18" style="width:100%;height:100%;position:relative">
+<div id="sce16" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">CAM 07 · GARAGEM -1</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce17_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce17_clip" class="clip" data-start="17.400" data-duration="2.200" data-track-index="19" style="width:100%;height:100%;position:relative">
+<div id="sce17" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce19_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce19_clip" class="clip" data-start="21.800" data-duration="2.300" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="sce19" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce24_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce24_clip" class="clip" data-start="25.600" data-duration="8.100" data-track-index="21" style="width:100%;height:100%;position:relative">
+<div id="sce24" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">CAM 04 · ESTACIONAMENTO</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce25_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce25_clip" class="clip" data-start="26.600" data-duration="2.800" data-track-index="22" style="width:100%;height:100%;position:relative">
+<div id="sce25" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce27_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce27_clip" class="clip" data-start="31.000" data-duration="2.700" data-track-index="23" style="width:100%;height:100%;position:relative">
+<div id="sce27" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce32_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce32_clip" class="clip" data-start="35.200" data-duration="10.200" data-track-index="24" style="width:100%;height:100%;position:relative">
+<div id="sce32" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">CAM 01 · APTO 304 · VAZIO</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce33_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce33_clip" class="clip" data-start="37.200" data-duration="2.200" data-track-index="25" style="width:100%;height:100%;position:relative">
+<div id="sce33" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce34_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce34_clip" class="clip" data-start="39.500" data-duration="2.700" data-track-index="26" style="width:100%;height:100%;position:relative">
+<div id="sce34" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce39_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce39_clip" class="clip" data-start="46.900" data-duration="6.900" data-track-index="27" style="width:100%;height:100%;position:relative">
+<div id="sce39" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">BABÁ CAM · QUARTO</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce40_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce40_clip" class="clip" data-start="49.400" data-duration="1.600" data-track-index="28" style="width:100%;height:100%;position:relative">
+<div id="sce40" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce41_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce41_clip" class="clip" data-start="51.200" data-duration="1.800" data-track-index="29" style="width:100%;height:100%;position:relative">
+<div id="sce41" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce42_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce42_clip" class="clip" data-start="53.100" data-duration="0.700" data-track-index="30" style="width:100%;height:100%;position:relative">
+<div id="sce42" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="sce47_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce47_clip" class="clip" data-start="58.900" data-duration="3.100" data-track-index="31" style="width:100%;height:100%;position:relative">
+<div id="sce47" style="position:absolute;inset:0;font-family:Consolas,'Courier New',monospace;color:#f2f2f2;text-shadow:2px 2px 0 #000">
+  <div style="position:absolute;left:180px;top:28px;font-size:30px;font-weight:700">BABÁ CAM · QUARTO</div>
+  <div class="rec" style="position:absolute;right:180px;top:28px;font-size:30px;font-weight:700;color:#e8101a">● REC</div>
+  <div style="position:absolute;right:180px;bottom:28px;font-size:30px;font-weight:700"><span>14/03/2024</span> <span class="clk"></span></div>
+</div>
+
+</div></div>
+<div id="sce48_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce48_clip" class="clip" data-start="59.300" data-duration="2.700" data-track-index="32" style="width:100%;height:100%;position:relative">
+<div id="sce48" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="htm51_box" class="ed-box" style="left:380.0px;top:360.0px;transform:translate(-50%,-50%);width:632.0px;height:478.0px;z-index:21;"><div id="htm51" class="clip" data-start="62.200" data-duration="10.300" data-track-index="33" style="width:100%;height:100%"><div class='ofr'></div></div></div>
+<div id="ima52_box" class="ed-box" style="left:380.0px;top:360.0px;transform:translate(-50%,-50%);width:620.0px;height:466.0px;z-index:21;"><div id="ima52_mv" class="ed-mv"><img id="ima52" class="clip" data-start="62.200" data-duration="10.300" data-track-index="34" src="m/img/proximo.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="sce55_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:21;"><div id="sce55_clip" class="clip" data-start="63.900" data-duration="2.600" data-track-index="35" style="width:100%;height:100%;position:relative">
+<div id="sce55" style="position:absolute;inset:0;pointer-events:none">
+  <svg width="1280" height="720" style="position:absolute;inset:0;overflow:visible">
+    <g class="g"></g>
+  </svg>
+  <div class="lb" style="position:absolute;font-family:Impact,'Arial Black',sans-serif;font-size:40px;color:#fff;background:#e8101a;padding:4px 16px;white-space:nowrap;opacity:0"></div>
+</div>
+
+</div></div>
+<div id="tex3_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex3" class="clip" data-start="0.200" data-duration="3.650" data-track-index="36" style="font-size:60.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">ALGO QUE NÃO DEVERIA EXISTIR</div></div>
+<div id="tex4_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex4" class="clip" data-start="3.900" data-duration="3.000" data-track-index="37" style="font-size:60.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);"><span class="ed-hl" style="color:#e8101a">5</span> REGISTROS ONDE A LÓGICA FALHA</div></div>
+<div id="tex11_box" class="ed-box" style="left:420.0px;top:82.0px;transform:translate(-50%,-50%);width:460.0px;z-index:31;"><div id="tex11" class="clip" data-start="12.900" data-duration="2.500" data-track-index="38" style="font-size:30.0px;color:#e8101a;font-weight:700;text-align:left;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">▶ REPLAY · CÂMERA LENTA</div></div>
+<div id="tex12_box" class="ed-box" style="left:640.0px;top:600.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex12" class="clip" data-start="13.300" data-duration="2.100" data-track-index="39" style="font-size:48.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SENSOR DE MOVIMENTO: <span class="ed-hl" style="color:#e8101a">NADA</span></div></div>
+<div id="tex18_box" class="ed-box" style="left:640.0px;top:600.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex18" class="clip" data-start="19.400" data-duration="1.000" data-track-index="40" style="font-size:48.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SEM SOM · SEM DISTORÇÃO</div></div>
+<div id="tex20_box" class="ed-box" style="left:420.0px;top:82.0px;transform:translate(-50%,-50%);width:460.0px;z-index:31;"><div id="tex20" class="clip" data-start="20.400" data-duration="3.700" data-track-index="41" style="font-size:30.0px;color:#e8101a;font-weight:700;text-align:left;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">▶ REPLAY · CÂMERA LENTA</div></div>
+<div id="tex26_box" class="ed-box" style="left:640.0px;top:620.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex26" class="clip" data-start="29.600" data-duration="1.200" data-track-index="42" style="font-size:48.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">SEM VENTO · SEM TERREMOTO</div></div>
+<div id="tex28_box" class="ed-box" style="left:420.0px;top:82.0px;transform:translate(-50%,-50%);width:460.0px;z-index:31;"><div id="tex28" class="clip" data-start="30.800" data-duration="2.900" data-track-index="43" style="font-size:30.0px;color:#e8101a;font-weight:700;text-align:left;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">▶ REPLAY · CÂMERA LENTA</div></div>
+<div id="tex35_box" class="ed-box" style="left:420.0px;top:82.0px;transform:translate(-50%,-50%);width:460.0px;z-index:31;"><div id="tex35" class="clip" data-start="42.200" data-duration="3.200" data-track-index="44" style="font-size:30.0px;color:#e8101a;font-weight:700;text-align:left;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">▶ REPLAY · CÂMERA LENTA</div></div>
+<div id="tex36_box" class="ed-box" style="left:640.0px;top:600.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex36" class="clip" data-start="43.200" data-duration="2.200" data-track-index="45" style="font-size:50.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">IMÓVEL <span class="ed-hl" style="color:#e8101a">VENDIDO</span> NA SEMANA SEGUINTE</div></div>
+<div id="tex44_box" class="ed-box" style="left:640.0px;top:60.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex44" class="clip" data-start="53.900" data-duration="5.000" data-track-index="46" style="font-size:30.0px;color:#ffffff;font-weight:700;text-align:center;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.6);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">NO QUARTO, AO MESMO TEMPO</div></div>
+<div id="tex45_box" class="ed-box" style="left:640.0px;top:610.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:31;"><div id="tex45" class="clip" data-start="55.400" data-duration="3.500" data-track-index="47" style="font-size:48.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:rgba(0,0,0,.78);padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">DORMINDO <span class="ed-hl" style="color:#e8101a">DE BRUÇOS</span>, VIRADA PRO LADO OPOSTO</div></div>
+<div id="tex49_box" class="ed-box" style="left:420.0px;top:82.0px;transform:translate(-50%,-50%);width:460.0px;z-index:31;"><div id="tex49" class="clip" data-start="58.900" data-duration="3.100" data-track-index="48" style="font-size:30.0px;color:#e8101a;font-weight:700;text-align:left;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">▶ REPLAY · CÂMERA LENTA</div></div>
+<div id="tex53_box" class="ed-box" style="left:950.0px;top:210.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tex53" class="clip" data-start="62.400" data-duration="10.100" data-track-index="49" style="font-size:34.0px;color:#e8101a;font-weight:700;text-align:center;font-family:'Consolas',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">PRÓXIMO CASO</div></div>
+<div id="tex54_box" class="ed-box" style="left:950.0px;top:330.0px;transform:translate(-50%,-50%);width:520.0px;z-index:31;"><div id="tex54" class="clip" data-start="63.000" data-duration="9.500" data-track-index="50" style="font-size:52.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">ÁUDIOS QUE O OUVIDO HUMANO NÃO CAPTA</div></div>
+<div id="tex56_box" class="ed-box" style="left:950.0px;top:520.0px;transform:translate(-50%,-50%);width:420.0px;z-index:31;"><div id="tex56" class="clip" data-start="69.300" data-duration="3.200" data-track-index="51" style="font-size:60.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Impact',Inter,Arial,sans-serif;line-height:1.15;background:#e8101a;padding:14.0px 22.400000000000002px;border-radius:4.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">INSCREVA-SE</div></div>
+<div id="sce5_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:41;"><div id="sce5_clip" class="clip" data-start="6.900" data-duration="1.500" data-track-index="52" style="width:100%;height:100%;position:relative">
+<div id="sce5" style="position:absolute;inset:0;background:#000000;overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc(720px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 #e8101a">5</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:#e8101a;transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc(720px*0.085);letter-spacing:.04em;text-transform:uppercase">O CORREDOR VAZIO</div>
+</div>
+
+</div></div>
+<div id="sce13_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:41;"><div id="sce13_clip" class="clip" data-start="15.400" data-duration="1.500" data-track-index="53" style="width:100%;height:100%;position:relative">
+<div id="sce13" style="position:absolute;inset:0;background:#000000;overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc(720px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 #e8101a">4</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:#e8101a;transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc(720px*0.085);letter-spacing:.04em;text-transform:uppercase">A FIGURA NA GARAGEM</div>
+</div>
+
+</div></div>
+<div id="sce21_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:41;"><div id="sce21_clip" class="clip" data-start="24.100" data-duration="1.500" data-track-index="54" style="width:100%;height:100%;position:relative">
+<div id="sce21" style="position:absolute;inset:0;background:#000000;overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc(720px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 #e8101a">3</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:#e8101a;transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc(720px*0.085);letter-spacing:.04em;text-transform:uppercase">O CARRO QUE BALANÇA</div>
+</div>
+
+</div></div>
+<div id="sce29_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:41;"><div id="sce29_clip" class="clip" data-start="33.700" data-duration="1.500" data-track-index="55" style="width:100%;height:100%;position:relative">
+<div id="sce29" style="position:absolute;inset:0;background:#000000;overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc(720px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 #e8101a">2</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:#e8101a;transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc(720px*0.085);letter-spacing:.04em;text-transform:uppercase">A COZINHA VAZIA</div>
+</div>
+
+</div></div>
+<div id="sce37_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:41;"><div id="sce37_clip" class="clip" data-start="45.400" data-duration="1.500" data-track-index="56" style="width:100%;height:100%;position:relative">
+<div id="sce37" style="position:absolute;inset:0;background:#000000;overflow:hidden;font-family:Impact,'Arial Black',sans-serif">
+  <div class="vg" style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,16,26,.18) 0%,rgba(0,0,0,0) 55%)"></div>
+  <div class="num" style="position:absolute;left:0;right:0;top:4%;text-align:center;color:#fff;font-size:calc(720px*0.56);line-height:1;text-shadow:0 0 40px rgba(232,16,26,.55),6px 6px 0 #e8101a">1</div>
+  <div class="bar" style="position:absolute;left:50%;top:73%;height:8px;width:0;background:#e8101a;transform:translateX(-50%)"></div>
+  <div class="tt" style="position:absolute;left:0;right:0;top:77%;text-align:center;color:#fff;font-size:calc(720px*0.085);letter-spacing:.04em;text-transform:uppercase">A BABÁ ELETRÔNICA</div>
+</div>
+
+</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:72.5,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+(function(tl, P){ const S=0.0, D=6.9;
+  const box=document.querySelector("#sce2 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce2 .rec",{opacity:1},S+k); tl.set("#sce2 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "DVR", "local": "4 CÂMERAS", "data": "14/03/2024", "hora": "03:00:00", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=8.4, D=7.0;
+  const box=document.querySelector("#sce8 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce8 .rec",{opacity:1},S+k); tl.set("#sce8 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "CAM 02", "local": "CORREDOR B", "data": "14/03/2024", "hora": "03:12:07", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=10.8, D=2.1;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce9 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce9 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 668, "y": 290, "ang": -40, "r": 80, "label": "ABRE SOZINHA", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=13.0, D=2.4;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce10 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce10 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 640, "y": 360, "ang": -45, "r": 190, "label": "", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=16.9, D=7.2;
+  const box=document.querySelector("#sce16 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce16 .rec",{opacity:1},S+k); tl.set("#sce16 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "CAM 07", "local": "GARAGEM -1", "data": "14/03/2024", "hora": "02:47:31", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=17.4, D=2.2;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce17 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce17 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 700, "y": 420, "ang": -55, "r": 80, "label": "UMA FIGURA", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=21.8, D=2.3;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce19 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce19 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 640, "y": 400, "ang": -45, "r": 200, "label": "ATRAVESSA O CONCRETO", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=25.6, D=8.1;
+  const box=document.querySelector("#sce24 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce24 .rec",{opacity:1},S+k); tl.set("#sce24 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "CAM 04", "local": "ESTACIONAMENTO", "data": "14/03/2024", "hora": "01:05:44", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=26.6, D=2.8;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce25 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce25 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 715, "y": 470, "ang": -60, "r": 80, "label": "10 SEGUNDOS", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=31.0, D=2.7;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce27 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce27 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 640, "y": 360, "ang": -45, "r": 220, "label": "O DO LADO FICA PARADO", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=35.2, D=10.2;
+  const box=document.querySelector("#sce32 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce32 .rec",{opacity:1},S+k); tl.set("#sce32 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "CAM 01", "local": "APTO 304 · VAZIO", "data": "14/03/2024", "hora": "04:18:02", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=37.2, D=2.2;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce33 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce33 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 690, "y": 250, "ang": -30, "r": 80, "label": "OBJETOS VOAM", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=39.5, D=2.7;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce34 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce34 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 678, "y": 268, "ang": -45, "r": 150, "label": "MÃOS INVISÍVEIS", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=46.9, D=6.9;
+  const box=document.querySelector("#sce39 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce39 .rec",{opacity:1},S+k); tl.set("#sce39 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "BABÁ CAM", "local": "QUARTO", "data": "14/03/2024", "hora": "03:33:10", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=49.4, D=1.6;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce40 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce40 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 518, "y": 260, "ang": -45, "r": 110, "label": "ELA SENTA", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=51.2, D=1.8;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce41 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce41 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 245, "y": 78, "ang": 45, "r": 90, "label": "CANTO ESCURO", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=53.1, D=0.7;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce42 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce42 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 518, "y": 247, "ang": -45, "r": 90, "label": "SORRI", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=58.9, D=3.1;
+  const box=document.querySelector("#sce47 .clk");
+  const pr=P.hora.split(":").map(Number); const base=pr[0]*3600+pr[1]*60+pr[2];
+  const n=Math.ceil(D)+1;
+  for(let i=0;i<n;i++){ const t=base+i, s=document.createElement("span");
+    s.textContent=[Math.floor(t/3600)%24,Math.floor(t/60)%60,t%60].map(v=>String(v).padStart(2,"0")).join(":");
+    s.style.opacity=i===0?1:0; s.style.position=i===0?"static":"absolute"; s.style.left="0"; box.appendChild(s);
+    if(i>0){ tl.set(s,{opacity:1},S+i); tl.set(box.children[i-1],{opacity:0},S+i); tl.set(s,{opacity:0},0); }
+  }
+  box.style.position="relative";
+  for(let k=0;k<D;k+=1){ tl.set("#sce47 .rec",{opacity:1},S+k); tl.set("#sce47 .rec",{opacity:0},S+k+.5); }
+})(window.__timelines.main, {"cam": "BABÁ CAM", "local": "QUARTO", "data": "14/03/2024", "hora": "03:33:16", "cor": "#e8101a"});
+
+
+(function(tl, P){ const S=59.3, D=2.7;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce48 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce48 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "circulo", "x": 640, "y": 360, "ang": -45, "r": 170, "label": "O SORRISO NA TELA", "cor": "#e8101a"});
+
+tl.fromTo("#ima52_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.200);
+tl.set("#ima52_box",{opacity:0},0);
+tl.fromTo("#ima52_mv",{scale:1},{...{scale:1.06},duration:10.300,ease:"none",immediateRender:false},62.200);
+tl.set("#ima52_mv",{scale:1},0);
+
+(function(tl, P){ const S=63.9, D=2.6;
+  const NS="http://www.w3.org/2000/svg", g=document.querySelector("#sce55 .g"), x=+P.x, y=+P.y, r=+P.r, c=P.cor;
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);g.appendChild(e);return e;};
+  let shapes=[];
+  if(P.tipo==="circulo"){
+    const L=2*Math.PI*r; const e=mk("circle",{cx:x,cy:y,r:r,fill:"none",stroke:c,"stroke-width":9,"stroke-dasharray":L,"stroke-dashoffset":L,transform:`rotate(-90 ${x} ${y})`});
+    tl.set(e,{attr:{"stroke-dashoffset":L}},0); tl.to(e,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S);
+    shapes=[e];
+  } else {
+    const a=(+P.ang)*Math.PI/180, len=r*2.2, tx=x+Math.cos(a)*14, ty=y+Math.sin(a)*14;
+    const sx=x+Math.cos(a)*len, sy=y+Math.sin(a)*len;
+    const ln=mk("line",{x1:sx,y1:sy,x2:tx,y2:ty,stroke:c,"stroke-width":16,"stroke-linecap":"round","stroke-dasharray":len,"stroke-dashoffset":len});
+    const hw=a+Math.PI, p1=[x+Math.cos(a+0.5)*58,y+Math.sin(a+0.5)*58], p2=[x+Math.cos(a-0.5)*58,y+Math.sin(a-0.5)*58];
+    const hd=mk("polygon",{points:`${x},${y} ${p1[0]},${p1[1]} ${p2[0]},${p2[1]}`,fill:c,opacity:0});
+    tl.set(ln,{attr:{"stroke-dashoffset":len}},0); tl.set(hd,{opacity:0},0);
+    tl.to(ln,{attr:{"stroke-dashoffset":0},duration:.3,ease:"power2.out"},S); tl.set(hd,{opacity:1},S+.25);
+    shapes=[ln,hd];
+  }
+  for(let k=S+.5;k<S+D-.3;k+=.6){ tl.to(g,{opacity:.45,duration:.3,ease:"sine.inOut"},k); tl.to(g,{opacity:1,duration:.3,ease:"sine.inOut"},k+.3); }
+  if(P.label){ const lb=document.querySelector("#sce55 .lb"); lb.textContent=P.label;
+    const ly = P.tipo==="circulo" ? y+r+18 : y+Math.sin(+P.ang*Math.PI/180)*r*2.4 + (Math.sin(+P.ang*Math.PI/180)>0?10:-60);
+    const lx = P.tipo==="circulo" ? x : x+Math.cos(+P.ang*Math.PI/180)*r*2.4;
+    lb.style.left=Math.max(20,Math.min(1280-420,lx-150))+"px"; lb.style.top=Math.max(20,Math.min(720-80,ly))+"px";
+    tl.set(lb,{opacity:0},0); tl.to(lb,{opacity:1,duration:.2},S+.35); }
+})(window.__timelines.main, {"tipo": "seta", "x": 700, "y": 360, "ang": 0, "r": 80, "label": "", "cor": "#e8101a"});
+
+tl.fromTo("#tex3_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.200);
+tl.set("#tex3_box",{opacity:0},0);
+tl.to("#tex3_box",{...{opacity:0},duration:0.350,ease:"power2.in"},3.500);
+tl.fromTo("#tex4_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},3.900);
+tl.set("#tex4_box",{opacity:0},0);
+tl.to("#tex4_box",{...{opacity:0},duration:0.350,ease:"power2.in"},6.550);
+tl.fromTo("#tex12_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},13.300);
+tl.set("#tex12_box",{opacity:0},0);
+tl.to("#tex12_box",{...{opacity:0},duration:0.350,ease:"power2.in"},15.050);
+tl.fromTo("#tex18_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},19.400);
+tl.set("#tex18_box",{opacity:0},0);
+tl.to("#tex18_box",{...{opacity:0},duration:0.333,ease:"power2.in"},20.067);
+tl.fromTo("#tex26_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},29.600);
+tl.set("#tex26_box",{opacity:0},0);
+tl.to("#tex26_box",{...{opacity:0},duration:0.350,ease:"power2.in"},30.450);
+tl.fromTo("#tex36_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},43.200);
+tl.set("#tex36_box",{opacity:0},0);
+tl.to("#tex36_box",{...{opacity:0},duration:0.350,ease:"power2.in"},45.050);
+tl.fromTo("#tex44_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},53.900);
+tl.set("#tex44_box",{opacity:0},0);
+tl.to("#tex44_box",{...{opacity:0},duration:0.350,ease:"power2.in"},58.550);
+tl.fromTo("#tex45_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},55.400);
+tl.set("#tex45_box",{opacity:0},0);
+tl.to("#tex45_box",{...{opacity:0},duration:0.350,ease:"power2.in"},58.550);
+tl.fromTo("#tex53_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.400);
+tl.set("#tex53_box",{opacity:0},0);
+tl.to("#tex53_box",{...{opacity:0},duration:0.350,ease:"power2.in"},72.150);
+tl.fromTo("#tex54_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},63.000);
+tl.set("#tex54_box",{opacity:0},0);
+tl.to("#tex54_box",{...{opacity:0},duration:0.350,ease:"power2.in"},72.150);
+tl.fromTo("#tex56_box",{opacity:0,scale:.6},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"back.out(1.7)",immediateRender:false},69.300);
+tl.set("#tex56_box",{opacity:0,scale:.6},0);
+tl.to("#tex56_box",{...{opacity:0},duration:0.350,ease:"power2.in"},72.150);
+
+(function(tl, P){ const S=6.9, D=1.5;
+  tl.set("#sce5 .num",{opacity:0,scale:1.6},0); tl.set("#sce5 .tt",{opacity:0,y:30},0); tl.set("#sce5 .bar",{width:0},0);
+  tl.fromTo("#sce5 .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#sce5 .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#sce5 .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#sce5 .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {"n": "5", "titulo": "O CORREDOR VAZIO", "cor": "#e8101a", "fundo": "#000000"});
+
+
+(function(tl, P){ const S=15.4, D=1.5;
+  tl.set("#sce13 .num",{opacity:0,scale:1.6},0); tl.set("#sce13 .tt",{opacity:0,y:30},0); tl.set("#sce13 .bar",{width:0},0);
+  tl.fromTo("#sce13 .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#sce13 .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#sce13 .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#sce13 .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {"n": "4", "titulo": "A FIGURA NA GARAGEM", "cor": "#e8101a", "fundo": "#000000"});
+
+
+(function(tl, P){ const S=24.1, D=1.5;
+  tl.set("#sce21 .num",{opacity:0,scale:1.6},0); tl.set("#sce21 .tt",{opacity:0,y:30},0); tl.set("#sce21 .bar",{width:0},0);
+  tl.fromTo("#sce21 .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#sce21 .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#sce21 .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#sce21 .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {"n": "3", "titulo": "O CARRO QUE BALANÇA", "cor": "#e8101a", "fundo": "#000000"});
+
+
+(function(tl, P){ const S=33.7, D=1.5;
+  tl.set("#sce29 .num",{opacity:0,scale:1.6},0); tl.set("#sce29 .tt",{opacity:0,y:30},0); tl.set("#sce29 .bar",{width:0},0);
+  tl.fromTo("#sce29 .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#sce29 .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#sce29 .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#sce29 .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {"n": "2", "titulo": "A COZINHA VAZIA", "cor": "#e8101a", "fundo": "#000000"});
+
+
+(function(tl, P){ const S=45.4, D=1.5;
+  tl.set("#sce37 .num",{opacity:0,scale:1.6},0); tl.set("#sce37 .tt",{opacity:0,y:30},0); tl.set("#sce37 .bar",{width:0},0);
+  tl.fromTo("#sce37 .num",{opacity:0,scale:1.6},{opacity:1,scale:1,duration:.35,ease:"power3.out",immediateRender:false},S);
+  tl.to("#sce37 .num",{scale:1.06,duration:D-.35,ease:"none"},S+.35);
+  tl.fromTo("#sce37 .bar",{width:0},{width:"34%",duration:.4,ease:"power2.out",immediateRender:false},S+.2);
+  tl.fromTo("#sce37 .tt",{opacity:0,y:30},{opacity:1,y:0,duration:.35,ease:"power2.out",immediateRender:false},S+.3);
+})(window.__timelines.main, {"n": "1", "titulo": "A BABÁ ELETRÔNICA", "cor": "#e8101a", "fundo": "#000000"});
+
+})();</script>
+</body></html>

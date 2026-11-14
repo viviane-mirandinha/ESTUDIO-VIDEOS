@@ -1,0 +1,687 @@
+{
+ "version": 1,
+ "name": "08 - FERN CINEMATICO - Silk Road o mercado secreto da internet",
+ "estilo": "08-fern-cinematico",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#05070a"
+ },
+ "duration": 59.2,
+ "template": "generic",
+ "head": "<script src=\"https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js\"></script>",
+ "referencia": {
+  "canal": "Fern",
+  "canal_url": "https://www.youtube.com/@Fern-TV",
+  "video": "https://youtu.be/JN_d89-FEKk",
+  "titulo": "The Stoner Kids Dealing Guns to the Army",
+  "nota": "também Not What You Think / RealLifeLore; ver ESTILOS-NOVOS/08-fern-cinematico/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.13,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 9.62,
+    "volume": 0.14,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 29.9,
+    "volume": 0.14,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh2",
+    "src": "sfx/whoosh.wav",
+    "start": 42.12,
+    "volume": 0.14,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh3",
+    "src": "sfx/whoosh.wav",
+    "start": 51.3,
+    "volume": 0.14,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 3D / planos"
+  },
+  {
+   "id": "textos",
+   "name": "Títulos"
+  }
+ ],
+ "items": [
+  {
+   "id": "th1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D terreno noite",
+   "start": 0,
+   "dur": 2.75,
+   "props": {
+    "scene": "fern_three",
+    "params": {
+     "modo": "terreno",
+     "seed": 3
+    }
+   }
+  },
+  {
+   "id": "ti1",
+   "type": "scene",
+   "track": "textos",
+   "label": "título 2011",
+   "start": 0,
+   "dur": 2.75,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "2011",
+     "fonte": "serif",
+     "cor": "#f2b740",
+     "tam": 140,
+     "y": 46,
+     "sub": "Ross Ulbricht",
+     "t_sub": 1.2
+    }
+   }
+  },
+  {
+   "id": "pl1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_laptop.jpg",
+   "start": 2.75,
+   "dur": 2.2,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_laptop.jpg",
+     "mov": "push",
+     "amt": 0.1
+    }
+   }
+  },
+  {
+   "id": "ti2",
+   "type": "scene",
+   "track": "textos",
+   "label": "título SILK ROAD",
+   "start": 2.75,
+   "dur": 2.2,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "SILK ROAD",
+     "tam": 112,
+     "y": 48,
+     "sub": "um mercado anônimo",
+     "t_sub": 0.85
+    }
+   }
+  },
+  {
+   "id": "pl2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_contrabando.jpg",
+   "start": 4.95,
+   "dur": 2.6,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_contrabando.jpg",
+     "mov": "pan_r",
+     "amt": 0.1,
+     "brilho": 1.35,
+     "luz": "55% 70%"
+    }
+   }
+  },
+  {
+   "id": "ti3",
+   "type": "scene",
+   "track": "textos",
+   "label": "título DROGAS ARMAS BITCOIN",
+   "start": 4.95,
+   "dur": 2.6,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "DROGAS|ARMAS|BITCOIN",
+     "tam": 84,
+     "y": 50,
+     "passos": "0.15,0.8,2.0"
+    }
+   }
+  },
+  {
+   "id": "pl3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_liberdade.jpg",
+   "start": 7.55,
+   "dur": 2.17,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_liberdade.jpg",
+     "mov": "push",
+     "amt": 0.08
+    }
+   }
+  },
+  {
+   "id": "ti4",
+   "type": "scene",
+   "track": "textos",
+   "label": "título LIBERDADE TOTAL",
+   "start": 7.55,
+   "dur": 2.17,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "LIBERDADE TOTAL",
+     "tam": 84,
+     "y": 80,
+     "sub": "a promessa",
+     "t_sub": 0.2
+    }
+   }
+  },
+  {
+   "id": "ti5",
+   "type": "scene",
+   "track": "textos",
+   "label": "título A REALIDADE FOI OUTRA",
+   "start": 9.72,
+   "dur": 1.53,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "A REALIDADE FOI OUTRA",
+     "tam": 86,
+     "y": 50,
+     "fundo": "branco"
+    }
+   }
+  },
+  {
+   "id": "pl4",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_agente.jpg",
+   "start": 11.25,
+   "dur": 3.2,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_agente.jpg",
+     "mov": "pan_l",
+     "amt": 0.1
+    }
+   }
+  },
+  {
+   "id": "ti6",
+   "type": "scene",
+   "track": "textos",
+   "label": "título AGENTE FEDERAL",
+   "start": 11.25,
+   "dur": 3.2,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "AGENTE FEDERAL",
+     "tam": 84,
+     "y": 80,
+     "sub": "infiltrado como moderador do site",
+     "t_sub": 1.85
+    }
+   }
+  },
+  {
+   "id": "pl5",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_cidade2011.jpg",
+   "start": 14.45,
+   "dur": 2.15,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_cidade2011.jpg",
+     "mov": "pan_r",
+     "amt": 0.1,
+     "brilho": 1.3
+    }
+   }
+  },
+  {
+   "id": "ti7",
+   "type": "scene",
+   "track": "textos",
+   "label": "título 2013",
+   "start": 14.45,
+   "dur": 2.15,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "2013",
+     "fonte": "serif",
+     "cor": "#f2b740",
+     "tam": 140,
+     "y": 46,
+     "sub": "San Francisco",
+     "t_sub": 0.6
+    }
+   }
+  },
+  {
+   "id": "mo1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "moldura biblioteca",
+   "start": 16.6,
+   "dur": 2.1,
+   "props": {
+    "scene": "fern_moldura3d",
+    "params": {
+     "src": "img/w_glenpark.jpg",
+     "legenda": "BIBLIOTECA PÚBLICA",
+     "sub": "Glen Park, San Francisco",
+     "lado": "esq",
+     "ang": -20,
+     "larg": 560,
+     "t_txt": 0.5
+    }
+   }
+  },
+  {
+   "id": "pl6",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_biblioteca.jpg",
+   "start": 18.7,
+   "dur": 2.3,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_biblioteca.jpg",
+     "mov": "push",
+     "amt": 0.1
+    }
+   }
+  },
+  {
+   "id": "ti8",
+   "type": "scene",
+   "track": "textos",
+   "label": "título LAPTOP ABERTO E DESBLOQUEADO",
+   "start": 18.7,
+   "dur": 2.3,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "LAPTOP ABERTO|E DESBLOQUEADO",
+     "tam": 72,
+     "y": 76,
+     "empilhar": 1,
+     "passos": "0.45,1.5"
+    }
+   }
+  },
+  {
+   "id": "nu1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "número 1 bilhão",
+   "start": 21.0,
+   "dur": 3.75,
+   "props": {
+    "scene": "fern_numero",
+    "params": {
+     "valor": 1000000000,
+     "prefixo": "US$ ",
+     "antes": "MAIS DE",
+     "sub": "em vendas",
+     "t_conta": 2.0
+    }
+   }
+  },
+  {
+   "id": "pl7",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_prisao.jpg",
+   "start": 24.75,
+   "dur": 5.25,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_prisao.jpg",
+     "mov": "push",
+     "amt": 0.08
+    }
+   }
+  },
+  {
+   "id": "ti9",
+   "type": "scene",
+   "track": "textos",
+   "label": "título PRISÃO PERPÉTUA",
+   "start": 25.9,
+   "dur": 4.1,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "PRISÃO PERPÉTUA",
+     "tam": 88,
+     "y": 78,
+     "sub": "sem liberdade condicional",
+     "t_sub": 1.6
+    }
+   }
+  },
+  {
+   "id": "ti10",
+   "type": "scene",
+   "track": "textos",
+   "label": "título MAS NÃO ACABOU ALI",
+   "start": 30.0,
+   "dur": 2.1,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "MAS NÃO ACABOU ALI",
+     "tam": 88,
+     "y": 50,
+     "fundo": "nevoa"
+    }
+   }
+  },
+  {
+   "id": "th2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D terreno 2024",
+   "start": 32.1,
+   "dur": 1.9,
+   "props": {
+    "scene": "fern_three",
+    "params": {
+     "modo": "terreno",
+     "seed": 11
+    }
+   }
+  },
+  {
+   "id": "ti11",
+   "type": "scene",
+   "track": "textos",
+   "label": "título 2024",
+   "start": 32.1,
+   "dur": 1.9,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "2024",
+     "fonte": "serif",
+     "cor": "#f2b740",
+     "tam": 140,
+     "y": 46,
+     "sub": "eleição nos EUA",
+     "t_sub": 0.6
+    }
+   }
+  },
+  {
+   "id": "mo2",
+   "type": "scene",
+   "track": "fundo",
+   "label": "moldura candidato",
+   "start": 34.0,
+   "dur": 2.9,
+   "props": {
+    "scene": "fern_moldura3d",
+    "params": {
+     "src": "img/w_trump.jpg",
+     "legenda": "DONALD TRUMP",
+     "sub": "candidato à presidência promete libertá-lo",
+     "lado": "dir",
+     "ang": -18,
+     "larg": 380,
+     "t_txt": 0.3
+    }
+   }
+  },
+  {
+   "id": "pl8",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_saida.jpg",
+   "start": 36.9,
+   "dur": 5.32,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_saida.jpg",
+     "mov": "push",
+     "amt": 0.1
+    }
+   }
+  },
+  {
+   "id": "ti12",
+   "type": "scene",
+   "track": "textos",
+   "label": "título JANEIRO 2025",
+   "start": 36.9,
+   "dur": 2.95,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "JANEIRO 2025",
+     "fonte": "serif",
+     "cor": "#f2b740",
+     "tam": 104,
+     "y": 22
+    }
+   }
+  },
+  {
+   "id": "ti13",
+   "type": "scene",
+   "track": "textos",
+   "label": "título PERDÃO TOTAL",
+   "start": 39.85,
+   "dur": 2.37,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "PERDÃO TOTAL",
+     "tam": 88,
+     "y": 22,
+     "sub": "e fora da prisão",
+     "t_sub": 1.3
+    }
+   }
+  },
+  {
+   "id": "in1",
+   "type": "scene",
+   "track": "textos",
+   "label": "inscreva-se",
+   "start": 42.22,
+   "dur": 2.53,
+   "props": {
+    "scene": "fern_inscreva",
+    "params": {
+     "t_click": 1.9
+    }
+   }
+  },
+  {
+   "id": "mo3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "moldura site apreendido",
+   "start": 44.75,
+   "dur": 1.7,
+   "props": {
+    "scene": "fern_moldura3d",
+    "params": {
+     "src": "img/w_seized.jpg",
+     "legenda": "O SITE ORIGINAL CAIU",
+     "lado": "centro",
+     "ang": -10,
+     "larg": 560,
+     "t_txt": 0.3
+    }
+   }
+  },
+  {
+   "id": "th3",
+   "type": "scene",
+   "track": "fundo",
+   "label": "3D servidores copias",
+   "start": 46.45,
+   "dur": 1.9,
+   "props": {
+    "scene": "fern_three",
+    "params": {
+     "modo": "racks",
+     "t1": 0.0,
+     "t2": 0.25
+    }
+   }
+  },
+  {
+   "id": "ti14",
+   "type": "scene",
+   "track": "textos",
+   "label": "título CÓPIAS EM SEMANAS",
+   "start": 46.45,
+   "dur": 1.9,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "CÓPIAS EM SEMANAS",
+     "tam": 64,
+     "y": 14,
+     "passos": "0.5"
+    }
+   }
+  },
+  {
+   "id": "pl9",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_guerra.jpg",
+   "start": 48.35,
+   "dur": 3.05,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_guerra.jpg",
+     "mov": "pan_r",
+     "amt": 0.1,
+     "brilho": 1.45
+    }
+   }
+  },
+  {
+   "id": "ti15",
+   "type": "scene",
+   "track": "textos",
+   "label": "título CRIPTOGRAFIA ANÔNIMA",
+   "start": 48.35,
+   "dur": 3.05,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "CRIPTOGRAFIA ANÔNIMA",
+     "tam": 72,
+     "y": 80,
+     "passos": "1.0",
+     "sub": "a guerra nunca parou",
+     "t_sub": 2.2
+    }
+   }
+  },
+  {
+   "id": "ba1",
+   "type": "scene",
+   "track": "fundo",
+   "label": "barras hoje x auge",
+   "start": 51.4,
+   "dur": 4.16,
+   "props": {
+    "scene": "fern_barras",
+    "params": {
+     "t_b": 1.1,
+     "t_a": 3.0
+    }
+   }
+  },
+  {
+   "id": "pl10",
+   "type": "scene",
+   "track": "fundo",
+   "label": "plano f_final.jpg",
+   "start": 55.56,
+   "dur": 3.64,
+   "props": {
+    "scene": "fern_plano",
+    "params": {
+     "src": "img/f_final.jpg",
+     "mov": "push",
+     "amt": 0.12,
+     "brilho": 1.25,
+     "saida": 1
+    }
+   }
+  },
+  {
+   "id": "ti16",
+   "type": "scene",
+   "track": "textos",
+   "label": "título A TECNOLOGIA MUDOU O JOGO CONTINUA",
+   "start": 55.56,
+   "dur": 3.64,
+   "props": {
+    "scene": "fern_titulo3d",
+    "params": {
+     "texto": "A TECNOLOGIA MUDOU|O JOGO CONTINUA",
+     "tam": 76,
+     "y": 50,
+     "empilhar": 1,
+     "passos": "0.3,1.55"
+    }
+   }
+  }
+ ]
+}

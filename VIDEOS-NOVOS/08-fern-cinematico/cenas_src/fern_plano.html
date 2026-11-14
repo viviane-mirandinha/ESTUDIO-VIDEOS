@@ -1,0 +1,23 @@
+<!--params {"src":"","mov":"push","amt":0.1,"foco":"50% 50%","brilho":1.15,"contraste":1.15,"nevoa":0.4,"tint":"rgba(6,18,30,.10)","vinheta":0.5,"luz":"50% 45%","luz_forca":0.22,"saida":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:#05070a">
+ <div class="cam" style="position:absolute;inset:-5%;will-change:transform"><img src="{{p.src}}" style="width:100%;height:100%;object-fit:cover;object-position:{{p.foco}};filter:brightness({{p.brilho}}) contrast({{p.contraste}}) saturate(.85)"></div>
+ <div style="position:absolute;inset:0;background:{{p.tint}}"></div>
+ <div class="rim" style="position:absolute;inset:0;mix-blend-mode:screen;background:radial-gradient(ellipse 45% 55% at {{p.luz}},rgba(150,195,235,{{p.luz_forca}}) 0%,rgba(150,195,235,0) 100%)"></div>
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,{{p.vinheta}}) 100%)"></div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const cam=R.querySelector(".cam"), a=+P.amt||0.1;
+  const mv={push:[{scale:1,x:0,y:0},{scale:1+a,x:0,y:0}],pull:[{scale:1+a,x:0,y:0},{scale:1,x:0,y:0}],
+    pan_l:[{scale:1.02+a/2,x:W*a*.35,y:0},{scale:1.02+a/2,x:-W*a*.35,y:0}],pan_r:[{scale:1.02+a/2,x:-W*a*.35,y:0},{scale:1.02+a/2,x:W*a*.35,y:0}],
+    rise:[{scale:1.02+a/2,x:0,y:H*a*.35},{scale:1.02+a/2+a/3,x:0,y:-H*a*.35}]}[P.mov]||null;
+  if(mv) tl.fromTo(cam,mv[0],Object.assign({},mv[1],{duration:D,ease:"sine.inOut",immediateRender:false}),S);
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2), seed=String("{{id}}").length*131+7;
+  FERN.drive(tl,S,D,t=>{ if(+P.nevoa) FERN.fog(fc,t,seed,"rgba(150,180,210,A)",+P.nevoa); FERN.grain(gc,t,.10); });
+})(window.__timelines.main, {{json}});
+</script>

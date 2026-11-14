@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#0d1a24;}
+#root{position:absolute;left:0;top:0;width:1280px;height:720px;overflow:hidden;background:#102e4e;font-family:'Oswald',sans-serif;}
+.map{position:absolute;left:0;top:0;transform-origin:0 0;display:none;}
+#sv{position:absolute;left:0;top:0;width:1280px;height:720px;}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.42) 100%);pointer-events:none;}
+#dim{position:absolute;inset:0;background:#000;opacity:0;}
+#tit{position:absolute;left:0;width:1280px;top:34px;text-align:center;font-family:'Oswald';font-weight:700;font-size:60px;line-height:1.1;color:#fff;text-transform:uppercase;letter-spacing:.5px;text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 18px rgba(0,0,0,.6);}
+#tit .hl{color:#111;padding:0 12px;text-shadow:none;box-shadow:0 3px 0 rgba(0,0,0,.4);}
+#pill{position:absolute;left:36px;top:132px;background:rgba(12,12,12,.88);border:2px solid #3a3a3a;border-radius:8px;padding:6px 18px 8px;min-width:150px;}
+#pill .h{font-family:'Anton';font-size:52px;line-height:1.05;letter-spacing:1px;}
+#pill .s{font-family:'Oswald';font-size:24px;color:#c4c4c4;text-transform:uppercase;line-height:1.1;margin-top:2px;}
+#leg{position:absolute;right:26px;bottom:18px;font-family:'Oswald';font-size:24px;color:rgba(255,255,255,.62);text-transform:uppercase;text-shadow:0 1px 3px #000;}
+#num{position:absolute;right:40px;top:132px;background:rgba(12,12,12,.9);border:3px solid #e8c547;border-radius:8px;padding:6px 22px 10px;text-align:center;}
+#num .v{font-family:'Anton';font-size:64px;color:#ffd23f;line-height:1.05;}
+#num .r{font-family:'Oswald';font-size:24px;color:#fff;text-transform:uppercase;}
+#cx{position:absolute;left:640px;bottom:64px;transform:translateX(-50%);background:rgba(10,10,10,.92);border:2px solid #555;border-radius:6px;padding:10px 26px 12px;text-align:center;white-space:nowrap;}
+#cx .t{font-family:'Oswald';font-weight:700;font-size:34px;color:#fff;text-transform:uppercase;}
+#cx .r{font-family:'Oswald';font-size:24px;color:#bdbdbd;text-transform:uppercase;}
+#cards{position:absolute;left:0;top:0;width:1280px;height:720px;}
+.ic{position:absolute;top:250px;width:300px;height:250px;background:rgba(8,8,8,.92);border:3px solid #9a9a9a;border-radius:10px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.6);}
+.ic svg{margin-top:18px;}
+.ic .v{font-family:'Anton';font-size:64px;color:#ffd23f;line-height:1.05;}
+.ic .r{font-family:'Oswald';font-size:26px;color:#fff;text-transform:uppercase;}
+#card{position:absolute;inset:0;display:none;background:radial-gradient(ellipse at center,#f4f5f6 0%,#dcdee1 100%);}
+#card .topo{position:absolute;top:96px;left:640px;transform:translateX(-50%);background:#1f4fa8;color:#fff;font-family:'Oswald';font-weight:700;font-size:42px;padding:2px 18px;text-transform:uppercase;white-space:nowrap;}
+#card .pal{position:absolute;top:150px;width:1280px;text-align:center;font-family:'Anton';font-size:200px;color:#2756c5;line-height:1.15;letter-spacing:2px;}
+#card svg{position:absolute;left:0;top:0;}
+#card .sub{position:absolute;top:430px;width:1280px;text-align:center;font-family:'Oswald';font-weight:700;font-size:34px;color:#2a2a2a;text-transform:uppercase;}
+#card .pils{position:absolute;top:500px;left:640px;transform:translateX(-50%);display:flex;gap:18px;white-space:nowrap;}
+#card .pl{background:#1d5a70;color:#fff;font-family:'Oswald';font-size:30px;padding:8px 26px;border-radius:6px;text-transform:uppercase;}
+#card .tag{position:absolute;top:590px;left:640px;transform:translateX(-50%);border:3px solid #d42a2a;color:#d42a2a;background:rgba(255,255,255,.6);font-family:'Oswald';font-weight:700;font-size:34px;padding:2px 18px;border-radius:6px;text-transform:uppercase;white-space:nowrap;}
+#cta{position:absolute;left:640px;top:330px;transform:translateX(-50%);display:flex;gap:30px;}
+.bt{background:rgba(10,10,10,.92);border:3px solid #ddd;border-radius:12px;padding:14px 28px;display:flex;align-items:center;gap:14px;font-family:'Oswald';font-weight:700;font-size:40px;color:#fff;text-transform:uppercase;}
+.bt.red{background:#d32424;border-color:#fff;}
+@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}@font-face{font-family:'Anton';src:url('m/fonts/Anton-Regular.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="77.95" data-width="1280" data-height="720">
+<img id="m_ilha" class="map" src="m/img/ilha.jpg" width="5098" height="4392">
+<img id="m_porto" class="map" src="m/img/porto.jpg" width="2620" height="3347">
+<div id="dim"></div>
+<svg id="sv" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="smk" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9"/></filter>
+  <marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8322a"/></marker>
+ </defs>
+ <g id="g_obj"></g>
+</svg>
+<div id="vig"></div>
+<div id="cards"></div>
+<div id="cta" style="display:none"></div>
+<div id="tit"></div>
+<div id="pill"><div class="h"></div><div class="s"></div></div>
+<div id="num"><div class="v"></div><div class="r"></div></div>
+<div id="cx"><div class="t"></div><div class="r"></div></div>
+<div id="leg">Esquemático · posições aproximadas</div>
+<div id="card"><div class="topo"></div><div class="pal"></div><svg width="1280" height="720"><path id="sq" fill="none" stroke="#d42a2a" stroke-width="8" stroke-linecap="round"/></svg><div class="sub"></div><div class="pils"></div><div class="tag"></div></div>
+
+</div>
+<script>
+const EDIT={"version": 1, "name": "05 - TIMELINE DATA A DATA - Pearl Harbor hora a hora", "estilo": "05-timeline-ano-a-ano", "grupo": "ESTILOS NOVOS", "canvas": {"w": 1280, "h": 720, "fps": 30, "bg": "#0d1a24"}, "duration": 77.95, "template": "local", "fonts": {"Oswald": "fonts/Oswald-Bold.ttf", "Anton": "fonts/Anton-Regular.ttf"}, "audio": {"voice": {"src": "voz.wav", "volume": 1.0, "start": 0}, "music": {"src": "musica.mp3", "volume": 0.1, "start": 0, "fade_out": 2.0, "duck": true}, "extra": [{"id": "w1", "src": "sfx/whoosh.wav", "start": 7.62, "volume": 0.15, "label": "whoosh card"}, {"id": "w2", "src": "sfx/whoosh.wav", "start": 65.62, "volume": 0.15, "label": "whoosh card"}]}, "tracks": [{"id": "mapa", "name": "Cenas de mapa (hora a hora)"}, {"id": "cards", "name": "Cards claros"}], "referencia": {"video": "https://youtu.be/o5GOQ9Bj0wg", "canal": "Atlas Unfolded", "titulo": "The Entire Ukraine War in 25 Minutes (Animated With Maps)", "nota": "ver ESTILOS-NOVOS/05-timeline-ano-a-ano"}, "creditos": "Relevo: AWS Terrain Tiles (terrarium; USGS 3DEP/NOAA, domínio público). Costa de Pearl Harbor: © OpenStreetMap contributors (ODbL).", "items": [{"id": "c01", "type": "scene", "track": "mapa", "label": "06:37 Ward afunda submarino", "start": 0, "dur": 7.75, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "porto", "foco": [21.306, -157.968], "zoom": 0.66, "push": 1.08, "cy": 380, "hora": "06:37", "hora_cor": "#ffd23f", "sub": "7 DEZ 1941 · ENTRADA DO PORTO", "titulos": [[0, "O PRIMEIRO TIRO", "PRIMEIRO", "#ffd23f"]], "lugares": [["PEARL HARBOR", 21.316, -157.958, 0.3]], "icones": [{"tipo": "destroier", "lat": 21.299, "lon": -157.979, "ang": -20, "tam": 1.5, "rotulo": "USS WARD", "t": 0.4, "ly": -26}, {"tipo": "sub", "lat": 21.3065, "lon": -157.9645, "ang": -60, "tam": 1.6, "t": 0.8, "ate": 4.6}], "setas": [{"de": [21.2995, -157.977], "para": [21.306, -157.9655], "t": 3.4, "dur": 0.6, "curva": 0.25}], "explosoes": [{"lat": 21.3065, "lon": -157.9645, "t": 4.1, "r": 30}], "caixas": [{"t": 4.3, "texto": "SUBMARINO ANÃO AFUNDADO", "rotulo": "O primeiro disparo americano da guerra"}]}}}, {"id": "c02", "type": "scene", "track": "cards", "label": "Card HESITA", "start": 7.75, "dur": 3.55, "by": "template", "props": {"scene": "card-palavra", "params": {"palavra": "HESITA?", "topo": "O ALARME SOA", "topo_t": 8.1, "sub": "A CADEIA DE COMANDO", "sub_t": 9.6, "pilulas": [[10.66, "NINGUÉM AGE"]]}}}, {"id": "c03", "type": "scene", "track": "mapa", "label": "07:02 Radar de Opana", "start": 11.3, "dur": 9.7, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.86, -157.72], "zoom": 0.44, "push": 1.1, "cy": 300, "hora": "07:02", "hora_cor": "#ffd23f", "sub": "RADAR DE OPANA · NORTE DE OAHU", "titulos": [[11.3, "UMA NUVEM IMENSA", "NUVEM", "#3fe0d0"], [17.18, "IGNORADO", "IGNORADO", "#ff4d3a"]], "lugares": [["OAHU", 21.55, -158.0, 11.5]], "icones": [{"tipo": "radar", "lat": 21.68, "lon": -157.993, "tam": 1.3, "rotulo": "OPANA", "t": 11.5, "lx": 0, "ly": 42}], "enxame": [{"tipo": "blip", "de": [22.14, -157.98], "para": [21.92, -157.99], "t": 13.6, "dur": 7, "n": 30, "stagger": 0.05, "espalha": 70, "lento": true, "rastro": false}], "setas": [{"de": [22.02, -157.8], "para": [21.84, -157.84], "t": 15.8, "dur": 0.7, "curva": 0.1}], "caixas": [{"t": 19.3, "texto": "“NÃO SE PREOCUPE COM ISSO.”", "rotulo": "Tenente de plantão"}]}}}, {"id": "c04", "type": "scene", "track": "mapa", "label": "07:48 Kaneohe", "start": 21.0, "dur": 4.4, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.47, -157.8], "zoom": 1.0, "push": 1.07, "cy": 400, "hora": "07:48", "hora_cor": "#ff4d3a", "sub": "BASE AERONAVAL DE KANEOHE", "titulos": [[21.0, "AS PRIMEIRAS BOMBAS", "BOMBAS", "#ff4d3a"]], "icones": [{"tipo": "base", "lat": 21.4505, "lon": -157.768, "tam": 1.3, "rotulo": "KANEOHE", "t": 21.1, "lx": 0, "ly": 44}], "enxame": [{"tipo": "aviao", "de": [21.66, -157.88], "para": [21.46, -157.775], "t": 21.2, "dur": 2.6, "n": 10, "stagger": 0.12, "espalha": 60}], "explosoes": [{"lat": 21.452, "lon": -157.771, "t": 24.1, "r": 28, "fica": true}, {"lat": 21.447, "lon": -157.764, "t": 24.45, "r": 22, "fica": true}, {"lat": 21.456, "lon": -157.777, "t": 24.8, "r": 20, "fica": true}]}}}, {"id": "c05", "type": "scene", "track": "mapa", "label": "07:55 Primeira onda", "start": 25.4, "dur": 7.2, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.55, -157.98], "zoom": 0.42, "push": 1.12, "cy": 330, "hora": "07:55", "hora_cor": "#ff4d3a", "sub": "PRIMEIRA ONDA", "titulos": [[25.4, "A PRIMEIRA ONDA", "PRIMEIRA", "#ffd23f"], [30.8, "MERGULHAM SOBRE O PORTO", "PORTO", "#ff4d3a"]], "lugares": [["PEARL HARBOR", 21.365, -157.955, 25.5]], "icones": [{"tipo": "base", "lat": 21.4505, "lon": -157.768, "tam": 1.0, "t": 25.4, "fogo": 25.4, "fogo_tam": 1.0}], "enxame": [{"tipo": "aviao", "de": [21.84, -158.06], "para": [21.375, -157.96], "t": 27.3, "dur": 3.4, "n": 28, "stagger": 0.09, "espalha": 75}], "numero": {"t": 28.68, "valor": 183, "rotulo": "AVIÕES"}}}}, {"id": "c06", "type": "scene", "track": "mapa", "label": "08:06 Arizona explode", "start": 32.6, "dur": 8.6, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "porto", "foco": [21.3628, -157.9528], "foco2": [21.3646, -157.9505], "zoom": 1.45, "push": 1.1, "cy": 400, "hora": "08:06", "hora_cor": "#ff4d3a", "sub": "FILEIRA DOS ENCOURAÇADOS", "titulos": [[32.6, "A FILEIRA DOS ENCOURAÇADOS", "", ""], [35.1, "O ARIZONA EXPLODE", "ARIZONA", "#ff4d3a"]], "icones": [{"tipo": "navio", "lat": 21.3672, "lon": -157.948, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3651, "lon": -157.9499, "ang": -140, "tam": 0.9, "fogo": 35.44, "fogo_tam": 1.8, "rotulo": "ARIZONA", "rot_t": 35.1, "lx": -70, "ly": -26}, {"tipo": "navio", "lat": 21.3634, "lon": -157.9517, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3628, "lon": -157.9508, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3616, "lon": -157.9536, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.361, "lon": -157.9527, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3593, "lon": -157.9562, "ang": -140, "tam": 0.9}], "enxame": [{"tipo": "aviao", "de": [21.374, -157.938], "para": [21.364, -157.952], "t": 32.8, "dur": 2.2, "n": 6, "stagger": 0.25, "espalha": 40, "some": true, "tam": 1.3}], "explosoes": [{"lat": 21.3651, "lon": -157.9499, "t": 35.44, "r": 70}], "fumaca": [{"lat": 21.3651, "lon": -157.9499, "t": 36.2, "r": 18}], "numero": {"t": 37.0, "valor": 1177, "rotulo": "MARINHEIROS MORTOS"}}}}, {"id": "c07", "type": "scene", "track": "mapa", "label": "08:10 Oklahoma vira", "start": 41.2, "dur": 6.8, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "porto", "foco": [21.3622, -157.9525], "foco2": [21.3612, -157.953], "zoom": 1.7, "push": 1.08, "cy": 400, "hora": "08:10", "hora_cor": "#ff4d3a", "sub": "QUATRO MINUTOS DEPOIS", "titulos": [[41.2, "QUATRO MINUTOS DEPOIS", "", ""], [43.16, "O OKLAHOMA VIRA", "VIRA", "#ffd23f"]], "icones": [{"tipo": "navio", "lat": 21.3672, "lon": -157.948, "ang": -140, "tam": 1.0}, {"tipo": "navio", "lat": 21.3651, "lon": -157.9499, "ang": -140, "tam": 1.0, "fogo": 41.2, "fogo_tam": 1.8}, {"tipo": "navio", "lat": 21.3634, "lon": -157.9517, "ang": -140, "tam": 1.0}, {"tipo": "navio", "lat": 21.3628, "lon": -157.9508, "ang": -140, "tam": 1.0}, {"tipo": "navio", "lat": 21.3616, "lon": -157.9536, "ang": -140, "tam": 1.0}, {"tipo": "navio", "lat": 21.361, "lon": -157.9527, "ang": -140, "tam": 1.0, "vira": 43.5, "rotulo": "OKLAHOMA", "rot_t": 43.16, "lx": 80, "ly": 40}, {"tipo": "navio", "lat": 21.3593, "lon": -157.9562, "ang": -140, "tam": 1.0}], "fumaca": [{"lat": 21.3651, "lon": -157.9499, "t": 41.2, "r": 20}, {"lat": 21.3634, "lon": -157.9517, "t": 42.0, "r": 14}], "caixas": [{"t": 45.38, "texto": "CENTENAS PRESOS VIVOS NO CASCO", "rotulo": "Navio de cabeça para baixo"}]}}}, {"id": "c08", "type": "scene", "track": "mapa", "label": "08:54 Segunda onda", "start": 48.0, "dur": 6.5, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.52, -157.9], "zoom": 0.45, "push": 1.1, "cy": 360, "hora": "08:54", "hora_cor": "#ff4d3a", "sub": "SEGUNDA ONDA", "titulos": [[48.0, "A SEGUNDA ONDA", "SEGUNDA", "#ffd23f"]], "lugares": [["PEARL HARBOR", 21.365, -157.955, 48.1]], "fumaca": [{"lat": 21.364, "lon": -157.952, "t": 48.0, "r": 12}, {"lat": 21.45, "lon": -157.77, "t": 48.0, "r": 10}], "enxame": [{"tipo": "aviao", "de": [21.82, -157.74], "para": [21.38, -157.95], "t": 50.6, "dur": 3.2, "n": 18, "stagger": 0.1, "espalha": 70}, {"tipo": "aviao", "de": [21.76, -157.66], "para": [21.46, -157.775], "t": 50.9, "dur": 2.8, "n": 8, "stagger": 0.12, "espalha": 45}], "numero": {"t": 52.26, "valor": 167, "rotulo": "AVIÕES"}}}}, {"id": "c09", "type": "scene", "track": "mapa", "label": "09:45 Ultimo zero", "start": 54.5, "dur": 5.1, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.6, -158.0], "zoom": 0.42, "push": 1.06, "cy": 380, "hora": "09:45", "hora_cor": "#ffd23f", "sub": "FIM DO ATAQUE", "titulos": [[54.5, "FIM DO ATAQUE", "", ""], [56.34, "O ÚLTIMO ZERO PARTE", "ZERO", "#3fe0d0"]], "lugares": [["PEARL HARBOR", 21.365, -157.955, 54.6]], "fumaca": [{"lat": 21.364, "lon": -157.952, "t": 54.5, "r": 16}, {"lat": 21.45, "lon": -157.77, "t": 54.5, "r": 12}], "enxame": [{"tipo": "aviao", "de": [21.39, -157.97], "para": [21.98, -158.12], "t": 54.6, "dur": 3.0, "n": 7, "stagger": 0.3, "espalha": 50, "some": true}, {"tipo": "aviao", "de": [21.39, -157.97], "para": [21.98, -158.12], "t": 56.9, "dur": 2.6, "n": 1, "espalha": 0, "some": true, "tam": 1.5}]}}}, {"id": "c10", "type": "scene", "track": "mapa", "label": "Saldo", "start": 59.6, "dur": 6.15, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "porto", "foco": [21.3635, -157.955], "zoom": 1.1, "push": 1.05, "cy": 380, "hora": "7 DEZ 1941", "hora_cor": "#ff4d3a", "sub": "BALANÇO DO ATAQUE", "titulos": [[59.6, "O SALDO", "SALDO", "#ff4d3a"]], "escurecer": 0.5, "escurecer_t": 59.6, "icones": [{"tipo": "navio", "lat": 21.3672, "lon": -157.948, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3651, "lon": -157.9499, "ang": -140, "tam": 0.9, "fogo": 0, "fogo_tam": 1.8}, {"tipo": "navio", "lat": 21.3634, "lon": -157.9517, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3628, "lon": -157.9508, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.3616, "lon": -157.9536, "ang": -140, "tam": 0.9}, {"tipo": "navio", "lat": 21.361, "lon": -157.9527, "ang": -140, "tam": 0.9, "vira": 0}, {"tipo": "navio", "lat": 21.3593, "lon": -157.9562, "ang": -140, "tam": 0.9}], "fumaca": [{"lat": 21.3651, "lon": -157.9499, "t": 59.6, "r": 20}, {"lat": 21.3615, "lon": -157.953, "t": 59.6, "r": 16}, {"lat": 21.359, "lon": -157.956, "t": 59.6, "r": 14}], "cards": [{"t": 59.66, "icone": "soldado", "valor": 2403, "rotulo": "americanos mortos"}, {"t": 63.48, "icone": "navio", "valor": 8, "rotulo": "encouraçados atingidos"}]}}}, {"id": "c11", "type": "scene", "track": "cards", "label": "Card AUSENTES", "start": 65.75, "dur": 7.75, "by": "template", "props": {"scene": "card-palavra", "params": {"palavra": "AUSENTES", "topo": "OS PORTA-AVIÕES", "topo_t": 66.3, "sub": "ERAM OS ALVOS PRINCIPAIS", "sub_t": 67.38, "pilulas": [[68.84, "ENTERPRISE · NO MAR"], [69.3, "LEXINGTON · NO MAR"]], "tag": "ERRO ESTRATÉGICO", "tag_t": 70.48}}}, {"id": "c12", "type": "scene", "track": "mapa", "label": "CTA Midway", "start": 73.5, "dur": 4.45, "by": "template", "props": {"scene": "mapa-timeline", "params": {"mapa": "ilha", "foco": [21.62, -158.0], "zoom": 0.36, "push": 1.05, "cy": 420, "hora": "4 JUN 1942", "hora_cor": "#4da3ff", "sub": "PRÓXIMO: MIDWAY", "titulos": [[73.5, "A PRÓXIMA BATALHA", "PRÓXIMA", "#ffd23f"], [76.4, "MIDWAY ESPERA", "MIDWAY", "#4da3ff"]], "cta": {"t": 73.6, "ate": 76.3}, "setas": [{"de": [21.62, -158.2], "para": [21.9, -158.32], "t": 76.4, "dur": 0.8, "curva": -0.15}], "caixas": [{"t": 76.45, "texto": "MIDWAY · 2.100 KM A NOROESTE", "rotulo": ""}]}}}]};
+const META={"ilha":{"z":12,"x0":61603,"y0":456999,"scale":1.0},"porto":{"z":14,"x0":256260,"y0":1841878,"scale":2.5}};
+const NS='http://www.w3.org/2000/svg',$=id=>document.getElementById(id);
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),ease=p=>p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2,eo=p=>1-Math.pow(1-p,3);
+const P=k=>((EDIT.items.find(i=>i.id===k)||{}).props||{}).value;
+function geo(m,lat,lon){const M=META[m],n=256*Math.pow(2,M.z),r=lat*Math.PI/180;
+ return[((lon+180)/360*n-M.x0)*M.scale,((1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n-M.y0)*M.scale];}
+function el(tag,at,par){const e=document.createElementNS(NS,tag);for(const k in at)e.setAttribute(k,at[k]);if(par)par.appendChild(e);return e;}
+// ---------- icones SVG (desenhados apontando para +x)
+function icon(tipo,g,cor){
+ if(tipo==='navio'){el('path',{d:'M-34,0 L-30,-7 L22,-7 L34,0 L22,7 L-30,7 Z',fill:cor||'#9aa1a8',stroke:'#111',"stroke-width":2.2},g);
+  el('rect',{x:-8,y:-4,width:14,height:8,fill:'#5d646b',stroke:'#111',"stroke-width":1.2},g);
+  for(const x of[-22,-14,14,22])el('circle',{cx:x,cy:0,r:3,fill:'#4a5056',stroke:'#111',"stroke-width":1},g);}
+ else if(tipo==='destroier'){el('path',{d:'M-22,0 L-19,-4.5 L14,-4.5 L23,0 L14,4.5 L-19,4.5 Z',fill:'#cfd5da',stroke:'#111',"stroke-width":2},g);el('rect',{x:-4,y:-2.5,width:8,height:5,fill:'#555'},g);}
+ else if(tipo==='sub'){el('ellipse',{cx:0,cy:0,rx:13,ry:3.6,fill:'#2b2b2b',stroke:'#fff',"stroke-width":1.6},g);el('rect',{x:-2,y:-2,width:5,height:4,fill:'#fff'},g);}
+ else if(tipo==='aviao'){el('path',{d:'M12,0 L4,-2 L1,-12 L-3,-12 L-2,-2 L-9,-2 L-11,-6 L-13,-6 L-12,0 L-13,6 L-11,6 L-9,2 L-2,2 L-3,12 L1,12 L4,2 Z',fill:'#f1f1f1',stroke:'#111',"stroke-width":1.4},g);el('circle',{cx:-0.5,cy:-7.5,r:2.2,fill:'#d31f1f'},g);el('circle',{cx:-0.5,cy:7.5,r:2.2,fill:'#d31f1f'},g);}
+ else if(tipo==='blip'){el('circle',{cx:0,cy:0,r:5,fill:'#ff9a2a',filter:'url(#glow)'},g);}
+ else if(tipo==='radar'){el('circle',{cx:0,cy:0,r:9,fill:'#111',stroke:'#fff',"stroke-width":2.5},g);el('path',{d:'M-5,3 A7,7 0 0 1 4,-5',fill:'none',stroke:'#7CFC7C',"stroke-width":2.5},g);}
+ else if(tipo==='base'){el('rect',{x:-11,y:-11,width:22,height:22,rx:3,fill:'#111',stroke:'#fff',"stroke-width":2.5},g);el('path',{d:'M-7,0 L7,0 M0,-7 L0,7',stroke:'#fff',"stroke-width":2.5},g);}
+}
+// ---------- cenas
+const SC=EDIT.items.filter(i=>i.type==='scene'&&i.props&&i.props.params).map(i=>({it:i,p:i.props.params,kind:i.props.scene,s:i.start,e:i.start+i.dur}));
+const OBJ=[];  // objetos do mapa por cena
+for(const S of SC){ if(S.kind!=='mapa-timeline')continue; const p=S.p, g=el('g',{style:'display:none'},$('g_obj')); S.g=g; S.objs=[];
+ for(const f of (p.fumaca||[])){const gg=el('g',{},g);const cs=[];for(let k=0;k<5;k++)cs.push(el('circle',{r:16+k*5,fill:'#3b3b3b',opacity:.5,filter:'url(#smk)'},gg));S.objs.push({kind:'fumaca',d:f,gg,cs});}
+ for(const a of (p.setas||[])){const path=el('path',{fill:'none',stroke:'#e8322a',"stroke-width":7,"stroke-linecap":'round',"marker-end":'url(#ah)',opacity:.95},g);S.objs.push({kind:'seta',d:a,path});}
+ for(const c of (p.icones||[])){const gg=el('g',{},g);const inner=el('g',{},gg);icon(c.tipo,inner,c.cor);
+   let lab=null;if(c.rotulo){lab=el('text',{"font-family":'Oswald',"font-weight":700,"font-size":24,fill:'#fff',stroke:'#000',"stroke-width":4,"paint-order":'stroke',"text-anchor":'middle'},gg);lab.textContent=c.rotulo;}
+   let fx=null;if(c.fogo!=null){fx=el('g',{},gg);for(let k=0;k<3;k++)el('circle',{r:10-k*3,fill:['#ff5a1f','#ff9a2a','#ffe36a'][k],filter:'url(#glow)'},fx);}
+   let rings=[];if(c.tipo==='radar'){for(let k=0;k<3;k++)rings.push(el('circle',{r:10,fill:'none',stroke:'#7CFC7C',"stroke-width":3},gg));gg.insertBefore(rings[0],inner);}
+   S.objs.push({kind:'icone',d:c,gg,inner,lab,fx,rings});}
+ for(const x of (p.explosoes||[])){const gg=el('g',{},g);const parts=[];for(let k=0;k<3;k++)parts.push(el('circle',{r:1,fill:['#ff4a1a','#ff9a2a','#fff3a0'][k],filter:'url(#glow)'},gg));S.objs.push({kind:'expl',d:x,gg,parts});}
+ for(const w of (p.enxame||[])){const items=[];for(let k=0;k<w.n;k++){const gg=el('g',{},g);const tr=el('line',{stroke:'#ff9a2a',"stroke-width":2,opacity:.55,"stroke-dasharray":'5 5'},g);g.appendChild(gg);icon(w.tipo||'aviao',gg);items.push({gg,tr,j1:Math.sin(k*12.9898)*43758.5453%1,j2:Math.sin(k*78.233)*12345.678%1});}S.objs.push({kind:'enxame',d:w,items});}
+ for(const l of (p.lugares||[])){const gg=el('g',{},g);el('circle',{r:5,fill:'#fff',stroke:'#000',"stroke-width":2},gg);const t=el('text',{x:10,y:8,"font-family":'Oswald',"font-weight":700,"font-size":26,fill:'#fff',stroke:'#000',"stroke-width":4.5,"paint-order":'stroke'},gg);t.textContent=l[0];S.objs.push({kind:'lugar',d:l,gg});}
+}
+let curScene=null,lastTit='',lastPill='',lastCard='';
+function camAt(S,t){const p=S.p,u=ease(clamp((t-S.s)/(S.e-S.s)));const f1=p.foco,f2=p.foco2||p.foco;
+ const lat=f1[0]+(f2[0]-f1[0])*u,lon=f1[1]+(f2[1]-f1[1])*u;const k=p.zoom*(1+((p.push||1.06)-1)*u);const c=geo(p.mapa,lat,lon);
+ return {k,tx:640-c[0]*k,ty:(p.cy||400)-c[1]*k};}
+function scr(cam,m,ll){const c=geo(m,ll[0],ll[1]);return[cam.tx+c[0]*cam.k,cam.ty+c[1]*cam.k];}
+function setTit(arr,t){let cur=null;for(const x of arr||[])if(t>=x[0])cur=x;const T=$('tit');
+ if(!cur){T.innerHTML='';lastTit='';return;}const key=cur.join('|');
+ if(key!==lastTit){lastTit=key;let h=cur[1];if(cur[2])h=h.replace(cur[2],`<span class="hl" style="background:${cur[3]||'#ffd23f'}">${cur[2]}</span>`);T.innerHTML=h;}
+ const a=clamp((t-cur[0])/0.3);T.style.opacity=a;T.style.transform=`translateY(${(1-eo(a))*-14}px)`;}
+function fmt(v){return Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+function renderAt(t){
+ const S=SC.find(s=>!s.it.hidden&&t>=s.s&&t<s.e)||SC[SC.length-1];
+ for(const s of SC)if(s.g)s.g.style.display=(s===S&&S.kind==='mapa-timeline')?'':'none';
+ const p=S.p;
+ // ---- card claro
+ const C=$('card');
+ if(S.kind==='card-palavra'){C.style.display='block';$('m_ilha').style.display='none';$('m_porto').style.display='none';
+  ['tit','pill','num','cx','leg','cta'].forEach(i=>$(i).style.display='none');$('cards').innerHTML='';
+  if(lastCard!==S.it.id){lastCard=S.it.id;C.querySelector('.pal').textContent=p.palavra;C.querySelector('.topo').textContent=p.topo||'';C.querySelector('.sub').textContent=p.sub||'';
+   C.querySelector('.tag').textContent=p.tag||'';C.querySelector('.pils').innerHTML=(p.pilulas||[]).map(x=>`<div class="pl">${x[1]}</div>`).join('');}
+  const lt=t-S.s;const pal=C.querySelector('.pal');const a=clamp(lt/0.35);pal.style.opacity=a;pal.style.transform=`scale(${0.92+0.08*eo(a)})`;
+  const tp=C.querySelector('.topo');tp.style.opacity=(p.topo&&t>=(p.topo_t||S.s))?clamp((t-(p.topo_t||S.s))/0.25):0;
+  const sb=C.querySelector('.sub');sb.style.opacity=(p.sub&&t>=(p.sub_t||S.s))?clamp((t-(p.sub_t||S.s))/0.3):0;
+  const tg=C.querySelector('.tag');tg.style.display=p.tag?'':'none';tg.style.opacity=(t>=(p.tag_t||S.s))?clamp((t-(p.tag_t||S.s))/0.25):0;
+  [...C.querySelectorAll('.pl')].forEach((d,i)=>{const pt=(p.pilulas[i]||[])[0]||S.s;const b=clamp((t-pt)/0.3);d.style.opacity=b;d.style.transform=`translateY(${(1-eo(b))*16}px)`;});
+  // rabisco vermelho sob a palavra
+  const w=Math.min(1100,p.palavra.length*92),x0=640-w/2,y=402;let d=`M${x0},${y}`;for(let i=1;i<=24;i++){const x=x0+w*i/24;d+=` Q${x-w/48},${y+(i%2?10:-8)} ${x},${y+(i%3-1)*3}`;}
+  const sq=$('sq');sq.setAttribute('d',d);const L=w*1.25;sq.setAttribute('stroke-dasharray',L);sq.setAttribute('stroke-dashoffset',L*(1-eo(clamp((lt-0.35)/0.6))));
+  return;}
+ C.style.display='none';lastCard='';$('leg').style.display='';
+ // ---- mapa
+ const cam=camAt(S,t);for(const m of['ilha','porto']){const im=$('m_'+m);im.style.display=m===p.mapa?'block':'none';if(m===p.mapa)im.style.transform=`translate(${cam.tx}px,${cam.ty}px) scale(${cam.k})`;}
+ $('dim').style.opacity=(p.escurecer&&t>=(p.escurecer_t||S.s))?p.escurecer*clamp((t-(p.escurecer_t||S.s))/0.4):0;
+ for(const o of S.objs||[]){const d=o.d;
+  if(o.kind==='lugar'){const c=scr(cam,p.mapa,[d[1],d[2]]);o.gg.setAttribute('transform',`translate(${c[0]},${c[1]})`);o.gg.style.opacity=t>=(d[3]||S.s)?clamp((t-(d[3]||S.s))/0.3):0;}
+  else if(o.kind==='icone'){const c=scr(cam,p.mapa,[d.lat,d.lon]);const t0=d.t||S.s;const a=clamp((t-t0)/0.3);let sc=d.tam||1;
+   o.gg.setAttribute('transform',`translate(${c[0]},${c[1]})`);o.gg.style.opacity=(t>=t0&&!(d.ate&&t>d.ate))?a:0;
+   let ry=1;if(d.vira!=null){const v=ease(clamp((t-d.vira)/1.4));ry=Math.cos(v*Math.PI);if(v>0.5){o.inner.querySelector('path').setAttribute('fill','#8a2c22');}else o.inner.querySelector('path').setAttribute('fill',d.cor||'#9aa1a8');}
+   o.inner.setAttribute('transform',`rotate(${d.ang||0}) scale(${sc},${sc*ry})`);
+   if(o.lab){o.lab.setAttribute('x',d.lx||0);o.lab.setAttribute('y',d.ly||-22);o.lab.style.opacity=t>=(d.rot_t||t0)?clamp((t-(d.rot_t||t0))/0.3):0;}
+   if(o.fx){const on=t>=d.fogo;o.fx.style.display=on?'':'none';if(on){const fl=1+0.18*Math.sin(t*23)+0.1*Math.sin(t*37);const g0=clamp((t-d.fogo)/0.5);o.fx.setAttribute('transform',`scale(${(0.4+1.2*g0)*fl*(d.fogo_tam||1.6)})`);}}
+   for(let k=0;k<o.rings.length;k++){const ph=((t-t0)*0.7+k/3)%1;o.rings[k].setAttribute('r',10+ph*70);o.rings[k].setAttribute('opacity',(1-ph)*0.8);}}
+  else if(o.kind==='seta'){const a=scr(cam,p.mapa,d.de),b=scr(cam,p.mapa,d.para);const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2,dx=b[0]-a[0],dy=b[1]-a[1];const cv=d.curva==null?0.18:d.curva;
+   const cx=mx-dy*cv,cy=my+dx*cv;o.path.setAttribute('d',`M${a[0]},${a[1]} Q${cx},${cy} ${b[0]},${b[1]}`);const L=Math.hypot(dx,dy)*1.08+1;const pr=eo(clamp((t-d.t)/(d.dur||0.8)));
+   o.path.setAttribute('stroke-dasharray',`${L*pr} ${L*2}`);o.path.style.opacity=t>=d.t?1:0;o.path.setAttribute('marker-end',pr>0.97?'url(#ah)':'');}
+  else if(o.kind==='expl'){const c=scr(cam,p.mapa,[d.lat,d.lon]);const lt=t-d.t;o.gg.setAttribute('transform',`translate(${c[0]},${c[1]})`);
+   if(lt<0){o.gg.style.opacity=0;continue;}o.gg.style.opacity=lt<1.4?1:clamp(1-(lt-1.4)/0.6)*0.0+ (d.fica?0.85:clamp(1-(lt-1.4)/0.6));
+   const R=(d.r||26)*(lt<0.5?eo(lt/0.5):1)*(1+0.12*Math.sin(t*19));o.parts.forEach((c2,k)=>c2.setAttribute('r',R*(1-k*0.3)));}
+  else if(o.kind==='fumaca'){const c=scr(cam,p.mapa,[d.lat,d.lon]);const t0=d.t||S.s;o.gg.style.opacity=t>=t0?clamp((t-t0)/1)*0.9:0;
+   o.cs.forEach((ci,k)=>{const ph=((t*0.12)+k/5)%1;ci.setAttribute('cx',c[0]+ph*-60+k*4);ci.setAttribute('cy',c[1]-ph*90);ci.setAttribute('opacity',0.55*(1-ph));ci.setAttribute('r',(d.r||14)+ph*30);});}
+  else if(o.kind==='enxame'){const A=scr(cam,p.mapa,d.de),B=scr(cam,p.mapa,d.para);const dx=B[0]-A[0],dy=B[1]-A[1],len=Math.hypot(dx,dy),nx=-dy/len,ny=dx/len,ang=Math.atan2(dy,dx)*180/Math.PI;
+   o.items.forEach((it,k)=>{const st=d.t+k*(d.stagger||0.08);const pr=clamp((t-st)/(d.dur||3));const sp=(d.espalha||70);const off=(Math.abs(it.j1)-0.5)*2*sp,along=(Math.abs(it.j2)-0.5)*sp*0.8;
+    const ep=d.lento?pr:ease(pr);const x=A[0]+dx*ep+nx*off+dx/len*along,y=A[1]+dy*ep+ny*off+dy/len*along;const vis=t>=st&&!(d.some&&pr>=1);
+    it.gg.style.opacity=vis?clamp((t-st)/0.3):0;it.gg.setAttribute('transform',`translate(${x},${y}) rotate(${ang}) scale(${d.tam||1})`);
+    it.tr.style.opacity=vis&&d.rastro!==false?0.5:0;it.tr.setAttribute('x1',A[0]+nx*off+dx/len*along);it.tr.setAttribute('y1',A[1]+ny*off+dy/len*along);it.tr.setAttribute('x2',x);it.tr.setAttribute('y2',y);});}
+ }
+ // ---- títulos / pílula / número / caixa
+ $('tit').style.display='';setTit(p.titulos,t);
+ const pl=$('pill');if(p.hora){pl.style.display='';const key=p.hora+p.sub;if(key!==lastPill){lastPill=key;pl.querySelector('.h').textContent=p.hora;pl.querySelector('.h').style.color=p.hora_cor||'#ffd23f';pl.querySelector('.s').textContent=p.sub||'';}
+  const a=clamp((t-S.s)/0.25);pl.style.opacity=a;pl.style.transform=`translateX(${(1-eo(a))*-30}px)`;}else pl.style.display='none';
+ const N=$('num');if(p.numero&&t>=p.numero.t){N.style.display='';const a=clamp((t-p.numero.t)/0.9);N.querySelector('.v').textContent=fmt(p.numero.valor*eo(a))+(p.numero.suf||'');N.querySelector('.r').textContent=p.numero.rotulo;N.style.opacity=clamp((t-p.numero.t)/0.25);}else N.style.display='none';
+ const X=$('cx');let cx=null;for(const c of p.caixas||[])if(t>=c.t)cx=c;if(cx){X.style.display='';X.querySelector('.t').textContent=cx.texto;X.querySelector('.r').textContent=cx.rotulo||'';X.querySelector('.r').style.display=cx.rotulo?'':'none';const a=clamp((t-cx.t)/0.3);X.style.opacity=a;X.style.transform=`translateX(-50%) translateY(${(1-eo(a))*14}px)`;}else X.style.display='none';
+ // cards de ícones
+ const CD=$('cards');if(p.cards){if(CD.dataset.k!==S.it.id){CD.dataset.k=S.it.id;const n=p.cards.length,W=300,gap=60,x0=640-(n*W+(n-1)*gap)/2;
+   CD.innerHTML=p.cards.map((c,i)=>`<div class="ic" style="left:${x0+i*(W+gap)}px"><svg width="90" height="80" viewBox="-45 -40 90 80">${c.icone==='soldado'?'<circle cx="0" cy="-22" r="11" fill="#fff"/><path d="M-20,30 L-16,-4 Q0,-12 16,-4 L20,30 Z" fill="#fff"/><path d="M-14,-26 Q0,-42 14,-26 Z" fill="#9aa"/>':'<path d="M-42,8 L-36,-2 L30,-2 L42,8 L32,18 L-34,18 Z" fill="#fff"/><rect x="-12" y="-16" width="22" height="14" fill="#fff"/><rect x="-2" y="-30" width="5" height="14" fill="#fff"/><path d="M-30,-6 L-18,-6 M20,-6 L32,-6" stroke="#fff" stroke-width="5"/>'}</svg><div class="v" data-v="${c.valor}"></div><div class="r">${c.rotulo}</div></div>`).join('');}
+  [...CD.children].forEach((d,i)=>{const c=p.cards[i];const a=clamp((t-c.t)/0.35);d.style.opacity=a;d.style.transform=`translateY(${(1-eo(a))*24}px)`;d.querySelector('.v').textContent=fmt(c.valor*eo(clamp((t-c.t)/1)));});}
+ else{CD.innerHTML='';CD.dataset.k='';}
+ const CT=$('cta');if(p.cta&&t>=p.cta.t){CT.style.display='flex';if(!CT.innerHTML)CT.innerHTML=`<div class="bt"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M2 21h4V9H2v12zm20-11c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6C6.2 8 6 8.5 6 9v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2z" fill="#4da3ff"/></svg>LIKE</div><div class="bt red">INSCREVA-SE</div>`;
+  const a=clamp((t-p.cta.t)/0.35);CT.style.opacity=a*(p.cta.ate&&t>p.cta.ate?clamp(1-(t-p.cta.ate)/0.3):1);CT.style.transform=`translateX(-50%) scale(${0.9+0.1*eo(a)})`;}else{CT.style.display='none';}
+}
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true,onUpdate:()=>renderAt(tl.time())});
+tl.to({v:0},{v:1,duration:77.95,ease:"none"},0);
+window.__timelines["main"]=tl;
+window.__hfRender=t=>renderAt(t);window.addEventListener("hf-seek",e=>renderAt(e.detail.time));
+renderAt(0);if(document.fonts)document.fonts.ready.then(()=>renderAt(tl.time()));
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+})();</script>
+</body></html>

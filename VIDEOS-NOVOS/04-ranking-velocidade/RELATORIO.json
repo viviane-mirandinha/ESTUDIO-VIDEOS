@@ -1,0 +1,13 @@
+{
+ "video": 4,
+ "estilo": "Comparação / ranking animado (RED SIDE)",
+ "inicio": "2026-10-22T10:32:09-03:00",
+ "fim": "2026-10-22T10:57:44-03:00",
+ "minutos": 25.6,
+ "render_segundos": 64,
+ "observacoes": "Template local (template.html) em canvas 2D: deserto parallax 3 camadas (céu/nuvens, mesas+torres, chão com pedrinhas com perspectiva e rastro de velocidade), câmera integrada pela velocidade do item; 6 recortes Wikimedia (rembg isnet) entrando pela direita e caindo para a lane de trás; rótulo fixo vermelho Anton 58px + valor 46px com contador + status 24px; falcão = inclinação para o céu e mergulho vertical com painel 3x; ranking final + inscreva-se. Wikimedia deu 429 (rate limit) na busca: resolvido com backoff. Antílope com recorte de baixa resolução (136x95) fica um pouco borrado. Whisper GPU falhou (cublas64_12.dll ausente) -> CPU. Créditos em img/creditos.json.",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "o template.html é reaproveitável: um vídeo novo = lista {nome, valor, img, alt, vel, anim} no edit.json + recortes PNG (Wikimedia+rembg ~1 min/item). 30 min ≈ 60-90 itens: busca/recorte de imagens ~1 h + render draft ~20-25 min; gargalo é achar fotos boas de perfil e o rate limit do Wikimedia."
+ }
+}

@@ -1,0 +1,1422 @@
+{
+ "version": 1,
+ "name": "02 - TRUE CRIME ARQUIVO - O caso Jack, o Estripador",
+ "estilo": "True crime arquivo (Dieck Docs / Ossos Perdidos)",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 60.6,
+ "template": "generic",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf",
+  "Anton": "fonts/Anton-Regular.ttf"
+ },
+ "head": "<style>#s0{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s1{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s2{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s3{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s4{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s5{object-position:50% 8%}\n#s5{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s6{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s7{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s8{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s9{object-position:50% 15%}\n#s9{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s10{object-position:50% 30%}\n#s10{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s11{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s12{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s13{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s14{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n#s15{filter:grayscale(.9) sepia(.12) contrast(1.15) brightness(.9)}\n.fr{width:100%;height:100%;box-sizing:border-box;border:1px solid #333;box-shadow:0 0 40px rgba(0,0,0,.9)}</style>",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.1,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fotos de arquivo (moldura pequena)"
+  },
+  {
+   "id": "moldura",
+   "name": "Borda da moldura"
+  },
+  {
+   "id": "textos",
+   "name": "Nomes / datas"
+  },
+  {
+   "id": "capitulos",
+   "name": "Capítulos vermelhos / mapa"
+  },
+  {
+   "id": "efeitos",
+   "name": "Vinheta / grão"
+  }
+ ],
+ "items": [
+  {
+   "id": "s0",
+   "type": "image",
+   "track": "fundo",
+   "label": "wentworth_0 · WHITECHAPEL, 1888",
+   "start": 0.0,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/wentworth_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m0",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 0.0,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n0",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: WHITECHAPEL, 1888",
+   "start": 0.25,
+   "dur": 3.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "WHITECHAPEL, 1888",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d0",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: Londres",
+   "start": 0.45,
+   "dur": 2.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Londres",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s1",
+   "type": "image",
+   "track": "fundo",
+   "label": "ipn_1 · SETEMBRO DE 1888",
+   "start": 3.4,
+   "dur": 2.9,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/ipn_1.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "pan_down",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m1",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 3.4,
+   "dur": 2.9,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n1",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: SETEMBRO DE 1888",
+   "start": 3.65,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "SETEMBRO DE 1888",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d1",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: The Illustrated Police News",
+   "start": 3.85,
+   "dur": 2.35,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "The Illustrated Police News",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s2",
+   "type": "image",
+   "track": "fundo",
+   "label": "ipn_2 · PERFIL PSICOLÓGICO",
+   "start": 6.3,
+   "dur": 2.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/ipn_2.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m2",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 6.3,
+   "dur": 2.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n2",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: PERFIL PSICOLÓGICO",
+   "start": 6.55,
+   "dur": 1.65,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "PERFIL PSICOLÓGICO",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "s3",
+   "type": "image",
+   "track": "fundo",
+   "label": "buff_0 · JACK, O ESTRIPADOR",
+   "start": 8.3,
+   "dur": 3.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/buff_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_out",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m3",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 8.3,
+   "dur": 3.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n3",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: JACK, O ESTRIPADOR",
+   "start": 8.55,
+   "dur": 2.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "JACK, O ESTRIPADOR",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d3",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: Punch, 22 de setembro de 1888",
+   "start": 8.75,
+   "dur": 2.65,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Punch, 22 de setembro de 1888",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s4",
+   "type": "image",
+   "track": "fundo",
+   "label": "dudley_0 · foto",
+   "start": 11.5,
+   "dur": 1.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/dudley_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383,
+    "motion": "pan_left",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m4",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 11.5,
+   "dur": 1.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383
+   }
+  },
+  {
+   "id": "s5",
+   "type": "image",
+   "track": "fundo",
+   "label": "warren_x · SIR CHARLES WARREN",
+   "start": 14.6,
+   "dur": 2.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/warren_x.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "pan_up",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m5",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 14.6,
+   "dur": 2.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n5",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: SIR CHARLES WARREN",
+   "start": 14.85,
+   "dur": 2.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "SIR CHARLES WARREN",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d5",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: chefe da Polícia Metropolitana",
+   "start": 15.05,
+   "dur": 2.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "chefe da Polícia Metropolitana",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s6",
+   "type": "image",
+   "track": "fundo",
+   "label": "herschel_1 · IMPRESSÃO DIGITAL",
+   "start": 24.4,
+   "dur": 3.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/herschel_1.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383,
+    "motion": "pan_right",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m6",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 24.4,
+   "dur": 3.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383
+   }
+  },
+  {
+   "id": "n6",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: IMPRESSÃO DIGITAL",
+   "start": 24.65,
+   "dur": 2.65,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "IMPRESSÃO DIGITAL",
+    "x": 640,
+    "y": 461.5,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d6",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: a Scotland Yard só adotou em 1901",
+   "start": 24.85,
+   "dur": 2.45,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "a Scotland Yard só adotou em 1901",
+    "x": 640,
+    "y": 565.5,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s7",
+   "type": "image",
+   "track": "fundo",
+   "label": "phillips_0 · DR. GEORGE BAGSTER PHILLIPS",
+   "start": 27.4,
+   "dur": 4.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/phillips_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m7",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 27.4,
+   "dur": 4.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n7",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: DR. GEORGE BAGSTER PHILLIPS",
+   "start": 27.65,
+   "dur": 3.65,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "DR. GEORGE BAGSTER PHILLIPS",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d7",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: cirurgião da polícia",
+   "start": 27.85,
+   "dur": 3.45,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "cirurgião da polícia",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s8",
+   "type": "image",
+   "track": "fundo",
+   "label": "fromhell_0 · \"FROM HELL\"",
+   "start": 33.7,
+   "dur": 2.3,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/fromhell_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m8",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 33.7,
+   "dur": 2.3,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n8",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: \"FROM HELL\"",
+   "start": 33.95,
+   "dur": 1.95,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "\"FROM HELL\"",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d8",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: outubro de 1888",
+   "start": 34.15,
+   "dur": 1.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "outubro de 1888",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s9",
+   "type": "image",
+   "track": "fundo",
+   "label": "lusk_0 · GEORGE LUSK",
+   "start": 36.0,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/lusk_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m9",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 36.0,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n9",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: GEORGE LUSK",
+   "start": 36.25,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "GEORGE LUSK",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d9",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: Comitê de Vigilância de Whitechapel",
+   "start": 36.45,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Comitê de Vigilância de Whitechapel",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s10",
+   "type": "image",
+   "track": "fundo",
+   "label": "swanson_0 · DONALD SWANSON",
+   "start": 39.1,
+   "dur": 4.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/swanson_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_out",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m10",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 39.1,
+   "dur": 4.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n10",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: DONALD SWANSON",
+   "start": 39.35,
+   "dur": 3.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "DONALD SWANSON",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d10",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: inspetor-chefe",
+   "start": 39.55,
+   "dur": 3.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "inspetor-chefe",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s11",
+   "type": "image",
+   "track": "fundo",
+   "label": "wentworth_2 · AARON KOSMINSKI",
+   "start": 43.2,
+   "dur": 2.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/wentworth_2.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "pan_right",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m11",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 43.2,
+   "dur": 2.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n11",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: AARON KOSMINSKI",
+   "start": 43.45,
+   "dur": 2.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "AARON KOSMINSKI",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d11",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: imigrante polonês · sem foto conhecida",
+   "start": 43.65,
+   "dur": 2.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "imigrante polonês · sem foto conhecida",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s12",
+   "type": "image",
+   "track": "fundo",
+   "label": "colney_0 · COLNEY HATCH",
+   "start": 45.8,
+   "dur": 1.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/colney_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m12",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 45.8,
+   "dur": 1.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383
+   }
+  },
+  {
+   "id": "n12",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: COLNEY HATCH",
+   "start": 46.05,
+   "dur": 1.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "COLNEY HATCH",
+    "x": 640,
+    "y": 461.5,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d12",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: internado em 1891",
+   "start": 46.25,
+   "dur": 1.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "internado em 1891",
+    "x": 640,
+    "y": 565.5,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s13",
+   "type": "image",
+   "track": "fundo",
+   "label": "ipn_1 · SEM DNA",
+   "start": 47.4,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/ipn_1.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "pan_up",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m13",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 47.4,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "n13",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: SEM DNA",
+   "start": 47.65,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "SEM DNA",
+    "x": 640,
+    "y": 495.0,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d13",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: só restou a suspeita",
+   "start": 47.85,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "só restou a suspeita",
+    "x": 640,
+    "y": 599.0,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "s14",
+   "type": "image",
+   "track": "fundo",
+   "label": "nemesis_x · foto",
+   "start": 50.5,
+   "dur": 4.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/nemesis_x.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450,
+    "motion": "zoom_in",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m14",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 50.5,
+   "dur": 4.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 600,
+    "h": 450
+   }
+  },
+  {
+   "id": "s15",
+   "type": "image",
+   "track": "fundo",
+   "label": "dudley_0 · INSCREVA-SE",
+   "start": 55.3,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/dudley_0.jpg",
+    "fit": "cover",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383,
+    "motion": "pan_right",
+    "motion_amount": 0.1,
+    "opacity": 1
+   }
+  },
+  {
+   "id": "m15",
+   "type": "html",
+   "track": "moldura",
+   "label": "moldura",
+   "start": 55.3,
+   "dur": 3.1,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='fr'></div>",
+    "css": "",
+    "x": 640,
+    "y": 340,
+    "w": 680,
+    "h": 383
+   }
+  },
+  {
+   "id": "n15",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome: INSCREVA-SE",
+   "start": 55.55,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 640,
+    "y": 461.5,
+    "w": 1100,
+    "size": 54,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "d15",
+   "type": "text",
+   "track": "textos",
+   "label": "Data/sub: mais mistérios não resolvidos",
+   "start": 55.75,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "mais mistérios não resolvidos",
+    "x": 640,
+    "y": 565.5,
+    "w": 1100,
+    "size": 28,
+    "color": "#d8d8d8",
+    "font": "Oswald",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "cap0",
+   "type": "scene",
+   "track": "capitulos",
+   "label": "Capítulo: PRIMEIRO A JURISDIÇÃO",
+   "start": 12.7,
+   "dur": 1.9,
+   "props": {
+    "fill": true,
+    "scene": "capitulo-vermelho",
+    "params": {
+     "numero": "PRIMEIRO",
+     "texto": "A JURISDIÇÃO",
+     "cor": "#b3121a",
+     "fonte": "Anton"
+    }
+   }
+  },
+  {
+   "id": "cap1",
+   "type": "scene",
+   "track": "capitulos",
+   "label": "Capítulo: SEGUNDO A CIÊNCIA",
+   "start": 22.5,
+   "dur": 1.9,
+   "props": {
+    "fill": true,
+    "scene": "capitulo-vermelho",
+    "params": {
+     "numero": "SEGUNDO",
+     "texto": "A CIÊNCIA",
+     "cor": "#b3121a",
+     "fonte": "Anton"
+    }
+   }
+  },
+  {
+   "id": "cap2",
+   "type": "scene",
+   "track": "capitulos",
+   "label": "Capítulo: TERCEIRO A CARTA \"FROM HELL\"",
+   "start": 31.4,
+   "dur": 2.3,
+   "props": {
+    "fill": true,
+    "scene": "capitulo-vermelho",
+    "params": {
+     "numero": "TERCEIRO",
+     "texto": "A CARTA \"FROM HELL\"",
+     "cor": "#b3121a",
+     "fonte": "Anton"
+    }
+   }
+  },
+  {
+   "id": "cap3",
+   "type": "scene",
+   "track": "capitulos",
+   "label": "Capítulo:  O ARQUIVO CONTINUA ABERTO",
+   "start": 58.4,
+   "dur": 2.2,
+   "props": {
+    "fill": true,
+    "scene": "capitulo-vermelho",
+    "params": {
+     "numero": "",
+     "texto": "O ARQUIVO CONTINUA ABERTO",
+     "cor": "#b3121a",
+     "fonte": "Anton"
+    }
+   }
+  },
+  {
+   "id": "mapa",
+   "type": "scene",
+   "track": "capitulos",
+   "label": "Mapa Londres 1888",
+   "start": 17.2,
+   "dur": 5.3,
+   "props": {
+    "fill": true,
+    "scene": "mapa-whitechapel",
+    "params": {
+     "titulo": "LONDRES, 1888",
+     "city": "CITY OF LONDON",
+     "whitechapel": "WHITECHAPEL",
+     "rio": "RIO TÂMISA",
+     "nota": "Mitre Square: jurisdição da City"
+    }
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "efeitos",
+   "label": "Vinheta",
+   "start": 0,
+   "dur": 60.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class='vig'></div>",
+    "css": ".vig{width:1280px;height:720px;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 40%,rgba(0,0,0,.75) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "grao",
+   "type": "html",
+   "track": "efeitos",
+   "label": "Grão de filme",
+   "start": 0,
+   "dur": 60.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<svg width='1280' height='720' style='opacity:.22;mix-blend-mode:screen'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(#n)' opacity='.5'/></svg>",
+    "css": "",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  }
+ ],
+ "referencia": {
+  "canal": "Dieck Docs / Ossos Perdidos",
+  "canal_url": "",
+  "video": "https://youtu.be/s62OAyw77XQ",
+  "titulo": "",
+  "nota": "estilo 02 true crime arquivo; ver ESTILOS-NOVOS/02-true-crime-arquivo/REFERENCIA.txt"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "video": 5,
+ "estilo": "05-timeline-ano-a-ano (Linha do tempo / mapa data a data — ref. Atlas Unfolded)",
+ "inicio": "2026-10-22T15:07:51-03:00",
+ "fim": "2026-10-22T15:23:29-03:00",
+ "minutos": 15.6,
+ "render_segundos": 49,
+ "observacoes": "Voz 05-francisca.mp3 (Guerra dos Cem Anos, 75 s); whisper large-v3 GPU OK. Template/scripts copiados de _pearl-harbor-voz-errada e adaptados: pílula de ANO, mapa em relevo França+Inglaterra (AWS Terrain Tiles z8 + máscara de terra do countries50m.geojson), câmera por keyframes, áreas inglesas aproximadas (desenho à mão, recortadas pela costa via clipPath) que morfam entre datas, ícones de unidades (arqueiro/cavalaria/canhão/coroa/castelo), setas por lado, cards claros (1369, FOGUEIRA, PÓLVORA) e card de ícones em Crécy. 15 cenas editáveis no edit.json (params: cam, ano, sub, titulos, areas{kf}, icones, enxame, setas, explosoes, cards, cta). Sem SFX; música drone reaproveitada (baixa, ducking). blackdetect=0. 1 re-render para deixar a área inglesa mais marrom/contrastada. Datas que a fala não diz não aparecem (ex.: Poitiers = '+10 ANOS', Troyes sem ano).",
+ "estimativa_30min": {
+  "horas_maquina": 1.5,
+  "o_que_escala": "Tudo é dado: cada data = 1 cena {cam, ano, lugar, títulos, ícones, setas}; o Ollama gera a lista {data, lugar, evento, título curto} e uma tabela de geocodificação dá lat/lon. Render draft ~40 s por minuto (~20 min para 30 min). Gargalo: polígonos de território histórico por data (aqui à mão); para 30 min precisa de uma biblioteca de shapes por época/região."
+ }
+}

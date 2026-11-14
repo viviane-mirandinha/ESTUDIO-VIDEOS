@@ -1,0 +1,13 @@
+{
+ "video": 7,
+ "estilo": "07-cartoon-paises-personagens",
+ "inicio": "2026-10-22T12:55:48-03:00",
+ "fim": "2026-10-22T13:14:17-03:00",
+ "minutos": 18.5,
+ "render_segundos": 79,
+ "observacoes": "Template local (template.html gerado por make_edit.py a partir de template_src.html + europa.json): biblioteca SVG própria de personagens (França = hexágono tricolor de boina, Sindicato, Governo, Sistema-caixa, clones) com 10 expressões e poses de braço trocadas na palavra exata (faster-whisper GPU medium OK com torch\\lib no PATH). 21 tomadas, corte seco 1,2-6 s; cenários chapados (cidade ciano/verde, plenário, palco, mapa da Europa do countries50m), 3 fotos Wikimedia (protesto 2023 com placa 49.3, lixo em Paris, refinaria Fos-sur-Mer) com personagem na frente. Foto de trem baixada veio inválida/borrada -> trocada por trem cartoon dormindo. Wikimedia deu 429 várias vezes (fetch lento). 'hyperframes snapshot' falhou mudo (exit 1) -> conferência feita no próprio mp4. 1 re-render (rótulos cortados na borda e encavalados). Sem SFX, sem música, sem legenda (como a referência). Créditos em img/creditos.json.",
+ "estimativa_30min": {
+  "horas_maquina": 2.5,
+  "o_que_escala": "A biblioteca de personagens/cenários/props já está pronta no template: um vídeo novo = lista de tomadas {scene, params, t_*} no edit.json (pode ser preenchida pelo Ollama a partir do words.json) + 3-6 fotos. 30 min ≈ 350-450 tomadas; render draft ~35 min; o gargalo é criar personagem-país novo (cada país ~15 min de SVG) e gags novas além das ~20 cenas existentes."
+ }
+}

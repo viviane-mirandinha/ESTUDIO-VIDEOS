@@ -1,0 +1,352 @@
+{
+ "version": 1,
+ "name": "04 - COMPARACAO RANKING - Do mais lento ao mais rápido",
+ "estilo": "Comparação / ranking animado (RED SIDE)",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#7fb6e6"
+ },
+ "duration": 51.6,
+ "template": "local",
+ "referencia": {
+  "canal": "RED SIDE",
+  "canal_url": "https://www.youtube.com/@redsideofficial",
+  "video": "https://youtu.be/3wVvwd4oI1Y",
+  "titulo": "corrida de personagens por velocidade",
+  "nota": "versão 2D/2.5D: parallax + recortes PNG + rótulo vermelho fixo"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 5.75,
+    "volume": 0.18,
+    "label": "whoosh guepardo"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 33.45,
+    "volume": 0.22,
+    "label": "whoosh mergulho"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas"
+  },
+  {
+   "id": "visual",
+   "name": "Animais"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  }
+ ],
+ "items": [
+  {
+   "id": "t_titulo1",
+   "type": "text",
+   "track": "textos",
+   "label": "Título 1",
+   "start": 0.1,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "text": "A VELOCIDADE DOS ANIMAIS",
+    "size": 60,
+    "color": "#ffffff"
+   }
+  },
+  {
+   "id": "t_titulo2",
+   "type": "text",
+   "track": "textos",
+   "label": "Título 2 (vermelho)",
+   "start": 2.26,
+   "dur": 2.35,
+   "by": "template",
+   "props": {
+    "text": "DO MAIS LENTO AO MAIS RÁPIDO",
+    "size": 64,
+    "color": "#e5262a"
+   }
+  },
+  {
+   "id": "t_passa",
+   "type": "text",
+   "track": "textos",
+   "label": "Guepardo passando (intro)",
+   "start": 5.7,
+   "dur": 1.8,
+   "by": "template",
+   "props": {
+    "text": "GUEPARDO",
+    "valor": "IMBATÍVEL?",
+    "img": "img/guepardo.png"
+   }
+  },
+  {
+   "id": "t_rei",
+   "type": "text",
+   "track": "textos",
+   "label": "Frase do rei",
+   "start": 8.45,
+   "dur": 2.8,
+   "by": "template",
+   "props": {
+    "text": "O REI NÃO CORRE NO CHÃO",
+    "size": 58,
+    "color": "#ffffff",
+    "img": "img/falcao_voo.png"
+   }
+  },
+  {
+   "id": "a1",
+   "type": "text",
+   "track": "visual",
+   "label": "1 · LESMA DE JARDIM",
+   "start": 13.02,
+   "dur": 4.76,
+   "by": "template",
+   "props": {
+    "text": "LESMA DE JARDIM",
+    "valor": 0.05,
+    "dec": 2,
+    "unidade": "km/h",
+    "valor_em": 14.88,
+    "img": "img/lesma.png",
+    "alt": 150,
+    "vel": 16,
+    "anim": "slide",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "ALTA",
+    "info": "RASTEJA SOBRE MUCO"
+   }
+  },
+  {
+   "id": "a2",
+   "type": "text",
+   "track": "visual",
+   "label": "2 · TARTARUGA-GIGANTE",
+   "start": 17.78,
+   "dur": 3.12,
+   "by": "template",
+   "props": {
+    "text": "TARTARUGA-GIGANTE",
+    "valor": 0.3,
+    "dec": 1,
+    "unidade": "km/h",
+    "valor_em": 19.5,
+    "img": "img/tartaruga.png",
+    "alt": 210,
+    "vel": 40,
+    "anim": "walk",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "ALTA",
+    "info": "PASSO DE 250 KG"
+   }
+  },
+  {
+   "id": "a3",
+   "type": "text",
+   "track": "visual",
+   "label": "3 · HOMEM MÉDIO",
+   "start": 20.9,
+   "dur": 2.58,
+   "by": "template",
+   "props": {
+    "text": "HOMEM MÉDIO",
+    "valor": 24,
+    "dec": 0,
+    "unidade": "km/h",
+    "valor_em": 22.3,
+    "img": "img/homem.png",
+    "alt": 300,
+    "vel": 220,
+    "anim": "run",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "MÉDIA",
+    "info": "CORRIDA CURTA"
+   }
+  },
+  {
+   "id": "a4",
+   "type": "text",
+   "track": "visual",
+   "label": "4 · GATO DOMÉSTICO",
+   "start": 23.48,
+   "dur": 2.66,
+   "by": "template",
+   "props": {
+    "text": "GATO DOMÉSTICO",
+    "valor": 48,
+    "dec": 0,
+    "unidade": "km/h",
+    "valor_em": 24.72,
+    "img": "img/gato.png",
+    "alt": 165,
+    "vel": 380,
+    "anim": "gallop",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "ALTA",
+    "info": "ARRANCADA CURTA"
+   }
+  },
+  {
+   "id": "a5",
+   "type": "text",
+   "track": "visual",
+   "label": "5 · ANTÍLOPE-AMERICANO",
+   "start": 26.14,
+   "dur": 2.96,
+   "by": "template",
+   "props": {
+    "text": "ANTÍLOPE-AMERICANO",
+    "valor": 89,
+    "dec": 0,
+    "unidade": "km/h",
+    "valor_em": 27.68,
+    "img": "img/antilope.png",
+    "alt": 190,
+    "vel": 600,
+    "anim": "bound",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "ALTA",
+    "info": "MANTÉM POR QUILÔMETROS"
+   }
+  },
+  {
+   "id": "a6",
+   "type": "text",
+   "track": "visual",
+   "label": "6 · GUEPARDO",
+   "start": 29.1,
+   "dur": 4.32,
+   "by": "template",
+   "props": {
+    "text": "GUEPARDO",
+    "valor": 120,
+    "dec": 0,
+    "unidade": "km/h",
+    "valor_em": 32.1,
+    "img": "img/guepardo.png",
+    "alt": 215,
+    "vel": 850,
+    "anim": "sprint",
+    "status": "VELOCIDADE MÁXIMA",
+    "conf": "ALTA",
+    "info": "REI DO SOLO · 20 S DE FÔLEGO"
+   }
+  },
+  {
+   "id": "a7",
+   "type": "text",
+   "track": "visual",
+   "label": "7 · FALCÃO-PEREGRINO",
+   "start": 33.42,
+   "dur": 9.7,
+   "by": "template",
+   "props": {
+    "text": "FALCÃO-PEREGRINO",
+    "valor": 380,
+    "dec": 0,
+    "unidade": "km/h",
+    "valor_em": 36.22,
+    "img": "img/falcao.png",
+    "alt": 300,
+    "vel": 0,
+    "anim": "dive",
+    "status": "MERGULHO",
+    "conf": "ALTA",
+    "info": "EM PICADA (MERGULHO)"
+   }
+  },
+  {
+   "id": "t_x3",
+   "type": "text",
+   "track": "textos",
+   "label": "Comparação 3×",
+   "start": 38.0,
+   "dur": 2.65,
+   "by": "template",
+   "props": {
+    "text": "3× MAIS RÁPIDO",
+    "size": 64,
+    "color": "#ffffff",
+    "a": "GUEPARDO",
+    "va": 120,
+    "b": "FALCÃO",
+    "vb": 380
+   }
+  },
+  {
+   "id": "t_grav",
+   "type": "text",
+   "track": "textos",
+   "label": "Gravidade",
+   "start": 40.76,
+   "dur": 2.35,
+   "by": "template",
+   "props": {
+    "text": "GRAVIDADE > MÚSCULO",
+    "size": 60,
+    "color": "#ffffff"
+   }
+  },
+  {
+   "id": "t_rank",
+   "type": "text",
+   "track": "textos",
+   "label": "Ranking final",
+   "start": 43.1,
+   "dur": 8.5,
+   "by": "template",
+   "props": {
+    "text": "RANKING DA VELOCIDADE",
+    "size": 52,
+    "color": "#ffffff"
+   }
+  },
+  {
+   "id": "t_inscreva",
+   "type": "text",
+   "track": "textos",
+   "label": "Botão inscreva-se",
+   "start": 45.25,
+   "dur": 6.3,
+   "by": "template",
+   "props": {
+    "text": "INSCREVA-SE",
+    "size": 52,
+    "color": "#ffffff",
+    "bg": "#e5262a"
+   }
+  },
+  {
+   "id": "t_prox",
+   "type": "text",
+   "track": "textos",
+   "label": "Próximo vídeo",
+   "start": 46.3,
+   "dur": 5.3,
+   "by": "template",
+   "props": {
+    "text": "PRÓXIMO: QUEM ACELERA MAIS QUE UM F1?",
+    "size": 48,
+    "color": "#ffffff"
+   }
+  }
+ ]
+}

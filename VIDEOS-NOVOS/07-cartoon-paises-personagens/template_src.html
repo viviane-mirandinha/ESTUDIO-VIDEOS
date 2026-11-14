@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=block" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#38d6ff;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#38d6ff;}
+.shot{position:absolute;left:0;top:0;width:1280px;height:720px;opacity:0;}
+.shot svg{position:absolute;left:0;top:0;}
+#pre{position:absolute;left:0;top:0;width:2px;height:2px;overflow:hidden;opacity:0;}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1280" data-height="720">
+<svg width="0" height="0" style="position:absolute"><defs>
+<clipPath id="hexc"><polygon points="128,-160 64,-270.9 -64,-270.9 -128,-160 -64,-49.1 64,-49.1"/></clipPath>
+<linearGradient id="fotoesc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></linearGradient>
+</defs></svg>
+<div id="stage"></div>
+<div id="pre">%%PRE%%</div>
+<!--__ITEMS__-->
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+(function(){
+const EDIT=__EDIT__; const DUR=__DUR__;
+const EU=%%EUROPA%%;
+const K='#151515', RED='#e5262a', BLUE='#1f4fbf';
+const stage=document.getElementById('stage');
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+/* ---------- rosto ---------- */
+function eye(cx,cy,r,lx,ly){return `<ellipse cx="${cx}" cy="${cy}" rx="${r}" ry="${r*1.2}" fill="#fff" stroke="${K}" stroke-width="${r*.2}"/><circle cx="${cx+lx*r*.38}" cy="${cy+ly*r*.4}" r="${r*.42}" fill="${K}"/><circle cx="${cx+lx*r*.38+r*.13}" cy="${cy+ly*r*.4-r*.15}" r="${r*.13}" fill="#fff"/>`;}
+function face(f,emos){
+  const {x,y,sep,r}=f, L=x-sep, R=x+sep, sw=r*.24, my=y+r*2.0, m=r/30, by=y-r*1.5;
+  const E=(a=0,b=0)=>eye(L,y,r,a,b)+eye(R,y,r,a,b);
+  const P=(d,fill='none',w=sw)=>`<path d="${d}" stroke="${K}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" fill="${fill}"/>`;
+  const ln=(a,b,c,d)=>P(`M${a},${b} L${c},${d}`);
+  const bRaiva=ln(L-r*.9,by-r*.3,L+r*.7,by+r*.35)+ln(R+r*.9,by-r*.3,R-r*.7,by+r*.35);
+  const bMedo=ln(L-r*.8,by+r*.15,L+r*.6,by-r*.4)+ln(R+r*.8,by+r*.15,R-r*.6,by-r*.4);
+  const bArc=P(`M${L-r*.6},${by} Q${L},${by-r*.6} ${L+r*.6},${by}`)+P(`M${R-r*.6},${by} Q${R},${by-r*.6} ${R+r*.6},${by}`);
+  const suor=`<path d="M${R+r*1.5},${y-r*.6} q${-r*.35},${r*.6} 0,${r*.75} q${r*.35},${-r*.15} 0,${-r*.75}Z" fill="#7fd6ff" stroke="${K}" stroke-width="${sw*.6}"/>`;
+  const parts={
+    neutro:E()+ln(x-14*m,my,x+14*m,my),
+    feliz:E()+bArc+P(`M${x-26*m},${my-6*m} Q${x},${my+32*m} ${x+26*m},${my-6*m} Z`,'#7a1d1d'),
+    raiva:E(0,.35)+bRaiva+`<rect x="${x-24*m}" y="${my-8*m}" width="${48*m}" height="${18*m}" rx="${4*m}" fill="#fff" stroke="${K}" stroke-width="${sw*.8}"/>`+ln(x-24*m,my+1*m,x+24*m,my+1*m),
+    medo:E(0,-.3)+bMedo+`<ellipse cx="${x}" cy="${my+4*m}" rx="${11*m}" ry="${15*m}" fill="#5a1414" stroke="${K}" stroke-width="${sw*.8}"/>`+suor,
+    duvida:E(.6,-.3)+ln(L-r*.7,by+r*.1,L+r*.7,by+r*.1)+P(`M${R-r*.7},${by-r*.1} Q${R},${by-r*.8} ${R+r*.7},${by-r*.2}`)+P(`M${x-18*m},${my} Q${x-9*m},${my-9*m} ${x},${my} Q${x+9*m},${my+9*m} ${x+18*m},${my}`),
+    surpresa:E()+P(`M${L-r*.6},${by-r*.3} Q${L},${by-r*.9} ${L+r*.6},${by-r*.3}`)+P(`M${R-r*.6},${by-r*.3} Q${R},${by-r*.9} ${R+r*.6},${by-r*.3}`)+`<circle cx="${x}" cy="${my+4*m}" r="${13*m}" fill="#5a1414" stroke="${K}" stroke-width="${sw*.8}"/>`,
+    dorme:P(`M${L-r*.7},${y} Q${L},${y+r*.7} ${L+r*.7},${y}`)+P(`M${R-r*.7},${y} Q${R},${y+r*.7} ${R+r*.7},${y}`)+ln(x-10*m,my,x+10*m,my),
+    nojo:E(-.5,.3)+bMedo+P(`M${x-20*m},${my} Q${x-10*m},${my-8*m} ${x},${my} Q${x+10*m},${my+8*m} ${x+20*m},${my}`)+`<path d="M${x-2*m},${my+1*m} q${7*m},${18*m} ${14*m},0Z" fill="#ff6b8a" stroke="${K}" stroke-width="${sw*.6}"/>`+suor,
+    grita:E(0,.2)+bRaiva+P(`M${x-24*m},${my-10*m} Q${x},${my+42*m} ${x+24*m},${my-10*m} Z`,'#5a1414'),
+    psst:E(.8,0)+ln(L-r*.7,by+r*.1,L+r*.7,by+r*.1)+P(`M${R-r*.7},${by-r*.1} Q${R},${by-r*.8} ${R+r*.7},${by-r*.2}`)+`<circle cx="${x}" cy="${my+2*m}" r="${7*m}" fill="#5a1414" stroke="${K}" stroke-width="${sw*.6}"/>`
+  };
+  return emos.map((e,i)=>`<g class="emo emo-${e}" opacity="${i?0:1}">${parts[e]}</g>`).join('');
+}
+/* ---------- bracos ---------- */
+function arm(sx,sy,d,kind,A,f){
+  const L=A.L; let c,e;
+  switch(kind){
+    case 'up': c=[sx+d*L*.55,sy-L*.15]; e=[sx+d*L*.5,sy-L*.95]; break;
+    case 'point': c=[sx+d*L*.5,sy-L*.05]; e=[sx+d*L*1.05,sy-L*.45]; break;
+    case 'pointdown': c=[sx+d*L*.6,sy+L*.1]; e=[sx+d*L*1.0,sy+L*.55]; break;
+    case 'hold': c=[sx+d*L*.35,sy+L*.55]; e=[d*L*.3,sy+L*.45]; break;
+    case 'hip': c=[sx+d*L*.6,sy+L*.3]; e=[sx+d*L*.12,sy+L*.6]; break;
+    case 'nose': c=[sx+d*L*.7,sy+L*.6]; e=[f.x+d*f.r*.3,f.y+f.r*1.9]; break;
+    case 'wave': c=[sx+d*L*.6,sy-L*.1]; e=[sx+d*L*.8,sy-L*.8]; break;
+    default: c=[sx+d*L*.35,sy+L*.5]; e=[sx+d*L*.3,sy+L*.95];
+  }
+  let s=`<path d="M${sx},${sy} Q${c[0]},${c[1]} ${e[0]},${e[1]}" stroke="${K}" stroke-width="${A.w}" stroke-linecap="round" fill="none"/>`;
+  if(kind==='point') s+=`<path d="M${e[0]},${e[1]} l${d*A.hr*1.6},${-A.hr*.7}" stroke="${K}" stroke-width="${A.w*.8}" stroke-linecap="round"/><path d="M${e[0]},${e[1]} l${d*A.hr*1.5},${-A.hr*.65}" stroke="#fff" stroke-width="${A.w*.35}" stroke-linecap="round"/>`;
+  return s+`<circle cx="${e[0]}" cy="${e[1]}" r="${A.hr}" fill="#fff" stroke="${K}" stroke-width="${A.w*.6}"/>`;
+}
+const POSES={idle:['down','down'],up:['up','up'],point:['down','point'],pointL:['point','down'],hold:['hold','hold'],hip:['hip','hip'],nariz:['down','nose'],acena:['down','wave'],aperta:['down','pointdown'],upR:['down','up'],upL:['up','down']};
+/* ---------- personagens (origem = pes) ---------- */
+const T={
+  fr:{face:{x:0,y:-172,sep:42,r:30},sh:[112,-140],A:{L:95,w:9,hr:16},legs:[-42,42,-52],
+      body:()=>`<g clip-path="url(#hexc)"><rect x="-130" y="-280" width="88" height="240" fill="${BLUE}"/><rect x="-43" y="-280" width="86" height="240" fill="#fff"/><rect x="43" y="-280" width="88" height="240" fill="${RED}"/></g><polygon points="128,-160 64,-270.9 -64,-270.9 -128,-160 -64,-49.1 64,-49.1" fill="none" stroke="${K}" stroke-width="8" stroke-linejoin="round"/><path d="M-82,-262 Q-24,-322 74,-278 Q70,-256 -82,-262Z" fill="#1d1d1d" stroke="${K}" stroke-width="5"/><circle cx="-8" cy="-300" r="9" fill="#1d1d1d"/>`},
+  sind:{face:{x:0,y:-205,sep:34,r:25},sh:[86,-150],A:{L:90,w:9,hr:15},legs:[-38,38,-45],
+      body:()=>`<rect x="-90" y="-290" width="180" height="250" rx="85" fill="#e63b2e" stroke="${K}" stroke-width="7"/><path d="M-80,-258 Q0,-350 80,-258Z" fill="#ffd21f" stroke="${K}" stroke-width="6"/><rect x="-98" y="-266" width="196" height="18" rx="9" fill="#ffd21f" stroke="${K}" stroke-width="6"/>`},
+  gov:{face:{x:0,y:-232,sep:36,r:25},sh:[92,-150],A:{L:92,w:9,hr:15},legs:[-38,38,-42],
+      body:()=>`<rect x="-95" y="-300" width="190" height="262" rx="34" fill="#2b3a67" stroke="${K}" stroke-width="7"/><path d="M-95,-262 Q-92,-318 0,-312 Q92,-318 95,-262 Q40,-296 -95,-262Z" fill="#222" stroke="${K}" stroke-width="5"/><path d="M-42,-152 L0,-120 L42,-152 L0,-140Z" fill="#fff" stroke="${K}" stroke-width="4"/><path d="M0,-134 L-15,-112 L0,-58 L15,-112Z" fill="${RED}" stroke="${K}" stroke-width="4"/>`},
+  sis:{face:{x:0,y:-182,sep:50,r:28},sh:[122,-128],A:{L:92,w:9,hr:15},legs:[-50,50,-40],
+      body:()=>`<rect x="-125" y="-272" width="250" height="234" rx="10" fill="#c9c9c9" stroke="${K}" stroke-width="7"/><rect x="-125" y="-272" width="250" height="34" fill="#a9a9a9" stroke="${K}" stroke-width="5"/><text x="0" y="-58" text-anchor="middle" font-family="'Luckiest Guy'" font-size="50" fill="${K}">${esc(T.sis.txt||'SISTEMA')}</text>`},
+  clone:{face:{x:0,y:-88,sep:13,r:10},sh:[28,-62],A:{L:36,w:5,hr:7},legs:[-12,12,-24],
+      body:(o)=>`<rect class="cb" x="-30" y="-120" width="60" height="98" rx="28" fill="${o.cor||'#e63b2e'}" stroke="${K}" stroke-width="4"/>`+(o.velho?`<circle cx="-27" cy="-108" r="11" fill="#fff" stroke="${K}" stroke-width="3"/><circle cx="27" cy="-108" r="11" fill="#fff" stroke="${K}" stroke-width="3"/>`:'')+(o.gravata?`<path d="M0,-64 L-5,-56 L0,-36 L5,-56Z" fill="${RED}" stroke="${K}" stroke-width="2"/>`:'')}
+};
+function C(type,o){
+  const t=T[type], f={...t.face}; f.my=f.y+f.r*2;
+  const emos=o.emos||['neutro'], poses=o.poses||['idle'];
+  const lw=t.A.w*0.95;
+  const legs=[t.legs[0],t.legs[1]].map((lx,i)=>`<path d="M${lx},${t.legs[2]} L${lx},-6" stroke="${K}" stroke-width="${lw}" stroke-linecap="round"/><ellipse cx="${lx+(i?1:-1)*t.A.hr*.5}" cy="-5" rx="${t.A.hr*1.25}" ry="${t.A.hr*.6}" fill="${K}"/>`).join('');
+  const arms=poses.map((p,i)=>{const pp=POSES[p]; return `<g class="pose pose-${p}" opacity="${i?0:1}">${arm(-t.sh[0],t.sh[1],-1,pp[0],t.A,f)}${arm(t.sh[0],t.sh[1],1,pp[1],t.A,f)}</g>`;}).join('');
+  return `<g transform="translate(${o.x},${o.y}) scale(${o.s||1})"><g id="${o.id}"><g class="an"><g class="br">${o.back||''}${legs}${t.body(o)}${face(f,emos)}${arms}${o.extra||''}</g></g></g></g>`;
+}
+function state(id,kind,name,t){ tl.set(`#${id} .${kind}`,{opacity:0},t); tl.set(`#${id} .${kind}-${name}`,{opacity:1},t);
+  tl.to(`#${id} .an`,{scaleY:1.06,scaleX:.97,duration:.1,yoyo:true,repeat:1,transformOrigin:'50% 100%'},t); }
+function breath(id,S,D,amp=.025,per=.75){ const n=Math.max(1,Math.floor(D/per)); tl.to(`#${id} .br`,{scaleY:1+amp,scaleX:1-amp*.4,duration:per/2,yoyo:true,repeat:n*2-1,ease:'sine.inOut',transformOrigin:'50% 100%'},S); }
+function nod(id,t,n=2){ tl.to(`#${id} .an`,{y:10,duration:.14,yoyo:true,repeat:n*2-1,ease:'sine.inOut'},t); }
+/* ---------- rotulos / props ---------- */
+function lab(id,txt,x,y,o={}){ const fam=o.font==='LG'?"'Luckiest Guy'":"'Permanent Marker'";
+  return `<g transform="translate(${x},${y}) rotate(${o.rot||0})"><text id="${id}" opacity="0" text-anchor="${o.anchor||'middle'}" font-family="${fam}" font-size="${o.size||56}" fill="${o.color||RED}" stroke="${o.stroke||'#fff'}" stroke-width="${o.sw??10}" paint-order="stroke" stroke-linejoin="round">${esc(txt)}</text></g>`; }
+function show(sel,t,d=.35){ gsap.set(sel,{scale:.55,transformOrigin:'50% 50%'}); tl.to(sel,{opacity:1,scale:1,duration:d,ease:'back.out(2.2)'},t); }
+function fade(sel,t,d=.25){ tl.to(sel,{opacity:1,duration:d},t); }
+function hide(sel,t,d=.2){ tl.to(sel,{opacity:0,duration:d},t); }
+function drawOn(sel,t,d=.4){ gsap.set(sel,{strokeDasharray:1,strokeDashoffset:1}); tl.to(sel,{strokeDashoffset:0,duration:d,ease:'power1.inOut'},t); }
+function flame(x,y,s,cls='fl'){ return `<g transform="translate(${x},${y}) scale(${s})"><g class="${cls}"><path d="M-60,0 C-85,-60 -40,-90 -48,-140 C-22,-110 -15,-125 -4,-205 C22,-140 42,-152 36,-100 C56,-122 72,-90 62,-40 C72,-18 60,0 60,0 Z" fill="#ff7a1a" stroke="${K}" stroke-width="6" stroke-linejoin="round"/><path d="M-32,-4 C-44,-40 -18,-60 -20,-92 C-4,-70 2,-80 8,-120 C22,-82 34,-86 30,-56 C40,-40 34,-4 30,-4Z" fill="#ffd21f"/></g></g>`; }
+function flicker(sel,S,D){ const n=Math.max(1,Math.floor(D/.36)); tl.to(sel,{scaleY:1.12,scaleX:.94,duration:.18,yoyo:true,repeat:n*2-1,ease:'sine.inOut',transformOrigin:'50% 100%',stagger:{each:.06}},S); }
+function check(id,x,y,s=1){ return `<g transform="translate(${x},${y}) scale(${s})"><path id="${id}" pathLength="1" d="M-30,0 L-8,24 L36,-30" stroke="#16a34a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none" style="stroke-dasharray:1;stroke-dashoffset:1"/></g>`; }
+function xmark(id,x,y,s=1){ return `<g transform="translate(${x},${y}) scale(${s})" id="${id}"><path class="x1" pathLength="1" d="M-120,-60 L120,60" stroke="${RED}" stroke-width="20" stroke-linecap="round" style="stroke-dasharray:1;stroke-dashoffset:1"/><path class="x2" pathLength="1" d="M120,-60 L-120,60" stroke="${RED}" stroke-width="20" stroke-linecap="round" style="stroke-dasharray:1;stroke-dashoffset:1"/></g>`; }
+function arrow(id,d){ return `<path id="${id}" pathLength="1" d="${d}" stroke="${RED}" stroke-width="9" stroke-linecap="round" fill="none" style="stroke-dasharray:1;stroke-dashoffset:1"/>`; }
+function rng(seed){ let s=seed; return ()=>{ s=(s*16807)%2147483647; return (s-1)/2147483646; }; }
+function crowd(pre,n,x0,x1,y0,y1,cor,seed,s0=1,s1=1.6,extra){ const r=rng(seed); const cols=Math.ceil(Math.sqrt(n*(x1-x0)/(y1-y0))); const rows=Math.ceil(n/cols); let a=[];
+  for(let i=0;i<n;i++){ const c=i%cols, rw=Math.floor(i/cols); const y=y0+(y1-y0)*(rows>1?rw/(rows-1):.5)+(r()-.5)*14; const x=x0+(x1-x0)*((c+.5+(r()-.5)*.5)/cols); a.push({i,x,y}); }
+  a.sort((p,q)=>p.y-q.y);
+  return a.map(p=>C('clone',{id:pre+p.i,x:p.x,y:p.y,s:s0+(s1-s0)*((p.y-y0)/Math.max(1,y1-y0)),cor:(typeof cor==='function'?cor(p.i):cor),emos:['neutro','raiva','feliz'],poses:['idle','up'],...(extra?extra(p.i):{})})).join(''); }
+/* ---------- fundos ---------- */
+function bgCidade(){ let s=`<rect width="1280" height="720" fill="#38d6ff"/>`; const B=[[-20,150,300,360],[260,90,260,420],[500,170,300,340],[790,110,250,400],[1030,160,280,350]];
+  B.forEach(([x,y,w,h],k)=>{ s+=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8" fill="${k%2?'#a7a7a7':'#bdbdbd'}" stroke="${K}" stroke-width="6"/>`; for(let yy=y+30;yy<y+h-110;yy+=62) for(let xx=x+26;xx<x+w-40;xx+=56) s+=`<rect x="${xx}" y="${yy}" width="30" height="38" rx="5" fill="#38d6ff" stroke="${K}" stroke-width="4"/>`; });
+  s+=`<path d="M0,470 Q320,440 640,470 T1280,460 L1280,720 L0,720Z" fill="#2ee07a" stroke="${K}" stroke-width="6"/><path d="M120,560 q60,-14 120,0 M820,600 q70,-16 140,0 M480,660 q50,-12 100,0" stroke="#1fb35e" stroke-width="8" stroke-linecap="round" fill="none"/>`; return s; }
+function bgParl(){ let s=`<rect width="1280" height="720" fill="#d9963f"/>`; for(let x=0;x<1280;x+=160) s+=`<rect x="${x+12}" y="30" width="136" height="230" rx="6" fill="#c98432" stroke="#7a4a17" stroke-width="5"/>`;
+  s+=`<rect x="560" y="50" width="160" height="104" fill="#fff" stroke="${K}" stroke-width="5"/><rect x="560" y="50" width="53" height="104" fill="${BLUE}"/><rect x="667" y="50" width="53" height="104" fill="${RED}"/><rect x="560" y="50" width="160" height="104" fill="none" stroke="${K}" stroke-width="5"/>`;
+  s+=`<path d="M0,330 Q640,250 1280,330 L1280,720 L0,720Z" fill="#b8732f" stroke="${K}" stroke-width="6"/>`;
+  for(let k=0;k<3;k++){ const y=360+k*70; s+=`<path d="M-20,${y+40} Q640,${y-50} 1300,${y+40}" stroke="#7a4a17" stroke-width="22" fill="none"/><path d="M-20,${y+40} Q640,${y-50} 1300,${y+40}" stroke="${K}" stroke-width="4" fill="none"/>`; }
+  return s; }
+function bgPalco(){ return `<rect width="1280" height="720" fill="#2a1414"/><ellipse cx="640" cy="560" rx="560" ry="70" fill="#ffe9a8" opacity=".25"/><rect x="0" y="560" width="1280" height="160" fill="#8b5a2b" stroke="${K}" stroke-width="6"/><path d="M0,600 H1280 M0,650 H1280" stroke="#6d4420" stroke-width="5"/>`; }
+function cortinas(id){ const fold=(x,w)=>{ let s=''; for(let k=0;k<5;k++) s+=`<path d="M${x+k*w/5+w/10},0 V720" stroke="#8a0f14" stroke-width="10"/>`; return s; };
+  return `<g id="${id}L"><rect x="0" y="0" width="660" height="720" fill="#c4161c" stroke="${K}" stroke-width="6"/>${fold(0,660)}</g><g id="${id}R"><rect x="620" y="0" width="660" height="720" fill="#c4161c" stroke="${K}" stroke-width="6"/>${fold(620,660)}</g><path d="M0,0 H1280 V70 Q1120,110 960,70 Q800,110 640,70 Q480,110 320,70 Q160,110 0,70Z" fill="#a50f14" stroke="${K}" stroke-width="6"/>`; }
+function bgMapa(){ return `<rect width="1280" height="720" fill="#38d6ff"/><path class="oth" d="${EU.oth}" fill="#2ee07a" stroke="${K}" stroke-width="2.5" stroke-linejoin="round"/><path class="fra" d="${EU.fra}" fill="#10275e" stroke="${K}" stroke-width="3.5" stroke-linejoin="round"/>`; }
+function bgLiso(c,chao){ return `<rect width="1280" height="720" fill="${c}"/>`+(chao?`<rect x="0" y="560" width="1280" height="160" fill="${chao}" stroke="${K}" stroke-width="6"/>`:''); }
+function bgFoto(src,id){ return `<g id="${id}"><image href="m/${src}" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/></g><rect width="1280" height="720" fill="url(#fotoesc)"/>`; }
+/* ---------- tomadas ---------- */
+function mk(it,bg,content){ const S=it.start,D=it.dur; const d=document.createElement('div'); d.className='shot'; d.id='sh_'+it.id;
+  d.innerHTML=`<svg viewBox="0 0 1280 720" width="1280" height="720"><g class="cam">${bg}<g class="zm">${content}</g></g></svg>`; stage.appendChild(d);
+  tl.set(d,{opacity:1},S); tl.set(d,{opacity:0},S+D);
+  const cam=d.querySelector('.cam'); gsap.set(cam,{svgOrigin:'640 360'}); tl.to(cam,{scale:1.05,duration:D,ease:'none'},S); return d; }
+function kb(sel,S,D,a=1.12,x=0){ gsap.set(sel,{svgOrigin:'640 360'}); tl.to(sel,{scale:a,x:x,duration:D,ease:'none'},S); }
+const SH={};
+SH.abre=(it,P,S,D,i)=>{ const T0=S+(+P.t_x||2);
+  mk(it,bgCidade(),`<g transform="rotate(-82 600 640)">${C('fr',{id:i+'fr',x:600,y:640,s:.8,emos:['dorme','surpresa']})}</g>`+lab(i+'z1','Z',820,470,{size:60,color:K})+lab(i+'z2','Z',870,410,{size:76,color:K})+lab(i+'l1',P.rotulo,640,170,{font:'LG',size:96})+xmark(i+'x',640,140,1.6));
+  breath(i+'fr',S,D,.04,1.2); fade(`#${i}z1`,S+.2); fade(`#${i}z2`,S+.6); tl.to([`#${i}z1`,`#${i}z2`],{y:-30,duration:1.6,ease:'sine.inOut'},S+.2);
+  show(`#${i}l1`,S+.9); drawOn(`#${i}x .x1`,T0,.22); drawOn(`#${i}x .x2`,T0+.2,.22); state(i+'fr','emo','surpresa',T0+.3); hide([`#${i}z1`,`#${i}z2`],T0+.3); };
+SH.sistema=(it,P,S,D,i)=>{
+  const placa=`<path d="M175,-232 L175,-420" stroke="#7a4a17" stroke-width="12"/><g transform="translate(175,-470) rotate(-6)"><rect x="-140" y="-62" width="280" height="124" rx="10" fill="#fff" stroke="${K}" stroke-width="7"/><text y="26" text-anchor="middle" font-family="'Luckiest Guy'" font-size="70" fill="${RED}">${esc(P.placa)}</text></g>`;
+  mk(it,bgCidade(),C('fr',{id:i+'fr',x:360,y:680,s:.85,emos:['raiva','feliz'],poses:['upR'],extra:placa})+C('sis',{id:i+'sis',x:920,y:680,s:.95,emos:['neutro','feliz'],poses:['idle','upR']})+lab(i+'l1',P.rotulo,640,110,{font:'LG',size:68})+check(i+'ck',1060,330,1.6)+lab(i+'l2',P.ok,1090,250,{size:56,color:'#16a34a'}));
+  breath(i+'fr',S,D,.03,.6); breath(i+'sis',S,D,.02,.9); tl.to(`#${i}fr .an`,{rotation:4,duration:.3,yoyo:true,repeat:5,transformOrigin:'50% 100%'},S);
+  show(`#${i}l1`,S+(+P.t_sis||.8)); const t=S+(+P.t_ok||1.3); state(i+'sis','emo','feliz',t); state(i+'sis','pose','upR',t); drawOn(`#${i}ck`,t,.3); show(`#${i}l2`,t+.15); state(i+'fr','emo','feliz',t+.4); };
+SH.mapa=(it,P,S,D,i)=>{ const [px,py]=EU.paris;
+  const d=mk(it,bgMapa(),lab(i+'l1',P.rotulo,px-210,py-40,{size:66,rot:-6})+arrow(i+'a1',`M${px-160},${py-20} Q${px-90},${py+10} ${px-10},${py+30}`)+lab(i+'l2',P.sub,760,470,{size:50,color:K})+C('fr',{id:i+'fr',x:1130,y:700,s:.55,emos:['feliz'],poses:['pointL']}));
+  const zm=d.querySelector('.zm'); gsap.set(zm,{svgOrigin:`${px} ${py+60}`}); tl.to(zm,{scale:1.35,duration:D,ease:'power1.inOut'},S);
+  tl.to(d.querySelectorAll('.fra'),{fill:'#1d3f9e',duration:.25,yoyo:true,repeat:3},S+.1);
+  show(`#${i}l1`,S+.2); drawOn(`#${i}a1`,S+.35); show(`#${i}l2`,S+(+P.t_sub||.7)); tl.to(d.querySelectorAll('.oth'),{fill:'#9ad9a8',duration:.3},S+(+P.t_sub||.7)); breath(i+'fr',S,D); };
+SH.categoria=(it,P,S,D,i)=>{ const fil=[33,34,37,38];
+  const mega=`<path d="M176,-205 L258,-252 L272,-168 L184,-182Z" fill="#ddd" stroke="${K}" stroke-width="6" stroke-linejoin="round"/>`;
+  const cr=crowd(i+'c',40,500,1210,400,690,(k)=>fil.includes(k)?'#e63b2e':'#9a9a9a',7,1.0,1.5);
+  mk(it,bgCidade(),cr+C('sind',{id:i+'sd',x:220,y:690,s:.95,emos:['neutro','grita'],poses:['point'],extra:mega})+lab(i+'l0',P.sindicato,230,150,{font:'LG',size:56})+lab(i+'l1',P.rotulo,850,130,{font:'LG',size:66})+lab(i+'l2',P.sub,850,215,{size:48,color:K})+`<path id="${i}br" pathLength="1" d="M490,330 Q480,300 520,300 L1180,300 Q1220,300 1210,330" stroke="${RED}" stroke-width="9" fill="none" stroke-linecap="round" style="stroke-dasharray:1;stroke-dashoffset:1"/>`);
+  breath(i+'sd',S,D,.03,.5); show(`#${i}l0`,S+.1); state(i+'sd','emo','grita',S+.36);
+  const t=S+(+P.t_todos||2.06); const all=[...Array(40).keys()].filter(k=>!fil.includes(k)).map(k=>`#${i}c${k} .cb`);
+  tl.to(all,{fill:'#e63b2e',duration:.2,stagger:.012},t); show(`#${i}l1`,t); drawOn(`#${i}br`,t,.5);
+  [...Array(40).keys()].forEach(k=>state(`${i}c${k}`,'pose','up',t+.5+k*.01));
+  const t2=S+(+P.t_fil||3.06); show(`#${i}l2`,t2); fil.forEach(k=>nod(`${i}c${k}`,t2,2)); };
+SH.fogo=(it,P,S,D,i)=>{
+  let fl=''; [[300,600,1.6],[470,560,2.2],[640,540,2.6],[810,560,2.2],[980,600,1.6]].forEach(([x,y,s])=>fl+=flame(x,y,s,i+'fl'));
+  let cl=''; [[540,690],[640,700],[740,690]].forEach(([x,y],k)=>cl+=C('clone',{id:i+'m'+k,x,y,s:1.9,emos:['neutro','raiva'],poses:['idle','up']}));
+  const d=mk(it,bgCidade(),`<g id="${i}fire" opacity="0">${fl}</g>`+cl+lab(i+'l1',P.rotulo,640,110,{font:'LG',size:80})+lab(i+'l2',P.sub,960,330,{size:54,color:K,rot:-4})+arrow(i+'a1','M940,360 Q860,420 790,520'));
+  const t=S+(+P.t_fogo||.9); gsap.set(`#${i}fire`,{scaleY:.2,transformOrigin:'50% 100%'}); tl.to(`#${i}fire`,{opacity:1,scaleY:1,duration:.6,ease:'power2.out'},t);
+  flicker(Array.from(d.getElementsByClassName(i+'fl')),S,D); [0,1,2].forEach(k=>{state(`${i}m${k}`,'emo','raiva',t); state(`${i}m${k}`,'pose','up',t); breath(`${i}m${k}`,S,D,.05,.5);});
+  show(`#${i}l1`,t+.1); show(`#${i}l2`,S+(+P.t_poucos||2.1)); drawOn(`#${i}a1`,S+(+P.t_poucos||2.1)+.1); };
+function botao(id,x,y,s,txt){ return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-110" y="-10" width="220" height="190" rx="12" fill="#8d8d8d" stroke="${K}" stroke-width="7"/><text x="0" y="110" text-anchor="middle" font-family="'Luckiest Guy'" font-size="72" fill="#fff" stroke="${K}" stroke-width="6" paint-order="stroke">${esc(txt)}</text><rect x="-80" y="-30" width="160" height="26" rx="6" fill="#5c5c5c" stroke="${K}" stroke-width="6"/><g id="${id}"><path d="M-66,-30 Q-66,-110 0,-110 Q66,-110 66,-30Z" fill="${RED}" stroke="${K}" stroke-width="7"/><ellipse cx="-24" cy="-78" rx="14" ry="9" fill="#fff" opacity=".6"/></g></g>`; }
+SH.gatilho=(it,P,S,D,i)=>{
+  const livro=`<g id="${i}bk" opacity="0" transform="translate(310,440)"><rect x="-150" y="-190" width="300" height="380" rx="14" fill="#1f3a8a" stroke="${K}" stroke-width="8"/><rect x="-130" y="-170" width="260" height="340" rx="8" fill="none" stroke="#e8c14a" stroke-width="5"/><text y="-40" text-anchor="middle" font-family="'Luckiest Guy'" font-size="40" fill="#e8c14a">${esc(P.livro)}</text><text y="40" text-anchor="middle" font-family="'Luckiest Guy'" font-size="34" fill="#e8c14a">${esc(P.livro2)}</text></g>`;
+  mk(it,bgParl(),livro+botao(i+'bt',890,470,1.25,P.botao)+lab(i+'l1',P.rotulo,640,100,{font:'LG',size:76})+lab(i+'l2',P.artigo,880,690,{size:70,rot:-3})+lab(i+'l3',P.sub,310,690,{size:50,color:K}));
+  show(`#${i}l1`,S+.15); show(`#${i}bk`,S+(+P.t_livro||1.2),.45); show(`#${i}l2`,S+(+P.t_art||1.45));
+  tl.to(`#${i}bt`,{scaleY:.8,duration:.15,yoyo:true,repeat:3,transformOrigin:'50% 100%'},S+(+P.t_art||1.45)+1.1); show(`#${i}l3`,S+(+P.t_const||3.8)); };
+SH.governo=(it,P,S,D,i)=>{ let dp=''; for(let k=0;k<9;k++) dp+=C('clone',{id:i+'d'+k,x:250+k*100+(k%2)*20,y:330+(k%2)*30,s:.95,cor:'#f4c95d',gravata:1,emos:['neutro','surpresa']});
+  const lei=`<g transform="translate(980,470) rotate(4)"><rect x="-120" y="-150" width="240" height="300" rx="6" fill="#fff" stroke="${K}" stroke-width="7"/><text y="-80" text-anchor="middle" font-family="'Luckiest Guy'" font-size="60" fill="${K}">${esc(P.lei)}</text><path d="M-80,-30 H80 M-80,0 H80 M-80,30 H60 M-80,60 H70" stroke="#888" stroke-width="8"/><g id="${i}st" opacity="0"><g transform="rotate(-18)"><rect x="-135" y="40" width="270" height="78" rx="8" fill="none" stroke="${RED}" stroke-width="9"/><text y="98" text-anchor="middle" font-family="'Luckiest Guy'" font-size="52" fill="${RED}">${esc(P.carimbo)}</text></g></g></g>`;
+  mk(it,bgParl(),dp+lei+botao(i+'bt',560,600,.55,P.botao)+C('gov',{id:i+'gv',x:330,y:700,s:.95,emos:['neutro','feliz'],poses:['idle','aperta']})+lab(i+'l0',P.governo,330,370,{font:'LG',size:56,color:'#2b3a67'})+lab(i+'l1',P.rotulo,640,110,{font:'LG',size:72}));
+  breath(i+'gv',S,D); show(`#${i}l0`,S+.2); const t=S+(+P.t_aperta||1.0); state(i+'gv','pose','aperta',t); state(i+'gv','emo','feliz',t);
+  tl.to(`#${i}bt`,{scaleY:.7,duration:.12,yoyo:true,repeat:1,transformOrigin:'50% 100%'},t+.1);
+  gsap.set(`#${i}st`,{scale:1.8,transformOrigin:'50% 50%'}); tl.to(`#${i}st`,{opacity:1,scale:1,duration:.22,ease:'power3.in'},S+(+P.t_carimbo||1.5));
+  show(`#${i}l1`,S+(+P.t_sem||2.1)); [...Array(9).keys()].forEach(k=>state(`${i}d${k}`,'emo','surpresa',S+(+P.t_parl||2.6)+k*.03)); };
+SH.foto=(it,P,S,D,i)=>{ const pos=P.lado==='esq'?[200,720]:[1090,720];
+  const extra=P.barreira?`<g transform="translate(640,640)"><rect x="-660" y="-24" width="1320" height="48" fill="#fff" stroke="${K}" stroke-width="6"/>${[...Array(12).keys()].map(k=>`<path d="M${-640+k*110},-24 l50,0 l-30,48 l-50,0Z" fill="${RED}"/>`).join('')}<rect x="-660" y="-24" width="1320" height="48" fill="none" stroke="${K}" stroke-width="6"/></g>`:'';
+  const cr=P.multidao?crowd(i+'c',+P.multidao,140,1140,560,600,'#e63b2e',11,1.6,1.7):'';
+  const fr=P.personagem?C('fr',{id:i+'fr',x:pos[0],y:pos[1],s:+P.escala||.75,emos:[P.emo||'raiva'],poses:[P.pose||'point']}):'';
+  mk(it,bgFoto(P.src,i+'ph'),cr+extra+fr+lab(i+'l1',P.rotulo,640,100,{font:'LG',size:+P.tam||64,color:'#fff',stroke:K,sw:12})+(P.destaque?lab(i+'l2',P.destaque,+P.dx||1000,+P.dy||560,{font:P.dfont||'LG',size:+P.dtam||110,color:P.dcor||'#ffd21f',stroke:K,sw:12,rot:-4}):''));
+  kb(`#${i}ph`,S,D,1.12,P.lado==='esq'?-30:30); if(P.personagem) breath(i+'fr',S,D);
+  show(`#${i}l1`,S+(+P.t_rot||.25)); if(P.destaque) show(`#${i}l2`,S+(+P.t_dest||1)); if(P.multidao) [...Array(+P.multidao).keys()].forEach(k=>{state(`${i}c${k}`,'pose','up',S+.3+k*.05); breath(`${i}c${k}`,S,D,.05,.45);}); };
+SH.trem=(it,P,S,D,i)=>{ let w=''; [0,1].forEach(k=>{ const x=640+k*330; w+=`<g transform="translate(${x},560)"><rect x="-150" y="-170" width="300" height="160" rx="16" fill="#3f6fd8" stroke="${K}" stroke-width="7"/>${[-95,-5,85].map(wx=>`<rect x="${wx-30}" y="-145" width="60" height="55" rx="6" fill="#38d6ff" stroke="${K}" stroke-width="5"/>`).join('')}<circle cx="-90" cy="0" r="26" fill="#555" stroke="${K}" stroke-width="6"/><circle cx="90" cy="0" r="26" fill="#555" stroke="${K}" stroke-width="6"/></g>`; });
+  const loco=`<g transform="translate(330,560)"><g id="${i}lo"><path d="M-150,-10 L-150,-210 Q-150,-240 -120,-240 L120,-240 Q150,-240 160,-210 L190,-60 Q195,-10 160,-10Z" fill="#e5262a" stroke="${K}" stroke-width="7" stroke-linejoin="round"/><rect x="-60" y="-215" width="150" height="95" rx="10" fill="#fff" stroke="${K}" stroke-width="6"/>${face({x:15,y:-170,sep:36,r:22,my:-126},['dorme'])}<circle cx="-90" cy="0" r="30" fill="#555" stroke="${K}" stroke-width="6"/><circle cx="100" cy="0" r="30" fill="#555" stroke="${K}" stroke-width="6"/></g></g>`;
+  const trilho=`<rect x="0" y="585" width="1280" height="16" fill="#7a4a17" stroke="${K}" stroke-width="4"/>${[...Array(17).keys()].map(k=>`<rect x="${k*80}" y="580" width="40" height="30" fill="#5c3a12" stroke="${K}" stroke-width="3"/>`).join('')}`;
+  const placa=`<g transform="translate(1110,330) rotate(5)"><path d="M0,60 V250" stroke="${K}" stroke-width="10"/><rect x="-120" y="-50" width="240" height="110" rx="10" fill="#fff" stroke="${K}" stroke-width="7"/><text y="30" text-anchor="middle" font-family="'Luckiest Guy'" font-size="64" fill="${RED}">${esc(P.placa)}</text></g>`;
+  mk(it,bgCidade(),trilho+w+loco+placa+lab(i+'z1','Z',560,330,{size:60,color:K})+lab(i+'z2','Z',610,270,{size:76,color:K})+lab(i+'l1',P.rotulo,560,110,{font:'LG',size:72}));
+  show(`#${i}l1`,S+.05); fade(`#${i}z1`,S+.15); fade(`#${i}z2`,S+.45); tl.to([`#${i}z1`,`#${i}z2`],{y:-25,duration:D,ease:'sine.inOut'},S); tl.to(`#${i}lo`,{scaleY:1.03,duration:.6,yoyo:true,repeat:1,transformOrigin:'50% 100%'},S); };
+SH.idade=(it,P,S,D,i)=>{
+  const ban=`<g id="${i}ban"><path d="M640,700 V330 M1220,700 V330" stroke="${K}" stroke-width="12"/><rect x="630" y="330" width="600" height="96" rx="8" fill="#ffd21f" stroke="${K}" stroke-width="7"/><text x="930" y="398" text-anchor="middle" font-family="'Luckiest Guy'" font-size="54" fill="${K}">${esc(P.faixa)}</text></g>`;
+  const bengala=`<path d="M38,-34 Q46,-40 44,-30 L44,-4" stroke="#7a4a17" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+  mk(it,bgCidade(),ban+C('clone',{id:i+'v',x:210,y:690,s:2.3,cor:'#e8d5a8',velho:1,emos:['neutro','medo'],extra:bengala})+lab(i+'l0',P.rotulo,640,90,{size:56,color:K})+lab(i+'n1',P.de,640,230,{font:'LG',size:150,color:K})+lab(i+'n2',P.para,640,230,{font:'LG',size:150}));
+  tl.to(`#${i}v`,{x:220,duration:D*.85,ease:'none'},S); tl.to(`#${i}v .an`,{y:-10,duration:.22,yoyo:true,repeat:Math.floor(D/.44)*2-1},S);
+  show(`#${i}l0`,S+(+P.t_rot||1.0)); show(`#${i}n1`,S+(+P.t_de||2.5)); const t=S+(+P.t_para||3.96);
+  tl.to(`#${i}ban`,{x:230,duration:.9,ease:'power2.inOut'},t); hide(`#${i}n1`,t,.15); show(`#${i}n2`,t+.1); state(i+'v','emo','medo',t+.4); };
+SH.segredo=(it,P,S,D,i)=>{
+  mk(it,bgLiso('#38d6ff'),C('fr',{id:i+'fr',x:640,y:960,s:2.3,emos:['psst'],poses:['nariz']})+lab(i+'l1',P.rotulo,640,105,{size:60,color:K})+lab(i+'l2',P.psst,1000,560,{size:72,rot:-8}));
+  breath(i+'fr',S,D,.015,1); show(`#${i}l1`,S+.3); show(`#${i}l2`,S+.8); tl.to(`#${i}fr .an`,{rotation:-3,duration:D,ease:'sine.inOut',transformOrigin:'50% 100%'},S); };
+SH.pensoes=(it,P,S,D,i)=>{
+  const caixa=`<g id="${i}cx"><rect x="-200" y="-470" width="400" height="236" rx="10" fill="#c9a26b" stroke="${K}" stroke-width="8"/><path d="M-200,-420 H200" stroke="#a37f49" stroke-width="10"/><text y="-310" text-anchor="middle" font-family="'Luckiest Guy'" font-size="68" fill="${K}">${esc(P.caixa)}</text></g>`;
+  const cx=950,cy=360,R=185,a=(+P.pct||13)/100*Math.PI*2; const ex=cx+R*Math.sin(a), ey=cy-R*Math.cos(a);
+  const pizza=`<circle cx="${cx}" cy="${cy}" r="${R}" fill="#ffd21f" stroke="${K}" stroke-width="8"/><text x="${cx-30}" y="${cy+50}" text-anchor="middle" font-family="'Luckiest Guy'" font-size="64" fill="${K}">${esc(P.pib)}</text><path id="${i}fat" d="M${cx},${cy} L${cx},${cy-R} A${R},${R} 0 0 1 ${ex},${ey} Z" fill="${RED}" stroke="${K}" stroke-width="8" stroke-linejoin="round" opacity="0"/>`;
+  mk(it,bgLiso('#2ee07a','#1fb35e'),pizza+C('fr',{id:i+'fr',x:380,y:700,s:.82,emos:['medo'],poses:['up'],extra:caixa})+lab(i+'l1',P.rotulo,950,640,{font:'LG',size:84}));
+  tl.to(`#${i}fr .an`,{y:8,duration:.3,yoyo:true,repeat:Math.floor(D/.6)*2-1,ease:'sine.inOut'},S);
+  const t=S+(+P.t_pct||1.4); gsap.set(`#${i}fat`,{x:0,y:0}); tl.to(`#${i}fat`,{opacity:1,x:22,y:-22,duration:.4,ease:'back.out(2)'},t); show(`#${i}l1`,t+.1); };
+SH.ocde=(it,P,S,D,i)=>{ const hs=[180,240,150,210,130,260]; let b='';
+  hs.forEach((h,k)=>{ const x=130+k*120; b+=`<rect class="${i}bar" x="${x}" y="${600-h}" width="90" height="${h}" fill="#9a9a9a" stroke="${K}" stroke-width="6"/>`; });
+  b+=`<g class="${i}bar"><rect x="930" y="170" width="150" height="430" fill="#fff" stroke="${K}" stroke-width="6"/><rect x="930" y="170" width="50" height="430" fill="${BLUE}"/><rect x="1030" y="170" width="50" height="430" fill="${RED}"/><rect x="930" y="170" width="150" height="430" fill="none" stroke="${K}" stroke-width="6"/></g>`;
+  const d=mk(it,bgLiso('#38d6ff','#2ee07a'),b+C('fr',{id:i+'fr',x:1005,y:170,s:.38,emos:['surpresa']})+lab(i+'l1',P.rotulo,560,110,{font:'LG',size:62})+lab(i+'l2',P.ocde,460,665,{size:54,color:K})+lab(i+'l3',P.franca,1005,665,{size:54,color:K}));
+  gsap.set(Array.from(d.getElementsByClassName(i+'bar')),{scaleY:0,transformOrigin:'50% 100%'}); tl.to(Array.from(d.getElementsByClassName(i+'bar')),{scaleY:1,duration:.5,stagger:.07,ease:'power2.out'},S);
+  gsap.set(`#${i}fr`,{opacity:0}); tl.to(`#${i}fr`,{opacity:1,duration:.2},S+.85); show(`#${i}l1`,S+.3); show(`#${i}l2`,S+.6); show(`#${i}l3`,S+.9); };
+SH.quebra=(it,P,S,D,i)=>{ let co=''; for(let k=0;k<7;k++) co+=`<g class="${i}co" opacity="0"><ellipse cx="${500+k*45}" cy="560" rx="22" ry="22" fill="#ffd21f" stroke="${K}" stroke-width="5"/><text x="${500+k*45}" y="571" text-anchor="middle" font-family="'Luckiest Guy'" font-size="28" fill="${K}">€</text></g>`;
+  const cracks=`<path class="${i}cr" pathLength="1" d="M-60,-272 L-40,-220 L-70,-180 L-30,-130" stroke="${K}" stroke-width="7" fill="none" style="stroke-dasharray:1;stroke-dashoffset:1"/><path class="${i}cr" pathLength="1" d="M90,-38 L70,-90 L100,-120 L60,-170" stroke="${K}" stroke-width="7" fill="none" style="stroke-dasharray:1;stroke-dashoffset:1"/>`;
+  const d=mk(it,bgLiso('#ffd84d','#d9a514'),co+C('sis',{id:i+'sis',x:640,y:640,s:1.25,emos:['neutro','medo'],extra:cracks})+lab(i+'l1',P.rotulo,640,100,{font:'LG',size:72}));
+  breath(i+'sis',S,D); const t=S+(+P.t_quebra||1.0); state(i+'sis','emo','medo',t); drawOn(Array.from(d.getElementsByClassName(i+'cr')),t,.3);
+  tl.to(`#${i}sis .an`,{x:8,duration:.05,yoyo:true,repeat:9},t); const cs=Array.from(d.getElementsByClassName(i+'co')); gsap.set(cs,{y:-120}); tl.to(cs,{opacity:1,y:120,duration:.7,stagger:.08,ease:'power2.in'},t+.2);
+  show(`#${i}l1`,S+(+P.t_rot||1.8)); };
+SH.sabem=(it,P,S,D,i)=>{ let cl=''; [[930,640],[1010,700],[1090,640],[1170,700],[970,600],[1130,600]].sort((a,b)=>a[1]-b[1]).forEach(([x,y],k)=>cl+=C('clone',{id:i+'c'+k,x,y,s:1.5,emos:['neutro','feliz']}));
+  const L=[[230,P.l_gov,P.t_gov||.54],[640,P.l_sind,P.t_sind||2.1],[1070,P.l_rua,P.t_rua||3.36]];
+  let labs=''; L.forEach(([x,txt],k)=>labs+=lab(i+'l'+k,txt,x,170,{size:48,color:K})+check(i+'ck'+k,x,250,1.3));
+  mk(it,bgCidade(),C('gov',{id:i+'gv',x:230,y:690,s:.9,emos:['neutro','duvida']})+C('sind',{id:i+'sd',x:640,y:690,s:.9,emos:['neutro','duvida']})+cl+labs);
+  breath(i+'gv',S,D); breath(i+'sd',S,D);
+  const t0=S+(+L[0][2]),t1=S+(+L[1][2]),t2=S+(+L[2][2]);
+  state(i+'gv','emo','duvida',t0); nod(i+'gv',t0); show(`#${i}l0`,t0); drawOn(`#${i}ck0`,t0+.1,.3);
+  state(i+'sd','emo','duvida',t1); nod(i+'sd',t1); show(`#${i}l1`,t1); drawOn(`#${i}ck1`,t1+.1,.3);
+  [...Array(6).keys()].forEach(k=>{state(`${i}c${k}`,'emo','feliz',t2+k*.03); nod(`${i}c${k}`,t2);}); show(`#${i}l2`,t2); drawOn(`#${i}ck2`,t2+.1,.3); };
+SH.teatro=(it,P,S,D,i)=>{ const t=S+(+P.t_lei||3.4);
+  const papel=`<g id="${i}pp" transform="translate(-200,250)"><g class="rot"><rect x="-90" y="-110" width="180" height="220" rx="6" fill="#fff" stroke="${K}" stroke-width="6"/><text y="-40" text-anchor="middle" font-family="'Luckiest Guy'" font-size="52" fill="${K}">${esc(P.lei)}</text><text y="50" text-anchor="middle" font-family="'Luckiest Guy'" font-size="34" fill="#16a34a" transform="rotate(-12)">${esc(P.carimbo)}</text></g></g>`;
+  mk(it,bgPalco(),C('gov',{id:i+'gv',x:400,y:660,s:.95,emos:['raiva'],poses:['point']})+C('sind',{id:i+'sd',x:880,y:660,s:.95,emos:['grita'],poses:['up']})+cortinas(i+'ct')+lab(i+'l1',P.rotulo,640,170,{font:'LG',size:78,color:'#ffd21f',stroke:K,sw:12})+lab(i+'l2',P.sub,640,250,{size:52,color:'#fff',stroke:K,sw:10})+papel);
+  tl.to(`#${i}ctL`,{x:-560,duration:.7,ease:'power2.inOut'},S+.05); tl.to(`#${i}ctR`,{x:560,duration:.7,ease:'power2.inOut'},S+.05);
+  tl.to([`#${i}gv .an`,`#${i}sd .an`],{rotation:7,duration:.35,yoyo:true,repeat:Math.floor(D/.7)*2-1,ease:'sine.inOut',transformOrigin:'50% 100%'},S);
+  show(`#${i}l1`,S+(+P.t_rot||.8)); show(`#${i}l2`,S+(+P.t_sub||2.1)); hide(`#${i}l2`,t-.05,.15);
+  tl.to(`#${i}pp`,{x:1700,duration:1.1,ease:'none'},t); tl.to(`#${i}pp .rot`,{rotation:360,duration:1.1,ease:'none',transformOrigin:'50% 50%'},t); };
+SH.casa=(it,P,S,D,i)=>{ let hs=''; [[960,470,1],[1110,500,1.1],[1230,460,.9]].forEach(([x,y,s])=>hs+=`<g transform="translate(${x},${y}) scale(${s})"><rect x="-70" y="-60" width="140" height="120" fill="#f4c95d" stroke="${K}" stroke-width="6"/><path d="M-90,-56 L0,-130 L90,-56Z" fill="${RED}" stroke="${K}" stroke-width="6" stroke-linejoin="round"/><rect x="-20" y="0" width="40" height="60" fill="#7a4a17" stroke="${K}" stroke-width="5"/></g>`);
+  let cl=''; for(let k=0;k<7;k++) cl+=C('clone',{id:i+'c'+k,x:80+k*85,y:620+(k%2)*50,s:1.5,emos:['feliz']});
+  mk(it,bgCidade(),hs+`<g id="${i}g">${cl}</g>`+lab(i+'l1',P.rotulo,560,120,{size:62,color:K}));
+  tl.to(`#${i}g`,{x:340,duration:D,ease:'none'},S); for(let k=0;k<7;k++) tl.to(`#${i}c${k} .an`,{y:-12,duration:.18,yoyo:true,repeat:Math.floor(D/.36)*2-1},S+k*.05);
+  show(`#${i}l1`,S+.1); };
+SH.ciclo=(it,P,S,D,i)=>{ const cx=640,cy=420,R=200; const N=[P.n1,P.n2,P.n3,P.n4]; let nd='';
+  N.forEach((txt,k)=>{ const a=-Math.PI/2+k*Math.PI/2, x=cx+R*1.3*Math.cos(a)*1.25, y=cy+R*Math.sin(a)*1.0; nd+=`<g id="${i}n${k}" opacity="0"><rect x="${x-130}" y="${y-38}" width="260" height="76" rx="38" fill="#fff" stroke="${K}" stroke-width="6"/><text x="${x}" y="${y+16}" text-anchor="middle" font-family="'Luckiest Guy'" font-size="46" fill="${k===1?RED:K}">${esc(txt)}</text></g>`; });
+  const anel=`<ellipse id="${i}an" pathLength="1" cx="${cx}" cy="${cy}" rx="${R*1.6}" ry="${R}" stroke="${RED}" stroke-width="12" fill="none" stroke-dasharray="0.06 0.03" opacity="0"/>`;
+  mk(it,bgLiso('#38d6ff'),anel+nd+C('fr',{id:i+'fr',x:cx,y:cy+110,s:.6,emos:['duvida']})+lab(i+'l1',P.rotulo,640,85,{font:'LG',size:64}));
+  tl.to(`#${i}an`,{opacity:1,duration:.2},S); tl.to(`#${i}an`,{strokeDashoffset:-1,duration:D,ease:'none'},S);
+  N.forEach((_,k)=>show(`#${i}n${k}`,S+.1+k*.22)); show(`#${i}l1`,S+.25); tl.to(`#${i}fr .an`,{rotation:-10,duration:.4,yoyo:true,repeat:Math.floor(D/.8)*2-1,transformOrigin:'50% 100%'},S); };
+SH.diva=(it,P,S,D,i)=>{
+  const sofa=`<g transform="translate(470,600)"><path d="M-300,-40 Q-330,-160 -250,-170 L-210,-60 L260,-60 L260,40 L-300,40Z" fill="#8b3a2b" stroke="${K}" stroke-width="7" stroke-linejoin="round"/><rect x="-300" y="-60" width="560" height="70" rx="20" fill="#a64b37" stroke="${K}" stroke-width="7"/><path d="M-270,40 v40 M230,40 v40" stroke="${K}" stroke-width="14"/></g>`;
+  const mist=`<g transform="translate(1110,690) scale(.62)"><g id="${i}mi"><path d="M-110,-40 Q-140,-200 -40,-260 Q60,-300 120,-210 Q150,-120 100,-40Z" fill="#7d7d7d" stroke="${K}" stroke-width="8"/><text x="0" y="-110" text-anchor="middle" font-family="'Luckiest Guy'" font-size="120" fill="#fff" stroke="${K}" stroke-width="6" paint-order="stroke">?</text></g></g>`;
+  const bt=`<g id="${i}bt" opacity="0" transform="translate(640,215)"><rect x="-230" y="-48" width="460" height="96" rx="48" fill="${RED}" stroke="${K}" stroke-width="7"/><text y="20" text-anchor="middle" font-family="'Luckiest Guy'" font-size="56" fill="#fff">${esc(P.botao)}</text></g>`;
+  mk(it,bgLiso('#ffd84d','#b8732f'),sofa+`<g transform="rotate(-86 430 548)">${C('fr',{id:i+'fr',x:430,y:548,s:.72,emos:['duvida','feliz'],poses:['idle','acena']})}</g>`+mist+bt+lab(i+'l1',P.rotulo,640,90,{font:'LG',size:66})+lab(i+'l2',P.prox,1100,380,{size:46,color:K,rot:-4}));
+  breath(i+'fr',S,D,.03,1.1); show(`#${i}l1`,S+(+P.t_rot||1.8)); const t=S+(+P.t_insc||3.5);
+  show(`#${i}bt`,t,.45); tl.to(`#${i}bt`,{scale:1.08,duration:.4,yoyo:true,repeat:5,ease:'sine.inOut'},t+.5); state(i+'fr','emo','feliz',t); state(i+'fr','pose','acena',t);
+  show(`#${i}l2`,S+(+P.t_prox||4.8)); tl.to(`#${i}mi`,{y:-14,duration:.3,yoyo:true,repeat:5},S+(+P.t_prox||4.8)); };
+/* ---------- montar ---------- */
+for(const it of EDIT.items){ if(it.hidden||it.type!=='scene'||it.by!=='template') continue; const p=it.props||{}; const f=SH[p.scene]; if(f) f(it,p.params||{},+it.start,+it.dur,it.id+'_'); }
+})();
+</script>
+<!--__ITEMS_SCRIPT__-->
+</body></html>

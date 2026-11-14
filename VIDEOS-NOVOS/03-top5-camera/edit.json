@@ -1,0 +1,1178 @@
+{
+ "version": 1,
+ "name": "03 - TOP 5 CAPTADO EM CAMERA - 5 coisas inexplicaveis captadas por cameras de seguranca",
+ "estilo": "Top 5 captado em câmera (Doc Tops / ROOM 13)",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#000000"
+ },
+ "duration": 72.5,
+ "template": "generic",
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  },
+  "extra": [
+   {
+    "id": "wh0",
+    "src": "sfx/whoosh.wav",
+    "start": 6.7,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh1",
+    "src": "sfx/whoosh.wav",
+    "start": 15.2,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh2",
+    "src": "sfx/whoosh.wav",
+    "start": 23.9,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh3",
+    "src": "sfx/whoosh.wav",
+    "start": 33.5,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh4",
+    "src": "sfx/whoosh.wav",
+    "start": 45.2,
+    "volume": 0.22,
+    "label": "whoosh"
+   },
+   {
+    "id": "wh5",
+    "src": "sfx/whoosh.wav",
+    "start": 61.8,
+    "volume": 0.22,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Clipes de câmera"
+  },
+  {
+   "id": "visual",
+   "name": "HUD / setas / círculos"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  },
+  {
+   "id": "cards",
+   "name": "Cards de número"
+  }
+ ],
+ "items": [
+  {
+   "id": "vid1",
+   "type": "video",
+   "track": "fundo",
+   "start": 0,
+   "dur": 6.9,
+   "props": {
+    "src": "clips/intro.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "Intro multi-câmera"
+  },
+  {
+   "id": "sce2",
+   "type": "scene",
+   "track": "visual",
+   "start": 0,
+   "dur": 6.9,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "DVR",
+     "local": "4 CÂMERAS",
+     "data": "14/03/2024",
+     "hora": "03:00:00",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD DVR"
+  },
+  {
+   "id": "tex3",
+   "type": "text",
+   "track": "textos",
+   "start": 0.2,
+   "dur": 3.65,
+   "props": {
+    "text": "ALGO QUE NÃO DEVERIA EXISTIR",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "ALGO QUE NÃO DEVERIA EXISTIR",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "tex4",
+   "type": "text",
+   "track": "textos",
+   "start": 3.9,
+   "dur": 3.0,
+   "props": {
+    "text": "5 REGISTROS ONDE A LÓGICA FALHA",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "highlight": [
+     "5"
+    ],
+    "hl_color": "#e8101a"
+   },
+   "label": "5 REGISTROS ONDE A LÓGICA FA",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce5",
+   "type": "scene",
+   "track": "cards",
+   "start": 6.9,
+   "dur": 1.5,
+   "props": {
+    "scene": "cctv_numero",
+    "params": {
+     "n": "5",
+     "titulo": "O CORREDOR VAZIO",
+     "cor": "#e8101a",
+     "fundo": "#000000"
+    }
+   },
+   "label": "Número 5"
+  },
+  {
+   "id": "vid6",
+   "type": "video",
+   "track": "fundo",
+   "start": 8.4,
+   "dur": 4.5,
+   "props": {
+    "src": "clips/c5_live.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#5 corredor"
+  },
+  {
+   "id": "vid7",
+   "type": "video",
+   "track": "fundo",
+   "start": 12.9,
+   "dur": 2.5,
+   "props": {
+    "src": "clips/c5_replay.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#5 replay"
+  },
+  {
+   "id": "sce8",
+   "type": "scene",
+   "track": "visual",
+   "start": 8.4,
+   "dur": 7.0,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "CAM 02",
+     "local": "CORREDOR B",
+     "data": "14/03/2024",
+     "hora": "03:12:07",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD CAM 02"
+  },
+  {
+   "id": "sce9",
+   "type": "scene",
+   "track": "visual",
+   "start": 10.8,
+   "dur": 2.1,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 668,
+     "y": 290,
+     "ang": -40,
+     "r": 80,
+     "label": "ABRE SOZINHA",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta ABRE SOZINHA"
+  },
+  {
+   "id": "sce10",
+   "type": "scene",
+   "track": "visual",
+   "start": 13.0,
+   "dur": 2.4,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 640,
+     "y": 360,
+     "ang": -45,
+     "r": 190,
+     "label": "",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo "
+  },
+  {
+   "id": "tex11",
+   "type": "text",
+   "track": "textos",
+   "start": 12.9,
+   "dur": 2.5,
+   "props": {
+    "text": "▶ REPLAY · CÂMERA LENTA",
+    "x": 420,
+    "y": 82,
+    "w": 460,
+    "size": 30,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   },
+   "label": "Replay"
+  },
+  {
+   "id": "tex12",
+   "type": "text",
+   "track": "textos",
+   "start": 13.3,
+   "dur": 2.1,
+   "props": {
+    "text": "SENSOR DE MOVIMENTO: NADA",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "highlight": [
+     "NADA"
+    ],
+    "hl_color": "#e8101a"
+   },
+   "label": "SENSOR DE MOVIMENTO: NADA",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce13",
+   "type": "scene",
+   "track": "cards",
+   "start": 15.4,
+   "dur": 1.5,
+   "props": {
+    "scene": "cctv_numero",
+    "params": {
+     "n": "4",
+     "titulo": "A FIGURA NA GARAGEM",
+     "cor": "#e8101a",
+     "fundo": "#000000"
+    }
+   },
+   "label": "Número 4"
+  },
+  {
+   "id": "vid14",
+   "type": "video",
+   "track": "fundo",
+   "start": 16.9,
+   "dur": 3.5,
+   "props": {
+    "src": "clips/c4_live.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#4 garagem"
+  },
+  {
+   "id": "vid15",
+   "type": "video",
+   "track": "fundo",
+   "start": 20.4,
+   "dur": 3.7,
+   "props": {
+    "src": "clips/c4_replay.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#4 replay"
+  },
+  {
+   "id": "sce16",
+   "type": "scene",
+   "track": "visual",
+   "start": 16.9,
+   "dur": 7.2,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "CAM 07",
+     "local": "GARAGEM -1",
+     "data": "14/03/2024",
+     "hora": "02:47:31",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD CAM 07"
+  },
+  {
+   "id": "sce17",
+   "type": "scene",
+   "track": "visual",
+   "start": 17.4,
+   "dur": 2.2,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 700,
+     "y": 420,
+     "ang": -55,
+     "r": 80,
+     "label": "UMA FIGURA",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta UMA FIGURA"
+  },
+  {
+   "id": "tex18",
+   "type": "text",
+   "track": "textos",
+   "start": 19.4,
+   "dur": 1.0,
+   "props": {
+    "text": "SEM SOM · SEM DISTORÇÃO",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "SEM SOM · SEM DISTORÇÃO",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce19",
+   "type": "scene",
+   "track": "visual",
+   "start": 21.8,
+   "dur": 2.3,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 640,
+     "y": 400,
+     "ang": -45,
+     "r": 200,
+     "label": "ATRAVESSA O CONCRETO",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo ATRAVESSA O CONCRETO"
+  },
+  {
+   "id": "tex20",
+   "type": "text",
+   "track": "textos",
+   "start": 20.4,
+   "dur": 3.7,
+   "props": {
+    "text": "▶ REPLAY · CÂMERA LENTA",
+    "x": 420,
+    "y": 82,
+    "w": 460,
+    "size": 30,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   },
+   "label": "Replay"
+  },
+  {
+   "id": "sce21",
+   "type": "scene",
+   "track": "cards",
+   "start": 24.1,
+   "dur": 1.5,
+   "props": {
+    "scene": "cctv_numero",
+    "params": {
+     "n": "3",
+     "titulo": "O CARRO QUE BALANÇA",
+     "cor": "#e8101a",
+     "fundo": "#000000"
+    }
+   },
+   "label": "Número 3"
+  },
+  {
+   "id": "vid22",
+   "type": "video",
+   "track": "fundo",
+   "start": 25.6,
+   "dur": 5.2,
+   "props": {
+    "src": "clips/c3_live.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#3 carro"
+  },
+  {
+   "id": "vid23",
+   "type": "video",
+   "track": "fundo",
+   "start": 30.8,
+   "dur": 2.9,
+   "props": {
+    "src": "clips/c3_replay.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#3 replay"
+  },
+  {
+   "id": "sce24",
+   "type": "scene",
+   "track": "visual",
+   "start": 25.6,
+   "dur": 8.1,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "CAM 04",
+     "local": "ESTACIONAMENTO",
+     "data": "14/03/2024",
+     "hora": "01:05:44",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD CAM 04"
+  },
+  {
+   "id": "sce25",
+   "type": "scene",
+   "track": "visual",
+   "start": 26.6,
+   "dur": 2.8,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 715,
+     "y": 470,
+     "ang": -60,
+     "r": 80,
+     "label": "10 SEGUNDOS",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta 10 SEGUNDOS"
+  },
+  {
+   "id": "tex26",
+   "type": "text",
+   "track": "textos",
+   "start": 29.6,
+   "dur": 1.2,
+   "props": {
+    "text": "SEM VENTO · SEM TERREMOTO",
+    "x": 640,
+    "y": 620,
+    "w": 1100,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "SEM VENTO · SEM TERREMOTO",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce27",
+   "type": "scene",
+   "track": "visual",
+   "start": 31.0,
+   "dur": 2.7,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 640,
+     "y": 360,
+     "ang": -45,
+     "r": 220,
+     "label": "O DO LADO FICA PARADO",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo O DO LADO FICA PARADO"
+  },
+  {
+   "id": "tex28",
+   "type": "text",
+   "track": "textos",
+   "start": 30.8,
+   "dur": 2.9,
+   "props": {
+    "text": "▶ REPLAY · CÂMERA LENTA",
+    "x": 420,
+    "y": 82,
+    "w": 460,
+    "size": 30,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   },
+   "label": "Replay"
+  },
+  {
+   "id": "sce29",
+   "type": "scene",
+   "track": "cards",
+   "start": 33.7,
+   "dur": 1.5,
+   "props": {
+    "scene": "cctv_numero",
+    "params": {
+     "n": "2",
+     "titulo": "A COZINHA VAZIA",
+     "cor": "#e8101a",
+     "fundo": "#000000"
+    }
+   },
+   "label": "Número 2"
+  },
+  {
+   "id": "vid30",
+   "type": "video",
+   "track": "fundo",
+   "start": 35.2,
+   "dur": 7.0,
+   "props": {
+    "src": "clips/c2_live.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#2 cozinha"
+  },
+  {
+   "id": "vid31",
+   "type": "video",
+   "track": "fundo",
+   "start": 42.2,
+   "dur": 3.2,
+   "props": {
+    "src": "clips/c2_replay.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#2 replay"
+  },
+  {
+   "id": "sce32",
+   "type": "scene",
+   "track": "visual",
+   "start": 35.2,
+   "dur": 10.2,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "CAM 01",
+     "local": "APTO 304 · VAZIO",
+     "data": "14/03/2024",
+     "hora": "04:18:02",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD CAM 01"
+  },
+  {
+   "id": "sce33",
+   "type": "scene",
+   "track": "visual",
+   "start": 37.2,
+   "dur": 2.2,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 690,
+     "y": 250,
+     "ang": -30,
+     "r": 80,
+     "label": "OBJETOS VOAM",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta OBJETOS VOAM"
+  },
+  {
+   "id": "sce34",
+   "type": "scene",
+   "track": "visual",
+   "start": 39.5,
+   "dur": 2.7,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 678,
+     "y": 268,
+     "ang": -45,
+     "r": 150,
+     "label": "MÃOS INVISÍVEIS",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo MÃOS INVISÍVEIS"
+  },
+  {
+   "id": "tex35",
+   "type": "text",
+   "track": "textos",
+   "start": 42.2,
+   "dur": 3.2,
+   "props": {
+    "text": "▶ REPLAY · CÂMERA LENTA",
+    "x": 420,
+    "y": 82,
+    "w": 460,
+    "size": 30,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   },
+   "label": "Replay"
+  },
+  {
+   "id": "tex36",
+   "type": "text",
+   "track": "textos",
+   "start": 43.2,
+   "dur": 2.2,
+   "props": {
+    "text": "IMÓVEL VENDIDO NA SEMANA SEGUINTE",
+    "x": 640,
+    "y": 600,
+    "w": 1100,
+    "size": 50,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "highlight": [
+     "VENDIDO"
+    ],
+    "hl_color": "#e8101a"
+   },
+   "label": "IMÓVEL VENDIDO NA SEMANA SEG",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce37",
+   "type": "scene",
+   "track": "cards",
+   "start": 45.4,
+   "dur": 1.5,
+   "props": {
+    "scene": "cctv_numero",
+    "params": {
+     "n": "1",
+     "titulo": "A BABÁ ELETRÔNICA",
+     "cor": "#e8101a",
+     "fundo": "#000000"
+    }
+   },
+   "label": "Número 1"
+  },
+  {
+   "id": "vid38",
+   "type": "video",
+   "track": "fundo",
+   "start": 46.9,
+   "dur": 6.9,
+   "props": {
+    "src": "clips/c1_live.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#1 babá eletrônica"
+  },
+  {
+   "id": "sce39",
+   "type": "scene",
+   "track": "visual",
+   "start": 46.9,
+   "dur": 6.9,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "BABÁ CAM",
+     "local": "QUARTO",
+     "data": "14/03/2024",
+     "hora": "03:33:10",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD BABÁ CAM"
+  },
+  {
+   "id": "sce40",
+   "type": "scene",
+   "track": "visual",
+   "start": 49.4,
+   "dur": 1.6,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 518,
+     "y": 260,
+     "ang": -45,
+     "r": 110,
+     "label": "ELA SENTA",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo ELA SENTA"
+  },
+  {
+   "id": "sce41",
+   "type": "scene",
+   "track": "visual",
+   "start": 51.2,
+   "dur": 1.8,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 245,
+     "y": 78,
+     "ang": 45,
+     "r": 90,
+     "label": "CANTO ESCURO",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta CANTO ESCURO"
+  },
+  {
+   "id": "sce42",
+   "type": "scene",
+   "track": "visual",
+   "start": 53.1,
+   "dur": 0.7,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 518,
+     "y": 247,
+     "ang": -45,
+     "r": 90,
+     "label": "SORRI",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo SORRI"
+  },
+  {
+   "id": "vid43",
+   "type": "video",
+   "track": "fundo",
+   "start": 53.8,
+   "dur": 5.1,
+   "props": {
+    "src": "clips/c1_real.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#1 quarto real"
+  },
+  {
+   "id": "tex44",
+   "type": "text",
+   "track": "textos",
+   "start": 53.9,
+   "dur": 5.0,
+   "props": {
+    "text": "NO QUARTO, AO MESMO TEMPO",
+    "x": 640,
+    "y": 60,
+    "w": 1100,
+    "size": 30,
+    "color": "#ffffff",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(0,0,0,.6)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "NO QUARTO, AO MESMO TEMPO",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "tex45",
+   "type": "text",
+   "track": "textos",
+   "start": 55.4,
+   "dur": 3.5,
+   "props": {
+    "text": "DORMINDO DE BRUÇOS, VIRADA PRO LADO OPOSTO",
+    "x": 640,
+    "y": 610,
+    "w": 1100,
+    "size": 48,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "rgba(0,0,0,.78)",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true,
+    "highlight": [
+     "DE BRUÇOS"
+    ],
+    "hl_color": "#e8101a"
+   },
+   "label": "DORMINDO DE BRUÇOS, VIRADA P",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "vid46",
+   "type": "video",
+   "track": "fundo",
+   "start": 58.9,
+   "dur": 3.1,
+   "props": {
+    "src": "clips/c1_replay.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   },
+   "label": "#1 replay monitor"
+  },
+  {
+   "id": "sce47",
+   "type": "scene",
+   "track": "visual",
+   "start": 58.9,
+   "dur": 3.1,
+   "props": {
+    "scene": "cctv_hud",
+    "params": {
+     "cam": "BABÁ CAM",
+     "local": "QUARTO",
+     "data": "14/03/2024",
+     "hora": "03:33:16",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "HUD BABÁ CAM"
+  },
+  {
+   "id": "sce48",
+   "type": "scene",
+   "track": "visual",
+   "start": 59.3,
+   "dur": 2.7,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "circulo",
+     "x": 640,
+     "y": 360,
+     "ang": -45,
+     "r": 170,
+     "label": "O SORRISO NA TELA",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "circulo O SORRISO NA TELA"
+  },
+  {
+   "id": "tex49",
+   "type": "text",
+   "track": "textos",
+   "start": 58.9,
+   "dur": 3.1,
+   "props": {
+    "text": "▶ REPLAY · CÂMERA LENTA",
+    "x": 420,
+    "y": 82,
+    "w": 460,
+    "size": 30,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "left",
+    "bg": "",
+    "shadow": true
+   },
+   "label": "Replay"
+  },
+  {
+   "id": "htm50",
+   "type": "html",
+   "track": "fundo",
+   "start": 62.0,
+   "dur": 10.5,
+   "props": {
+    "html": "<div class='ofd'></div>",
+    "css": ".ofd{position:absolute;inset:0;background:radial-gradient(ellipse at 35% 50%,#1a0204 0%,#000 65%)}",
+    "fill": true,
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   },
+   "label": "Fundo final"
+  },
+  {
+   "id": "htm51",
+   "type": "html",
+   "track": "visual",
+   "start": 62.2,
+   "dur": 10.3,
+   "props": {
+    "html": "<div class='ofr'></div>",
+    "css": ".ofr{position:absolute;inset:0;border:6px solid #e8101a;box-shadow:0 0 40px rgba(232,16,26,.5)}",
+    "x": 380,
+    "y": 360,
+    "w": 632,
+    "h": 478
+   },
+   "label": "Moldura próximo"
+  },
+  {
+   "id": "ima52",
+   "type": "image",
+   "track": "visual",
+   "start": 62.2,
+   "dur": 10.3,
+   "props": {
+    "src": "img/proximo.jpg",
+    "x": 380,
+    "y": 360,
+    "w": 620,
+    "h": 466,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   },
+   "label": "Próximo vídeo",
+   "in": "fade"
+  },
+  {
+   "id": "tex53",
+   "type": "text",
+   "track": "textos",
+   "start": 62.4,
+   "dur": 10.1,
+   "props": {
+    "text": "PRÓXIMO CASO",
+    "x": 950,
+    "y": 210,
+    "w": 520,
+    "size": 34,
+    "color": "#e8101a",
+    "font": "Consolas",
+    "weight": 700,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "PRÓXIMO CASO",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "tex54",
+   "type": "text",
+   "track": "textos",
+   "start": 63.0,
+   "dur": 9.5,
+   "props": {
+    "text": "ÁUDIOS QUE O OUVIDO HUMANO NÃO CAPTA",
+    "x": 950,
+    "y": 330,
+    "w": 520,
+    "size": 52,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "ÁUDIOS QUE O OUVIDO HUMANO N",
+   "in": "fade",
+   "out": "fade"
+  },
+  {
+   "id": "sce55",
+   "type": "scene",
+   "track": "visual",
+   "start": 63.9,
+   "dur": 2.6,
+   "props": {
+    "scene": "cctv_marca",
+    "params": {
+     "tipo": "seta",
+     "x": 700,
+     "y": 360,
+     "ang": 0,
+     "r": 80,
+     "label": "",
+     "cor": "#e8101a"
+    }
+   },
+   "label": "seta "
+  },
+  {
+   "id": "tex56",
+   "type": "text",
+   "track": "textos",
+   "start": 69.3,
+   "dur": 3.2,
+   "props": {
+    "text": "INSCREVA-SE",
+    "x": 950,
+    "y": 520,
+    "w": 420,
+    "size": 60,
+    "color": "#ffffff",
+    "font": "Impact",
+    "weight": 400,
+    "align": "center",
+    "bg": "#e8101a",
+    "pad": 14,
+    "radius": 4,
+    "shadow": true
+   },
+   "label": "INSCREVA-SE",
+   "in": "pop",
+   "out": "fade"
+  }
+ ],
+ "referencia": {
+  "canal": "DocTops",
+  "canal_url": "https://www.youtube.com/@DocTops",
+  "video": "https://youtu.be/UJym69tx8fM",
+  "titulo": "Top 10 Fantasmas ESCALOFRIANTES Captados En Cámara",
+  "nota": "Também ROOM 13 (https://youtu.be/FgyDQXeHIGI). Clipes: frames de vídeos/fotos Pixabay + evento simulado (gerar_clipes.py)."
+ }
+}

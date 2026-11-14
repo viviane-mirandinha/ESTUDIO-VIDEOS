@@ -1,0 +1,39 @@
+<!--params {"texto":"TÍTULO","sub":"","fonte":"sans","cor":"#ffffff","tam":104,"y":50,"passos":"","t_sub":0.5,"fundo":"nenhum","empilhar":0}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden">
+ <div class="bg" style="position:absolute;inset:0"></div>
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div class="wrap" style="position:absolute;left:0;right:0;top:{{p.y}}%;transform:translateY(-50%);text-align:center;perspective:900px">
+  <h1 style="margin:0;display:inline-block;font-size:{{p.tam}}px;line-height:1.08;letter-spacing:.06em;max-width:1180px"></h1>
+  <p style="margin:18px 0 0;font:500 32px/1.25 Inter,'Helvetica Neue',Arial,sans-serif;color:#d2d9e0;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 24px rgba(0,0,0,.8)">{{p.sub}}</p>
+ </div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const h1=R.querySelector("h1"), p=R.querySelector("p"), bg=R.querySelector(".bg"), serif=P.fonte==="serif", branco=P.fundo==="branco";
+  h1.style.fontFamily=serif?"Georgia,'Times New Roman',serif":"Inter,'Helvetica Neue',Arial,sans-serif";
+  h1.style.fontWeight=serif?"700":"800"; h1.style.color=branco?"#0a0a0a":P.cor;
+  if(serif){h1.style.letterSpacing=".02em";}
+  h1.style.textShadow=branco?"none":(serif?"0 0 28px rgba(242,183,64,.55),0 4px 18px rgba(0,0,0,.8)":"0 0 32px rgba(160,200,255,.28),0 6px 24px rgba(0,0,0,.85)");
+  if(branco){bg.style.background="#f2f2f0"; p.style.color="#444";}
+  else if(P.fundo==="nevoa"){bg.style.background="radial-gradient(ellipse at 50% 60%,#14202c 0%,#06090d 70%)";}
+  const parts=String(P.texto).split("|"), steps=String(P.passos||"").split(",").map(Number);
+  parts.forEach((t,i)=>{ const s=document.createElement("span"); s.textContent=t; s.style.display=+P.empilhar?"block":"inline-block"; s.style.position="relative";
+    if(!+P.empilhar && i>0){ s.style.marginLeft=".45em"; }
+    if(+P.empilhar && i>0){ s.style.color=branco?"#0a0a0a":"#e8a33d"; }
+    const sh=document.createElement("span"); sh.textContent=t; sh.className="sh";
+    sh.style.cssText="position:absolute;left:0;top:0;right:0;color:transparent;background:linear-gradient(100deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.95) 50%,rgba(255,255,255,0) 65%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;text-shadow:none";
+    if(!branco) s.appendChild(sh); h1.appendChild(s);
+    const d0=isFinite(steps[i])?steps[i]:i*.35;
+    tl.fromTo(s,{opacity:0,filter:"blur(16px)",letterSpacing:serif?".25em":".45em",transformPerspective:900,z:-220},{opacity:1,filter:"blur(0px)",letterSpacing:serif?".02em":".06em",z:0,duration:1.1,ease:"power3.out",immediateRender:false},S+.08+d0);
+    tl.set(s,{opacity:0},0);
+    if(!branco) tl.fromTo(sh,{backgroundPosition:"120% 0"},{backgroundPosition:"-20% 0",duration:1.6,ease:"sine.inOut",immediateRender:false},S+.4+d0);
+  });
+  tl.fromTo(h1,{scale:1},{scale:1.05,duration:D,ease:"none",immediateRender:false},S);
+  if(P.sub){ tl.fromTo(p,{opacity:0,y:14},{opacity:1,y:0,duration:.7,ease:"power2.out",immediateRender:false},S+(+P.t_sub)); tl.set(p,{opacity:0},0);} else p.style.display="none";
+  tl.fromTo(R,{opacity:1},{opacity:0,duration:.25,ease:"none",immediateRender:false},S+D-.25);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,t=>{ if(P.fundo==="nevoa") FERN.fog(fc,t,99,"rgba(140,170,205,A)",1); if(P.fundo!=="nenhum") FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>

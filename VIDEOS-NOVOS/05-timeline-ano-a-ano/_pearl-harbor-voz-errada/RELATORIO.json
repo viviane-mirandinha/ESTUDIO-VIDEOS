@@ -1,0 +1,13 @@
+{
+ "video": 5,
+ "estilo": "05-timeline-ano-a-ano (Linha do tempo / mapa data a data — ref. Atlas Unfolded)",
+ "inicio": "2026-10-22T12:55:37-03:00",
+ "fim": "2026-10-22T13:09:59-03:00",
+ "minutos": 14.4,
+ "render_segundos": 45,
+ "observacoes": "ATENÇÃO: 05.mp3 não é o roteiro 05 (Guerra dos Cem Anos); é a locução de 'Pearl Harbor hora a hora' (texto do roteiro 06; 06.mp3 também é Pearl Harbor). Voz mantida, vídeo feito sobre Pearl Harbor hora a hora no molde do estilo 05 (pílula de data virou pílula de HORA). Template local (template.html): mapa em relevo procedural gerado de AWS Terrain Tiles (terrarium) com hipsometria verde/oliva/marrom + hillshade + mar por profundidade; Pearl Harbor com costa do OpenStreetMap (Overpass) porque a elevação não separa o porto. 12 cenas no edit.json (10 de mapa + 2 cards claros) com params editáveis: foco/zoom/push da câmera, hora, títulos com tarja colorida, ícones (navios, destróier, submarino, radar, base, aviões), enxames de aviões/blips, setas vermelhas, explosões, fogo, fumaça, caixa de dado com contador, caixa de citação, cards de ícones, CTA. Whisper GPU OK (large-v3, com torch\\lib no PATH). Música = drone grave procedural (ffmpeg) com ducking; 2 whoosh suaves nos cards; sem SFX de impacto. blackdetect = 0.",
+ "estimativa_30min": {
+  "horas_maquina": 1.2,
+  "o_que_escala": "O template é 100% dirigido por dados: cada data/hora = 1 objeto {mapa, foco, zoom, hora, sub, títulos, ícones, setas, enxame, número}. 30 min ≈ 150 cenas: o Ollama gera a lista {hora/data, lugar, evento, título curto} e uma tabela de geocodificação dá lat/lon; mapas de relevo saem em ~1 min por região (tiles abertas). Render draft ~45 s por minuto de vídeo → ~25 min. Gargalo: posicionar ícones/setas com coerência histórica (precisa de lista de coordenadas por evento)."
+ }
+}

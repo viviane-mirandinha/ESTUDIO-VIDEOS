@@ -1,0 +1,26 @@
+<!--params {"a_label":"AUGE DA SILK ROAD","a_sub":"2013","b_label":"MERCADOS ESCUROS","b_sub":"HOJE","cor":"#e8a33d","t_a":3.0,"t_b":1.1,"titulo":"VOLUME DE VENDAS"}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 70%,#1c2c3c 0%,#0b1118 72%,#020304 100%)">
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div style="position:absolute;left:-20%;right:-20%;bottom:-8%;height:40%;background:repeating-linear-gradient(90deg,rgba(120,160,200,.08) 0 1px,transparent 1px 70px),repeating-linear-gradient(0deg,rgba(120,160,200,.08) 0 1px,transparent 1px 70px);transform:perspective(600px) rotateX(62deg);transform-origin:50% 0;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 50%)"></div>
+ <div class="tt" style="position:absolute;top:44px;left:0;right:0;text-align:center;font:700 30px Inter,Arial,sans-serif;color:#a9b4c0;letter-spacing:.3em">{{p.titulo}}</div>
+ <div class="col a" style="position:absolute;left:330px;bottom:200px;width:150px;height:170px;transform-origin:50% 100%;background:linear-gradient(180deg,#4f7aa3,#1d3247);box-shadow:0 0 40px rgba(79,122,163,.4)"></div>
+ <div class="col b" style="position:absolute;left:800px;bottom:200px;width:150px;height:400px;transform-origin:50% 100%;background:linear-gradient(180deg,{{p.cor}},#5a3a10);box-shadow:0 0 70px rgba(232,163,61,.5)"></div>
+ <div class="lb a" style="position:absolute;left:205px;width:400px;bottom:96px;text-align:center"><div style="font:800 34px Inter,Arial,sans-serif;color:#fff">{{p.a_label}}</div><div style="font:500 28px Inter,Arial,sans-serif;color:#a9b4c0;margin-top:6px">{{p.a_sub}}</div></div>
+ <div class="lb b" style="position:absolute;left:675px;width:400px;bottom:96px;text-align:center"><div style="font:800 34px Inter,Arial,sans-serif;color:#fff">{{p.b_label}}</div><div style="font:500 28px Inter,Arial,sans-serif;color:{{p.cor}};margin-top:6px">{{p.b_sub}}</div></div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)"></div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const q=function(s){return R.querySelectorAll(s);};
+  tl.fromTo(q(".tt"),{opacity:0},{opacity:1,duration:.5,immediateRender:false},S+.1);
+  [["b",+P.t_b],["a",+P.t_a]].forEach(function(kt){ const k=kt[0], t=kt[1];
+    tl.fromTo(q(".col."+k),{scaleY:0},{scaleY:1,duration:1.1,ease:"power3.out",immediateRender:false},S+t); tl.set(q(".col."+k),{scaleY:0},0);
+    tl.fromTo(q(".lb."+k),{opacity:0,y:16},{opacity:1,y:0,duration:.5,immediateRender:false},S+t+.15); tl.set(q(".lb."+k),{opacity:0},0); });
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,function(t){ FERN.fog(fc,t,55,"rgba(140,175,210,A)",.7); FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>

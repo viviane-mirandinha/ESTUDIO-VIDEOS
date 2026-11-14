@@ -1,0 +1,1283 @@
+{
+ "version": 1,
+ "name": "06 - GUERRA TOP-DOWN - Pearl Harbor hora a hora",
+ "estilo": "06-guerra-top-down",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#2c6470"
+ },
+ "duration": 85.3,
+ "template": "local",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "The Operations Room",
+  "canal_url": "https://www.youtube.com/@TheOperationsRoom",
+  "video": "https://youtu.be/25v3B2TUXFo",
+  "titulo": "Pearl Harbor (2/3) - Battleship Row - Animated",
+  "nota": "mapa top-down (água azul-petróleo, terra oliva), navios vistos de cima, setas vermelhas, relógio, fotos P&B em inserto"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.07,
+   "start": 0,
+   "fade_out": 2.0,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 12.7,
+    "volume": 0.12,
+    "label": "whoosh zoom out"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 33.9,
+    "volume": 0.12,
+    "label": "whoosh mergulho"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 70.7,
+    "volume": 0.12,
+    "label": "whoosh Pacífico"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Mapa"
+  },
+  {
+   "id": "eventos",
+   "name": "Movimentos / eventos"
+  },
+  {
+   "id": "fotos",
+   "name": "Fotos de arquivo"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos de unidade"
+  },
+  {
+   "id": "numeros",
+   "name": "Números"
+  },
+  {
+   "id": "textos",
+   "name": "Títulos"
+  },
+  {
+   "id": "relogio",
+   "name": "Relógio"
+  }
+ ],
+ "items": [
+  {
+   "id": "camera",
+   "type": "param",
+   "label": "Câmera do mapa [t, x_km, y_km(norte), largura_km]",
+   "props": {
+    "value": [
+     [
+      0,
+      -0.7,
+      -5.9,
+      6.6
+     ],
+     [
+      8.3,
+      -0.8,
+      -5.75,
+      5.6
+     ],
+     [
+      12.6,
+      -0.8,
+      -5.75,
+      5.4
+     ],
+     [
+      14.7,
+      0,
+      34,
+      190
+     ],
+     [
+      17.8,
+      0,
+      42,
+      172
+     ],
+     [
+      22.4,
+      3,
+      17,
+      100
+     ],
+     [
+      24.6,
+      6,
+      15,
+      90
+     ],
+     [
+      27.4,
+      2,
+      14,
+      88
+     ],
+     [
+      31.0,
+      0,
+      12,
+      80
+     ],
+     [
+      33.8,
+      -1,
+      6,
+      60
+     ],
+     [
+      36.0,
+      0.446,
+      -0.4600000000000001,
+      5.0
+     ],
+     [
+      37.5,
+      0.02999999999999997,
+      -0.252,
+      3.4
+     ],
+     [
+      44.3,
+      0.06,
+      -0.272,
+      2.9
+     ],
+     [
+      46.0,
+      -0.23399999999999999,
+      -0.655,
+      2.5
+     ],
+     [
+      51.4,
+      -0.384,
+      -0.655,
+      2.2
+     ],
+     [
+      53.6,
+      4,
+      17,
+      105
+     ],
+     [
+      59.4,
+      1,
+      18,
+      95
+     ],
+     [
+      62.0,
+      0,
+      28,
+      150
+     ],
+     [
+      64.5,
+      0,
+      32,
+      165
+     ],
+     [
+      65.6,
+      0.546,
+      -0.7100000000000001,
+      4.4
+     ],
+     [
+      70.4,
+      0.546,
+      -0.7100000000000001,
+      3.8
+     ],
+     [
+      72.8,
+      -1100,
+      900,
+      13000
+     ],
+     [
+      75.4,
+      -1150,
+      900,
+      12600
+     ],
+     [
+      78.3,
+      -2200,
+      1000,
+      10000
+     ],
+     [
+      85.3,
+      -3000,
+      1100,
+      8200
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cor_azul",
+   "type": "param",
+   "label": "Cor EUA",
+   "props": {
+    "value": "#3b7dd8"
+   }
+  },
+  {
+   "id": "cor_vermelho",
+   "type": "param",
+   "label": "Cor Japão",
+   "props": {
+    "value": "#d23b3b"
+   }
+  },
+  {
+   "id": "h1",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 06:37",
+   "start": 0.0,
+   "dur": 12.75,
+   "by": "template",
+   "props": {
+    "text": "06:37",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h2",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 07:02",
+   "start": 12.75,
+   "dur": 9.85,
+   "by": "template",
+   "props": {
+    "text": "07:02",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h3",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 07:48",
+   "start": 22.6,
+   "dur": 4.8,
+   "by": "template",
+   "props": {
+    "text": "07:48",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h4",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 07:55",
+   "start": 27.4,
+   "dur": 8.75,
+   "by": "template",
+   "props": {
+    "text": "07:55",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h5",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 08:06",
+   "start": 36.15,
+   "dur": 8.45,
+   "by": "template",
+   "props": {
+    "text": "08:06",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h6",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 08:10",
+   "start": 44.6,
+   "dur": 7.0,
+   "by": "template",
+   "props": {
+    "text": "08:10",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h7",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 08:54",
+   "start": 51.6,
+   "dur": 8.0,
+   "by": "template",
+   "props": {
+    "text": "08:54",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "h8",
+   "type": "text",
+   "track": "relogio",
+   "label": "Relógio 09:45",
+   "start": 59.6,
+   "dur": 11.0,
+   "by": "template",
+   "props": {
+    "text": "09:45",
+    "sub": "7 DEZ 1941"
+   }
+  },
+  {
+   "id": "f1",
+   "type": "text",
+   "track": "textos",
+   "label": "Título data",
+   "start": 0.2,
+   "dur": 3.0,
+   "by": "template",
+   "props": {
+    "text": "7 DE DEZEMBRO DE 1941",
+    "size": 58,
+    "sub": "PEARL HARBOR, HAVAÍ"
+   }
+  },
+  {
+   "id": "f2",
+   "type": "text",
+   "track": "textos",
+   "label": "Título alarme",
+   "start": 8.6,
+   "dur": 4.0,
+   "by": "template",
+   "props": {
+    "text": "O ALARME SOA",
+    "size": 58,
+    "sub": "MAS A CADEIA DE COMANDO HESITA"
+   }
+  },
+  {
+   "id": "f3",
+   "type": "text",
+   "track": "textos",
+   "label": "Título primeira onda",
+   "start": 27.5,
+   "dur": 3.8,
+   "by": "template",
+   "props": {
+    "text": "PRIMEIRA ONDA",
+    "size": 60,
+    "sub": "07:55"
+   }
+  },
+  {
+   "id": "f4",
+   "type": "text",
+   "track": "textos",
+   "label": "Título segunda onda",
+   "start": 54.0,
+   "dur": 3.0,
+   "by": "template",
+   "props": {
+    "text": "SEGUNDA ONDA",
+    "size": 60,
+    "sub": "08:54"
+   }
+  },
+  {
+   "id": "f5",
+   "type": "text",
+   "track": "textos",
+   "label": "Título porta-aviões",
+   "start": 71.4,
+   "dur": 4.0,
+   "by": "template",
+   "props": {
+    "text": "OS PORTA-AVIÕES ESTAVAM AUSENTES",
+    "size": 56,
+    "sub": "OS ALVOS PRINCIPAIS"
+   }
+  },
+  {
+   "id": "f6",
+   "type": "text",
+   "track": "textos",
+   "label": "Título erro",
+   "start": 75.5,
+   "dur": 2.9,
+   "by": "template",
+   "props": {
+    "text": "ESSE ERRO MUDOU A GUERRA",
+    "size": 60,
+    "sub": ""
+   }
+  },
+  {
+   "id": "f7",
+   "type": "text",
+   "track": "textos",
+   "label": "Título Midway",
+   "start": 79.2,
+   "dur": 6.1,
+   "by": "template",
+   "props": {
+    "text": "PRÓXIMA BATALHA: MIDWAY",
+    "size": 58,
+    "sub": "HORA A HORA"
+   }
+  },
+  {
+   "id": "f8",
+   "type": "text",
+   "track": "textos",
+   "label": "Botão inscreva-se",
+   "start": 78.5,
+   "dur": 6.8,
+   "by": "template",
+   "props": {
+    "text": "INSCREVA-SE",
+    "size": 48,
+    "bg": "#d23b3b"
+   }
+  },
+  {
+   "id": "q1",
+   "type": "text",
+   "track": "textos",
+   "label": "Citação tenente",
+   "start": 19.9,
+   "dur": 2.6,
+   "by": "template",
+   "props": {
+    "text": "“NÃO SE PREOCUPE COM ISSO.”",
+    "size": 62,
+    "sub": "— TENENTE DE PLANTÃO, 7:02"
+   }
+  },
+  {
+   "id": "n1",
+   "type": "text",
+   "track": "numeros",
+   "label": "183 aviões",
+   "start": 31.2,
+   "dur": 4.9,
+   "by": "template",
+   "props": {
+    "text": "183",
+    "size": 96,
+    "sub": "AVIÕES"
+   }
+  },
+  {
+   "id": "n2",
+   "type": "text",
+   "track": "numeros",
+   "label": "1.177 marinheiros",
+   "start": 39.1,
+   "dur": 5.3,
+   "by": "template",
+   "props": {
+    "text": "1.177",
+    "size": 96,
+    "sub": "MARINHEIROS MORTOS NO ARIZONA"
+   }
+  },
+  {
+   "id": "n3",
+   "type": "text",
+   "track": "numeros",
+   "label": "167 aviões",
+   "start": 56.5,
+   "dur": 3.0,
+   "by": "template",
+   "props": {
+    "text": "167",
+    "size": 96,
+    "sub": "AVIÕES"
+   }
+  },
+  {
+   "id": "n4",
+   "type": "text",
+   "track": "numeros",
+   "label": "2.403 mortos",
+   "start": 64.7,
+   "dur": 5.9,
+   "by": "template",
+   "props": {
+    "text": "2.403",
+    "size": 96,
+    "sub": "AMERICANOS MORTOS",
+    "pos": "l"
+   }
+  },
+  {
+   "id": "n5",
+   "type": "text",
+   "track": "numeros",
+   "label": "8 encouraçados",
+   "start": 68.3,
+   "dur": 2.3,
+   "by": "template",
+   "props": {
+    "text": "8",
+    "size": 96,
+    "sub": "ENCOURAÇADOS ATINGIDOS",
+    "pos": "r"
+   }
+  },
+  {
+   "id": "l1",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo USS Ward",
+   "start": 2.7,
+   "dur": 5.6,
+   "by": "template",
+   "props": {
+    "text": "USS WARD",
+    "x": -1.9,
+    "y": -7.0,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l2",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo submarino",
+   "start": 5.2,
+   "dur": 3.1,
+   "by": "template",
+   "props": {
+    "text": "SUBMARINO ANÃO",
+    "x": -0.75,
+    "y": -6.25,
+    "lado": "vermelho"
+   }
+  },
+  {
+   "id": "l3",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Pearl Harbor 1",
+   "start": 0.4,
+   "dur": 7.9,
+   "by": "template",
+   "props": {
+    "text": "PEARL HARBOR",
+    "x": 0.4,
+    "y": -2.6,
+    "lado": "neutro"
+   }
+  },
+  {
+   "id": "l4",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo radar Opana",
+   "start": 14.3,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "text": "RADAR DE OPANA",
+    "x": -2.58,
+    "y": 38.16,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l5",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo nuvem",
+   "start": 15.8,
+   "dur": 2.0,
+   "by": "template",
+   "props": {
+    "text": "NUVEM DE AVIÕES",
+    "x": 22,
+    "y": 72,
+    "lado": "vermelho"
+   }
+  },
+  {
+   "id": "l6",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Kaneohe",
+   "start": 23.6,
+   "dur": 3.8,
+   "by": "template",
+   "props": {
+    "text": "KANEOHE",
+    "x": 23.18,
+    "y": 9.73,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l7",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Pearl Harbor 2",
+   "start": 27.6,
+   "dur": 6.2,
+   "by": "template",
+   "props": {
+    "text": "PEARL HARBOR",
+    "x": 0,
+    "y": 0,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l8",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Arizona",
+   "start": 36.6,
+   "dur": 7.8,
+   "by": "template",
+   "props": {
+    "text": "USS ARIZONA",
+    "x": 0.48,
+    "y": -0.372,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l9",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Oklahoma",
+   "start": 44.8,
+   "dur": 6.7,
+   "by": "template",
+   "props": {
+    "text": "USS OKLAHOMA",
+    "x": 0.016,
+    "y": -0.755,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l10",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Pearl Harbor 3",
+   "start": 53.2,
+   "dur": 6.2,
+   "by": "template",
+   "props": {
+    "text": "PEARL HARBOR",
+    "x": 0,
+    "y": 0,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l11",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Enterprise",
+   "start": 72.0,
+   "dur": 3.3,
+   "by": "template",
+   "props": {
+    "text": "ENTERPRISE",
+    "x": -333.73,
+    "y": 26.54,
+    "lado": "azul",
+    "icone": "porta",
+    "abaixo": true
+   }
+  },
+  {
+   "id": "l12",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Lexington",
+   "start": 72.4,
+   "dur": 2.9,
+   "by": "template",
+   "props": {
+    "text": "LEXINGTON",
+    "x": -1497.66,
+    "y": 291.98,
+    "lado": "azul",
+    "icone": "porta"
+   }
+  },
+  {
+   "id": "l13",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Saratoga",
+   "start": 72.8,
+   "dur": 2.5,
+   "by": "template",
+   "props": {
+    "text": "SARATOGA",
+    "x": 4201.49,
+    "y": 1254.2,
+    "lado": "azul",
+    "icone": "porta"
+   }
+  },
+  {
+   "id": "l14",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Pearl Harbor 4",
+   "start": 71.0,
+   "dur": 4.3,
+   "by": "template",
+   "props": {
+    "text": "PEARL HARBOR",
+    "x": 0,
+    "y": 0,
+    "lado": "vermelho",
+    "icone": "alvo"
+   }
+  },
+  {
+   "id": "l15",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Japão",
+   "start": 78.6,
+   "dur": 6.7,
+   "by": "template",
+   "props": {
+    "text": "JAPÃO",
+    "x": -6544.81,
+    "y": 1674.48,
+    "lado": "vermelho"
+   }
+  },
+  {
+   "id": "l16",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Havaí",
+   "start": 78.6,
+   "dur": 6.7,
+   "by": "template",
+   "props": {
+    "text": "HAVAÍ",
+    "x": 47.38,
+    "y": -128.3,
+    "lado": "azul"
+   }
+  },
+  {
+   "id": "l17",
+   "type": "text",
+   "track": "rotulos",
+   "label": "Rótulo Midway",
+   "start": 82.6,
+   "dur": 2.7,
+   "by": "template",
+   "props": {
+    "text": "MIDWAY",
+    "x": -1999.29,
+    "y": 757.61,
+    "lado": "amarelo",
+    "icone": "alvo"
+   }
+  },
+  {
+   "id": "e_ward",
+   "type": "text",
+   "track": "eventos",
+   "label": "Ward x submarino (tiro em 'afunda')",
+   "start": 2.7,
+   "dur": 5.6,
+   "by": "template",
+   "props": {
+    "text": "USS Ward",
+    "tipo": "ward",
+    "tiro": 5.0
+   }
+  },
+  {
+   "id": "e_radar",
+   "type": "text",
+   "track": "eventos",
+   "label": "Radar + nuvem",
+   "start": 14.0,
+   "dur": 3.9,
+   "by": "template",
+   "props": {
+    "text": "Radar",
+    "tipo": "radar",
+    "x": -2.58,
+    "y": 38.16,
+    "nuvem": 15.6
+   }
+  },
+  {
+   "id": "e_kane",
+   "type": "text",
+   "track": "eventos",
+   "label": "Onda Kaneohe",
+   "start": 23.4,
+   "dur": 4.0,
+   "by": "template",
+   "props": {
+    "text": "Kaneohe",
+    "tipo": "onda",
+    "pts": [
+     [
+      34,
+      72
+     ],
+     [
+      36,
+      40
+     ],
+     [
+      23.18,
+      9.73
+     ]
+    ],
+    "avioes": 9,
+    "desenho": 2.0,
+    "alvo": 1
+   }
+  },
+  {
+   "id": "e_w1a",
+   "type": "text",
+   "track": "eventos",
+   "label": "1ª onda → Pearl",
+   "start": 28.6,
+   "dur": 7.5,
+   "by": "template",
+   "props": {
+    "text": "Onda 1",
+    "tipo": "onda",
+    "pts": [
+     [
+      -12,
+      78
+     ],
+     [
+      -22,
+      30
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "avioes": 12,
+    "desenho": 3.2,
+    "alvo": 0
+   }
+  },
+  {
+   "id": "e_w1b",
+   "type": "text",
+   "track": "eventos",
+   "label": "1ª onda → Wheeler",
+   "start": 29.0,
+   "dur": 5.0,
+   "by": "template",
+   "props": {
+    "text": "Onda 1b",
+    "tipo": "onda",
+    "pts": [
+     [
+      2,
+      80
+     ],
+     [
+      -6,
+      45
+     ],
+     [
+      -8.24,
+      13.27
+     ]
+    ],
+    "avioes": 8,
+    "desenho": 2.8,
+    "alvo": 1
+   }
+  },
+  {
+   "id": "e_w1c",
+   "type": "text",
+   "track": "eventos",
+   "label": "1ª onda → Hickam",
+   "start": 29.4,
+   "dur": 6.7,
+   "by": "template",
+   "props": {
+    "text": "Onda 1c",
+    "tipo": "onda",
+    "pts": [
+     [
+      -30,
+      70
+     ],
+     [
+      -34,
+      10
+     ],
+     [
+      2.4,
+      -3.9
+     ]
+    ],
+    "avioes": 8,
+    "desenho": 3.4,
+    "alvo": 0
+   }
+  },
+  {
+   "id": "e_ariz",
+   "type": "text",
+   "track": "eventos",
+   "label": "Arizona explode",
+   "start": 37.75,
+   "dur": 47.5,
+   "by": "template",
+   "props": {
+    "text": "USS Arizona",
+    "tipo": "explode",
+    "navio": "arizona"
+   }
+  },
+  {
+   "id": "e_okla",
+   "type": "text",
+   "track": "eventos",
+   "label": "Oklahoma vira",
+   "start": 46.5,
+   "dur": 38.8,
+   "by": "template",
+   "props": {
+    "text": "USS Oklahoma",
+    "tipo": "vira",
+    "navio": "oklahoma",
+    "duracao": 1.9
+   }
+  },
+  {
+   "id": "e_w2a",
+   "type": "text",
+   "track": "eventos",
+   "label": "2ª onda → Pearl",
+   "start": 54.6,
+   "dur": 5.0,
+   "by": "template",
+   "props": {
+    "text": "Onda 2",
+    "tipo": "onda",
+    "pts": [
+     [
+      44,
+      64
+     ],
+     [
+      30,
+      22
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "avioes": 12,
+    "desenho": 2.6,
+    "alvo": 0
+   }
+  },
+  {
+   "id": "e_w2b",
+   "type": "text",
+   "track": "eventos",
+   "label": "2ª onda → Kaneohe",
+   "start": 54.9,
+   "dur": 4.7,
+   "by": "template",
+   "props": {
+    "text": "Onda 2b",
+    "tipo": "onda",
+    "pts": [
+     [
+      52,
+      60
+     ],
+     [
+      40,
+      30
+     ],
+     [
+      23.18,
+      9.73
+     ]
+    ],
+    "avioes": 8,
+    "desenho": 2.4,
+    "alvo": 1
+   }
+  },
+  {
+   "id": "e_w2c",
+   "type": "text",
+   "track": "eventos",
+   "label": "2ª onda → Hickam",
+   "start": 55.3,
+   "dur": 4.3,
+   "by": "template",
+   "props": {
+    "text": "Onda 2c",
+    "tipo": "onda",
+    "pts": [
+     [
+      60,
+      50
+     ],
+     [
+      30,
+      0
+     ],
+     [
+      2.4,
+      -3.9
+     ]
+    ],
+    "avioes": 8,
+    "desenho": 2.6,
+    "alvo": 0
+   }
+  },
+  {
+   "id": "e_ret",
+   "type": "text",
+   "track": "eventos",
+   "label": "Retirada para o norte",
+   "start": 60.6,
+   "dur": 4.1,
+   "by": "template",
+   "props": {
+    "text": "Retirada",
+    "tipo": "retirada",
+    "pts": [
+     [
+      0,
+      0
+     ],
+     [
+      -10,
+      40
+     ],
+     [
+      -14,
+      90
+     ]
+    ],
+    "avioes": 14,
+    "desenho": 3.4
+   }
+  },
+  {
+   "id": "e_dano",
+   "type": "text",
+   "track": "eventos",
+   "label": "8 encouraçados destacados",
+   "start": 68.3,
+   "dur": 2.4,
+   "by": "template",
+   "props": {
+    "text": "Danos",
+    "tipo": "destaque"
+   }
+  },
+  {
+   "id": "e_porta",
+   "type": "text",
+   "track": "eventos",
+   "label": "Linhas porta-aviões",
+   "start": 72.0,
+   "dur": 3.4,
+   "by": "template",
+   "props": {
+    "text": "Porta-aviões",
+    "tipo": "porta"
+   }
+  },
+  {
+   "id": "p1",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto USS Ward",
+   "start": 8.3,
+   "dur": 4.35,
+   "by": "template",
+   "props": {
+    "src": "img/ward.jpg",
+    "modo": "full",
+    "pos": "tl",
+    "legenda": "USS WARD (DD-139) — TRIPULAÇÃO DO CANHÃO Nº 3"
+   }
+  },
+  {
+   "id": "p2",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto radar Opana",
+   "start": 17.8,
+   "dur": 4.75,
+   "by": "template",
+   "props": {
+    "src": "img/radar.jpg",
+    "modo": "full",
+    "pos": "tl",
+    "legenda": "RADAR SCR-270 DE OPANA, 7:02"
+   }
+  },
+  {
+   "id": "p3",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto primeira onda",
+   "start": 31.4,
+   "dur": 4.5,
+   "by": "template",
+   "props": {
+    "src": "img/decolagem.jpg",
+    "modo": "inset",
+    "pos": "tl",
+    "legenda": "AVIÕES JAPONESES DECOLAM DO PORTA-AVIÕES"
+   }
+  },
+  {
+   "id": "p8",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto Kaneohe",
+   "start": 25.4,
+   "dur": 1.95,
+   "by": "template",
+   "props": {
+    "src": "img/kaneohe.jpg",
+    "modo": "inset",
+    "pos": "tl",
+    "legenda": "BASE DE KANEOHE EM CHAMAS"
+   }
+  },
+  {
+   "id": "p4",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto Arizona",
+   "start": 38.7,
+   "dur": 5.6,
+   "by": "template",
+   "props": {
+    "src": "img/arizona.jpg",
+    "modo": "inset",
+    "pos": "tl",
+    "legenda": "USS ARIZONA EM CHAMAS"
+   }
+  },
+  {
+   "id": "p5",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto Oklahoma",
+   "start": 48.7,
+   "dur": 2.85,
+   "by": "template",
+   "props": {
+    "src": "img/oklahoma.jpg",
+    "modo": "inset",
+    "pos": "tl",
+    "legenda": "USS OKLAHOMA DE CABEÇA PARA BAIXO"
+   }
+  },
+  {
+   "id": "p6",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto Zero",
+   "start": 61.1,
+   "dur": 3.5,
+   "by": "template",
+   "props": {
+    "src": "img/zero.jpg",
+    "modo": "inset",
+    "pos": "bl",
+    "legenda": "CAÇA ZERO JAPONÊS (A6M2)"
+   }
+  },
+  {
+   "id": "p7",
+   "type": "image",
+   "track": "fotos",
+   "label": "Foto porta-aviões",
+   "start": 75.4,
+   "dur": 3.0,
+   "by": "template",
+   "props": {
+    "src": "img/enterprise.jpg",
+    "modo": "full",
+    "pos": "tl",
+    "legenda": "USS ENTERPRISE (CV-6)"
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "param",
+   "label": "Vinheta do mapa (0-1)",
+   "props": {
+    "value": 0.55
+   }
+  }
+ ]
+}

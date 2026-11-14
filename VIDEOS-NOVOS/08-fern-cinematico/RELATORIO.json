@@ -1,0 +1,13 @@
+{
+    "video":  8,
+    "estilo":  "08-fern-cinematico (Fern / Not What You Think / RealLifeLore)",
+    "inicio":  "2026-10-22T15:56:05Z",
+    "fim":  "2026-10-22T21:23:09Z",
+    "minutos":  327.1,
+    "render_segundos":  62,
+    "observacoes":  "Template generic + 7 cenas novas reutilizáveis em EDITOR VIDEOS/templates/scenes (fern_plano, fern_titulo3d, fern_moldura3d, fern_numero, fern_three [terreno|racks, Three.js 0.150 CDN], fern_barras, fern_inscreva); névoa/poeira/grão determinísticos via setter GSAP. 11 imagens Flux/Pollinations (manequins sem rosto estilo Fern; muitos 402/503 por concorrência, retry 20 s; 2 regeradas: corpo nu e cidade com Cristo), 4 fotos Wikimedia (biblioteca Glen Park, Trump, banner FBI seized; créditos em img/creditos.json). whisper large-v3 GPU sem initial_prompt (com prompt o medium alucinou os primeiros 30 s). build_from_edit.py ganhou espelhamento de params de mídia das cenas (src) para hf/m/. Trilha drone sintetizada no ffmpeg. 2 renders (75 s + 67 s): 2º só reforçou contraste dos subtítulos. | CORREÇÃO (pedido do usuário: início escuro): o mergulho no preto a cada corte (fade-out 0,22 s + fade-in do preto) virou corte seco com micro-fade de 55%-\u003e100%; fern_plano com brilho 1.15/contraste 1.15, tint .10, vinheta .5, nova luz de recorte (screen, param luz/luz_forca), névoa .4; brilho extra em contrabando/cidade/guerra/final; Three.js (terreno/racks) com mais luz e wireframe mais claro; fundos das molduras/número/barras mais claros. YAVG centro antes-\u003edepois: 0,5s 33-\u003e52 | 2,8s 13-\u003e61 | 4,0s 79-\u003e104 | 5,5s 55-\u003e91 | 7,6s 10-\u003e47 | 9,0s 56-\u003e79 | 11,5s 41-\u003e71 | 14,6s 32-\u003e87 | 33,1s 40-\u003e58 | 47,5s 33-\u003e44 | 50,0s 56-\u003e84. 3º render (62 s).",
+    "estimativa_30min":  {
+                             "horas_maquina":  1.5,
+                             "o_que_escala":  "Cenas prontas viram fábrica: lista {frase, cena, mídia}. Gargalo = imagens Flux (18 s + falhas 402 =\u003e ~150 imagens para 30 min = ~1 h) e escolha de fotos reais; render ~1,2 s por segundo de vídeo (~35 min)."
+                         }
+}

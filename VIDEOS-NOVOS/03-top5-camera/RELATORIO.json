@@ -1,0 +1,13 @@
+{
+ "video": 3,
+ "estilo": "TOP 5 CAPTADO EM CAMERA (Doc Tops / ROOM 13)",
+ "inicio": "2026-10-22T13:32:01Z",
+ "fim": "2026-10-22T13:56:18Z",
+ "minutos": 24.3,
+ "render_segundos": 105,
+ "observacoes": "Pexels key inválida (401) -> Pixabay. Vídeos stock com câmera em movimento: usei frame congelado (CCTV é câmera fixa) + ruído/scanlines/vinheta/flicker/timestamp correndo. Eventos simulados em Python (gerar_clipes.py): luz da porta, silhueta, região do carro chacoalhando, objetos voando, figura pálida na babá. Cenas novas no editor: cctv_numero, cctv_hud, cctv_marca. 2 renders (121 s + 105 s): 2º corrigiu sobreposição do HUD na intro, posição da tag REPLAY e suavizou a figura da criança. whisper: venv watch (cublas).",
+ "estimativa_30min": {
+  "horas_maquina": 0.6,
+  "o_que_escala": "Estrutura fixa N itens x (card número + clipe CCTV + seta/círculo + replay). Para 30 min (~20 itens) o gargalo é arranjar/gerar clipe com evento crível por item (LTX-2.5 local ou footage público); gerar_clipes.py + montar_edit.py viram fábrica com 1 config por item; render ~1,5 s por segundo de vídeo."
+ }
+}

@@ -1,0 +1,30 @@
+<!--params {"valor":1000000000,"prefixo":"US$ ","sufixo":"","antes":"MAIS DE","sub":"em vendas","cor":"#e8a33d","t_conta":2.2}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#1a1408 0%,#0d0f12 70%,#020203 100%)">
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div class="ln" style="position:absolute;left:10%;right:10%;top:34%;height:1px;background:linear-gradient(90deg,transparent,rgba(232,163,61,.6),transparent)"></div>
+ <div class="ln" style="position:absolute;left:10%;right:10%;top:68%;height:1px;background:linear-gradient(90deg,transparent,rgba(232,163,61,.6),transparent)"></div>
+ <div style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center">
+  <div class="an" style="font:600 34px Inter,Arial,sans-serif;color:#c9ced4;letter-spacing:.3em;margin-bottom:6px">{{p.antes}}</div>
+  <div class="num" style="font:900 116px/1.05 Inter,'Helvetica Neue',Arial,sans-serif;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.01em;text-shadow:0 0 40px rgba(232,163,61,.55),0 0 90px rgba(232,163,61,.25)"></div>
+  <div class="sb" style="font:500 36px Inter,Arial,sans-serif;color:{{p.cor}};letter-spacing:.22em;text-transform:uppercase;margin-top:10px">{{p.sub}}</div>
+ </div>
+ <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)"></div>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const num=R.querySelector(".num"), V=+P.valor, tc=+P.t_conta;
+  const fmt=v=>P.prefixo+Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")+P.sufixo;
+  num.textContent=fmt(0);
+  tl.fromTo(R.querySelectorAll(".ln"),{scaleX:0},{scaleX:1,duration:1,ease:"power3.out",immediateRender:false},S+.1);
+  tl.fromTo([R.querySelector(".an"),num],{opacity:0,y:20,filter:"blur(10px)"},{opacity:1,y:0,filter:"blur(0px)",duration:.6,stagger:.15,ease:"power2.out",immediateRender:false},S+.05);
+  tl.fromTo(R.querySelector(".sb"),{opacity:0},{opacity:1,duration:.5,immediateRender:false},S+tc*.7);
+  tl.fromTo(num,{scale:1},{scale:1.06,duration:D,ease:"none",immediateRender:false},S);
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,t=>{ const k=Math.min(1,t/tc), e=1-Math.pow(1-k,3); num.textContent=fmt(V*e)+(k>=1&&P.antes?"+":"");
+    FERN.fog(fc,t,77,"rgba(220,170,90,A)",.8); FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>

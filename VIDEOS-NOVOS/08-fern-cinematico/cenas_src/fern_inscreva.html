@@ -1,0 +1,26 @@
+<!--params {"linha1":"SE ESSA VIRADA TE SURPREENDEU","botao":"INSCREVA-SE","feito":"INSCRITO","cor":"#e8a33d","t_click":1.5}-->
+<div id="{{id}}" style="position:absolute;inset:0;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#14202c 0%,#06090d 65%,#020304 100%)">
+ <div class="fx" style="position:absolute;inset:0"></div>
+ <div class="l1" style="position:absolute;left:0;right:0;top:38%;transform:translateY(-50%);text-align:center;font:800 54px Inter,Arial,sans-serif;color:#fff;letter-spacing:.04em">{{p.linha1}}</div>
+ <div class="bt" style="position:absolute;left:50%;top:62%;transform:translate(-50%,-50%);padding:18px 54px;border-radius:999px;background:{{p.cor}};font:800 44px Inter,Arial,sans-serif;color:#120c02;letter-spacing:.08em;white-space:nowrap"><span class="b1">{{p.botao}}</span><span class="b2" style="display:none">{{p.feito}} &#10003;</span></div>
+ <svg class="cur" width="46" height="46" viewBox="0 0 24 24" style="position:absolute;left:0;top:0"><path d="M4 2l15 9-6.5 1.5L16 20l-3 1.5-3.4-7.2L4 18z" fill="#fff" stroke="#000" stroke-width="1"/></svg>
+ <div class="gr" style="position:absolute;inset:0;mix-blend-mode:overlay"></div>
+</div>
+<script>
+/*FERNLIB*/
+(function(tl, P){ const S={{start}}, D={{dur}}, R=document.getElementById("{{id}}"), W={{W}}, H={{H}};
+  const bt=R.querySelector(".bt"), c=R.querySelector(".cur"), tc=+P.t_click, b1=R.querySelector(".b1"), b2=R.querySelector(".b2");
+  tl.fromTo(R.querySelector(".l1"),{opacity:0,filter:"blur(12px)",scale:1.15},{opacity:1,filter:"blur(0px)",scale:1,duration:.9,ease:"power3.out",immediateRender:false},S+.05);
+  tl.fromTo(bt,{opacity:0,y:20},{opacity:1,y:0,duration:.6,ease:"power2.out",immediateRender:false},S+.45);
+  tl.fromTo(c,{x:W*.8,y:H*.95,opacity:0},{x:W*.53,y:H*.63,opacity:1,duration:.8,ease:"power2.inOut",immediateRender:false},S+tc-.85);
+  tl.fromTo(c,{scale:1},{scale:.85,duration:.08,yoyo:true,repeat:1,immediateRender:false},S+tc);
+  tl.set(b1,{display:"inline"},0); tl.set(b2,{display:"none"},0);
+  tl.set(b1,{display:"none"},S+tc+.08); tl.set(b2,{display:"inline"},S+tc+.08);
+  tl.set(bt,{backgroundColor:P.cor,color:"#120c02"},0);
+  tl.to(bt,{backgroundColor:"#3a4450",color:"#ffffff",duration:.2},S+tc+.08);
+  tl.fromTo(R,{opacity:.55},{opacity:1,duration:.2,ease:"none",immediateRender:false},S);
+  if(+P.saida) tl.to(R,{opacity:0,duration:.6,ease:"none"},S+D-.6);
+  const fc=FERN.mk(R.querySelector(".fx"),W/2,H/2), gc=FERN.mk(R.querySelector(".gr"),W/2,H/2);
+  FERN.drive(tl,S,D,function(t){ FERN.fog(fc,t,21,"rgba(140,175,210,A)",.7); FERN.grain(gc,t,.09); });
+})(window.__timelines.main, {{json}});
+</script>
