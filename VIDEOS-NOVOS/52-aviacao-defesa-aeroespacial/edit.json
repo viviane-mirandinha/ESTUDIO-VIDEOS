@@ -1,0 +1,538 @@
+{
+ "version": 1,
+ "name": "52 - AVIACAO DEFESA - The SR-71 Blackbird — fastest manned aircraft ever",
+ "estilo": "52-aviacao-defesa-aeroespacial",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0e1723"
+ },
+ "duration": 72.0,
+ "template": "generic",
+ "referencia": {
+  "canal": "Flight Test / Military aviation reference",
+  "canal_url": "https://www.youtube.com/channel/UCsrqK9yaOTbZ41ZZAMag-Bw",
+  "nota": "Estilo 52: aviacao-defesa-aeroespacial. Palette #0e1723/#132455/#3f4548/#838ba4/#d4dddf, accent #604adc. Hard cuts, avg 5.2s. Placeholder images only."
+ },
+ "audio": {
+  "voice": {
+   "src": "audio.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "extra": []
+ },
+ "head": "<style>img{filter:brightness(0.85) saturate(0.7) sepia(0.15) hue-rotate(200deg);}</style>",
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Imagens"
+  },
+  {
+   "id": "textos",
+   "name": "Textos"
+  },
+  {
+   "id": "stats",
+   "name": "Stats"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg1",
+   "type": "image",
+   "track": "fundo",
+   "label": "Hook — dark navy",
+   "start": 0,
+   "dur": 5.5,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_hook",
+   "type": "text",
+   "track": "textos",
+   "label": "HOOK — outrun missiles",
+   "start": 0.3,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "IT OUTRAN EVERY MISSILE FIRED AT IT",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 56,
+    "color": "#d4dddf",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["EVERY MISSILE"],
+    "hl_color": "#604adc",
+    "upper": true
+   }
+  },
+  {
+   "id": "bg2",
+   "type": "image",
+   "track": "fundo",
+   "label": "Intro — SR-71 title",
+   "start": 5.5,
+   "dur": 6.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t_title",
+   "type": "text",
+   "track": "textos",
+   "label": "SR-71 Blackbird title",
+   "start": 5.8,
+   "dur": 5.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SR-71 BLACKBIRD",
+    "x": 640,
+    "y": 300,
+    "w": 1000,
+    "size": 72,
+    "color": "#d4dddf",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t_sub",
+   "type": "text",
+   "track": "stats",
+   "label": "Fastest manned aircraft",
+   "start": 6.5,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Fastest manned aircraft in history",
+    "x": 640,
+    "y": 400,
+    "w": 900,
+    "size": 32,
+    "color": "#838ba4",
+    "weight": 400,
+    "align": "center"
+   }
+  },
+  {
+   "id": "bg3",
+   "type": "image",
+   "track": "fundo",
+   "label": "Skunk Works origin",
+   "start": 12.0,
+   "dur": 7.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t_skunk",
+   "type": "text",
+   "track": "textos",
+   "label": "Lockheed Skunk Works",
+   "start": 12.5,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "LOCKHEED SKUNK WORKS — 1960s",
+    "x": 640,
+    "y": 620,
+    "w": 1000,
+    "size": 38,
+    "color": "#d4dddf",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,23,35,0.75)",
+    "pad": 14,
+    "radius": 8,
+    "highlight": ["SKUNK WORKS"],
+    "hl_color": "#604adc"
+   }
+  },
+  {
+   "id": "bg4",
+   "type": "image",
+   "track": "fundo",
+   "label": "Speed stats",
+   "start": 19.0,
+   "dur": 10.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t_mach",
+   "type": "text",
+   "track": "stats",
+   "label": "MACH 3.3 stat",
+   "start": 19.5,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "MACH 3.3",
+    "x": 640,
+    "y": 280,
+    "w": 600,
+    "size": 96,
+    "color": "#604adc",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t_mph",
+   "type": "text",
+   "track": "textos",
+   "label": "2,200+ mph",
+   "start": 20.0,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "2,200+ MILES PER HOUR",
+    "x": 640,
+    "y": 400,
+    "w": 800,
+    "size": 36,
+    "color": "#d4dddf",
+    "weight": 600,
+    "align": "center"
+   }
+  },
+  {
+   "id": "t_heat",
+   "type": "text",
+   "track": "textos",
+   "label": "600°F titanium",
+   "start": 25.0,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "TITANIUM SKIN: 600°F AT TOP SPEED",
+    "x": 640,
+    "y": 580,
+    "w": 1000,
+    "size": 34,
+    "color": "#d4dddf",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,23,35,0.75)",
+    "pad": 12,
+    "radius": 8,
+    "highlight": ["600°F"],
+    "hl_color": "#604adc"
+   }
+  },
+  {
+   "id": "bg5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Altitude scene",
+   "start": 29.0,
+   "dur": 10.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_alt",
+   "type": "text",
+   "track": "stats",
+   "label": "85,000 ft stat",
+   "start": 29.5,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "85,000 FT",
+    "x": 640,
+    "y": 280,
+    "w": 600,
+    "size": 88,
+    "color": "#604adc",
+    "weight": 800,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_compare",
+   "type": "text",
+   "track": "textos",
+   "label": "vs commercial 35,000",
+   "start": 31.0,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Commercial jets: 35,000 ft",
+    "x": 640,
+    "y": 420,
+    "w": 700,
+    "size": 30,
+    "color": "#838ba4",
+    "weight": 400,
+    "align": "center"
+   }
+  },
+  {
+   "id": "t_suits",
+   "type": "text",
+   "track": "textos",
+   "label": "Pressure suits",
+   "start": 35.5,
+   "dur": 3.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PILOTS WORE ASTRONAUT-GRADE PRESSURE SUITS",
+    "x": 640,
+    "y": 600,
+    "w": 1050,
+    "size": 32,
+    "color": "#d4dddf",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,23,35,0.75)",
+    "pad": 12,
+    "radius": 8,
+    "highlight": ["ASTRONAUT-GRADE"],
+    "hl_color": "#604adc"
+   }
+  },
+  {
+   "id": "bg6",
+   "type": "image",
+   "track": "fundo",
+   "label": "Missiles scene",
+   "start": 39.0,
+   "dur": 13.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_missiles",
+   "type": "text",
+   "track": "stats",
+   "label": "4,000 missiles stat",
+   "start": 39.5,
+   "dur": 5.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "4,000+ MISSILES FIRED",
+    "x": 640,
+    "y": 300,
+    "w": 900,
+    "size": 64,
+    "color": "#604adc",
+    "weight": 800,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_zero",
+   "type": "text",
+   "track": "textos",
+   "label": "Zero hits",
+   "start": 42.0,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ZERO HITS",
+    "x": 640,
+    "y": 430,
+    "w": 600,
+    "size": 72,
+    "color": "#d4dddf",
+    "weight": 800,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t_evade",
+   "type": "text",
+   "track": "textos",
+   "label": "Simply accelerate",
+   "start": 48.0,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "STANDARD EVASION: SIMPLY ACCELERATE",
+    "x": 640,
+    "y": 580,
+    "w": 1000,
+    "size": 36,
+    "color": "#d4dddf",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,23,35,0.75)",
+    "pad": 14,
+    "radius": 8,
+    "highlight": ["SIMPLY ACCELERATE"],
+    "hl_color": "#604adc"
+   }
+  },
+  {
+   "id": "bg7",
+   "type": "image",
+   "track": "fundo",
+   "label": "Legacy / retirement",
+   "start": 52.0,
+   "dur": 10.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t_retired",
+   "type": "text",
+   "track": "textos",
+   "label": "Retired 1998",
+   "start": 52.5,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "RETIRED IN 1998",
+    "x": 640,
+    "y": 320,
+    "w": 800,
+    "size": 48,
+    "color": "#d4dddf",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["1998"],
+    "hl_color": "#604adc"
+   }
+  },
+  {
+   "id": "t_record",
+   "type": "text",
+   "track": "stats",
+   "label": "Record unbroken",
+   "start": 57.5,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SPEED RECORD: STILL UNBROKEN",
+    "x": 640,
+    "y": 420,
+    "w": 900,
+    "size": 44,
+    "color": "#604adc",
+    "weight": 800,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "bg8",
+   "type": "image",
+   "track": "fundo",
+   "label": "Closing — crown",
+   "start": 62.0,
+   "dur": 10.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t_crown",
+   "type": "text",
+   "track": "textos",
+   "label": "Still holds the crown",
+   "start": 62.5,
+   "dur": 8.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A MACHINE FROM THE 1960s\nSTILL HOLDS THE CROWN",
+    "x": 640,
+    "y": 360,
+    "w": 1000,
+    "size": 52,
+    "color": "#d4dddf",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["STILL HOLDS THE CROWN"],
+    "hl_color": "#604adc"
+   }
+  }
+ ]
+}

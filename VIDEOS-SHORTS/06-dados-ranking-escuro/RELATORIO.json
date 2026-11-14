@@ -1,0 +1,11 @@
+{
+ "video": 6,
+ "estilo": "Dados ranking escuro amarelo",
+ "inicio": "2026-10-22T19:12:41-03:00",
+ "fim": "2026-10-22T19:28:52-03:00",
+ "minutos": 16.2,
+ "render_segundos": 149,
+ "voz": "usuario",
+ "observacoes": "HyperFrames puro (5 cenas novas dr_* em EDITOR VIDEOS/templates/scenes); fotos Wikimedia livres (img/creditos.json); mapa = Brasil do countries50m + contorno de MG aproximado (não há GeoJSON de estados local); rivais 1º-6º/1º-4º como círculos '?' para não inventar nomes; build_from_edit.py agora espelha mídias dentro de listas de params de cena.",
+ "ponto_fraco": "Algumas cenas abrem só com o título por 1-2 s até o número ser falado, e o contorno de MG é aproximado."
+}

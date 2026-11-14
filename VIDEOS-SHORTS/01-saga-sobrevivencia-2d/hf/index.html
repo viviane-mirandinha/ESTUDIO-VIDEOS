@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#E9C9A0;}
+#root{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#E9C9A0;font-family:Oswald,Arial,sans-serif;}
+#scenes{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.sc{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;visibility:hidden;}
+.sc.first{visibility:visible;}
+.cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:50% 45%;}
+.cam svg{position:absolute;left:0;top:0;}
+.lay{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.o{font-family:Oswald,Arial,sans-serif;font-weight:400;}
+.w{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;}
+.selo{font-family:Oswald,Arial,sans-serif;font-weight:400;white-space:nowrap;padding:.14em .55em .18em;border-radius:10px;letter-spacing:.02em;line-height:1.05;box-shadow:0 6px 0 rgba(0,0,0,.18);}
+.grain{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(40,25,10,.28) 100%);}
+/* legenda: maiúsculas condensadas */
+#leg .ed-cg{text-transform:uppercase;letter-spacing:.01em;}
+#leg .ed-w.ed-k.on[data-red]{color:#E3363B !important;}
+@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}#leg .ed-cg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;background:rgba(12,12,12,.74);padding:10px 26px;border-radius:16px;}#leg .ed-w{color:#ffffff} #leg .ed-w.on{color:#ffffff}#leg .ed-w.ed-k.on{color:#E8B23A}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="87.46" data-width="1080" data-height="1920">
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2B98E"/><stop offset=".6" stop-color="#EDD0AA"/><stop offset="1" stop-color="#F3DDBE"/></linearGradient>
+  <linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9876A"/><stop offset=".55" stop-color="#DDA77C"/><stop offset="1" stop-color="#EBC497"/></linearGradient>
+  <linearGradient id="gMoss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46543F"/><stop offset="1" stop-color="#2F382E"/></linearGradient>
+  <linearGradient id="gDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F2421"/><stop offset="1" stop-color="#121513"/></linearGradient>
+  <linearGradient id="gPale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF4E8"/><stop offset="1" stop-color="#F0D9B8"/></linearGradient>
+  <radialGradient id="gGlow"><stop offset="0" stop-color="#FFE59A" stop-opacity=".95"/><stop offset="1" stop-color="#FFE59A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gRedGlow"><stop offset="0" stop-color="#FF4A44" stop-opacity=".9"/><stop offset="1" stop-color="#FF4A44" stop-opacity="0"/></radialGradient>
+ </defs>
+</svg>
+<div id="scenes"></div>
+<div class="grain"></div>
+<div id="leg_box" class="ed-box" style="left:540.0px;top:1330.0px;z-index:21;"><div id="leg" class="clip" data-start="0.000" data-duration="87.460" data-track-index="27" style="font-size:70.0px;color:#ffffff;font-weight:400;text-align:center;font-family:'Oswald',Inter,Arial,sans-serif;line-height:1.15;"><div id="leg_g0" class="ed-cg" style="opacity:0"><span id="leg_g0w0" class="ed-w">A</span> <span id="leg_g0w1" class="ed-w ed-k">sirene</span> <span id="leg_g0w2" class="ed-w">toca,</span></div><div id="leg_g1" class="ed-cg" style="opacity:0"><span id="leg_g1w0" class="ed-w">e</span> <span id="leg_g1w1" class="ed-w">você</span> <span id="leg_g1w2" class="ed-w">tem</span></div><div id="leg_g2" class="ed-cg" style="opacity:0"><span id="leg_g2w0" class="ed-w">apenas</span> <span id="leg_g2w1" class="ed-w ed-k">15</span> <span id="leg_g2w2" class="ed-w">minutos.</span></div><div id="leg_g3" class="ed-cg" style="opacity:0"><span id="leg_g3w0" class="ed-w">E</span> <span id="leg_g3w1" class="ed-w">eles</span> <span id="leg_g3w2" class="ed-w">valem</span></div><div id="leg_g4" class="ed-cg" style="opacity:0"><span id="leg_g4w0" class="ed-w">mais</span> <span id="leg_g4w1" class="ed-w">do</span> <span id="leg_g4w2" class="ed-w">que</span></div><div id="leg_g5" class="ed-cg" style="opacity:0"><span id="leg_g5w0" class="ed-w">qualquer</span> <span id="leg_g5w1" class="ed-w ed-k">estrada,</span></div><div id="leg_g6" class="ed-cg" style="opacity:0"><span id="leg_g6w0" class="ed-w">mas</span> <span id="leg_g6w1" class="ed-w">só</span> <span id="leg_g6w2" class="ed-w">se</span></div><div id="leg_g7" class="ed-cg" style="opacity:0"><span id="leg_g7w0" class="ed-w">você</span> <span id="leg_g7w1" class="ed-w">souber</span> <span id="leg_g7w2" class="ed-w">exatamente</span></div><div id="leg_g8" class="ed-cg" style="opacity:0"><span id="leg_g8w0" class="ed-w">pra</span> <span id="leg_g8w1" class="ed-w">onde</span> <span id="leg_g8w2" class="ed-w">correr.</span></div><div id="leg_g9" class="ed-cg" style="opacity:0"><span id="leg_g9w0" class="ed-w">O</span> <span id="leg_g9w1" class="ed-w ed-k">alerta</span> <span id="leg_g9w2" class="ed-w">chega</span></div><div id="leg_g10" class="ed-cg" style="opacity:0"><span id="leg_g10w0" class="ed-w">no</span> <span id="leg_g10w1" class="ed-w">celular</span> <span id="leg_g10w2" class="ed-w">de</span></div><div id="leg_g11" class="ed-cg" style="opacity:0"><span id="leg_g11w0" class="ed-w">Rafa</span> <span id="leg_g11w1" class="ed-w">às</span> <span id="leg_g11w2" class="ed-w">6</span></div><div id="leg_g12" class="ed-cg" style="opacity:0"><span id="leg_g12w0" class="ed-w">horas</span> <span id="leg_g12w1" class="ed-w">e</span> <span id="leg_g12w2" class="ed-w">40</span></div><div id="leg_g13" class="ed-cg" style="opacity:0"><span id="leg_g13w0" class="ed-w">da</span> <span id="leg_g13w1" class="ed-w">tarde.</span></div><div id="leg_g14" class="ed-cg" style="opacity:0"><span id="leg_g14w0" class="ed-w">Em</span> <span id="leg_g14w1" class="ed-w">10</span> <span id="leg_g14w2" class="ed-w">minutos,</span></div><div id="leg_g15" class="ed-cg" style="opacity:0"><span id="leg_g15w0" class="ed-w">a</span> <span id="leg_g15w1" class="ed-w">avenida</span> <span id="leg_g15w2" class="ed-w">inteira</span></div><div id="leg_g16" class="ed-cg" style="opacity:0"><span id="leg_g16w0" class="ed-w">está</span> <span id="leg_g16w1" class="ed-w ed-k">parada.</span></div><div id="leg_g17" class="ed-cg" style="opacity:0"><span id="leg_g17w0" class="ed-w">E</span> <span id="leg_g17w1" class="ed-w">um</span> <span id="leg_g17w2" class="ed-w">carro</span></div><div id="leg_g18" class="ed-cg" style="opacity:0"><span id="leg_g18w0" class="ed-w">parado</span> <span id="leg_g18w1" class="ed-w">é</span> <span id="leg_g18w2" class="ed-w">só</span></div><div id="leg_g19" class="ed-cg" style="opacity:0"><span id="leg_g19w0" class="ed-w">uma</span> <span id="leg_g19w1" class="ed-w">caixa</span> <span id="leg_g19w2" class="ed-w">de</span></div><div id="leg_g20" class="ed-cg" style="opacity:0"><span id="leg_g20w0" class="ed-w">lata</span> <span id="leg_g20w1" class="ed-w">debaixo</span> <span id="leg_g20w2" class="ed-w">da</span></div><div id="leg_g21" class="ed-cg" style="opacity:0"><span id="leg_g21w0" class="ed-w ed-k">chuva</span> <span id="leg_g21w1" class="ed-w ed-k">radioativa.</span></div><div id="leg_g22" class="ed-cg" style="opacity:0"><span id="leg_g22w0" class="ed-w">Rafa</span> <span id="leg_g22w1" class="ed-w">corre</span> <span id="leg_g22w2" class="ed-w">pro</span></div><div id="leg_g23" class="ed-cg" style="opacity:0"><span id="leg_g23w0" class="ed-w">quintal.</span></div><div id="leg_g24" class="ed-cg" style="opacity:0"><span id="leg_g24w0" class="ed-w">Embaixo</span> <span id="leg_g24w1" class="ed-w">da</span> <span id="leg_g24w2" class="ed-w">grama</span></div><div id="leg_g25" class="ed-cg" style="opacity:0"><span id="leg_g25w0" class="ed-w">tem</span> <span id="leg_g25w1" class="ed-w">um</span> <span id="leg_g25w2" class="ed-w ed-k">bunker</span></div><div id="leg_g26" class="ed-cg" style="opacity:0"><span id="leg_g26w0" class="ed-w">que</span> <span id="leg_g26w1" class="ed-w">o</span> <span id="leg_g26w2" class="ed-w">avô</span></div><div id="leg_g27" class="ed-cg" style="opacity:0"><span id="leg_g27w0" class="ed-w">dele</span> <span id="leg_g27w1" class="ed-w">construiu</span> <span id="leg_g27w2" class="ed-w">em</span></div><div id="leg_g28" class="ed-cg" style="opacity:0"><span id="leg_g28w0" class="ed-w ed-k">1982.</span></div><div id="leg_g29" class="ed-cg" style="opacity:0"><span id="leg_g29w0" class="ed-w">No</span> <span id="leg_g29w1" class="ed-w">caminho,</span></div><div id="leg_g30" class="ed-cg" style="opacity:0"><span id="leg_g30w0" class="ed-w">ele</span> <span id="leg_g30w1" class="ed-w">olha</span> <span id="leg_g30w2" class="ed-w">por</span></div><div id="leg_g31" class="ed-cg" style="opacity:0"><span id="leg_g31w0" class="ed-w">cima</span> <span id="leg_g31w1" class="ed-w">do</span> <span id="leg_g31w2" class="ed-w ed-k">muro.</span></div><div id="leg_g32" class="ed-cg" style="opacity:0"><span id="leg_g32w0" class="ed-w">A</span> <span id="leg_g32w1" class="ed-w">luz</span> <span id="leg_g32w2" class="ed-w">do</span></div><div id="leg_g33" class="ed-cg" style="opacity:0"><span id="leg_g33w0" class="ed-w">quarto</span> <span id="leg_g33w1" class="ed-w">da</span> <span id="leg_g33w2" class="ed-w ed-k">vizinha</span></div><div id="leg_g34" class="ed-cg" style="opacity:0"><span id="leg_g34w0" class="ed-w">está</span> <span id="leg_g34w1" class="ed-w">acesa.</span></div><div id="leg_g35" class="ed-cg" style="opacity:0"><span id="leg_g35w0" class="ed-w">Ele</span> <span id="leg_g35w1" class="ed-w">nunca</span> <span id="leg_g35w2" class="ed-w">teve</span></div><div id="leg_g36" class="ed-cg" style="opacity:0"><span id="leg_g36w0" class="ed-w ed-k">coragem</span> <span id="leg_g36w1" class="ed-w">de</span> <span id="leg_g36w2" class="ed-w">falar</span></div><div id="leg_g37" class="ed-cg" style="opacity:0"><span id="leg_g37w0" class="ed-w">com</span> <span id="leg_g37w1" class="ed-w">ela.</span></div><div id="leg_g38" class="ed-cg" style="opacity:0"><span id="leg_g38w0" class="ed-w">Por</span> <span id="leg_g38w1" class="ed-w">um</span> <span id="leg_g38w2" class="ed-w">segundo,</span></div><div id="leg_g39" class="ed-cg" style="opacity:0"><span id="leg_g39w0" class="ed-w">ele</span> <span id="leg_g39w1" class="ed-w">pensa</span> <span id="leg_g39w2" class="ed-w">em</span></div><div id="leg_g40" class="ed-cg" style="opacity:0"><span id="leg_g40w0" class="ed-w">pular</span> <span id="leg_g40w1" class="ed-w">aquele</span> <span id="leg_g40w2" class="ed-w ed-k">muro.</span></div><div id="leg_g41" class="ed-cg" style="opacity:0"><span id="leg_g41w0" class="ed-w">Então</span> <span id="leg_g41w1" class="ed-w">vem</span> <span id="leg_g41w2" class="ed-w">o</span></div><div id="leg_g42" class="ed-cg" style="opacity:0"><span id="leg_g42w0" class="ed-w ed-k">clarão.</span></div><div id="leg_g43" class="ed-cg" style="opacity:0"><span id="leg_g43w0" class="ed-w">Não</span> <span id="leg_g43w1" class="ed-w ed-k">olhe.</span></div><div id="leg_g44" class="ed-cg" style="opacity:0"><span id="leg_g44w0" class="ed-w ed-k">Conte.</span></div><div id="leg_g45" class="ed-cg" style="opacity:0"><span id="leg_g45w0" class="ed-w">A</span> <span id="leg_g45w1" class="ed-w">luz</span> <span id="leg_g45w2" class="ed-w">chega</span></div><div id="leg_g46" class="ed-cg" style="opacity:0"><span id="leg_g46w0" class="ed-w">na</span> <span id="leg_g46w1" class="ed-w">hora.</span></div><div id="leg_g47" class="ed-cg" style="opacity:0"><span id="leg_g47w0" class="ed-w">O</span> <span id="leg_g47w1" class="ed-w ed-k">estrondo</span> <span id="leg_g47w2" class="ed-w">vem</span></div><div id="leg_g48" class="ed-cg" style="opacity:0"><span id="leg_g48w0" class="ed-w">depois.</span></div><div id="leg_g49" class="ed-cg" style="opacity:0"><span id="leg_g49w0" class="ed-w">Cada</span> <span id="leg_g49w1" class="ed-w">três</span> <span id="leg_g49w2" class="ed-w">segundos</span></div><div id="leg_g50" class="ed-cg" style="opacity:0"><span id="leg_g50w0" class="ed-w">de</span> <span id="leg_g50w1" class="ed-w ed-k">silêncio</span> <span id="leg_g50w2" class="ed-w">é</span></div><div id="leg_g51" class="ed-cg" style="opacity:0"><span id="leg_g51w0" class="ed-w">um</span> <span id="leg_g51w1" class="ed-w ed-k">quilômetro</span> <span id="leg_g51w2" class="ed-w">de</span></div><div id="leg_g52" class="ed-cg" style="opacity:0"><span id="leg_g52w0" class="ed-w">distância.</span></div><div id="leg_g53" class="ed-cg" style="opacity:0"><span id="leg_g53w0" class="ed-w">Rafa</span> <span id="leg_g53w1" class="ed-w">conta</span> <span id="leg_g53w2" class="ed-w ed-k">31,</span></div><div id="leg_g54" class="ed-cg" style="opacity:0"><span id="leg_g54w0" class="ed-w">10</span> <span id="leg_g54w1" class="ed-w ed-k">quilômetros.</span></div><div id="leg_g55" class="ed-cg" style="opacity:0"><span id="leg_g55w0" class="ed-w">Ele</span> <span id="leg_g55w1" class="ed-w">fecha</span> <span id="leg_g55w2" class="ed-w">a</span></div><div id="leg_g56" class="ed-cg" style="opacity:0"><span id="leg_g56w0" class="ed-w ed-k">escotilha</span> <span id="leg_g56w1" class="ed-w">e</span> <span id="leg_g56w2" class="ed-w">gira</span></div><div id="leg_g57" class="ed-cg" style="opacity:0"><span id="leg_g57w0" class="ed-w">as</span> <span id="leg_g57w1" class="ed-w ed-k">travas.</span></div><div id="leg_g58" class="ed-cg" style="opacity:0"><span id="leg_g58w0" class="ed-w">A</span> <span id="leg_g58w1" class="ed-w ed-k">poeira</span> <span id="leg_g58w2" class="ed-w">começa</span></div><div id="leg_g59" class="ed-cg" style="opacity:0"><span id="leg_g59w0" class="ed-w">a</span> <span id="leg_g59w1" class="ed-w">cair</span> <span id="leg_g59w2" class="ed-w">em</span></div><div id="leg_g60" class="ed-cg" style="opacity:0"><span id="leg_g60w0" class="ed-w">uns</span> <span id="leg_g60w1" class="ed-w">20</span> <span id="leg_g60w2" class="ed-w">minutos,</span></div><div id="leg_g61" class="ed-cg" style="opacity:0"><span id="leg_g61w0" class="ed-w">mas</span> <span id="leg_g61w1" class="ed-w">ela</span> <span id="leg_g61w2" class="ed-w">tem</span></div><div id="leg_g62" class="ed-cg" style="opacity:0"><span id="leg_g62w0" class="ed-w">uma</span> <span id="leg_g62w1" class="ed-w ed-k">regra.</span></div><div id="leg_g63" class="ed-cg" style="opacity:0"><span id="leg_g63w0" class="ed-w">Depois</span> <span id="leg_g63w1" class="ed-w">de</span> <span id="leg_g63w2" class="ed-w">7</span></div><div id="leg_g64" class="ed-cg" style="opacity:0"><span id="leg_g64w0" class="ed-w">horas,</span></div><div id="leg_g65" class="ed-cg" style="opacity:0"><span id="leg_g65w0" class="ed-w">a</span> <span id="leg_g65w1" class="ed-w ed-k">radiação</span> <span id="leg_g65w2" class="ed-w">cai</span></div><div id="leg_g66" class="ed-cg" style="opacity:0"><span id="leg_g66w0" class="ed-w">10</span> <span id="leg_g66w1" class="ed-w ed-k">vezes.</span></div><div id="leg_g67" class="ed-cg" style="opacity:0"><span id="leg_g67w0" class="ed-w">Depois</span> <span id="leg_g67w1" class="ed-w">de</span> <span id="leg_g67w2" class="ed-w">2</span></div><div id="leg_g68" class="ed-cg" style="opacity:0"><span id="leg_g68w0" class="ed-w">dias,</span></div><div id="leg_g69" class="ed-cg" style="opacity:0"><span id="leg_g69w0" class="ed-w">100</span> <span id="leg_g69w1" class="ed-w ed-k">vezes.</span></div><div id="leg_g70" class="ed-cg" style="opacity:0"><span id="leg_g70w0" class="ed-w">Então</span> <span id="leg_g70w1" class="ed-w">ele</span> <span id="leg_g70w2" class="ed-w">não</span></div><div id="leg_g71" class="ed-cg" style="opacity:0"><span id="leg_g71w0" class="ed-w">pode</span> <span id="leg_g71w1" class="ed-w">sair</span> <span id="leg_g71w2" class="ed-w">por</span></div><div id="leg_g72" class="ed-cg" style="opacity:0"><span id="leg_g72w0" class="ed-w">pelo</span> <span id="leg_g72w1" class="ed-w">menos</span> <span id="leg_g72w2" class="ed-w ed-k">14</span></div><div id="leg_g73" class="ed-cg" style="opacity:0"><span id="leg_g73w0" class="ed-w">dias.</span></div><div id="leg_g74" class="ed-cg" style="opacity:0"><span id="leg_g74w0" class="ed-w">No</span> <span id="leg_g74w1" class="ed-w">papel,</span></div><div id="leg_g75" class="ed-cg" style="opacity:0"><span id="leg_g75w0" class="ed-w">Rafa</span> <span id="leg_g75w1" class="ed-w">tem</span> <span id="leg_g75w2" class="ed-w">água</span></div><div id="leg_g76" class="ed-cg" style="opacity:0"><span id="leg_g76w0" class="ed-w">e</span> <span id="leg_g76w1" class="ed-w">comida</span> <span id="leg_g76w2" class="ed-w">pra</span></div><div id="leg_g77" class="ed-cg" style="opacity:0"><span id="leg_g77w0" class="ed-w ed-k">16</span> <span id="leg_g77w1" class="ed-w">dias.</span></div><div id="leg_g78" class="ed-cg" style="opacity:0"><span id="leg_g78w0" class="ed-w">Só</span> <span id="leg_g78w1" class="ed-w">pra</span> <span id="leg_g78w2" class="ed-w">ele.</span></div><div id="leg_g79" class="ed-cg" style="opacity:0"><span id="leg_g79w0" class="ed-w">Só</span> <span id="leg_g79w1" class="ed-w">havia</span> <span id="leg_g79w2" class="ed-w">um</span></div><div id="leg_g80" class="ed-cg" style="opacity:0"><span id="leg_g80w0" class="ed-w ed-k">problema.</span></div><div id="leg_g81" class="ed-cg" style="opacity:0"><span id="leg_g81w0" class="ed-w">Às</span> <span id="leg_g81w1" class="ed-w">11</span> <span id="leg_g81w2" class="ed-w">da</span></div><div id="leg_g82" class="ed-cg" style="opacity:0"><span id="leg_g82w0" class="ed-w">noite,</span></div><div id="leg_g83" class="ed-cg" style="opacity:0"><span id="leg_g83w0" class="ed-w">alguém</span> <span id="leg_g83w1" class="ed-w ed-k">bateu</span> <span id="leg_g83w2" class="ed-w">na</span></div><div id="leg_g84" class="ed-cg" style="opacity:0"><span id="leg_g84w0" class="ed-w ed-k">escotilha.</span></div><div id="leg_g85" class="ed-cg" style="opacity:0"><span id="leg_g85w0" class="ed-w">Três</span> <span id="leg_g85w1" class="ed-w ed-k">vezes.</span></div><div id="leg_g86" class="ed-cg" style="opacity:0"><span id="leg_g86w0" class="ed-w">E</span> <span id="leg_g86w1" class="ed-w">lá</span> <span id="leg_g86w2" class="ed-w">fora,</span></div><div id="leg_g87" class="ed-cg" style="opacity:0"><span id="leg_g87w0" class="ed-w">o</span> <span id="leg_g87w1" class="ed-w">medidor</span> <span id="leg_g87w2" class="ed-w">marcava</span></div><div id="leg_g88" class="ed-cg" style="opacity:0"><span id="leg_g88w0" class="ed-w">a</span> <span id="leg_g88w1" class="ed-w ed-k">radiação</span> <span id="leg_g88w2" class="ed-w ed-k">letal.</span></div></div></div>
+</div>
+<script>
+const EDIT = {"version": 1, "name": "01 - SAGA SOBREVIVENCIA 2D - Ataque nuclear - o bunker do avo - Parte 1", "grupo": "ESTILOS SHORTS", "estilo": "Saga sobrevivência 2D (série)", "canvas": {"w": 1080, "h": 1920, "fps": 30, "bg": "#E9C9A0"}, "duration": 87.46, "template": "local", "fonts": {"Oswald": "fonts/Oswald-Bold.ttf"}, "referencia": {"canal": "@sobreviventeend", "canal_url": "https://www.instagram.com/sobreviventeend/", "video": "https://www.instagram.com/reel/Dep0Ev7xo79/", "titulo": "Ataque nuclear — ep. 1 (270 mil views)", "nota": "também https://www.instagram.com/reel/Dep0Nj7xizD/ ; personagem e cenários originais em SVG"}, "audio": {"voice": {"src": "voz.mp3", "volume": 1.0, "start": 0}}, "tracks": [{"id": "fundo", "name": "Cenas 2D"}, {"id": "legenda", "name": "Legenda"}], "items": [{"id": "c01", "type": "html", "track": "fundo", "by": "template", "label": "Sirene / rua", "start": 0.0, "dur": 3.78, "props": {"cena": "rua_sirene", "textos": {"selo": "15 MIN"}, "t": {"min15": 2.34}, "html": "", "fill": true}}, {"id": "c02", "type": "html", "track": "fundo", "by": "template", "label": "15 min x estrada", "start": 3.78, "dur": 2.62, "props": {"cena": "cronometro", "textos": {"selo": "15 MIN • QUALQUER ESTRADA", "relogio": "15:00"}, "t": {}, "html": "", "fill": true}}, {"id": "c03", "type": "html", "track": "fundo", "by": "template", "label": "Pra onde correr", "start": 6.4, "dur": 3.78, "props": {"cena": "encruzilhada", "textos": {"p1": "ESTRADA", "p2": "CENTRO", "p3": "ABRIGO?"}, "t": {"onde": 8.9}, "html": "", "fill": true}}, {"id": "c04", "type": "html", "track": "fundo", "by": "template", "label": "Alerta no celular", "start": 10.18, "dur": 4.02, "props": {"cena": "alerta", "textos": {"topo": "ALERTA DE EMERGÊNCIA", "titulo": "ATAQUE NUCLEAR", "sub": "PROCURE ABRIGO IMEDIATAMENTE", "hora": "18:40"}, "t": {"hora": 12.22}, "html": "", "fill": true}}, {"id": "c05", "type": "html", "track": "fundo", "by": "template", "label": "Avenida parada", "start": 14.2, "dur": 3.78, "props": {"cena": "avenida", "textos": {"selo": "AVENIDA TRAVADA", "selo2": "+10 MIN"}, "t": {"parada": 16.9}, "html": "", "fill": true}}, {"id": "c06", "type": "html", "track": "fundo", "by": "template", "label": "Carro = caixa de lata", "start": 17.98, "dur": 4.48, "props": {"cena": "carro", "textos": {"rotulo": "CAIXA DE LATA"}, "t": {"lata": 20.1, "chuva": 21.06}, "html": "", "fill": true}}, {"id": "c07", "type": "html", "track": "fundo", "by": "template", "label": "Rafa corre pro quintal", "start": 22.46, "dur": 1.72, "props": {"cena": "corrida", "textos": {}, "t": {}, "html": "", "fill": true}}, {"id": "c08", "type": "html", "track": "fundo", "by": "template", "label": "Bunker do avô 1982", "start": 24.18, "dur": 5.28, "props": {"cena": "bunker", "textos": {"ano": "1982", "rotulo": "BUNKER DO AVÔ"}, "t": {"bunker": 25.46, "ano": 27.42}, "html": "", "fill": true}}, {"id": "c09", "type": "html", "track": "fundo", "by": "template", "label": "Rafa olha o muro", "start": 29.46, "dur": 2.32, "props": {"cena": "muro", "textos": {}, "t": {"muro": 31.2}, "html": "", "fill": true}}, {"id": "c10", "type": "html", "track": "fundo", "by": "template", "label": "Janela acesa da vizinha", "start": 31.78, "dur": 2.7, "props": {"cena": "janela", "textos": {}, "t": {"luz": 32.06}, "html": "", "fill": true}}, {"id": "c11", "type": "html", "track": "fundo", "by": "template", "label": "Coragem de falar", "start": 34.48, "dur": 2.3, "props": {"cena": "espiada", "textos": {}, "t": {"coragem": 35.12}, "html": "", "fill": true}}, {"id": "c12", "type": "html", "track": "fundo", "by": "template", "label": "Pensa em pular", "start": 36.78, "dur": 3.14, "props": {"cena": "pular", "textos": {}, "t": {"pular": 38.46}, "html": "", "fill": true}}, {"id": "c13", "type": "html", "track": "fundo", "by": "template", "label": "Clarão", "start": 39.92, "dur": 1.32, "props": {"cena": "flash", "textos": {}, "t": {"clarao": 40.64}, "html": "", "fill": true}}, {"id": "c14", "type": "html", "track": "fundo", "by": "template", "label": "Não olhe. Conte.", "start": 41.24, "dur": 1.74, "props": {"cena": "nao_olhe", "textos": {"t1": "NÃO OLHE.", "t2": "CONTE."}, "t": {"conte": 42.16}, "html": "", "fill": true}}, {"id": "c15", "type": "html", "track": "fundo", "by": "template", "label": "Luz vs som", "start": 42.98, "dur": 2.92, "props": {"cena": "cogumelo", "textos": {"a": "0 S", "a2": "LUZ", "b": "+30 S", "b2": "SOM"}, "t": {"luz": 43.06, "estrondo": 44.56}, "html": "", "fill": true}}, {"id": "c16", "type": "html", "track": "fundo", "by": "template", "label": "3 s = 1 km", "start": 45.9, "dur": 4.08, "props": {"cena": "regra3s", "textos": {"f1": "3 S", "f2": "1 KM", "rodape": "SILÊNCIO = DISTÂNCIA"}, "t": {}, "html": "", "fill": true}}, {"id": "c17", "type": "html", "track": "fundo", "by": "template", "label": "Conta 31 = 10 km", "start": 49.98, "dur": 2.92, "props": {"cena": "contagem", "textos": {"n": "31", "km": "= 10 KM", "rotulo": "SEGUNDOS"}, "t": {"n31": 50.54, "km": 51.46}, "html": "", "fill": true}}, {"id": "c18", "type": "html", "track": "fundo", "by": "template", "label": "Fecha a escotilha", "start": 52.9, "dur": 2.62, "props": {"cena": "escotilha", "textos": {"selo": "TRAVADO"}, "t": {"gira": 54.2, "travas": 54.66}, "html": "", "fill": true}}, {"id": "c19", "type": "html", "track": "fundo", "by": "template", "label": "Poeira cai", "start": 55.52, "dur": 4.12, "props": {"cena": "poeira", "textos": {"selo1": "POEIRA EM ~20 MIN", "selo2": "REGRA DO BUNKER"}, "t": {"min20": 57.02, "regra": 58.94}, "html": "", "fill": true}}, {"id": "c20", "type": "html", "track": "fundo", "by": "template", "label": "Gráfico radiação", "start": 59.64, "dur": 6.08, "props": {"cena": "grafico", "textos": {"l1": "7 H • ÷10", "l2": "2 DIAS • ÷100", "eixo": "TEMPO DEPOIS DA EXPLOSÃO", "topo": "100%"}, "t": {"h7": 60.24, "depois2": 63.14, "d2": 63.68, "c100": 64.6}, "html": "", "fill": true}}, {"id": "c21", "type": "html", "track": "fundo", "by": "template", "label": "14 dias", "start": 65.72, "dur": 4.36, "props": {"cena": "calendario", "textos": {"cab": "14 DIAS", "topo": "NÃO PODE SAIR"}, "t": {"d14": 68.54}, "html": "", "fill": true}}, {"id": "c22", "type": "html", "track": "fundo", "by": "template", "label": "Estoque 16 dias", "start": 70.08, "dur": 4.62, "props": {"cena": "estoque", "textos": {"titulo": "ESTOQUE", "l1": "ÁGUA", "l2": "COMIDA", "dias": "16 DIAS", "so": "SÓ PRA ELE"}, "t": {"d16": 72.32, "so": 73.76}, "html": "", "fill": true}}, {"id": "c23", "type": "html", "track": "fundo", "by": "template", "label": "Um problema", "start": 74.7, "dur": 1.82, "props": {"cena": "problema", "textos": {"t": "UM PROBLEMA."}, "t": {}, "html": "", "fill": true}}, {"id": "c24", "type": "html", "track": "fundo", "by": "template", "label": "3 batidas na escotilha", "start": 76.52, "dur": 4.4, "props": {"cena": "batidas", "textos": {"hora": "23:00", "b": "3×", "b2": "BATIDAS"}, "t": {"hora": 76.86, "bateu": 78.2, "b3": 79.68}, "html": "", "fill": true}}, {"id": "c25", "type": "html", "track": "fundo", "by": "template", "label": "Medidor letal", "start": 80.92, "dur": 3.34, "props": {"cena": "medidor", "textos": {"r": "LETAL", "topo": "RADIAÇÃO"}, "t": {"letal": 83.4}, "html": "", "fill": true}}, {"id": "c26", "type": "html", "track": "fundo", "by": "template", "label": "Parte 2", "start": 84.26, "dur": 3.2, "props": {"cena": "fim", "textos": {"t": "PARTE 2", "s": "QUEM ESTÁ LÁ FORA?"}, "t": {}, "html": "", "fill": true}}, {"id": "leg", "type": "caption", "track": "legenda", "label": "Legenda", "start": 0, "dur": 87.46, "props": {"words_file": "words.json", "per_group": 3, "x": 540, "y": 1330, "size": 70, "font": "Oswald", "weight": 400, "color": "#ffffff", "dim": "#ffffff", "hl_color": "#E8B23A", "bg": "rgba(12,12,12,.74)", "shadow": false, "keywords": ["sirene", "15", "estrada", "alerta", "parada", "chuva", "radioativa", "bunker", "1982", "muro", "vizinha", "coragem", "clarão", "olhe", "conte", "estrondo", "silêncio", "31", "km", "quilômetro", "escotilha", "travas", "poeira", "regra", "radiação", "vezes", "14", "16", "problema", "bateu", "letal"]}}, {"id": "leg_vermelho", "type": "param", "label": "Legenda: palavras em vermelho", "props": {"value": "sirene,alerta,parada,chuva,radioativa,clarão,olhe,estrondo,radiação,problema,bateu,letal"}}]};
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:87.46,ease:"none"},0);
+window.__timelines["main"] = tl;
+
+const C = {sky:"#E9C9A0", moss:"#3E4A3D", lead:"#2B2F2E", red:"#D7262C", mus:"#E8B23A", cream:"#F3E9D6",
+  grass:"#7E9A5A", grass2:"#6A864A", soil:"#7A5C43", soil2:"#5E4634", road:"#3A3F3D", skin:"#B9784F", hair:"#241913"};
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647, (seed - 1) / 2147483646);
+const ROOT = document.getElementById("scenes");
+
+/* ---------------- biblioteca SVG ---------------- */
+function rafaHead(id, o={}){
+  const m = o.mood || "calm";
+  const brow = m === "worry" ? ['M-36,-22 L-12,-28','M12,-28 L36,-22'] : m === "scared" ? ['M-36,-30 L-12,-24','M12,-24 L36,-30'] : ['M-36,-24 L-12,-26','M12,-26 L36,-24'];
+  const mouth = m === "scared" ? '<ellipse cx="0" cy="38" rx="10" ry="13" fill="#5a2a1f"/>'
+    : m === "worry" ? '<path d="M-14,40 q14,-8 28,0" stroke="#6d3b2a" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    : '<path d="M-14,34 q14,11 28,0" stroke="#6d3b2a" stroke-width="5" fill="none" stroke-linecap="round"/>';
+  return `<g id="${id}_head">
+   <ellipse cx="-60" cy="6" rx="12" ry="16" fill="#A86A44"/><ellipse cx="60" cy="6" rx="12" ry="16" fill="#A86A44"/>
+   <ellipse cx="0" cy="0" rx="60" ry="68" fill="${C.skin}"/>
+   <path d="M-40,30 Q0,72 40,30 Q30,64 0,68 Q-30,64 -40,30Z" fill="#A86A44" opacity=".35"/>
+   <path d="M-64,-4 C-72,-66 -24,-94 18,-88 C58,-82 76,-44 64,-2 C56,-28 36,-40 14,-36 C-6,-48 -40,-42 -52,-18 Z" fill="${C.hair}"/>
+   <path d="M8,-36 C30,-40 50,-26 56,-6 C40,-20 24,-24 2,-26Z" fill="${C.hair}"/>
+   <path d="M-10,-86 C0,-104 22,-104 30,-92 C18,-96 6,-94 -2,-84Z" fill="${C.hair}"/>
+   <g id="${id}_eyes"><ellipse cx="-24" cy="4" rx="5.5" ry="8" fill="#1b1b1b"/><ellipse cx="24" cy="4" rx="5.5" ry="8" fill="#1b1b1b"/></g>
+   <circle cx="-24" cy="4" r="19" fill="rgba(255,255,255,.12)" stroke="${C.lead}" stroke-width="5"/>
+   <circle cx="24" cy="4" r="19" fill="rgba(255,255,255,.12)" stroke="${C.lead}" stroke-width="5"/>
+   <path d="M-5,2 L5,2" stroke="${C.lead}" stroke-width="5"/>
+   <path d="${brow[0]}" stroke="${C.hair}" stroke-width="6" stroke-linecap="round"/><path d="${brow[1]}" stroke="${C.hair}" stroke-width="6" stroke-linecap="round"/>
+   <path d="M0,12 q7,9 0,14" stroke="#8E5536" stroke-width="4" fill="none" stroke-linecap="round"/>
+   ${mouth}
+  </g>`;
+}
+function arm(id, side, rot, len){
+  const L = len || 150;
+  return `<g transform="translate(${side*60},-322) rotate(${rot})"><g id="${id}">
+    <rect x="-17" y="-12" width="34" height="${L*0.82}" rx="17" fill="${C.mus}"/>
+    <rect x="-17" y="${L*0.62}" width="34" height="${L*0.2}" rx="8" fill="#C8962A"/>
+    <circle cx="0" cy="${L*0.86}" r="17" fill="${C.skin}"/>
+  </g></g>`;
+}
+function leg(id, side, rot){
+  return `<g transform="translate(${side*22},-190) rotate(${rot})"><g id="${id}">
+    <rect x="-18" y="-4" width="36" height="180" rx="14" fill="${C.lead}"/>
+    <path d="M-22,170 h${side>0?52:44} a16,16 0 0 1 0,26 h-${side>0?52:44}z" transform="translate(${side>0?0:-8},0)" fill="#F2EDE4"/>
+    <rect x="${side>0?-22:-30}" y="192" width="${side>0?56:48}" height="7" rx="3" fill="#8b8b85"/>
+  </g></g>`;
+}
+function rafa(id, o){
+  const p = o.pose || "stand", s = o.s || 1, f = o.flip ? -1 : 1;
+  let aL = 8, aR = -8, lL = 3, lR = -3, len = 150, extra = "";
+  if (p === "phone"){ aR = -165; }
+  if (p === "cover"){ aL = -156; aR = 156; len = 100; }
+  if (p === "run"){ aL = 30; aR = -30; lL = 22; lR = -22; }
+  if (p === "reach"){ aL = -118; aR = -104; }
+  if (p === "phone") extra = `<g transform="translate(${60+26},-480) rotate(-12)"><rect x="-16" y="-30" width="32" height="58" rx="6" fill="#1b1b1b"/><rect x="-12" y="-25" width="24" height="44" rx="3" fill="${C.red}"/></g>`;
+  const head = `<g transform="translate(0,-420)${o.look?` rotate(${o.look})`:""}">${rafaHead(id, o)}</g>`;
+  const armsBack = p === "cover" ? "" : arm(id+"_aL", -1, aL, len);
+  const armsFront = p === "cover" ? arm(id+"_aL", -1, aL, len) + arm(id+"_aR", 1, aR, len) : arm(id+"_aR", 1, aR, len);
+  return `<g id="${id}_pos"><g transform="translate(${o.x},${o.y}) scale(${s*f},${s})"><g id="${id}">
+   <ellipse cx="0" cy="6" rx="90" ry="14" fill="rgba(0,0,0,.18)"/>
+   ${leg(id+"_lL", -1, lL)}${leg(id+"_lR", 1, lR)}
+   <g id="${id}_body">
+    ${armsBack}
+    <rect x="-14" y="-370" width="28" height="30" fill="#A86A44"/>
+    <ellipse cx="0" cy="-346" rx="54" ry="20" fill="#C8962A"/>
+    <rect x="-62" y="-350" width="124" height="172" rx="34" fill="${C.mus}"/>
+    <rect x="-40" y="-252" width="80" height="44" rx="14" fill="#C8962A"/>
+    <path d="M-12,-338 L-15,-298 M12,-338 L15,-298" stroke="#F3E9D6" stroke-width="4" stroke-linecap="round"/>
+    ${head}${armsFront}${extra}
+   </g>
+  </g></g></g>`;
+}
+function house(x, y, w, h, wall, roof, lit){
+  const win = lit ? "#F6D27A" : "#8FA5AA";
+  const rh = h * 0.55;
+  return `<g>
+   <rect x="${x}" y="${y-h}" width="${w}" height="${h}" fill="${wall}"/>
+   <rect x="${x+w*0.62}" y="${y-h}" width="${w*0.38}" height="${h}" fill="rgba(0,0,0,.08)"/>
+   <path d="M${x-14},${y-h} L${x+w/2},${y-h-rh} L${x+w+14},${y-h}Z" fill="${roof}"/>
+   <path d="M${x+w/2},${y-h-rh} L${x+w+14},${y-h} L${x+w/2},${y-h}Z" fill="rgba(0,0,0,.12)"/>
+   <rect x="${x+w*0.14}" y="${y-h*0.72}" width="${w*0.26}" height="${h*0.28}" fill="${win}"/>
+   <rect x="${x+w*0.6}" y="${y-h*0.72}" width="${w*0.26}" height="${h*0.28}" fill="${win}"/>
+   <rect x="${x+w*0.4}" y="${y-h*0.38}" width="${w*0.2}" height="${h*0.38}" fill="#6B4A36"/>
+  </g>`;
+}
+const WALLS = ["#E3B98C","#CFA27A","#D9C3A0","#C8A88A","#E6CFA8"], ROOFS = ["#A6553A","#7C5A4A","#8E4A3A","#5E6B6A","#B0683F"];
+function houses(y, n, sc_){ let o = "", x = -40; const k = sc_ || 1;
+  for (let i = 0; i < n; i++){ const w = (150 + rnd()*60)*k, h = (130 + rnd()*70)*k;
+    o += house(x, y, w, h, WALLS[i%5], ROOFS[(i*3)%5], false); x += w + 34*k; }
+  return o; }
+function car(id, x, y, color, s){
+  return `<g transform="translate(${x},${y}) scale(${s||1})"><g id="${id||""}" class="car">
+   <path d="M-74,-14 L-74,-42 Q-74,-50 -64,-52 L-46,-54 L-30,-82 Q-26,-88 -16,-88 L30,-88 Q40,-88 44,-80 L58,-54 L66,-52 Q76,-50 76,-40 L76,-14Z" fill="${color}"/>
+   <path d="M-24,-56 L-12,-80 L8,-80 L8,-56Z M16,-56 L16,-80 L32,-80 L46,-56Z" fill="#C9DADB"/>
+   <rect x="-76" y="-30" width="152" height="8" fill="rgba(0,0,0,.15)"/>
+   <rect x="70" y="-46" width="8" height="10" rx="2" fill="#FFE59A"/><rect x="-78" y="-46" width="8" height="10" rx="2" class="brake" fill="${C.red}"/>
+   <circle cx="-44" cy="-12" r="17" fill="#1E1F1E"/><circle cx="-44" cy="-12" r="7" fill="#9A9A92"/>
+   <circle cx="46" cy="-12" r="17" fill="#1E1F1E"/><circle cx="46" cy="-12" r="7" fill="#9A9A92"/>
+  </g></g>`;
+}
+const CARC = [C.red, C.mus, "#4F7CAC", "#6E8B4E", "#E8E2D6", "#C9683A", "#7E6AA0", "#5C6B70"];
+function carRows(rows){ let o = ""; let k = 0;
+  rows.forEach(r => { for (let x = r.x0; x < 1160; x += r.gap){ o += car("", x + rnd()*20, r.y, CARC[(k++)%CARC.length], r.s); } });
+  return o; }
+function trefoil(x, y, r, col, bg){
+  let o = `<g transform="translate(${x},${y})"><circle r="${r}" fill="${bg}"/>`;
+  for (let i = 0; i < 3; i++){ const a0 = (i*120 - 90 - 30)*Math.PI/180, a1 = (i*120 - 90 + 30)*Math.PI/180, R = r*0.85, r0 = r*0.22;
+    o += `<path d="M${r0*Math.cos(a0)},${r0*Math.sin(a0)} L${R*Math.cos(a0)},${R*Math.sin(a0)} A${R},${R} 0 0 1 ${R*Math.cos(a1)},${R*Math.sin(a1)} L${r0*Math.cos(a1)},${r0*Math.sin(a1)} A${r0},${r0} 0 0 0 ${r0*Math.cos(a0)},${r0*Math.sin(a0)}Z" fill="${col}"/>`; }
+  return o + `<circle r="${r*0.14}" fill="${col}"/></g>`;
+}
+function skyBg(g){ return `<rect width="1080" height="1920" fill="url(#${g||"gSky"})"/>`; }
+function hatchTop(id, x, y, r){
+  let riv = ""; for (let i = 0; i < 12; i++){ const a = i*30*Math.PI/180; riv += `<circle cx="${(r*0.86)*Math.cos(a)}" cy="${(r*0.86)*Math.sin(a)}" r="${r*0.035}" fill="#1E2220"/>`; }
+  let sp = ""; for (let i = 0; i < 6; i++){ sp += `<rect x="-6" y="0" width="12" height="${r*0.42}" rx="6" fill="${C.mus}" transform="rotate(${i*60})"/>`; }
+  return `<g transform="translate(${x},${y})"><g id="${id}">
+   <circle r="${r}" fill="${C.lead}"/><circle r="${r*0.8}" fill="#4A524C"/>${riv}
+   <g id="${id}_bolts">${[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect class="bolt" x="${r*0.78}" y="-${r*0.06}" width="${r*0.26}" height="${r*0.12}" rx="6" fill="#8E948C"/></g>`).join("")}</g>
+   <g id="${id}_wheel"><circle r="${r*0.44}" fill="none" stroke="${C.mus}" stroke-width="${r*0.07}"/>${sp}<circle r="${r*0.1}" fill="${C.mus}"/></g>
+  </g></g>`;
+}
+function brickWall(x, y, w, h, col){
+  let o = `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col||"#CDB08C"}"/><rect x="${x-8}" y="${y-18}" width="${w+16}" height="24" fill="#B79A76"/>`;
+  for (let r = 0, yy = y + 44; yy < y + h; yy += 44, r++){ o += `<rect x="${x}" y="${yy}" width="${w}" height="4" fill="rgba(0,0,0,.08)"/>`;
+    for (let xx = x + (r%2 ? 60 : 0); xx < x + w; xx += 120) o += `<rect x="${xx}" y="${yy-44}" width="4" height="44" fill="rgba(0,0,0,.07)"/>`; }
+  return o;
+}
+function selo(id, x, y, txt, bg, fg, size){
+  return `<div class="w" style="left:${x}px;top:${y}px"><div id="${id}" class="selo" style="background:${bg};color:${fg};font-size:${size||46}px">${txt}</div></div>`;
+}
+
+/* ---------------- animações utilitárias ---------------- */
+function pop(sel, t){ tl.fromTo(sel, {scale:0.4, opacity:0}, {scale:1, opacity:1, duration:0.35, ease:"back.out(2)", immediateRender:true}, t); }
+function blink(sel, s, e){ for (let t = s + 0.6; t < e - 0.2; t += 2.2){ tl.to(sel, {scaleY:0.1, duration:0.06, transformOrigin:"50% 50%"}, t); tl.to(sel, {scaleY:1, duration:0.08}, t + 0.08); } }
+function breathe(sel, s, e){ const per = 1.2, n = Math.max(1, Math.ceil((e - s)/per));
+  tl.fromTo(sel, {scaleY:1}, {scaleY:1.022, duration:per/2, ease:"sine.inOut", yoyo:true, repeat:n*2-1, transformOrigin:"50% 100%", immediateRender:false}, s); }
+function bobY(sel, s, e, amp, per){ const n = Math.max(1, Math.ceil((e - s)/per));
+  tl.fromTo(sel, {y:0}, {y:-(amp||4), duration:per/2, ease:"sine.inOut", yoyo:true, repeat:n*2-1, immediateRender:false}, s); }
+function shake(sel, t, d, a){ const n = Math.round(d/0.05); tl.fromTo(sel, {x:-(a||10)}, {x:(a||10), duration:0.05, repeat:n, yoyo:true, ease:"none", immediateRender:false}, t); tl.set(sel, {x:0}, t + 0.05*(n+1)); }
+function idleRafa(id, s, e){ blink(`#${id}_eyes`, s, e); breathe(`#${id}_body`, s, e); }
+function rainDrops(id, n, col, w, h, len){ let o = `<g id="${id}">`;
+  for (let k = 0; k < 2; k++) for (let i = 0; i < n; i++){ const x = rnd()*1080, y = rnd()*1920 - k*1920;
+    o += len ? `<rect x="${x}" y="${y}" width="${w}" height="${len}" rx="${w/2}" fill="${col}"/>` : `<circle cx="${x}" cy="${y}" r="${w*(0.6+rnd()*0.8)}" fill="${col}"/>`; }
+  return o + `</g>`; }
+function fall(sel, s, e, per){ const n = Math.max(1, Math.ceil((e - s)/per)); tl.fromTo(sel, {y:0}, {y:1920, duration:per, ease:"none", repeat:n-1, immediateRender:false}, s); }
+
+/* ---------------- cenas ---------------- */
+const SC = {};
+SC.rua_sirene = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="820" width="1080" height="1100" fill="${C.road}"/><rect y="820" width="1080" height="46" fill="#C9B08F"/>`
+   + houses(822, 7) + `<g id="${I("red")}" opacity="0"><rect width="1080" height="1920" fill="${C.red}"/></g>`
+   + `<g transform="translate(120,0)"><rect x="-9" y="430" width="18" height="430" fill="${C.lead}"/><rect x="-48" y="400" width="96" height="58" rx="10" fill="${C.lead}"/>
+      <circle id="${I("ring1")}" cx="0" cy="430" r="40" fill="none" stroke="${C.red}" stroke-width="8"/><circle id="${I("ring2")}" cx="0" cy="430" r="40" fill="none" stroke="${C.red}" stroke-width="8"/>
+      <circle id="${I("lamp")}" cx="0" cy="430" r="22" fill="${C.red}"/></g>`
+   + carRows([{y:1010, x0:-30, gap:178, s:1.05}, {y:1200, x0:40, gap:190, s:1.2}, {y:1470, x0:-60, gap:210, s:1.4}]),
+  html: selo(I("selo"), 540, 340, X.selo, C.mus, C.lead, 92),
+  anim(){ [I("ring1"), I("ring2")].forEach((r, k) => tl.fromTo("#"+r, {scale:1, opacity:1, transformOrigin:"50% 50%"}, {scale:5, opacity:0, duration:0.9, repeat:Math.ceil((e-s)/0.9), ease:"power1.out", immediateRender:false}, s + k*0.45));
+    tl.fromTo("#"+I("red"), {opacity:0}, {opacity:0.16, duration:0.45, yoyo:true, repeat:Math.ceil((e-s)/0.45), ease:"sine.inOut", immediateRender:false}, s);
+    tl.set("#"+I("selo"), {opacity:0}, 0); pop("#"+I("selo"), T.min15 - 0.05); }
+});
+SC.cronometro = (it, X, T, s, e, I) => {
+  let ticks = ""; for (let i = 0; i < 60; i++) ticks += `<rect x="-3" y="-205" width="6" height="${i%5?14:30}" fill="${C.lead}" transform="rotate(${i*6})"/>`;
+  return { svg: skyBg() + `<rect y="980" width="1080" height="940" fill="#CDAE7E"/><path d="M500,980 L580,980 L1060,1920 L20,1920Z" fill="${C.road}"/>`
+   + `<path d="M540,1000 L540,1920" stroke="${C.mus}" stroke-width="14" stroke-dasharray="70 70"/>` + houses(982, 9, 0.55)
+   + `<g transform="translate(540,690)"><rect x="-34" y="-290" width="68" height="46" rx="10" fill="${C.lead}"/><circle r="250" fill="${C.lead}"/><circle r="222" fill="${C.cream}"/>
+      <path id="${I("pie")}" d="M0,0 L0,-222 A222,222 0 0 1 0,-222Z" fill="${C.mus}" opacity=".55"/>${ticks}
+      <text class="o" y="40" text-anchor="middle" font-size="120" fill="${C.lead}" id="${I("txt")}">${X.relogio}</text>
+      <g id="${I("hand")}"><rect x="-5" y="-190" width="10" height="190" rx="5" fill="${C.red}"/><circle r="16" fill="${C.red}"/></g></g>`,
+   html: selo(I("selo"), 540, 330, X.selo, C.mus, C.lead, 54),
+   anim(){ pop("#"+I("selo"), s + 0.1); tl.fromTo("#"+I("hand"), {rotation:0, transformOrigin:"50% 92%"}, {rotation:300, transformOrigin:"50% 92%", duration:e - s, ease:"none", immediateRender:false}, s);
+     const o = {a:0}; tl.to(o, {a:300, duration:e - s, ease:"none", onUpdate(){ const a = o.a*Math.PI/180, R = 222; const el = document.getElementById(I("pie"));
+       el.setAttribute("d", `M0,0 L0,-222 A222,222 0 ${o.a>180?1:0} 1 ${R*Math.sin(a)},${-R*Math.cos(a)}Z`); }}, s); }
+  };
+};
+SC.encruzilhada = (it, X, T, s, e, I) => ({
+  svg: skyBg() + houses(1000, 9, 0.6) + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/>`
+   + `<path d="M0,1180 L1080,1120 L1080,1260 L0,1330Z" fill="#B99C74"/><path d="M470,1000 L610,1000 L760,1920 L320,1920Z" fill="#B99C74"/>`
+   + `<g transform="translate(830,1260)"><rect x="-10" y="-430" width="20" height="440" fill="#6B4A36"/>
+      <path d="M-200,-410 L60,-410 L60,-340 L-200,-340 L-236,-375Z" fill="${C.cream}"/><text class="o" x="-80" y="-358" text-anchor="middle" font-size="46" fill="${C.lead}">${X.p1}</text>
+      <path d="M-30,-320 L210,-320 L246,-285 L210,-250 L-30,-250Z" fill="${C.cream}"/><text class="o" x="95" y="-268" text-anchor="middle" font-size="46" fill="${C.lead}">${X.p2}</text>
+      <g id="${I("p3")}"><path d="M-190,-230 L60,-230 L60,-160 L-190,-160 L-226,-195Z" fill="${C.red}"/><text class="o" x="-70" y="-178" text-anchor="middle" font-size="46" fill="#fff">${X.p3}</text></g></g>`
+   + rafa(I("r"), {x:380, y:1460, s:1.15, mood:"worry"})
+   + `<text id="${I("q")}" class="o" x="380" y="760" text-anchor="middle" font-size="190" fill="${C.mus}" stroke="${C.lead}" stroke-width="6" paint-order="stroke">?</text>`,
+  anim(){ idleRafa(I("r"), s, e); tl.set("#"+I("q"), {opacity:0}, 0); pop("#"+I("q"), T.onde - 0.1); bobY("#"+I("q"), T.onde + 0.3, e, 10, 0.8);
+    tl.fromTo("#"+I("r")+"_head", {rotation:0}, {rotation:-10, transformOrigin:"50% 80%", duration:0.35, yoyo:true, repeat:3, repeatDelay:0.4, immediateRender:false}, s + 0.3);
+    shake("#"+I("p3"), T.onde, 0.4, 6); }
+});
+SC.alerta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#D9B48A"/><rect y="1380" width="1080" height="540" fill="#7A5A42"/><rect y="1370" width="1080" height="20" fill="#5E4634"/>
+   <rect x="640" y="380" width="340" height="420" fill="#6B4A36"/><rect x="664" y="404" width="292" height="372" fill="url(#gSky)"/><rect x="805" y="404" width="10" height="372" fill="#6B4A36"/>
+   <rect x="40" y="1180" width="320" height="140" rx="30" fill="#8E4A3A"/><rect x="60" y="1130" width="280" height="90" rx="26" fill="#A6553A"/>`
+   + rafa(I("r"), {x:300, y:1520, s:1.25, pose:"phone", mood:"scared", look:-6}),
+  html: `<div class="w" style="left:660px;top:820px"><div id="${I("ph")}" style="width:470px;height:800px;border-radius:56px;background:#161817;padding:22px;box-sizing:border-box;transform:rotate(-5deg);box-shadow:0 30px 0 rgba(0,0,0,.18)">
+     <div style="width:100%;height:100%;border-radius:38px;background:${C.red};display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:Oswald">
+      <svg width="150" height="132" viewBox="0 0 150 132"><path d="M75,6 L144,126 L6,126Z" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/><rect x="69" y="46" width="12" height="44" rx="6" fill="#fff"/><circle cx="75" cy="106" r="8" fill="#fff"/></svg>
+      <div style="font-size:38px;margin-top:22px;letter-spacing:.03em">${X.topo}</div>
+      <div style="font-size:104px;line-height:1;margin:22px 0 26px">${X.titulo.replace(" ","<br>")}</div>
+      <div style="font-size:34px;opacity:.92;padding:0 30px">${X.sub}</div></div></div></div>`
+   + selo(I("hora"), 250, 470, X.hora, C.lead, C.mus, 80),
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("ph"), {y:900}, {y:0, duration:0.45, ease:"power3.out", immediateRender:true}, s + 0.05);
+    shake("#"+I("ph"), s + 0.55, 0.5, 8); shake("#"+I("ph"), s + 2.2, 0.4, 6); tl.set("#"+I("hora"), {opacity:0}, 0); pop("#"+I("hora"), T.hora); }
+});
+SC.avenida = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="700" width="1080" height="1220" fill="${C.road}"/><rect y="700" width="1080" height="40" fill="#C9B08F"/>` + houses(702, 8, 0.85)
+   + `<g id="${I("cars")}">` + carRows([{y:860, x0:-50, gap:150, s:0.9}, {y:1010, x0:10, gap:165, s:1.0}, {y:1180, x0:-40, gap:180, s:1.15}, {y:1400, x0:-20, gap:205, s:1.35}, {y:1660, x0:-80, gap:230, s:1.55}]) + `</g>`,
+  html: selo(I("selo"), 540, 330, X.selo, C.red, "#fff", 66) + selo(I("selo2"), 540, 440, X.selo2, C.mus, C.lead, 48),
+  anim(){ pop("#"+I("selo"), s + 0.1); tl.set("#"+I("selo2"), {opacity:0}, 0); pop("#"+I("selo2"), s + 0.6);
+    tl.fromTo("#"+I("cars"), {x:0}, {x:-60, duration:e - s, ease:"none", immediateRender:false}, s);
+    tl.fromTo(`#${it.id}_S .brake`, {opacity:1}, {opacity:0.25, duration:0.3, yoyo:true, repeat:Math.ceil((e-s)/0.3), immediateRender:false}, s);
+    shake("#"+I("selo"), T.parada, 0.3, 6); }
+});
+SC.carro = (it, X, T, s, e, I) => ({
+  svg: skyBg() + houses(1120, 7, 0.8) + `<rect y="1120" width="1080" height="800" fill="${C.road}"/>` + car(I("car"), 540, 1300, "#4F7CAC", 4.6)
+   + `<g id="${I("dark")}" opacity="0"><rect width="1080" height="1920" fill="#4A5245"/></g>` + rainDrops(I("rain"), 70, "#C9D46C", 7, 0, 46)
+   + `<g id="${I("x")}" stroke="${C.red}" stroke-width="40" stroke-linecap="round"><path d="M330,820 L750,1220" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="${I("x1")}"/><path d="M750,820 L330,1220" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="${I("x2")}"/></g>`
+   + trefoil(870, 640, 60, C.lead, C.mus).replace("<g ", `<g id="${I("tre")}" `),
+  html: selo(I("rot"), 540, 340, X.rotulo, C.lead, "#fff", 62),
+  anim(){ tl.set("#"+I("rot"), {opacity:0}, 0); pop("#"+I("rot"), T.lata - 0.1); bobY("#"+I("car"), s, e, 3, 0.5);
+    tl.set("#"+I("rain"), {opacity:0}, 0); tl.set("#"+I("rain"), {opacity:0.85}, T.chuva - 0.1); fall("#"+I("rain"), T.chuva - 0.1, e, 1.3);
+    tl.to("#"+I("dark"), {opacity:0.5, duration:0.4}, T.chuva - 0.1);
+    tl.to("#"+I("x1"), {strokeDashoffset:0, duration:0.22}, T.chuva + 0.25); tl.to("#"+I("x2"), {strokeDashoffset:0, duration:0.22}, T.chuva + 0.45);
+    tl.set("#"+I("tre"), {opacity:0}, 0); pop("#"+I("tre"), T.chuva); }
+});
+SC.corrida = (it, X, T, s, e, I) => {
+  let fence = ""; for (let x = -10; x < 1090; x += 64) fence += `<rect x="${x}" y="760" width="56" height="260" rx="6" fill="#B98B5E"/>`;
+  return { svg: skyBg() + houses(780, 7, 0.8) + fence + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/><rect y="1000" width="1080" height="16" fill="${C.grass2}"/>`
+   + `<g transform="translate(80,1000)"><rect x="-14" y="-260" width="28" height="270" fill="#6B4A36"/><circle cy="-330" r="120" fill="#5C7842"/><circle cx="60" cy="-270" r="80" fill="#6E8B4E"/></g>`
+   + `<g transform="translate(860,1330)"><ellipse rx="150" ry="52" fill="${C.moss}"/><ellipse rx="118" ry="38" fill="${C.lead}"/><ellipse rx="56" ry="18" fill="none" stroke="${C.mus}" stroke-width="8"/></g>`
+   + rafa(I("r"), {x:150, y:1500, s:1.1, pose:"run", mood:"scared"}),
+   anim(){ blink(`#${I("r")}_eyes`, s, e); tl.fromTo("#"+I("r")+"_pos", {x:-120}, {x:470, duration:e - s, ease:"none", immediateRender:false}, s);
+     const n = Math.ceil((e - s)/0.18);
+     tl.fromTo("#"+I("r")+"_lL", {rotation:-26}, {rotation:26, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_lR", {rotation:26}, {rotation:-26, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_aL", {rotation:-30}, {rotation:30, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_aR", {rotation:30}, {rotation:-30, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     bobY("#"+I("r"), s, e, 14, 0.36); }
+  };
+};
+SC.bunker = (it, X, T, s, e, I) => {
+  let stones = ""; for (let i = 0; i < 40; i++) stones += `<ellipse cx="${rnd()*1080}" cy="${700 + rnd()*1500}" rx="${8+rnd()*16}" ry="${6+rnd()*9}" fill="${C.soil2}" opacity=".7"/>`;
+  let cans = ""; const cc = [C.red, C.mus, "#4F7CAC"]; for (let r = 0; r < 3; r++) for (let i = 0; i < 6; i++) cans += `<rect x="${250 + i*44}" y="${1150 + r*110}" width="34" height="56" rx="5" fill="${cc[(i+r)%3]}"/>`;
+  return { svg: `<g id="${I("cont")}">` + skyBg() + houses(560, 7, 0.7) + `<rect y="560" width="1080" height="1600" fill="${C.soil}"/>` + stones
+   + `<rect y="540" width="1080" height="40" fill="${C.grass}"/><rect x="480" y="530" width="120" height="22" rx="8" fill="${C.lead}"/>`
+   + `<rect x="505" y="560" width="70" height="460" fill="#4A3829"/><g stroke="#9A9A92" stroke-width="8">${[...Array(9)].map((_, i) => `<path d="M515,${600+i*48} L565,${600+i*48}"/>`).join("")}<path d="M515,570 L515,1020 M565,570 L565,1020"/></g>`
+   + `<rect x="130" y="1010" width="820" height="620" rx="26" fill="${C.moss}"/><rect x="160" y="1040" width="760" height="560" rx="14" fill="#55624F"/>`
+   + `<rect x="230" y="1130" width="300" height="12" fill="#3A2E24"/><rect x="230" y="1240" width="300" height="12" fill="#3A2E24"/><rect x="230" y="1350" width="300" height="12" fill="#3A2E24"/>` + cans.replace(/y="(\d+)"/g, (m, v) => `y="${+v - 76}"`)
+   + `<rect x="630" y="1300" width="250" height="40" rx="10" fill="#C9B79A"/><rect x="630" y="1340" width="250" height="20" fill="#6B4A36"/><rect x="630" y="1460" width="250" height="40" rx="10" fill="#C9B79A"/><rect x="630" y="1500" width="250" height="20" fill="#6B4A36"/>`
+   + `<rect x="700" y="1080" width="120" height="150" rx="10" fill="#8E948C"/><circle cx="760" cy="1060" r="40" fill="url(#gGlow)"/><circle cx="760" cy="1060" r="12" fill="#FFE59A"/>`
+   + `</g>`,
+   html: selo(I("rot"), 540, 330, X.rotulo, C.mus, C.lead, 56) + selo(I("ano"), 760, 1150, X.ano, C.lead, C.mus, 96),
+   anim(){ tl.fromTo("#"+I("cont"), {y:300}, {y:-60, duration:Math.min(2.2, e - s), ease:"power2.inOut", immediateRender:false}, s + 0.1);
+     tl.set("#"+I("rot"), {opacity:0}, 0); pop("#"+I("rot"), T.bunker); tl.set("#"+I("ano"), {opacity:0}, 0); pop("#"+I("ano"), T.ano); }
+  };
+};
+function neighborHouse(I, lit){
+  return `<rect x="560" y="300" width="560" height="900" fill="#A9BFC4"/><rect x="560" y="300" width="560" height="900" fill="rgba(0,0,0,.05)"/>
+   <path d="M520,320 L840,120 L1160,320Z" fill="${C.lead}"/>
+   <rect x="690" y="470" width="270" height="320" fill="${C.cream}"/>
+   <rect id="${I("win")}" x="708" y="488" width="234" height="284" fill="#56666D"/>
+   <g id="${I("lit")}" opacity="${lit?1:0}"><circle cx="825" cy="630" r="300" fill="url(#gGlow)"/><rect x="708" y="488" width="234" height="284" fill="#F6D27A"/>
+    <path d="M708,488 L770,488 Q760,640 740,772 L708,772Z" fill="#E09A50"/><path d="M942,488 L880,488 Q890,640 910,772 L942,772Z" fill="#E09A50"/>
+    <ellipse cx="825" cy="700" rx="46" ry="70" fill="#C98242" opacity=".55"/><circle cx="825" cy="610" r="30" fill="#C98242" opacity=".55"/></g>
+   <rect x="820" y="488" width="10" height="284" fill="${C.cream}"/>`;
+}
+SC.muro = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="1150" width="1080" height="770" fill="${C.grass}"/>` + neighborHouse(I, false) + brickWall(380, 1010, 720, 420)
+   + rafa(I("r"), {x:240, y:1440, s:1.15, mood:"calm"}),
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("r")+"_pos", {x:-60}, {x:0, duration:0.8, ease:"power2.out", immediateRender:false}, s);
+    tl.to(`#${I("r")}_head`, {rotation:-14, transformOrigin:"50% 80%", duration:0.4}, T.muro - 0.3); }
+});
+SC.janela = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-700,-260) scale(1.75)">` + neighborHouse(I, false) + `</g>` + `<rect y="1380" width="1080" height="540" fill="${C.grass}"/>`
+   + `<g transform="translate(160,1560) scale(1.6)"><g transform="translate(0,-60)">${rafaHead(I("h"), {mood:"calm"})}</g></g>` + brickWall(-20, 1500, 1120, 500),
+  anim(){ blink(`#${I("h")}_eyes`, s, e); tl.to("#"+I("lit"), {opacity:1, duration:0.25}, T.luz + 0.1); tl.fromTo("#"+I("h")+"_head", {y:40}, {y:0, duration:0.6, ease:"power2.out", immediateRender:false}, s + 0.1); }
+});
+SC.espiada = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-300,-200) scale(1.3)">` + neighborHouse(I, true) + `</g>`
+   + `<g transform="translate(400,1180) scale(3.1)">${rafaHead(I("h"), {mood:"worry"})}</g>` + brickWall(-20, 1330, 1120, 700)
+   + `<circle cx="250" cy="1318" r="52" fill="${C.skin}"/><circle cx="560" cy="1318" r="52" fill="${C.skin}"/>`
+   + `<path id="${I("drop")}" d="M640,880 q22,34 0,52 q-22,-18 0,-52Z" fill="#9FD3E6" opacity="0"/>`,
+  anim(){ blink(`#${I("h")}_eyes`, s, e); tl.fromTo("#"+I("h")+"_head", {y:30}, {y:0, duration:0.5, ease:"power2.out", immediateRender:false}, s);
+    tl.fromTo("#"+I("drop"), {opacity:0, y:-10}, {opacity:1, y:40, duration:0.9, immediateRender:false}, T.coragem); }
+});
+SC.pular = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-160,-120) scale(1.12)">` + neighborHouse(I, true) + `</g>` + `<rect y="1450" width="1080" height="470" fill="${C.grass}"/>`
+   + brickWall(330, 1060, 760, 420) + rafa(I("r"), {x:200, y:1500, s:1.2, pose:"reach", mood:"worry", look:-8})
+   + `<path id="${I("arc")}" d="M260,880 Q540,420 800,640" fill="none" stroke="${C.mus}" stroke-width="14" stroke-dasharray="34 26" stroke-linecap="round"/>
+      <path id="${I("arrow")}" d="M800,640 l-46,-6 l26,-36Z" fill="${C.mus}"/>`,
+  anim(){ idleRafa(I("r"), s, e); bobY("#"+I("r"), s, e, 10, 0.7);
+    tl.set(["#"+I("arc"), "#"+I("arrow")], {opacity:0}, 0);
+    tl.fromTo("#"+I("arc"), {opacity:1, strokeDashoffset:900, strokeDasharray:"900 900"}, {strokeDashoffset:0, duration:0.7, ease:"power2.out", immediateRender:false}, T.pular);
+    tl.set("#"+I("arc"), {strokeDasharray:"34 26"}, T.pular + 0.72); tl.fromTo("#"+I("arrow"), {opacity:0}, {opacity:1, duration:0.15, immediateRender:false}, T.pular + 0.6); }
+});
+SC.flash = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<path d="M0,1010 L0,930 L80,930 L80,880 L150,880 L150,950 L220,950 L220,860 L260,840 L300,860 L300,960 L380,960 L380,900 L470,900 L470,970 L560,970 L560,870 L640,870 L640,940 L720,940 L720,820 L760,800 L800,820 L800,950 L900,950 L900,890 L1000,890 L1000,960 L1080,960 L1080,1010Z" fill="#8C7A68"/>`
+   + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/>` + `<circle id="${I("pt")}" cx="700" cy="930" r="40" fill="#FFFDF5" opacity="0"/>`
+   + rafa(I("r"), {x:420, y:1500, s:1.0, mood:"calm", flip:true})
+   + `<rect id="${I("w")}" width="1080" height="1920" fill="#FFFDF7" opacity="0"/>`,
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("pt"), {opacity:0, scale:0.2, transformOrigin:"50% 50%"}, {opacity:1, scale:4, duration:0.3, immediateRender:false}, T.clarao - 0.3);
+    tl.to("#"+I("w"), {opacity:1, duration:0.08}, T.clarao - 0.02); }
+});
+SC.nao_olhe = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gPale)"/><rect y="1180" width="1080" height="740" fill="#C9C29A"/>` + rafa(I("r"), {x:540, y:1560, s:1.35, pose:"cover", mood:"scared"})
+   + `<rect id="${I("w")}" width="1080" height="1920" fill="#fff"/>`,
+  html: `<div class="w" style="left:540px;top:380px"><div id="${I("t1")}" style="font-family:Oswald;font-size:150px;color:${C.red};line-height:1">${X.t1}</div></div>` + selo(I("t2"), 540, 560, X.t2, C.lead, C.mus, 110),
+  anim(){ tl.fromTo("#"+I("w"), {opacity:1}, {opacity:0, duration:0.6, immediateRender:false}, s); shake("#"+I("r"), s + 0.2, e - s - 0.3, 3);
+    pop("#"+I("t1"), s + 0.05); tl.set("#"+I("t2"), {opacity:0}, 0); pop("#"+I("t2"), T.conte); }
+});
+SC.cogumelo = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gDusk)"/>`
+   + `<g id="${I("cloud")}" transform="translate(540,1000)"><path d="M-60,0 L-40,-380 L40,-380 L60,0Z" fill="#C99A72"/>
+      <ellipse cx="0" cy="-420" rx="250" ry="120" fill="#E0B48C"/><ellipse cx="0" cy="-380" rx="210" ry="60" fill="#B98563"/><ellipse cx="-30" cy="-450" rx="150" ry="60" fill="#EBC9A3"/>
+      <ellipse cx="0" cy="-150" rx="120" ry="34" fill="#E0B48C" opacity=".8"/></g>
+      <ellipse id="${I("wave")}" cx="540" cy="1000" rx="200" ry="40" fill="none" stroke="#FFF1DA" stroke-width="16" opacity="0"/>`
+   + `<path d="M0,1100 L0,1020 L70,1020 L70,960 L130,960 L130,1040 L200,1040 L200,980 L260,940 L320,980 L320,1050 L420,1050 L420,1000 L480,1000 L480,1060 L600,1060 L600,990 L690,990 L690,1040 L770,1040 L770,950 L850,950 L850,1030 L960,1030 L960,980 L1080,980 L1080,1100Z" fill="${C.lead}"/>`
+   + `<rect y="1098" width="1080" height="830" fill="#2F3532"/>`,
+  html: `<div class="w" style="left:540px;top:380px"><div style="display:flex;align-items:center;gap:30px;background:${C.cream};border-radius:22px;padding:18px 44px;font-family:Oswald;color:${C.lead};box-shadow:0 8px 0 rgba(0,0,0,.2)">
+     <div id="${I("a")}" style="text-align:center"><div style="font-size:96px;color:${C.red};line-height:1">${X.a}</div><div style="font-size:40px">${X.a2}</div></div>
+     <div style="font-size:48px;opacity:.6">VS</div>
+     <div id="${I("b")}" style="text-align:center"><div style="font-size:96px;color:${C.red};line-height:1">${X.b}</div><div style="font-size:40px">${X.b2}</div></div></div></div>`,
+  anim(){ tl.fromTo("#"+I("cloud"), {scale:0.45, transformOrigin:"50% 100%"}, {scale:1.05, transformOrigin:"50% 100%", duration:e - s, ease:"power1.out", immediateRender:false}, s);
+    pop("#"+I("a"), T.luz); tl.set("#"+I("b"), {opacity:0}, 0); pop("#"+I("b"), T.estrondo);
+    tl.fromTo("#"+I("wave"), {opacity:1, scale:0.5, transformOrigin:"50% 50%"}, {opacity:0, scale:5, transformOrigin:"50% 50%", duration:1.1, immediateRender:false}, T.estrondo);
+    shake(`#${it.id}_S .cam`, T.estrondo, 0.45, 9); }
+});
+SC.regra3s = (it, X, T, s, e, I) => {
+  let ticks = ""; for (let i = 0; i <= 10; i++) ticks += `<rect x="${140 + i*80 - 3}" y="${i%5?985:970}" width="6" height="${i%5?30:60}" fill="${C.lead}"/>`;
+  return { svg: `<rect width="1080" height="1920" fill="${C.cream}"/><rect x="140" y="997" width="800" height="6" fill="${C.lead}"/>` + ticks
+   + `<g id="${I("wv")}" transform="translate(140,880)" fill="none" stroke="${C.red}" stroke-width="10" stroke-linecap="round"><path d="M20,-40 Q50,0 20,40"/><path d="M45,-62 Q90,0 45,62"/><path d="M70,-84 Q130,0 70,84"/></g>`
+   + `<g transform="translate(140,1100)"><circle r="22" fill="${C.mus}"/></g><text class="o" x="140" y="1180" text-anchor="middle" font-size="40" fill="${C.lead}">0</text><text class="o" x="940" y="1180" text-anchor="middle" font-size="40" fill="${C.lead}">1 KM</text>`
+   + `<circle id="${I("dot")}" cx="140" cy="1100" r="22" fill="${C.red}"/>`,
+   html: `<div class="w" style="left:540px;top:600px"><div id="${I("f")}" style="font-family:Oswald;font-size:180px;color:${C.lead};white-space:nowrap;line-height:1"><span style="color:${C.red}">${X.f1}</span> = <span style="color:#C8962A">${X.f2}</span></div></div>`
+     + selo(I("rod"), 540, 380, X.rodape, C.lead, "#fff", 52),
+   anim(){ pop("#"+I("f"), s + 0.1); tl.set("#"+I("rod"), {opacity:0}, 0); pop("#"+I("rod"), s + 0.8);
+     tl.fromTo(["#"+I("wv"), "#"+I("dot")], {x:0}, {x:800, duration:e - s - 0.3, ease:"none", immediateRender:false}, s + 0.2); }
+  };
+};
+SC.contagem = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>` + `<g transform="translate(540,760)" opacity=".18"><circle r="330" fill="none" stroke="${C.cream}" stroke-width="10"/><circle r="250" fill="none" stroke="${C.cream}" stroke-width="6"/></g>`,
+  html: selo(I("rot"), 540, 380, X.rotulo, C.lead, C.cream, 54) + `<div class="w" style="left:540px;top:760px"><div id="${I("n")}" style="font-family:Oswald;font-size:400px;color:${C.cream};line-height:1">0</div></div>`
+    + selo(I("km"), 540, 1080, X.km, C.mus, C.lead, 120),
+  anim(){ const o = {v:0}, N = parseInt(X.n) || 31, el = () => document.getElementById(I("n"));
+    tl.fromTo(o, {v:0}, {v:N, duration:Math.max(0.3, T.n31 + 0.25 - s), ease:"none", immediateRender:false, onUpdate(){ el().textContent = Math.round(o.v); }}, s);
+    tl.set("#"+I("km"), {opacity:0}, 0); pop("#"+I("km"), T.km); tl.fromTo("#"+I("n"), {scale:1}, {scale:1.08, duration:0.2, yoyo:true, repeat:1, immediateRender:false}, T.n31 + 0.2); }
+});
+SC.escotilha = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>` + hatchTop(I("h"), 540, 800, 380),
+  html: selo(I("sel"), 540, 330, X.selo, C.mus, C.lead, 60),
+  anim(){ tl.fromTo("#"+I("h")+"_wheel", {rotation:0, transformOrigin:"50% 50%"}, {rotation:300, transformOrigin:"50% 50%", duration:1.4, ease:"power2.inOut", immediateRender:false}, T.gira);
+    tl.fromTo(`#${I("h")}_bolts .bolt`, {x:0}, {x:-80, duration:0.35, stagger:0.08, ease:"power2.out", immediateRender:false}, T.travas);
+    tl.set("#"+I("sel"), {opacity:0}, 0); pop("#"+I("sel"), T.travas + 0.4);
+    tl.fromTo("#"+I("h"), {scale:1.15, transformOrigin:"50% 50%"}, {scale:1, transformOrigin:"50% 50%", duration:0.8, ease:"power2.out", immediateRender:false}, s); }
+});
+SC.poeira = (it, X, T, s, e, I) => {
+  let fence = ""; for (let x = -10; x < 1090; x += 64) fence += `<rect x="${x}" y="760" width="56" height="260" rx="6" fill="#A08164"/>`;
+  return { svg: skyBg() + houses(780, 7, 0.8) + fence + `<rect y="1000" width="1080" height="920" fill="#879468"/>`
+   + `<g transform="translate(540,1240)"><ellipse rx="190" ry="64" fill="${C.moss}"/><ellipse rx="150" ry="48" fill="${C.lead}"/><ellipse rx="70" ry="22" fill="none" stroke="${C.mus}" stroke-width="9"/></g>`
+   + `<g id="${I("gray")}" opacity="0"><rect width="1080" height="1920" fill="#6F6C66"/></g>` + rainDrops(I("dust"), 120, "#BDB6A8", 6, 0, 0),
+   html: selo(I("s1"), 540, 330, X.selo1, C.lead, C.mus, 56) + selo(I("s2"), 540, 450, X.selo2, C.red, "#fff", 62),
+   anim(){ tl.to("#"+I("gray"), {opacity:0.45, duration:2}, s); fall("#"+I("dust"), s, e, 4);
+     tl.set(["#"+I("s1"), "#"+I("s2")], {opacity:0}, 0); pop("#"+I("s1"), T.min20 - 0.1); pop("#"+I("s2"), T.regra - 0.05); }
+  };
+};
+SC.grafico = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="${C.cream}"/>` + trefoil(540, 360, 70, C.lead, C.mus)
+   + `<g id="${I("ch")}"><path d="M170,520 L170,1150 L950,1150" fill="none" stroke="${C.lead}" stroke-width="8"/>
+      <text class="o" x="150" y="545" text-anchor="end" font-size="40" fill="${C.red}">${X.topo}</text>
+      <path id="${I("curve")}" d="M176,540 C250,960 420,1100 940,1138" fill="none" stroke="${C.red}" stroke-width="14" stroke-linecap="round"/>
+      <circle id="${I("m1")}" r="20" fill="${C.mus}" stroke="${C.lead}" stroke-width="5"/><circle id="${I("m2")}" r="20" fill="#6E8B4E" stroke="${C.lead}" stroke-width="5"/>
+      <text class="o" x="560" y="1215" text-anchor="middle" font-size="38" fill="${C.lead}">${X.eixo}</text></g>`,
+  html: selo(I("l1"), 0, 0, X.l1, C.mus, C.lead, 56) + selo(I("l2"), 0, 0, X.l2, "#6E8B4E", "#fff", 56),
+  anim(){ const p = document.getElementById(I("curve")), L = p.getTotalLength();
+    const P1 = p.getPointAtLength(L*0.30), P2 = p.getPointAtLength(L*0.72);
+    document.getElementById(I("m1")).setAttribute("cx", P1.x); document.getElementById(I("m1")).setAttribute("cy", P1.y);
+    document.getElementById(I("m2")).setAttribute("cx", P2.x); document.getElementById(I("m2")).setAttribute("cy", P2.y);
+    const w1 = document.getElementById(I("l1")).parentNode, w2 = document.getElementById(I("l2")).parentNode;
+    w1.style.left = (P1.x + 190) + "px"; w1.style.top = (P1.y - 80) + "px"; w2.style.left = (P2.x - 40) + "px"; w2.style.top = (P2.y - 120) + "px";
+    p.setAttribute("stroke-dasharray", L + " " + L); tl.set(p, {strokeDashoffset:L}, 0);
+    tl.to(p, {strokeDashoffset:L*0.9, duration:0.5}, s + 0.1); tl.to(p, {strokeDashoffset:L*0.70, duration:0.5}, T.h7 - 0.2);
+    tl.to(p, {strokeDashoffset:0, duration:0.8}, T.d2 - 0.2);
+    tl.set(["#"+I("m1"), "#"+I("m2"), "#"+I("l1"), "#"+I("l2")], {opacity:0}, 0);
+    pop("#"+I("m1"), T.h7 + 0.3); pop("#"+I("l1"), T.h7 + 0.35); pop("#"+I("m2"), T.d2 + 0.6); pop("#"+I("l2"), T.c100 - 0.1);
+    tl.fromTo(`#${it.id}_S .cam`, {scale:1.0}, {scale:1.08, duration:0.6, ease:"power2.inOut", immediateRender:false}, T.depois2 - 0.1); }
+});
+SC.calendario = (it, X, T, s, e, I) => {
+  let grid = "", xs = "";
+  for (let i = 0; i < 14; i++){ const c = i % 7, r = Math.floor(i/7), x = 205 + c*96, y = 790 + r*150;
+    grid += `<rect x="${x}" y="${y}" width="84" height="130" rx="10" fill="#fff" stroke="#D9CBB0" stroke-width="3"/><text class="o" x="${x+42}" y="${y+56}" text-anchor="middle" font-size="40" fill="${C.lead}">${i+1}</text>`;
+    xs += `<g class="xx" stroke="${C.red}" stroke-width="10" stroke-linecap="round" opacity="0"><path d="M${x+16},${y+72} L${x+68},${y+118}"/><path d="M${x+68},${y+72} L${x+16},${y+118}"/></g>`; }
+  return { svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/><rect x="170" y="600" width="740" height="510" rx="26" fill="${C.cream}"/><rect x="170" y="600" width="740" height="160" rx="26" fill="${C.red}"/><rect x="170" y="700" width="740" height="60" fill="${C.red}"/>`
+   + `<text class="o" x="540" y="715" text-anchor="middle" font-size="96" fill="#fff">${X.cab}</text>` + grid + `<g id="${I("xs")}">${xs}</g>`,
+   html: selo(I("top"), 540, 380, X.topo, C.mus, C.lead, 64),
+   anim(){ tl.set("#"+I("top"), {opacity:0}, 0); pop("#"+I("top"), s + 0.3);
+     const st = Math.max(0.05, (T.d14 + 0.3 - (s + 0.5))/14);
+     tl.fromTo(`#${I("xs")} .xx`, {opacity:0, scale:1.6, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.15, stagger:st, immediateRender:false}, s + 0.5); }
+  };
+};
+SC.estoque = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>`,
+  html: `<div class="w" style="left:540px;top:820px"><div id="${I("pap")}" style="width:660px;height:820px;background:#F4EEDD;border-radius:10px;transform:rotate(-3deg);box-shadow:0 18px 0 rgba(0,0,0,.25);font-family:Oswald;color:${C.lead};padding:70px 60px;box-sizing:border-box;position:relative">
+     <div style="position:absolute;left:230px;top:-26px;width:200px;height:60px;background:rgba(232,178,58,.75);transform:rotate(2deg)"></div>
+     <div style="font-size:96px;text-align:center;line-height:1">${X.titulo}</div>
+     <div style="margin-top:60px;font-size:52px">${X.l1}</div><div class="bars" style="display:flex;gap:12px;margin-top:10px">${'<i style="display:block;width:56px;height:46px;border-radius:6px;background:#4F7CAC"></i>'.repeat(8)}</div>
+     <div style="margin-top:40px;font-size:52px">${X.l2}</div><div class="bars" style="display:flex;gap:12px;margin-top:10px">${'<i style="display:block;width:56px;height:46px;border-radius:6px;background:#C8962A"></i>'.repeat(8)}</div>
+     <div id="${I("so")}" style="position:absolute;left:60px;bottom:50px;display:flex;align-items:center;gap:18px;font-size:50px;color:${C.red}">
+      <svg width="90" height="110" viewBox="-80 -110 160 200"><g transform="scale(0.9)">${rafaHead(I("mini"), {mood:"worry"})}</g></svg>${X.so}</div>
+    </div></div>`
+    + `<div class="w" style="left:790px;top:560px"><div id="${I("st")}" style="font-family:Oswald;font-size:110px;color:${C.red};border:12px solid ${C.red};border-radius:18px;padding:0 26px;transform:rotate(-12deg);background:rgba(244,238,221,.85);line-height:1.2">${X.dias}</div></div>`,
+  anim(){ pop("#"+I("pap"), s + 0.05); tl.fromTo(`#${it.id}_S .bars i`, {scaleY:0, transformOrigin:"50% 100%"}, {scaleY:1, duration:0.12, stagger:0.06, immediateRender:true}, s + 0.4);
+    tl.set("#"+I("st"), {opacity:0}, 0); tl.fromTo("#"+I("st"), {opacity:0, scale:2}, {opacity:1, scale:1, duration:0.25, ease:"power3.in", immediateRender:false}, T.d16);
+    tl.set("#"+I("so"), {opacity:0}, 0); pop("#"+I("so"), T.so); }
+});
+SC.problema = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#141615"/>`,
+  html: `<div class="w" style="left:540px;top:820px"><div id="${I("t")}" style="font-family:Oswald;font-size:140px;color:${C.red};white-space:nowrap">${X.t}</div></div>`,
+  anim(){ tl.fromTo("#"+I("t"), {opacity:0, scale:1.15}, {opacity:1, scale:1, duration:0.4, immediateRender:true}, s + 0.1);
+    tl.to("#"+I("t"), {opacity:0.55, duration:0.05, yoyo:true, repeat:3}, s + 1.0); }
+});
+SC.batidas = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gDark)"/><circle cx="540" cy="760" r="520" fill="url(#gGlow)" opacity=".12"/>`
+   + `<g stroke="#5E625C" stroke-width="18"><path d="M420,1060 L420,1920 M660,1060 L660,1920"/>${[...Array(8)].map((_, i) => `<path d="M420,${1120+i*110} L660,${1120+i*110}"/>`).join("")}</g>`
+   + hatchTop(I("h"), 540, 760, 330)
+   + `<g id="${I("rings")}" fill="none" stroke="#F3E9D6" stroke-width="10" opacity="0"><circle cx="540" cy="760" r="370"/><circle cx="540" cy="760" r="420"/></g>`,
+  html: selo(I("hora"), 220, 330, X.hora, C.lead, C.mus, 72)
+    + `<div class="w" style="left:780px;top:340px"><div id="${I("b")}" style="font-family:Oswald;background:${C.cream};border-radius:16px;padding:6px 30px 10px;text-align:center;line-height:1;box-shadow:0 8px 0 rgba(0,0,0,.3)"><div style="font-size:110px;color:${C.red}">${X.b}</div><div style="font-size:36px;color:${C.lead}">${X.b2}</div></div></div>`,
+  anim(){ tl.set(["#"+I("hora"), "#"+I("b")], {opacity:0}, 0); pop("#"+I("hora"), T.hora - 0.1);
+    [0, 0.32, 0.64].forEach(d => { shake("#"+I("h"), T.bateu + d, 0.12, 12); tl.fromTo("#"+I("rings"), {opacity:0.9, scale:0.92, transformOrigin:"50% 50%"}, {opacity:0, scale:1.12, transformOrigin:"50% 50%", duration:0.3, immediateRender:false}, T.bateu + d); });
+    pop("#"+I("b"), T.b3 - 0.1); }
+});
+SC.medidor = (it, X, T, s, e, I) => {
+  const arcP = (a0, a1, col) => { const r = 200, p = a => [540 + r*Math.cos(a*Math.PI/180), 820 + r*Math.sin(a*Math.PI/180)]; const A = p(a0), B = p(a1);
+    return `<path d="M${A[0]},${A[1]} A${r},${r} 0 0 1 ${B[0]},${B[1]}" fill="none" stroke="${col}" stroke-width="46"/>`; };
+  return { svg: `<rect width="1080" height="1920" fill="url(#gDark)"/><rect x="250" y="470" width="580" height="760" rx="60" fill="${C.mus}"/><rect x="250" y="1130" width="580" height="100" rx="40" fill="#C8962A"/>
+    <rect x="300" y="560" width="480" height="380" rx="26" fill="${C.cream}"/>` + arcP(-180, -110, "#6E8B4E") + arcP(-110, -55, C.mus) + arcP(-55, 0, C.red)
+    + `<g id="${I("nd")}"><rect x="535" y="650" width="10" height="175" rx="5" fill="${C.lead}"/></g><circle cx="540" cy="820" r="22" fill="${C.lead}"/>`
+    + `<circle id="${I("lamp")}" cx="760" cy="520" r="24" fill="${C.red}"/><circle id="${I("glow")}" cx="760" cy="520" r="90" fill="url(#gRedGlow)" opacity="0"/>`
+    + `<text class="o" x="540" y="535" text-anchor="middle" font-size="44" fill="${C.lead}">${X.topo}</text>` + trefoil(360, 1040, 48, C.mus, C.lead),
+   html: `<div class="w" style="left:600px;top:1040px"><div id="${I("r")}" class="selo" style="background:${C.red};color:#fff;font-size:92px">${X.r}</div></div>`,
+   anim(){ tl.fromTo("#"+I("nd"), {rotation:-80, transformOrigin:"50% 97%"}, {rotation:72, transformOrigin:"50% 97%", duration:Math.max(0.5, T.letal - s), ease:"power2.in", immediateRender:true}, s + 0.1);
+     tl.fromTo("#"+I("nd"), {rotation:72}, {rotation:80, transformOrigin:"50% 97%", duration:0.08, yoyo:true, repeat:Math.ceil((e - T.letal)/0.08), immediateRender:false}, T.letal + 0.1);
+     tl.fromTo("#"+I("glow"), {opacity:0}, {opacity:1, duration:0.2, yoyo:true, repeat:Math.ceil((e - s)/0.2), immediateRender:false}, s);
+     tl.set("#"+I("r"), {opacity:0}, 0); pop("#"+I("r"), T.letal); }
+  };
+};
+SC.fim = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#111312"/>`,
+  html: `<div class="w" style="left:540px;top:860px"><div id="${I("t")}" style="font-family:Oswald;text-align:center;line-height:1">
+    <div style="font-size:190px;color:#F3EEE4">${X.t}</div><div style="font-size:72px;color:${C.red};margin-top:20px">${X.s}</div></div></div>`,
+  anim(){ tl.fromTo("#"+I("t"), {opacity:0, y:30}, {opacity:1, y:0, duration:0.6, ease:"power2.out", immediateRender:true}, s + 0.1); }
+});
+
+/* ---------------- montagem ---------------- */
+const SCN = EDIT.items.filter(i => i.by === "template" && i.type === "html");
+SCN.forEach((it, k) => {
+  const P = it.props || {}, X = P.textos || {}, T = P.t || {}, s = +it.start, e = s + (+it.dur), I = n => `${it.id}_${n}`;
+  const f = SC[P.cena]; if (!f) return;
+  const r = f(it, X, T, s, e, I);
+  const d = document.createElement("div"); d.className = "sc" + (s <= 0.01 ? " first" : ""); d.id = it.id + "_S";
+  d.innerHTML = `<div class="cam"><svg viewBox="0 0 1080 1920" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">${r.svg || ""}</svg><div class="lay">${r.html || ""}</div></div>`;
+  ROOT.appendChild(d);
+  if (it.hidden) return;
+  if (s > 0.01) tl.set(d, {visibility:"visible"}, s);
+  tl.set(d, {visibility:"hidden"}, e);
+  tl.fromTo(d.querySelector(".cam"), {scale:1.0}, {scale:1.045, duration:e - s, ease:"none", immediateRender:false}, s);
+  r.anim && r.anim();
+});
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.set("#leg_g0",{opacity:1},0.000);tl.set("#leg_g0",{opacity:0},1.240);
+tl.set("#leg_g0w0",{className:"ed-w on"},0.000);
+tl.set("#leg_g0w1",{className:"ed-w on ed-k"},0.240);
+tl.set("#leg_g0w2",{className:"ed-w on"},0.620);
+tl.set("#leg_g1",{opacity:1},1.240);tl.set("#leg_g1",{opacity:0},1.740);
+tl.set("#leg_g1w0",{className:"ed-w on"},1.280);
+tl.set("#leg_g1w1",{className:"ed-w on"},1.360);
+tl.set("#leg_g1w2",{className:"ed-w on"},1.600);
+tl.set("#leg_g2",{opacity:1},1.740);tl.set("#leg_g2",{opacity:0},3.640);
+tl.set("#leg_g2w0",{className:"ed-w on"},1.780);
+tl.set("#leg_g2w1",{className:"ed-w on ed-k"},2.300);
+tl.set("#leg_g2w2",{className:"ed-w on"},2.640);
+tl.set("#leg_g3",{opacity:1},3.640);tl.set("#leg_g3",{opacity:0},4.220);
+tl.set("#leg_g3w0",{className:"ed-w on"},3.680);
+tl.set("#leg_g3w1",{className:"ed-w on"},3.820);
+tl.set("#leg_g3w2",{className:"ed-w on"},4.000);
+tl.set("#leg_g4",{opacity:1},4.220);tl.set("#leg_g4",{opacity:0},4.920);
+tl.set("#leg_g4w0",{className:"ed-w on"},4.260);
+tl.set("#leg_g4w1",{className:"ed-w on"},4.600);
+tl.set("#leg_g4w2",{className:"ed-w on"},4.760);
+tl.set("#leg_g5",{opacity:1},4.920);tl.set("#leg_g5",{opacity:0},6.400);
+tl.set("#leg_g5w0",{className:"ed-w on"},4.960);
+tl.set("#leg_g5w1",{className:"ed-w on ed-k"},5.420);
+tl.set("#leg_g6",{opacity:1},6.400);tl.set("#leg_g6",{opacity:0},7.020);
+tl.set("#leg_g6w0",{className:"ed-w on"},6.440);
+tl.set("#leg_g6w1",{className:"ed-w on"},6.680);
+tl.set("#leg_g6w2",{className:"ed-w on"},6.880);
+tl.set("#leg_g7",{opacity:1},7.020);tl.set("#leg_g7",{opacity:0},8.540);
+tl.set("#leg_g7w0",{className:"ed-w on"},7.060);
+tl.set("#leg_g7w1",{className:"ed-w on"},7.360);
+tl.set("#leg_g7w2",{className:"ed-w on"},7.680);
+tl.set("#leg_g8",{opacity:1},8.540);tl.set("#leg_g8",{opacity:0},10.040);
+tl.set("#leg_g8w0",{className:"ed-w on"},8.580);
+tl.set("#leg_g8w1",{className:"ed-w on"},8.860);
+tl.set("#leg_g8w2",{className:"ed-w on"},9.080);
+tl.set("#leg_g9",{opacity:1},10.040);tl.set("#leg_g9",{opacity:0},10.820);
+tl.set("#leg_g9w0",{className:"ed-w on"},10.080);
+tl.set("#leg_g9w1",{className:"ed-w on ed-k"},10.220);
+tl.set("#leg_g9w2",{className:"ed-w on"},10.600);
+tl.set("#leg_g10",{opacity:1},10.820);tl.set("#leg_g10",{opacity:0},11.660);
+tl.set("#leg_g10w0",{className:"ed-w on"},10.860);
+tl.set("#leg_g10w1",{className:"ed-w on"},11.020);
+tl.set("#leg_g10w2",{className:"ed-w on"},11.420);
+tl.set("#leg_g11",{opacity:1},11.660);tl.set("#leg_g11",{opacity:0},12.480);
+tl.set("#leg_g11w0",{className:"ed-w on"},11.700);
+tl.set("#leg_g11w1",{className:"ed-w on"},11.900);
+tl.set("#leg_g11w2",{className:"ed-w on"},12.180);
+tl.set("#leg_g12",{opacity:1},12.480);tl.set("#leg_g12",{opacity:0},13.200);
+tl.set("#leg_g12w0",{className:"ed-w on"},12.520);
+tl.set("#leg_g12w1",{className:"ed-w on"},12.820);
+tl.set("#leg_g12w2",{className:"ed-w on"},12.960);
+tl.set("#leg_g13",{opacity:1},13.200);tl.set("#leg_g13",{opacity:0},14.200);
+tl.set("#leg_g13w0",{className:"ed-w on"},13.240);
+tl.set("#leg_g13w1",{className:"ed-w on"},13.520);
+tl.set("#leg_g14",{opacity:1},14.200);tl.set("#leg_g14",{opacity:0},15.500);
+tl.set("#leg_g14w0",{className:"ed-w on"},14.240);
+tl.set("#leg_g14w1",{className:"ed-w on"},14.500);
+tl.set("#leg_g14w2",{className:"ed-w on"},14.780);
+tl.set("#leg_g15",{opacity:1},15.500);tl.set("#leg_g15",{opacity:0},16.620);
+tl.set("#leg_g15w0",{className:"ed-w on"},15.540);
+tl.set("#leg_g15w1",{className:"ed-w on"},15.660);
+tl.set("#leg_g15w2",{className:"ed-w on"},16.220);
+tl.set("#leg_g16",{opacity:1},16.620);tl.set("#leg_g16",{opacity:0},17.720);
+tl.set("#leg_g16w0",{className:"ed-w on"},16.660);
+tl.set("#leg_g16w1",{className:"ed-w on ed-k"},16.860);
+tl.set("#leg_g17",{opacity:1},17.720);tl.set("#leg_g17",{opacity:0},18.200);
+tl.set("#leg_g17w0",{className:"ed-w on"},17.760);
+tl.set("#leg_g17w1",{className:"ed-w on"},17.860);
+tl.set("#leg_g17w2",{className:"ed-w on"},18.020);
+tl.set("#leg_g18",{opacity:1},18.200);tl.set("#leg_g18",{opacity:0},19.240);
+tl.set("#leg_g18w0",{className:"ed-w on"},18.240);
+tl.set("#leg_g18w1",{className:"ed-w on"},18.760);
+tl.set("#leg_g18w2",{className:"ed-w on"},19.020);
+tl.set("#leg_g19",{opacity:1},19.240);tl.set("#leg_g19",{opacity:0},20.020);
+tl.set("#leg_g19w0",{className:"ed-w on"},19.280);
+tl.set("#leg_g19w1",{className:"ed-w on"},19.520);
+tl.set("#leg_g19w2",{className:"ed-w on"},19.820);
+tl.set("#leg_g20",{opacity:1},20.020);tl.set("#leg_g20",{opacity:0},20.980);
+tl.set("#leg_g20w0",{className:"ed-w on"},20.060);
+tl.set("#leg_g20w1",{className:"ed-w on"},20.260);
+tl.set("#leg_g20w2",{className:"ed-w on"},20.800);
+tl.set("#leg_g21",{opacity:1},20.980);tl.set("#leg_g21",{opacity:0},22.460);
+tl.set("#leg_g21w0",{className:"ed-w on ed-k"},21.020);
+tl.set("#leg_g21w1",{className:"ed-w on ed-k"},21.320);
+tl.set("#leg_g22",{opacity:1},22.460);tl.set("#leg_g22",{opacity:0},23.280);
+tl.set("#leg_g22w0",{className:"ed-w on"},22.500);
+tl.set("#leg_g22w1",{className:"ed-w on"},22.840);
+tl.set("#leg_g22w2",{className:"ed-w on"},23.140);
+tl.set("#leg_g23",{opacity:1},23.280);tl.set("#leg_g23",{opacity:0},24.180);
+tl.set("#leg_g23w0",{className:"ed-w on"},23.320);
+tl.set("#leg_g24",{opacity:1},24.180);tl.set("#leg_g24",{opacity:0},24.940);
+tl.set("#leg_g24w0",{className:"ed-w on"},24.220);
+tl.set("#leg_g24w1",{className:"ed-w on"},24.520);
+tl.set("#leg_g24w2",{className:"ed-w on"},24.760);
+tl.set("#leg_g25",{opacity:1},24.940);tl.set("#leg_g25",{opacity:0},25.680);
+tl.set("#leg_g25w0",{className:"ed-w on"},24.980);
+tl.set("#leg_g25w1",{className:"ed-w on"},25.140);
+tl.set("#leg_g25w2",{className:"ed-w on ed-k"},25.420);
+tl.set("#leg_g26",{opacity:1},25.680);tl.set("#leg_g26",{opacity:0},26.240);
+tl.set("#leg_g26w0",{className:"ed-w on"},25.720);
+tl.set("#leg_g26w1",{className:"ed-w on"},25.940);
+tl.set("#leg_g26w2",{className:"ed-w on"},26.080);
+tl.set("#leg_g27",{opacity:1},26.240);tl.set("#leg_g27",{opacity:0},27.340);
+tl.set("#leg_g27w0",{className:"ed-w on"},26.280);
+tl.set("#leg_g27w1",{className:"ed-w on"},26.540);
+tl.set("#leg_g27w2",{className:"ed-w on"},27.040);
+tl.set("#leg_g28",{opacity:1},27.340);tl.set("#leg_g28",{opacity:0},29.180);
+tl.set("#leg_g28w0",{className:"ed-w on ed-k"},27.380);
+tl.set("#leg_g29",{opacity:1},29.180);tl.set("#leg_g29",{opacity:0},30.140);
+tl.set("#leg_g29w0",{className:"ed-w on"},29.220);
+tl.set("#leg_g29w1",{className:"ed-w on"},29.500);
+tl.set("#leg_g30",{opacity:1},30.140);tl.set("#leg_g30",{opacity:0},30.820);
+tl.set("#leg_g30w0",{className:"ed-w on"},30.180);
+tl.set("#leg_g30w1",{className:"ed-w on"},30.360);
+tl.set("#leg_g30w2",{className:"ed-w on"},30.560);
+tl.set("#leg_g31",{opacity:1},30.820);tl.set("#leg_g31",{opacity:0},31.940);
+tl.set("#leg_g31w0",{className:"ed-w on"},30.860);
+tl.set("#leg_g31w1",{className:"ed-w on"},31.000);
+tl.set("#leg_g31w2",{className:"ed-w on ed-k"},31.160);
+tl.set("#leg_g32",{opacity:1},31.940);tl.set("#leg_g32",{opacity:0},32.320);
+tl.set("#leg_g32w0",{className:"ed-w on"},31.980);
+tl.set("#leg_g32w1",{className:"ed-w on"},32.020);
+tl.set("#leg_g32w2",{className:"ed-w on"},32.180);
+tl.set("#leg_g33",{opacity:1},32.320);tl.set("#leg_g33",{opacity:0},33.140);
+tl.set("#leg_g33w0",{className:"ed-w on"},32.360);
+tl.set("#leg_g33w1",{className:"ed-w on"},32.640);
+tl.set("#leg_g33w2",{className:"ed-w on ed-k"},32.880);
+tl.set("#leg_g34",{opacity:1},33.140);tl.set("#leg_g34",{opacity:0},34.280);
+tl.set("#leg_g34w0",{className:"ed-w on"},33.180);
+tl.set("#leg_g34w1",{className:"ed-w on"},33.380);
+tl.set("#leg_g35",{opacity:1},34.280);tl.set("#leg_g35",{opacity:0},35.040);
+tl.set("#leg_g35w0",{className:"ed-w on"},34.320);
+tl.set("#leg_g35w1",{className:"ed-w on"},34.520);
+tl.set("#leg_g35w2",{className:"ed-w on"},34.860);
+tl.set("#leg_g36",{opacity:1},35.040);tl.set("#leg_g36",{opacity:0},35.960);
+tl.set("#leg_g36w0",{className:"ed-w on ed-k"},35.080);
+tl.set("#leg_g36w1",{className:"ed-w on"},35.600);
+tl.set("#leg_g36w2",{className:"ed-w on"},35.820);
+tl.set("#leg_g37",{opacity:1},35.960);tl.set("#leg_g37",{opacity:0},36.780);
+tl.set("#leg_g37w0",{className:"ed-w on"},36.000);
+tl.set("#leg_g37w1",{className:"ed-w on"},36.280);
+tl.set("#leg_g38",{opacity:1},36.780);tl.set("#leg_g38",{opacity:0},37.840);
+tl.set("#leg_g38w0",{className:"ed-w on"},36.820);
+tl.set("#leg_g38w1",{className:"ed-w on"},36.980);
+tl.set("#leg_g38w2",{className:"ed-w on"},37.220);
+tl.set("#leg_g39",{opacity:1},37.840);tl.set("#leg_g39",{opacity:0},38.380);
+tl.set("#leg_g39w0",{className:"ed-w on"},37.880);
+tl.set("#leg_g39w1",{className:"ed-w on"},38.040);
+tl.set("#leg_g39w2",{className:"ed-w on"},38.260);
+tl.set("#leg_g40",{opacity:1},38.380);tl.set("#leg_g40",{opacity:0},39.920);
+tl.set("#leg_g40w0",{className:"ed-w on"},38.420);
+tl.set("#leg_g40w1",{className:"ed-w on"},38.780);
+tl.set("#leg_g40w2",{className:"ed-w on ed-k"},39.040);
+tl.set("#leg_g41",{opacity:1},39.920);tl.set("#leg_g41",{opacity:0},40.560);
+tl.set("#leg_g41w0",{className:"ed-w on"},39.960);
+tl.set("#leg_g41w1",{className:"ed-w on"},40.180);
+tl.set("#leg_g41w2",{className:"ed-w on"},40.380);
+tl.set("#leg_g42",{opacity:1},40.560);tl.set("#leg_g42",{opacity:0},41.240);
+tl.set("#leg_g42w0",{className:"ed-w on ed-k"},40.600);
+tl.set("#leg_g43",{opacity:1},41.240);tl.set("#leg_g43",{opacity:0},42.080);
+tl.set("#leg_g43w0",{className:"ed-w on"},41.280);
+tl.set("#leg_g43w1",{className:"ed-w on ed-k"},41.460);
+tl.set("#leg_g44",{opacity:1},42.080);tl.set("#leg_g44",{opacity:0},42.800);
+tl.set("#leg_g44w0",{className:"ed-w on ed-k"},42.120);
+tl.set("#leg_g45",{opacity:1},42.800);tl.set("#leg_g45",{opacity:0},43.460);
+tl.set("#leg_g45w0",{className:"ed-w on"},42.840);
+tl.set("#leg_g45w1",{className:"ed-w on"},43.020);
+tl.set("#leg_g45w2",{className:"ed-w on"},43.200);
+tl.set("#leg_g46",{opacity:1},43.460);tl.set("#leg_g46",{opacity:0},44.160);
+tl.set("#leg_g46w0",{className:"ed-w on"},43.500);
+tl.set("#leg_g46w1",{className:"ed-w on"},43.740);
+tl.set("#leg_g47",{opacity:1},44.160);tl.set("#leg_g47",{opacity:0},44.920);
+tl.set("#leg_g47w0",{className:"ed-w on"},44.200);
+tl.set("#leg_g47w1",{className:"ed-w on ed-k"},44.520);
+tl.set("#leg_g47w2",{className:"ed-w on"},44.800);
+tl.set("#leg_g48",{opacity:1},44.920);tl.set("#leg_g48",{opacity:0},45.900);
+tl.set("#leg_g48w0",{className:"ed-w on"},44.960);
+tl.set("#leg_g49",{opacity:1},45.900);tl.set("#leg_g49",{opacity:0},46.860);
+tl.set("#leg_g49w0",{className:"ed-w on"},45.940);
+tl.set("#leg_g49w1",{className:"ed-w on"},46.140);
+tl.set("#leg_g49w2",{className:"ed-w on"},46.500);
+tl.set("#leg_g50",{opacity:1},46.860);tl.set("#leg_g50",{opacity:0},47.900);
+tl.set("#leg_g50w0",{className:"ed-w on"},46.900);
+tl.set("#leg_g50w1",{className:"ed-w on ed-k"},47.220);
+tl.set("#leg_g50w2",{className:"ed-w on"},47.700);
+tl.set("#leg_g51",{opacity:1},47.900);tl.set("#leg_g51",{opacity:0},49.040);
+tl.set("#leg_g51w0",{className:"ed-w on"},47.940);
+tl.set("#leg_g51w1",{className:"ed-w on ed-k"},48.280);
+tl.set("#leg_g51w2",{className:"ed-w on"},48.720);
+tl.set("#leg_g52",{opacity:1},49.040);tl.set("#leg_g52",{opacity:0},49.980);
+tl.set("#leg_g52w0",{className:"ed-w on"},49.080);
+tl.set("#leg_g53",{opacity:1},49.980);tl.set("#leg_g53",{opacity:0},51.380);
+tl.set("#leg_g53w0",{className:"ed-w on"},50.020);
+tl.set("#leg_g53w1",{className:"ed-w on"},50.240);
+tl.set("#leg_g53w2",{className:"ed-w on ed-k"},50.500);
+tl.set("#leg_g54",{opacity:1},51.380);tl.set("#leg_g54",{opacity:0},52.620);
+tl.set("#leg_g54w0",{className:"ed-w on"},51.420);
+tl.set("#leg_g54w1",{className:"ed-w on ed-k"},51.720);
+tl.set("#leg_g55",{opacity:1},52.620);tl.set("#leg_g55",{opacity:0},53.340);
+tl.set("#leg_g55w0",{className:"ed-w on"},52.660);
+tl.set("#leg_g55w1",{className:"ed-w on"},52.940);
+tl.set("#leg_g55w2",{className:"ed-w on"},53.220);
+tl.set("#leg_g56",{opacity:1},53.340);tl.set("#leg_g56",{opacity:0},54.340);
+tl.set("#leg_g56w0",{className:"ed-w on ed-k"},53.380);
+tl.set("#leg_g56w1",{className:"ed-w on"},53.920);
+tl.set("#leg_g56w2",{className:"ed-w on"},54.160);
+tl.set("#leg_g57",{opacity:1},54.340);tl.set("#leg_g57",{opacity:0},54.960);
+tl.set("#leg_g57w0",{className:"ed-w on"},54.380);
+tl.set("#leg_g57w1",{className:"ed-w on ed-k"},54.620);
+tl.set("#leg_g58",{opacity:1},54.960);tl.set("#leg_g58",{opacity:0},56.180);
+tl.set("#leg_g58w0",{className:"ed-w on"},55.000);
+tl.set("#leg_g58w1",{className:"ed-w on ed-k"},55.560);
+tl.set("#leg_g58w2",{className:"ed-w on"},55.880);
+tl.set("#leg_g59",{opacity:1},56.180);tl.set("#leg_g59",{opacity:0},56.720);
+tl.set("#leg_g59w0",{className:"ed-w on"},56.220);
+tl.set("#leg_g59w1",{className:"ed-w on"},56.380);
+tl.set("#leg_g59w2",{className:"ed-w on"},56.560);
+tl.set("#leg_g60",{opacity:1},56.720);tl.set("#leg_g60",{opacity:0},58.000);
+tl.set("#leg_g60w0",{className:"ed-w on"},56.760);
+tl.set("#leg_g60w1",{className:"ed-w on"},56.980);
+tl.set("#leg_g60w2",{className:"ed-w on"},57.200);
+tl.set("#leg_g61",{opacity:1},58.000);tl.set("#leg_g61",{opacity:0},58.600);
+tl.set("#leg_g61w0",{className:"ed-w on"},58.040);
+tl.set("#leg_g61w1",{className:"ed-w on"},58.220);
+tl.set("#leg_g61w2",{className:"ed-w on"},58.460);
+tl.set("#leg_g62",{opacity:1},58.600);tl.set("#leg_g62",{opacity:0},59.640);
+tl.set("#leg_g62w0",{className:"ed-w on"},58.640);
+tl.set("#leg_g62w1",{className:"ed-w on ed-k"},58.900);
+tl.set("#leg_g63",{opacity:1},59.640);tl.set("#leg_g63",{opacity:0},60.440);
+tl.set("#leg_g63w0",{className:"ed-w on"},59.680);
+tl.set("#leg_g63w1",{className:"ed-w on"},59.900);
+tl.set("#leg_g63w2",{className:"ed-w on"},60.200);
+tl.set("#leg_g64",{opacity:1},60.440);tl.set("#leg_g64",{opacity:0},61.040);
+tl.set("#leg_g64w0",{className:"ed-w on"},60.480);
+tl.set("#leg_g65",{opacity:1},61.040);tl.set("#leg_g65",{opacity:0},61.840);
+tl.set("#leg_g65w0",{className:"ed-w on"},61.080);
+tl.set("#leg_g65w1",{className:"ed-w on ed-k"},61.260);
+tl.set("#leg_g65w2",{className:"ed-w on"},61.640);
+tl.set("#leg_g66",{opacity:1},61.840);tl.set("#leg_g66",{opacity:0},63.060);
+tl.set("#leg_g66w0",{className:"ed-w on"},61.880);
+tl.set("#leg_g66w1",{className:"ed-w on ed-k"},62.260);
+tl.set("#leg_g67",{opacity:1},63.060);tl.set("#leg_g67",{opacity:0},63.820);
+tl.set("#leg_g67w0",{className:"ed-w on"},63.100);
+tl.set("#leg_g67w1",{className:"ed-w on"},63.360);
+tl.set("#leg_g67w2",{className:"ed-w on"},63.640);
+tl.set("#leg_g68",{opacity:1},63.820);tl.set("#leg_g68",{opacity:0},64.520);
+tl.set("#leg_g68w0",{className:"ed-w on"},63.860);
+tl.set("#leg_g69",{opacity:1},64.520);tl.set("#leg_g69",{opacity:0},65.720);
+tl.set("#leg_g69w0",{className:"ed-w on"},64.560);
+tl.set("#leg_g69w1",{className:"ed-w on ed-k"},64.820);
+tl.set("#leg_g70",{opacity:1},65.720);tl.set("#leg_g70",{opacity:0},66.840);
+tl.set("#leg_g70w0",{className:"ed-w on"},65.760);
+tl.set("#leg_g70w1",{className:"ed-w on"},66.180);
+tl.set("#leg_g70w2",{className:"ed-w on"},66.560);
+tl.set("#leg_g71",{opacity:1},66.840);tl.set("#leg_g71",{opacity:0},67.800);
+tl.set("#leg_g71w0",{className:"ed-w on"},66.880);
+tl.set("#leg_g71w1",{className:"ed-w on"},67.140);
+tl.set("#leg_g71w2",{className:"ed-w on"},67.460);
+tl.set("#leg_g72",{opacity:1},67.800);tl.set("#leg_g72",{opacity:0},69.060);
+tl.set("#leg_g72w0",{className:"ed-w on"},67.840);
+tl.set("#leg_g72w1",{className:"ed-w on"},68.180);
+tl.set("#leg_g72w2",{className:"ed-w on ed-k"},68.500);
+tl.set("#leg_g73",{opacity:1},69.060);tl.set("#leg_g73",{opacity:0},69.940);
+tl.set("#leg_g73w0",{className:"ed-w on"},69.100);
+tl.set("#leg_g74",{opacity:1},69.940);tl.set("#leg_g74",{opacity:0},70.920);
+tl.set("#leg_g74w0",{className:"ed-w on"},69.980);
+tl.set("#leg_g74w1",{className:"ed-w on"},70.120);
+tl.set("#leg_g75",{opacity:1},70.920);tl.set("#leg_g75",{opacity:0},71.480);
+tl.set("#leg_g75w0",{className:"ed-w on"},70.960);
+tl.set("#leg_g75w1",{className:"ed-w on"},71.060);
+tl.set("#leg_g75w2",{className:"ed-w on"},71.300);
+tl.set("#leg_g76",{opacity:1},71.480);tl.set("#leg_g76",{opacity:0},72.240);
+tl.set("#leg_g76w0",{className:"ed-w on"},71.520);
+tl.set("#leg_g76w1",{className:"ed-w on"},71.780);
+tl.set("#leg_g76w2",{className:"ed-w on"},71.980);
+tl.set("#leg_g77",{opacity:1},72.240);tl.set("#leg_g77",{opacity:0},73.680);
+tl.set("#leg_g77w0",{className:"ed-w on ed-k"},72.280);
+tl.set("#leg_g77w1",{className:"ed-w on"},72.900);
+tl.set("#leg_g78",{opacity:1},73.680);tl.set("#leg_g78",{opacity:0},74.700);
+tl.set("#leg_g78w0",{className:"ed-w on"},73.720);
+tl.set("#leg_g78w1",{className:"ed-w on"},73.880);
+tl.set("#leg_g78w2",{className:"ed-w on"},74.120);
+tl.set("#leg_g79",{opacity:1},74.700);tl.set("#leg_g79",{opacity:0},75.620);
+tl.set("#leg_g79w0",{className:"ed-w on"},74.740);
+tl.set("#leg_g79w1",{className:"ed-w on"},74.980);
+tl.set("#leg_g79w2",{className:"ed-w on"},75.300);
+tl.set("#leg_g80",{opacity:1},75.620);tl.set("#leg_g80",{opacity:0},76.520);
+tl.set("#leg_g80w0",{className:"ed-w on ed-k"},75.660);
+tl.set("#leg_g81",{opacity:1},76.520);tl.set("#leg_g81",{opacity:0},77.200);
+tl.set("#leg_g81w0",{className:"ed-w on"},76.560);
+tl.set("#leg_g81w1",{className:"ed-w on"},76.820);
+tl.set("#leg_g81w2",{className:"ed-w on"},77.020);
+tl.set("#leg_g82",{opacity:1},77.200);tl.set("#leg_g82",{opacity:0},77.920);
+tl.set("#leg_g82w0",{className:"ed-w on"},77.240);
+tl.set("#leg_g83",{opacity:1},77.920);tl.set("#leg_g83",{opacity:0},78.740);
+tl.set("#leg_g83w0",{className:"ed-w on"},77.960);
+tl.set("#leg_g83w1",{className:"ed-w on ed-k"},78.160);
+tl.set("#leg_g83w2",{className:"ed-w on"},78.600);
+tl.set("#leg_g84",{opacity:1},78.740);tl.set("#leg_g84",{opacity:0},79.600);
+tl.set("#leg_g84w0",{className:"ed-w on ed-k"},78.780);
+tl.set("#leg_g85",{opacity:1},79.600);tl.set("#leg_g85",{opacity:0},80.800);
+tl.set("#leg_g85w0",{className:"ed-w on"},79.640);
+tl.set("#leg_g85w1",{className:"ed-w on ed-k"},80.000);
+tl.set("#leg_g86",{opacity:1},80.800);tl.set("#leg_g86",{opacity:0},81.720);
+tl.set("#leg_g86w0",{className:"ed-w on"},80.840);
+tl.set("#leg_g86w1",{className:"ed-w on"},80.960);
+tl.set("#leg_g86w2",{className:"ed-w on"},81.180);
+tl.set("#leg_g87",{opacity:1},81.720);tl.set("#leg_g87",{opacity:0},82.740);
+tl.set("#leg_g87w0",{className:"ed-w on"},81.760);
+tl.set("#leg_g87w1",{className:"ed-w on"},81.900);
+tl.set("#leg_g87w2",{className:"ed-w on"},82.260);
+tl.set("#leg_g88",{opacity:1},82.740);tl.set("#leg_g88",{opacity:0},84.760);
+tl.set("#leg_g88w0",{className:"ed-w on"},82.780);
+tl.set("#leg_g88w1",{className:"ed-w on ed-k"},82.960);
+tl.set("#leg_g88w2",{className:"ed-w on ed-k"},83.360);
+})();</script>
+<script>
+(function(){ /* legenda: tira pontuação e marca palavras vermelhas (param leg_vermelho) */
+  const prm = (EDIT.items.find(i => i.id === "leg_vermelho") || {props:{value:""}}).props.value.toLowerCase().split(",").map(x => x.trim()).filter(Boolean);
+  document.querySelectorAll("#leg .ed-w").forEach(w => { w.textContent = w.textContent.replace(/[.,;:!?…]+$/, "");
+    const t = w.textContent.toLowerCase(); if (prm.some(k => t.includes(k))) w.setAttribute("data-red", "1"); });
+})();
+</script>
+</body></html>

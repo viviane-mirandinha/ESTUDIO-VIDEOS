@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "name": "48 - 24-10-2026 - ConsumerWatch - Costco Is Secretly Redesigning Its Stores",
+ "canvas": { "w": 1280, "h": 720, "fps": 30, "bg": "#4b4139" },
+ "duration": 64.0,
+ "template": "generic",
+ "audio": {
+  "voice": { "src": "audio.mp3", "volume": 1.0, "start": 0 }
+ },
+ "tracks": [
+  { "id": "fundo", "name": "Cenas / mídia" },
+  { "id": "textos", "name": "Textos" }
+ ],
+ "items": [
+  {
+   "id": "bg1", "type": "image", "track": "fundo", "start": 0, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/01.jpg", "fill": true, "fit": "cover", "motion": "zoom_in", "motion_amount": 0.06 }
+  },
+  {
+   "id": "t1", "type": "text", "track": "textos", "start": 0.5, "dur": 4,
+   "in": "pop", "out": "fade",
+   "props": { "text": "COSTCO IS SECRETLY REDESIGNING", "x": 640, "y": 320, "w": 1100, "size": 58, "color": "#eaeeee", "weight": 800, "shadow": true, "highlight": ["SECRETLY"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg2", "type": "image", "track": "fundo", "start": 9, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/02.jpg", "fill": true, "fit": "cover", "motion": "pan_left", "motion_amount": 0.05 }
+  },
+  {
+   "id": "t2", "type": "text", "track": "textos", "start": 9.5, "dur": 5,
+   "in": "slide_up", "out": "fade",
+   "props": { "text": "$20 ROTISSERIE CHICKEN", "x": 640, "y": 600, "w": 900, "size": 52, "color": "#eaeeee", "weight": 800, "bg": "rgba(30,23,19,0.8)", "pad": 14, "radius": 12, "highlight": ["$20"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg3", "type": "image", "track": "fundo", "start": 18, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/03.jpg", "fill": true, "fit": "cover", "motion": "zoom_out", "motion_amount": 0.06 }
+  },
+  {
+   "id": "t3", "type": "text", "track": "textos", "start": 18.5, "dur": 5,
+   "in": "slide_left", "out": "fade",
+   "props": { "text": "38% MORE SPENDING PER VISIT", "x": 640, "y": 300, "w": 1000, "size": 56, "color": "#eaeeee", "weight": 800, "shadow": true, "highlight": ["38%"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg4", "type": "image", "track": "fundo", "start": 27, "dur": 10,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/04.jpg", "fill": true, "fit": "cover", "motion": "pan_right", "motion_amount": 0.05 }
+  },
+  {
+   "id": "t4", "type": "text", "track": "textos", "start": 27.5, "dur": 5,
+   "in": "pop", "out": "fade",
+   "props": { "text": "DIGITAL PRICE TAGS", "x": 640, "y": 320, "w": 900, "size": 60, "color": "#eaeeee", "weight": 800, "shadow": true, "highlight": ["DIGITAL"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg5", "type": "image", "track": "fundo", "start": 37, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/05.jpg", "fill": true, "fit": "cover", "motion": "zoom_in", "motion_amount": 0.05 }
+  },
+  {
+   "id": "t5", "type": "text", "track": "textos", "start": 37.5, "dur": 5,
+   "in": "slide_up", "out": "fade",
+   "props": { "text": "WALMART & TARGET RESPOND", "x": 640, "y": 600, "w": 1000, "size": 52, "color": "#eaeeee", "weight": 800, "bg": "rgba(30,23,19,0.8)", "pad": 14, "radius": 12, "highlight": ["TARGET"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg6", "type": "image", "track": "fundo", "start": 46, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/06.jpg", "fill": true, "fit": "cover", "motion": "pan_left", "motion_amount": 0.06 }
+  },
+  {
+   "id": "t6", "type": "text", "track": "textos", "start": 46.5, "dur": 5,
+   "in": "pop", "out": "fade",
+   "props": { "text": "$4.8 BILLION MEMBERSHIP", "x": 640, "y": 300, "w": 1000, "size": 58, "color": "#eaeeee", "weight": 800, "shadow": true, "highlight": ["$4.8 BILLION"], "hl_color": "#e0ac3a" }
+  },
+  {
+   "id": "bg7", "type": "image", "track": "fundo", "start": 55, "dur": 9,
+   "in": "fade", "out": "fade",
+   "props": { "src": "img/07.jpg", "fill": true, "fit": "cover", "motion": "zoom_out", "motion_amount": 0.05 }
+  },
+  {
+   "id": "t7", "type": "text", "track": "textos", "start": 56, "dur": 5,
+   "in": "slide_up", "out": "fade",
+   "props": { "text": "WILL SHOPPERS NOTICE?", "x": 640, "y": 350, "w": 900, "size": 56, "color": "#eaeeee", "weight": 800, "shadow": true, "highlight": ["NOTICE"], "hl_color": "#e0ac3a" }
+  }
+ ],
+ "referencia": {
+  "canal": "ConsumerWatch",
+  "canal_url": "https://www.youtube.com/@HowMoneyWorks",
+  "video": "https://youtu.be/bBPDIQIxfkc"
+ }
+}

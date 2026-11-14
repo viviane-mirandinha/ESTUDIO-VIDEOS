@@ -1,0 +1,11 @@
+{
+ "video": 9,
+ "estilo": "Dados ranking escuro amarelo",
+ "inicio": "2026-10-22T20:16:59-03:00",
+ "fim": "2026-10-22T21:54:49-03:00",
+ "minutos": 5.3,
+ "render_segundos": 66,
+ "voz": "usuario",
+ "observacoes": "Estilo do 06 (preto/amarelo, dr_numero reaproveitada) + cena nova dr_midia (quadro com borda amarela, etiqueta amarela, citação em aspas gigantes) para os recortes de img/; clipes curtos viraram clips/ em câmera lenta + loop/congelado; fotos 07/08 não usadas, 09/10 sem nome; render.sh corrigido para nunca apagar lock de outro. Ajuste: palavras gigantes entram já no início da cena e santa 02 escurecida fica atrás da frase final até o último quadro; blackdetect d=0.5 pix_th=0.08 = 0 trechos.",
+ "ponto_fraco": "Os recortes são curtos e de baixa resolução: em câmera lenta/loop (manto 02 e pregador 11) a repetição e o borrão ficam perceptíveis, e o quadro ocupa só ~60-70% da largura."
+}

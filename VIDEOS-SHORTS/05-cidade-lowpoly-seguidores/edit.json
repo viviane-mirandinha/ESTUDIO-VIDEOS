@@ -1,0 +1,800 @@
+{
+ "version": 1,
+ "name": "05 - CIDADE LOWPOLY SEGUIDORES - Cada seguidor ganha uma casa",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Cidade lowpoly seguidores",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#cfe9fb"
+ },
+ "duration": 28.61,
+ "template": "local",
+ "fonts": {
+  "Lilita One": "fonts/LilitaOne-Regular.ttf",
+  "Montserrat": "fonts/Montserrat-ExtraBold.ttf"
+ },
+ "build_script": "template.html (Three.js + kit low-poly; câmera e cidade em renderAt) — gerar_edit.py recria a partir de words.json",
+ "referencia": {
+  "canal": "@homietown.city",
+  "canal_url": "https://www.instagram.com/homietown.city/",
+  "video": "https://www.instagram.com/reel/Derns2LOquU/",
+  "nota": "cidade isométrica low-poly; 1 seguidor = 1 casa; drone prefeitura -> casa -> cidade"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 3D"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "cor_rotulo",
+   "type": "param",
+   "label": "Cor dos rótulos",
+   "props": {
+    "value": "#ffd21f"
+   }
+  },
+  {
+   "id": "sh_abre",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: prefeitura (abertura)",
+   "by": "template",
+   "start": 0,
+   "dur": 2.48,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_quem",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: morador no tapete",
+   "by": "template",
+   "start": 2.48,
+   "dur": 2.06,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_vazia",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: lotes vazios (de cima)",
+   "by": "template",
+   "start": 4.54,
+   "dur": 3.12,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_pref",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: prefeitura + seguranças",
+   "by": "template",
+   "start": 7.66,
+   "dur": 4.88,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_rua",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: drone desce na rua",
+   "by": "template",
+   "start": 12.54,
+   "dur": 3.56,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_voce",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: casa branca vazia",
+   "by": "template",
+   "start": 16.1,
+   "dur": 0.94,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_casa",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: casa / rua / número",
+   "by": "template",
+   "start": 17.04,
+   "dur": 3.56,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_cresce",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: cidade cresce",
+   "by": "template",
+   "start": 20.6,
+   "dur": 5.66,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_fim",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: cidade enorme (afasta)",
+   "by": "template",
+   "start": 26.26,
+   "dur": 2.35,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "st_titulo",
+   "type": "text",
+   "track": "rotulos",
+   "label": "1 SEGUIDOR = 1 CASA",
+   "by": "template",
+   "start": 0.15,
+   "dur": 2.28,
+   "props": {
+    "text": "1 SEGUIDOR = 1 CASA",
+    "kind": "sticker",
+    "y": 420,
+    "size": 88,
+    "rot": -4
+   }
+  },
+  {
+   "id": "tg_morador1",
+   "type": "text",
+   "track": "rotulos",
+   "label": "MORADOR Nº 1?",
+   "by": "template",
+   "start": 2.94,
+   "dur": 1.55,
+   "props": {
+    "text": "MORADOR Nº 1?",
+    "kind": "tag",
+    "anchor": "morador",
+    "dy": -60,
+    "size": 60
+   }
+  },
+  {
+   "id": "st_vazia",
+   "type": "text",
+   "track": "rotulos",
+   "label": "MEIO VAZIA...",
+   "by": "template",
+   "start": 5.88,
+   "dur": 1.73,
+   "props": {
+    "text": "MEIO VAZIA...",
+    "kind": "sticker",
+    "y": 430,
+    "size": 96,
+    "rot": -3
+   }
+  },
+  {
+   "id": "tg_morador",
+   "type": "text",
+   "track": "rotulos",
+   "label": "1 MORADOR",
+   "by": "template",
+   "start": 8.76,
+   "dur": 3.73,
+   "props": {
+    "text": "1 MORADOR",
+    "kind": "tag",
+    "anchor": "morador",
+    "dy": -230,
+    "size": 56
+   }
+  },
+  {
+   "id": "tg_pref",
+   "type": "text",
+   "track": "rotulos",
+   "label": "PREFEITURA VAZIA",
+   "by": "template",
+   "start": 9.78,
+   "dur": 2.71,
+   "props": {
+    "text": "PREFEITURA VAZIA",
+    "kind": "tag",
+    "anchor": "prefeitura",
+    "dy": -40,
+    "size": 56
+   }
+  },
+  {
+   "id": "tg_seg",
+   "type": "text",
+   "track": "rotulos",
+   "label": "SEGURANÇAS",
+   "by": "template",
+   "start": 11.36,
+   "dur": 1.13,
+   "props": {
+    "text": "SEGURANÇAS",
+    "kind": "tag",
+    "anchor": "seguranca",
+    "dx": -150,
+    "dy": -10,
+    "size": 56
+   }
+  },
+  {
+   "id": "st_falta",
+   "type": "text",
+   "track": "rotulos",
+   "label": "FALTA UMA COISA...",
+   "by": "template",
+   "start": 14.28,
+   "dur": 1.77,
+   "props": {
+    "text": "FALTA UMA COISA...",
+    "kind": "sticker",
+    "y": 430,
+    "size": 84,
+    "rot": -3
+   }
+  },
+  {
+   "id": "st_voce",
+   "type": "text",
+   "track": "rotulos",
+   "label": "VOCÊ!",
+   "by": "template",
+   "start": 16.05,
+   "dur": 0.94,
+   "props": {
+    "text": "VOCÊ!",
+    "kind": "big",
+    "y": 560,
+    "size": 190,
+    "rot": -6
+   }
+  },
+  {
+   "id": "tg_casa",
+   "type": "text",
+   "track": "rotulos",
+   "label": "CASA",
+   "by": "template",
+   "start": 18.36,
+   "dur": 2.54,
+   "props": {
+    "text": "CASA",
+    "kind": "tag",
+    "anchor": "casa",
+    "dx": -260,
+    "dy": -120,
+    "size": 64
+   }
+  },
+  {
+   "id": "tg_rua",
+   "type": "text",
+   "track": "rotulos",
+   "label": "RUA",
+   "by": "template",
+   "start": 19.22,
+   "dur": 1.68,
+   "props": {
+    "text": "RUA",
+    "kind": "tag",
+    "anchor": "casa",
+    "dx": -260,
+    "dy": -20,
+    "size": 64
+   }
+  },
+  {
+   "id": "tg_num",
+   "type": "text",
+   "track": "rotulos",
+   "label": "NÚMERO",
+   "by": "template",
+   "start": 19.82,
+   "dur": 1.08,
+   "props": {
+    "text": "NÚMERO",
+    "kind": "tag",
+    "anchor": "casa",
+    "dx": -260,
+    "dy": 80,
+    "size": 64
+   }
+  },
+  {
+   "id": "st_cresce",
+   "type": "text",
+   "track": "rotulos",
+   "label": "CRESCE TODO DIA",
+   "by": "template",
+   "start": 20.94,
+   "dur": 1.66,
+   "props": {
+    "text": "CRESCE TODO DIA",
+    "kind": "sticker",
+    "y": 430,
+    "size": 84,
+    "rot": -3
+   }
+  },
+  {
+   "id": "card_coment",
+   "type": "text",
+   "track": "rotulos",
+   "label": "comentário mais curtido",
+   "by": "template",
+   "start": 22.6,
+   "dur": 3.61,
+   "props": {
+    "text": "comentário mais curtido",
+    "kind": "html",
+    "html": "<div style=\"width:800px;background:#fff;border-radius:28px;padding:26px 32px;box-shadow:0 14px 40px rgba(0,0,0,.35);font-family:'Montserrat',sans-serif;color:#1d2330;border:5px solid #1b1b1b\"><div style=\"display:flex;align-items:center;gap:20px\"><div style=\"width:84px;height:84px;border-radius:50%;background:#ffd21f;border:4px solid #1b1b1b\"></div><div><div style=\"font-size:34px;font-weight:800;color:#6b7280\">COMENTÁRIO MAIS CURTIDO</div><div style=\"font-size:46px;font-weight:800\">“Constrói um estádio!”</div></div></div><div style=\"margin-top:14px;font-size:40px;font-weight:800;color:#e0344b\">&#9829; 2.481 curtidas</div></div>",
+    "y": 470
+   }
+  },
+  {
+   "id": "tg_amanha",
+   "type": "text",
+   "track": "rotulos",
+   "label": "DECIDE A OBRA DE AMANHÃ",
+   "by": "template",
+   "start": 23.74,
+   "dur": 2.47,
+   "props": {
+    "text": "DECIDE A OBRA DE AMANHÃ",
+    "kind": "tag",
+    "y": 740,
+    "size": 56
+   }
+  },
+  {
+   "id": "st_fim",
+   "type": "text",
+   "track": "rotulos",
+   "label": "QUEM SE MUDA PRIMEIRO?",
+   "by": "template",
+   "start": 26.21,
+   "dur": 2.4,
+   "props": {
+    "text": "QUEM SE MUDA PRIMEIRO?",
+    "kind": "sticker",
+    "y": 430,
+    "size": 84,
+    "rot": -3
+   }
+  },
+  {
+   "id": "tg_sua",
+   "type": "text",
+   "track": "rotulos",
+   "label": "SUA CASA?",
+   "by": "template",
+   "start": 27.2,
+   "dur": 1.41,
+   "props": {
+    "text": "SUA CASA?",
+    "kind": "tag",
+    "anchor": "pin",
+    "dy": -90,
+    "size": 60
+   }
+  },
+  {
+   "id": "leg",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda (frase inteira)",
+   "by": "template",
+   "start": 0,
+   "dur": 28.61,
+   "props": {
+    "words": [
+     {
+      "w": "Cada",
+      "s": 0.0,
+      "e": 0.34
+     },
+     {
+      "w": "seguidor",
+      "s": 0.34,
+      "e": 0.96
+     },
+     {
+      "w": "ganha",
+      "s": 0.96,
+      "e": 1.3
+     },
+     {
+      "w": "uma",
+      "s": 1.3,
+      "e": 1.56
+     },
+     {
+      "w": "casa.",
+      "s": 1.56,
+      "e": 1.98
+     },
+     {
+      "w": "Quem",
+      "s": 2.48,
+      "e": 2.6
+     },
+     {
+      "w": "será",
+      "s": 2.6,
+      "e": 2.86
+     },
+     {
+      "w": "o",
+      "s": 2.86,
+      "e": 3.04
+     },
+     {
+      "w": "primeiro",
+      "s": 3.04,
+      "e": 3.38
+     },
+     {
+      "w": "morador?",
+      "s": 3.38,
+      "e": 3.92
+     },
+     {
+      "w": "Tá,",
+      "s": 4.54,
+      "e": 4.9
+     },
+     {
+      "w": "ainda",
+      "s": 5.22,
+      "e": 5.5
+     },
+     {
+      "w": "está",
+      "s": 5.5,
+      "e": 5.7
+     },
+     {
+      "w": "meio",
+      "s": 5.7,
+      "e": 5.98
+     },
+     {
+      "w": "vazia",
+      "s": 5.98,
+      "e": 6.48
+     },
+     {
+      "w": "pra",
+      "s": 6.48,
+      "e": 6.64
+     },
+     {
+      "w": "uma",
+      "s": 6.64,
+      "e": 6.8
+     },
+     {
+      "w": "cidade.",
+      "s": 6.8,
+      "e": 7.18
+     },
+     {
+      "w": "Por",
+      "s": 7.66,
+      "e": 7.88
+     },
+     {
+      "w": "enquanto",
+      "s": 7.88,
+      "e": 8.18
+     },
+     {
+      "w": "temos",
+      "s": 8.24,
+      "e": 8.58
+     },
+     {
+      "w": "um",
+      "s": 8.58,
+      "e": 8.86
+     },
+     {
+      "w": "morador,",
+      "s": 8.86,
+      "e": 9.38
+     },
+     {
+      "w": "uma",
+      "s": 9.7,
+      "e": 9.88
+     },
+     {
+      "w": "prefeitura",
+      "s": 9.88,
+      "e": 10.34
+     },
+     {
+      "w": "vazia",
+      "s": 10.34,
+      "e": 11.0
+     },
+     {
+      "w": "e",
+      "s": 11.0,
+      "e": 11.22
+     },
+     {
+      "w": "alguns",
+      "s": 11.22,
+      "e": 11.46
+     },
+     {
+      "w": "seguranças.",
+      "s": 11.46,
+      "e": 12.26
+     },
+     {
+      "w": "Pra",
+      "s": 12.54,
+      "e": 12.68
+     },
+     {
+      "w": "virar",
+      "s": 12.68,
+      "e": 13.0
+     },
+     {
+      "w": "uma",
+      "s": 13.0,
+      "e": 13.16
+     },
+     {
+      "w": "cidade",
+      "s": 13.16,
+      "e": 13.46
+     },
+     {
+      "w": "de",
+      "s": 13.46,
+      "e": 13.72
+     },
+     {
+      "w": "verdade,",
+      "s": 13.72,
+      "e": 14.22
+     },
+     {
+      "w": "falta",
+      "s": 14.38,
+      "e": 14.74
+     },
+     {
+      "w": "uma",
+      "s": 14.74,
+      "e": 15.22
+     },
+     {
+      "w": "coisa.",
+      "s": 15.22,
+      "e": 15.6
+     },
+     {
+      "w": "Você!",
+      "s": 16.1,
+      "e": 16.54
+     },
+     {
+      "w": "Cada",
+      "s": 17.04,
+      "e": 17.32
+     },
+     {
+      "w": "seguidor",
+      "s": 17.32,
+      "e": 17.86
+     },
+     {
+      "w": "ganha",
+      "s": 17.86,
+      "e": 18.16
+     },
+     {
+      "w": "uma",
+      "s": 18.16,
+      "e": 18.46
+     },
+     {
+      "w": "casa,",
+      "s": 18.46,
+      "e": 18.82
+     },
+     {
+      "w": "com",
+      "s": 19.12,
+      "e": 19.32
+     },
+     {
+      "w": "rua",
+      "s": 19.32,
+      "e": 19.62
+     },
+     {
+      "w": "e",
+      "s": 19.62,
+      "e": 19.92
+     },
+     {
+      "w": "número.",
+      "s": 19.92,
+      "e": 20.2
+     },
+     {
+      "w": "A",
+      "s": 20.6,
+      "e": 20.72
+     },
+     {
+      "w": "cidade",
+      "s": 20.72,
+      "e": 21.04
+     },
+     {
+      "w": "cresce",
+      "s": 21.04,
+      "e": 21.56
+     },
+     {
+      "w": "todo",
+      "s": 21.56,
+      "e": 21.88
+     },
+     {
+      "w": "dia,",
+      "s": 21.88,
+      "e": 22.18
+     },
+     {
+      "w": "e",
+      "s": 22.42,
+      "e": 22.54
+     },
+     {
+      "w": "o",
+      "s": 22.54,
+      "e": 22.7
+     },
+     {
+      "w": "comentário",
+      "s": 22.7,
+      "e": 23.08
+     },
+     {
+      "w": "mais",
+      "s": 23.08,
+      "e": 23.4
+     },
+     {
+      "w": "curtido",
+      "s": 23.4,
+      "e": 23.84
+     },
+     {
+      "w": "decide",
+      "s": 23.84,
+      "e": 24.22
+     },
+     {
+      "w": "o",
+      "s": 24.22,
+      "e": 24.48
+     },
+     {
+      "w": "que",
+      "s": 24.48,
+      "e": 24.64
+     },
+     {
+      "w": "a",
+      "s": 24.64,
+      "e": 24.74
+     },
+     {
+      "w": "gente",
+      "s": 24.74,
+      "e": 24.98
+     },
+     {
+      "w": "constrói",
+      "s": 24.98,
+      "e": 25.38
+     },
+     {
+      "w": "amanhã.",
+      "s": 25.38,
+      "e": 25.88
+     },
+     {
+      "w": "Então,",
+      "s": 26.26,
+      "e": 26.6
+     },
+     {
+      "w": "quem",
+      "s": 26.84,
+      "e": 26.98
+     },
+     {
+      "w": "vai",
+      "s": 26.98,
+      "e": 27.14
+     },
+     {
+      "w": "se",
+      "s": 27.14,
+      "e": 27.3
+     },
+     {
+      "w": "mudar",
+      "s": 27.3,
+      "e": 27.48
+     },
+     {
+      "w": "primeiro?",
+      "s": 27.48,
+      "e": 27.86
+     }
+    ],
+    "mode": "frase",
+    "per_group": 7,
+    "size": 60,
+    "y": 1250,
+    "font": "Montserrat",
+    "weight": 800,
+    "color": "#ffffff",
+    "stroke": "#000000",
+    "stroke_k": 0.09,
+    "maxw": 960
+   }
+  }
+ ]
+}

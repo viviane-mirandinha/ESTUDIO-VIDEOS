@@ -1,0 +1,980 @@
+{
+ "version": 1,
+ "name": "07 - DADOS RANKING ESCURO - Fizeram o L e nao foram votar",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0B0B0C"
+ },
+ "duration": 63.03,
+ "template": "generic",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Dados ranking escuro amarelo",
+ "referencia": {
+  "canal": "@guustavolazaro",
+  "canal_url": "https://www.instagram.com/guustavolazaro/",
+  "video": "https://www.instagram.com/p/Dez-WhwxoRp/",
+  "nota": "fotos com o L e cards eleitorais recortados do reel; rosto do apresentador e @ não usados"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "fundo preto",
+   "start": 0,
+   "dur": 63.03,
+   "props": {
+    "fill": true,
+    "html": "<div class='drbg'></div>",
+    "css": ".drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}"
+   }
+  },
+  {
+   "id": "sc0",
+   "type": "scene",
+   "track": "visual",
+   "label": "gancho 4 fizeram o L",
+   "start": 0.0,
+   "dur": 5.14,
+   "props": {
+    "scene": "dr_grade",
+    "params": {
+     "titulo": "Fizeram o L",
+     "sub": "quatro famosos",
+     "icone": "",
+     "cols": 2,
+     "pessoas": [
+      {
+       "foto": "img/foto_anitta.jpg",
+       "nome": "Anitta",
+       "t": 0.05
+      },
+      {
+       "foto": "img/foto_wagner.jpg",
+       "nome": "Wagner Moura",
+       "t": 0.98
+      },
+      {
+       "foto": "img/foto_bruna.jpg",
+       "nome": "Bruna Marquezine",
+       "t": 2.08
+      },
+      {
+       "foto": "img/foto_caze.jpg",
+       "nome": "Casimiro",
+       "t": 2.98
+      }
+     ],
+     "t_l": 4.220000000000001
+    }
+   }
+  },
+  {
+   "id": "sc1",
+   "type": "scene",
+   "track": "visual",
+   "label": "consulta de cada um",
+   "start": 4.79,
+   "dur": 4.5,
+   "props": {
+    "scene": "dr_cartas",
+    "params": {
+     "titulo": "Justiça Eleitoral",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "cards": [
+      "img/card_anitta.png",
+      "img/card_wagner.png",
+      "img/card_bruna.png",
+      "img/card_caze.png"
+     ],
+     "t_fan": 8.14
+    }
+   }
+  },
+  {
+   "id": "sc2",
+   "type": "scene",
+   "track": "visual",
+   "label": "gesto rápido",
+   "start": 8.94,
+   "dur": 4.81,
+   "props": {
+    "scene": "dr_frase",
+    "params": {
+     "fotos": [
+      "img/foto_anitta.jpg",
+      "img/foto_wagner.jpg",
+      "img/foto_bruna.jpg",
+      "img/foto_caze.jpg"
+     ],
+     "t_fotos": 9.09,
+     "linhas": [
+      {
+       "txt": "O gesto é rápido",
+       "cor": "#fff",
+       "t": 8.99,
+       "tam": 112
+      },
+      {
+       "txt": "sorriso pra foto",
+       "cor": "#F5C518",
+       "t": 11.48,
+       "tam": 112
+      },
+      {
+       "txt": "e pronto.",
+       "cor": "#fff",
+       "t": 12.69,
+       "tam": 112
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc3",
+   "type": "scene",
+   "track": "visual",
+   "label": "outra conversa",
+   "start": 13.4,
+   "dur": 5.23,
+   "props": {
+    "scene": "dr_frase",
+    "params": {
+     "linhas": [
+      {
+       "txt": "A consulta",
+       "cor": "#F5C518",
+       "t": 13.45,
+       "tam": 150
+      },
+      {
+       "txt": "é outra conversa",
+       "cor": "#fff",
+       "t": 14.74,
+       "tam": 112
+      },
+      {
+       "txt": "uma por uma",
+       "cor": "#F5C518",
+       "t": 16.86,
+       "tam": 130
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc4",
+   "type": "scene",
+   "track": "visual",
+   "label": "Anitta",
+   "start": 18.28,
+   "dur": 6.52,
+   "props": {
+    "scene": "dr_pessoa",
+    "params": {
+     "titulo": "Anitta",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "foto": "img/foto_anitta.jpg",
+     "card": "img/card_anitta.png",
+     "ry": 0.76,
+     "rx": 0.08,
+     "rw": 0.6,
+     "t_l": 18.88,
+     "t_card": 19.19,
+     "t_red": 19.650000000000002
+    }
+   }
+  },
+  {
+   "id": "sc5",
+   "type": "scene",
+   "track": "visual",
+   "label": "Wagner Moura",
+   "start": 24.45,
+   "dur": 5.18,
+   "props": {
+    "scene": "dr_pessoa",
+    "params": {
+     "titulo": "Wagner Moura",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "foto": "img/foto_wagner.jpg",
+     "card": "img/card_wagner.png",
+     "ry": 0.626,
+     "rx": 0.08,
+     "rw": 0.6,
+     "t_l": 26.06,
+     "t_card": 26.959999999999997,
+     "t_red": 28.54
+    }
+   }
+  },
+  {
+   "id": "sc6",
+   "type": "scene",
+   "track": "visual",
+   "label": "a lista não acabou",
+   "start": 29.28,
+   "dur": 2.89,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "A lista",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "linhas": [
+      {
+       "nome": "Anitta",
+       "sub": "linha vermelha",
+       "foto": "img/foto_anitta.jpg",
+       "txt": "X",
+       "cor": "#ff3b3b",
+       "barra": false,
+       "t": 29.479999999999997
+      },
+      {
+       "nome": "Wagner Moura",
+       "sub": "linha vermelha",
+       "foto": "img/foto_wagner.jpg",
+       "txt": "X",
+       "cor": "#ff3b3b",
+       "barra": false,
+       "t": 29.729999999999997
+      },
+      {
+       "nome": "Bruna Marquezine",
+       "sub": "a conferir",
+       "foto": "img/foto_bruna.jpg",
+       "txt": "?",
+       "cor": "#5a5a5e",
+       "barra": false,
+       "t": 30.52
+      },
+      {
+       "nome": "Casimiro",
+       "sub": "a conferir",
+       "foto": "img/foto_caze.jpg",
+       "txt": "?",
+       "cor": "#5a5a5e",
+       "barra": false,
+       "t": 30.77
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc7",
+   "type": "scene",
+   "track": "visual",
+   "label": "Bruna Marquezine",
+   "start": 31.82,
+   "dur": 5.5,
+   "props": {
+    "scene": "dr_pessoa",
+    "params": {
+     "titulo": "Bruna Marquezine",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "foto": "img/foto_bruna.jpg",
+     "card": "img/card_bruna.png",
+     "ry": 0.741,
+     "rx": 0.095,
+     "rw": 0.6,
+     "t_l": 32.419999999999995,
+     "t_card": 33.589999999999996,
+     "t_red": 35.11
+    }
+   }
+  },
+  {
+   "id": "sc8",
+   "type": "scene",
+   "track": "visual",
+   "label": "Casimiro (Cazé)",
+   "start": 36.97,
+   "dur": 9.07,
+   "props": {
+    "scene": "dr_pessoa",
+    "params": {
+     "titulo": "Casimiro (Cazé)",
+     "sub": "consulta · situação eleitoral",
+     "icone": "urna",
+     "foto": "img/foto_caze.jpg",
+     "card": "img/card_caze.png",
+     "ry": 0.619,
+     "rx": 0.047,
+     "rw": 0.6,
+     "t_l": 37.47,
+     "q": "Escapou?",
+     "t_q": 39.18,
+     "pulsos": [
+      38.94,
+      40.3
+     ],
+     "t_card": 41.4,
+     "t_red": 43.53
+    }
+   }
+  },
+  {
+   "id": "sc9",
+   "type": "scene",
+   "track": "visual",
+   "label": "não tô dizendo",
+   "start": 45.69,
+   "dur": 3.67,
+   "props": {
+    "scene": "dr_frase",
+    "params": {
+     "linhas": [
+      {
+       "txt": "Não tô dizendo",
+       "cor": "#fff",
+       "t": 45.739999999999995,
+       "tam": 120
+      },
+      {
+       "txt": "o que cada um fez",
+       "cor": "#F5C518",
+       "t": 46.92,
+       "tam": 110
+      },
+      {
+       "txt": "ou deixou de fazer",
+       "cor": "#fff",
+       "t": 48.019999999999996,
+       "tam": 96
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc10",
+   "type": "scene",
+   "track": "visual",
+   "label": "4 lado a lado",
+   "start": 49.01,
+   "dur": 6.68,
+   "props": {
+    "scene": "dr_grade",
+    "params": {
+     "titulo": "O que a consulta mostra",
+     "sub": "",
+     "icone": "urna",
+     "cols": 4,
+     "pessoas": [
+      {
+       "foto": "img/foto_anitta.jpg",
+       "nome": "Anitta",
+       "card": "img/card_anitta.png",
+       "ry": 0.76,
+       "rx": 0.08,
+       "rw": 0.6,
+       "t": 49.16
+      },
+      {
+       "foto": "img/foto_wagner.jpg",
+       "nome": "Wagner",
+       "card": "img/card_wagner.png",
+       "ry": 0.626,
+       "rx": 0.08,
+       "rw": 0.6,
+       "t": 49.279999999999994
+      },
+      {
+       "foto": "img/foto_bruna.jpg",
+       "nome": "Bruna",
+       "card": "img/card_bruna.png",
+       "ry": 0.741,
+       "rx": 0.095,
+       "rw": 0.6,
+       "t": 49.4
+      },
+      {
+       "foto": "img/foto_caze.jpg",
+       "nome": "Cazé",
+       "card": "img/card_caze.png",
+       "ry": 0.619,
+       "rx": 0.047,
+       "rw": 0.6,
+       "t": 49.519999999999996
+      }
+     ],
+     "t_l": 52.730000000000004,
+     "t_cards": 50.46,
+     "t_red": 54.25,
+     "linhas": [
+      {
+       "txt": "4 famosos",
+       "cor": "#fff",
+       "t": 51.53,
+       "tam": 96
+      },
+      {
+       "txt": "4 L",
+       "cor": "#F5C518",
+       "t": 52.730000000000004,
+       "tam": 96
+      },
+      {
+       "txt": "4 linhas vermelhas",
+       "cor": "#ff3b3b",
+       "t": 53.81,
+       "tam": 96
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc11",
+   "type": "scene",
+   "track": "visual",
+   "label": "consulta sair limpa",
+   "start": 55.34,
+   "dur": 5.42,
+   "props": {
+    "scene": "dr_frase",
+    "params": {
+     "linhas": [
+      {
+       "txt": "Fazer o L pra câmera",
+       "cor": "#fff",
+       "t": 55.39,
+       "tam": 100
+      },
+      {
+       "txt": "é fácil",
+       "cor": "#F5C518",
+       "t": 56.82,
+       "tam": 130
+      },
+      {
+       "txt": "o difícil é",
+       "cor": "#fff",
+       "t": 57.64,
+       "tam": 100
+      },
+      {
+       "txt": "a consulta sair limpa",
+       "cor": "#F5C518",
+       "t": 58.58,
+       "tam": 110
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc12",
+   "type": "scene",
+   "track": "visual",
+   "label": "22",
+   "start": 60.41,
+   "dur": 2.62,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Domingo é dia",
+     "icone": "urna",
+     "valor": "22",
+     "tam": 440,
+     "t_rot": 60.66,
+     "t_valor": 61.230000000000004
+    }
+   }
+  },
+  {
+   "id": "lg0",
+   "type": "text",
+   "track": "legenda",
+   "label": "Anitta, Wagner Moura, Bruna Ma",
+   "start": 0,
+   "dur": 5.07,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Anitta, Wagner Moura, Bruna Marquezine e Casimiro fizeram o L.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Bruna Marquezine",
+     "Wagner Moura",
+     "Casimiro",
+     "Anitta",
+     "o L"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "track": "legenda",
+   "label": "Mas olha só o que aparece na c",
+   "start": 4.96,
+   "dur": 4.23,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Mas olha só o que aparece na consulta da Justiça Eleitoral de cada um.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Justiça Eleitoral"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg2",
+   "type": "text",
+   "track": "legenda",
+   "label": "Pensa comigo: o gesto é rápido",
+   "start": 9.16,
+   "dur": 4.49,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Pensa comigo: o gesto é rápido, sorriso pra foto e pronto.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "track": "legenda",
+   "label": "Já a consulta é outra conversa",
+   "start": 13.62,
+   "dur": 4.91,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Já a consulta é outra conversa, e eu fui conferir uma por uma.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg4",
+   "type": "text",
+   "track": "legenda",
+   "label": "Anitta: linha vermelha, não cu",
+   "start": 18.5,
+   "dur": 4.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Anitta: linha vermelha, não cumprimento de obrigação eleitoral.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "não cumprimento de obrigação eleitoral",
+     "linha vermelha",
+     "Anitta"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg5",
+   "type": "text",
+   "track": "legenda",
+   "label": "Tá, vai que é só ela, né?",
+   "start": 23.02,
+   "dur": 1.63,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Tá, vai que é só ela, né?",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg6",
+   "type": "text",
+   "track": "legenda",
+   "label": "Aí abro a do Wagner Moura e, c",
+   "start": 24.62,
+   "dur": 4.91,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Aí abro a do Wagner Moura e, cara, a mesma linha vermelha.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "linha vermelha",
+     "Wagner Moura"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg7",
+   "type": "text",
+   "track": "legenda",
+   "label": "Mas calma, que a lista não aca",
+   "start": 29.5,
+   "dur": 2.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Mas calma, que a lista não acabou.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg8",
+   "type": "text",
+   "track": "legenda",
+   "label": "Bruna Marquezine: o mesmo avis",
+   "start": 32.04,
+   "dur": 5.13,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Bruna Marquezine: o mesmo aviso, no mesmo vermelho, bem ali na tela.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Bruna Marquezine",
+     "vermelho"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg9",
+   "type": "text",
+   "track": "legenda",
+   "label": "Aí eu pensei: pelo menos o Caz",
+   "start": 37.14,
+   "dur": 2.89,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Aí eu pensei: pelo menos o Cazé escapou.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Cazé"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "Ô, Cazé.",
+   "start": 40.0,
+   "dur": 1.21,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Ô, Cazé.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Cazé"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg11",
+   "type": "text",
+   "track": "legenda",
+   "label": "Escapou nada, tá lá também: nã",
+   "start": 41.18,
+   "dur": 4.71,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Escapou nada, tá lá também: não cumprimento de obrigação eleitoral.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "não cumprimento de obrigação eleitoral"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não tô dizendo o que cada u",
+   "start": 45.86,
+   "dur": 3.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não tô dizendo o que cada um fez ou deixou de fazer.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "Tô dizendo o que a consulta mo",
+   "start": 48.88,
+   "dur": 3.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Tô dizendo o que a consulta mostra: quatro famosos,",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "quatro famosos"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "quatro L e quatro linhas verme",
+   "start": 52.7,
+   "dur": 2.89,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "quatro L e quatro linhas vermelhas.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "linhas vermelhas",
+     "quatro L",
+     "o L"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg15",
+   "type": "text",
+   "track": "legenda",
+   "label": "Fazer o L pra câmera é fácil, ",
+   "start": 55.56,
+   "dur": 5.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Fazer o L pra câmera é fácil, o difícil é a consulta sair limpa.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "o L"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "Domingo é dia vinte e dois.",
+   "start": 60.58,
+   "dur": 2.45,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Domingo é dia vinte e dois.",
+    "x": 540,
+    "y": 1440,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "vinte e dois"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  }
+ ]
+}

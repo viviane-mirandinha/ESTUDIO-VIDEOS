@@ -1,0 +1,551 @@
+{
+ "version": 1,
+ "name": "54 - 24-10-2026 - INSOLITE - Top 5 Strangest Vehicles Ever Built",
+ "estilo": "54-top-lista-polaroid-incomum",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#060606"
+ },
+ "duration": 86.0,
+ "template": "generic",
+ "referencia": {
+  "canal": "Insolite",
+  "canal_url": "https://www.youtube.com/@Insolite",
+  "video": "https://youtu.be/g9ch8yHthP4",
+  "nota": "Top lista coisas incomuns (polaroid) — ESTILOS-NOVOS/54-top-lista-polaroid-incomum/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "audio.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  { "id": "fundo", "name": "Imagens de fundo" },
+  { "id": "textos", "name": "Titulos e textos" }
+ ],
+ "items": [
+  {
+   "id": "bg1",
+   "type": "image",
+   "track": "fundo",
+   "label": "Intro BG",
+   "start": 0,
+   "dur": 5.0,
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "label": "HOOK",
+   "start": 0.2,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "YOU WON'T BELIEVE THESE EXIST",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 62,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t1b",
+   "type": "text",
+   "track": "textos",
+   "label": "Subtitle",
+   "start": 0.6,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Top 5 Strangest Vehicles Ever Built",
+    "x": 640,
+    "y": 410,
+    "w": 900,
+    "size": 36,
+    "color": "#a4aea7",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "bg2",
+   "type": "image",
+   "track": "fundo",
+   "label": "#5 Amphicar BG",
+   "start": 5.0,
+   "dur": 14.0,
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t2",
+   "type": "text",
+   "track": "textos",
+   "label": "#5 RANK",
+   "start": 5.2,
+   "dur": 3.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "#5",
+    "x": 640,
+    "y": 280,
+    "size": 96,
+    "color": "#606c3c",
+    "font": "Inter",
+    "weight": 900,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t2b",
+   "type": "text",
+   "track": "textos",
+   "label": "#5 AMPHICAR",
+   "start": 5.5,
+   "dur": 13.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "THE AMPHICAR",
+    "x": 640,
+    "y": 380,
+    "w": 800,
+    "size": 52,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t2c",
+   "type": "text",
+   "track": "textos",
+   "label": "#5 fact box",
+   "start": 8.0,
+   "dur": 10.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "70 mph on road — 7 knots on water",
+    "x": 640,
+    "y": 520,
+    "w": 700,
+    "size": 30,
+    "color": "#060606",
+    "bg": "#dddfdc",
+    "pad": 12,
+    "radius": 6,
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "bg3",
+   "type": "image",
+   "track": "fundo",
+   "label": "#4 Thrust SSC BG",
+   "start": 19.0,
+   "dur": 14.0,
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t3",
+   "type": "text",
+   "track": "textos",
+   "label": "#4 RANK",
+   "start": 19.2,
+   "dur": 3.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "#4",
+    "x": 640,
+    "y": 280,
+    "size": 96,
+    "color": "#606c3c",
+    "font": "Inter",
+    "weight": 900,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t3b",
+   "type": "text",
+   "track": "textos",
+   "label": "#4 THRUST SSC",
+   "start": 19.5,
+   "dur": 13.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "THRUST SSC",
+    "x": 640,
+    "y": 380,
+    "w": 800,
+    "size": 52,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t3c",
+   "type": "text",
+   "track": "textos",
+   "label": "#4 fact box",
+   "start": 22.0,
+   "dur": 10.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "763 mph — Broke the sound barrier on land",
+    "x": 640,
+    "y": 520,
+    "w": 700,
+    "size": 30,
+    "color": "#060606",
+    "bg": "#dddfdc",
+    "pad": 12,
+    "radius": 6,
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "bg4",
+   "type": "image",
+   "track": "fundo",
+   "label": "#3 Shweeb BG",
+   "start": 33.0,
+   "dur": 14.0,
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "#3 RANK",
+   "start": 33.2,
+   "dur": 3.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "#3",
+    "x": 640,
+    "y": 280,
+    "size": 96,
+    "color": "#606c3c",
+    "font": "Inter",
+    "weight": 900,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t4b",
+   "type": "text",
+   "track": "textos",
+   "label": "#3 SHWEEB",
+   "start": 33.5,
+   "dur": 13.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "THE SHWEEB",
+    "x": 640,
+    "y": 380,
+    "w": 800,
+    "size": 52,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t4c",
+   "type": "text",
+   "track": "textos",
+   "label": "#3 fact box",
+   "start": 36.0,
+   "dur": 10.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Pedal-powered monorail pod — Google invested in 2010",
+    "x": 640,
+    "y": 520,
+    "w": 700,
+    "size": 30,
+    "color": "#060606",
+    "bg": "#dddfdc",
+    "pad": 12,
+    "radius": 6,
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "bg5",
+   "type": "image",
+   "track": "fundo",
+   "label": "#2 Crawler BG",
+   "start": 47.0,
+   "dur": 14.0,
+   "props": {
+    "src": "img/05.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t5",
+   "type": "text",
+   "track": "textos",
+   "label": "#2 RANK",
+   "start": 47.2,
+   "dur": 3.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "#2",
+    "x": 640,
+    "y": 280,
+    "size": 96,
+    "color": "#606c3c",
+    "font": "Inter",
+    "weight": 900,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t5b",
+   "type": "text",
+   "track": "textos",
+   "label": "#2 CRAWLER",
+   "start": 47.5,
+   "dur": 13.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "NASA CRAWLER TRANSPORTER",
+    "x": 640,
+    "y": 380,
+    "w": 800,
+    "size": 48,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t5c",
+   "type": "text",
+   "track": "textos",
+   "label": "#2 fact box",
+   "start": 50.0,
+   "dur": 10.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "6 million pounds — 1 mph carrying a Space Shuttle",
+    "x": 640,
+    "y": 520,
+    "w": 700,
+    "size": 30,
+    "color": "#060606",
+    "bg": "#dddfdc",
+    "pad": 12,
+    "radius": 6,
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "bg6",
+   "type": "image",
+   "track": "fundo",
+   "label": "#1 Aeroscraft BG",
+   "start": 61.0,
+   "dur": 16.0,
+   "props": {
+    "src": "img/06.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t6",
+   "type": "text",
+   "track": "textos",
+   "label": "#1 RANK",
+   "start": 61.2,
+   "dur": 3.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "text": "#1",
+    "x": 640,
+    "y": 280,
+    "size": 96,
+    "color": "#606c3c",
+    "font": "Inter",
+    "weight": 900,
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "t6b",
+   "type": "text",
+   "track": "textos",
+   "label": "#1 AEROSCRAFT",
+   "start": 61.5,
+   "dur": 15.0,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "THE AEROSCRAFT",
+    "x": 640,
+    "y": 380,
+    "w": 800,
+    "size": 52,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  },
+  {
+   "id": "t6c",
+   "type": "text",
+   "track": "textos",
+   "label": "#1 fact box",
+   "start": 64.0,
+   "dur": 12.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Lifts 66 tons — No runway needed",
+    "x": 640,
+    "y": 520,
+    "w": 700,
+    "size": 30,
+    "color": "#060606",
+    "bg": "#dddfdc",
+    "pad": 12,
+    "radius": 6,
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": false
+   }
+  },
+  {
+   "id": "bg7",
+   "type": "image",
+   "track": "fundo",
+   "label": "Outro BG",
+   "start": 77.0,
+   "dur": 9.0,
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "label": "Outro text",
+   "start": 77.5,
+   "dur": 8.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A VEHICLE BUILT FOR THE FUTURE",
+    "x": 640,
+    "y": 360,
+    "w": 1000,
+    "size": 56,
+    "color": "#dddfdc",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "upper": true
+   }
+  }
+ ]
+}

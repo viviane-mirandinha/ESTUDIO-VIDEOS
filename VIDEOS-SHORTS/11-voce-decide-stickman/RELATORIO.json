@@ -1,0 +1,11 @@
+{
+ "video": 11,
+ "estilo": "Você decide stickman (história interativa)",
+ "inicio": "2026-10-24T03:16:20-03:00",
+ "fim": "2026-10-24T03:31:46-03:00",
+ "minutos": 15.4,
+ "render_segundos": 44,
+ "voz": "usuario",
+ "observacoes": "Voz edge-tts pt-BR-AntonioNeural + faster-whisper medium GPU (corrigido range/A/B); 11 cenas 2D SVG/GSAP originais (template local), HUD NOITE 1 + relógio 3:07→3:09 + PARTE 1, chat do celular com 'VOCÊ', escolha A/B final; legenda Montserrat Black maiúscula com destaque amarelo e verde (acende/luz); drone ffmpeg + whoosh baixo nas viradas; sem impact/pop.",
+ "ponto_fraco": "Boneco tem poucas poses (deitado, celular, medo, alcançando); sem textura/granulado nem lip-sync; cenários mais simples que a referência."
+}

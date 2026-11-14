@@ -1,0 +1,11 @@
+{
+ "video": 10,
+ "estilo": "Dados ranking escuro amarelo",
+ "inicio": "2026-10-22T20:22:20-03:00",
+ "fim": "2026-10-22T21:56:28-03:00",
+ "minutos": 5.0,
+ "render_segundos": 46,
+ "voz": "tts francisca",
+ "observacoes": "Estilo do short 06 (preto/amarelo, legenda-frase Inter 56). 5 citações em card com borda vermelha + 'OUVE ISSO:', clipes da referência mudos (11,16,20,25,28; 21 e 26 com palavrão não usados), citação em aspas amarelas grandes; respostas em cena nova dr_palavra (EDITOR VIDEOS/templates/scenes) reutilizável; gancho e 'foram ditas' em grade 3x2. Sem SFX/música. Clipes de 1-2,3 s ficam desacelerados até 0,6x e o resto do bloco segura o último frame. 1º render falhou no ffmpeg, retry automático ok. 'inicio' marcado no 1º render (montagem começou ~10 min antes). Ajuste: 1ª linha de cada dr_palavra entra no início da cena (sem buraco preto); blackdetect d=0.5 pix_th=0.08 = 0 trechos.",
+ "ponto_fraco": "Os clipes da referência são curtíssimos (1 s no 'pau de arara'), então o card passa boa parte do bloco com o frame parado."
+}

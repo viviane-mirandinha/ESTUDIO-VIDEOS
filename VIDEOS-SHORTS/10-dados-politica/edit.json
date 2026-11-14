@@ -1,0 +1,2034 @@
+{
+ "version": 1,
+ "name": "10 - DADOS RANKING ESCURO - Ouve o que falaram do Nordeste",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0B0B0C"
+ },
+ "duration": 55.56,
+ "template": "generic",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Dados ranking escuro amarelo",
+ "referencia": {
+  "canal": "@hilton_erika",
+  "canal_url": "https://www.instagram.com/hilton_erika/",
+  "video": "https://www.instagram.com/reel/DexmT1TJlge/",
+  "nota": "clipes das falas vêm da referência (mudos); visual = estilo do short 06 (preto/amarelo)"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "visual",
+   "name": "Tipografia"
+  },
+  {
+   "id": "card",
+   "name": "Card citação"
+  },
+  {
+   "id": "clipe",
+   "name": "Clipes (mudos)"
+  },
+  {
+   "id": "tag",
+   "name": "Rótulos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "fundo preto",
+   "start": 0,
+   "dur": 55.56,
+   "props": {
+    "fill": true,
+    "html": "<div class='drbg'></div>",
+    "css": ".drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}"
+   }
+  },
+  {
+   "id": "q1card",
+   "type": "html",
+   "track": "card",
+   "label": "card citação 1",
+   "start": 2.06,
+   "dur": 4.05,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 640,
+    "h": 760,
+    "html": "<div class='cardq'></div>",
+    "css": ".cardq{width:100%;height:100%;box-sizing:border-box;border:8px solid #E02424;border-radius:24px;background:#000;box-shadow:0 0 60px rgba(224,36,36,.35)} #q1v_mv{border-radius:16px}"
+   }
+  },
+  {
+   "id": "q1a",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 1 (antes)",
+   "start": 2.06,
+   "dur": 1.0,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q1_a.jpg",
+    "radius": 16
+   }
+  },
+  {
+   "id": "q1v",
+   "type": "video",
+   "track": "clipe",
+   "label": "clipe 1 (mudo)",
+   "start": 3.06,
+   "dur": 2.72,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "clips/11_20.1s_viver-da-migalha.mp4",
+    "volume": 0,
+    "speed": 0.82,
+    "trim": 0
+   }
+  },
+  {
+   "id": "q1b",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 1 (depois)",
+   "start": 5.78,
+   "dur": 0.33,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q1_b.jpg",
+    "radius": 16,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "q1tag",
+   "type": "text",
+   "track": "tag",
+   "label": "OUVE ISSO 1",
+   "start": 2.16,
+   "dur": 3.95,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "OUVE ISSO:",
+    "x": 540,
+    "y": 320,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "bg": "#E02424",
+    "pad": 14,
+    "radius": 10,
+    "shadow": false,
+    "align": "center"
+   }
+  },
+  {
+   "id": "q1txt",
+   "type": "html",
+   "track": "legenda",
+   "label": "citação 1",
+   "start": 2.98,
+   "dur": 3.13,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 1290,
+    "w": 980,
+    "h": 380,
+    "html": "<div class='qt'><div class='qm'>&ldquo;</div><div class='qx'>Nordestino, preguiçoso, gosta de viver da migalha.<span class='qe'>&rdquo;</span></div></div>",
+    "css": ".qt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.qm{font:700 200px/1 Oswald,serif;color:#F5C518;height:105px;overflow:visible}.qx{font-family:Inter,sans-serif;font-weight:800;font-style:italic;font-size:66px;line-height:1.16;color:#fff}.qe{color:#F5C518;font-family:Oswald,serif;font-style:normal}"
+   }
+  },
+  {
+   "id": "q2card",
+   "type": "html",
+   "track": "card",
+   "label": "card citação 2",
+   "start": 14.24,
+   "dur": 2.59,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 640,
+    "h": 760,
+    "html": "<div class='cardq'></div>",
+    "css": ".cardq{width:100%;height:100%;box-sizing:border-box;border:8px solid #E02424;border-radius:24px;background:#000;box-shadow:0 0 60px rgba(224,36,36,.35)} #q2v_mv{border-radius:16px}"
+   }
+  },
+  {
+   "id": "q2a",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 2 (antes)",
+   "start": 14.24,
+   "dur": 1.12,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q2_a.jpg",
+    "radius": 16
+   }
+  },
+  {
+   "id": "q2v",
+   "type": "video",
+   "track": "clipe",
+   "label": "clipe 2 (mudo)",
+   "start": 15.36,
+   "dur": 1.36,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "clips/16_30.4s_cheio-pau-arara.mp4",
+    "volume": 0,
+    "speed": 0.74,
+    "trim": 0
+   }
+  },
+  {
+   "id": "q2b",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 2 (depois)",
+   "start": 16.72,
+   "dur": 0.11,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q2_b.jpg",
+    "radius": 16,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "q2tag",
+   "type": "text",
+   "track": "tag",
+   "label": "OUVE ISSO 2",
+   "start": 14.34,
+   "dur": 2.49,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "OUVE ISSO:",
+    "x": 540,
+    "y": 320,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "bg": "#E02424",
+    "pad": 14,
+    "radius": 10,
+    "shadow": false,
+    "align": "center"
+   }
+  },
+  {
+   "id": "q2txt",
+   "type": "html",
+   "track": "legenda",
+   "label": "citação 2",
+   "start": 15.28,
+   "dur": 1.55,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 1290,
+    "w": 980,
+    "h": 380,
+    "html": "<div class='qt'><div class='qm'>&ldquo;</div><div class='qx'>Cheio de pau de arara aqui.<span class='qe'>&rdquo;</span></div></div>",
+    "css": ".qt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.qm{font:700 200px/1 Oswald,serif;color:#F5C518;height:105px;overflow:visible}.qx{font-family:Inter,sans-serif;font-weight:800;font-style:italic;font-size:66px;line-height:1.16;color:#fff}.qe{color:#F5C518;font-family:Oswald,serif;font-style:normal}"
+   }
+  },
+  {
+   "id": "q3card",
+   "type": "html",
+   "track": "card",
+   "label": "card citação 3",
+   "start": 18.76,
+   "dur": 3.03,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 640,
+    "h": 760,
+    "html": "<div class='cardq'></div>",
+    "css": ".cardq{width:100%;height:100%;box-sizing:border-box;border:8px solid #E02424;border-radius:24px;background:#000;box-shadow:0 0 60px rgba(224,36,36,.35)} #q3v_mv{border-radius:16px}"
+   }
+  },
+  {
+   "id": "q3a",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 3 (antes)",
+   "start": 18.76,
+   "dur": 1.44,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q3_a.jpg",
+    "radius": 16
+   }
+  },
+  {
+   "id": "q3v",
+   "type": "video",
+   "track": "clipe",
+   "label": "clipe 3 (mudo)",
+   "start": 20.2,
+   "dur": 1.48,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "clips/20_34.3s_bahia-cancer-brasil.mp4",
+    "volume": 0,
+    "speed": 0.93,
+    "trim": 0
+   }
+  },
+  {
+   "id": "q3b",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 3 (depois)",
+   "start": 21.68,
+   "dur": 0.11,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q3_b.jpg",
+    "radius": 16,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "q3tag",
+   "type": "text",
+   "track": "tag",
+   "label": "OUVE ISSO 3",
+   "start": 18.86,
+   "dur": 2.93,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "OUVE ISSO:",
+    "x": 540,
+    "y": 320,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "bg": "#E02424",
+    "pad": 14,
+    "radius": 10,
+    "shadow": false,
+    "align": "center"
+   }
+  },
+  {
+   "id": "q3txt",
+   "type": "html",
+   "track": "legenda",
+   "label": "citação 3",
+   "start": 20.12,
+   "dur": 1.67,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 1290,
+    "w": 980,
+    "h": 380,
+    "html": "<div class='qt'><div class='qm'>&ldquo;</div><div class='qx'>A Bahia é o câncer do Brasil.<span class='qe'>&rdquo;</span></div></div>",
+    "css": ".qt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.qm{font:700 200px/1 Oswald,serif;color:#F5C518;height:105px;overflow:visible}.qx{font-family:Inter,sans-serif;font-weight:800;font-style:italic;font-size:66px;line-height:1.16;color:#fff}.qe{color:#F5C518;font-family:Oswald,serif;font-style:normal}"
+   }
+  },
+  {
+   "id": "q4card",
+   "type": "html",
+   "track": "card",
+   "label": "card citação 4",
+   "start": 26.12,
+   "dur": 3.97,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 640,
+    "h": 760,
+    "html": "<div class='cardq'></div>",
+    "css": ".cardq{width:100%;height:100%;box-sizing:border-box;border:8px solid #E02424;border-radius:24px;background:#000;box-shadow:0 0 60px rgba(224,36,36,.35)} #q4v_mv{border-radius:16px}"
+   }
+  },
+  {
+   "id": "q4a",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 4 (antes)",
+   "start": 26.12,
+   "dur": 1.86,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q4_a.jpg",
+    "radius": 16
+   }
+  },
+  {
+   "id": "q4v",
+   "type": "video",
+   "track": "clipe",
+   "label": "clipe 4 (mudo)",
+   "start": 27.98,
+   "dur": 1.82,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "clips/25_43.1s_vergonha-pro-brasil.mp4",
+    "volume": 0,
+    "speed": 0.82,
+    "trim": 0
+   }
+  },
+  {
+   "id": "q4b",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 4 (depois)",
+   "start": 29.8,
+   "dur": 0.29,
+   "in": "none",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q4_b.jpg",
+    "radius": 16,
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "q4tag",
+   "type": "text",
+   "track": "tag",
+   "label": "OUVE ISSO 4",
+   "start": 26.22,
+   "dur": 3.87,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "OUVE ISSO:",
+    "x": 540,
+    "y": 320,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "bg": "#E02424",
+    "pad": 14,
+    "radius": 10,
+    "shadow": false,
+    "align": "center"
+   }
+  },
+  {
+   "id": "q4txt",
+   "type": "html",
+   "track": "legenda",
+   "label": "citação 4",
+   "start": 27.9,
+   "dur": 2.19,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 1290,
+    "w": 980,
+    "h": 380,
+    "html": "<div class='qt'><div class='qm'>&ldquo;</div><div class='qx'>Vocês são uma vergonha pro Brasil.<span class='qe'>&rdquo;</span></div></div>",
+    "css": ".qt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.qm{font:700 200px/1 Oswald,serif;color:#F5C518;height:105px;overflow:visible}.qx{font-family:Inter,sans-serif;font-weight:800;font-style:italic;font-size:66px;line-height:1.16;color:#fff}.qe{color:#F5C518;font-family:Oswald,serif;font-style:normal}"
+   }
+  },
+  {
+   "id": "q5card",
+   "type": "html",
+   "track": "card",
+   "label": "card citação 5",
+   "start": 33.1,
+   "dur": 3.33,
+   "in": "zoom",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 640,
+    "h": 760,
+    "html": "<div class='cardq'></div>",
+    "css": ".cardq{width:100%;height:100%;box-sizing:border-box;border:8px solid #E02424;border-radius:24px;background:#000;box-shadow:0 0 60px rgba(224,36,36,.35)} #q5v_mv{border-radius:16px}"
+   }
+  },
+  {
+   "id": "q5a",
+   "type": "image",
+   "track": "clipe",
+   "label": "clipe 5 (antes)",
+   "start": 33.1,
+   "dur": 1.2,
+   "in": "zoom",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "img/q5_a.jpg",
+    "radius": 16
+   }
+  },
+  {
+   "id": "q5v",
+   "type": "video",
+   "track": "clipe",
+   "label": "clipe 5 (mudo)",
+   "start": 34.3,
+   "dur": 2.13,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 700,
+    "w": 620,
+    "h": 740,
+    "fit": "cover",
+    "src": "clips/28_49.8s_inferiores-outras-regioes.mp4",
+    "volume": 0,
+    "speed": 1.0,
+    "trim": 0
+   }
+  },
+  {
+   "id": "q5tag",
+   "type": "text",
+   "track": "tag",
+   "label": "OUVE ISSO 5",
+   "start": 33.2,
+   "dur": 3.23,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "OUVE ISSO:",
+    "x": 540,
+    "y": 320,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Oswald",
+    "weight": 700,
+    "bg": "#E02424",
+    "pad": 14,
+    "radius": 10,
+    "shadow": false,
+    "align": "center"
+   }
+  },
+  {
+   "id": "q5txt",
+   "type": "html",
+   "track": "legenda",
+   "label": "citação 5",
+   "start": 34.22,
+   "dur": 2.21,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "x": 540,
+    "y": 1290,
+    "w": 980,
+    "h": 380,
+    "html": "<div class='qt'><div class='qm'>&ldquo;</div><div class='qx'>Falta de cultura, inferiores.<span class='qe'>&rdquo;</span></div></div>",
+    "css": ".qt{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.qm{font:700 200px/1 Oswald,serif;color:#F5C518;height:105px;overflow:visible}.qx{font-family:Inter,sans-serif;font-weight:800;font-style:italic;font-size:66px;line-height:1.16;color:#fff}.qe{color:#F5C518;font-family:Oswald,serif;font-style:normal}"
+   }
+  },
+  {
+   "id": "hk0",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 1",
+   "start": 0.0,
+   "dur": 2.06,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/22_36.6s_presidio-pedrinhas.mp4",
+    "x": 206,
+    "y": 455,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hk1",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 2",
+   "start": 0.06,
+   "dur": 2.0,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/13_24.5s_meninas-nordeste.mp4",
+    "x": 540,
+    "y": 455,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hk2",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 3",
+   "start": 0.12,
+   "dur": 1.94,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/10_17.3s_dez-filhos-estado.mp4",
+    "x": 874,
+    "y": 455,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hk3",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 4",
+   "start": 0.18,
+   "dur": 1.88,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/23_39.0s_maranhao-cabecudo.mp4",
+    "x": 206,
+    "y": 855,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hk4",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 5",
+   "start": 0.24,
+   "dur": 1.82,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/27_47.1s_taxa-analfabetismo.mp4",
+    "x": 540,
+    "y": 855,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hk5",
+   "type": "video",
+   "track": "clipe",
+   "label": "hk 6",
+   "start": 0.3,
+   "dur": 1.76,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/12_22.3s_bolsa-familia.mp4",
+    "x": 874,
+    "y": 855,
+    "w": 306,
+    "h": 370,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "volume": 0,
+    "speed": 1
+   }
+  },
+  {
+   "id": "hkb",
+   "type": "html",
+   "track": "tag",
+   "label": "hk molduras",
+   "start": 0,
+   "dur": 2.06,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "fill": true,
+    "html": "<div style='position:absolute;left:48px;top:265px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div><div style='position:absolute;left:382px;top:265px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div><div style='position:absolute;left:716px;top:265px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div><div style='position:absolute;left:48px;top:665px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div><div style='position:absolute;left:382px;top:665px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div><div style='position:absolute;left:716px;top:665px;width:316px;height:380px;box-sizing:border-box;border:5px solid #3a3a3f;border-radius:14px'></div>",
+    "css": ""
+   }
+  },
+  {
+   "id": "sc36",
+   "type": "scene",
+   "track": "visual",
+   "label": "gancho NORDESTE",
+   "start": 0.05,
+   "dur": 2.01,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 1165,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "NORDESTE",
+       "cor": "#F5C518",
+       "tam": 200,
+       "t": 0.1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc37",
+   "type": "scene",
+   "track": "visual",
+   "label": "preguiçoso?",
+   "start": 6.11,
+   "dur": 3.84,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "PREGUIÇOSO?",
+       "cor": "#F5C518",
+       "tam": 190,
+       "t": 6.16
+      },
+      {
+       "txt": "QUEM TRABALHA",
+       "cor": "#ffffff",
+       "tam": 120,
+       "t": 8.56
+      },
+      {
+       "txt": "DURO TODO DIA",
+       "cor": "#ffffff",
+       "tam": 120,
+       "t": 8.98
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc38",
+   "type": "scene",
+   "track": "visual",
+   "label": "sangue fervendo",
+   "start": 9.95,
+   "dur": 2.92,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "SANGUE",
+       "cor": "#ffffff",
+       "tam": 250,
+       "t": 10.0
+      },
+      {
+       "txt": "FERVENDO",
+       "cor": "#F5C518",
+       "tam": 230,
+       "t": 11.08
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc39",
+   "type": "scene",
+   "track": "visual",
+   "label": "não para por aí",
+   "start": 12.87,
+   "dur": 1.37,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "NÃO PARA",
+       "cor": "#ffffff",
+       "tam": 230,
+       "t": 12.92
+      },
+      {
+       "txt": "POR AÍ",
+       "cor": "#F5C518",
+       "tam": 230,
+       "t": 13.62
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc40",
+   "type": "scene",
+   "track": "visual",
+   "label": "de gente?",
+   "start": 16.83,
+   "dur": 1.93,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "JEITO DE FALAR",
+       "cor": "#ffffff",
+       "tam": 140,
+       "t": 16.88
+      },
+      {
+       "txt": "DE GENTE?",
+       "cor": "#F5C518",
+       "tam": 230,
+       "t": 18.32
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc41",
+   "type": "scene",
+   "track": "visual",
+   "label": "câncer do Brasil?",
+   "start": 21.79,
+   "dur": 1.25,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "CÂNCER",
+       "cor": "#ffffff",
+       "tam": 250,
+       "t": 21.84
+      },
+      {
+       "txt": "DO BRASIL?",
+       "cor": "#ffffff",
+       "tam": 170,
+       "t": 22.48
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc42",
+   "type": "scene",
+   "track": "visual",
+   "label": "alma desse país",
+   "start": 23.04,
+   "dur": 3.08,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "O NORDESTE É A",
+       "cor": "#ffffff",
+       "tam": 110,
+       "t": 23.09
+      },
+      {
+       "txt": "ALMA",
+       "cor": "#F5C518",
+       "tam": 330,
+       "t": 23.98
+      },
+      {
+       "txt": "DESSE PAÍS",
+       "cor": "#ffffff",
+       "tam": 130,
+       "t": 24.14
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc43",
+   "type": "scene",
+   "track": "visual",
+   "label": "vergonha é quem humilha",
+   "start": 30.09,
+   "dur": 3.01,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "VERGONHA",
+       "cor": "#F5C518",
+       "tam": 230,
+       "t": 30.14
+      },
+      {
+       "txt": "É QUEM HUMILHA",
+       "cor": "#ffffff",
+       "tam": 130,
+       "t": 30.84
+      },
+      {
+       "txt": "PELO LUGAR ONDE NASCEU",
+       "cor": "#ffffff",
+       "tam": 90,
+       "t": 31.86
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc44",
+   "type": "scene",
+   "track": "visual",
+   "label": "inferiores? nunca",
+   "start": 36.43,
+   "dur": 1.4,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "INFERIORES?",
+       "cor": "#ffffff",
+       "tam": 170,
+       "t": 36.48
+      },
+      {
+       "txt": "NUNCA.",
+       "cor": "#F5C518",
+       "tam": 330,
+       "t": 37.34
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc45",
+   "type": "scene",
+   "track": "visual",
+   "label": "cultura história força orgulho",
+   "start": 37.83,
+   "dur": 3.58,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "O Nordeste tem",
+     "t_rot": 37.879999999999995,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "CULTURA",
+       "cor": "#ffffff",
+       "tam": 170,
+       "t": 37.88
+      },
+      {
+       "txt": "HISTÓRIA",
+       "cor": "#F5C518",
+       "tam": 170,
+       "t": 39.5
+      },
+      {
+       "txt": "FORÇA",
+       "cor": "#ffffff",
+       "tam": 170,
+       "t": 40.1
+      },
+      {
+       "txt": "ORGULHO",
+       "cor": "#F5C518",
+       "tam": 170,
+       "t": 40.8
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "fd0",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 1",
+   "start": 41.41,
+   "dur": 3.44,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "img/q1_b.jpg",
+    "x": 206,
+    "y": 455,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fd1",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 2",
+   "start": 41.51,
+   "dur": 3.34,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "img/q2_b.jpg",
+    "x": 540,
+    "y": 455,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fd2",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 3",
+   "start": 41.61,
+   "dur": 3.24,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "img/q3_b.jpg",
+    "x": 874,
+    "y": 455,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fd3",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 4",
+   "start": 41.71,
+   "dur": 3.14,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "img/q4_b.jpg",
+    "x": 206,
+    "y": 855,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fd4",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 5",
+   "start": 41.81,
+   "dur": 3.04,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "img/q5_b.jpg",
+    "x": 540,
+    "y": 855,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fd5",
+   "type": "image",
+   "track": "clipe",
+   "label": "fd 6",
+   "start": 41.91,
+   "dur": 2.94,
+   "in": "pop",
+   "out": "fade",
+   "props": {
+    "src": "clips/frames/27_47.1s_taxa-analfabetismo.jpg",
+    "x": 874,
+    "y": 855,
+    "w": 304,
+    "h": 368,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08,
+    "radius": 10
+   }
+  },
+  {
+   "id": "fdb",
+   "type": "html",
+   "track": "tag",
+   "label": "fd molduras",
+   "start": 41.41,
+   "dur": 3.44,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "fill": true,
+    "html": "<div style='position:absolute;left:48px;top:265px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div><div style='position:absolute;left:382px;top:265px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div><div style='position:absolute;left:716px;top:265px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div><div style='position:absolute;left:48px;top:665px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div><div style='position:absolute;left:382px;top:665px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div><div style='position:absolute;left:716px;top:665px;width:316px;height:380px;box-sizing:border-box;border:6px solid #E02424;border-radius:14px'></div>",
+    "css": ""
+   }
+  },
+  {
+   "id": "sc53",
+   "type": "scene",
+   "track": "visual",
+   "label": "foram ditas",
+   "start": 41.41,
+   "dur": 3.44,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 1165,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "FORAM DITAS.",
+       "cor": "#F5C518",
+       "tam": 160,
+       "t": 41.46
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc54",
+   "type": "scene",
+   "track": "visual",
+   "label": "orgulho cabeça erguida",
+   "start": 44.85,
+   "dur": 4.16,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "ORGULHO",
+       "cor": "#F5C518",
+       "tam": 260,
+       "t": 44.9
+      },
+      {
+       "txt": "DE CADA NORDESTINO",
+       "cor": "#ffffff",
+       "tam": 100,
+       "t": 46.2
+      },
+      {
+       "txt": "CABEÇA ERGUIDA",
+       "cor": "#ffffff",
+       "tam": 130,
+       "t": 48.18
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc55",
+   "type": "scene",
+   "track": "visual",
+   "label": "ataca o Brasil inteiro",
+   "start": 49.01,
+   "dur": 2.7,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "QUEM ATACA O NORDESTE",
+       "cor": "#ffffff",
+       "tam": 95,
+       "t": 49.06
+      },
+      {
+       "txt": "ATACA O",
+       "cor": "#ffffff",
+       "tam": 120,
+       "t": 50.22
+      },
+      {
+       "txt": "BRASIL INTEIRO",
+       "cor": "#F5C518",
+       "tam": 170,
+       "t": 50.74
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc56",
+   "type": "scene",
+   "track": "visual",
+   "label": "proteja o Nordeste",
+   "start": 51.71,
+   "dur": 1.06,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 820,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "PROTEJA",
+       "cor": "#F5C518",
+       "tam": 260,
+       "t": 51.76
+      },
+      {
+       "txt": "O NORDESTE",
+       "cor": "#F5C518",
+       "tam": 190,
+       "t": 52.42
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc57",
+   "type": "scene",
+   "track": "visual",
+   "label": "vote Lula 13",
+   "start": 52.77,
+   "dur": 2.79,
+   "props": {
+    "scene": "dr_palavra",
+    "params": {
+     "rotulo": "",
+     "t_rot": 0,
+     "y": 780,
+     "zoom": 1.04,
+     "linhas": [
+      {
+       "txt": "VOTE LULA",
+       "cor": "#ffffff",
+       "tam": 170,
+       "t": 52.82
+      },
+      {
+       "txt": "13",
+       "cor": "#F5C518",
+       "tam": 560,
+       "t": 53.86
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "lg0",
+   "type": "text",
+   "track": "legenda",
+   "label": "Ouve o que falaram do meu Nord",
+   "start": 0.38,
+   "dur": 2.07,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Ouve o que falaram do meu Nordeste.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nordeste"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "track": "legenda",
+   "label": "Ouve isso:",
+   "start": 2.42,
+   "dur": 0.59,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Ouve isso:",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "track": "legenda",
+   "label": "Preguiçoso?",
+   "start": 6.18,
+   "dur": 0.71,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Preguiçoso?",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Preguiçoso"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg4",
+   "type": "text",
+   "track": "legenda",
+   "label": "Fala isso olhando na cara de q",
+   "start": 6.86,
+   "dur": 3.19,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Fala isso olhando na cara de quem trabalha duro todo dia.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "trabalha duro"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg5",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu fico com o sangue fervendo,",
+   "start": 10.02,
+   "dur": 2.95,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu fico com o sangue fervendo, e você também ficaria.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "sangue fervendo"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg6",
+   "type": "text",
+   "track": "legenda",
+   "label": "Mas não para por aí.",
+   "start": 12.94,
+   "dur": 1.45,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Mas não para por aí.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "não para por aí"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg7",
+   "type": "text",
+   "track": "legenda",
+   "label": "Escuta este:",
+   "start": 14.36,
+   "dur": 0.95,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Escuta este:",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg9",
+   "type": "text",
+   "track": "legenda",
+   "label": "Isso é jeito de falar de gente",
+   "start": 16.9,
+   "dur": 2.01,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Isso é jeito de falar de gente?",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "de gente"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "Agora vem o pior:",
+   "start": 18.88,
+   "dur": 1.27,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Agora vem o pior:",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "o pior"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "Câncer do Brasil?",
+   "start": 21.86,
+   "dur": 1.19,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Câncer do Brasil?",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Câncer do Brasil"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "O Nordeste é a alma desse país",
+   "start": 23.02,
+   "dur": 3.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "O Nordeste é a alma desse país, e eu não aceito calado.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nordeste",
+     "alma",
+     "não aceito calado"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "Tem mais, e revira o estômago:",
+   "start": 26.24,
+   "dur": 1.69,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Tem mais, e revira o estômago:",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "Vergonha é quem humilha o outr",
+   "start": 30.16,
+   "dur": 3.09,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Vergonha é quem humilha o outro pelo lugar onde ele nasceu.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "humilha",
+     "Vergonha"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg17",
+   "type": "text",
+   "track": "legenda",
+   "label": "E esta última:",
+   "start": 33.22,
+   "dur": 1.03,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E esta última:",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg19",
+   "type": "text",
+   "track": "legenda",
+   "label": "Inferiores?",
+   "start": 36.5,
+   "dur": 0.79,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Inferiores?",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Inferiores"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg20",
+   "type": "text",
+   "track": "legenda",
+   "label": "Nunca.",
+   "start": 37.26,
+   "dur": 0.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Nunca.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nunca"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg21",
+   "type": "text",
+   "track": "legenda",
+   "label": "O Nordeste tem cultura, tem hi",
+   "start": 37.98,
+   "dur": 3.53,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "O Nordeste tem cultura, tem história, tem força e tem orgulho.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nordeste",
+     "cultura",
+     "história",
+     "força",
+     "orgulho"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg22",
+   "type": "text",
+   "track": "legenda",
+   "label": "Essas falas foram ditas, e a g",
+   "start": 41.48,
+   "dur": 3.53,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Essas falas foram ditas, e a gente não vai fingir que não ouviu.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg23",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu tenho orgulho de cada norde",
+   "start": 44.98,
+   "dur": 4.13,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu tenho orgulho de cada nordestino que ouviu isso e seguiu de cabeça erguida.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "nordestino",
+     "orgulho",
+     "cabeça erguida"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg24",
+   "type": "text",
+   "track": "legenda",
+   "label": "Quem ataca o Nordeste ataca o ",
+   "start": 49.08,
+   "dur": 2.73,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Quem ataca o Nordeste ataca o Brasil inteiro.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nordeste",
+     "Brasil inteiro"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg25",
+   "type": "text",
+   "track": "legenda",
+   "label": "Proteja o Nordeste.",
+   "start": 51.78,
+   "dur": 1.09,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Proteja o Nordeste.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Nordeste",
+     "Proteja"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg26",
+   "type": "text",
+   "track": "legenda",
+   "label": "Vote Lula treze.",
+   "start": 52.84,
+   "dur": 2.72,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Vote Lula treze.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "Lula treze"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  }
+ ]
+}

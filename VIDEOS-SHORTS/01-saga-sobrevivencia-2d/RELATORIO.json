@@ -1,0 +1,11 @@
+{
+ "video": 1,
+ "estilo": "01-saga-sobrevivencia-2d",
+ "inicio": "2026-10-22T19:11:11-03:00",
+ "fim": "2026-10-22T19:31:59-03:00",
+ "minutos": 20.8,
+ "render_segundos": 77,
+ "voz": "usuario",
+ "observacoes": "Voz ElevenLabs do usuário (84,1 s) + whisper; 26 cenas 2D SVG/GSAP originais (template local), corte médio 3,4 s, todos os tempos vindos do words.json via at(); legenda Oswald maiúscula em caixa preta, palavra-chave vermelha/mostarda; sem SFX/música; render draft crf 28.",
+ "ponto_fraco": "Rafa só tem animação leve (piscar/respirar/correr) e os cenários são mais simples e menos detalhados que os da referência, sem a textura/granulado de série."
+}

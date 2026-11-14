@@ -1,0 +1,11 @@
+{
+ "video": 2,
+ "estilo": "Lowpoly 3D desmontando",
+ "inicio": "2026-10-22T19:05:00-03:00",
+ "fim": "2026-10-22T19:33:47-03:00",
+ "minutos": 28.8,
+ "render_segundos": 123,
+ "voz": "usuario",
+ "observacoes": "Three.js + mesmo kit low-poly (boneco, árvore, casa); casa em corte, balde de gelo, recipiente, serpentina TubeGeometry que cresce, gás saindo, seta CICLO em SVG, compressor+pistão+bomba de pneu; legenda 1 palavra Lilita One; voz ElevenLabs do usuário. 1 re-render (pílulas GÁS/QUARTO sobrepostas).",
+ "ponto_fraco": "Explicação física é visual mas simplificada: o gás é uma pilha de poliedros brancos e o pistão de vidro é didático, não um compressor real em corte; close-ups da jarra ficam um pouco estáticos."
+}

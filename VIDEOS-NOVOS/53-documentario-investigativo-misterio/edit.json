@@ -1,0 +1,758 @@
+{
+ "version": 1,
+ "name": "53 - DOCUMENTARIO INVESTIGATIVO MISTERIO - The Dyatlov Pass Incident",
+ "estilo": "53-documentario-investigativo-misterio",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#292f30"
+ },
+ "duration": 65.5,
+ "template": "generic",
+ "referencia": {
+  "canal": "The Unbelievable Tales",
+  "canal_url": "https://www.youtube.com/@TheUnbelievableTales/videos",
+  "nota": "Estilo 53 (Investigative Mystery Documentary): real clip + subtitles, fast hard cuts ~3.4s, teal/grey palette, accent yellow #e8ed30, whoosh only on chapter change."
+ },
+ "head": "<style>.ed-img{filter:sepia(.1) saturate(.8) brightness(.85)}</style>",
+ "audio": {
+  "voice": {
+   "src": "audio.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {"id": "fundo", "name": "Imagens"},
+  {"id": "textos", "name": "Textos"},
+  {"id": "fatos", "name": "Fatos"}
+ ],
+ "items": [
+  {
+   "id": "s0",
+   "type": "image",
+   "track": "fundo",
+   "label": "Ural Mountains - opening",
+   "start": 0.0,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t0",
+   "type": "text",
+   "track": "textos",
+   "label": "1959 - nine hikers",
+   "start": 0.0,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "1959 — NINE HIKERS VANISHED",
+    "x": 640,
+    "y": 360,
+    "size": 52,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["1959"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s1",
+   "type": "image",
+   "track": "fundo",
+   "label": "tent slashed",
+   "start": 3.4,
+   "dur": 3.2,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "label": "tent slashed open",
+   "start": 3.4,
+   "dur": 3.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "TENT SLASHED OPEN\nFROM THE INSIDE",
+    "x": 640,
+    "y": 360,
+    "size": 46,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s2",
+   "type": "image",
+   "track": "fundo",
+   "label": "fleeing into cold",
+   "start": 6.6,
+   "dur": 3.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t2",
+   "type": "text",
+   "track": "textos",
+   "label": "minus forty",
+   "start": 6.6,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "MINUS 40° — ALMOST NOTHING ON",
+    "x": 640,
+    "y": 360,
+    "size": 44,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["-40°"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s3",
+   "type": "image",
+   "track": "fundo",
+   "label": "fractured skulls",
+   "start": 10.2,
+   "dur": 3.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t3",
+   "type": "text",
+   "track": "textos",
+   "label": "fractured skulls",
+   "start": 10.2,
+   "dur": 3.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "FRACTURED SKULLS\nMISSING TONGUE",
+    "x": 640,
+    "y": 360,
+    "size": 48,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s4",
+   "type": "image",
+   "track": "fundo",
+   "label": "Soviet investigators",
+   "start": 13.2,
+   "dur": 3.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "label": "unknown compelling force",
+   "start": 13.2,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "\"UNKNOWN COMPELLING FORCE\"",
+    "x": 640,
+    "y": 360,
+    "size": 44,
+    "color": "#e8ed30",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Dyatlov Pass name",
+   "start": 17.0,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t5",
+   "type": "text",
+   "track": "textos",
+   "label": "Dyatlov Pass",
+   "start": 17.0,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "THE DYATLOV PASS INCIDENT",
+    "x": 640,
+    "y": 360,
+    "size": 54,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["DYATLOV PASS"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s6",
+   "type": "image",
+   "track": "fundo",
+   "label": "sixty years theories",
+   "start": 20.4,
+   "dur": 3.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t6",
+   "type": "text",
+   "track": "textos",
+   "label": "60 years of theories",
+   "start": 20.4,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "60 YEARS OF THEORIES",
+    "x": 640,
+    "y": 360,
+    "size": 50,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["60 YEARS"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "f0",
+   "type": "text",
+   "track": "fatos",
+   "label": "fact pill - theories",
+   "start": 21.0,
+   "dur": 2.5,
+   "in": "slide_up",
+   "out": "fade",
+   "props": {
+    "text": "MILITARY TESTS  •  ALIENS  •  YETI",
+    "x": 640,
+    "y": 580,
+    "size": 24,
+    "color": "#292f30",
+    "weight": 700,
+    "font": "Inter",
+    "align": "center",
+    "bg": "#e8ed30",
+    "pad": 10,
+    "radius": 8,
+    "shadow": false
+   }
+  },
+  {
+   "id": "s7",
+   "type": "image",
+   "track": "fundo",
+   "label": "2020 Swiss researchers",
+   "start": 24.0,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/08.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "label": "Swiss researchers 2020",
+   "start": 24.0,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "2020 — SWISS RESEARCHERS",
+    "x": 640,
+    "y": 340,
+    "size": 48,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["2020"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s8",
+   "type": "image",
+   "track": "fundo",
+   "label": "avalanche simulation",
+   "start": 27.4,
+   "dur": 3.8,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/09.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t8",
+   "type": "text",
+   "track": "textos",
+   "label": "avalanche simulations",
+   "start": 27.4,
+   "dur": 3.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ADVANCED AVALANCHE\nSIMULATIONS",
+    "x": 640,
+    "y": 360,
+    "size": 46,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s9",
+   "type": "image",
+   "track": "fundo",
+   "label": "slab avalanche",
+   "start": 31.2,
+   "dur": 4.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/10.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t9",
+   "type": "text",
+   "track": "textos",
+   "label": "small slab avalanche",
+   "start": 31.2,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A SMALL SLAB AVALANCHE",
+    "x": 640,
+    "y": 360,
+    "size": 48,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["AVALANCHE"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s10",
+   "type": "image",
+   "track": "fundo",
+   "label": "accumulated snow",
+   "start": 35.2,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "cut slope above tent",
+   "start": 35.2,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ACCUMULATED SNOW ON A CUT SLOPE\nABOVE THE TENT",
+    "x": 640,
+    "y": 360,
+    "size": 38,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s11",
+   "type": "image",
+   "track": "fundo",
+   "label": "force of impact",
+   "start": 38.6,
+   "dur": 3.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "exact injuries",
+   "start": 38.6,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ENOUGH FORCE TO CAUSE\nTHE EXACT INJURIES",
+    "x": 640,
+    "y": 360,
+    "size": 42,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["EXACT INJURIES"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s12",
+   "type": "image",
+   "track": "fundo",
+   "label": "panicked escape",
+   "start": 42.2,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/05.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t12",
+   "type": "text",
+   "track": "textos",
+   "label": "panicked - cut their way out",
+   "start": 42.2,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "THEY PANICKED\nCUT THEIR WAY OUT",
+    "x": 640,
+    "y": 360,
+    "size": 48,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s13",
+   "type": "image",
+   "track": "fundo",
+   "label": "fled downhill",
+   "start": 45.6,
+   "dur": 3.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t13",
+   "type": "text",
+   "track": "textos",
+   "label": "fled downhill",
+   "start": 45.6,
+   "dur": 3.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "FLED DOWNHILL INTO\nTHE FREEZING NIGHT",
+    "x": 640,
+    "y": 360,
+    "size": 46,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s14",
+   "type": "image",
+   "track": "fundo",
+   "label": "hypothermia",
+   "start": 49.0,
+   "dur": 3.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/09.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   }
+  },
+  {
+   "id": "t14",
+   "type": "text",
+   "track": "textos",
+   "label": "hypothermia",
+   "start": 49.0,
+   "dur": 3.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "HYPOTHERMIA DID THE REST",
+    "x": 640,
+    "y": 360,
+    "size": 48,
+    "color": "#e8ed30",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s15",
+   "type": "image",
+   "track": "fundo",
+   "label": "mystery solved",
+   "start": 52.6,
+   "dur": 4.0,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t15",
+   "type": "text",
+   "track": "textos",
+   "label": "mystery haunted Russia",
+   "start": 52.6,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "THE MYSTERY THAT HAUNTED\nRUSSIA FOR DECADES",
+    "x": 640,
+    "y": 340,
+    "size": 44,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s16",
+   "type": "image",
+   "track": "fundo",
+   "label": "snow gravity terror",
+   "start": 56.6,
+   "dur": 4.4,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/06.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_out",
+    "motion_amount": 0.06
+   }
+  },
+  {
+   "id": "t16",
+   "type": "text",
+   "track": "textos",
+   "label": "snow gravity terror",
+   "start": 56.6,
+   "dur": 4.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "SNOW, GRAVITY\nAND HUMAN TERROR",
+    "x": 640,
+    "y": 360,
+    "size": 52,
+    "color": "#d2dedf",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "highlight": ["SNOW", "GRAVITY", "HUMAN TERROR"],
+    "hl_color": "#e8ed30",
+    "shadow": true
+   }
+  },
+  {
+   "id": "s17",
+   "type": "image",
+   "track": "fundo",
+   "label": "end card",
+   "start": 61.0,
+   "dur": 4.5,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.04
+   }
+  },
+  {
+   "id": "t17",
+   "type": "text",
+   "track": "fatos",
+   "label": "end card",
+   "start": 61.0,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "DYATLOV PASS — CASE CLOSED?",
+    "x": 640,
+    "y": 360,
+    "size": 56,
+    "color": "#e8ed30",
+    "weight": 800,
+    "font": "Inter",
+    "align": "center",
+    "shadow": true
+   }
+  }
+ ]
+}

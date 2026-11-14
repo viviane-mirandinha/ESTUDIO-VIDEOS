@@ -1,0 +1,2358 @@
+{
+ "version": 1,
+ "name": "03 - 3D ESCURO POR DENTRO - O clique da bomba de gasolina",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0b0c10"
+ },
+ "duration": 70.95,
+ "template": "local",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "3D escuro por dentro (objeto em corte)",
+ "referencia": {
+  "canal": "@comofunciona.br",
+  "canal_url": "https://www.instagram.com/comofunciona.br/",
+  "video": "https://www.instagram.com/reel/DerhXbbySTz/",
+  "nota": "1,5 mi views; bico da bomba em corte em estúdio escuro, breadcrumb + chip de capítulo, adesivos -4°, display LCD, legenda karaokê em caixa"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf"
+ },
+ "build_script": "gerar_edit.py (palco.py + cena.js + _template-palco3d/base.html)",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "cena",
+   "name": "Cenas 3D"
+  },
+  {
+   "id": "camera",
+   "name": "Câmera"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos/valores"
+  },
+  {
+   "id": "adesivos",
+   "name": "Adesivos"
+  },
+  {
+   "id": "capitulo",
+   "name": "Capítulo (chip)"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "breadcrumb",
+   "type": "param",
+   "label": "Breadcrumb (topo)",
+   "props": {
+    "value": "POR DENTRO · GASOLINA"
+   }
+  },
+  {
+   "id": "estrelas",
+   "type": "param",
+   "label": "Qtd. de estrelas",
+   "props": {
+    "value": 350
+   }
+  },
+  {
+   "id": "fog_ini",
+   "type": "param",
+   "label": "Névoa início",
+   "props": {
+    "value": 30
+   }
+  },
+  {
+   "id": "fog_fim",
+   "type": "param",
+   "label": "Névoa fim",
+   "props": {
+    "value": 75
+   }
+  },
+  {
+   "id": "cor_chao",
+   "type": "param",
+   "label": "Cor do chão",
+   "props": {
+    "value": "#2a2a2e"
+   }
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: clique do bico",
+   "start": 1.15,
+   "dur": 0.55,
+   "props": {
+    "html": ""
+   },
+   "id": "c_clique"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: gasolina descendo no bico",
+   "start": 12.08,
+   "dur": 10.7,
+   "props": {
+    "html": ""
+   },
+   "id": "c_fluxo"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: ar entrando pelo furo",
+   "start": 13.82,
+   "dur": 5.54,
+   "props": {
+    "html": ""
+   },
+   "id": "c_ar"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: nível sobe e tampa o furo",
+   "start": 17.02,
+   "dur": 1.86,
+   "props": {
+    "html": ""
+   },
+   "id": "c_sobe"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: mola fecha a válvula",
+   "start": 20.68,
+   "dur": 0.5,
+   "props": {
+    "html": ""
+   },
+   "id": "c_mola"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: espaço de cima pisca",
+   "start": 30.12,
+   "dur": 2.6,
+   "props": {
+    "html": ""
+   },
+   "id": "c_espaco"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: vapor tanque -> cânister",
+   "start": 38.48,
+   "dur": 5.08,
+   "props": {
+    "html": ""
+   },
+   "id": "c_vapor"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: vapor cânister -> motor",
+   "start": 41.2,
+   "dur": 2.86,
+   "props": {
+    "html": ""
+   },
+   "id": "c_motor"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: líquido sobe a mangueira",
+   "start": 48.24,
+   "dur": 1.96,
+   "props": {
+    "html": ""
+   },
+   "id": "c_liquido"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: carvão encharcado",
+   "start": 49.6,
+   "dur": 1.6,
+   "props": {
+    "html": ""
+   },
+   "id": "c_encharca"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: tira o bico",
+   "start": 63.26,
+   "dur": 1.0,
+   "props": {
+    "html": ""
+   },
+   "id": "c_tira"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: bomba aberta",
+   "start": 0,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     13.15,
+     2.76,
+     10.5
+    ],
+    "look": [
+     12.9,
+     0.97,
+     0
+    ],
+    "trans": 0,
+    "drift": 0.35
+   },
+   "id": "cam16"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: bomba aproxima",
+   "start": 3.32,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     13.05,
+     2.72,
+     8.5
+    ],
+    "look": [
+     12.8,
+     1.27,
+     0
+    ],
+    "trans": 1.4,
+    "drift": 0.35
+   },
+   "id": "cam17"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: ponta do bico (furinho)",
+   "start": 8.6,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.55,
+     3.31,
+     3.4
+    ],
+    "look": [
+     2.35,
+     2.73,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.12
+   },
+   "id": "cam18"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: bico: gasolina + ar",
+   "start": 12.08,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.7,
+     4.42,
+     5.2
+    ],
+    "look": [
+     2.45,
+     3.54,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.15
+   },
+   "id": "cam19"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: ponta: nível sobe",
+   "start": 16.82,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.6,
+     3.5,
+     4.2
+    ],
+    "look": [
+     2.4,
+     2.79,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.12
+   },
+   "id": "cam20"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: câmara da mola",
+   "start": 20.08,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     3.0,
+     6.56,
+     3.8
+    ],
+    "look": [
+     2.85,
+     5.91,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.12
+   },
+   "id": "cam21"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: bico inteiro",
+   "start": 22.78,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.65,
+     4.96,
+     8.0
+    ],
+    "look": [
+     2.4,
+     3.6,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam22"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tanque + boca",
+   "start": 25.26,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.65,
+     3.18,
+     11.5
+    ],
+    "look": [
+     0.4,
+     1.23,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam23"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: espaço de cima",
+   "start": 29.82,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.25,
+     2.74,
+     9.5
+    ],
+    "look": [
+     0.0,
+     1.12,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam24"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: mangueira + cânister",
+   "start": 32.72,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -2.65,
+     3.58,
+     14.0
+    ],
+    "look": [
+     -2.9,
+     1.2,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam25"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: motor",
+   "start": 41.2,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -5.55,
+     2.72,
+     11.0
+    ],
+    "look": [
+     -5.8,
+     0.85,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam26"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: cânister de perto",
+   "start": 43.56,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -4.35,
+     2.35,
+     7.5
+    ],
+    "look": [
+     -4.6,
+     1.07,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam27"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: sistema inteiro",
+   "start": 46.52,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.35,
+     4.56,
+     23.0
+    ],
+    "look": [
+     -1.6,
+     0.65,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam28"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: carvão encharcando",
+   "start": 49.4,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -4.35,
+     2.41,
+     8.0
+    ],
+    "look": [
+     -4.6,
+     1.05,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam29"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: display da bomba",
+   "start": 55.64,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     12.35,
+     3.02,
+     6.0
+    ],
+    "look": [
+     12.1,
+     2.0,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam30"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: bomba aberta",
+   "start": 58.48,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     13.15,
+     2.76,
+     10.5
+    ],
+    "look": [
+     12.9,
+     0.97,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam31"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tanque cheio",
+   "start": 64.26,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.65,
+     3.18,
+     11.5
+    ],
+    "look": [
+     0.4,
+     1.23,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam32"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tudo por dentro",
+   "start": 67.4,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.35,
+     4.56,
+     23.0
+    ],
+    "look": [
+     -1.6,
+     0.65,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam33"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• O CLIQUE",
+   "start": 0,
+   "dur": 8.6,
+   "props": {
+    "text": "O CLIQUE"
+   },
+   "id": "cap34"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• DENTRO DO BICO",
+   "start": 8.6,
+   "dur": 16.66,
+   "props": {
+    "text": "DENTRO DO BICO"
+   },
+   "id": "cap35"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• A BOCA DO TANQUE",
+   "start": 25.26,
+   "dur": 7.46,
+   "props": {
+    "text": "A BOCA DO TANQUE"
+   },
+   "id": "cap36"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• O CÂNISTER",
+   "start": 32.72,
+   "dur": 13.8,
+   "props": {
+    "text": "O CÂNISTER"
+   },
+   "id": "cap37"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• SE COMPLETAR",
+   "start": 46.52,
+   "dur": 11.96,
+   "props": {
+    "text": "SE COMPLETAR"
+   },
+   "id": "cap38"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• PAROU NO CLIQUE",
+   "start": 58.48,
+   "dur": 8.92,
+   "props": {
+    "text": "PAROU NO CLIQUE"
+   },
+   "id": "cap39"
+  },
+  {
+   "type": "text",
+   "track": "capitulo",
+   "by": "template",
+   "label": "• POR DENTRO",
+   "start": 67.4,
+   "dur": 3.55,
+   "props": {
+    "text": "POR DENTRO"
+   },
+   "id": "cap40"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: R$ 199,07",
+   "start": 0,
+   "dur": 8.6,
+   "props": {
+    "text": "R$ 199,07",
+    "estilo": "lcd",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "lcd",
+    "count": [
+     199.07,
+     200.0,
+     2
+    ],
+    "prefix": "R$ ",
+    "t0": 5.9,
+    "t1": 2.119999999999999
+   },
+   "id": "rot41"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: CLIQUE!",
+   "start": 0.9,
+   "dur": 2.42,
+   "props": {
+    "text": "CLIQUE!",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "bicoA"
+   },
+   "id": "rot42"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: NÃO É CHUTE",
+   "start": 2.52,
+   "dur": 1.54,
+   "props": {
+    "text": "NÃO É CHUTE",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4
+   },
+   "id": "ade43"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: NÃO TEM ONDE GUARDAR",
+   "start": 6.34,
+   "dur": 2.26,
+   "props": {
+    "text": "NÃO TEM ONDE GUARDAR",
+    "cor": "vermelho",
+    "x": 540,
+    "y": 640,
+    "rot": -4,
+    "size": 60
+   },
+   "id": "ade44"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: FURINHO",
+   "start": 11.24,
+   "dur": 0.84,
+   "props": {
+    "text": "FURINHO",
+    "estilo": "tag",
+    "dx": -150,
+    "dy": 0,
+    "anchor": "furo"
+   },
+   "id": "rot45"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: PUXA AR PELO FURO",
+   "start": 14.12,
+   "dur": 2.0,
+   "props": {
+    "text": "PUXA AR PELO FURO",
+    "estilo": "tag",
+    "dx": -120,
+    "dy": 0,
+    "anchor": "tubo"
+   },
+   "id": "rot46"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: GASOLINA TAMPOU O FURO",
+   "start": 17.82,
+   "dur": 1.34,
+   "props": {
+    "text": "GASOLINA TAMPOU O FURO",
+    "estilo": "tag",
+    "dx": -60,
+    "dy": 0,
+    "anchor": "furo"
+   },
+   "id": "rot47"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: AR PAROU",
+   "start": 19.16,
+   "dur": 1.42,
+   "props": {
+    "text": "AR PAROU",
+    "estilo": "vermelho",
+    "dx": -120,
+    "dy": 0,
+    "anchor": "furo"
+   },
+   "id": "rot48"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MOLA FECHA A VÁLVULA",
+   "start": 20.58,
+   "dur": 2.2,
+   "props": {
+    "text": "MOLA FECHA A VÁLVULA",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "mola"
+   },
+   "id": "rot49"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: SEM SENSOR",
+   "start": 22.78,
+   "dur": 2.48,
+   "props": {
+    "text": "SEM SENSOR",
+    "cor": "vermelho",
+    "x": 540,
+    "y": 600,
+    "rot": -4
+   },
+   "id": "ade50"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: SEM CHIP",
+   "start": 23.82,
+   "dur": 1.44,
+   "props": {
+    "text": "SEM CHIP",
+    "cor": "vermelho",
+    "x": 540,
+    "y": 740,
+    "rot": 3
+   },
+   "id": "ade51"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: SÓ AR",
+   "start": 24.72,
+   "dur": 0.54,
+   "props": {
+    "text": "SÓ AR",
+    "cor": "verde",
+    "x": 540,
+    "y": 880,
+    "rot": -4
+   },
+   "id": "ade52"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: CHEGOU NA BOCA",
+   "start": 28.28,
+   "dur": 1.54,
+   "props": {
+    "text": "CHEGOU NA BOCA",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "boca"
+   },
+   "id": "rot53"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ESPAÇO",
+   "start": 30.12,
+   "dur": 2.6,
+   "props": {
+    "text": "ESPAÇO",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "espaco"
+   },
+   "id": "rot54"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: TEM DONO",
+   "start": 31.68,
+   "dur": 1.04,
+   "props": {
+    "text": "TEM DONO",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4
+   },
+   "id": "ade55"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MANGUEIRA",
+   "start": 34.06,
+   "dur": 3.6,
+   "props": {
+    "text": "MANGUEIRA",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "mangueira"
+   },
+   "id": "rot56"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: CARVÃO",
+   "start": 36.22,
+   "dur": 0.68,
+   "props": {
+    "text": "CARVÃO",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "canister"
+   },
+   "id": "rot57"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: CÂNISTER",
+   "start": 36.9,
+   "dur": 0.76,
+   "props": {
+    "text": "CÂNISTER",
+    "estilo": "branco",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "canister"
+   },
+   "id": "rot58"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: VAPOR DA GASOLINA",
+   "start": 38.48,
+   "dur": 2.72,
+   "props": {
+    "text": "VAPOR DA GASOLINA",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "mangueira"
+   },
+   "id": "rot59"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MOTOR QUEIMA O VAPOR",
+   "start": 41.82,
+   "dur": 1.74,
+   "props": {
+    "text": "MOTOR QUEIMA O VAPOR",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "motor"
+   },
+   "id": "rot60"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: FEITO PRA VAPOR",
+   "start": 44.1,
+   "dur": 2.42,
+   "props": {
+    "text": "FEITO PRA VAPOR",
+    "cor": "verde",
+    "x": 540,
+    "y": 600,
+    "rot": -4
+   },
+   "id": "ade61"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: NÃO PRA LÍQUIDO",
+   "start": 45.38,
+   "dur": 1.14,
+   "props": {
+    "text": "NÃO PRA LÍQUIDO",
+    "cor": "vermelho",
+    "x": 540,
+    "y": 740,
+    "rot": 3
+   },
+   "id": "ade62"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ENCHARCA O CARVÃO",
+   "start": 49.6,
+   "dur": 1.66,
+   "props": {
+    "text": "ENCHARCA O CARVÃO",
+    "estilo": "vermelho",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "canister"
+   },
+   "id": "rot63"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ⚠ LUZ DA INJEÇÃO",
+   "start": 51.26,
+   "dur": 4.38,
+   "props": {
+    "text": "⚠ LUZ DA INJEÇÃO",
+    "estilo": "alerta",
+    "dx": 0,
+    "dy": 0,
+    "x": 540,
+    "y": 620
+   },
+   "id": "rot64"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: CONSERTO: CENTENAS DE R$",
+   "start": 53.38,
+   "dur": 2.26,
+   "props": {
+    "text": "CONSERTO: CENTENAS DE R$",
+    "estilo": "vermelho",
+    "dx": 0,
+    "dy": 0,
+    "x": 540,
+    "y": 780,
+    "size": 56
+   },
+   "id": "rot65"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: R$ 200,00",
+   "start": 55.64,
+   "dur": 2.84,
+   "props": {
+    "text": "R$ 200,00",
+    "estilo": "lcd",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "lcd"
+   },
+   "id": "rot66"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: NÚMERO REDONDO",
+   "start": 56.6,
+   "dur": 1.88,
+   "props": {
+    "text": "NÚMERO REDONDO",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4
+   },
+   "id": "ade67"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: AVISE O FRENTISTA",
+   "start": 60.26,
+   "dur": 1.36,
+   "props": {
+    "text": "AVISE O FRENTISTA",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4
+   },
+   "id": "ade68"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: PAROU NO 1º CLIQUE",
+   "start": 61.62,
+   "dur": 1.46,
+   "props": {
+    "text": "PAROU NO 1º CLIQUE",
+    "cor": "verde",
+    "x": 540,
+    "y": 640,
+    "rot": -4
+   },
+   "id": "ade69"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: PODE TIRAR O BICO",
+   "start": 63.08,
+   "dur": 1.18,
+   "props": {
+    "text": "PODE TIRAR O BICO",
+    "estilo": "tag",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "bicoA"
+   },
+   "id": "rot70"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: TANQUE CHEIO",
+   "start": 64.98,
+   "dur": 2.42,
+   "props": {
+    "text": "TANQUE CHEIO",
+    "estilo": "verde",
+    "dx": 0,
+    "dy": 0,
+    "anchor": "espaco"
+   },
+   "id": "rot71"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: A BOMBA JÁ TE AVISOU",
+   "start": 65.7,
+   "dur": 1.7,
+   "props": {
+    "text": "A BOMBA JÁ TE AVISOU",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4,
+    "size": 60
+   },
+   "id": "ade72"
+  },
+  {
+   "type": "text",
+   "track": "adesivos",
+   "by": "template",
+   "label": "adesivo: SEGUE PRA VER POR DENTRO",
+   "start": 67.4,
+   "dur": 3.55,
+   "props": {
+    "text": "SEGUE PRA VER POR DENTRO",
+    "cor": "amarelo",
+    "x": 540,
+    "y": 640,
+    "rot": -4,
+    "size": 58
+   },
+   "id": "ade73"
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "Legenda karaokê",
+   "start": 0,
+   "dur": 70.95,
+   "props": {
+    "words": [
+     {
+      "w": "Sabia",
+      "s": 0.0,
+      "e": 0.52
+     },
+     {
+      "w": "que",
+      "s": 0.52,
+      "e": 0.66
+     },
+     {
+      "w": "o",
+      "s": 0.66,
+      "e": 0.9
+     },
+     {
+      "w": "clique",
+      "s": 0.9,
+      "e": 1.04
+     },
+     {
+      "w": "da",
+      "s": 1.04,
+      "e": 1.24
+     },
+     {
+      "w": "bomba",
+      "s": 1.24,
+      "e": 1.52
+     },
+     {
+      "w": "de",
+      "s": 1.52,
+      "e": 1.7
+     },
+     {
+      "w": "gasolina",
+      "s": 1.7,
+      "e": 2.04
+     },
+     {
+      "w": "não",
+      "s": 2.04,
+      "e": 2.26
+     },
+     {
+      "w": "é",
+      "s": 2.26,
+      "e": 2.52
+     },
+     {
+      "w": "chute?",
+      "s": 2.52,
+      "e": 3.16
+     },
+     {
+      "w": "Pois",
+      "s": 3.32,
+      "e": 3.6
+     },
+     {
+      "w": "é,",
+      "s": 3.6,
+      "e": 3.88
+     },
+     {
+      "w": "esse",
+      "s": 4.06,
+      "e": 4.3
+     },
+     {
+      "w": "clique",
+      "s": 4.3,
+      "e": 4.58
+     },
+     {
+      "w": "tem",
+      "s": 4.58,
+      "e": 4.88
+     },
+     {
+      "w": "motivo",
+      "s": 4.88,
+      "e": 5.4
+     },
+     {
+      "w": "e",
+      "s": 5.4,
+      "e": 5.8
+     },
+     {
+      "w": "o",
+      "s": 5.8,
+      "e": 5.9
+     },
+     {
+      "w": "seu",
+      "s": 5.9,
+      "e": 6.04
+     },
+     {
+      "w": "carro",
+      "s": 6.04,
+      "e": 6.34
+     },
+     {
+      "w": "não",
+      "s": 6.34,
+      "e": 6.74
+     },
+     {
+      "w": "tem",
+      "s": 6.74,
+      "e": 6.92
+     },
+     {
+      "w": "onde",
+      "s": 6.92,
+      "e": 7.08
+     },
+     {
+      "w": "guardar",
+      "s": 7.08,
+      "e": 7.5
+     },
+     {
+      "w": "esse",
+      "s": 7.5,
+      "e": 7.72
+     },
+     {
+      "w": "extra.",
+      "s": 7.72,
+      "e": 8.12
+     },
+     {
+      "w": "Olha",
+      "s": 8.6,
+      "e": 8.7
+     },
+     {
+      "w": "que",
+      "s": 8.7,
+      "e": 8.88
+     },
+     {
+      "w": "genial,",
+      "s": 8.88,
+      "e": 9.3
+     },
+     {
+      "w": "lá",
+      "s": 9.54,
+      "e": 9.8
+     },
+     {
+      "w": "na",
+      "s": 9.8,
+      "e": 10.0
+     },
+     {
+      "w": "ponta",
+      "s": 10.0,
+      "e": 10.32
+     },
+     {
+      "w": "do",
+      "s": 10.32,
+      "e": 10.56
+     },
+     {
+      "w": "bico",
+      "s": 10.56,
+      "e": 10.78
+     },
+     {
+      "w": "tem",
+      "s": 10.78,
+      "e": 10.96
+     },
+     {
+      "w": "um",
+      "s": 10.96,
+      "e": 11.24
+     },
+     {
+      "w": "furinho.",
+      "s": 11.24,
+      "e": 11.84
+     },
+     {
+      "w": "Enquanto",
+      "s": 12.08,
+      "e": 12.3
+     },
+     {
+      "w": "a",
+      "s": 12.3,
+      "e": 12.54
+     },
+     {
+      "w": "gasolina",
+      "s": 12.54,
+      "e": 12.84
+     },
+     {
+      "w": "desce,",
+      "s": 12.84,
+      "e": 13.38
+     },
+     {
+      "w": "o",
+      "s": 13.6,
+      "e": 13.7
+     },
+     {
+      "w": "bico",
+      "s": 13.7,
+      "e": 13.94
+     },
+     {
+      "w": "vai",
+      "s": 13.94,
+      "e": 14.12
+     },
+     {
+      "w": "puxando",
+      "s": 14.12,
+      "e": 14.76
+     },
+     {
+      "w": "o",
+      "s": 14.76,
+      "e": 14.94
+     },
+     {
+      "w": "ar",
+      "s": 14.94,
+      "e": 15.02
+     },
+     {
+      "w": "por",
+      "s": 15.02,
+      "e": 15.28
+     },
+     {
+      "w": "esse",
+      "s": 15.28,
+      "e": 15.48
+     },
+     {
+      "w": "furo.",
+      "s": 15.48,
+      "e": 15.98
+     },
+     {
+      "w": "Quando",
+      "s": 16.12,
+      "e": 16.34
+     },
+     {
+      "w": "o",
+      "s": 16.34,
+      "e": 16.54
+     },
+     {
+      "w": "combustível",
+      "s": 16.54,
+      "e": 17.02
+     },
+     {
+      "w": "sobe",
+      "s": 17.02,
+      "e": 17.5
+     },
+     {
+      "w": "e",
+      "s": 17.5,
+      "e": 17.82
+     },
+     {
+      "w": "tampa",
+      "s": 17.82,
+      "e": 18.1
+     },
+     {
+      "w": "o",
+      "s": 18.1,
+      "e": 18.28
+     },
+     {
+      "w": "buraco,",
+      "s": 18.28,
+      "e": 18.68
+     },
+     {
+      "w": "o",
+      "s": 18.92,
+      "e": 19.0
+     },
+     {
+      "w": "ar",
+      "s": 19.0,
+      "e": 19.16
+     },
+     {
+      "w": "para",
+      "s": 19.16,
+      "e": 19.48
+     },
+     {
+      "w": "de",
+      "s": 19.48,
+      "e": 19.8
+     },
+     {
+      "w": "entrar",
+      "s": 19.8,
+      "e": 19.98
+     },
+     {
+      "w": "e",
+      "s": 19.98,
+      "e": 20.28
+     },
+     {
+      "w": "uma",
+      "s": 20.28,
+      "e": 20.58
+     },
+     {
+      "w": "mola",
+      "s": 20.58,
+      "e": 20.96
+     },
+     {
+      "w": "fecha",
+      "s": 20.96,
+      "e": 21.36
+     },
+     {
+      "w": "a",
+      "s": 21.36,
+      "e": 21.52
+     },
+     {
+      "w": "válvula",
+      "s": 21.52,
+      "e": 21.86
+     },
+     {
+      "w": "na",
+      "s": 21.86,
+      "e": 22.14
+     },
+     {
+      "w": "hora.",
+      "s": 22.14,
+      "e": 22.46
+     },
+     {
+      "w": "Sem",
+      "s": 22.78,
+      "e": 22.94
+     },
+     {
+      "w": "sensor,",
+      "s": 22.94,
+      "e": 23.5
+     },
+     {
+      "w": "sem",
+      "s": 23.82,
+      "e": 24.06
+     },
+     {
+      "w": "chip,",
+      "s": 24.06,
+      "e": 24.4
+     },
+     {
+      "w": "só",
+      "s": 24.72,
+      "e": 24.98
+     },
+     {
+      "w": "ar.",
+      "s": 24.98,
+      "e": 25.26
+     },
+     {
+      "w": "Então",
+      "s": 25.26,
+      "e": 25.92
+     },
+     {
+      "w": "o",
+      "s": 25.92,
+      "e": 26.24
+     },
+     {
+      "w": "clique",
+      "s": 26.24,
+      "e": 26.44
+     },
+     {
+      "w": "quer",
+      "s": 26.44,
+      "e": 26.7
+     },
+     {
+      "w": "dizer",
+      "s": 26.7,
+      "e": 27.1
+     },
+     {
+      "w": "a",
+      "s": 27.1,
+      "e": 27.38
+     },
+     {
+      "w": "gasolina",
+      "s": 27.38,
+      "e": 27.84
+     },
+     {
+      "w": "já",
+      "s": 27.84,
+      "e": 28.28
+     },
+     {
+      "w": "chegou",
+      "s": 28.28,
+      "e": 28.52
+     },
+     {
+      "w": "na",
+      "s": 28.52,
+      "e": 28.72
+     },
+     {
+      "w": "boca",
+      "s": 28.72,
+      "e": 28.96
+     },
+     {
+      "w": "do",
+      "s": 28.96,
+      "e": 29.16
+     },
+     {
+      "w": "tanque.",
+      "s": 29.16,
+      "e": 29.64
+     },
+     {
+      "w": "E",
+      "s": 29.82,
+      "e": 29.9
+     },
+     {
+      "w": "o",
+      "s": 29.9,
+      "e": 30.12
+     },
+     {
+      "w": "espaço",
+      "s": 30.12,
+      "e": 30.38
+     },
+     {
+      "w": "que",
+      "s": 30.38,
+      "e": 30.68
+     },
+     {
+      "w": "sobra",
+      "s": 30.68,
+      "e": 30.9
+     },
+     {
+      "w": "lá",
+      "s": 30.9,
+      "e": 31.12
+     },
+     {
+      "w": "em",
+      "s": 31.12,
+      "e": 31.36
+     },
+     {
+      "w": "cima",
+      "s": 31.36,
+      "e": 31.68
+     },
+     {
+      "w": "tem",
+      "s": 31.68,
+      "e": 32.0
+     },
+     {
+      "w": "dono.",
+      "s": 32.0,
+      "e": 32.6
+     },
+     {
+      "w": "O",
+      "s": 32.72,
+      "e": 32.96
+     },
+     {
+      "w": "tanque",
+      "s": 32.96,
+      "e": 33.22
+     },
+     {
+      "w": "é",
+      "s": 33.22,
+      "e": 33.4
+     },
+     {
+      "w": "ligado",
+      "s": 33.4,
+      "e": 33.66
+     },
+     {
+      "w": "por",
+      "s": 33.66,
+      "e": 33.88
+     },
+     {
+      "w": "uma",
+      "s": 33.88,
+      "e": 34.06
+     },
+     {
+      "w": "mangueira",
+      "s": 34.06,
+      "e": 34.58
+     },
+     {
+      "w": "a",
+      "s": 34.58,
+      "e": 34.78
+     },
+     {
+      "w": "uma",
+      "s": 34.78,
+      "e": 34.96
+     },
+     {
+      "w": "caixinha",
+      "s": 34.96,
+      "e": 35.5
+     },
+     {
+      "w": "cheia",
+      "s": 35.5,
+      "e": 35.88
+     },
+     {
+      "w": "de",
+      "s": 35.88,
+      "e": 36.22
+     },
+     {
+      "w": "carvão,",
+      "s": 36.22,
+      "e": 36.52
+     },
+     {
+      "w": "o",
+      "s": 36.64,
+      "e": 36.9
+     },
+     {
+      "w": "cânister.",
+      "s": 36.9,
+      "e": 37.36
+     },
+     {
+      "w": "Ele",
+      "s": 37.66,
+      "e": 37.94
+     },
+     {
+      "w": "segura",
+      "s": 37.94,
+      "e": 38.32
+     },
+     {
+      "w": "o",
+      "s": 38.32,
+      "e": 38.48
+     },
+     {
+      "w": "vapor",
+      "s": 38.48,
+      "e": 38.72
+     },
+     {
+      "w": "da",
+      "s": 38.72,
+      "e": 38.94
+     },
+     {
+      "w": "gasolina",
+      "s": 38.94,
+      "e": 39.34
+     },
+     {
+      "w": "para",
+      "s": 39.34,
+      "e": 39.64
+     },
+     {
+      "w": "não",
+      "s": 39.64,
+      "e": 39.9
+     },
+     {
+      "w": "escapar",
+      "s": 39.9,
+      "e": 40.32
+     },
+     {
+      "w": "para",
+      "s": 40.32,
+      "e": 40.5
+     },
+     {
+      "w": "o",
+      "s": 40.5,
+      "e": 40.66
+     },
+     {
+      "w": "ar",
+      "s": 40.66,
+      "e": 40.82
+     },
+     {
+      "w": "e",
+      "s": 41.04,
+      "e": 41.2
+     },
+     {
+      "w": "depois",
+      "s": 41.2,
+      "e": 41.58
+     },
+     {
+      "w": "o",
+      "s": 41.58,
+      "e": 41.82
+     },
+     {
+      "w": "motor",
+      "s": 41.82,
+      "e": 42.16
+     },
+     {
+      "w": "queima",
+      "s": 42.16,
+      "e": 42.58
+     },
+     {
+      "w": "esse",
+      "s": 42.58,
+      "e": 42.82
+     },
+     {
+      "w": "vapor.",
+      "s": 42.82,
+      "e": 43.18
+     },
+     {
+      "w": "Só",
+      "s": 43.56,
+      "e": 43.72
+     },
+     {
+      "w": "que",
+      "s": 43.72,
+      "e": 43.82
+     },
+     {
+      "w": "ele",
+      "s": 43.82,
+      "e": 43.94
+     },
+     {
+      "w": "foi",
+      "s": 43.94,
+      "e": 44.1
+     },
+     {
+      "w": "feito",
+      "s": 44.1,
+      "e": 44.38
+     },
+     {
+      "w": "para",
+      "s": 44.38,
+      "e": 44.66
+     },
+     {
+      "w": "vapor,",
+      "s": 44.66,
+      "e": 45.1
+     },
+     {
+      "w": "não",
+      "s": 45.38,
+      "e": 45.62
+     },
+     {
+      "w": "para",
+      "s": 45.62,
+      "e": 45.9
+     },
+     {
+      "w": "líquido.",
+      "s": 45.9,
+      "e": 46.26
+     },
+     {
+      "w": "Se",
+      "s": 46.52,
+      "e": 46.7
+     },
+     {
+      "w": "o",
+      "s": 46.7,
+      "e": 46.82
+     },
+     {
+      "w": "frentista",
+      "s": 46.82,
+      "e": 47.24
+     },
+     {
+      "w": "insiste",
+      "s": 47.24,
+      "e": 47.84
+     },
+     {
+      "w": "e",
+      "s": 47.84,
+      "e": 48.24
+     },
+     {
+      "w": "completa,",
+      "s": 48.24,
+      "e": 48.52
+     },
+     {
+      "w": "a",
+      "s": 48.84,
+      "e": 49.04
+     },
+     {
+      "w": "gasolina",
+      "s": 49.04,
+      "e": 49.34
+     },
+     {
+      "w": "pode",
+      "s": 49.34,
+      "e": 49.6
+     },
+     {
+      "w": "encharcar",
+      "s": 49.6,
+      "e": 50.26
+     },
+     {
+      "w": "esse",
+      "s": 50.26,
+      "e": 50.46
+     },
+     {
+      "w": "carvão,",
+      "s": 50.46,
+      "e": 50.98
+     },
+     {
+      "w": "acender",
+      "s": 51.26,
+      "e": 51.68
+     },
+     {
+      "w": "a",
+      "s": 51.68,
+      "e": 51.8
+     },
+     {
+      "w": "luz",
+      "s": 51.8,
+      "e": 51.98
+     },
+     {
+      "w": "da",
+      "s": 51.98,
+      "e": 52.18
+     },
+     {
+      "w": "injeção",
+      "s": 52.18,
+      "e": 52.66
+     },
+     {
+      "w": "e",
+      "s": 52.66,
+      "e": 52.96
+     },
+     {
+      "w": "virar",
+      "s": 52.96,
+      "e": 53.18
+     },
+     {
+      "w": "um",
+      "s": 53.18,
+      "e": 53.38
+     },
+     {
+      "w": "conserto",
+      "s": 53.38,
+      "e": 53.82
+     },
+     {
+      "w": "de",
+      "s": 53.82,
+      "e": 54.1
+     },
+     {
+      "w": "centenas",
+      "s": 54.1,
+      "e": 54.68
+     },
+     {
+      "w": "de",
+      "s": 54.68,
+      "e": 54.92
+     },
+     {
+      "w": "reais.",
+      "s": 54.92,
+      "e": 55.26
+     },
+     {
+      "w": "Tudo",
+      "s": 55.64,
+      "e": 55.84
+     },
+     {
+      "w": "isso",
+      "s": 55.84,
+      "e": 56.2
+     },
+     {
+      "w": "por",
+      "s": 56.2,
+      "e": 56.42
+     },
+     {
+      "w": "um",
+      "s": 56.42,
+      "e": 56.6
+     },
+     {
+      "w": "número",
+      "s": 56.6,
+      "e": 56.86
+     },
+     {
+      "w": "redondo",
+      "s": 56.86,
+      "e": 57.44
+     },
+     {
+      "w": "na",
+      "s": 57.44,
+      "e": 57.64
+     },
+     {
+      "w": "bomba.",
+      "s": 57.64,
+      "e": 58.16
+     },
+     {
+      "w": "Então,",
+      "s": 58.48,
+      "e": 58.78
+     },
+     {
+      "w": "da",
+      "s": 59.02,
+      "e": 59.16
+     },
+     {
+      "w": "próxima",
+      "s": 59.16,
+      "e": 59.5
+     },
+     {
+      "w": "vez,",
+      "s": 59.5,
+      "e": 59.94
+     },
+     {
+      "w": "avise",
+      "s": 60.26,
+      "e": 60.46
+     },
+     {
+      "w": "o",
+      "s": 60.46,
+      "e": 60.58
+     },
+     {
+      "w": "frentista.",
+      "s": 60.58,
+      "e": 61.14
+     },
+     {
+      "w": "Parou",
+      "s": 61.62,
+      "e": 61.8
+     },
+     {
+      "w": "no",
+      "s": 61.8,
+      "e": 62.0
+     },
+     {
+      "w": "primeiro",
+      "s": 62.0,
+      "e": 62.4
+     },
+     {
+      "w": "clique,",
+      "s": 62.4,
+      "e": 62.74
+     },
+     {
+      "w": "pode",
+      "s": 63.08,
+      "e": 63.26
+     },
+     {
+      "w": "tirar",
+      "s": 63.26,
+      "e": 63.56
+     },
+     {
+      "w": "o",
+      "s": 63.56,
+      "e": 63.74
+     },
+     {
+      "w": "bico.",
+      "s": 63.74,
+      "e": 64.0
+     },
+     {
+      "w": "O",
+      "s": 64.26,
+      "e": 64.48
+     },
+     {
+      "w": "tanque",
+      "s": 64.48,
+      "e": 64.72
+     },
+     {
+      "w": "está",
+      "s": 64.72,
+      "e": 64.98
+     },
+     {
+      "w": "cheio,",
+      "s": 64.98,
+      "e": 65.46
+     },
+     {
+      "w": "a",
+      "s": 65.7,
+      "e": 65.88
+     },
+     {
+      "w": "bomba",
+      "s": 65.88,
+      "e": 66.2
+     },
+     {
+      "w": "já",
+      "s": 66.2,
+      "e": 66.38
+     },
+     {
+      "w": "te",
+      "s": 66.38,
+      "e": 66.56
+     },
+     {
+      "w": "avisou.",
+      "s": 66.56,
+      "e": 67.04
+     },
+     {
+      "w": "Segue",
+      "s": 67.4,
+      "e": 67.6
+     },
+     {
+      "w": "pra",
+      "s": 67.6,
+      "e": 67.8
+     },
+     {
+      "w": "descobrir",
+      "s": 67.8,
+      "e": 68.26
+     },
+     {
+      "w": "como",
+      "s": 68.26,
+      "e": 68.6
+     },
+     {
+      "w": "as",
+      "s": 68.6,
+      "e": 68.82
+     },
+     {
+      "w": "coisas",
+      "s": 68.82,
+      "e": 69.08
+     },
+     {
+      "w": "funcionam",
+      "s": 69.08,
+      "e": 69.64
+     },
+     {
+      "w": "por",
+      "s": 69.64,
+      "e": 69.88
+     },
+     {
+      "w": "dentro.",
+      "s": 69.88,
+      "e": 70.14
+     }
+    ],
+    "max_words": 5
+   }
+  }
+ ]
+}

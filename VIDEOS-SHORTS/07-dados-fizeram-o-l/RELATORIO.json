@@ -1,0 +1,11 @@
+{
+ "video": 7,
+ "estilo": "Dados ranking escuro amarelo",
+ "inicio": "2026-10-22T20:02:00-03:00",
+ "fim": "2026-10-22T21:53:25-03:00",
+ "minutos": 19.2,
+ "render_segundos": 44,
+ "voz": "usuario",
+ "observacoes": "Roteiro novo + voz real (<sua pasta>/SHORTS/07.mp3, 62,4 s). Fotos com o L e cards eleitorais recortados do reel de referência (img/, lanczos). 4 cenas novas dr_pessoa/dr_grade/dr_cartas/dr_frase (cenas_07.py) + reuso de dr_barras e dr_numero. Whisper rodado SEM initial_prompt (com prompt ele pulou 'quatro famosos, quatro L...'); 'casé' do whisper normalizado para Cazé no gerar_edit.py. 1a tentativa de render falhou por JSON inválido nos params das cenas (.7) — corrigido. Ajuste: buracos pretos entre cenas fechados (1ª frase de dr_frase entra no início da cena; cada cena +0,35 s cobrindo o fade-in da próxima); blackdetect d=0.5 pix_th=0.08 = 0 trechos.",
+ "ponto_fraco": "O texto dentro dos cards eleitorais é recorte ampliado de um vídeo 720p e fica pequeno/pouco nítido; só a caixa vermelha na linha 'não cumprimento' lê bem."
+}

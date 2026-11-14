@@ -1,0 +1,11 @@
+{
+ "video": 5,
+ "estilo": "Cidade lowpoly seguidores",
+ "inicio": "2026-10-22T18:55:00-03:00",
+ "fim": "2026-10-22T19:31:30-03:00",
+ "minutos": 36.5,
+ "render_segundos": 49,
+ "voz": "usuario",
+ "observacoes": "Three.js + kit low-poly (_kit/lowpoly-kit.js) via template local; cidade InstancedMesh ~5,5 mil casas/4 mil árvores/900 carros; câmera de drone contínua; tempos 100% do words.json alinhado ao roteiro; voz ElevenLabs do usuário. 1 re-render (rótulo 1 MORADOR sobre a legenda).",
+ "ponto_fraco": "Casa herói e a cidade são bonitas, mas os bonecos/seguranças são simples demais e a cidade não tem placas com @ dos seguidores (só Nº 1), então a mecânica 'cada seguidor = uma casa' aparece menos que na referência."
+}

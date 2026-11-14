@@ -1,0 +1,1061 @@
+{
+ "version": 1,
+ "name": "06 - DADOS RANKING ESCURO - O deputado que nao cabe no grafico",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0B0B0C"
+ },
+ "duration": 83.59,
+ "template": "generic",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Dados ranking escuro amarelo",
+ "referencia": {
+  "canal": "@nikolasferreirabr",
+  "canal_url": "https://www.instagram.com/nikolasferreirabr/",
+  "video": "https://www.instagram.com/reel/DezYwoNydqk/",
+  "nota": "só o formato visual (infográfico preto/amarelo); logo do canto não copiado"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "fundo preto",
+   "start": 0,
+   "dur": 83.59,
+   "props": {
+    "fill": true,
+    "html": "<div class='drbg'></div>",
+    "css": ".drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}"
+   }
+  },
+  {
+   "id": "sc0",
+   "type": "scene",
+   "track": "visual",
+   "label": "gancho: não cabe no gráfico",
+   "start": 0.0,
+   "dur": 4.69,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Deputado federal",
+     "sub": "os mais votados da história",
+     "icone": "urna",
+     "linhas": [
+      {
+       "nome": "Recorde anterior",
+       "sub": "São Paulo",
+       "valor": 1.84,
+       "txt": "",
+       "ini": "SP",
+       "cor": "#5a5a5e",
+       "t": 0.25
+      },
+      {
+       "nome": "Nikolas Ferreira",
+       "sub": "Minas Gerais",
+       "foto": "img/nikolas.jpg",
+       "over": true,
+       "dest": true,
+       "t": 3.04
+      }
+     ],
+     "max": 3.1
+    }
+   }
+  },
+  {
+   "id": "sc1",
+   "type": "scene",
+   "track": "visual",
+   "label": "3,1 milhões",
+   "start": 4.69,
+   "dur": 4.25,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Nikolas Ferreira · votos na urna",
+     "foto": "img/nikolas.jpg",
+     "valor": "3,1",
+     "unidade": "milhões",
+     "sub": "de votos",
+     "t_valor": 6.04,
+     "t_sub": 7.94
+    }
+   }
+  },
+  {
+   "id": "sc2",
+   "type": "scene",
+   "track": "visual",
+   "label": "recorde 1,84 x 3,1",
+   "start": 8.94,
+   "dur": 6.54,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Recorde de votos",
+     "sub": "votos na urna",
+     "icone": "urna",
+     "linhas": [
+      {
+       "nome": "Recorde anterior",
+       "sub": "SP · maior eleitorado",
+       "ini": "SP",
+       "valor": 1.84,
+       "txt": "1,84 MI",
+       "cor": "#9a9aa0",
+       "t": 10.76
+      },
+      {
+       "nome": "Nikolas Ferreira",
+       "sub": "Minas Gerais",
+       "foto": "img/nikolas.jpg",
+       "valor": 3.1,
+       "txt": "3,1 MI",
+       "dest": true,
+       "t": 13.16
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc3",
+   "type": "scene",
+   "track": "visual",
+   "label": "mapa MG +69%",
+   "start": 15.48,
+   "dur": 6.32,
+   "props": {
+    "scene": "dr_mapa",
+    "params": {
+     "titulo": "Votos em Minas Gerais",
+     "sub": "Nikolas Ferreira",
+     "t_pontos": 15.78,
+     "valor": "+69%",
+     "t_valor": 16.46,
+     "rot_valor": "a mais que o recorde",
+     "nota": "com menos da metade dos eleitores",
+     "t_nota": 19.72
+    }
+   }
+  },
+  {
+   "id": "sc4",
+   "type": "scene",
+   "track": "visual",
+   "label": "IG 25 milhões",
+   "start": 21.8,
+   "dur": 3.36,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Instagram",
+     "icone": "ig",
+     "valor": "25",
+     "unidade": "milhões",
+     "sub": "de seguidores",
+     "t_valor": 22.9,
+     "t_sub": 24.44
+    }
+   }
+  },
+  {
+   "id": "sc5",
+   "type": "scene",
+   "track": "visual",
+   "label": "ranking IG mundo",
+   "start": 25.16,
+   "dur": 6.3,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Mais seguidos no Instagram",
+     "sub": "políticos no mundo",
+     "icone": "ig",
+     "linhas": [
+      {
+       "pos": "1º–6º",
+       "grupo": 6,
+       "nome": "6 políticos à frente",
+       "t": 26.38
+      },
+      {
+       "pos": "7º",
+       "nome": "Nikolas Ferreira",
+       "sub": "Brasil",
+       "foto": "img/nikolas.jpg",
+       "valor": 25,
+       "txt": "25 MI",
+       "dest": true,
+       "sobe": true,
+       "t": 27.08
+      },
+      {
+       "nome": "Lula",
+       "sub": "Brasil",
+       "foto": "img/lula.jpg",
+       "valor": 18,
+       "txt": "18 MI",
+       "cor": "#e04848",
+       "t": 28.6
+      },
+      {
+       "nome": "Flávio Bolsonaro",
+       "sub": "Brasil",
+       "foto": "img/flavio.jpg",
+       "valor": 15,
+       "txt": "15 MI",
+       "cor": "#3f7fe0",
+       "t": 30.94
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc6",
+   "type": "scene",
+   "track": "visual",
+   "label": "linha +6,2 mi",
+   "start": 31.46,
+   "dur": 8.02,
+   "props": {
+    "scene": "dr_linha",
+    "params": {
+     "titulo": "Seguidores no Instagram",
+     "sub": "ganho acumulado · 11 meses",
+     "icone": "ig",
+     "valores": [
+      0,
+      0.35,
+      0.7,
+      1.05,
+      1.4,
+      1.75,
+      2.1,
+      2.45,
+      2.8,
+      3.15,
+      3.5,
+      6.2
+     ],
+     "labels": [
+      "11 meses atrás",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "outubro"
+     ],
+     "t_ini": 31.96,
+     "t_fim": 33.96,
+     "rot_fim": "+6,2 MI",
+     "t_rot": 33.76,
+     "dest_ini": 10,
+     "t_dest": 36.8,
+     "rot_dest": "+2,7 MI EM OUTUBRO",
+     "t_dest2": 37.72
+    }
+   }
+  },
+  {
+   "id": "sc7",
+   "type": "scene",
+   "track": "visual",
+   "label": "ranking TikTok mundo",
+   "start": 39.48,
+   "dur": 6.98,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Mais seguidos no TikTok",
+     "sub": "políticos no mundo",
+     "icone": "tt",
+     "linhas": [
+      {
+       "pos": "1º–4º",
+       "grupo": 4,
+       "nome": "4 políticos à frente",
+       "t": 40.76
+      },
+      {
+       "pos": "5º",
+       "nome": "Nikolas Ferreira",
+       "sub": "Brasil",
+       "foto": "img/nikolas.jpg",
+       "dest": true,
+       "sobe": true,
+       "t": 41.26
+      },
+      {
+       "nome": "Emmanuel Macron",
+       "sub": "presidente da França",
+       "foto": "img/macron.jpg",
+       "t": 44.64
+      },
+      {
+       "nome": "Claudia Sheinbaum",
+       "sub": "presidenta do México",
+       "foto": "img/sheinbaum.jpg",
+       "t": 45.92
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc8",
+   "type": "scene",
+   "track": "visual",
+   "label": "TikTok Lula x Flávio",
+   "start": 46.46,
+   "dur": 4.94,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Seguidores no TikTok",
+     "sub": "brasileiros",
+     "icone": "tt",
+     "linhas": [
+      {
+       "nome": "Nikolas Ferreira",
+       "sub": "5º político do mundo",
+       "foto": "img/nikolas.jpg",
+       "dest": true,
+       "t": 46.660000000000004
+      },
+      {
+       "nome": "Lula",
+       "sub": "presidente",
+       "foto": "img/lula.jpg",
+       "valor": 6.2,
+       "txt": "6,2 MI",
+       "cor": "#e04848",
+       "t": 47.28
+      },
+      {
+       "nome": "Flávio Bolsonaro",
+       "sub": "senador",
+       "foto": "img/flavio.jpg",
+       "valor": 2.5,
+       "txt": "2,5 MI",
+       "cor": "#3f7fe0",
+       "t": 50.42
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc9",
+   "type": "scene",
+   "track": "visual",
+   "label": "curtidas 205/87/36",
+   "start": 51.4,
+   "dur": 14.46,
+   "props": {
+    "scene": "dr_barras",
+    "params": {
+     "titulo": "Curtidas acumuladas",
+     "sub": "no TikTok",
+     "icone": "tt",
+     "linhas": [
+      {
+       "nome": "Nikolas Ferreira",
+       "sub": "em 705 vídeos",
+       "foto": "img/nikolas.jpg",
+       "valor": 205,
+       "txt": "205 MI",
+       "dest": true,
+       "t": 54.0,
+       "t_sub": 55.98
+      },
+      {
+       "nome": "Lula",
+       "sub": "em 1.327 vídeos",
+       "foto": "img/lula.jpg",
+       "valor": 87,
+       "txt": "87 MI",
+       "cor": "#e04848",
+       "t": 58.68,
+       "t_sub": 60.18
+      },
+      {
+       "nome": "Flávio Bolsonaro",
+       "sub": "em 1.712 vídeos",
+       "foto": "img/flavio.jpg",
+       "valor": 36,
+       "txt": "36 MI",
+       "cor": "#3f7fe0",
+       "t": 62.86,
+       "t_sub": 64.16
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "sc10",
+   "type": "scene",
+   "track": "visual",
+   "label": "23 posts / 58,8 mi",
+   "start": 65.86,
+   "dur": 10.04,
+   "props": {
+    "scene": "dr_mosaico",
+    "params": {
+     "titulo": "30 dias no Instagram",
+     "sub": "setembro → outubro",
+     "icone": "ig",
+     "n": 23,
+     "t_ini": 66.36,
+     "t_cont": 69.7,
+     "rot": "POSTS",
+     "valor": "58,8 MILHÕES",
+     "t_valor": 72.14,
+     "sub_valor": "de curtidas e comentários",
+     "t_sub": 74.7
+    }
+   }
+  },
+  {
+   "id": "sc11",
+   "type": "scene",
+   "track": "visual",
+   "label": "por post 2,5 mi",
+   "start": 75.9,
+   "dur": 3.56,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Por post · em média",
+     "icone": "ig",
+     "valor": "2,5",
+     "unidade": "milhões",
+     "sub": "de curtidas e comentários",
+     "t_valor": 77.3,
+     "t_sub": 78.8
+    }
+   }
+  },
+  {
+   "id": "sc12",
+   "type": "scene",
+   "track": "visual",
+   "label": "fecho comenta",
+   "start": 79.46,
+   "dur": 4.13,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Esses números te surpreenderam?",
+     "icone": "chat",
+     "valor": "COMENTA",
+     "tam": 210,
+     "t_rot": 80.46,
+     "t_valor": 75.4
+    }
+   }
+  },
+  {
+   "id": "lg0",
+   "type": "text",
+   "track": "legenda",
+   "label": "O deputado mais votado da hist",
+   "start": -0.08,
+   "dur": 4.97,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "O deputado mais votado da história do Brasil não cabe nem no gráfico.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "track": "legenda",
+   "label": "Nikolas Ferreira teve 3,1 milh",
+   "start": 4.86,
+   "dur": 4.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Nikolas Ferreira teve 3,1 milhões de votos na urna.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "3,1 milhões"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg2",
+   "type": "text",
+   "track": "legenda",
+   "label": "O recorde anterior era de 1,84",
+   "start": 9.08,
+   "dur": 4.51,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "O recorde anterior era de 1,84 milhão em São Paulo,",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "1,84 milhão"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "track": "legenda",
+   "label": "o maior eleitorado do país.",
+   "start": 13.56,
+   "dur": 2.17,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "o maior eleitorado do país.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg4",
+   "type": "text",
+   "track": "legenda",
+   "label": "Nikolas fez 69% a mais em Mina",
+   "start": 15.7,
+   "dur": 6.21,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Nikolas fez 69% a mais em Minas Gerais, com menos da metade dos eleitores.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "69%"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg5",
+   "type": "text",
+   "track": "legenda",
+   "label": "No Instagram são 25 milhões de",
+   "start": 21.88,
+   "dur": 3.39,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "No Instagram são 25 milhões de seguidores.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "25 milhões"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg6",
+   "type": "text",
+   "track": "legenda",
+   "label": "No mundo, só seis políticos tê",
+   "start": 25.24,
+   "dur": 2.45,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "No mundo, só seis políticos têm mais.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "seis"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg7",
+   "type": "text",
+   "track": "legenda",
+   "label": "Lula tem 18 milhões, Flávio Bo",
+   "start": 27.66,
+   "dur": 3.97,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Lula tem 18 milhões, Flávio Bolsonaro 15.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "18 milhões",
+     "15"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg8",
+   "type": "text",
+   "track": "legenda",
+   "label": "Em 11 meses, Nikolas ganhou 6,",
+   "start": 31.6,
+   "dur": 4.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Em 11 meses, Nikolas ganhou 6,2 milhões de seguidores.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "6,2 milhões",
+     "11"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg9",
+   "type": "text",
+   "track": "legenda",
+   "label": "Só em outubro, 2,7 milhões.",
+   "start": 36.42,
+   "dur": 3.13,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Só em outubro, 2,7 milhões.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "2,7 milhões"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "No TikTok, ele é o quinto polí",
+   "start": 39.52,
+   "dur": 3.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "No TikTok, ele é o quinto político mais seguido do mundo,",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "quinto"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg11",
+   "type": "text",
+   "track": "legenda",
+   "label": "a frente do presidente da Fran",
+   "start": 43.34,
+   "dur": 3.37,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "a frente do presidente da França e da presidente do México.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "Lula tem 6,2 milhões, Flávio B",
+   "start": 46.68,
+   "dur": 4.87,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Lula tem 6,2 milhões, Flávio Bolsonaro 2,5.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "6,2 milhões",
+     "2,5"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "Em curtidas acumuladas, Nikola",
+   "start": 51.52,
+   "dur": 5.97,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Em curtidas acumuladas, Nikolas soma 205 milhões em 705 vídeos.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "205 milhões",
+     "705"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "Lula, 87 milhões em 1.327.",
+   "start": 57.46,
+   "dur": 4.63,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Lula, 87 milhões em 1.327.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "87 milhões",
+     "1.327"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg15",
+   "type": "text",
+   "track": "legenda",
+   "label": "Flávio, 36 milhões em 1.712.",
+   "start": 62.06,
+   "dur": 3.87,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Flávio, 36 milhões em 1.712.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "36 milhões",
+     "1.712"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "Em 30 dias, entre setembro e o",
+   "start": 65.9,
+   "dur": 2.89,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Em 30 dias, entre setembro e outubro,",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "30"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg17",
+   "type": "text",
+   "track": "legenda",
+   "label": "Nikolas publicou 23 vezes no I",
+   "start": 68.76,
+   "dur": 7.39,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Nikolas publicou 23 vezes no Instagram e somou 58,8 milhões de curtidas e comentários.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "58,8 milhões",
+     "23"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg18",
+   "type": "text",
+   "track": "legenda",
+   "label": "Por post, 2,5 milhões em média",
+   "start": 76.12,
+   "dur": 3.51,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Por post, 2,5 milhões em média.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [
+     "2,5 milhões"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg19",
+   "type": "text",
+   "track": "legenda",
+   "label": "E aí, esses números te surpree",
+   "start": 79.6,
+   "dur": 2.75,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E aí, esses números te surpreenderam?",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg20",
+   "type": "text",
+   "track": "legenda",
+   "label": "Comenta.",
+   "start": 82.32,
+   "dur": 1.27,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Comenta.",
+    "x": 540,
+    "y": 1330,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": false,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  }
+ ]
+}

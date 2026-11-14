@@ -1,0 +1,1670 @@
+{
+ "version": 1,
+ "name": "02 - LOWPOLY 3D DESMONTANDO - O ar-condicionado nao fabrica frio",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Lowpoly 3D desmontando",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#cfe9fb"
+ },
+ "duration": 64.73,
+ "template": "local",
+ "fonts": {
+  "Lilita One": "fonts/LilitaOne-Regular.ttf"
+ },
+ "build_script": "template.html (Three.js + kit low-poly em ../_kit) — gerar_edit.py recria a partir de words.json",
+ "referencia": {
+  "canal": "@desmontandoomundo",
+  "canal_url": "https://www.instagram.com/desmontandoomundo/",
+  "video": "https://www.instagram.com/reel/DewJ1whAl3p/",
+  "nota": "3D low-poly de dia; monta o ar-condicionado do zero; legenda 1 palavra; CTA COMENTE FRIO"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 3D"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "sh_abre",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: sala, boneco com calor, balde na frente do ventilador",
+   "by": "template",
+   "start": 0,
+   "dur": 4.84,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_balde",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: gelo rouba calor",
+   "by": "template",
+   "start": 4.84,
+   "dur": 2.86,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_liquido",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: troca por líquido especial",
+   "by": "template",
+   "start": 7.7,
+   "dur": 6.04,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_ferve",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: ferve a -50 °C",
+   "by": "template",
+   "start": 13.74,
+   "dur": 3.24,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_fluido",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: fluido refrigerante",
+   "by": "template",
+   "start": 16.98,
+   "dur": 2.3,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_serp",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: serpentina + ventilador",
+   "by": "template",
+   "start": 19.28,
+   "dur": 7.14,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_evap",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: evaporador",
+   "by": "template",
+   "start": 26.42,
+   "dur": 1.58,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_gas",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: vira gás e escapa",
+   "by": "template",
+   "start": 28.0,
+   "dur": 7.08,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_acaba",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: líquido acabando",
+   "by": "template",
+   "start": 35.08,
+   "dur": 2.64,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_ciclo",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: ciclo (seta)",
+   "by": "template",
+   "start": 37.72,
+   "dur": 5.5,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_soltar",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: soltar o calor",
+   "by": "template",
+   "start": 43.22,
+   "dur": 3.24,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_fora",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: casa por fora (temperaturas)",
+   "by": "template",
+   "start": 46.46,
+   "dur": 7.4,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_bomba",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: bomba espreme o gás",
+   "by": "template",
+   "start": 53.86,
+   "dur": 7.14,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "sh_fim",
+   "type": "html",
+   "track": "fundo",
+   "label": "3D: final COMENTE FRIO",
+   "by": "template",
+   "start": 61.0,
+   "dur": 3.73,
+   "props": {
+    "html": ""
+   }
+  },
+  {
+   "id": "k_troca",
+   "type": "param",
+   "label": "tempo: balde some",
+   "props": {
+    "value": 8.26
+   }
+  },
+  {
+   "id": "k_jarra",
+   "type": "param",
+   "label": "tempo: recipiente aparece",
+   "props": {
+    "value": 9.42
+   }
+  },
+  {
+   "id": "k_fervendo",
+   "type": "param",
+   "label": "tempo: ferve forte",
+   "props": {
+    "value": 12.9
+   }
+  },
+  {
+   "id": "k_serpentina",
+   "type": "param",
+   "label": "tempo: serpentina cresce",
+   "props": {
+    "value": 20.62
+   }
+  },
+  {
+   "id": "k_ventilador",
+   "type": "param",
+   "label": "tempo: ventilador liga",
+   "props": {
+    "value": 23.52
+   }
+  },
+  {
+   "id": "k_vento",
+   "type": "param",
+   "label": "tempo: vento gelado",
+   "props": {
+    "value": 24.96
+   }
+  },
+  {
+   "id": "k_vira_gas",
+   "type": "param",
+   "label": "tempo: gás sai da ponta",
+   "props": {
+    "value": 29.06
+   }
+  },
+  {
+   "id": "k_evaporando",
+   "type": "param",
+   "label": "tempo: líquido acaba",
+   "props": {
+    "value": 36.34
+   }
+  },
+  {
+   "id": "k_espreme",
+   "type": "param",
+   "label": "tempo: pistão espreme",
+   "props": {
+    "value": 56.4
+   }
+  },
+  {
+   "id": "k_esquenta",
+   "type": "param",
+   "label": "tempo: gás esquenta",
+   "props": {
+    "value": 58.36
+   }
+  },
+  {
+   "id": "k_pneu",
+   "type": "param",
+   "label": "tempo: bomba de pneu",
+   "props": {
+    "value": 59.22
+   }
+  },
+  {
+   "id": "p_quarto",
+   "type": "text",
+   "track": "rotulos",
+   "label": "QUARTO: 30 °C",
+   "by": "template",
+   "start": 0.3,
+   "dur": 4.49,
+   "props": {
+    "text": "QUARTO: 30 °C",
+    "kind": "pill",
+    "anchor": "quarto",
+    "dot": "#ff8a1f",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_tira",
+   "type": "text",
+   "track": "rotulos",
+   "label": "TIRA CALOR",
+   "by": "template",
+   "start": 1.79,
+   "dur": 3.0,
+   "props": {
+    "text": "TIRA CALOR",
+    "kind": "sticker",
+    "y": 430,
+    "size": 92,
+    "rot": -6
+   }
+  },
+  {
+   "id": "st_nao",
+   "type": "text",
+   "track": "rotulos",
+   "label": "NÃO PÕE FRIO",
+   "by": "template",
+   "start": 3.39,
+   "dur": 1.4,
+   "props": {
+    "text": "NÃO PÕE FRIO",
+    "kind": "sticker",
+    "y": 560,
+    "size": 84,
+    "rot": -6,
+    "color": "#7fd0ff"
+   }
+  },
+  {
+   "id": "p_rouba",
+   "type": "text",
+   "track": "rotulos",
+   "label": "GELO: ROUBA CALOR",
+   "by": "template",
+   "start": 6.07,
+   "dur": 1.58,
+   "props": {
+    "text": "GELO: ROUBA CALOR",
+    "kind": "pill",
+    "anchor": "balde",
+    "dy": -80,
+    "dot": "#ff8a1f",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_liquido",
+   "type": "text",
+   "track": "rotulos",
+   "label": "LÍQUIDO ESPECIAL",
+   "by": "template",
+   "start": 9.37,
+   "dur": 4.32,
+   "props": {
+    "text": "LÍQUIDO ESPECIAL",
+    "kind": "pill",
+    "anchor": "jarra",
+    "dy": -90,
+    "dot": "#3d8fe8",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_fervendo",
+   "type": "text",
+   "track": "rotulos",
+   "label": "FERVENDO!",
+   "by": "template",
+   "start": 12.85,
+   "dur": 0.84,
+   "props": {
+    "text": "FERVENDO!",
+    "kind": "sticker",
+    "y": 430,
+    "size": 100,
+    "rot": -6
+   }
+  },
+  {
+   "id": "st_ferve",
+   "type": "text",
+   "track": "rotulos",
+   "label": "FERVE A -50 °C",
+   "by": "template",
+   "start": 13.93,
+   "dur": 3.0,
+   "props": {
+    "text": "FERVE A -50 °C",
+    "kind": "sticker",
+    "y": 430,
+    "size": 104,
+    "rot": -6
+   }
+  },
+  {
+   "id": "st_fluido",
+   "type": "text",
+   "track": "rotulos",
+   "label": "FLUIDO\nREFRIGERANTE",
+   "by": "template",
+   "start": 16.98,
+   "dur": 2.25,
+   "props": {
+    "text": "FLUIDO\nREFRIGERANTE",
+    "kind": "sticker",
+    "y": 470,
+    "size": 92,
+    "rot": -5
+   }
+  },
+  {
+   "id": "st_serp",
+   "type": "text",
+   "track": "rotulos",
+   "label": "SERPENTINA",
+   "by": "template",
+   "start": 20.57,
+   "dur": 2.85,
+   "props": {
+    "text": "SERPENTINA",
+    "kind": "sticker",
+    "y": 430,
+    "size": 96,
+    "rot": -6
+   }
+  },
+  {
+   "id": "p_vent",
+   "type": "text",
+   "track": "rotulos",
+   "label": "VENTILADOR",
+   "by": "template",
+   "start": 23.47,
+   "dur": 2.9,
+   "props": {
+    "text": "VENTILADOR",
+    "kind": "pill",
+    "anchor": "vent",
+    "dy": -60,
+    "dot": "#8fd0e8",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_vento",
+   "type": "text",
+   "track": "rotulos",
+   "label": "VENTO: GELADO",
+   "by": "template",
+   "start": 24.91,
+   "dur": 1.46,
+   "props": {
+    "text": "VENTO: GELADO",
+    "kind": "pill",
+    "y": 560,
+    "dot": "#3d8fe8",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_evap",
+   "type": "text",
+   "track": "rotulos",
+   "label": "EVAPORADOR",
+   "by": "template",
+   "start": 26.42,
+   "dur": 1.53,
+   "props": {
+    "text": "EVAPORADOR",
+    "kind": "sticker",
+    "y": 430,
+    "size": 104,
+    "rot": -6
+   }
+  },
+  {
+   "id": "p_gas",
+   "type": "text",
+   "track": "rotulos",
+   "label": "VIRA GÁS",
+   "by": "template",
+   "start": 29.01,
+   "dur": 3.67,
+   "props": {
+    "text": "VIRA GÁS",
+    "kind": "pill",
+    "anchor": "ponta",
+    "dx": -40,
+    "dy": -70,
+    "dot": "#cfd8e3",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_gasref",
+   "type": "text",
+   "track": "rotulos",
+   "label": "GÁS\nREFRIGERANTE",
+   "by": "template",
+   "start": 32.73,
+   "dur": 2.3,
+   "props": {
+    "text": "GÁS\nREFRIGERANTE",
+    "kind": "sticker",
+    "y": 430,
+    "size": 92,
+    "rot": -6
+   }
+  },
+  {
+   "id": "p_acaba",
+   "type": "text",
+   "track": "rotulos",
+   "label": "LÍQUIDO: ACABANDO",
+   "by": "template",
+   "start": 36.29,
+   "dur": 1.38,
+   "props": {
+    "text": "LÍQUIDO: ACABANDO",
+    "kind": "pill",
+    "anchor": "jarra",
+    "dy": -90,
+    "dot": "#e0344b",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_volta",
+   "type": "text",
+   "track": "rotulos",
+   "label": "GÁS → LÍQUIDO DE NOVO",
+   "by": "template",
+   "start": 39.39,
+   "dur": 3.78,
+   "props": {
+    "text": "GÁS → LÍQUIDO DE NOVO",
+    "kind": "pill",
+    "y": 430,
+    "dot": "#3d8fe8",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_ciclo",
+   "type": "text",
+   "track": "rotulos",
+   "label": "CICLO",
+   "by": "template",
+   "start": 42.37,
+   "dur": 0.8,
+   "props": {
+    "text": "CICLO",
+    "kind": "sticker",
+    "y": 560,
+    "size": 120,
+    "rot": -6
+   }
+  },
+  {
+   "id": "st_soltar",
+   "type": "text",
+   "track": "rotulos",
+   "label": "SOLTAR O CALOR",
+   "by": "template",
+   "start": 44.43,
+   "dur": 1.98,
+   "props": {
+    "text": "SOLTAR O CALOR",
+    "kind": "sticker",
+    "y": 430,
+    "size": 96,
+    "rot": -6
+   }
+  },
+  {
+   "id": "p_gasgel",
+   "type": "text",
+   "track": "rotulos",
+   "label": "GÁS: GELADO",
+   "by": "template",
+   "start": 49.19,
+   "dur": 4.62,
+   "props": {
+    "text": "GÁS: GELADO",
+    "kind": "pill",
+    "anchor": "ponta",
+    "dx": 170,
+    "dy": -170,
+    "dot": "#3d8fe8",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_quarto2",
+   "type": "text",
+   "track": "rotulos",
+   "label": "QUARTO: 30 °C",
+   "by": "template",
+   "start": 50.71,
+   "dur": 3.1,
+   "props": {
+    "text": "QUARTO: 30 °C",
+    "kind": "pill",
+    "anchor": "quarto2",
+    "dot": "#ff8a1f",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_rua",
+   "type": "text",
+   "track": "rotulos",
+   "label": "RUA: 35 °C",
+   "by": "template",
+   "start": 51.17,
+   "dur": 2.64,
+   "props": {
+    "text": "RUA: 35 °C",
+    "kind": "pill",
+    "anchor": "rua",
+    "dot": "#e0344b",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_pra",
+   "type": "text",
+   "track": "rotulos",
+   "label": "PRA ONDE?",
+   "by": "template",
+   "start": 51.83,
+   "dur": 1.98,
+   "props": {
+    "text": "PRA ONDE?",
+    "kind": "sticker",
+    "y": 430,
+    "size": 104,
+    "rot": -6
+   }
+  },
+  {
+   "id": "p_bomba",
+   "type": "text",
+   "track": "rotulos",
+   "label": "BOMBA",
+   "by": "template",
+   "start": 55.45,
+   "dur": 0.85,
+   "props": {
+    "text": "BOMBA",
+    "kind": "pill",
+    "anchor": "comp",
+    "dy": -60,
+    "dot": "#3b3f4a",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_esp",
+   "type": "text",
+   "track": "rotulos",
+   "label": "ESPREMIDO",
+   "by": "template",
+   "start": 56.35,
+   "dur": 4.6,
+   "props": {
+    "text": "ESPREMIDO",
+    "kind": "pill",
+    "anchor": "pistao",
+    "dy": -70,
+    "dot": "#3d8fe8",
+    "size": 50
+   }
+  },
+  {
+   "id": "st_esquenta",
+   "type": "text",
+   "track": "rotulos",
+   "label": "ESQUENTA!",
+   "by": "template",
+   "start": 58.31,
+   "dur": 2.64,
+   "props": {
+    "text": "ESQUENTA!",
+    "kind": "sticker",
+    "y": 430,
+    "size": 104,
+    "rot": -6,
+    "color": "#ff9a3c"
+   }
+  },
+  {
+   "id": "p_pneu",
+   "type": "text",
+   "track": "rotulos",
+   "label": "BOMBA DE PNEU",
+   "by": "template",
+   "start": 59.17,
+   "dur": 1.78,
+   "props": {
+    "text": "BOMBA DE PNEU",
+    "kind": "pill",
+    "anchor": "pneu",
+    "dy": -70,
+    "dot": "#e2453c",
+    "size": 50
+   }
+  },
+  {
+   "id": "p_parte2",
+   "type": "text",
+   "track": "rotulos",
+   "label": "PARTE 2: COMPRESSOR",
+   "by": "template",
+   "start": 61.19,
+   "dur": 3.54,
+   "props": {
+    "text": "PARTE 2: COMPRESSOR",
+    "kind": "pill",
+    "y": 600,
+    "dot": "#ffd21f",
+    "size": 48
+   }
+  },
+  {
+   "id": "st_frio",
+   "type": "text",
+   "track": "rotulos",
+   "label": "COMENTE “FRIO”",
+   "by": "template",
+   "start": 63.01,
+   "dur": 1.72,
+   "props": {
+    "text": "COMENTE “FRIO”",
+    "kind": "big",
+    "y": 430,
+    "size": 120,
+    "rot": -5
+   }
+  },
+  {
+   "id": "leg",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda (1 palavra por vez)",
+   "by": "template",
+   "start": 0,
+   "dur": 64.73,
+   "props": {
+    "words": [
+     {
+      "w": "Você",
+      "s": 0.0,
+      "e": 0.34
+     },
+     {
+      "w": "sabia",
+      "s": 0.34,
+      "e": 0.76
+     },
+     {
+      "w": "que",
+      "s": 0.76,
+      "e": 0.98
+     },
+     {
+      "w": "o",
+      "s": 0.98,
+      "e": 1.2
+     },
+     {
+      "w": "gelo",
+      "s": 1.2,
+      "e": 1.38
+     },
+     {
+      "w": "funciona",
+      "s": 1.38,
+      "e": 1.84
+     },
+     {
+      "w": "tirando",
+      "s": 1.84,
+      "e": 2.28
+     },
+     {
+      "w": "calor",
+      "s": 2.38,
+      "e": 2.7
+     },
+     {
+      "w": "do",
+      "s": 2.7,
+      "e": 2.96
+     },
+     {
+      "w": "ar,",
+      "s": 2.96,
+      "e": 3.18
+     },
+     {
+      "w": "não",
+      "s": 3.44,
+      "e": 3.66
+     },
+     {
+      "w": "colocando",
+      "s": 3.66,
+      "e": 4.08
+     },
+     {
+      "w": "frio?",
+      "s": 4.08,
+      "e": 4.72
+     },
+     {
+      "w": "Pra",
+      "s": 4.84,
+      "e": 5.04
+     },
+     {
+      "w": "derreter,",
+      "s": 5.04,
+      "e": 5.64
+     },
+     {
+      "w": "ele",
+      "s": 5.86,
+      "e": 6.12
+     },
+     {
+      "w": "rouba",
+      "s": 6.12,
+      "e": 6.48
+     },
+     {
+      "w": "calor",
+      "s": 6.48,
+      "e": 6.82
+     },
+     {
+      "w": "do",
+      "s": 6.82,
+      "e": 7.06
+     },
+     {
+      "w": "ar.",
+      "s": 7.06,
+      "e": 7.42
+     },
+     {
+      "w": "Então",
+      "s": 7.7,
+      "e": 7.88
+     },
+     {
+      "w": "você",
+      "s": 7.88,
+      "e": 8.26
+     },
+     {
+      "w": "troca",
+      "s": 8.26,
+      "e": 8.52
+     },
+     {
+      "w": "o",
+      "s": 8.52,
+      "e": 8.74
+     },
+     {
+      "w": "gelo",
+      "s": 8.74,
+      "e": 9.0
+     },
+     {
+      "w": "por",
+      "s": 9.0,
+      "e": 9.22
+     },
+     {
+      "w": "um",
+      "s": 9.22,
+      "e": 9.42
+     },
+     {
+      "w": "líquido",
+      "s": 9.42,
+      "e": 9.68
+     },
+     {
+      "w": "especial,",
+      "s": 9.68,
+      "e": 10.3
+     },
+     {
+      "w": "que",
+      "s": 10.54,
+      "e": 10.68
+     },
+     {
+      "w": "também",
+      "s": 10.68,
+      "e": 11.12
+     },
+     {
+      "w": "rouba",
+      "s": 11.12,
+      "e": 11.44
+     },
+     {
+      "w": "o",
+      "s": 11.44,
+      "e": 11.62
+     },
+     {
+      "w": "calor",
+      "s": 11.62,
+      "e": 11.84
+     },
+     {
+      "w": "do",
+      "s": 11.84,
+      "e": 12.08
+     },
+     {
+      "w": "ar,",
+      "s": 12.08,
+      "e": 12.36
+     },
+     {
+      "w": "só",
+      "s": 12.52,
+      "e": 12.66
+     },
+     {
+      "w": "que",
+      "s": 12.66,
+      "e": 12.9
+     },
+     {
+      "w": "fervendo.",
+      "s": 12.9,
+      "e": 13.38
+     },
+     {
+      "w": "Ele",
+      "s": 13.74,
+      "e": 13.98
+     },
+     {
+      "w": "ferve",
+      "s": 13.98,
+      "e": 14.34
+     },
+     {
+      "w": "a",
+      "s": 14.34,
+      "e": 14.48
+     },
+     {
+      "w": "uns",
+      "s": 14.48,
+      "e": 14.66
+     },
+     {
+      "w": "50",
+      "s": 14.66,
+      "e": 15.18
+     },
+     {
+      "w": "graus",
+      "s": 15.18,
+      "e": 15.62
+     },
+     {
+      "w": "abaixo",
+      "s": 15.62,
+      "e": 16.1
+     },
+     {
+      "w": "de",
+      "s": 16.1,
+      "e": 16.38
+     },
+     {
+      "w": "zero.",
+      "s": 16.38,
+      "e": 16.6
+     },
+     {
+      "w": "Esse",
+      "s": 16.98,
+      "e": 17.38
+     },
+     {
+      "w": "é",
+      "s": 17.38,
+      "e": 17.66
+     },
+     {
+      "w": "o",
+      "s": 17.66,
+      "e": 17.86
+     },
+     {
+      "w": "fluido",
+      "s": 17.86,
+      "e": 18.18
+     },
+     {
+      "w": "refrigerante.",
+      "s": 18.18,
+      "e": 18.9
+     },
+     {
+      "w": "Você",
+      "s": 19.28,
+      "e": 19.56
+     },
+     {
+      "w": "põe",
+      "s": 19.56,
+      "e": 19.76
+     },
+     {
+      "w": "esse",
+      "s": 19.76,
+      "e": 20.0
+     },
+     {
+      "w": "líquido",
+      "s": 20.0,
+      "e": 20.38
+     },
+     {
+      "w": "numa",
+      "s": 20.38,
+      "e": 20.62
+     },
+     {
+      "w": "serpentina,",
+      "s": 20.62,
+      "e": 21.46
+     },
+     {
+      "w": "um",
+      "s": 21.72,
+      "e": 21.9
+     },
+     {
+      "w": "cano",
+      "s": 21.9,
+      "e": 22.18
+     },
+     {
+      "w": "todo",
+      "s": 22.18,
+      "e": 22.42
+     },
+     {
+      "w": "enrolado,",
+      "s": 22.42,
+      "e": 23.02
+     },
+     {
+      "w": "com",
+      "s": 23.2,
+      "e": 23.32
+     },
+     {
+      "w": "o",
+      "s": 23.32,
+      "e": 23.52
+     },
+     {
+      "w": "ventilador",
+      "s": 23.52,
+      "e": 23.94
+     },
+     {
+      "w": "atrás,",
+      "s": 23.94,
+      "e": 24.36
+     },
+     {
+      "w": "e",
+      "s": 24.62,
+      "e": 24.8
+     },
+     {
+      "w": "o",
+      "s": 24.8,
+      "e": 24.96
+     },
+     {
+      "w": "vento",
+      "s": 24.96,
+      "e": 25.28
+     },
+     {
+      "w": "sai",
+      "s": 25.28,
+      "e": 25.52
+     },
+     {
+      "w": "gelado.",
+      "s": 25.52,
+      "e": 26.04
+     },
+     {
+      "w": "Esse",
+      "s": 26.42,
+      "e": 26.86
+     },
+     {
+      "w": "é",
+      "s": 26.86,
+      "e": 27.16
+     },
+     {
+      "w": "o",
+      "s": 27.16,
+      "e": 27.34
+     },
+     {
+      "w": "evaporador.",
+      "s": 27.34,
+      "e": 28.0
+     },
+     {
+      "w": "Mas",
+      "s": 28.0,
+      "e": 28.56
+     },
+     {
+      "w": "o",
+      "s": 28.56,
+      "e": 28.78
+     },
+     {
+      "w": "líquido",
+      "s": 28.78,
+      "e": 29.06
+     },
+     {
+      "w": "vira",
+      "s": 29.06,
+      "e": 29.44
+     },
+     {
+      "w": "gás",
+      "s": 29.44,
+      "e": 29.82
+     },
+     {
+      "w": "e",
+      "s": 29.82,
+      "e": 30.12
+     },
+     {
+      "w": "escapa",
+      "s": 30.12,
+      "e": 30.52
+     },
+     {
+      "w": "pela",
+      "s": 30.52,
+      "e": 30.8
+     },
+     {
+      "w": "ponta",
+      "s": 30.8,
+      "e": 31.12
+     },
+     {
+      "w": "do",
+      "s": 31.12,
+      "e": 31.32
+     },
+     {
+      "w": "cano.",
+      "s": 31.32,
+      "e": 31.84
+     },
+     {
+      "w": "Esse",
+      "s": 32.06,
+      "e": 32.4
+     },
+     {
+      "w": "é",
+      "s": 32.4,
+      "e": 32.68
+     },
+     {
+      "w": "o",
+      "s": 32.68,
+      "e": 32.78
+     },
+     {
+      "w": "famoso",
+      "s": 32.78,
+      "e": 33.3
+     },
+     {
+      "w": "gás",
+      "s": 33.3,
+      "e": 33.62
+     },
+     {
+      "w": "do",
+      "s": 33.62,
+      "e": 33.82
+     },
+     {
+      "w": "ar-condicionado.",
+      "s": 33.82,
+      "e": 34.7
+     },
+     {
+      "w": "E",
+      "s": 35.08,
+      "e": 35.26
+     },
+     {
+      "w": "desse",
+      "s": 35.26,
+      "e": 35.46
+     },
+     {
+      "w": "jeito",
+      "s": 35.46,
+      "e": 35.84
+     },
+     {
+      "w": "ia",
+      "s": 35.84,
+      "e": 36.02
+     },
+     {
+      "w": "acabar",
+      "s": 36.02,
+      "e": 36.34
+     },
+     {
+      "w": "evaporando",
+      "s": 36.34,
+      "e": 36.94
+     },
+     {
+      "w": "tudo.",
+      "s": 36.94,
+      "e": 37.3
+     },
+     {
+      "w": "O",
+      "s": 37.72,
+      "e": 37.98
+     },
+     {
+      "w": "truque",
+      "s": 37.98,
+      "e": 38.34
+     },
+     {
+      "w": "é",
+      "s": 38.34,
+      "e": 38.52
+     },
+     {
+      "w": "fazer",
+      "s": 38.52,
+      "e": 38.86
+     },
+     {
+      "w": "esse",
+      "s": 38.86,
+      "e": 39.12
+     },
+     {
+      "w": "gás",
+      "s": 39.12,
+      "e": 39.44
+     },
+     {
+      "w": "virar",
+      "s": 39.44,
+      "e": 39.84
+     },
+     {
+      "w": "líquido",
+      "s": 39.84,
+      "e": 40.22
+     },
+     {
+      "w": "de",
+      "s": 40.22,
+      "e": 40.44
+     },
+     {
+      "w": "novo",
+      "s": 40.44,
+      "e": 40.7
+     },
+     {
+      "w": "e",
+      "s": 40.7,
+      "e": 40.94
+     },
+     {
+      "w": "voltar",
+      "s": 40.94,
+      "e": 41.32
+     },
+     {
+      "w": "pro",
+      "s": 41.32,
+      "e": 41.7
+     },
+     {
+      "w": "começo,",
+      "s": 41.7,
+      "e": 41.96
+     },
+     {
+      "w": "num",
+      "s": 42.26,
+      "e": 42.42
+     },
+     {
+      "w": "ciclo.",
+      "s": 42.42,
+      "e": 43.12
+     },
+     {
+      "w": "Pra",
+      "s": 43.22,
+      "e": 43.42
+     },
+     {
+      "w": "isso,",
+      "s": 43.42,
+      "e": 43.78
+     },
+     {
+      "w": "ele",
+      "s": 43.9,
+      "e": 44.2
+     },
+     {
+      "w": "precisa",
+      "s": 44.2,
+      "e": 44.48
+     },
+     {
+      "w": "soltar",
+      "s": 44.48,
+      "e": 45.1
+     },
+     {
+      "w": "o",
+      "s": 45.1,
+      "e": 45.26
+     },
+     {
+      "w": "calor",
+      "s": 45.26,
+      "e": 45.48
+     },
+     {
+      "w": "que",
+      "s": 45.48,
+      "e": 45.78
+     },
+     {
+      "w": "roubou.",
+      "s": 45.78,
+      "e": 46.28
+     },
+     {
+      "w": "Só",
+      "s": 46.46,
+      "e": 46.68
+     },
+     {
+      "w": "que,",
+      "s": 46.68,
+      "e": 47.12
+     },
+     {
+      "w": "mesmo",
+      "s": 47.32,
+      "e": 47.48
+     },
+     {
+      "w": "tendo",
+      "s": 47.48,
+      "e": 47.76
+     },
+     {
+      "w": "roubado",
+      "s": 47.76,
+      "e": 48.26
+     },
+     {
+      "w": "esse",
+      "s": 48.26,
+      "e": 48.46
+     },
+     {
+      "w": "calor,",
+      "s": 48.46,
+      "e": 48.8
+     },
+     {
+      "w": "o",
+      "s": 49.1,
+      "e": 49.24
+     },
+     {
+      "w": "gás",
+      "s": 49.24,
+      "e": 49.46
+     },
+     {
+      "w": "ainda",
+      "s": 49.46,
+      "e": 49.68
+     },
+     {
+      "w": "tá",
+      "s": 49.68,
+      "e": 49.88
+     },
+     {
+      "w": "mais",
+      "s": 49.88,
+      "e": 50.32
+     },
+     {
+      "w": "frio",
+      "s": 50.32,
+      "e": 50.56
+     },
+     {
+      "w": "que",
+      "s": 50.56,
+      "e": 50.76
+     },
+     {
+      "w": "tudo",
+      "s": 50.76,
+      "e": 51.02
+     },
+     {
+      "w": "em",
+      "s": 51.02,
+      "e": 51.22
+     },
+     {
+      "w": "volta.",
+      "s": 51.22,
+      "e": 51.46
+     },
+     {
+      "w": "Não",
+      "s": 51.88,
+      "e": 52.06
+     },
+     {
+      "w": "tem",
+      "s": 52.06,
+      "e": 52.28
+     },
+     {
+      "w": "pra",
+      "s": 52.28,
+      "e": 52.46
+     },
+     {
+      "w": "onde",
+      "s": 52.46,
+      "e": 52.58
+     },
+     {
+      "w": "mandar",
+      "s": 52.58,
+      "e": 52.92
+     },
+     {
+      "w": "esse",
+      "s": 52.92,
+      "e": 53.16
+     },
+     {
+      "w": "calor.",
+      "s": 53.16,
+      "e": 53.44
+     },
+     {
+      "w": "Então",
+      "s": 53.86,
+      "e": 54.16
+     },
+     {
+      "w": "você",
+      "s": 54.16,
+      "e": 54.5
+     },
+     {
+      "w": "liga",
+      "s": 54.5,
+      "e": 54.76
+     },
+     {
+      "w": "o",
+      "s": 54.76,
+      "e": 55.06
+     },
+     {
+      "w": "cano",
+      "s": 55.06,
+      "e": 55.24
+     },
+     {
+      "w": "numa",
+      "s": 55.24,
+      "e": 55.5
+     },
+     {
+      "w": "bomba",
+      "s": 55.5,
+      "e": 56.04
+     },
+     {
+      "w": "que",
+      "s": 56.04,
+      "e": 56.4
+     },
+     {
+      "w": "espreme",
+      "s": 56.4,
+      "e": 56.64
+     },
+     {
+      "w": "o",
+      "s": 56.64,
+      "e": 56.84
+     },
+     {
+      "w": "gás.",
+      "s": 56.84,
+      "e": 57.14
+     },
+     {
+      "w": "Gás",
+      "s": 57.14,
+      "e": 57.88
+     },
+     {
+      "w": "espremido",
+      "s": 57.88,
+      "e": 58.36
+     },
+     {
+      "w": "esquenta,",
+      "s": 58.36,
+      "e": 58.96
+     },
+     {
+      "w": "igual",
+      "s": 59.22,
+      "e": 59.42
+     },
+     {
+      "w": "bomba",
+      "s": 59.42,
+      "e": 59.82
+     },
+     {
+      "w": "de",
+      "s": 59.82,
+      "e": 59.92
+     },
+     {
+      "w": "encher",
+      "s": 59.92,
+      "e": 60.18
+     },
+     {
+      "w": "pneu.",
+      "s": 60.18,
+      "e": 60.84
+     },
+     {
+      "w": "Quer",
+      "s": 61.0,
+      "e": 61.08
+     },
+     {
+      "w": "a",
+      "s": 61.08,
+      "e": 61.24
+     },
+     {
+      "w": "parte",
+      "s": 61.24,
+      "e": 61.42
+     },
+     {
+      "w": "2,",
+      "s": 61.42,
+      "e": 61.76
+     },
+     {
+      "w": "do",
+      "s": 61.76,
+      "e": 62.04
+     },
+     {
+      "w": "compressor?",
+      "s": 62.04,
+      "e": 62.46
+     },
+     {
+      "w": "Comenta",
+      "s": 63.06,
+      "e": 63.42
+     },
+     {
+      "w": "FRIO.",
+      "s": 63.42,
+      "e": 63.94
+     }
+    ],
+    "mode": "palavra",
+    "size": 96,
+    "y": 1310,
+    "font": "Lilita One",
+    "color": "#ffffff",
+    "stroke": "#1b1b1b",
+    "stroke_k": 0.08,
+    "maxw": 1000
+   }
+  }
+ ]
+}

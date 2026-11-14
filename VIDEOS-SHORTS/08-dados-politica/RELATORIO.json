@@ -1,0 +1,11 @@
+{
+ "video": 8,
+ "estilo": "Dados ranking escuro amarelo",
+ "inicio": "2026-10-22T20:17:27-03:00",
+ "fim": "2026-10-22T21:55:43-03:00",
+ "minutos": 98.3,
+ "render_segundos": 55,
+ "voz": "usuario",
+ "observacoes": "Estilo do 06 (fundo preto, Oswald amarelo, legenda-frase Inter com palavras-chave amarelas) + cena nova dr_moldura (recorte em moldura amarela, manchetes empilhadas, frase gigante) e dr_numero reaproveitada (CONTRA o Lula, 4 ministros). Recortes da referência em img/; b-roll de facções concatenado e desacelerado 0,68x (img/04_faccoes_lento.mp4). Amazônia = tipografia sobre queimadas escurecido. 2 renders (2º: moldura da manchete O Globo descida para cobrir a manchete queimada no b-roll). Sem música/SFX. Ajuste 3: buracos pretos fechados — recorte entra no início da cena, viradas tipográficas com recorte do assunto escurecido por trás (Flávio, feminicídio, queimadas, b-roll facções desde 'olha só', corrupção, STF); blackdetect d=0.5 pix_th=0.08 = 0 trechos.",
+ "ponto_fraco": "O recorte da árvore é pequeno e escuro (mancha verde), então o 'árvore de vinte anos' fica pouco legível; e as cenas de frase gigante sem imagem (por quê?, conveniente, o pior) deixam o vídeo mais tipográfico que a referência."
+}

@@ -1,0 +1,11 @@
+{
+ "video": 4,
+ "estilo": "3D comparação pedestais (Brasil × EUA)",
+ "inicio": "2026-10-22T19:11:31-03:00",
+ "fim": "2026-10-22T19:27:54-03:00",
+ "minutos": 16.4,
+ "render_segundos": 173,
+ "voz": "usuario",
+ "observacoes": "Three.js procedural via template compartilhado _template-palco3d (base.html + palco.py). Pedestais bege/lilás com nome, objetos low-poly (iPhone, relógio, hambúrguer, bomba, carro, hospital, capelo), pilha de moedas instanced crescendo na palavra (altura proporcional dentro da rodada), valores ancorados no topo da pilha, breadcrumb+chip, legenda karaokê em caixa, adesivos -4°. Todos os tempos via at() no words.json alinhado ao roteiro (difflib). Render draft 1080x1920.",
+ "ponto_fraco": "Objetos low-poly simples demais (iPhone e bomba sem detalhe) e a legenda às vezes encosta no pedestal nos closes."
+}

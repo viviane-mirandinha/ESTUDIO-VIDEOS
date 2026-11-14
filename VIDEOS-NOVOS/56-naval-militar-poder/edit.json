@@ -1,0 +1,447 @@
+{
+ "version": 1,
+ "name": "56 - 24-10-2026 - NAVAL POWER - The Most Powerful Aircraft Carriers in the World",
+ "estilo": "56-naval-militar-poder",
+ "grupo": "ESTILOS NOVOS",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#0e1928"
+ },
+ "duration": 69.8,
+ "template": "generic",
+ "referencia": {
+  "canal": "Naval Power",
+  "canal_url": "https://www.youtube.com/@navalpower",
+  "video": "https://youtu.be/lv1FX06eERA",
+  "nota": "ver ESTILOS-NOVOS/56-naval-militar-poder/REFERENCIA.txt"
+ },
+ "audio": {
+  "voice": {
+   "src": "audio.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  { "id": "fundo", "name": "Background images" },
+  { "id": "textos", "name": "Titles / stamps" }
+ ],
+ "items": [
+  {
+   "id": "bg1",
+   "type": "image",
+   "track": "fundo",
+   "start": 0,
+   "dur": 7.0,
+   "props": {
+    "src": "img/01.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   },
+   "label": "Intro carrier"
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "start": 0.2,
+   "dur": 3.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "MORE FIREPOWER THAN MOST COUNTRIES",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 58,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["FIREPOWER"],
+    "hl_color": "#a14f37"
+   },
+   "label": "FIREPOWER punch"
+  },
+  {
+   "id": "t1b",
+   "type": "text",
+   "track": "textos",
+   "start": 0.2,
+   "dur": 3.5,
+   "props": {
+    "text": "AIRCRAFT CARRIERS",
+    "x": 640,
+    "y": 410,
+    "w": 800,
+    "size": 36,
+    "color": "#7f87a8",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "letter": "6px"
+   },
+   "label": "Subtitle"
+  },
+  {
+   "id": "bg2",
+   "type": "image",
+   "track": "fundo",
+   "start": 7.0,
+   "dur": 10.0,
+   "props": {
+    "src": "img/02.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   },
+   "label": "US Navy fleet"
+  },
+  {
+   "id": "t2",
+   "type": "text",
+   "track": "textos",
+   "start": 7.2,
+   "dur": 4.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "UNITED STATES — 11 SUPERCARRIERS",
+    "x": 640,
+    "y": 80,
+    "w": 1100,
+    "size": 42,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.85)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["11"],
+    "hl_color": "#a14f37"
+   },
+   "label": "US 11 carriers stamp"
+  },
+  {
+   "id": "t2b",
+   "type": "text",
+   "track": "textos",
+   "start": 12.0,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "USS GERALD R. FORD\n100,000+ TONS",
+    "x": 640,
+    "y": 600,
+    "w": 900,
+    "size": 38,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.8)",
+    "pad": 10,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["100,000+"],
+    "hl_color": "#a14f37"
+   },
+   "label": "Ford stats"
+  },
+  {
+   "id": "bg3",
+   "type": "image",
+   "track": "fundo",
+   "start": 17.0,
+   "dur": 11.0,
+   "props": {
+    "src": "img/03.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.05
+   },
+   "label": "China Fujian"
+  },
+  {
+   "id": "t3",
+   "type": "text",
+   "track": "textos",
+   "start": 17.5,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "CHINA — RAPID EXPANSION",
+    "x": 640,
+    "y": 80,
+    "w": 1000,
+    "size": 42,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.85)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["RAPID"],
+    "hl_color": "#a14f37"
+   },
+   "label": "China chapter"
+  },
+  {
+   "id": "t3b",
+   "type": "text",
+   "track": "textos",
+   "start": 23.0,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "FUJIAN — ELECTROMAGNETIC CATAPULTS\nLAUNCHED 2022",
+    "x": 640,
+    "y": 600,
+    "w": 950,
+    "size": 34,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.8)",
+    "pad": 10,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["2022"],
+    "hl_color": "#a14f37"
+   },
+   "label": "Fujian stats"
+  },
+  {
+   "id": "bg4",
+   "type": "image",
+   "track": "fundo",
+   "start": 28.0,
+   "dur": 11.0,
+   "props": {
+    "src": "img/04.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.05
+   },
+   "label": "UK + France"
+  },
+  {
+   "id": "t4",
+   "type": "text",
+   "track": "textos",
+   "start": 28.5,
+   "dur": 5.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "UNITED KINGDOM — 65,000 TONS EACH",
+    "x": 640,
+    "y": 80,
+    "w": 1100,
+    "size": 42,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.85)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["65,000"],
+    "hl_color": "#a14f37"
+   },
+   "label": "UK carriers"
+  },
+  {
+   "id": "t4b",
+   "type": "text",
+   "track": "textos",
+   "start": 34.5,
+   "dur": 4.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "FRANCE — CHARLES DE GAULLE\nONLY NON-US NUCLEAR CARRIER",
+    "x": 640,
+    "y": 600,
+    "w": 950,
+    "size": 34,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.8)",
+    "pad": 10,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["NUCLEAR"],
+    "hl_color": "#a14f37"
+   },
+   "label": "France carrier"
+  },
+  {
+   "id": "bg5",
+   "type": "image",
+   "track": "fundo",
+   "start": 39.0,
+   "dur": 11.0,
+   "props": {
+    "src": "img/05.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.04
+   },
+   "label": "Russia + India"
+  },
+  {
+   "id": "t5",
+   "type": "text",
+   "track": "textos",
+   "start": 39.5,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "RUSSIA — KUZNETSOV IN REPAIR",
+    "x": 640,
+    "y": 80,
+    "w": 1000,
+    "size": 42,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.85)",
+    "pad": 12,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["REPAIR"],
+    "hl_color": "#a14f37"
+   },
+   "label": "Russia chapter"
+  },
+  {
+   "id": "t5b",
+   "type": "text",
+   "track": "textos",
+   "start": 45.0,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "INDIA — INS VIKRANT\nCOMMISSIONED 2022",
+    "x": 640,
+    "y": 600,
+    "w": 900,
+    "size": 36,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "bg": "rgba(14,25,40,0.8)",
+    "pad": 10,
+    "radius": 4,
+    "shadow": true,
+    "highlight": ["2022"],
+    "hl_color": "#a14f37"
+   },
+   "label": "India carrier"
+  },
+  {
+   "id": "bg6",
+   "type": "image",
+   "track": "fundo",
+   "start": 50.0,
+   "dur": 10.0,
+   "props": {
+    "src": "img/06.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.05
+   },
+   "label": "Only 6 nations"
+  },
+  {
+   "id": "t6",
+   "type": "text",
+   "track": "textos",
+   "start": 50.5,
+   "dur": 5.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ONLY 6 NATIONS BUILD CARRIERS",
+    "x": 640,
+    "y": 320,
+    "w": 1100,
+    "size": 52,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["6"],
+    "hl_color": "#a14f37"
+   },
+   "label": "6 nations stat"
+  },
+  {
+   "id": "bg7",
+   "type": "image",
+   "track": "fundo",
+   "start": 60.0,
+   "dur": 9.8,
+   "props": {
+    "src": "img/07.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.06
+   },
+   "label": "Closing ocean"
+  },
+  {
+   "id": "t7",
+   "type": "text",
+   "track": "textos",
+   "start": 61.0,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "THE OCEAN BELONGS TO THOSE\nWHO CONTROL ITS SKIES",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 50,
+    "color": "#d4dde0",
+    "font": "Inter",
+    "weight": 800,
+    "align": "center",
+    "shadow": true,
+    "highlight": ["CONTROL"],
+    "hl_color": "#a14f37"
+   },
+   "label": "Closing statement"
+  }
+ ]
+}

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#E9C9A0;}
+#root{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#E9C9A0;font-family:Oswald,Arial,sans-serif;}
+#scenes{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.sc{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;visibility:hidden;}
+.sc.first{visibility:visible;}
+.cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:50% 45%;}
+.cam svg{position:absolute;left:0;top:0;}
+.lay{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.o{font-family:Oswald,Arial,sans-serif;font-weight:400;}
+.w{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;}
+.selo{font-family:Oswald,Arial,sans-serif;font-weight:400;white-space:nowrap;padding:.14em .55em .18em;border-radius:10px;letter-spacing:.02em;line-height:1.05;box-shadow:0 6px 0 rgba(0,0,0,.18);}
+.grain{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(40,25,10,.28) 100%);}
+/* legenda: maiúsculas condensadas */
+#leg .ed-cg{text-transform:uppercase;letter-spacing:.01em;}
+#leg .ed-w.ed-k.on[data-red]{color:#E3363B !important;}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2B98E"/><stop offset=".6" stop-color="#EDD0AA"/><stop offset="1" stop-color="#F3DDBE"/></linearGradient>
+  <linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9876A"/><stop offset=".55" stop-color="#DDA77C"/><stop offset="1" stop-color="#EBC497"/></linearGradient>
+  <linearGradient id="gMoss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46543F"/><stop offset="1" stop-color="#2F382E"/></linearGradient>
+  <linearGradient id="gDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F2421"/><stop offset="1" stop-color="#121513"/></linearGradient>
+  <linearGradient id="gPale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF4E8"/><stop offset="1" stop-color="#F0D9B8"/></linearGradient>
+  <radialGradient id="gGlow"><stop offset="0" stop-color="#FFE59A" stop-opacity=".95"/><stop offset="1" stop-color="#FFE59A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gRedGlow"><stop offset="0" stop-color="#FF4A44" stop-opacity=".9"/><stop offset="1" stop-color="#FF4A44" stop-opacity="0"/></radialGradient>
+ </defs>
+</svg>
+<div id="scenes"></div>
+<div class="grain"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+const EDIT = __EDIT__;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+
+const C = {sky:"#E9C9A0", moss:"#3E4A3D", lead:"#2B2F2E", red:"#D7262C", mus:"#E8B23A", cream:"#F3E9D6",
+  grass:"#7E9A5A", grass2:"#6A864A", soil:"#7A5C43", soil2:"#5E4634", road:"#3A3F3D", skin:"#B9784F", hair:"#241913"};
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647, (seed - 1) / 2147483646);
+const ROOT = document.getElementById("scenes");
+
+/* ---------------- biblioteca SVG ---------------- */
+function rafaHead(id, o={}){
+  const m = o.mood || "calm";
+  const brow = m === "worry" ? ['M-36,-22 L-12,-28','M12,-28 L36,-22'] : m === "scared" ? ['M-36,-30 L-12,-24','M12,-24 L36,-30'] : ['M-36,-24 L-12,-26','M12,-26 L36,-24'];
+  const mouth = m === "scared" ? '<ellipse cx="0" cy="38" rx="10" ry="13" fill="#5a2a1f"/>'
+    : m === "worry" ? '<path d="M-14,40 q14,-8 28,0" stroke="#6d3b2a" stroke-width="5" fill="none" stroke-linecap="round"/>'
+    : '<path d="M-14,34 q14,11 28,0" stroke="#6d3b2a" stroke-width="5" fill="none" stroke-linecap="round"/>';
+  return `<g id="${id}_head">
+   <ellipse cx="-60" cy="6" rx="12" ry="16" fill="#A86A44"/><ellipse cx="60" cy="6" rx="12" ry="16" fill="#A86A44"/>
+   <ellipse cx="0" cy="0" rx="60" ry="68" fill="${C.skin}"/>
+   <path d="M-40,30 Q0,72 40,30 Q30,64 0,68 Q-30,64 -40,30Z" fill="#A86A44" opacity=".35"/>
+   <path d="M-64,-4 C-72,-66 -24,-94 18,-88 C58,-82 76,-44 64,-2 C56,-28 36,-40 14,-36 C-6,-48 -40,-42 -52,-18 Z" fill="${C.hair}"/>
+   <path d="M8,-36 C30,-40 50,-26 56,-6 C40,-20 24,-24 2,-26Z" fill="${C.hair}"/>
+   <path d="M-10,-86 C0,-104 22,-104 30,-92 C18,-96 6,-94 -2,-84Z" fill="${C.hair}"/>
+   <g id="${id}_eyes"><ellipse cx="-24" cy="4" rx="5.5" ry="8" fill="#1b1b1b"/><ellipse cx="24" cy="4" rx="5.5" ry="8" fill="#1b1b1b"/></g>
+   <circle cx="-24" cy="4" r="19" fill="rgba(255,255,255,.12)" stroke="${C.lead}" stroke-width="5"/>
+   <circle cx="24" cy="4" r="19" fill="rgba(255,255,255,.12)" stroke="${C.lead}" stroke-width="5"/>
+   <path d="M-5,2 L5,2" stroke="${C.lead}" stroke-width="5"/>
+   <path d="${brow[0]}" stroke="${C.hair}" stroke-width="6" stroke-linecap="round"/><path d="${brow[1]}" stroke="${C.hair}" stroke-width="6" stroke-linecap="round"/>
+   <path d="M0,12 q7,9 0,14" stroke="#8E5536" stroke-width="4" fill="none" stroke-linecap="round"/>
+   ${mouth}
+  </g>`;
+}
+function arm(id, side, rot, len){
+  const L = len || 150;
+  return `<g transform="translate(${side*60},-322) rotate(${rot})"><g id="${id}">
+    <rect x="-17" y="-12" width="34" height="${L*0.82}" rx="17" fill="${C.mus}"/>
+    <rect x="-17" y="${L*0.62}" width="34" height="${L*0.2}" rx="8" fill="#C8962A"/>
+    <circle cx="0" cy="${L*0.86}" r="17" fill="${C.skin}"/>
+  </g></g>`;
+}
+function leg(id, side, rot){
+  return `<g transform="translate(${side*22},-190) rotate(${rot})"><g id="${id}">
+    <rect x="-18" y="-4" width="36" height="180" rx="14" fill="${C.lead}"/>
+    <path d="M-22,170 h${side>0?52:44} a16,16 0 0 1 0,26 h-${side>0?52:44}z" transform="translate(${side>0?0:-8},0)" fill="#F2EDE4"/>
+    <rect x="${side>0?-22:-30}" y="192" width="${side>0?56:48}" height="7" rx="3" fill="#8b8b85"/>
+  </g></g>`;
+}
+function rafa(id, o){
+  const p = o.pose || "stand", s = o.s || 1, f = o.flip ? -1 : 1;
+  let aL = 8, aR = -8, lL = 3, lR = -3, len = 150, extra = "";
+  if (p === "phone"){ aR = -165; }
+  if (p === "cover"){ aL = -156; aR = 156; len = 100; }
+  if (p === "run"){ aL = 30; aR = -30; lL = 22; lR = -22; }
+  if (p === "reach"){ aL = -118; aR = -104; }
+  if (p === "phone") extra = `<g transform="translate(${60+26},-480) rotate(-12)"><rect x="-16" y="-30" width="32" height="58" rx="6" fill="#1b1b1b"/><rect x="-12" y="-25" width="24" height="44" rx="3" fill="${C.red}"/></g>`;
+  const head = `<g transform="translate(0,-420)${o.look?` rotate(${o.look})`:""}">${rafaHead(id, o)}</g>`;
+  const armsBack = p === "cover" ? "" : arm(id+"_aL", -1, aL, len);
+  const armsFront = p === "cover" ? arm(id+"_aL", -1, aL, len) + arm(id+"_aR", 1, aR, len) : arm(id+"_aR", 1, aR, len);
+  return `<g id="${id}_pos"><g transform="translate(${o.x},${o.y}) scale(${s*f},${s})"><g id="${id}">
+   <ellipse cx="0" cy="6" rx="90" ry="14" fill="rgba(0,0,0,.18)"/>
+   ${leg(id+"_lL", -1, lL)}${leg(id+"_lR", 1, lR)}
+   <g id="${id}_body">
+    ${armsBack}
+    <rect x="-14" y="-370" width="28" height="30" fill="#A86A44"/>
+    <ellipse cx="0" cy="-346" rx="54" ry="20" fill="#C8962A"/>
+    <rect x="-62" y="-350" width="124" height="172" rx="34" fill="${C.mus}"/>
+    <rect x="-40" y="-252" width="80" height="44" rx="14" fill="#C8962A"/>
+    <path d="M-12,-338 L-15,-298 M12,-338 L15,-298" stroke="#F3E9D6" stroke-width="4" stroke-linecap="round"/>
+    ${head}${armsFront}${extra}
+   </g>
+  </g></g></g>`;
+}
+function house(x, y, w, h, wall, roof, lit){
+  const win = lit ? "#F6D27A" : "#8FA5AA";
+  const rh = h * 0.55;
+  return `<g>
+   <rect x="${x}" y="${y-h}" width="${w}" height="${h}" fill="${wall}"/>
+   <rect x="${x+w*0.62}" y="${y-h}" width="${w*0.38}" height="${h}" fill="rgba(0,0,0,.08)"/>
+   <path d="M${x-14},${y-h} L${x+w/2},${y-h-rh} L${x+w+14},${y-h}Z" fill="${roof}"/>
+   <path d="M${x+w/2},${y-h-rh} L${x+w+14},${y-h} L${x+w/2},${y-h}Z" fill="rgba(0,0,0,.12)"/>
+   <rect x="${x+w*0.14}" y="${y-h*0.72}" width="${w*0.26}" height="${h*0.28}" fill="${win}"/>
+   <rect x="${x+w*0.6}" y="${y-h*0.72}" width="${w*0.26}" height="${h*0.28}" fill="${win}"/>
+   <rect x="${x+w*0.4}" y="${y-h*0.38}" width="${w*0.2}" height="${h*0.38}" fill="#6B4A36"/>
+  </g>`;
+}
+const WALLS = ["#E3B98C","#CFA27A","#D9C3A0","#C8A88A","#E6CFA8"], ROOFS = ["#A6553A","#7C5A4A","#8E4A3A","#5E6B6A","#B0683F"];
+function houses(y, n, sc_){ let o = "", x = -40; const k = sc_ || 1;
+  for (let i = 0; i < n; i++){ const w = (150 + rnd()*60)*k, h = (130 + rnd()*70)*k;
+    o += house(x, y, w, h, WALLS[i%5], ROOFS[(i*3)%5], false); x += w + 34*k; }
+  return o; }
+function car(id, x, y, color, s){
+  return `<g transform="translate(${x},${y}) scale(${s||1})"><g id="${id||""}" class="car">
+   <path d="M-74,-14 L-74,-42 Q-74,-50 -64,-52 L-46,-54 L-30,-82 Q-26,-88 -16,-88 L30,-88 Q40,-88 44,-80 L58,-54 L66,-52 Q76,-50 76,-40 L76,-14Z" fill="${color}"/>
+   <path d="M-24,-56 L-12,-80 L8,-80 L8,-56Z M16,-56 L16,-80 L32,-80 L46,-56Z" fill="#C9DADB"/>
+   <rect x="-76" y="-30" width="152" height="8" fill="rgba(0,0,0,.15)"/>
+   <rect x="70" y="-46" width="8" height="10" rx="2" fill="#FFE59A"/><rect x="-78" y="-46" width="8" height="10" rx="2" class="brake" fill="${C.red}"/>
+   <circle cx="-44" cy="-12" r="17" fill="#1E1F1E"/><circle cx="-44" cy="-12" r="7" fill="#9A9A92"/>
+   <circle cx="46" cy="-12" r="17" fill="#1E1F1E"/><circle cx="46" cy="-12" r="7" fill="#9A9A92"/>
+  </g></g>`;
+}
+const CARC = [C.red, C.mus, "#4F7CAC", "#6E8B4E", "#E8E2D6", "#C9683A", "#7E6AA0", "#5C6B70"];
+function carRows(rows){ let o = ""; let k = 0;
+  rows.forEach(r => { for (let x = r.x0; x < 1160; x += r.gap){ o += car("", x + rnd()*20, r.y, CARC[(k++)%CARC.length], r.s); } });
+  return o; }
+function trefoil(x, y, r, col, bg){
+  let o = `<g transform="translate(${x},${y})"><circle r="${r}" fill="${bg}"/>`;
+  for (let i = 0; i < 3; i++){ const a0 = (i*120 - 90 - 30)*Math.PI/180, a1 = (i*120 - 90 + 30)*Math.PI/180, R = r*0.85, r0 = r*0.22;
+    o += `<path d="M${r0*Math.cos(a0)},${r0*Math.sin(a0)} L${R*Math.cos(a0)},${R*Math.sin(a0)} A${R},${R} 0 0 1 ${R*Math.cos(a1)},${R*Math.sin(a1)} L${r0*Math.cos(a1)},${r0*Math.sin(a1)} A${r0},${r0} 0 0 0 ${r0*Math.cos(a0)},${r0*Math.sin(a0)}Z" fill="${col}"/>`; }
+  return o + `<circle r="${r*0.14}" fill="${col}"/></g>`;
+}
+function skyBg(g){ return `<rect width="1080" height="1920" fill="url(#${g||"gSky"})"/>`; }
+function hatchTop(id, x, y, r){
+  let riv = ""; for (let i = 0; i < 12; i++){ const a = i*30*Math.PI/180; riv += `<circle cx="${(r*0.86)*Math.cos(a)}" cy="${(r*0.86)*Math.sin(a)}" r="${r*0.035}" fill="#1E2220"/>`; }
+  let sp = ""; for (let i = 0; i < 6; i++){ sp += `<rect x="-6" y="0" width="12" height="${r*0.42}" rx="6" fill="${C.mus}" transform="rotate(${i*60})"/>`; }
+  return `<g transform="translate(${x},${y})"><g id="${id}">
+   <circle r="${r}" fill="${C.lead}"/><circle r="${r*0.8}" fill="#4A524C"/>${riv}
+   <g id="${id}_bolts">${[0,90,180,270].map(a=>`<g transform="rotate(${a})"><rect class="bolt" x="${r*0.78}" y="-${r*0.06}" width="${r*0.26}" height="${r*0.12}" rx="6" fill="#8E948C"/></g>`).join("")}</g>
+   <g id="${id}_wheel"><circle r="${r*0.44}" fill="none" stroke="${C.mus}" stroke-width="${r*0.07}"/>${sp}<circle r="${r*0.1}" fill="${C.mus}"/></g>
+  </g></g>`;
+}
+function brickWall(x, y, w, h, col){
+  let o = `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col||"#CDB08C"}"/><rect x="${x-8}" y="${y-18}" width="${w+16}" height="24" fill="#B79A76"/>`;
+  for (let r = 0, yy = y + 44; yy < y + h; yy += 44, r++){ o += `<rect x="${x}" y="${yy}" width="${w}" height="4" fill="rgba(0,0,0,.08)"/>`;
+    for (let xx = x + (r%2 ? 60 : 0); xx < x + w; xx += 120) o += `<rect x="${xx}" y="${yy-44}" width="4" height="44" fill="rgba(0,0,0,.07)"/>`; }
+  return o;
+}
+function selo(id, x, y, txt, bg, fg, size){
+  return `<div class="w" style="left:${x}px;top:${y}px"><div id="${id}" class="selo" style="background:${bg};color:${fg};font-size:${size||46}px">${txt}</div></div>`;
+}
+
+/* ---------------- animações utilitárias ---------------- */
+function pop(sel, t){ tl.fromTo(sel, {scale:0.4, opacity:0}, {scale:1, opacity:1, duration:0.35, ease:"back.out(2)", immediateRender:true}, t); }
+function blink(sel, s, e){ for (let t = s + 0.6; t < e - 0.2; t += 2.2){ tl.to(sel, {scaleY:0.1, duration:0.06, transformOrigin:"50% 50%"}, t); tl.to(sel, {scaleY:1, duration:0.08}, t + 0.08); } }
+function breathe(sel, s, e){ const per = 1.2, n = Math.max(1, Math.ceil((e - s)/per));
+  tl.fromTo(sel, {scaleY:1}, {scaleY:1.022, duration:per/2, ease:"sine.inOut", yoyo:true, repeat:n*2-1, transformOrigin:"50% 100%", immediateRender:false}, s); }
+function bobY(sel, s, e, amp, per){ const n = Math.max(1, Math.ceil((e - s)/per));
+  tl.fromTo(sel, {y:0}, {y:-(amp||4), duration:per/2, ease:"sine.inOut", yoyo:true, repeat:n*2-1, immediateRender:false}, s); }
+function shake(sel, t, d, a){ const n = Math.round(d/0.05); tl.fromTo(sel, {x:-(a||10)}, {x:(a||10), duration:0.05, repeat:n, yoyo:true, ease:"none", immediateRender:false}, t); tl.set(sel, {x:0}, t + 0.05*(n+1)); }
+function idleRafa(id, s, e){ blink(`#${id}_eyes`, s, e); breathe(`#${id}_body`, s, e); }
+function rainDrops(id, n, col, w, h, len){ let o = `<g id="${id}">`;
+  for (let k = 0; k < 2; k++) for (let i = 0; i < n; i++){ const x = rnd()*1080, y = rnd()*1920 - k*1920;
+    o += len ? `<rect x="${x}" y="${y}" width="${w}" height="${len}" rx="${w/2}" fill="${col}"/>` : `<circle cx="${x}" cy="${y}" r="${w*(0.6+rnd()*0.8)}" fill="${col}"/>`; }
+  return o + `</g>`; }
+function fall(sel, s, e, per){ const n = Math.max(1, Math.ceil((e - s)/per)); tl.fromTo(sel, {y:0}, {y:1920, duration:per, ease:"none", repeat:n-1, immediateRender:false}, s); }
+
+/* ---------------- cenas ---------------- */
+const SC = {};
+SC.rua_sirene = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="820" width="1080" height="1100" fill="${C.road}"/><rect y="820" width="1080" height="46" fill="#C9B08F"/>`
+   + houses(822, 7) + `<g id="${I("red")}" opacity="0"><rect width="1080" height="1920" fill="${C.red}"/></g>`
+   + `<g transform="translate(120,0)"><rect x="-9" y="430" width="18" height="430" fill="${C.lead}"/><rect x="-48" y="400" width="96" height="58" rx="10" fill="${C.lead}"/>
+      <circle id="${I("ring1")}" cx="0" cy="430" r="40" fill="none" stroke="${C.red}" stroke-width="8"/><circle id="${I("ring2")}" cx="0" cy="430" r="40" fill="none" stroke="${C.red}" stroke-width="8"/>
+      <circle id="${I("lamp")}" cx="0" cy="430" r="22" fill="${C.red}"/></g>`
+   + carRows([{y:1010, x0:-30, gap:178, s:1.05}, {y:1200, x0:40, gap:190, s:1.2}, {y:1470, x0:-60, gap:210, s:1.4}]),
+  html: selo(I("selo"), 540, 340, X.selo, C.mus, C.lead, 92),
+  anim(){ [I("ring1"), I("ring2")].forEach((r, k) => tl.fromTo("#"+r, {scale:1, opacity:1, transformOrigin:"50% 50%"}, {scale:5, opacity:0, duration:0.9, repeat:Math.ceil((e-s)/0.9), ease:"power1.out", immediateRender:false}, s + k*0.45));
+    tl.fromTo("#"+I("red"), {opacity:0}, {opacity:0.16, duration:0.45, yoyo:true, repeat:Math.ceil((e-s)/0.45), ease:"sine.inOut", immediateRender:false}, s);
+    tl.set("#"+I("selo"), {opacity:0}, 0); pop("#"+I("selo"), T.min15 - 0.05); }
+});
+SC.cronometro = (it, X, T, s, e, I) => {
+  let ticks = ""; for (let i = 0; i < 60; i++) ticks += `<rect x="-3" y="-205" width="6" height="${i%5?14:30}" fill="${C.lead}" transform="rotate(${i*6})"/>`;
+  return { svg: skyBg() + `<rect y="980" width="1080" height="940" fill="#CDAE7E"/><path d="M500,980 L580,980 L1060,1920 L20,1920Z" fill="${C.road}"/>`
+   + `<path d="M540,1000 L540,1920" stroke="${C.mus}" stroke-width="14" stroke-dasharray="70 70"/>` + houses(982, 9, 0.55)
+   + `<g transform="translate(540,690)"><rect x="-34" y="-290" width="68" height="46" rx="10" fill="${C.lead}"/><circle r="250" fill="${C.lead}"/><circle r="222" fill="${C.cream}"/>
+      <path id="${I("pie")}" d="M0,0 L0,-222 A222,222 0 0 1 0,-222Z" fill="${C.mus}" opacity=".55"/>${ticks}
+      <text class="o" y="40" text-anchor="middle" font-size="120" fill="${C.lead}" id="${I("txt")}">${X.relogio}</text>
+      <g id="${I("hand")}"><rect x="-5" y="-190" width="10" height="190" rx="5" fill="${C.red}"/><circle r="16" fill="${C.red}"/></g></g>`,
+   html: selo(I("selo"), 540, 330, X.selo, C.mus, C.lead, 54),
+   anim(){ pop("#"+I("selo"), s + 0.1); tl.fromTo("#"+I("hand"), {rotation:0, transformOrigin:"50% 92%"}, {rotation:300, transformOrigin:"50% 92%", duration:e - s, ease:"none", immediateRender:false}, s);
+     const o = {a:0}; tl.to(o, {a:300, duration:e - s, ease:"none", onUpdate(){ const a = o.a*Math.PI/180, R = 222; const el = document.getElementById(I("pie"));
+       el.setAttribute("d", `M0,0 L0,-222 A222,222 0 ${o.a>180?1:0} 1 ${R*Math.sin(a)},${-R*Math.cos(a)}Z`); }}, s); }
+  };
+};
+SC.encruzilhada = (it, X, T, s, e, I) => ({
+  svg: skyBg() + houses(1000, 9, 0.6) + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/>`
+   + `<path d="M0,1180 L1080,1120 L1080,1260 L0,1330Z" fill="#B99C74"/><path d="M470,1000 L610,1000 L760,1920 L320,1920Z" fill="#B99C74"/>`
+   + `<g transform="translate(830,1260)"><rect x="-10" y="-430" width="20" height="440" fill="#6B4A36"/>
+      <path d="M-200,-410 L60,-410 L60,-340 L-200,-340 L-236,-375Z" fill="${C.cream}"/><text class="o" x="-80" y="-358" text-anchor="middle" font-size="46" fill="${C.lead}">${X.p1}</text>
+      <path d="M-30,-320 L210,-320 L246,-285 L210,-250 L-30,-250Z" fill="${C.cream}"/><text class="o" x="95" y="-268" text-anchor="middle" font-size="46" fill="${C.lead}">${X.p2}</text>
+      <g id="${I("p3")}"><path d="M-190,-230 L60,-230 L60,-160 L-190,-160 L-226,-195Z" fill="${C.red}"/><text class="o" x="-70" y="-178" text-anchor="middle" font-size="46" fill="#fff">${X.p3}</text></g></g>`
+   + rafa(I("r"), {x:380, y:1460, s:1.15, mood:"worry"})
+   + `<text id="${I("q")}" class="o" x="380" y="760" text-anchor="middle" font-size="190" fill="${C.mus}" stroke="${C.lead}" stroke-width="6" paint-order="stroke">?</text>`,
+  anim(){ idleRafa(I("r"), s, e); tl.set("#"+I("q"), {opacity:0}, 0); pop("#"+I("q"), T.onde - 0.1); bobY("#"+I("q"), T.onde + 0.3, e, 10, 0.8);
+    tl.fromTo("#"+I("r")+"_head", {rotation:0}, {rotation:-10, transformOrigin:"50% 80%", duration:0.35, yoyo:true, repeat:3, repeatDelay:0.4, immediateRender:false}, s + 0.3);
+    shake("#"+I("p3"), T.onde, 0.4, 6); }
+});
+SC.alerta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#D9B48A"/><rect y="1380" width="1080" height="540" fill="#7A5A42"/><rect y="1370" width="1080" height="20" fill="#5E4634"/>
+   <rect x="640" y="380" width="340" height="420" fill="#6B4A36"/><rect x="664" y="404" width="292" height="372" fill="url(#gSky)"/><rect x="805" y="404" width="10" height="372" fill="#6B4A36"/>
+   <rect x="40" y="1180" width="320" height="140" rx="30" fill="#8E4A3A"/><rect x="60" y="1130" width="280" height="90" rx="26" fill="#A6553A"/>`
+   + rafa(I("r"), {x:300, y:1520, s:1.25, pose:"phone", mood:"scared", look:-6}),
+  html: `<div class="w" style="left:660px;top:820px"><div id="${I("ph")}" style="width:470px;height:800px;border-radius:56px;background:#161817;padding:22px;box-sizing:border-box;transform:rotate(-5deg);box-shadow:0 30px 0 rgba(0,0,0,.18)">
+     <div style="width:100%;height:100%;border-radius:38px;background:${C.red};display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:Oswald">
+      <svg width="150" height="132" viewBox="0 0 150 132"><path d="M75,6 L144,126 L6,126Z" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/><rect x="69" y="46" width="12" height="44" rx="6" fill="#fff"/><circle cx="75" cy="106" r="8" fill="#fff"/></svg>
+      <div style="font-size:38px;margin-top:22px;letter-spacing:.03em">${X.topo}</div>
+      <div style="font-size:104px;line-height:1;margin:22px 0 26px">${X.titulo.replace(" ","<br>")}</div>
+      <div style="font-size:34px;opacity:.92;padding:0 30px">${X.sub}</div></div></div></div>`
+   + selo(I("hora"), 250, 470, X.hora, C.lead, C.mus, 80),
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("ph"), {y:900}, {y:0, duration:0.45, ease:"power3.out", immediateRender:true}, s + 0.05);
+    shake("#"+I("ph"), s + 0.55, 0.5, 8); shake("#"+I("ph"), s + 2.2, 0.4, 6); tl.set("#"+I("hora"), {opacity:0}, 0); pop("#"+I("hora"), T.hora); }
+});
+SC.avenida = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="700" width="1080" height="1220" fill="${C.road}"/><rect y="700" width="1080" height="40" fill="#C9B08F"/>` + houses(702, 8, 0.85)
+   + `<g id="${I("cars")}">` + carRows([{y:860, x0:-50, gap:150, s:0.9}, {y:1010, x0:10, gap:165, s:1.0}, {y:1180, x0:-40, gap:180, s:1.15}, {y:1400, x0:-20, gap:205, s:1.35}, {y:1660, x0:-80, gap:230, s:1.55}]) + `</g>`,
+  html: selo(I("selo"), 540, 330, X.selo, C.red, "#fff", 66) + selo(I("selo2"), 540, 440, X.selo2, C.mus, C.lead, 48),
+  anim(){ pop("#"+I("selo"), s + 0.1); tl.set("#"+I("selo2"), {opacity:0}, 0); pop("#"+I("selo2"), s + 0.6);
+    tl.fromTo("#"+I("cars"), {x:0}, {x:-60, duration:e - s, ease:"none", immediateRender:false}, s);
+    tl.fromTo(`#${it.id}_S .brake`, {opacity:1}, {opacity:0.25, duration:0.3, yoyo:true, repeat:Math.ceil((e-s)/0.3), immediateRender:false}, s);
+    shake("#"+I("selo"), T.parada, 0.3, 6); }
+});
+SC.carro = (it, X, T, s, e, I) => ({
+  svg: skyBg() + houses(1120, 7, 0.8) + `<rect y="1120" width="1080" height="800" fill="${C.road}"/>` + car(I("car"), 540, 1300, "#4F7CAC", 4.6)
+   + `<g id="${I("dark")}" opacity="0"><rect width="1080" height="1920" fill="#4A5245"/></g>` + rainDrops(I("rain"), 70, "#C9D46C", 7, 0, 46)
+   + `<g id="${I("x")}" stroke="${C.red}" stroke-width="40" stroke-linecap="round"><path d="M330,820 L750,1220" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="${I("x1")}"/><path d="M750,820 L330,1220" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" id="${I("x2")}"/></g>`
+   + trefoil(870, 640, 60, C.lead, C.mus).replace("<g ", `<g id="${I("tre")}" `),
+  html: selo(I("rot"), 540, 340, X.rotulo, C.lead, "#fff", 62),
+  anim(){ tl.set("#"+I("rot"), {opacity:0}, 0); pop("#"+I("rot"), T.lata - 0.1); bobY("#"+I("car"), s, e, 3, 0.5);
+    tl.set("#"+I("rain"), {opacity:0}, 0); tl.set("#"+I("rain"), {opacity:0.85}, T.chuva - 0.1); fall("#"+I("rain"), T.chuva - 0.1, e, 1.3);
+    tl.to("#"+I("dark"), {opacity:0.5, duration:0.4}, T.chuva - 0.1);
+    tl.to("#"+I("x1"), {strokeDashoffset:0, duration:0.22}, T.chuva + 0.25); tl.to("#"+I("x2"), {strokeDashoffset:0, duration:0.22}, T.chuva + 0.45);
+    tl.set("#"+I("tre"), {opacity:0}, 0); pop("#"+I("tre"), T.chuva); }
+});
+SC.corrida = (it, X, T, s, e, I) => {
+  let fence = ""; for (let x = -10; x < 1090; x += 64) fence += `<rect x="${x}" y="760" width="56" height="260" rx="6" fill="#B98B5E"/>`;
+  return { svg: skyBg() + houses(780, 7, 0.8) + fence + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/><rect y="1000" width="1080" height="16" fill="${C.grass2}"/>`
+   + `<g transform="translate(80,1000)"><rect x="-14" y="-260" width="28" height="270" fill="#6B4A36"/><circle cy="-330" r="120" fill="#5C7842"/><circle cx="60" cy="-270" r="80" fill="#6E8B4E"/></g>`
+   + `<g transform="translate(860,1330)"><ellipse rx="150" ry="52" fill="${C.moss}"/><ellipse rx="118" ry="38" fill="${C.lead}"/><ellipse rx="56" ry="18" fill="none" stroke="${C.mus}" stroke-width="8"/></g>`
+   + rafa(I("r"), {x:150, y:1500, s:1.1, pose:"run", mood:"scared"}),
+   anim(){ blink(`#${I("r")}_eyes`, s, e); tl.fromTo("#"+I("r")+"_pos", {x:-120}, {x:470, duration:e - s, ease:"none", immediateRender:false}, s);
+     const n = Math.ceil((e - s)/0.18);
+     tl.fromTo("#"+I("r")+"_lL", {rotation:-26}, {rotation:26, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_lR", {rotation:26}, {rotation:-26, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_aL", {rotation:-30}, {rotation:30, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     tl.fromTo("#"+I("r")+"_aR", {rotation:30}, {rotation:-30, duration:0.18, yoyo:true, repeat:n, ease:"sine.inOut", transformOrigin:"50% 0%", immediateRender:false}, s);
+     bobY("#"+I("r"), s, e, 14, 0.36); }
+  };
+};
+SC.bunker = (it, X, T, s, e, I) => {
+  let stones = ""; for (let i = 0; i < 40; i++) stones += `<ellipse cx="${rnd()*1080}" cy="${700 + rnd()*1500}" rx="${8+rnd()*16}" ry="${6+rnd()*9}" fill="${C.soil2}" opacity=".7"/>`;
+  let cans = ""; const cc = [C.red, C.mus, "#4F7CAC"]; for (let r = 0; r < 3; r++) for (let i = 0; i < 6; i++) cans += `<rect x="${250 + i*44}" y="${1150 + r*110}" width="34" height="56" rx="5" fill="${cc[(i+r)%3]}"/>`;
+  return { svg: `<g id="${I("cont")}">` + skyBg() + houses(560, 7, 0.7) + `<rect y="560" width="1080" height="1600" fill="${C.soil}"/>` + stones
+   + `<rect y="540" width="1080" height="40" fill="${C.grass}"/><rect x="480" y="530" width="120" height="22" rx="8" fill="${C.lead}"/>`
+   + `<rect x="505" y="560" width="70" height="460" fill="#4A3829"/><g stroke="#9A9A92" stroke-width="8">${[...Array(9)].map((_, i) => `<path d="M515,${600+i*48} L565,${600+i*48}"/>`).join("")}<path d="M515,570 L515,1020 M565,570 L565,1020"/></g>`
+   + `<rect x="130" y="1010" width="820" height="620" rx="26" fill="${C.moss}"/><rect x="160" y="1040" width="760" height="560" rx="14" fill="#55624F"/>`
+   + `<rect x="230" y="1130" width="300" height="12" fill="#3A2E24"/><rect x="230" y="1240" width="300" height="12" fill="#3A2E24"/><rect x="230" y="1350" width="300" height="12" fill="#3A2E24"/>` + cans.replace(/y="(\d+)"/g, (m, v) => `y="${+v - 76}"`)
+   + `<rect x="630" y="1300" width="250" height="40" rx="10" fill="#C9B79A"/><rect x="630" y="1340" width="250" height="20" fill="#6B4A36"/><rect x="630" y="1460" width="250" height="40" rx="10" fill="#C9B79A"/><rect x="630" y="1500" width="250" height="20" fill="#6B4A36"/>`
+   + `<rect x="700" y="1080" width="120" height="150" rx="10" fill="#8E948C"/><circle cx="760" cy="1060" r="40" fill="url(#gGlow)"/><circle cx="760" cy="1060" r="12" fill="#FFE59A"/>`
+   + `</g>`,
+   html: selo(I("rot"), 540, 330, X.rotulo, C.mus, C.lead, 56) + selo(I("ano"), 760, 1150, X.ano, C.lead, C.mus, 96),
+   anim(){ tl.fromTo("#"+I("cont"), {y:300}, {y:-60, duration:Math.min(2.2, e - s), ease:"power2.inOut", immediateRender:false}, s + 0.1);
+     tl.set("#"+I("rot"), {opacity:0}, 0); pop("#"+I("rot"), T.bunker); tl.set("#"+I("ano"), {opacity:0}, 0); pop("#"+I("ano"), T.ano); }
+  };
+};
+function neighborHouse(I, lit){
+  return `<rect x="560" y="300" width="560" height="900" fill="#A9BFC4"/><rect x="560" y="300" width="560" height="900" fill="rgba(0,0,0,.05)"/>
+   <path d="M520,320 L840,120 L1160,320Z" fill="${C.lead}"/>
+   <rect x="690" y="470" width="270" height="320" fill="${C.cream}"/>
+   <rect id="${I("win")}" x="708" y="488" width="234" height="284" fill="#56666D"/>
+   <g id="${I("lit")}" opacity="${lit?1:0}"><circle cx="825" cy="630" r="300" fill="url(#gGlow)"/><rect x="708" y="488" width="234" height="284" fill="#F6D27A"/>
+    <path d="M708,488 L770,488 Q760,640 740,772 L708,772Z" fill="#E09A50"/><path d="M942,488 L880,488 Q890,640 910,772 L942,772Z" fill="#E09A50"/>
+    <ellipse cx="825" cy="700" rx="46" ry="70" fill="#C98242" opacity=".55"/><circle cx="825" cy="610" r="30" fill="#C98242" opacity=".55"/></g>
+   <rect x="820" y="488" width="10" height="284" fill="${C.cream}"/>`;
+}
+SC.muro = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<rect y="1150" width="1080" height="770" fill="${C.grass}"/>` + neighborHouse(I, false) + brickWall(380, 1010, 720, 420)
+   + rafa(I("r"), {x:240, y:1440, s:1.15, mood:"calm"}),
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("r")+"_pos", {x:-60}, {x:0, duration:0.8, ease:"power2.out", immediateRender:false}, s);
+    tl.to(`#${I("r")}_head`, {rotation:-14, transformOrigin:"50% 80%", duration:0.4}, T.muro - 0.3); }
+});
+SC.janela = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-700,-260) scale(1.75)">` + neighborHouse(I, false) + `</g>` + `<rect y="1380" width="1080" height="540" fill="${C.grass}"/>`
+   + `<g transform="translate(160,1560) scale(1.6)"><g transform="translate(0,-60)">${rafaHead(I("h"), {mood:"calm"})}</g></g>` + brickWall(-20, 1500, 1120, 500),
+  anim(){ blink(`#${I("h")}_eyes`, s, e); tl.to("#"+I("lit"), {opacity:1, duration:0.25}, T.luz + 0.1); tl.fromTo("#"+I("h")+"_head", {y:40}, {y:0, duration:0.6, ease:"power2.out", immediateRender:false}, s + 0.1); }
+});
+SC.espiada = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-300,-200) scale(1.3)">` + neighborHouse(I, true) + `</g>`
+   + `<g transform="translate(400,1180) scale(3.1)">${rafaHead(I("h"), {mood:"worry"})}</g>` + brickWall(-20, 1330, 1120, 700)
+   + `<circle cx="250" cy="1318" r="52" fill="${C.skin}"/><circle cx="560" cy="1318" r="52" fill="${C.skin}"/>`
+   + `<path id="${I("drop")}" d="M640,880 q22,34 0,52 q-22,-18 0,-52Z" fill="#9FD3E6" opacity="0"/>`,
+  anim(){ blink(`#${I("h")}_eyes`, s, e); tl.fromTo("#"+I("h")+"_head", {y:30}, {y:0, duration:0.5, ease:"power2.out", immediateRender:false}, s);
+    tl.fromTo("#"+I("drop"), {opacity:0, y:-10}, {opacity:1, y:40, duration:0.9, immediateRender:false}, T.coragem); }
+});
+SC.pular = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<g transform="translate(-160,-120) scale(1.12)">` + neighborHouse(I, true) + `</g>` + `<rect y="1450" width="1080" height="470" fill="${C.grass}"/>`
+   + brickWall(330, 1060, 760, 420) + rafa(I("r"), {x:200, y:1500, s:1.2, pose:"reach", mood:"worry", look:-8})
+   + `<path id="${I("arc")}" d="M260,880 Q540,420 800,640" fill="none" stroke="${C.mus}" stroke-width="14" stroke-dasharray="34 26" stroke-linecap="round"/>
+      <path id="${I("arrow")}" d="M800,640 l-46,-6 l26,-36Z" fill="${C.mus}"/>`,
+  anim(){ idleRafa(I("r"), s, e); bobY("#"+I("r"), s, e, 10, 0.7);
+    tl.set(["#"+I("arc"), "#"+I("arrow")], {opacity:0}, 0);
+    tl.fromTo("#"+I("arc"), {opacity:1, strokeDashoffset:900, strokeDasharray:"900 900"}, {strokeDashoffset:0, duration:0.7, ease:"power2.out", immediateRender:false}, T.pular);
+    tl.set("#"+I("arc"), {strokeDasharray:"34 26"}, T.pular + 0.72); tl.fromTo("#"+I("arrow"), {opacity:0}, {opacity:1, duration:0.15, immediateRender:false}, T.pular + 0.6); }
+});
+SC.flash = (it, X, T, s, e, I) => ({
+  svg: skyBg() + `<path d="M0,1010 L0,930 L80,930 L80,880 L150,880 L150,950 L220,950 L220,860 L260,840 L300,860 L300,960 L380,960 L380,900 L470,900 L470,970 L560,970 L560,870 L640,870 L640,940 L720,940 L720,820 L760,800 L800,820 L800,950 L900,950 L900,890 L1000,890 L1000,960 L1080,960 L1080,1010Z" fill="#8C7A68"/>`
+   + `<rect y="1000" width="1080" height="920" fill="${C.grass}"/>` + `<circle id="${I("pt")}" cx="700" cy="930" r="40" fill="#FFFDF5" opacity="0"/>`
+   + rafa(I("r"), {x:420, y:1500, s:1.0, mood:"calm", flip:true})
+   + `<rect id="${I("w")}" width="1080" height="1920" fill="#FFFDF7" opacity="0"/>`,
+  anim(){ idleRafa(I("r"), s, e); tl.fromTo("#"+I("pt"), {opacity:0, scale:0.2, transformOrigin:"50% 50%"}, {opacity:1, scale:4, duration:0.3, immediateRender:false}, T.clarao - 0.3);
+    tl.to("#"+I("w"), {opacity:1, duration:0.08}, T.clarao - 0.02); }
+});
+SC.nao_olhe = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gPale)"/><rect y="1180" width="1080" height="740" fill="#C9C29A"/>` + rafa(I("r"), {x:540, y:1560, s:1.35, pose:"cover", mood:"scared"})
+   + `<rect id="${I("w")}" width="1080" height="1920" fill="#fff"/>`,
+  html: `<div class="w" style="left:540px;top:380px"><div id="${I("t1")}" style="font-family:Oswald;font-size:150px;color:${C.red};line-height:1">${X.t1}</div></div>` + selo(I("t2"), 540, 560, X.t2, C.lead, C.mus, 110),
+  anim(){ tl.fromTo("#"+I("w"), {opacity:1}, {opacity:0, duration:0.6, immediateRender:false}, s); shake("#"+I("r"), s + 0.2, e - s - 0.3, 3);
+    pop("#"+I("t1"), s + 0.05); tl.set("#"+I("t2"), {opacity:0}, 0); pop("#"+I("t2"), T.conte); }
+});
+SC.cogumelo = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gDusk)"/>`
+   + `<g id="${I("cloud")}" transform="translate(540,1000)"><path d="M-60,0 L-40,-380 L40,-380 L60,0Z" fill="#C99A72"/>
+      <ellipse cx="0" cy="-420" rx="250" ry="120" fill="#E0B48C"/><ellipse cx="0" cy="-380" rx="210" ry="60" fill="#B98563"/><ellipse cx="-30" cy="-450" rx="150" ry="60" fill="#EBC9A3"/>
+      <ellipse cx="0" cy="-150" rx="120" ry="34" fill="#E0B48C" opacity=".8"/></g>
+      <ellipse id="${I("wave")}" cx="540" cy="1000" rx="200" ry="40" fill="none" stroke="#FFF1DA" stroke-width="16" opacity="0"/>`
+   + `<path d="M0,1100 L0,1020 L70,1020 L70,960 L130,960 L130,1040 L200,1040 L200,980 L260,940 L320,980 L320,1050 L420,1050 L420,1000 L480,1000 L480,1060 L600,1060 L600,990 L690,990 L690,1040 L770,1040 L770,950 L850,950 L850,1030 L960,1030 L960,980 L1080,980 L1080,1100Z" fill="${C.lead}"/>`
+   + `<rect y="1098" width="1080" height="830" fill="#2F3532"/>`,
+  html: `<div class="w" style="left:540px;top:380px"><div style="display:flex;align-items:center;gap:30px;background:${C.cream};border-radius:22px;padding:18px 44px;font-family:Oswald;color:${C.lead};box-shadow:0 8px 0 rgba(0,0,0,.2)">
+     <div id="${I("a")}" style="text-align:center"><div style="font-size:96px;color:${C.red};line-height:1">${X.a}</div><div style="font-size:40px">${X.a2}</div></div>
+     <div style="font-size:48px;opacity:.6">VS</div>
+     <div id="${I("b")}" style="text-align:center"><div style="font-size:96px;color:${C.red};line-height:1">${X.b}</div><div style="font-size:40px">${X.b2}</div></div></div></div>`,
+  anim(){ tl.fromTo("#"+I("cloud"), {scale:0.45, transformOrigin:"50% 100%"}, {scale:1.05, transformOrigin:"50% 100%", duration:e - s, ease:"power1.out", immediateRender:false}, s);
+    pop("#"+I("a"), T.luz); tl.set("#"+I("b"), {opacity:0}, 0); pop("#"+I("b"), T.estrondo);
+    tl.fromTo("#"+I("wave"), {opacity:1, scale:0.5, transformOrigin:"50% 50%"}, {opacity:0, scale:5, transformOrigin:"50% 50%", duration:1.1, immediateRender:false}, T.estrondo);
+    shake(`#${it.id}_S .cam`, T.estrondo, 0.45, 9); }
+});
+SC.regra3s = (it, X, T, s, e, I) => {
+  let ticks = ""; for (let i = 0; i <= 10; i++) ticks += `<rect x="${140 + i*80 - 3}" y="${i%5?985:970}" width="6" height="${i%5?30:60}" fill="${C.lead}"/>`;
+  return { svg: `<rect width="1080" height="1920" fill="${C.cream}"/><rect x="140" y="997" width="800" height="6" fill="${C.lead}"/>` + ticks
+   + `<g id="${I("wv")}" transform="translate(140,880)" fill="none" stroke="${C.red}" stroke-width="10" stroke-linecap="round"><path d="M20,-40 Q50,0 20,40"/><path d="M45,-62 Q90,0 45,62"/><path d="M70,-84 Q130,0 70,84"/></g>`
+   + `<g transform="translate(140,1100)"><circle r="22" fill="${C.mus}"/></g><text class="o" x="140" y="1180" text-anchor="middle" font-size="40" fill="${C.lead}">0</text><text class="o" x="940" y="1180" text-anchor="middle" font-size="40" fill="${C.lead}">1 KM</text>`
+   + `<circle id="${I("dot")}" cx="140" cy="1100" r="22" fill="${C.red}"/>`,
+   html: `<div class="w" style="left:540px;top:600px"><div id="${I("f")}" style="font-family:Oswald;font-size:180px;color:${C.lead};white-space:nowrap;line-height:1"><span style="color:${C.red}">${X.f1}</span> = <span style="color:#C8962A">${X.f2}</span></div></div>`
+     + selo(I("rod"), 540, 380, X.rodape, C.lead, "#fff", 52),
+   anim(){ pop("#"+I("f"), s + 0.1); tl.set("#"+I("rod"), {opacity:0}, 0); pop("#"+I("rod"), s + 0.8);
+     tl.fromTo(["#"+I("wv"), "#"+I("dot")], {x:0}, {x:800, duration:e - s - 0.3, ease:"none", immediateRender:false}, s + 0.2); }
+  };
+};
+SC.contagem = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>` + `<g transform="translate(540,760)" opacity=".18"><circle r="330" fill="none" stroke="${C.cream}" stroke-width="10"/><circle r="250" fill="none" stroke="${C.cream}" stroke-width="6"/></g>`,
+  html: selo(I("rot"), 540, 380, X.rotulo, C.lead, C.cream, 54) + `<div class="w" style="left:540px;top:760px"><div id="${I("n")}" style="font-family:Oswald;font-size:400px;color:${C.cream};line-height:1">0</div></div>`
+    + selo(I("km"), 540, 1080, X.km, C.mus, C.lead, 120),
+  anim(){ const o = {v:0}, N = parseInt(X.n) || 31, el = () => document.getElementById(I("n"));
+    tl.fromTo(o, {v:0}, {v:N, duration:Math.max(0.3, T.n31 + 0.25 - s), ease:"none", immediateRender:false, onUpdate(){ el().textContent = Math.round(o.v); }}, s);
+    tl.set("#"+I("km"), {opacity:0}, 0); pop("#"+I("km"), T.km); tl.fromTo("#"+I("n"), {scale:1}, {scale:1.08, duration:0.2, yoyo:true, repeat:1, immediateRender:false}, T.n31 + 0.2); }
+});
+SC.escotilha = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>` + hatchTop(I("h"), 540, 800, 380),
+  html: selo(I("sel"), 540, 330, X.selo, C.mus, C.lead, 60),
+  anim(){ tl.fromTo("#"+I("h")+"_wheel", {rotation:0, transformOrigin:"50% 50%"}, {rotation:300, transformOrigin:"50% 50%", duration:1.4, ease:"power2.inOut", immediateRender:false}, T.gira);
+    tl.fromTo(`#${I("h")}_bolts .bolt`, {x:0}, {x:-80, duration:0.35, stagger:0.08, ease:"power2.out", immediateRender:false}, T.travas);
+    tl.set("#"+I("sel"), {opacity:0}, 0); pop("#"+I("sel"), T.travas + 0.4);
+    tl.fromTo("#"+I("h"), {scale:1.15, transformOrigin:"50% 50%"}, {scale:1, transformOrigin:"50% 50%", duration:0.8, ease:"power2.out", immediateRender:false}, s); }
+});
+SC.poeira = (it, X, T, s, e, I) => {
+  let fence = ""; for (let x = -10; x < 1090; x += 64) fence += `<rect x="${x}" y="760" width="56" height="260" rx="6" fill="#A08164"/>`;
+  return { svg: skyBg() + houses(780, 7, 0.8) + fence + `<rect y="1000" width="1080" height="920" fill="#879468"/>`
+   + `<g transform="translate(540,1240)"><ellipse rx="190" ry="64" fill="${C.moss}"/><ellipse rx="150" ry="48" fill="${C.lead}"/><ellipse rx="70" ry="22" fill="none" stroke="${C.mus}" stroke-width="9"/></g>`
+   + `<g id="${I("gray")}" opacity="0"><rect width="1080" height="1920" fill="#6F6C66"/></g>` + rainDrops(I("dust"), 120, "#BDB6A8", 6, 0, 0),
+   html: selo(I("s1"), 540, 330, X.selo1, C.lead, C.mus, 56) + selo(I("s2"), 540, 450, X.selo2, C.red, "#fff", 62),
+   anim(){ tl.to("#"+I("gray"), {opacity:0.45, duration:2}, s); fall("#"+I("dust"), s, e, 4);
+     tl.set(["#"+I("s1"), "#"+I("s2")], {opacity:0}, 0); pop("#"+I("s1"), T.min20 - 0.1); pop("#"+I("s2"), T.regra - 0.05); }
+  };
+};
+SC.grafico = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="${C.cream}"/>` + trefoil(540, 360, 70, C.lead, C.mus)
+   + `<g id="${I("ch")}"><path d="M170,520 L170,1150 L950,1150" fill="none" stroke="${C.lead}" stroke-width="8"/>
+      <text class="o" x="150" y="545" text-anchor="end" font-size="40" fill="${C.red}">${X.topo}</text>
+      <path id="${I("curve")}" d="M176,540 C250,960 420,1100 940,1138" fill="none" stroke="${C.red}" stroke-width="14" stroke-linecap="round"/>
+      <circle id="${I("m1")}" r="20" fill="${C.mus}" stroke="${C.lead}" stroke-width="5"/><circle id="${I("m2")}" r="20" fill="#6E8B4E" stroke="${C.lead}" stroke-width="5"/>
+      <text class="o" x="560" y="1215" text-anchor="middle" font-size="38" fill="${C.lead}">${X.eixo}</text></g>`,
+  html: selo(I("l1"), 0, 0, X.l1, C.mus, C.lead, 56) + selo(I("l2"), 0, 0, X.l2, "#6E8B4E", "#fff", 56),
+  anim(){ const p = document.getElementById(I("curve")), L = p.getTotalLength();
+    const P1 = p.getPointAtLength(L*0.30), P2 = p.getPointAtLength(L*0.72);
+    document.getElementById(I("m1")).setAttribute("cx", P1.x); document.getElementById(I("m1")).setAttribute("cy", P1.y);
+    document.getElementById(I("m2")).setAttribute("cx", P2.x); document.getElementById(I("m2")).setAttribute("cy", P2.y);
+    const w1 = document.getElementById(I("l1")).parentNode, w2 = document.getElementById(I("l2")).parentNode;
+    w1.style.left = (P1.x + 190) + "px"; w1.style.top = (P1.y - 80) + "px"; w2.style.left = (P2.x - 40) + "px"; w2.style.top = (P2.y - 120) + "px";
+    p.setAttribute("stroke-dasharray", L + " " + L); tl.set(p, {strokeDashoffset:L}, 0);
+    tl.to(p, {strokeDashoffset:L*0.9, duration:0.5}, s + 0.1); tl.to(p, {strokeDashoffset:L*0.70, duration:0.5}, T.h7 - 0.2);
+    tl.to(p, {strokeDashoffset:0, duration:0.8}, T.d2 - 0.2);
+    tl.set(["#"+I("m1"), "#"+I("m2"), "#"+I("l1"), "#"+I("l2")], {opacity:0}, 0);
+    pop("#"+I("m1"), T.h7 + 0.3); pop("#"+I("l1"), T.h7 + 0.35); pop("#"+I("m2"), T.d2 + 0.6); pop("#"+I("l2"), T.c100 - 0.1);
+    tl.fromTo(`#${it.id}_S .cam`, {scale:1.0}, {scale:1.08, duration:0.6, ease:"power2.inOut", immediateRender:false}, T.depois2 - 0.1); }
+});
+SC.calendario = (it, X, T, s, e, I) => {
+  let grid = "", xs = "";
+  for (let i = 0; i < 14; i++){ const c = i % 7, r = Math.floor(i/7), x = 205 + c*96, y = 790 + r*150;
+    grid += `<rect x="${x}" y="${y}" width="84" height="130" rx="10" fill="#fff" stroke="#D9CBB0" stroke-width="3"/><text class="o" x="${x+42}" y="${y+56}" text-anchor="middle" font-size="40" fill="${C.lead}">${i+1}</text>`;
+    xs += `<g class="xx" stroke="${C.red}" stroke-width="10" stroke-linecap="round" opacity="0"><path d="M${x+16},${y+72} L${x+68},${y+118}"/><path d="M${x+68},${y+72} L${x+16},${y+118}"/></g>`; }
+  return { svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/><rect x="170" y="600" width="740" height="510" rx="26" fill="${C.cream}"/><rect x="170" y="600" width="740" height="160" rx="26" fill="${C.red}"/><rect x="170" y="700" width="740" height="60" fill="${C.red}"/>`
+   + `<text class="o" x="540" y="715" text-anchor="middle" font-size="96" fill="#fff">${X.cab}</text>` + grid + `<g id="${I("xs")}">${xs}</g>`,
+   html: selo(I("top"), 540, 380, X.topo, C.mus, C.lead, 64),
+   anim(){ tl.set("#"+I("top"), {opacity:0}, 0); pop("#"+I("top"), s + 0.3);
+     const st = Math.max(0.05, (T.d14 + 0.3 - (s + 0.5))/14);
+     tl.fromTo(`#${I("xs")} .xx`, {opacity:0, scale:1.6, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.15, stagger:st, immediateRender:false}, s + 0.5); }
+  };
+};
+SC.estoque = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gMoss)"/>`,
+  html: `<div class="w" style="left:540px;top:820px"><div id="${I("pap")}" style="width:660px;height:820px;background:#F4EEDD;border-radius:10px;transform:rotate(-3deg);box-shadow:0 18px 0 rgba(0,0,0,.25);font-family:Oswald;color:${C.lead};padding:70px 60px;box-sizing:border-box;position:relative">
+     <div style="position:absolute;left:230px;top:-26px;width:200px;height:60px;background:rgba(232,178,58,.75);transform:rotate(2deg)"></div>
+     <div style="font-size:96px;text-align:center;line-height:1">${X.titulo}</div>
+     <div style="margin-top:60px;font-size:52px">${X.l1}</div><div class="bars" style="display:flex;gap:12px;margin-top:10px">${'<i style="display:block;width:56px;height:46px;border-radius:6px;background:#4F7CAC"></i>'.repeat(8)}</div>
+     <div style="margin-top:40px;font-size:52px">${X.l2}</div><div class="bars" style="display:flex;gap:12px;margin-top:10px">${'<i style="display:block;width:56px;height:46px;border-radius:6px;background:#C8962A"></i>'.repeat(8)}</div>
+     <div id="${I("so")}" style="position:absolute;left:60px;bottom:50px;display:flex;align-items:center;gap:18px;font-size:50px;color:${C.red}">
+      <svg width="90" height="110" viewBox="-80 -110 160 200"><g transform="scale(0.9)">${rafaHead(I("mini"), {mood:"worry"})}</g></svg>${X.so}</div>
+    </div></div>`
+    + `<div class="w" style="left:790px;top:560px"><div id="${I("st")}" style="font-family:Oswald;font-size:110px;color:${C.red};border:12px solid ${C.red};border-radius:18px;padding:0 26px;transform:rotate(-12deg);background:rgba(244,238,221,.85);line-height:1.2">${X.dias}</div></div>`,
+  anim(){ pop("#"+I("pap"), s + 0.05); tl.fromTo(`#${it.id}_S .bars i`, {scaleY:0, transformOrigin:"50% 100%"}, {scaleY:1, duration:0.12, stagger:0.06, immediateRender:true}, s + 0.4);
+    tl.set("#"+I("st"), {opacity:0}, 0); tl.fromTo("#"+I("st"), {opacity:0, scale:2}, {opacity:1, scale:1, duration:0.25, ease:"power3.in", immediateRender:false}, T.d16);
+    tl.set("#"+I("so"), {opacity:0}, 0); pop("#"+I("so"), T.so); }
+});
+SC.problema = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#141615"/>`,
+  html: `<div class="w" style="left:540px;top:820px"><div id="${I("t")}" style="font-family:Oswald;font-size:140px;color:${C.red};white-space:nowrap">${X.t}</div></div>`,
+  anim(){ tl.fromTo("#"+I("t"), {opacity:0, scale:1.15}, {opacity:1, scale:1, duration:0.4, immediateRender:true}, s + 0.1);
+    tl.to("#"+I("t"), {opacity:0.55, duration:0.05, yoyo:true, repeat:3}, s + 1.0); }
+});
+SC.batidas = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gDark)"/><circle cx="540" cy="760" r="520" fill="url(#gGlow)" opacity=".12"/>`
+   + `<g stroke="#5E625C" stroke-width="18"><path d="M420,1060 L420,1920 M660,1060 L660,1920"/>${[...Array(8)].map((_, i) => `<path d="M420,${1120+i*110} L660,${1120+i*110}"/>`).join("")}</g>`
+   + hatchTop(I("h"), 540, 760, 330)
+   + `<g id="${I("rings")}" fill="none" stroke="#F3E9D6" stroke-width="10" opacity="0"><circle cx="540" cy="760" r="370"/><circle cx="540" cy="760" r="420"/></g>`,
+  html: selo(I("hora"), 220, 330, X.hora, C.lead, C.mus, 72)
+    + `<div class="w" style="left:780px;top:340px"><div id="${I("b")}" style="font-family:Oswald;background:${C.cream};border-radius:16px;padding:6px 30px 10px;text-align:center;line-height:1;box-shadow:0 8px 0 rgba(0,0,0,.3)"><div style="font-size:110px;color:${C.red}">${X.b}</div><div style="font-size:36px;color:${C.lead}">${X.b2}</div></div></div>`,
+  anim(){ tl.set(["#"+I("hora"), "#"+I("b")], {opacity:0}, 0); pop("#"+I("hora"), T.hora - 0.1);
+    [0, 0.32, 0.64].forEach(d => { shake("#"+I("h"), T.bateu + d, 0.12, 12); tl.fromTo("#"+I("rings"), {opacity:0.9, scale:0.92, transformOrigin:"50% 50%"}, {opacity:0, scale:1.12, transformOrigin:"50% 50%", duration:0.3, immediateRender:false}, T.bateu + d); });
+    pop("#"+I("b"), T.b3 - 0.1); }
+});
+SC.medidor = (it, X, T, s, e, I) => {
+  const arcP = (a0, a1, col) => { const r = 200, p = a => [540 + r*Math.cos(a*Math.PI/180), 820 + r*Math.sin(a*Math.PI/180)]; const A = p(a0), B = p(a1);
+    return `<path d="M${A[0]},${A[1]} A${r},${r} 0 0 1 ${B[0]},${B[1]}" fill="none" stroke="${col}" stroke-width="46"/>`; };
+  return { svg: `<rect width="1080" height="1920" fill="url(#gDark)"/><rect x="250" y="470" width="580" height="760" rx="60" fill="${C.mus}"/><rect x="250" y="1130" width="580" height="100" rx="40" fill="#C8962A"/>
+    <rect x="300" y="560" width="480" height="380" rx="26" fill="${C.cream}"/>` + arcP(-180, -110, "#6E8B4E") + arcP(-110, -55, C.mus) + arcP(-55, 0, C.red)
+    + `<g id="${I("nd")}"><rect x="535" y="650" width="10" height="175" rx="5" fill="${C.lead}"/></g><circle cx="540" cy="820" r="22" fill="${C.lead}"/>`
+    + `<circle id="${I("lamp")}" cx="760" cy="520" r="24" fill="${C.red}"/><circle id="${I("glow")}" cx="760" cy="520" r="90" fill="url(#gRedGlow)" opacity="0"/>`
+    + `<text class="o" x="540" y="535" text-anchor="middle" font-size="44" fill="${C.lead}">${X.topo}</text>` + trefoil(360, 1040, 48, C.mus, C.lead),
+   html: `<div class="w" style="left:600px;top:1040px"><div id="${I("r")}" class="selo" style="background:${C.red};color:#fff;font-size:92px">${X.r}</div></div>`,
+   anim(){ tl.fromTo("#"+I("nd"), {rotation:-80, transformOrigin:"50% 97%"}, {rotation:72, transformOrigin:"50% 97%", duration:Math.max(0.5, T.letal - s), ease:"power2.in", immediateRender:true}, s + 0.1);
+     tl.fromTo("#"+I("nd"), {rotation:72}, {rotation:80, transformOrigin:"50% 97%", duration:0.08, yoyo:true, repeat:Math.ceil((e - T.letal)/0.08), immediateRender:false}, T.letal + 0.1);
+     tl.fromTo("#"+I("glow"), {opacity:0}, {opacity:1, duration:0.2, yoyo:true, repeat:Math.ceil((e - s)/0.2), immediateRender:false}, s);
+     tl.set("#"+I("r"), {opacity:0}, 0); pop("#"+I("r"), T.letal); }
+  };
+};
+SC.fim = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#111312"/>`,
+  html: `<div class="w" style="left:540px;top:860px"><div id="${I("t")}" style="font-family:Oswald;text-align:center;line-height:1">
+    <div style="font-size:190px;color:#F3EEE4">${X.t}</div><div style="font-size:72px;color:${C.red};margin-top:20px">${X.s}</div></div></div>`,
+  anim(){ tl.fromTo("#"+I("t"), {opacity:0, y:30}, {opacity:1, y:0, duration:0.6, ease:"power2.out", immediateRender:true}, s + 0.1); }
+});
+
+/* ---------------- montagem ---------------- */
+const SCN = EDIT.items.filter(i => i.by === "template" && i.type === "html");
+SCN.forEach((it, k) => {
+  const P = it.props || {}, X = P.textos || {}, T = P.t || {}, s = +it.start, e = s + (+it.dur), I = n => `${it.id}_${n}`;
+  const f = SC[P.cena]; if (!f) return;
+  const r = f(it, X, T, s, e, I);
+  const d = document.createElement("div"); d.className = "sc" + (s <= 0.01 ? " first" : ""); d.id = it.id + "_S";
+  d.innerHTML = `<div class="cam"><svg viewBox="0 0 1080 1920" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">${r.svg || ""}</svg><div class="lay">${r.html || ""}</div></div>`;
+  ROOT.appendChild(d);
+  if (it.hidden) return;
+  if (s > 0.01) tl.set(d, {visibility:"visible"}, s);
+  tl.set(d, {visibility:"hidden"}, e);
+  tl.fromTo(d.querySelector(".cam"), {scale:1.0}, {scale:1.045, duration:e - s, ease:"none", immediateRender:false}, s);
+  r.anim && r.anim();
+});
+</script>
+<!--__ITEMS_SCRIPT__-->
+<script>
+(function(){ /* legenda: tira pontuação e marca palavras vermelhas (param leg_vermelho) */
+  const prm = (EDIT.items.find(i => i.id === "leg_vermelho") || {props:{value:""}}).props.value.toLowerCase().split(",").map(x => x.trim()).filter(Boolean);
+  document.querySelectorAll("#leg .ed-w").forEach(w => { w.textContent = w.textContent.replace(/[.,;:!?…]+$/, "");
+    const t = w.textContent.toLowerCase(); if (prm.some(k => t.includes(k))) w.setAttribute("data-red", "1"); });
+})();
+</script>
+</body></html>

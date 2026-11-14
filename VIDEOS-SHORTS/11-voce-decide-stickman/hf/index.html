@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#0d1014;}
+#root{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#0d1014;font-family:Montserrat,Inter,Arial,sans-serif;}
+#scenes{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.sc{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;visibility:hidden;}
+.sc.first{visibility:visible;}
+.cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:50% 42%;}
+.cam svg{position:absolute;left:0;top:0;}
+.lay{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.w{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;}
+.hud{position:absolute;left:64px;top:92px;color:#E9EDF2;font-family:Montserrat,Arial;line-height:1;}
+.hud .n{font-family:Inter,Arial;font-weight:800;font-size:30px;letter-spacing:.14em;color:#FF4D4D;display:flex;align-items:center;gap:12px;}
+.hud .n i{display:inline-block;width:16px;height:16px;border-radius:50%;background:#FF4D4D;}
+.hud .t{font-size:104px;font-weight:900;margin-top:10px;letter-spacing:-.02em;}
+.hud .t small{font-size:40px;margin-left:10px;letter-spacing:.04em;color:#AEB6C2;}
+.hud .l{font-family:Inter,Arial;font-weight:700;font-size:28px;letter-spacing:.28em;color:#7F8A99;margin-top:12px;}
+.parte{position:absolute;right:60px;top:104px;font-family:Montserrat;font-weight:900;font-size:30px;color:#0d1014;background:#FFD23F;padding:10px 20px;border-radius:10px;letter-spacing:.06em;}
+.selo{font-family:Montserrat;font-weight:900;white-space:nowrap;padding:12px 26px;border-radius:12px;letter-spacing:.04em;line-height:1;color:#fff;background:#E23B3B;box-shadow:0 8px 0 rgba(0,0,0,.35);}
+.bub{position:absolute;left:44px;font-family:Inter,Arial;font-weight:700;font-size:36px;color:#F4F6F8;background:#2A313C;padding:20px 28px;border-radius:30px 30px 30px 8px;max-width:340px;line-height:1.2;white-space:normal;}
+.bub.old{opacity:.38;}
+.bub.red{background:#E23B3B;color:#fff;font-family:Montserrat;font-weight:900;font-size:46px;}
+.vig{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 42%,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 100%);}
+#leg .ed-cg{letter-spacing:-.005em;text-shadow:0 5px 0 #000,0 0 22px rgba(0,0,0,.9),0 0 4px #000;}
+#leg .ed-w.on[data-g]{color:#3DDC7A !important;}
+@font-face{font-family:'Montserrat';src:url('m/fonts/Montserrat-Black.ttf');font-weight:100 900;}@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}#leg .ed-cg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;}#leg .ed-w{color:#ffffff} #leg .ed-w.on{color:#ffffff}#leg .ed-w.ed-k.on{color:#FFD23F}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="64.34" data-width="1080" data-height="1920">
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2230"/><stop offset="1" stop-color="#121722"/></linearGradient>
+  <linearGradient id="gFloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F131A"/><stop offset="1" stop-color="#07090C"/></linearGradient>
+  <linearGradient id="gBeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FB8DE" stop-opacity=".16"/><stop offset="1" stop-color="#9FB8DE" stop-opacity="0"/></linearGradient>
+  <radialGradient id="gPhone"><stop offset="0" stop-color="#CFE4FF" stop-opacity=".85"/><stop offset="1" stop-color="#CFE4FF" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gWarm"><stop offset="0" stop-color="#FFE3A3" stop-opacity=".9"/><stop offset="1" stop-color="#FFE3A3" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gRed"><stop offset="0" stop-color="#FF3B3B" stop-opacity=".55"/><stop offset="1" stop-color="#FF3B3B" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gGap" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFE3A3" stop-opacity="0"/><stop offset=".5" stop-color="#FFE3A3"/><stop offset="1" stop-color="#FFE3A3" stop-opacity="0"/></linearGradient>
+ </defs>
+</svg>
+<div id="scenes"></div>
+<div class="vig"></div>
+<div id="leg_box" class="ed-box" style="left:540.0px;top:1290.0px;z-index:21;"><div id="leg" class="clip" data-start="0.000" data-duration="64.340" data-track-index="12" style="font-size:84.0px;color:#ffffff;font-weight:900;text-align:center;font-family:'Montserrat',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);text-transform:uppercase;"><div id="leg_g0" class="ed-cg" style="opacity:0"><span id="leg_g0w0" class="ed-w">São</span> <span id="leg_g0w1" class="ed-w">três</span> <span id="leg_g0w2" class="ed-w">e</span></div><div id="leg_g1" class="ed-cg" style="opacity:0"><span id="leg_g1w0" class="ed-w">sete</span> <span id="leg_g1w1" class="ed-w">da</span> <span id="leg_g1w2" class="ed-w">manhã.</span></div><div id="leg_g2" class="ed-cg" style="opacity:0"><span id="leg_g2w0" class="ed-w">Seu</span> <span id="leg_g2w1" class="ed-w">celular</span> <span id="leg_g2w2" class="ed-w">vibra</span></div><div id="leg_g3" class="ed-cg" style="opacity:0"><span id="leg_g3w0" class="ed-w">no</span> <span id="leg_g3w1" class="ed-w ed-k">escuro.</span></div><div id="leg_g4" class="ed-cg" style="opacity:0"><span id="leg_g4w0" class="ed-w">Uma</span> <span id="leg_g4w1" class="ed-w">mensagem</span> <span id="leg_g4w2" class="ed-w">nova,</span></div><div id="leg_g5" class="ed-cg" style="opacity:0"><span id="leg_g5w0" class="ed-w">de</span> <span id="leg_g5w1" class="ed-w">você</span> <span id="leg_g5w2" class="ed-w ed-k">mesmo.</span></div><div id="leg_g6" class="ed-cg" style="opacity:0"><span id="leg_g6w0" class="ed-w ed-k">Mesmo</span> <span id="leg_g6w1" class="ed-w">número.</span></div><div id="leg_g7" class="ed-cg" style="opacity:0"><span id="leg_g7w0" class="ed-w">Mesma</span> <span id="leg_g7w1" class="ed-w ed-k">foto.</span></div><div id="leg_g8" class="ed-cg" style="opacity:0"><span id="leg_g8w0" class="ed-w">E</span> <span id="leg_g8w1" class="ed-w">ela</span> <span id="leg_g8w2" class="ed-w">diz</span></div><div id="leg_g9" class="ed-cg" style="opacity:0"><span id="leg_g9w0" class="ed-w">só</span> <span id="leg_g9w1" class="ed-w">uma</span> <span id="leg_g9w2" class="ed-w">coisa,</span></div><div id="leg_g10" class="ed-cg" style="opacity:0"><span id="leg_g10w0" class="ed-w">não</span> <span id="leg_g10w1" class="ed-w">acende</span> <span id="leg_g10w2" class="ed-w">a</span></div><div id="leg_g11" class="ed-cg" style="opacity:0"><span id="leg_g11w0" class="ed-w ed-k">luz.</span></div><div id="leg_g12" class="ed-cg" style="opacity:0"><span id="leg_g12w0" class="ed-w">Você</span> <span id="leg_g12w1" class="ed-w">ri.</span></div><div id="leg_g13" class="ed-cg" style="opacity:0"><span id="leg_g13w0" class="ed-w">Deve</span> <span id="leg_g13w1" class="ed-w">ser</span> <span id="leg_g13w2" class="ed-w ed-k">golpe.</span></div><div id="leg_g14" class="ed-cg" style="opacity:0"><span id="leg_g14w0" class="ed-w">Aí</span> <span id="leg_g14w1" class="ed-w">chega</span> <span id="leg_g14w2" class="ed-w">a</span></div><div id="leg_g15" class="ed-cg" style="opacity:0"><span id="leg_g15w0" class="ed-w">segunda,</span></div><div id="leg_g16" class="ed-cg" style="opacity:0"><span id="leg_g16w0" class="ed-w">tem</span> <span id="leg_g16w1" class="ed-w">alguém</span> <span id="leg_g16w2" class="ed-w">no</span></div><div id="leg_g17" class="ed-cg" style="opacity:0"><span id="leg_g17w0" class="ed-w ed-k">corredor.</span></div><div id="leg_g18" class="ed-cg" style="opacity:0"><span id="leg_g18w0" class="ed-w">Você</span> <span id="leg_g18w1" class="ed-w">prende</span> <span id="leg_g18w2" class="ed-w">a</span></div><div id="leg_g19" class="ed-cg" style="opacity:0"><span id="leg_g19w0" class="ed-w ed-k">respiração.</span></div><div id="leg_g20" class="ed-cg" style="opacity:0"><span id="leg_g20w0" class="ed-w">O</span> <span id="leg_g20w1" class="ed-w">piso</span> <span id="leg_g20w2" class="ed-w ed-k">range.</span></div><div id="leg_g21" class="ed-cg" style="opacity:0"><span id="leg_g21w0" class="ed-w">Uma</span> <span id="leg_g21w1" class="ed-w">vez.</span></div><div id="leg_g22" class="ed-cg" style="opacity:0"><span id="leg_g22w0" class="ed-w ed-k">Duas.</span></div><div id="leg_g23" class="ed-cg" style="opacity:0"><span id="leg_g23w0" class="ed-w">A</span> <span id="leg_g23w1" class="ed-w ed-k">maçaneta</span> <span id="leg_g23w2" class="ed-w">do</span></div><div id="leg_g24" class="ed-cg" style="opacity:0"><span id="leg_g24w0" class="ed-w">quarto</span> <span id="leg_g24w1" class="ed-w">começa</span> <span id="leg_g24w2" class="ed-w">a</span></div><div id="leg_g25" class="ed-cg" style="opacity:0"><span id="leg_g25w0" class="ed-w ed-k">girar</span> <span id="leg_g25w1" class="ed-w">bem</span> <span id="leg_g25w2" class="ed-w ed-k">devagar</span></div><div id="leg_g26" class="ed-cg" style="opacity:0"><span id="leg_g26w0" class="ed-w">e</span> <span id="leg_g26w1" class="ed-w ed-k">para.</span></div><div id="leg_g27" class="ed-cg" style="opacity:0"><span id="leg_g27w0" class="ed-w">Terceira</span> <span id="leg_g27w1" class="ed-w">mensagem,</span></div><div id="leg_g28" class="ed-cg" style="opacity:0"><span id="leg_g28w0" class="ed-w">ele</span> <span id="leg_g28w1" class="ed-w">ainda</span> <span id="leg_g28w2" class="ed-w">não</span></div><div id="leg_g29" class="ed-cg" style="opacity:0"><span id="leg_g29w0" class="ed-w">te</span> <span id="leg_g29w1" class="ed-w ed-k">viu.</span></div><div id="leg_g30" class="ed-cg" style="opacity:0"><span id="leg_g30w0" class="ed-w">No</span> <span id="leg_g30w1" class="ed-w ed-k">escuro,</span></div><div id="leg_g31" class="ed-cg" style="opacity:0"><span id="leg_g31w0" class="ed-w">ele</span> <span id="leg_g31w1" class="ed-w">não</span> <span id="leg_g31w2" class="ed-w">te</span></div><div id="leg_g32" class="ed-cg" style="opacity:0"><span id="leg_g32w0" class="ed-w ed-k">encontra.</span></div><div id="leg_g33" class="ed-cg" style="opacity:0"><span id="leg_g33w0" class="ed-w">Três</span> <span id="leg_g33w1" class="ed-w">e</span> <span id="leg_g33w2" class="ed-w ed-k">nove.</span></div><div id="leg_g34" class="ed-cg" style="opacity:0"><span id="leg_g34w0" class="ed-w">A</span> <span id="leg_g34w1" class="ed-w">tela</span> <span id="leg_g34w2" class="ed-w">acende</span></div><div id="leg_g35" class="ed-cg" style="opacity:0"><span id="leg_g35w0" class="ed-w">de</span> <span id="leg_g35w1" class="ed-w">novo.</span></div><div id="leg_g36" class="ed-cg" style="opacity:0"><span id="leg_g36w0" class="ed-w">Última</span> <span id="leg_g36w1" class="ed-w">mensagem,</span></div><div id="leg_g37" class="ed-cg" style="opacity:0"><span id="leg_g37w0" class="ed-w">do</span> <span id="leg_g37w1" class="ed-w ed-k">mesmo</span> <span id="leg_g37w2" class="ed-w">número,</span></div><div id="leg_g38" class="ed-cg" style="opacity:0"><span id="leg_g38w0" class="ed-w">acende</span> <span id="leg_g38w1" class="ed-w">a</span> <span id="leg_g38w2" class="ed-w ed-k">luz.</span></div><div id="leg_g39" class="ed-cg" style="opacity:0"><span id="leg_g39w0" class="ed-w ed-k">Agora.</span></div><div id="leg_g40" class="ed-cg" style="opacity:0"><span id="leg_g40w0" class="ed-w ed-k">Duas</span> <span id="leg_g40w1" class="ed-w ed-k">ordens.</span></div><div id="leg_g41" class="ed-cg" style="opacity:0"><span id="leg_g41w0" class="ed-w">O</span> <span id="leg_g41w1" class="ed-w ed-k">mesmo</span> <span id="leg_g41w2" class="ed-w">número.</span></div><div id="leg_g42" class="ed-cg" style="opacity:0"><span id="leg_g42w0" class="ed-w">Uma</span> <span id="leg_g42w1" class="ed-w ed-k">delas</span> <span id="leg_g42w2" class="ed-w">não</span></div><div id="leg_g43" class="ed-cg" style="opacity:0"><span id="leg_g43w0" class="ed-w">é</span> <span id="leg_g43w1" class="ed-w">você.</span></div><div id="leg_g44" class="ed-cg" style="opacity:0"><span id="leg_g44w0" class="ed-w">Então</span> <span id="leg_g44w1" class="ed-w">me</span> <span id="leg_g44w2" class="ed-w">fala,</span></div><div id="leg_g45" class="ed-cg" style="opacity:0"><span id="leg_g45w0" class="ed-w">você</span> <span id="leg_g45w1" class="ed-w">acende</span> <span id="leg_g45w2" class="ed-w">a</span></div><div id="leg_g46" class="ed-cg" style="opacity:0"><span id="leg_g46w0" class="ed-w ed-k">luz</span> <span id="leg_g46w1" class="ed-w">ou</span> <span id="leg_g46w2" class="ed-w">fica</span></div><div id="leg_g47" class="ed-cg" style="opacity:0"><span id="leg_g47w0" class="ed-w">no</span> <span id="leg_g47w1" class="ed-w ed-k">escuro?</span></div><div id="leg_g48" class="ed-cg" style="opacity:0"><span id="leg_g48w0" class="ed-w">Comenta</span> <span id="leg_g48w1" class="ed-w">A</span> <span id="leg_g48w2" class="ed-w">pra</span></div><div id="leg_g49" class="ed-cg" style="opacity:0"><span id="leg_g49w0" class="ed-w">acender,</span></div><div id="leg_g50" class="ed-cg" style="opacity:0"><span id="leg_g50w0" class="ed-w">B</span> <span id="leg_g50w1" class="ed-w">pra</span> <span id="leg_g50w2" class="ed-w">ficar</span></div><div id="leg_g51" class="ed-cg" style="opacity:0"><span id="leg_g51w0" class="ed-w">no</span> <span id="leg_g51w1" class="ed-w ed-k">escuro.</span></div><div id="leg_g52" class="ed-cg" style="opacity:0"><span id="leg_g52w0" class="ed-w">A</span> <span id="leg_g52w1" class="ed-w">parte</span> <span id="leg_g52w2" class="ed-w ed-k">dois</span></div><div id="leg_g53" class="ed-cg" style="opacity:0"><span id="leg_g53w0" class="ed-w">depende</span> <span id="leg_g53w1" class="ed-w">de</span> <span id="leg_g53w2" class="ed-w">você.</span></div></div></div>
+</div>
+<script>
+const EDIT = {"version": 1, "name": "11 - 24-10-2026 - VOCE DECIDE STICKMAN - Mensagem de voce mesmo as 3h07 - Parte 1", "grupo": "ESTILOS SHORTS", "estilo": "Você decide stickman (história interativa)", "canvas": {"w": 1080, "h": 1920, "fps": 30, "bg": "#0d1014"}, "duration": 64.34, "template": "local", "fonts": {"Montserrat": "fonts/Montserrat-Black.ttf", "Inter": "fonts/Inter.ttf"}, "referencia": {"canal": "@stickmanstorys22", "video": "https://www.tiktok.com/@stickmanstorys22/video/7699365027945532690", "nota": "também @stickitoutstories https://www.youtube.com/shorts/sY5gfQ6btLM ; boneco e cenários originais em SVG"}, "audio": {"voice": {"src": "voz.mp3", "volume": 1.0, "start": 0}, "music": {"src": "musica.mp3", "volume": 0.22, "start": 0, "fade_out": 1.5, "duck": true}, "extra": [{"id": "w0", "src": "sfx/whoosh.wav", "start": 4.85, "volume": 0.16, "label": "whoosh"}, {"id": "w1", "src": "sfx/whoosh.wav", "start": 17.93, "volume": 0.16, "label": "whoosh"}, {"id": "w2", "src": "sfx/whoosh.wav", "start": 32.29, "volume": 0.16, "label": "whoosh"}, {"id": "w3", "src": "sfx/whoosh.wav", "start": 38.19, "volume": 0.16, "label": "whoosh"}, {"id": "w4", "src": "sfx/whoosh.wav", "start": 47.43, "volume": 0.16, "label": "whoosh"}, {"id": "w5", "src": "sfx/whoosh.wav", "start": 52.95, "volume": 0.16, "label": "whoosh"}]}, "tracks": [{"id": "fundo", "name": "Cenas 2D"}, {"id": "legenda", "name": "Legenda"}], "items": [{"id": "c01", "type": "html", "track": "fundo", "by": "template", "label": "Quarto escuro 3:07", "start": 0.0, "dur": 5.0, "props": {"cena": "quarto", "textos": {"hora": "3:07", "ampm": "AM", "local": "QUARTO"}, "t": {"vibra": 3.28}, "html": "", "fill": true}}, {"id": "c02", "type": "html", "track": "fundo", "by": "template", "label": "Mensagem de você mesmo", "start": 5.0, "dur": 9.78, "props": {"cena": "celular", "textos": {"hora": "3:07", "ampm": "AM", "local": "QUARTO", "remetente": "VOCÊ", "numero": "+55 (11) 9 8471-2207", "msg": "Não acende a luz.", "selo": "MENSAGEM 1"}, "t": {"voce": 6.56, "numero": 8.44, "foto": 10.06, "msg": 12.92}, "html": "", "fill": true}}, {"id": "c03", "type": "html", "track": "fundo", "by": "template", "label": "Você ri: golpe?", "start": 14.78, "dur": 3.3, "props": {"cena": "rindo", "textos": {"hora": "3:07", "ampm": "AM", "local": "QUARTO", "balao": "GOLPE?"}, "t": {"golpe": 16.94}, "html": "", "fill": true}}, {"id": "c04", "type": "html", "track": "fundo", "by": "template", "label": "2ª mensagem: corredor", "start": 18.08, "dur": 3.22, "props": {"cena": "celular2", "textos": {"hora": "3:08", "ampm": "AM", "local": "QUARTO", "remetente": "VOCÊ", "msg": "Tem alguém no corredor.", "selo": "MENSAGEM 2"}, "t": {"msg": 19.48}, "html": "", "fill": true}}, {"id": "c05", "type": "html", "track": "fundo", "by": "template", "label": "Piso range / sombra na porta", "start": 21.3, "dur": 6.92, "props": {"cena": "porta", "textos": {"hora": "3:08", "ampm": "AM", "local": "CORREDOR", "som": "CREEK"}, "t": {"range": 24.14, "uma": 25.72, "duas": 26.94}, "html": "", "fill": true}}, {"id": "c06", "type": "html", "track": "fundo", "by": "template", "label": "Maçaneta gira e para", "start": 28.22, "dur": 4.22, "props": {"cena": "macaneta", "textos": {"hora": "3:08", "ampm": "AM", "local": "PORTA DO QUARTO"}, "t": {"girar": 29.92, "para": 31.46}, "html": "", "fill": true}}, {"id": "c07", "type": "html", "track": "fundo", "by": "template", "label": "3ª mensagem: não te viu", "start": 32.44, "dur": 5.9, "props": {"cena": "celular3", "textos": {"hora": "3:08", "ampm": "AM", "local": "QUARTO", "remetente": "VOCÊ", "msg": "Ele ainda não te viu.", "msg2": "No escuro, ele não te encontra.", "selo": "MENSAGEM 3"}, "t": {"msg": 33.74, "msg2": 35.94}, "html": "", "fill": true}}, {"id": "c08", "type": "html", "track": "fundo", "by": "template", "label": "3:09 relógio", "start": 38.34, "dur": 3.74, "props": {"cena": "relogio", "textos": {"hora": "3:09", "ampm": "AM", "local": "QUARTO", "grande": "3:09"}, "t": {"tela": 40.28}, "html": "", "fill": true}}, {"id": "c09", "type": "html", "track": "fundo", "by": "template", "label": "Última: acende a luz. Agora.", "start": 42.08, "dur": 5.5, "props": {"cena": "celular4", "textos": {"hora": "3:09", "ampm": "AM", "local": "QUARTO", "remetente": "VOCÊ", "msg": "Acende a luz.", "msg2": "AGORA.", "selo": "ÚLTIMA MENSAGEM"}, "t": {"msg": 44.68, "agora": 46.3}, "html": "", "fill": true}}, {"id": "c10", "type": "html", "track": "fundo", "by": "template", "label": "Duas ordens, mesmo número", "start": 47.58, "dur": 5.52, "props": {"cena": "duas", "textos": {"hora": "3:09", "ampm": "AM", "local": "QUARTO", "a": "Não acende a luz.", "b": "Acende a luz. Agora.", "num": "MESMO NÚMERO", "selo": "UMA DELAS NÃO É VOCÊ"}, "t": {"numero": 49.86, "delas": 51.32}, "html": "", "fill": true}}, {"id": "c11", "type": "html", "track": "fundo", "by": "template", "label": "Escolha A ou B", "start": 53.1, "dur": 11.24, "props": {"cena": "escolha", "textos": {"hora": "3:09", "ampm": "AM", "local": "QUARTO", "titulo": "VOCÊ DECIDE", "a": "ACENDE A LUZ", "b": "FICA NO ESCURO", "fim": "PARTE 2 DEPENDE DE VOCÊ"}, "t": {"comenta": 57.68, "A": 57.96, "B": 58.92, "parte": 61.1}, "html": "", "fill": true}}, {"id": "hud_noite", "type": "param", "label": "HUD: dia/noite", "props": {"value": "NOITE 1"}}, {"id": "hud_parte", "type": "param", "label": "HUD: parte", "props": {"value": "PARTE 1"}}, {"id": "leg", "type": "caption", "track": "legenda", "label": "Legenda", "start": 0, "dur": 64.34, "props": {"words_file": "words.json", "per_group": 3, "x": 540, "y": 1290, "size": 84, "font": "Montserrat", "weight": 900, "color": "#ffffff", "dim": "#ffffff", "hl_color": "#FFD23F", "shadow": true, "upper": true, "keywords": ["escuro", "mesmo", "foto", "luz", "golpe", "corredor", "respira", "range", "duas", "maçaneta", "girar", "devagar", "para.", "viu", "encontra", "nove", "agora", "ordens", "delas", "dois"]}}, {"id": "leg_verde", "type": "param", "label": "Legenda: palavras em verde", "props": {"value": "acende,acender,luz"}}]};
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:64.34,ease:"none"},0);
+window.__timelines["main"] = tl;
+const ED = Object.fromEntries(EDIT.items.map(i => [i.id, i]));
+const PV = id => ((ED[id] || {}).props || {}).value || "";
+const C = {wh:"#F4F4F2", ink:"#0d1014", yel:"#FFD23F", grn:"#3DDC7A", red:"#E23B3B", blu:"#CFE4FF"};
+const ROOT = document.getElementById("scenes");
+
+/* ---------- helpers de animação ---------- */
+function hide(sel){ tl.set(sel, {opacity:0}, 0); }
+function pop(sel, t, from=0.6){ tl.fromTo(sel, {opacity:0, scale:from, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.28, ease:"back.out(2)", immediateRender:false}, t); }
+function fadeIn(sel, t, d=0.35, y=0){ tl.fromTo(sel, {opacity:0, y:y}, {opacity:1, y:0, duration:d, ease:"power2.out", immediateRender:false}, t); }
+function shake(sel, t, dur=0.3, amp=8){ const n = Math.max(2, Math.round(dur/0.05)); for (let k=0;k<n;k++) tl.to(sel, {x:(k%2?-1:1)*amp*(1-k/n), duration:0.05, ease:"none"}, t + k*0.05); tl.to(sel, {x:0, duration:0.05}, t + n*0.05); }
+
+/* ---------- HUD (relógio no topo, como série) ---------- */
+function hud(X, I){
+  return `<div class="hud" id="${I("hud")}"><div class="n"><i id="${I("rec")}"></i>${PV("hud_noite")}</div>
+   <div class="t"><span>${X.hora||""}</span><small>${X.ampm||""}</small></div><div class="l">${X.local||""}</div></div>
+   <div class="parte">${PV("hud_parte")}</div>`;
+}
+function hudAnim(I, s, e){ for (let t = s + 0.5; t < e; t += 1.0) tl.to("#"+I("rec"), {opacity:0.15, duration:0.08, yoyo:true, repeat:1}, t); }
+
+/* ---------- boneco original (cabeça redonda branca, traço grosso) ---------- */
+function stick(id, x, y, sc, pose="stand", mood="calm"){
+  const W = C.wh, sw = 16;
+  let arms = ["M0,-160 L-52,-72","M0,-160 L52,-72"], legs = ["M0,-40 L-36,84","M0,-40 L36,84"], extra = "";
+  if (pose === "phone"){ arms = ["M0,-160 L-46,-70","M0,-160 L52,-118 L30,-196"];
+    extra = `<circle cx="26" cy="-226" r="120" fill="url(#gPhone)" opacity=".55" id="${id}_glow"/><rect x="6" y="-262" width="40" height="66" rx="9" fill="#202734" stroke="#0a0c10" stroke-width="4"/><rect x="11" y="-256" width="30" height="52" rx="5" fill="${C.blu}"/>`; }
+  if (pose === "fear"){ arms = ["M0,-160 L-62,-112 L-74,-178","M0,-160 L62,-112 L74,-178"]; }
+  if (pose === "reach"){ arms = ["M0,-160 L-48,-72","M0,-160 L70,-180 L132,-196"]; }
+  const eyes = mood === "scared"
+    ? `<circle cx="-17" cy="-242" r="11" fill="${C.ink}"/><circle cx="17" cy="-242" r="11" fill="${C.ink}"/><ellipse cx="0" cy="-212" rx="8" ry="10" fill="${C.ink}"/>`
+    : mood === "smile" ? `<circle cx="-17" cy="-244" r="7" fill="${C.ink}"/><circle cx="17" cy="-244" r="7" fill="${C.ink}"/><path d="M-16,-220 q16,14 32,0" stroke="${C.ink}" stroke-width="6" fill="none" stroke-linecap="round"/>`
+    : `<circle cx="-17" cy="-242" r="7" fill="${C.ink}"/><circle cx="17" cy="-242" r="7" fill="${C.ink}"/>`;
+  return `<g transform="translate(${x},${y}) scale(${sc})"><g id="${id}">${extra}
+   <g stroke="${W}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M0,-186 L0,-40"/>${legs.map(d => `<path d="${d}"/>`).join("")}<g id="${id}_arms">${arms.map(d => `<path d="${d}"/>`).join("")}</g></g>
+   <g id="${id}_head"><circle cx="0" cy="-236" r="52" fill="${W}"/>${eyes}</g></g></g>`;
+}
+
+/* ---------- quarto ---------- */
+function room(I, o={}){
+  return `<rect width="1080" height="1920" fill="url(#gWall)"/>
+   ${o.win===false ? "" : `<g><rect x="110" y="360" width="300" height="360" rx="8" fill="#22324A"/><circle cx="330" cy="440" r="42" fill="#DDE6F2" opacity=".85"/>
+    <rect x="110" y="360" width="300" height="360" rx="8" fill="none" stroke="#0B0E14" stroke-width="18"/><path d="M260,360 V720 M110,540 H410" stroke="#0B0E14" stroke-width="14"/></g>
+   <polygon points="110,720 410,720 640,1130 230,1130" fill="url(#gBeam)"/>`}
+   <rect y="1120" width="1080" height="800" fill="url(#gFloor)"/>
+   <g stroke="#161B24" stroke-width="4">${[1210,1330,1480,1660].map(y => `<path d="M0,${y} H1080"/>`).join("")}</g>
+   ${o.bed===false ? "" : `<rect x="120" y="850" width="40" height="280" rx="10" fill="#2B3342"/>
+   <rect x="150" y="1000" width="620" height="90" rx="14" fill="#2E3747"/><rect x="150" y="1080" width="620" height="40" fill="#1E2430"/>
+   <rect x="740" y="1060" width="28" height="70" fill="#1E2430"/>
+   <rect x="175" y="955" width="160" height="56" rx="26" fill="#C9CFD8"/>`}
+   ${o.stand===false ? "" : `<rect x="805" y="1000" width="170" height="130" rx="10" fill="#262E3C"/><rect x="820" y="1050" width="140" height="8" rx="4" fill="#161B24"/>
+   <g id="${I("lamp")}"><path d="M905,1000 V930" stroke="#3A4456" stroke-width="10"/><path d="M860,935 L950,935 L930,880 L880,880Z" fill="#3A4456"/></g>`}`;
+}
+function blanket(x0, x1, y){ return `<path d="M${x0},${y} Q${(x0+x1)/2},${y-40} ${x1},${y+10} L${x1},1090 L${x0},1090Z" fill="#46557A"/><path d="M${x0},${y} Q${(x0+x1)/2},${y-40} ${x1},${y+10}" stroke="#5C6E98" stroke-width="10" fill="none"/>`; }
+
+/* ---------- celular (chat com "VOCÊ") ---------- */
+function phone(I, X, bubbles, o={}){
+  const cx = o.cx || 540, cy = o.cy || 770, w = o.w || 500, h = o.h || 860, sc = o.sc || 1;
+  const bh = bubbles.map((b, k) => `<div class="bub ${b.cls||""}" id="${I("b"+k)}" style="top:${b.top}px">${b.text}</div>`).join("");
+  return `<div class="w" style="left:${cx}px;top:${cy}px"><div id="${I("ph")}" style="transform:scale(${sc});position:relative;width:${w}px;height:${h}px;border-radius:58px;background:#05070A;border:10px solid #2C3442;box-shadow:0 0 120px rgba(160,200,255,.28),0 30px 60px rgba(0,0,0,.6);overflow:hidden">
+   <div style="position:absolute;left:0;top:0;right:0;height:150px;background:#151A22;border-bottom:2px solid #252C38"></div>
+   <div style="position:absolute;left:50%;top:14px;transform:translateX(-50%);width:120px;height:30px;border-radius:16px;background:#000"></div>
+   <div style="position:absolute;left:30px;top:16px;font:800 24px Inter;color:#C8CED8">${X.hora||""}</div>
+   <div id="${I("av")}" style="position:absolute;left:34px;top:62px;width:72px;height:72px;border-radius:50%;background:#F4F4F2;box-shadow:0 0 0 4px #151A22,0 0 0 8px #3a4252">
+     <i style="position:absolute;left:22px;top:28px;width:9px;height:9px;border-radius:50%;background:#0d1014"></i><i style="position:absolute;left:42px;top:28px;width:9px;height:9px;border-radius:50%;background:#0d1014"></i></div>
+   <div style="position:absolute;left:124px;top:66px;font:900 38px Montserrat;color:#fff" id="${I("nm")}">${X.remetente||""}</div>
+   <div style="position:absolute;left:124px;top:110px;font:700 22px Inter;color:#8E97A5" id="${I("nu")}">${X.numero||"+55 (11) 9 8471-2207"}</div>
+   ${bh}
+   <div class="bub" id="${I("dots")}" style="top:${o.dotsTop||640}px;font-size:44px;letter-spacing:6px;padding:8px 26px 18px">•••</div>
+  </div></div>`;
+}
+function phoneAnim(I, s, list){
+  tl.fromTo("#"+I("ph"), {y:60, opacity:0}, {y:0, opacity:1, duration:0.35, ease:"power2.out", immediateRender:true}, s + 0.02);
+  hide("#"+I("dots"));
+  list.forEach(([k, t]) => { hide("#"+I("b"+k)); if (t == null) return;
+    tl.set("#"+I("dots"), {opacity:1}, Math.max(s + 0.2, t - 0.55)); tl.set("#"+I("dots"), {opacity:0}, t - 0.02);
+    for (let j = 0; j < 3; j++) tl.to("#"+I("dots"), {opacity:0.5, duration:0.08, yoyo:true, repeat:1}, Math.max(s + 0.2, t - 0.55) + j*0.18);
+    tl.fromTo("#"+I("b"+k), {opacity:0, y:24, scale:0.92, transformOrigin:"0% 100%"}, {opacity:1, y:0, scale:1, duration:0.25, ease:"back.out(1.8)", immediateRender:false}, t);
+    shake("#"+I("ph"), t, 0.25, 6); });
+}
+function selo(id, x, y, txt, bg=C.red, fg="#fff", fs=34){ return `<div class="w" style="left:${x}px;top:${y}px"><div id="${id}" class="selo" style="background:${bg};color:${fg};font-size:${fs}px">${txt}</div></div>`; }
+
+/* ================= CENAS ================= */
+const SC = {};
+SC.quarto = (it, X, T, s, e, I) => ({
+  svg: room(I) + `<circle id="${I("pg")}" cx="850" cy="992" r="200" fill="url(#gPhone)" opacity="0"/>`
+   + `<g transform="translate(250,1000)"><circle cx="0" cy="-12" r="52" fill="${C.wh}"/><path d="M-30,-18 q10,6 20,0 M12,-18 q10,6 20,0" stroke="${C.ink}" stroke-width="6" fill="none" stroke-linecap="round"/></g>`
+   + blanket(300, 770, 990)
+   + `<g id="${I("ph")}"><rect x="826" y="982" width="66" height="20" rx="6" fill="#202734"/><rect id="${I("scr")}" x="832" y="985" width="54" height="13" rx="3" fill="#2C3442"/></g>`
+   + `<g id="${I("vb")}" stroke="${C.blu}" stroke-width="6" stroke-linecap="round" opacity="0"><path d="M812,960 l-14,-14 M906,960 l14,-14 M859,948 v-20"/></g>`,
+  html: hud(X, I),
+  anim(){ hudAnim(I, s, e);
+    tl.to("#"+I("scr"), {attr:{fill:C.blu}, duration:0.05}, T.vibra - 0.05);
+    tl.to("#"+I("pg"), {opacity:1, duration:0.2}, T.vibra - 0.05);
+    for (let k = 0; k < 3; k++){ shake("#"+I("ph"), T.vibra + k*0.5, 0.3, 5); tl.fromTo("#"+I("vb"), {opacity:1}, {opacity:0, duration:0.3, immediateRender:false}, T.vibra + k*0.5); } }
+});
+SC.celular = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:X.msg, top:200}]) + selo(I("selo"), 820, 300, X.selo)
+   + `<div class="w" style="left:540px;top:1160px"><div id="${I("hl")}" style="font:900 34px Montserrat;color:${C.ink};background:${C.yel};padding:10px 20px;border-radius:10px">MESMO NÚMERO • MESMA FOTO</div></div>`,
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[0, T.msg]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.4);
+    tl.set("#"+I("nm"), {opacity:0}, 0); tl.set("#"+I("nm"), {opacity:1, color:C.yel}, T.voce);
+    hide("#"+I("hl")); pop("#"+I("hl"), T.numero - 0.1);
+    tl.fromTo("#"+I("nu"), {color:"#8E97A5"}, {color:C.yel, duration:0.15, immediateRender:false}, T.numero - 0.1);
+    tl.fromTo("#"+I("av"), {scale:1}, {scale:1.25, duration:0.18, yoyo:true, repeat:3, ease:"power1.inOut", immediateRender:false}, T.foto - 0.2);
+    tl.to("#"+I("hl"), {opacity:0, duration:0.2}, T.msg - 0.4); }
+});
+SC.rindo = (it, X, T, s, e, I) => ({
+  svg: room(I) + stick(I("p"), 400, 1010, 1.15, "phone", "smile") + blanket(300, 770, 1000)
+   + `<g id="${I("ha")}" opacity="0" font-family="Montserrat" font-weight="900" font-size="54" fill="${C.wh}"><text x="500" y="640" transform="rotate(-12 500 640)">ha</text><text x="560" y="590" transform="rotate(8 560 590)">ha</text></g>`,
+  html: hud(X, I) + `<div class="w" style="left:760px;top:540px"><div id="${I("bal")}" style="font:900 72px Montserrat;color:${C.ink};background:${C.yel};padding:18px 34px;border-radius:40px 40px 40px 8px">${X.balao}</div></div>`,
+  anim(){ hudAnim(I, s, e);
+    for (let k = 0; k < 6; k++) tl.to("#"+I("p")+"_head", {y:(k%2?0:-8), duration:0.12}, s + 0.2 + k*0.13);
+    tl.fromTo("#"+I("ha"), {opacity:0}, {opacity:1, duration:0.1, yoyo:true, repeat:5, immediateRender:false}, s + 0.2);
+    tl.to("#"+I("p")+"_glow", {opacity:0.9, duration:0.4, yoyo:true, repeat:-1}, s);
+    hide("#"+I("bal")); pop("#"+I("bal"), T.golpe - 0.15); }
+});
+SC.celular2 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Não acende a luz.", top:200, cls:"old"}, {text:X.msg, top:330}], {dotsTop:330}) + selo(I("selo"), 820, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[1, T.msg]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3); }
+});
+SC.porta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gWall)"/><rect y="1120" width="1080" height="800" fill="url(#gFloor)"/>
+   <rect x="300" y="360" width="480" height="770" fill="#0B0E14"/><rect x="320" y="380" width="440" height="740" rx="4" fill="#2A3242"/>
+   <rect x="360" y="430" width="360" height="280" rx="6" fill="none" stroke="#222938" stroke-width="10"/><rect x="360" y="760" width="360" height="300" rx="6" fill="none" stroke="#222938" stroke-width="10"/>
+   <circle cx="700" cy="760" r="20" fill="#7E8899"/>
+   <rect id="${I("gap")}" x="320" y="1118" width="440" height="14" fill="url(#gGap)" opacity=".85"/>
+   <polygon id="${I("spill")}" points="320,1132 760,1132 900,1300 180,1300" fill="#FFE3A3" opacity=".07"/>
+   <g fill="#05070A"><rect id="${I("f1")}" x="430" y="1116" width="70" height="18" rx="6"/><rect id="${I("f2")}" x="560" y="1116" width="70" height="18" rx="6"/></g>
+   <g id="${I("cr")}" stroke="${C.yel}" stroke-width="7" fill="none" stroke-linecap="round" opacity="0"><path d="M220,1160 q20,-20 40,0 t40,0"/><path d="M800,1160 q20,-20 40,0 t40,0"/><path d="M240,1210 q20,-20 40,0 t40,0"/><path d="M780,1210 q20,-20 40,0 t40,0"/></g>`
+   + `<g opacity=".95">${stick(I("p"), 950, 1225, 0.85, "fear", "scared")}</g>`,
+  html: hud(X, I),
+  anim(){ hudAnim(I, s, e); hide(["#"+I("f1"), "#"+I("f2")]);
+    tl.to("#"+I("p")+"_arms", {y:-4, duration:0.5, yoyo:true, repeat:-1, ease:"sine.inOut"}, s);
+    tl.fromTo("#"+I("cr"), {opacity:0}, {opacity:1, duration:0.12, yoyo:true, repeat:5, immediateRender:false}, T.range - 0.3);
+    shake("#"+I("p"), T.range - 0.2, 0.3, 4);
+    fadeIn("#"+I("f1"), T.uma - 0.2, 0.25); fadeIn("#"+I("f2"), T.duas - 0.1, 0.25);
+    tl.to("#"+I("gap"), {opacity:0.4, duration:0.2}, T.uma - 0.2); }
+});
+SC.macaneta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#232B3A"/><g stroke="#1A202C" stroke-width="12" fill="none"><rect x="90" y="300" width="900" height="420" rx="10"/><rect x="90" y="1350" width="900" height="460" rx="10"/></g>
+   <circle cx="540" cy="900" r="520" fill="url(#gRed)" opacity=".5"/>
+   <rect x="440" y="640" width="200" height="520" rx="100" fill="#5E6878"/><rect x="460" y="660" width="160" height="480" rx="80" fill="#788396"/>
+   <g id="${I("lv")}"><circle cx="540" cy="900" r="70" fill="#9AA5B6"/><rect x="540" y="868" width="340" height="64" rx="32" fill="#9AA5B6"/><circle cx="540" cy="900" r="34" fill="#7E8899"/></g>
+   <circle cx="540" cy="1060" r="16" fill="#2a303c"/>`,
+  html: hud(X, I) + selo(I("st"), 540, 1180, "PAROU.", C.red),
+  anim(){ hudAnim(I, s, e); hide("#"+I("st"));
+    tl.fromTo("#"+I("lv"), {rotation:0, svgOrigin:"540 900"}, {rotation:34, svgOrigin:"540 900", duration:Math.max(0.6, T.para - T.girar), ease:"none", immediateRender:true}, T.girar - 0.1);
+    shake("#"+I("lv"), T.para, 0.2, 3); pop("#"+I("st"), T.para + 0.05); }
+});
+SC.celular3 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Não acende a luz.", top:200, cls:"old"}, {text:"Tem alguém no corredor.", top:320, cls:"old"}, {text:X.msg, top:480}, {text:X.msg2, top:600}], {dotsTop:520}) + selo(I("selo"), 820, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[2, T.msg], [3, T.msg2]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3); }
+});
+SC.relogio = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#06080B"/><circle id="${I("gl")}" cx="540" cy="900" r="700" fill="url(#gPhone)" opacity="0"/>`,
+  html: `<div class="w" style="left:540px;top:820px;text-align:center"><div id="${I("old")}" style="font:900 280px Montserrat;color:#3a4252;letter-spacing:-.04em">3:08</div></div>
+   <div class="w" style="left:540px;top:820px;text-align:center"><div id="${I("new")}" style="font:900 280px Montserrat;color:${C.yel};letter-spacing:-.04em">${X.grande}<span style="font-size:80px;color:#E9EDF2;margin-left:12px">AM</span></div></div>
+   <div class="w" style="left:540px;top:1040px"><div id="${I("sub")}" style="font:800 34px Inter;letter-spacing:.3em;color:#8E97A5">${PV("hud_noite")} • ${X.local}</div></div>`,
+  anim(){ hide(["#"+I("new"), "#"+I("sub")]);
+    tl.to("#"+I("old"), {opacity:0, y:-60, duration:0.25}, s + 0.5);
+    tl.fromTo("#"+I("new"), {opacity:0, y:60}, {opacity:1, y:0, duration:0.3, ease:"power3.out", immediateRender:false}, s + 0.5);
+    fadeIn("#"+I("sub"), s + 0.8);
+    tl.to("#"+I("gl"), {opacity:0.9, duration:0.25}, T.tela - 0.1); tl.to("#"+I("gl"), {opacity:0.45, duration:0.8}, T.tela + 0.2); }
+});
+SC.celular4 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle id="${I("rg")}" cx="540" cy="770" r="700" fill="url(#gRed)" opacity="0"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Tem alguém no corredor.", top:200, cls:"old"}, {text:"No escuro, ele não te encontra.", top:330, cls:"old"}, {text:X.msg, top:500}, {text:X.msg2, top:620, cls:"red"}], {dotsTop:500}) + selo(I("selo"), 790, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[2, T.msg], [3, T.agora]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3);
+    tl.fromTo("#"+I("rg"), {opacity:0}, {opacity:1, duration:0.12, yoyo:true, repeat:5, immediateRender:false}, T.agora); }
+});
+SC.duas = (it, X, T, s, e, I) => {
+  const mk = (k, cx, txt) => phone(n => I(k+n), {hora:X.hora, remetente:"VOCÊ"}, [{text:txt, top:200}], {cx, cy:760, w:430, h:720});
+  return {
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="760" r="640" fill="url(#gPhone)" opacity=".12"/>
+   <circle id="${I("ra")}" cx="290" cy="760" r="330" fill="url(#gRed)" opacity="0"/><circle id="${I("rb")}" cx="790" cy="760" r="330" fill="url(#gRed)" opacity="0"/>`,
+  html: hud(X, I) + `<div style="position:absolute;left:0;top:0;width:1080px;height:1920px;transform:scale(1)">` + mk("A", 290, X.a) + mk("B", 790, X.b) + `</div>`
+   + `<div class="w" style="left:540px;top:1180px"><div id="${I("num")}" style="font:900 40px Montserrat;color:${C.ink};background:${C.yel};padding:12px 26px;border-radius:12px">= ${X.num} =</div></div>`
+   + `<div class="w" style="left:290px;top:520px"><div id="${I("qa")}" style="font:900 120px Montserrat;color:${C.red}">?</div></div><div class="w" style="left:790px;top:520px"><div id="${I("qb")}" style="font:900 120px Montserrat;color:${C.red}">?</div></div>`
+   + selo(I("selo"), 540, 300, X.selo),
+  anim(){ hudAnim(I, s, e);
+    phoneAnim(n => I("A"+n), s, [[0, s + 0.35]]); phoneAnim(n => I("B"+n), s + 0.15, [[0, s + 0.6]]);
+    hide(["#"+I("num"), "#"+I("selo"), "#"+I("qa"), "#"+I("qb")]); pop("#"+I("num"), T.numero - 0.15);
+    pop("#"+I("selo"), T.delas - 0.2); pop("#"+I("qa"), T.delas); pop("#"+I("qb"), T.delas + 0.15);
+    for (let k = 0; k < 6; k++){ const L = k % 2 === 0; const tt = T.delas + 0.4 + k*0.35;
+      shake("#"+I((L?"A":"B")+"ph"), tt, 0.2, 9); tl.fromTo("#"+I(L?"ra":"rb"), {opacity:1}, {opacity:0, duration:0.3, immediateRender:false}, tt); } }
+  };
+};
+SC.escolha = (it, X, T, s, e, I) => ({
+  svg: room(I, {bed:false, stand:false, win:false})
+   + `<rect x="80" y="420" width="250" height="710" fill="#05070A"/><rect x="80" y="420" width="120" height="710" fill="#2A3242"/>
+   <g id="${I("eyes")}" opacity="0"><circle cx="248" cy="640" r="9" fill="#F4F4F2"/><circle cx="278" cy="640" r="9" fill="#F4F4F2"/></g>
+   <rect x="820" y="720" width="90" height="140" rx="12" fill="#D8DDE5"/><rect id="${I("sw")}" x="850" y="748" width="30" height="46" rx="6" fill="#8C96A6"/>
+   <circle id="${I("warm")}" cx="600" cy="700" r="900" fill="url(#gWarm)" opacity="0"/>`
+   + stick(I("p"), 640, 1130, 1.25, "reach", "scared"),
+  html: hud(X, I)
+   + `<div class="w" style="left:540px;top:440px"><div id="${I("tit")}" style="font:900 86px Montserrat;color:#fff;letter-spacing:-.01em">${X.titulo}<span style="color:${C.yel}">?</span></div></div>`
+   + `<div class="w" style="left:285px;top:1560px"><div id="${I("A")}" style="width:430px;height:250px;border-radius:30px;background:#123222;border:6px solid ${C.grn};text-align:center;font-family:Montserrat;font-weight:900">
+       <div style="font-size:110px;color:${C.grn};line-height:1.2">A</div><div style="font-size:40px;color:#fff">${X.a}</div></div></div>`
+   + `<div class="w" style="left:795px;top:1560px"><div id="${I("B")}" style="width:430px;height:250px;border-radius:30px;background:#2B2610;border:6px solid ${C.yel};text-align:center;font-family:Montserrat;font-weight:900">
+       <div style="font-size:110px;color:${C.yel};line-height:1.2">B</div><div style="font-size:40px;color:#fff">${X.b}</div></div></div>`
+   + `<div class="w" style="left:540px;top:1790px"><div id="${I("fim")}" class="selo" style="font-size:36px">${X.fim} ↓</div></div>`,
+  anim(){ hudAnim(I, s, e);
+    hide(["#"+I("tit"), "#"+I("A"), "#"+I("B"), "#"+I("fim")]); pop("#"+I("tit"), s + 0.15);
+    tl.to("#"+I("p")+"_arms", {rotation:-3, svgOrigin:"0 -160", duration:0.6, yoyo:true, repeat:-1, ease:"sine.inOut"}, s);
+    fadeIn("#"+I("A"), T.comenta - 0.4, 0.3, 80); fadeIn("#"+I("B"), T.comenta - 0.25, 0.3, 80);
+    tl.to("#"+I("A"), {scale:1.08, boxShadow:"0 0 60px rgba(61,220,122,.8)", duration:0.2}, T.A);
+    tl.to("#"+I("warm"), {opacity:0.55, duration:0.08}, T.A); tl.set("#"+I("sw"), {attr:{y:770}}, T.A);
+    tl.to("#"+I("A"), {scale:1, boxShadow:"0 0 0 rgba(0,0,0,0)", duration:0.2}, T.B - 0.1);
+    tl.to("#"+I("warm"), {opacity:0, duration:0.08}, T.B - 0.1); tl.set("#"+I("sw"), {attr:{y:748}}, T.B - 0.1);
+    tl.to("#"+I("B"), {scale:1.08, boxShadow:"0 0 60px rgba(255,210,63,.8)", duration:0.2}, T.B);
+    tl.to("#"+I("eyes"), {opacity:1, duration:0.4}, T.B + 0.3);
+    tl.to("#"+I("B"), {scale:1, boxShadow:"0 0 0 rgba(0,0,0,0)", duration:0.2}, T.parte - 0.4);
+    pop("#"+I("fim"), T.parte - 0.2);
+    tl.to(["#"+I("A"), "#"+I("B")], {scale:1.04, duration:0.35, yoyo:true, repeat:5, ease:"sine.inOut"}, T.parte + 0.3); }
+});
+
+/* ---------------- montagem ---------------- */
+const SCN = EDIT.items.filter(i => i.by === "template" && i.type === "html");
+SCN.forEach((it) => {
+  const P = it.props || {}, X = P.textos || {}, T = P.t || {}, s = +it.start, e = s + (+it.dur), I = n => `${it.id}_${n}`;
+  const f = SC[P.cena]; if (!f) return;
+  const r = f(it, X, T, s, e, I);
+  const d = document.createElement("div"); d.className = "sc" + (s <= 0.01 ? " first" : ""); d.id = it.id + "_S";
+  d.innerHTML = `<div class="cam"><svg viewBox="0 0 1080 1920" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">${r.svg || ""}</svg><div class="lay">${r.html || ""}</div></div>`;
+  ROOT.appendChild(d);
+  if (it.hidden) return;
+  if (s > 0.01) tl.set(d, {visibility:"visible"}, s);
+  tl.set(d, {visibility:"hidden"}, e);
+  tl.fromTo(d.querySelector(".cam"), {scale:1.0}, {scale:1.05, duration:e - s, ease:"none", immediateRender:false}, s);
+  r.anim && r.anim();
+});
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.set("#leg_g0",{opacity:1},0.000);tl.set("#leg_g0",{opacity:0},0.980);
+tl.set("#leg_g0w0",{className:"ed-w on"},0.000);
+tl.set("#leg_g0w1",{className:"ed-w on"},0.420);
+tl.set("#leg_g0w2",{className:"ed-w on"},0.820);
+tl.set("#leg_g1",{opacity:1},0.980);tl.set("#leg_g1",{opacity:0},2.580);
+tl.set("#leg_g1w0",{className:"ed-w on"},1.020);
+tl.set("#leg_g1w1",{className:"ed-w on"},1.220);
+tl.set("#leg_g1w2",{className:"ed-w on"},1.440);
+tl.set("#leg_g2",{opacity:1},2.580);tl.set("#leg_g2",{opacity:0},3.580);
+tl.set("#leg_g2w0",{className:"ed-w on"},2.620);
+tl.set("#leg_g2w1",{className:"ed-w on"},2.800);
+tl.set("#leg_g2w2",{className:"ed-w on"},3.240);
+tl.set("#leg_g3",{opacity:1},3.580);tl.set("#leg_g3",{opacity:0},5.000);
+tl.set("#leg_g3w0",{className:"ed-w on"},3.620);
+tl.set("#leg_g3w1",{className:"ed-w on ed-k"},3.800);
+tl.set("#leg_g4",{opacity:1},5.000);tl.set("#leg_g4",{opacity:0},6.300);
+tl.set("#leg_g4w0",{className:"ed-w on"},5.040);
+tl.set("#leg_g4w1",{className:"ed-w on"},5.160);
+tl.set("#leg_g4w2",{className:"ed-w on"},5.720);
+tl.set("#leg_g5",{opacity:1},6.300);tl.set("#leg_g5",{opacity:0},7.940);
+tl.set("#leg_g5w0",{className:"ed-w on"},6.340);
+tl.set("#leg_g5w1",{className:"ed-w on"},6.520);
+tl.set("#leg_g5w2",{className:"ed-w on ed-k"},6.820);
+tl.set("#leg_g6",{opacity:1},8.040);tl.set("#leg_g6",{opacity:0},9.600);
+tl.set("#leg_g6w0",{className:"ed-w on ed-k"},8.080);
+tl.set("#leg_g6w1",{className:"ed-w on"},8.400);
+tl.set("#leg_g7",{opacity:1},9.640);tl.set("#leg_g7",{opacity:0},11.160);
+tl.set("#leg_g7w0",{className:"ed-w on"},9.680);
+tl.set("#leg_g7w1",{className:"ed-w on ed-k"},10.020);
+tl.set("#leg_g8",{opacity:1},11.180);tl.set("#leg_g8",{opacity:0},11.800);
+tl.set("#leg_g8w0",{className:"ed-w on"},11.220);
+tl.set("#leg_g8w1",{className:"ed-w on"},11.380);
+tl.set("#leg_g8w2",{className:"ed-w on"},11.640);
+tl.set("#leg_g9",{opacity:1},11.800);tl.set("#leg_g9",{opacity:0},12.840);
+tl.set("#leg_g9w0",{className:"ed-w on"},11.840);
+tl.set("#leg_g9w1",{className:"ed-w on"},12.040);
+tl.set("#leg_g9w2",{className:"ed-w on"},12.260);
+tl.set("#leg_g10",{opacity:1},12.840);tl.set("#leg_g10",{opacity:0},13.600);
+tl.set("#leg_g10w0",{className:"ed-w on"},12.880);
+tl.set("#leg_g10w1",{className:"ed-w on"},13.160);
+tl.set("#leg_g10w2",{className:"ed-w on"},13.480);
+tl.set("#leg_g11",{opacity:1},13.600);tl.set("#leg_g11",{opacity:0},14.660);
+tl.set("#leg_g11w0",{className:"ed-w on ed-k"},13.640);
+tl.set("#leg_g12",{opacity:1},14.780);tl.set("#leg_g12",{opacity:0},16.280);
+tl.set("#leg_g12w0",{className:"ed-w on"},14.820);
+tl.set("#leg_g12w1",{className:"ed-w on"},15.220);
+tl.set("#leg_g13",{opacity:1},16.360);tl.set("#leg_g13",{opacity:0},17.980);
+tl.set("#leg_g13w0",{className:"ed-w on"},16.400);
+tl.set("#leg_g13w1",{className:"ed-w on"},16.680);
+tl.set("#leg_g13w2",{className:"ed-w on ed-k"},16.900);
+tl.set("#leg_g14",{opacity:1},18.080);tl.set("#leg_g14",{opacity:0},18.820);
+tl.set("#leg_g14w0",{className:"ed-w on"},18.120);
+tl.set("#leg_g14w1",{className:"ed-w on"},18.400);
+tl.set("#leg_g14w2",{className:"ed-w on"},18.700);
+tl.set("#leg_g15",{opacity:1},18.820);tl.set("#leg_g15",{opacity:0},19.400);
+tl.set("#leg_g15w0",{className:"ed-w on"},18.860);
+tl.set("#leg_g16",{opacity:1},19.400);tl.set("#leg_g16",{opacity:0},20.060);
+tl.set("#leg_g16w0",{className:"ed-w on"},19.440);
+tl.set("#leg_g16w1",{className:"ed-w on"},19.600);
+tl.set("#leg_g16w2",{className:"ed-w on"},19.880);
+tl.set("#leg_g17",{opacity:1},20.060);tl.set("#leg_g17",{opacity:0},21.300);
+tl.set("#leg_g17w0",{className:"ed-w on ed-k"},20.100);
+tl.set("#leg_g18",{opacity:1},21.300);tl.set("#leg_g18",{opacity:0},22.120);
+tl.set("#leg_g18w0",{className:"ed-w on"},21.340);
+tl.set("#leg_g18w1",{className:"ed-w on"},21.680);
+tl.set("#leg_g18w2",{className:"ed-w on"},22.020);
+tl.set("#leg_g19",{opacity:1},22.120);tl.set("#leg_g19",{opacity:0},23.560);
+tl.set("#leg_g19w0",{className:"ed-w on ed-k"},22.160);
+tl.set("#leg_g20",{opacity:1},23.560);tl.set("#leg_g20",{opacity:0},25.340);
+tl.set("#leg_g20w0",{className:"ed-w on"},23.600);
+tl.set("#leg_g20w1",{className:"ed-w on"},23.840);
+tl.set("#leg_g20w2",{className:"ed-w on ed-k"},24.100);
+tl.set("#leg_g21",{opacity:1},25.340);tl.set("#leg_g21",{opacity:0},26.780);
+tl.set("#leg_g21w0",{className:"ed-w on"},25.380);
+tl.set("#leg_g21w1",{className:"ed-w on"},25.680);
+tl.set("#leg_g22",{opacity:1},26.860);tl.set("#leg_g22",{opacity:0},27.880);
+tl.set("#leg_g22w0",{className:"ed-w on ed-k"},26.900);
+tl.set("#leg_g23",{opacity:1},27.880);tl.set("#leg_g23",{opacity:0},28.960);
+tl.set("#leg_g23w0",{className:"ed-w on"},27.920);
+tl.set("#leg_g23w1",{className:"ed-w on ed-k"},28.260);
+tl.set("#leg_g23w2",{className:"ed-w on"},28.820);
+tl.set("#leg_g24",{opacity:1},28.960);tl.set("#leg_g24",{opacity:0},29.840);
+tl.set("#leg_g24w0",{className:"ed-w on"},29.000);
+tl.set("#leg_g24w1",{className:"ed-w on"},29.280);
+tl.set("#leg_g24w2",{className:"ed-w on"},29.720);
+tl.set("#leg_g25",{opacity:1},29.840);tl.set("#leg_g25",{opacity:0},31.040);
+tl.set("#leg_g25w0",{className:"ed-w on ed-k"},29.880);
+tl.set("#leg_g25w1",{className:"ed-w on"},30.320);
+tl.set("#leg_g25w2",{className:"ed-w on ed-k"},30.560);
+tl.set("#leg_g26",{opacity:1},31.040);tl.set("#leg_g26",{opacity:0},32.440);
+tl.set("#leg_g26w0",{className:"ed-w on"},31.080);
+tl.set("#leg_g26w1",{className:"ed-w on ed-k"},31.420);
+tl.set("#leg_g27",{opacity:1},32.440);tl.set("#leg_g27",{opacity:0},33.660);
+tl.set("#leg_g27w0",{className:"ed-w on"},32.480);
+tl.set("#leg_g27w1",{className:"ed-w on"},32.920);
+tl.set("#leg_g28",{opacity:1},33.660);tl.set("#leg_g28",{opacity:0},34.480);
+tl.set("#leg_g28w0",{className:"ed-w on"},33.700);
+tl.set("#leg_g28w1",{className:"ed-w on"},33.940);
+tl.set("#leg_g28w2",{className:"ed-w on"},34.280);
+tl.set("#leg_g29",{opacity:1},34.480);tl.set("#leg_g29",{opacity:0},35.580);
+tl.set("#leg_g29w0",{className:"ed-w on"},34.520);
+tl.set("#leg_g29w1",{className:"ed-w on ed-k"},34.720);
+tl.set("#leg_g30",{opacity:1},35.700);tl.set("#leg_g30",{opacity:0},36.480);
+tl.set("#leg_g30w0",{className:"ed-w on"},35.740);
+tl.set("#leg_g30w1",{className:"ed-w on ed-k"},35.900);
+tl.set("#leg_g31",{opacity:1},36.480);tl.set("#leg_g31",{opacity:0},37.140);
+tl.set("#leg_g31w0",{className:"ed-w on"},36.520);
+tl.set("#leg_g31w1",{className:"ed-w on"},36.740);
+tl.set("#leg_g31w2",{className:"ed-w on"},36.960);
+tl.set("#leg_g32",{opacity:1},37.140);tl.set("#leg_g32",{opacity:0},38.280);
+tl.set("#leg_g32w0",{className:"ed-w on ed-k"},37.180);
+tl.set("#leg_g33",{opacity:1},38.340);tl.set("#leg_g33",{opacity:0},39.880);
+tl.set("#leg_g33w0",{className:"ed-w on"},38.380);
+tl.set("#leg_g33w1",{className:"ed-w on"},38.700);
+tl.set("#leg_g33w2",{className:"ed-w on ed-k"},38.860);
+tl.set("#leg_g34",{opacity:1},39.980);tl.set("#leg_g34",{opacity:0},40.760);
+tl.set("#leg_g34w0",{className:"ed-w on"},40.020);
+tl.set("#leg_g34w1",{className:"ed-w on"},40.240);
+tl.set("#leg_g34w2",{className:"ed-w on"},40.440);
+tl.set("#leg_g35",{opacity:1},40.760);tl.set("#leg_g35",{opacity:0},42.080);
+tl.set("#leg_g35w0",{className:"ed-w on"},40.800);
+tl.set("#leg_g35w1",{className:"ed-w on"},41.020);
+tl.set("#leg_g36",{opacity:1},42.080);tl.set("#leg_g36",{opacity:0},43.360);
+tl.set("#leg_g36w0",{className:"ed-w on"},42.120);
+tl.set("#leg_g36w1",{className:"ed-w on"},42.480);
+tl.set("#leg_g37",{opacity:1},43.360);tl.set("#leg_g37",{opacity:0},44.600);
+tl.set("#leg_g37w0",{className:"ed-w on"},43.400);
+tl.set("#leg_g37w1",{className:"ed-w on ed-k"},43.480);
+tl.set("#leg_g37w2",{className:"ed-w on"},43.880);
+tl.set("#leg_g38",{opacity:1},44.600);tl.set("#leg_g38",{opacity:0},46.120);
+tl.set("#leg_g38w0",{className:"ed-w on"},44.640);
+tl.set("#leg_g38w1",{className:"ed-w on"},44.940);
+tl.set("#leg_g38w2",{className:"ed-w on ed-k"},45.100);
+tl.set("#leg_g39",{opacity:1},46.220);tl.set("#leg_g39",{opacity:0},47.560);
+tl.set("#leg_g39w0",{className:"ed-w on ed-k"},46.260);
+tl.set("#leg_g40",{opacity:1},47.580);tl.set("#leg_g40",{opacity:0},49.260);
+tl.set("#leg_g40w0",{className:"ed-w on ed-k"},47.620);
+tl.set("#leg_g40w1",{className:"ed-w on ed-k"},48.000);
+tl.set("#leg_g41",{opacity:1},49.300);tl.set("#leg_g41",{opacity:0},50.980);
+tl.set("#leg_g41w0",{className:"ed-w on"},49.340);
+tl.set("#leg_g41w1",{className:"ed-w on ed-k"},49.560);
+tl.set("#leg_g41w2",{className:"ed-w on"},49.820);
+tl.set("#leg_g42",{opacity:1},50.980);tl.set("#leg_g42",{opacity:0},51.740);
+tl.set("#leg_g42w0",{className:"ed-w on"},51.020);
+tl.set("#leg_g42w1",{className:"ed-w on ed-k"},51.280);
+tl.set("#leg_g42w2",{className:"ed-w on"},51.620);
+tl.set("#leg_g43",{opacity:1},51.740);tl.set("#leg_g43",{opacity:0},53.100);
+tl.set("#leg_g43w0",{className:"ed-w on"},51.780);
+tl.set("#leg_g43w1",{className:"ed-w on"},51.960);
+tl.set("#leg_g44",{opacity:1},53.100);tl.set("#leg_g44",{opacity:0},54.280);
+tl.set("#leg_g44w0",{className:"ed-w on"},53.140);
+tl.set("#leg_g44w1",{className:"ed-w on"},53.460);
+tl.set("#leg_g44w2",{className:"ed-w on"},53.740);
+tl.set("#leg_g45",{opacity:1},54.280);tl.set("#leg_g45",{opacity:0},55.180);
+tl.set("#leg_g45w0",{className:"ed-w on"},54.320);
+tl.set("#leg_g45w1",{className:"ed-w on"},54.700);
+tl.set("#leg_g45w2",{className:"ed-w on"},55.040);
+tl.set("#leg_g46",{opacity:1},55.180);tl.set("#leg_g46",{opacity:0},56.100);
+tl.set("#leg_g46w0",{className:"ed-w on ed-k"},55.220);
+tl.set("#leg_g46w1",{className:"ed-w on"},55.480);
+tl.set("#leg_g46w2",{className:"ed-w on"},55.880);
+tl.set("#leg_g47",{opacity:1},56.100);tl.set("#leg_g47",{opacity:0},57.600);
+tl.set("#leg_g47w0",{className:"ed-w on"},56.140);
+tl.set("#leg_g47w1",{className:"ed-w on ed-k"},56.380);
+tl.set("#leg_g48",{opacity:1},57.600);tl.set("#leg_g48",{opacity:0},58.140);
+tl.set("#leg_g48w0",{className:"ed-w on"},57.640);
+tl.set("#leg_g48w1",{className:"ed-w on"},57.920);
+tl.set("#leg_g48w2",{className:"ed-w on"},58.040);
+tl.set("#leg_g49",{opacity:1},58.140);tl.set("#leg_g49",{opacity:0},58.840);
+tl.set("#leg_g49w0",{className:"ed-w on"},58.180);
+tl.set("#leg_g50",{opacity:1},58.840);tl.set("#leg_g50",{opacity:0},59.440);
+tl.set("#leg_g50w0",{className:"ed-w on"},58.880);
+tl.set("#leg_g50w1",{className:"ed-w on"},59.080);
+tl.set("#leg_g50w2",{className:"ed-w on"},59.200);
+tl.set("#leg_g51",{opacity:1},59.440);tl.set("#leg_g51",{opacity:0},60.880);
+tl.set("#leg_g51w0",{className:"ed-w on"},59.480);
+tl.set("#leg_g51w1",{className:"ed-w on ed-k"},59.720);
+tl.set("#leg_g52",{opacity:1},60.880);tl.set("#leg_g52",{opacity:0},61.540);
+tl.set("#leg_g52w0",{className:"ed-w on"},60.920);
+tl.set("#leg_g52w1",{className:"ed-w on"},61.060);
+tl.set("#leg_g52w2",{className:"ed-w on ed-k"},61.300);
+tl.set("#leg_g53",{opacity:1},61.540);tl.set("#leg_g53",{opacity:0},63.340);
+tl.set("#leg_g53w0",{className:"ed-w on"},61.580);
+tl.set("#leg_g53w1",{className:"ed-w on"},61.980);
+tl.set("#leg_g53w2",{className:"ed-w on"},62.260);
+})();</script>
+<script>
+(function(){ /* legenda: tira pontuação e marca palavras verdes (param leg_verde) */
+  const prm = (EDIT.items.find(i => i.id === "leg_verde") || {props:{value:""}}).props.value.toLowerCase().split(",").map(x => x.trim()).filter(Boolean);
+  document.querySelectorAll("#leg .ed-w").forEach(w => { w.textContent = w.textContent.replace(/[.,;:!?…]+$/, "");
+    const t = w.textContent.toLowerCase(); if (prm.some(k => t === k)) w.setAttribute("data-g", "1"); });
+})();
+</script>
+</body></html>

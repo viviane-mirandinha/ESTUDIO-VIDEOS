@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1280, height=720" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>img{filter:brightness(0.85) saturate(0.7) sepia(0.15) hue-rotate(200deg);}</style>
+<style>
+
+html,body{margin:0;padding:0;width:1280px;height:720px;overflow:hidden;background:#0e1723;}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;background:#0e1723;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="72.0" data-width="1280" data-height="720">
+<div id="bg1_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg1_mv" class="ed-mv"><img id="bg1" class="clip" data-start="0.000" data-duration="5.500" data-track-index="1" src="m/img/01.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg2_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg2_mv" class="ed-mv"><img id="bg2" class="clip" data-start="5.500" data-duration="6.500" data-track-index="2" src="m/img/02.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg3_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg3_mv" class="ed-mv"><img id="bg3" class="clip" data-start="12.000" data-duration="7.000" data-track-index="3" src="m/img/03.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg4_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg4_mv" class="ed-mv"><img id="bg4" class="clip" data-start="19.000" data-duration="10.000" data-track-index="4" src="m/img/04.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg5_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg5_mv" class="ed-mv"><img id="bg5" class="clip" data-start="29.000" data-duration="10.000" data-track-index="5" src="m/img/05.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg6_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg6_mv" class="ed-mv"><img id="bg6" class="clip" data-start="39.000" data-duration="13.000" data-track-index="6" src="m/img/06.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg7_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg7_mv" class="ed-mv"><img id="bg7" class="clip" data-start="52.000" data-duration="10.000" data-track-index="7" src="m/img/07.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="bg8_box" class="ed-box" style="left:0;top:0;width:1280px;height:720px;z-index:11;"><div id="bg8_mv" class="ed-mv"><img id="bg8" class="clip" data-start="62.000" data-duration="10.000" data-track-index="8" src="m/img/01.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="t_hook_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1100.0px;z-index:21;"><div id="t_hook" class="clip" data-start="0.300" data-duration="4.500" data-track-index="9" style="font-size:56.0px;color:#d4dddf;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">IT OUTRAN <span class="ed-hl" style="color:#604adc">EVERY MISSILE</span> FIRED AT IT</div></div>
+<div id="t_title_box" class="ed-box" style="left:640.0px;top:300.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:21;"><div id="t_title" class="clip" data-start="5.800" data-duration="5.800" data-track-index="10" style="font-size:72.0px;color:#d4dddf;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">SR-71 BLACKBIRD</div></div>
+<div id="t_skunk_box" class="ed-box" style="left:640.0px;top:620.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:21;"><div id="t_skunk" class="clip" data-start="12.500" data-duration="6.000" data-track-index="11" style="font-size:38.0px;color:#d4dddf;font-weight:700;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(14,23,35,0.75);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">LOCKHEED <span class="ed-hl" style="color:#604adc">SKUNK WORKS</span> — 1960s</div></div>
+<div id="t_mph_box" class="ed-box" style="left:640.0px;top:400.0px;transform:translate(-50%,-50%);width:800.0px;z-index:21;"><div id="t_mph" class="clip" data-start="20.000" data-duration="4.000" data-track-index="12" style="font-size:36.0px;color:#d4dddf;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">2,200+ MILES PER HOUR</div></div>
+<div id="t_heat_box" class="ed-box" style="left:640.0px;top:580.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:21;"><div id="t_heat" class="clip" data-start="25.000" data-duration="4.500" data-track-index="13" style="font-size:34.0px;color:#d4dddf;font-weight:700;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(14,23,35,0.75);padding:12.0px 19.200000000000003px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">TITANIUM SKIN: <span class="ed-hl" style="color:#604adc">600°F</span> AT TOP SPEED</div></div>
+<div id="t_compare_box" class="ed-box" style="left:640.0px;top:420.0px;transform:translate(-50%,-50%);width:700.0px;z-index:21;"><div id="t_compare" class="clip" data-start="31.000" data-duration="4.500" data-track-index="14" style="font-size:30.0px;color:#838ba4;font-weight:400;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">Commercial jets: 35,000 ft</div></div>
+<div id="t_suits_box" class="ed-box" style="left:640.0px;top:600.0px;transform:translate(-50%,-50%);width:1050.0px;z-index:21;"><div id="t_suits" class="clip" data-start="35.500" data-duration="3.500" data-track-index="15" style="font-size:32.0px;color:#d4dddf;font-weight:700;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(14,23,35,0.75);padding:12.0px 19.200000000000003px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">PILOTS WORE <span class="ed-hl" style="color:#604adc">ASTRONAUT-GRADE</span> PRESSURE SUITS</div></div>
+<div id="t_zero_box" class="ed-box" style="left:640.0px;top:430.0px;transform:translate(-50%,-50%);width:600.0px;z-index:21;"><div id="t_zero" class="clip" data-start="42.000" data-duration="5.000" data-track-index="16" style="font-size:72.0px;color:#d4dddf;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">ZERO HITS</div></div>
+<div id="t_evade_box" class="ed-box" style="left:640.0px;top:580.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:21;"><div id="t_evade" class="clip" data-start="48.000" data-duration="4.000" data-track-index="17" style="font-size:36.0px;color:#d4dddf;font-weight:700;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;background:rgba(14,23,35,0.75);padding:14.0px 22.400000000000002px;border-radius:8.0px;text-shadow:0 3px 14px rgba(0,0,0,.55);">STANDARD EVASION: <span class="ed-hl" style="color:#604adc">SIMPLY ACCELERATE</span></div></div>
+<div id="t_retired_box" class="ed-box" style="left:640.0px;top:320.0px;transform:translate(-50%,-50%);width:800.0px;z-index:21;"><div id="t_retired" class="clip" data-start="52.500" data-duration="4.500" data-track-index="18" style="font-size:48.0px;color:#d4dddf;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">RETIRED IN <span class="ed-hl" style="color:#604adc">1998</span></div></div>
+<div id="t_crown_box" class="ed-box" style="left:640.0px;top:360.0px;transform:translate(-50%,-50%);width:1000.0px;z-index:21;"><div id="t_crown" class="clip" data-start="62.500" data-duration="8.500" data-track-index="19" style="font-size:52.0px;color:#d4dddf;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">A MACHINE FROM THE 1960s<br><span class="ed-hl" style="color:#604adc">STILL HOLDS THE CROWN</span></div></div>
+<div id="t_sub_box" class="ed-box" style="left:640.0px;top:400.0px;transform:translate(-50%,-50%);width:900.0px;z-index:31;"><div id="t_sub" class="clip" data-start="6.500" data-duration="4.800" data-track-index="20" style="font-size:32.0px;color:#838ba4;font-weight:400;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">Fastest manned aircraft in history</div></div>
+<div id="t_mach_box" class="ed-box" style="left:640.0px;top:280.0px;transform:translate(-50%,-50%);width:600.0px;z-index:31;"><div id="t_mach" class="clip" data-start="19.500" data-duration="5.000" data-track-index="21" style="font-size:96.0px;color:#604adc;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">MACH 3.3</div></div>
+<div id="t_alt_box" class="ed-box" style="left:640.0px;top:280.0px;transform:translate(-50%,-50%);width:600.0px;z-index:31;"><div id="t_alt" class="clip" data-start="29.500" data-duration="5.000" data-track-index="22" style="font-size:88.0px;color:#604adc;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">85,000 FT</div></div>
+<div id="t_missiles_box" class="ed-box" style="left:640.0px;top:300.0px;transform:translate(-50%,-50%);width:900.0px;z-index:31;"><div id="t_missiles" class="clip" data-start="39.500" data-duration="5.500" data-track-index="23" style="font-size:64.0px;color:#604adc;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">4,000+ MISSILES FIRED</div></div>
+<div id="t_record_box" class="ed-box" style="left:640.0px;top:420.0px;transform:translate(-50%,-50%);width:900.0px;z-index:31;"><div id="t_record" class="clip" data-start="57.500" data-duration="4.500" data-track-index="24" style="font-size:44.0px;color:#604adc;font-weight:800;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.15;text-shadow:0 3px 14px rgba(0,0,0,.55);">SPEED RECORD: STILL UNBROKEN</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:72.0,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.fromTo("#bg1_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.000);
+tl.fromTo("#bg1_mv",{scale:1},{...{scale:1.06},duration:5.500,ease:"none",immediateRender:false},0.000);
+tl.fromTo("#bg2_mv",{scale:1.05,xPercent:-2.5},{...{scale:1.05,xPercent:2.5},duration:6.500,ease:"none",immediateRender:false},5.500);
+tl.set("#bg2_mv",{scale:1.05,xPercent:-2.5},0);
+tl.fromTo("#bg3_mv",{scale:1},{...{scale:1.07},duration:7.000,ease:"none",immediateRender:false},12.000);
+tl.set("#bg3_mv",{scale:1},0);
+tl.fromTo("#bg4_mv",{scale:1.05,xPercent:2.5},{...{scale:1.05,xPercent:-2.5},duration:10.000,ease:"none",immediateRender:false},19.000);
+tl.set("#bg4_mv",{scale:1.05,xPercent:2.5},0);
+tl.fromTo("#bg5_mv",{scale:1.06},{...{scale:1},duration:10.000,ease:"none",immediateRender:false},29.000);
+tl.set("#bg5_mv",{scale:1.06},0);
+tl.fromTo("#bg6_mv",{scale:1.06,xPercent:-3.0},{...{scale:1.06,xPercent:3.0},duration:13.000,ease:"none",immediateRender:false},39.000);
+tl.set("#bg6_mv",{scale:1.06,xPercent:-3.0},0);
+tl.fromTo("#bg7_mv",{scale:1},{...{scale:1.06},duration:10.000,ease:"none",immediateRender:false},52.000);
+tl.set("#bg7_mv",{scale:1},0);
+tl.fromTo("#bg8_mv",{scale:1.05,xPercent:2.5},{...{scale:1.05,xPercent:-2.5},duration:10.000,ease:"none",immediateRender:false},62.000);
+tl.set("#bg8_mv",{scale:1.05,xPercent:2.5},0);
+tl.fromTo("#t_hook_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.300);
+tl.set("#t_hook_box",{opacity:0},0);
+tl.to("#t_hook_box",{...{opacity:0},duration:0.350,ease:"power2.in"},4.450);
+tl.fromTo("#t_title_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},5.800);
+tl.set("#t_title_box",{opacity:0},0);
+tl.to("#t_title_box",{...{opacity:0},duration:0.350,ease:"power2.in"},11.250);
+tl.fromTo("#t_skunk_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},12.500);
+tl.set("#t_skunk_box",{opacity:0},0);
+tl.to("#t_skunk_box",{...{opacity:0},duration:0.350,ease:"power2.in"},18.150);
+tl.fromTo("#t_mph_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},20.000);
+tl.set("#t_mph_box",{opacity:0},0);
+tl.to("#t_mph_box",{...{opacity:0},duration:0.350,ease:"power2.in"},23.650);
+tl.fromTo("#t_heat_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},25.000);
+tl.set("#t_heat_box",{opacity:0},0);
+tl.to("#t_heat_box",{...{opacity:0},duration:0.350,ease:"power2.in"},29.150);
+tl.fromTo("#t_compare_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},31.000);
+tl.set("#t_compare_box",{opacity:0},0);
+tl.to("#t_compare_box",{...{opacity:0},duration:0.350,ease:"power2.in"},35.150);
+tl.fromTo("#t_suits_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.500);
+tl.set("#t_suits_box",{opacity:0},0);
+tl.to("#t_suits_box",{...{opacity:0},duration:0.350,ease:"power2.in"},38.650);
+tl.fromTo("#t_zero_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},42.000);
+tl.set("#t_zero_box",{opacity:0},0);
+tl.to("#t_zero_box",{...{opacity:0},duration:0.350,ease:"power2.in"},46.650);
+tl.fromTo("#t_evade_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},48.000);
+tl.set("#t_evade_box",{opacity:0},0);
+tl.to("#t_evade_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.650);
+tl.fromTo("#t_retired_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},52.500);
+tl.set("#t_retired_box",{opacity:0},0);
+tl.to("#t_retired_box",{...{opacity:0},duration:0.350,ease:"power2.in"},56.650);
+tl.fromTo("#t_crown_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.500);
+tl.set("#t_crown_box",{opacity:0},0);
+tl.to("#t_crown_box",{...{opacity:0},duration:0.350,ease:"power2.in"},70.650);
+tl.fromTo("#t_sub_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},6.500);
+tl.set("#t_sub_box",{opacity:0},0);
+tl.to("#t_sub_box",{...{opacity:0},duration:0.350,ease:"power2.in"},10.950);
+tl.fromTo("#t_mach_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},19.500);
+tl.set("#t_mach_box",{opacity:0},0);
+tl.to("#t_mach_box",{...{opacity:0},duration:0.350,ease:"power2.in"},24.150);
+tl.fromTo("#t_alt_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},29.500);
+tl.set("#t_alt_box",{opacity:0},0);
+tl.to("#t_alt_box",{...{opacity:0},duration:0.350,ease:"power2.in"},34.150);
+tl.fromTo("#t_missiles_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},39.500);
+tl.set("#t_missiles_box",{opacity:0},0);
+tl.to("#t_missiles_box",{...{opacity:0},duration:0.350,ease:"power2.in"},44.650);
+tl.fromTo("#t_record_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},57.500);
+tl.set("#t_record_box",{opacity:0},0);
+tl.to("#t_record_box",{...{opacity:0},duration:0.350,ease:"power2.in"},61.650);
+})();</script>
+</body></html>

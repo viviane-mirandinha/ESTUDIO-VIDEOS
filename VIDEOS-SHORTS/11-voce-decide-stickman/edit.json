@@ -1,0 +1,441 @@
+{
+ "version": 1,
+ "name": "11 - 24-10-2026 - VOCE DECIDE STICKMAN - Mensagem de voce mesmo as 3h07 - Parte 1",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Você decide stickman (história interativa)",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0d1014"
+ },
+ "duration": 64.34,
+ "template": "local",
+ "fonts": {
+  "Montserrat": "fonts/Montserrat-Black.ttf",
+  "Inter": "fonts/Inter.ttf"
+ },
+ "referencia": {
+  "canal": "@stickmanstorys22",
+  "video": "https://www.tiktok.com/@stickmanstorys22/video/7699365027945532690",
+  "nota": "também @stickitoutstories https://www.youtube.com/shorts/sY5gfQ6btLM ; boneco e cenários originais em SVG"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  },
+  "music": {
+   "src": "musica.mp3",
+   "volume": 0.22,
+   "start": 0,
+   "fade_out": 1.5,
+   "duck": true
+  },
+  "extra": [
+   {
+    "id": "w0",
+    "src": "sfx/whoosh.wav",
+    "start": 4.85,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w1",
+    "src": "sfx/whoosh.wav",
+    "start": 17.93,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w2",
+    "src": "sfx/whoosh.wav",
+    "start": 32.29,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w3",
+    "src": "sfx/whoosh.wav",
+    "start": 38.19,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w4",
+    "src": "sfx/whoosh.wav",
+    "start": 47.43,
+    "volume": 0.16,
+    "label": "whoosh"
+   },
+   {
+    "id": "w5",
+    "src": "sfx/whoosh.wav",
+    "start": 52.95,
+    "volume": 0.16,
+    "label": "whoosh"
+   }
+  ]
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 2D"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "c01",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Quarto escuro 3:07",
+   "start": 0.0,
+   "dur": 5.0,
+   "props": {
+    "cena": "quarto",
+    "textos": {
+     "hora": "3:07",
+     "ampm": "AM",
+     "local": "QUARTO"
+    },
+    "t": {
+     "vibra": 3.28
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c02",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Mensagem de você mesmo",
+   "start": 5.0,
+   "dur": 9.78,
+   "props": {
+    "cena": "celular",
+    "textos": {
+     "hora": "3:07",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "remetente": "VOCÊ",
+     "numero": "+55 (11) 9 8471-2207",
+     "msg": "Não acende a luz.",
+     "selo": "MENSAGEM 1"
+    },
+    "t": {
+     "voce": 6.56,
+     "numero": 8.44,
+     "foto": 10.06,
+     "msg": 12.92
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c03",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Você ri: golpe?",
+   "start": 14.78,
+   "dur": 3.3,
+   "props": {
+    "cena": "rindo",
+    "textos": {
+     "hora": "3:07",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "balao": "GOLPE?"
+    },
+    "t": {
+     "golpe": 16.94
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c04",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "2ª mensagem: corredor",
+   "start": 18.08,
+   "dur": 3.22,
+   "props": {
+    "cena": "celular2",
+    "textos": {
+     "hora": "3:08",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "remetente": "VOCÊ",
+     "msg": "Tem alguém no corredor.",
+     "selo": "MENSAGEM 2"
+    },
+    "t": {
+     "msg": 19.48
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c05",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Piso range / sombra na porta",
+   "start": 21.3,
+   "dur": 6.92,
+   "props": {
+    "cena": "porta",
+    "textos": {
+     "hora": "3:08",
+     "ampm": "AM",
+     "local": "CORREDOR",
+     "som": "CREEK"
+    },
+    "t": {
+     "range": 24.14,
+     "uma": 25.72,
+     "duas": 26.94
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c06",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Maçaneta gira e para",
+   "start": 28.22,
+   "dur": 4.22,
+   "props": {
+    "cena": "macaneta",
+    "textos": {
+     "hora": "3:08",
+     "ampm": "AM",
+     "local": "PORTA DO QUARTO"
+    },
+    "t": {
+     "girar": 29.92,
+     "para": 31.46
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c07",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "3ª mensagem: não te viu",
+   "start": 32.44,
+   "dur": 5.9,
+   "props": {
+    "cena": "celular3",
+    "textos": {
+     "hora": "3:08",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "remetente": "VOCÊ",
+     "msg": "Ele ainda não te viu.",
+     "msg2": "No escuro, ele não te encontra.",
+     "selo": "MENSAGEM 3"
+    },
+    "t": {
+     "msg": 33.74,
+     "msg2": 35.94
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c08",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "3:09 relógio",
+   "start": 38.34,
+   "dur": 3.74,
+   "props": {
+    "cena": "relogio",
+    "textos": {
+     "hora": "3:09",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "grande": "3:09"
+    },
+    "t": {
+     "tela": 40.28
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c09",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Última: acende a luz. Agora.",
+   "start": 42.08,
+   "dur": 5.5,
+   "props": {
+    "cena": "celular4",
+    "textos": {
+     "hora": "3:09",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "remetente": "VOCÊ",
+     "msg": "Acende a luz.",
+     "msg2": "AGORA.",
+     "selo": "ÚLTIMA MENSAGEM"
+    },
+    "t": {
+     "msg": 44.68,
+     "agora": 46.3
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c10",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Duas ordens, mesmo número",
+   "start": 47.58,
+   "dur": 5.52,
+   "props": {
+    "cena": "duas",
+    "textos": {
+     "hora": "3:09",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "a": "Não acende a luz.",
+     "b": "Acende a luz. Agora.",
+     "num": "MESMO NÚMERO",
+     "selo": "UMA DELAS NÃO É VOCÊ"
+    },
+    "t": {
+     "numero": 49.86,
+     "delas": 51.32
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c11",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Escolha A ou B",
+   "start": 53.1,
+   "dur": 11.24,
+   "props": {
+    "cena": "escolha",
+    "textos": {
+     "hora": "3:09",
+     "ampm": "AM",
+     "local": "QUARTO",
+     "titulo": "VOCÊ DECIDE",
+     "a": "ACENDE A LUZ",
+     "b": "FICA NO ESCURO",
+     "fim": "PARTE 2 DEPENDE DE VOCÊ"
+    },
+    "t": {
+     "comenta": 57.68,
+     "A": 57.96,
+     "B": 58.92,
+     "parte": 61.1
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "hud_noite",
+   "type": "param",
+   "label": "HUD: dia/noite",
+   "props": {
+    "value": "NOITE 1"
+   }
+  },
+  {
+   "id": "hud_parte",
+   "type": "param",
+   "label": "HUD: parte",
+   "props": {
+    "value": "PARTE 1"
+   }
+  },
+  {
+   "id": "leg",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 64.34,
+   "props": {
+    "words_file": "words.json",
+    "per_group": 3,
+    "x": 540,
+    "y": 1290,
+    "size": 84,
+    "font": "Montserrat",
+    "weight": 900,
+    "color": "#ffffff",
+    "dim": "#ffffff",
+    "hl_color": "#FFD23F",
+    "shadow": true,
+    "upper": true,
+    "keywords": [
+     "escuro",
+     "mesmo",
+     "foto",
+     "luz",
+     "golpe",
+     "corredor",
+     "respira",
+     "range",
+     "duas",
+     "maçaneta",
+     "girar",
+     "devagar",
+     "para.",
+     "viu",
+     "encontra",
+     "nove",
+     "agora",
+     "ordens",
+     "delas",
+     "dois"
+    ]
+   }
+  },
+  {
+   "id": "leg_verde",
+   "type": "param",
+   "label": "Legenda: palavras em verde",
+   "props": {
+    "value": "acende,acender,luz"
+   }
+  }
+ ]
+}

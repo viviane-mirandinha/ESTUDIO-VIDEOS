@@ -1,0 +1,1491 @@
+{
+ "version": 1,
+ "name": "09 - DADOS RANKING ESCURO - Por que essa santa assusta tanto",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0B0B0C"
+ },
+ "duration": 65.36,
+ "template": "generic",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Dados ranking escuro amarelo",
+ "referencia": {
+  "canal": "@juliette",
+  "canal_url": "https://www.instagram.com/juliette/",
+  "video": "https://www.instagram.com/reel/DeZLBrHROWg/",
+  "nota": "tema/recortes do reel; visual = estilo do short 06 (preto/amarelo, cenas dr_*); sem logo/nome do perfil"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "midia",
+   "name": "Imagens / vídeos"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "fundo preto",
+   "start": 0,
+   "dur": 65.36,
+   "props": {
+    "fill": true,
+    "html": "<div class='drbg'></div>",
+    "css": ".drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}"
+   }
+  },
+  {
+   "id": "md0",
+   "type": "video",
+   "track": "midia",
+   "label": "gancho santa",
+   "start": 0,
+   "dur": 3.34,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/03_santa_manto_bordado_closeup.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 660,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc1",
+   "type": "scene",
+   "track": "visual",
+   "label": "gancho santa",
+   "start": 0,
+   "dur": 3.34,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Por que uma santa",
+     "sub": "assusta quem quer mandar no país?",
+     "t_tit": 0,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 660,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "ASSUSTA?",
+       "t": 1.16
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "sc2",
+   "type": "scene",
+   "track": "visual",
+   "label": "você / religião",
+   "start": 3.34,
+   "dur": 5.09,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Não importa a sua religião",
+     "valor": "VOCÊ",
+     "tam": 300,
+     "sub": "católico · evangélico · espírita · sem religião",
+     "t_valor": 3.3899999999999997,
+     "t_rot": 6.0,
+     "t_sub": 6.6
+    }
+   }
+  },
+  {
+   "id": "md3",
+   "type": "image",
+   "track": "midia",
+   "label": "imagem frágil",
+   "start": 8.43,
+   "dur": 1.61,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/06_imagem_santa_quebrada_pedacos.jpg",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 960,
+    "h": 565,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc4",
+   "type": "scene",
+   "track": "visual",
+   "label": "imagem frágil",
+   "start": 8.43,
+   "dur": 1.61,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Uma imagem frágil",
+     "sub": "",
+     "t_tit": 0,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 960,
+       "h": 565
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md5",
+   "type": "video",
+   "track": "midia",
+   "label": "partida em duas",
+   "start": 10.04,
+   "dur": 1.56,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/01_homem_quebrando_imagem_santa.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 754,
+    "h": 800,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc6",
+   "type": "scene",
+   "track": "visual",
+   "label": "partida em duas",
+   "start": 10.04,
+   "dur": 1.56,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Nascida",
+     "sub": "",
+     "t_tit": 0,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 754,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "PARTIDA EM DUAS",
+       "t": 10.56
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md7",
+   "type": "video",
+   "track": "midia",
+   "label": "Aparecida",
+   "start": 11.6,
+   "dur": 5.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/02_santa_aparecida_manto_azul_dourado.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 754,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc8",
+   "type": "scene",
+   "track": "visual",
+   "label": "Aparecida",
+   "start": 11.6,
+   "dur": 5.9,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Nossa Senhora Aparecida",
+     "sub": "",
+     "t_tit": 13.2,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 754,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "PADROEIRA DO BRASIL",
+       "t": 14.98
+      },
+      {
+       "txt": "MÃE DE JESUS",
+       "t": 16.52
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md9",
+   "type": "video",
+   "track": "midia",
+   "label": "citação bispo",
+   "start": 17.5,
+   "dur": 5.32,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/11_pregador_video_antigo_igreja.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 960,
+    "h": 779,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc10",
+   "type": "scene",
+   "track": "visual",
+   "label": "citação bispo",
+   "start": 17.5,
+   "dur": 5.32,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Bispo JB Carvalho",
+     "sub": "chamou a santa de",
+     "t_tit": 18.12,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 960,
+       "h": 779
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [],
+     "aspas": "Braço direito de Satanás",
+     "t_aspas": 21.06
+    }
+   }
+  },
+  {
+   "id": "md11",
+   "type": "image",
+   "track": "midia",
+   "label": "pediu tirar padroeira",
+   "start": 22.82,
+   "dur": 3.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/09_pastor_comunidade_das_nacoes.jpg",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 754,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc12",
+   "type": "scene",
+   "track": "visual",
+   "label": "pediu tirar padroeira",
+   "start": 22.82,
+   "dur": 3.2,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "E ainda pediu",
+     "sub": "",
+     "t_tit": 22.92,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 754,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "TIRAR O TÍTULO DE PADROEIRA",
+       "t": 25.06
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "sc13",
+   "type": "scene",
+   "track": "visual",
+   "label": "respeito",
+   "start": 26.02,
+   "dur": 4.18,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Toda fé",
+     "valor": "RESPEITO",
+     "tam": 210,
+     "sub": "e quem não tem fé nenhuma também",
+     "t_rot": 27.06,
+     "t_valor": 26.07,
+     "t_sub": 29.16
+    }
+   }
+  },
+  {
+   "id": "md14",
+   "type": "video",
+   "track": "midia",
+   "label": "raiva / chute",
+   "start": 30.2,
+   "dur": 4.82,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/04_tv_antiga_chute_na_santa.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 660,
+    "h": 800,
+    "volume": 0,
+    "motion": "none",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc15",
+   "type": "scene",
+   "track": "visual",
+   "label": "raiva / chute",
+   "start": 30.2,
+   "dur": 4.82,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "De onde vem",
+     "sub": "tanta raiva?",
+     "t_tit": 31.56,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 660,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "NÃO NASCEU ENTRE OS FIÉIS",
+       "t": 33.62
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md16",
+   "type": "video",
+   "track": "midia",
+   "label": "alimentada de cima",
+   "start": 35.02,
+   "dur": 6.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "clips/05_incendio_noite.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 660,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc17",
+   "type": "scene",
+   "track": "visual",
+   "label": "alimentada de cima",
+   "start": 35.02,
+   "dur": 6.1,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Alimentada de cima",
+     "sub": "por gente poderosa",
+     "t_tit": 35.32,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 660,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "DIVIDIR O POVO USANDO A FÉ",
+       "t": 39.14
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md18",
+   "type": "image",
+   "track": "midia",
+   "label": "manchete igreja",
+   "start": 41.12,
+   "dur": 3.12,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/13_manchete_fundador_igreja_flavio.jpg",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 874,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc19",
+   "type": "scene",
+   "track": "visual",
+   "label": "manchete igreja",
+   "start": 41.12,
+   "dur": 3.12,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Repara numa coisa",
+     "sub": "a igreja desse bispo",
+     "t_tit": 41.42,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 874,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md20",
+   "type": "image",
+   "track": "midia",
+   "label": "batismo",
+   "start": 44.24,
+   "dur": 2.51,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/12_foto_batismo_rio.jpg",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 788,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc21",
+   "type": "scene",
+   "track": "visual",
+   "label": "batismo",
+   "start": 44.24,
+   "dur": 2.51,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Flávio Bolsonaro",
+     "sub": "escolheu ser batizado ali",
+     "t_tit": 0,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 788,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "BATIZADO",
+       "t": 45.96
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "md22",
+   "type": "image",
+   "track": "midia",
+   "label": "pastor A",
+   "start": 46.75,
+   "dur": 1.87,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/09_pastor_comunidade_das_nacoes.jpg",
+    "fit": "cover",
+    "x": 300,
+    "y": 840,
+    "w": 450,
+    "h": 640,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "md23",
+   "type": "image",
+   "track": "midia",
+   "label": "pastor B",
+   "start": 46.9,
+   "dur": 1.72,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/10_pastor_jaqueta_verde.jpg",
+    "fit": "cover",
+    "x": 780,
+    "y": 840,
+    "w": 450,
+    "h": 640,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc24",
+   "type": "scene",
+   "track": "visual",
+   "label": "tantos pastores",
+   "start": 46.75,
+   "dur": 1.87,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Entre tantos pastores",
+     "quadros": [
+      {
+       "x": 300,
+       "y": 840,
+       "w": 450,
+       "h": 640
+      },
+      {
+       "x": 780,
+       "y": 840,
+       "w": 450,
+       "h": 640
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [],
+     "aspas": ""
+    }
+   }
+  },
+  {
+   "id": "md25",
+   "type": "image",
+   "track": "midia",
+   "label": "manchete metrópoles",
+   "start": 48.62,
+   "dur": 3.16,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/14_manchete_metropoles_pastor_flavio.jpg",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 693,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc26",
+   "type": "scene",
+   "track": "visual",
+   "label": "manchete metrópoles",
+   "start": 48.62,
+   "dur": 3.16,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Por que ficar perto",
+     "sub": "de quem espalha ódio?",
+     "t_tit": 48.92,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 693,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "sc27",
+   "type": "scene",
+   "track": "visual",
+   "label": "uma só igreja",
+   "start": 51.78,
+   "dur": 5.5,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Quem sonha com um país de",
+     "valor": "UMA SÓ IGREJA",
+     "tam": 150,
+     "sub": "não aguenta uma mãe que não escolhe lado",
+     "t_rot": 52.48,
+     "t_valor": 51.82999999999999,
+     "t_sub": 55.04
+    }
+   }
+  },
+  {
+   "id": "md28",
+   "type": "video",
+   "track": "midia",
+   "label": "mesma mesa",
+   "start": 57.28,
+   "dur": 8.08,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "clips/02_santa_aparecida_manto_azul_dourado.mp4",
+    "fit": "cover",
+    "x": 540,
+    "y": 840,
+    "w": 754,
+    "h": 800,
+    "volume": 0,
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "sc29",
+   "type": "scene",
+   "track": "visual",
+   "label": "mesma mesa",
+   "start": 57.28,
+   "dur": 4.9,
+   "props": {
+    "scene": "dr_midia",
+    "params": {
+     "titulo": "Todo mundo",
+     "sub": "na mesma mesa",
+     "t_tit": 57.74,
+     "quadros": [
+      {
+       "x": 540,
+       "y": 840,
+       "w": 754,
+       "h": 800
+      }
+     ],
+     "borda": "#F5C518",
+     "tags": [
+      {
+       "txt": "NA MESMA MESA",
+       "t": 59.02
+      },
+      {
+       "txt": "PARTIDA EM DUAS DESDE O COMEÇO",
+       "t": 60.3
+      }
+     ],
+     "aspas": "",
+     "t_aspas": 0
+    }
+   }
+  },
+  {
+   "id": "escuro",
+   "type": "html",
+   "track": "visual",
+   "label": "escurece santa no fecho",
+   "start": 62.08,
+   "dur": 3.28,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "x": 540,
+    "y": 840,
+    "w": 754,
+    "h": 800,
+    "html": "<div class='esc'></div>",
+    "css": ".esc{width:100%;height:100%;background:rgba(11,11,12,.55)}"
+   }
+  },
+  {
+   "id": "sc31",
+   "type": "scene",
+   "track": "visual",
+   "label": "fecho junta a gente",
+   "start": 62.18,
+   "dur": 3.18,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "E mesmo assim, é ela que",
+     "valor": "JUNTA",
+     "unidade": "A GENTE",
+     "tam": 280,
+     "t_rot": 62.48,
+     "t_valor": 62.28
+    }
+   }
+  },
+  {
+   "id": "lg0",
+   "type": "text",
+   "track": "legenda",
+   "label": "Por que uma santa assusta quem",
+   "start": -0.08,
+   "dur": 3.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Por que uma santa assusta quem quer mandar no país?",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "mandar no país",
+     "santa"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "track": "legenda",
+   "label": "Olha só, você que tá me assist",
+   "start": 3.46,
+   "dur": 4.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Olha só, você que tá me assistindo, não importa a sua religião.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "religião"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg2",
+   "type": "text",
+   "track": "legenda",
+   "label": "Pensa comigo:",
+   "start": 7.48,
+   "dur": 1.09,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Pensa comigo:",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "track": "legenda",
+   "label": "uma imagem frágil, nascida par",
+   "start": 8.54,
+   "dur": 3.21,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "uma imagem frágil, nascida partida em duas.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "partida em duas",
+     "imagem frágil"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg4",
+   "type": "text",
+   "track": "legenda",
+   "label": "Pra muita gente, ela é Nossa S",
+   "start": 11.72,
+   "dur": 3.01,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Pra muita gente, ela é Nossa Senhora Aparecida,",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "Nossa Senhora Aparecida"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg5",
+   "type": "text",
+   "track": "legenda",
+   "label": "a padroeira do Brasil, a mãe d",
+   "start": 14.7,
+   "dur": 2.95,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "a padroeira do Brasil, a mãe de Jesus.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "padroeira do Brasil",
+     "mãe de Jesus"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg6",
+   "type": "text",
+   "track": "legenda",
+   "label": "Mas um bispo chamado JB Carval",
+   "start": 17.62,
+   "dur": 5.31,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Mas um bispo chamado JB Carvalho a chamou de braço direito de Satanás.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "braço direito de Satanás",
+     "JB Carvalho"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg7",
+   "type": "text",
+   "track": "legenda",
+   "label": "E ainda pediu que ela deixasse",
+   "start": 22.9,
+   "dur": 3.01,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E ainda pediu que ela deixasse de ser a padroeira do Brasil.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "padroeira do Brasil"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg8",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu respeito toda fé, sabia?",
+   "start": 25.88,
+   "dur": 2.47,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu respeito toda fé, sabia?",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "toda fé"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg9",
+   "type": "text",
+   "track": "legenda",
+   "label": "E quem não tem fé nenhuma tamb",
+   "start": 28.32,
+   "dur": 2.03,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E quem não tem fé nenhuma também.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "fé nenhuma"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "Então me diz:",
+   "start": 30.32,
+   "dur": 0.97,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Então me diz:",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg11",
+   "type": "text",
+   "track": "legenda",
+   "label": "de onde vem tanta raiva?",
+   "start": 31.26,
+   "dur": 2.19,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "de onde vem tanta raiva?",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "tanta raiva"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "Não nasceu entre os fiéis.",
+   "start": 33.42,
+   "dur": 1.73,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Não nasceu entre os fiéis.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "fiéis"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "Foi alimentada de cima,",
+   "start": 35.12,
+   "dur": 1.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Foi alimentada de cima,",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "de cima"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "por gente poderosa que viu van",
+   "start": 36.66,
+   "dur": 4.51,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "por gente poderosa que viu vantagem em dividir o povo usando a fé.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "gente poderosa",
+     "dividir o povo"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg15",
+   "type": "text",
+   "track": "legenda",
+   "label": "E repara numa coisa:",
+   "start": 41.14,
+   "dur": 1.41,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E repara numa coisa:",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "foi na igreja desse bispo que ",
+   "start": 42.52,
+   "dur": 4.35,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "foi na igreja desse bispo que Flávio Bolsonaro escolheu ser batizado.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "Flávio Bolsonaro",
+     "batizado"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg17",
+   "type": "text",
+   "track": "legenda",
+   "label": "Entre tantos pastores,",
+   "start": 46.84,
+   "dur": 1.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Entre tantos pastores,",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "tantos pastores"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg18",
+   "type": "text",
+   "track": "legenda",
+   "label": "por que ficar perto de quem es",
+   "start": 48.66,
+   "dur": 3.13,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "por que ficar perto de quem espalha ódio contra a fé dos outros?",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "ódio"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg19",
+   "type": "text",
+   "track": "legenda",
+   "label": "Quem sonha com um país de uma ",
+   "start": 51.76,
+   "dur": 5.67,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Quem sonha com um país de uma só igreja não aguenta uma mãe que não escolhe lado.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "uma só igreja",
+     "uma mãe",
+     "lado"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg20",
+   "type": "text",
+   "track": "legenda",
+   "label": "Porque ela senta todo mundo na",
+   "start": 57.4,
+   "dur": 2.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Porque ela senta todo mundo na mesma mesa.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "mesma mesa"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg21",
+   "type": "text",
+   "track": "legenda",
+   "label": "Partida em duas desde o começo",
+   "start": 60.22,
+   "dur": 2.03,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Partida em duas desde o começo,",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  },
+  {
+   "id": "lg22",
+   "type": "text",
+   "track": "legenda",
+   "label": "e mesmo assim, é ela que junta",
+   "start": 62.22,
+   "dur": 3.14,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "e mesmo assim, é ela que junta a gente.",
+    "x": 540,
+    "y": 1370,
+    "w": 980,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 600,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "junta a gente"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.22
+   }
+  }
+ ]
+}

@@ -1,0 +1,841 @@
+{
+ "version": 1,
+ "name": "47 - Documentário em alta - O homem que navegou rumo ao Vesúvio",
+ "estilo": "Documentário em alta — pinturas clássicas + cartões serifados (Deep Dive History)",
+ "canvas": {
+  "w": 1280,
+  "h": 720,
+  "fps": 30,
+  "bg": "#060606"
+ },
+ "duration": 75.6,
+ "template": "generic",
+ "fonts": {
+  "Cinzel": "fonts/Cinzel.ttf",
+  "Cormorant": "fonts/Cormorant.ttf"
+ },
+ "referencia": {
+  "canal": "Deep Dive History",
+  "canal_url": "https://www.youtube.com/channel/UCnTb3--OJOzlPYdmRGmxQdA",
+  "video": "https://youtu.be/DTGFWd2WKdg",
+  "titulo": "6. THE BOOK OF ENOCH - The Entire Story",
+  "nota": "2,5 mi views em 28 dias (~3.700 views/h). Clonado só o estilo: pinturas clássicas em Ken Burns lento, cartões pretos com serifa espaçada (PARTE N / título), quadro emoldurado + nome, citação com fonte, só voz grave."
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.wav",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Pinturas / cartões"
+  },
+  {
+   "id": "visual",
+   "name": "Molduras"
+  },
+  {
+   "id": "textos",
+   "name": "Textos serifados"
+  },
+  {
+   "id": "legenda",
+   "name": "Acabamento"
+  }
+ ],
+ "items": [
+  {
+   "id": "i1",
+   "type": "image",
+   "track": "fundo",
+   "label": "Volaire — Vesúvio em erupção",
+   "start": 0,
+   "dur": 10.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/a_volaire.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.07
+   }
+  },
+  {
+   "id": "t1",
+   "type": "text",
+   "track": "textos",
+   "label": "Local e ano",
+   "start": 1.4,
+   "dur": 8.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "GOLFO DE NÁPOLES  ·  ANO 79",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 26,
+    "font": "Cinzel",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".32em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "cap1",
+   "type": "html",
+   "track": "fundo",
+   "label": "Fundo capítulo I",
+   "start": 10.6,
+   "dur": 2.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"pr\"></div>",
+    "css": ".pr{position:absolute;inset:0;background:radial-gradient(ellipse at center,#161512 0%,#060606 78%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "cap1a",
+   "type": "text",
+   "track": "textos",
+   "label": "Capítulo I — número",
+   "start": 10.75,
+   "dur": 2.45,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PARTE I",
+    "x": 640,
+    "y": 318,
+    "w": 1100,
+    "size": 26,
+    "font": "Cinzel",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".5em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "cap1b",
+   "type": "text",
+   "track": "textos",
+   "label": "Capítulo I — título",
+   "start": 10.9,
+   "dur": 2.3000000000000003,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "A NUVEM",
+    "x": 640,
+    "y": 376,
+    "w": 1100,
+    "size": 50,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".42em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "bg2",
+   "type": "html",
+   "track": "fundo",
+   "label": "Fundo cartão PLÍNIO, O JOVEM",
+   "start": 13.1,
+   "dur": 6.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"pr\"></div>",
+    "css": ".pr{position:absolute;inset:0;background:radial-gradient(ellipse at center,#161512 0%,#060606 78%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fr2",
+   "type": "html",
+   "track": "visual",
+   "label": "Moldura",
+   "start": 13.1,
+   "dur": 6.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"fr\"></div>",
+    "css": ".fr{position:absolute;inset:0;border:2px solid #b9ad92;box-shadow:0 18px 60px rgba(0,0,0,.85),inset 0 0 0 8px #0d0c0b,inset 0 0 0 9px #6f6656}",
+    "x": 390,
+    "y": 345,
+    "w": 542,
+    "h": 443
+   }
+  },
+  {
+   "id": "i2",
+   "type": "image",
+   "track": "fundo",
+   "label": "Kauffman — Plínio, o Jovem e a mãe em Miseno",
+   "start": 13.1,
+   "dur": 6.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c_kauffman.jpg",
+    "x": 390,
+    "y": 345,
+    "w": 520,
+    "h": 421,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.035
+   }
+  },
+  {
+   "id": "n2",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome",
+   "start": 13.6,
+   "dur": 5.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PLÍNIO, O JOVEM",
+    "x": 950,
+    "y": 325,
+    "w": 560,
+    "size": 40,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".3em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "s2",
+   "type": "text",
+   "track": "textos",
+   "label": "Descrição",
+   "start": 13.9,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "o narrador, aos 17 anos",
+    "x": 950,
+    "y": 385,
+    "w": 560,
+    "size": 30,
+    "font": "Cormorant",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".04em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "c2",
+   "type": "text",
+   "track": "textos",
+   "label": "Crédito do quadro",
+   "start": 13.9,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "Angelica Kauffmann, 1785",
+    "x": 390,
+    "y": 597.5,
+    "w": 640,
+    "size": 24,
+    "font": "Cormorant",
+    "color": "#7d7566",
+    "weight": 400,
+    "letter": ".05em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "i3",
+   "type": "image",
+   "track": "fundo",
+   "label": "Wright of Derby — erupção à noite",
+   "start": 19.2,
+   "dur": 6.6,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/b_wright_erupcao.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "q3",
+   "type": "text",
+   "track": "textos",
+   "label": "Citação — a nuvem",
+   "start": 20.3,
+   "dur": 5.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "“UM TRONCO ALTÍSSIMO,\nQUE SE ABRIA EM GALHOS”",
+    "x": 640,
+    "y": 590,
+    "w": 1100,
+    "size": 28,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".22em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "bg4",
+   "type": "html",
+   "track": "fundo",
+   "label": "Fundo cartão PLÍNIO, O VELHO",
+   "start": 25.7,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"pr\"></div>",
+    "css": ".pr{position:absolute;inset:0;background:radial-gradient(ellipse at center,#161512 0%,#060606 78%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fr4",
+   "type": "html",
+   "track": "visual",
+   "label": "Moldura",
+   "start": 25.7,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"fr\"></div>",
+    "css": ".fr{position:absolute;inset:0;border:2px solid #b9ad92;box-shadow:0 18px 60px rgba(0,0,0,.85),inset 0 0 0 8px #0d0c0b,inset 0 0 0 9px #6f6656}",
+    "x": 430,
+    "y": 345,
+    "w": 422,
+    "h": 516
+   }
+  },
+  {
+   "id": "i4",
+   "type": "image",
+   "track": "fundo",
+   "label": "Gravura — Plínio, o Velho",
+   "start": 25.7,
+   "dur": 6.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/d_plinio_velho.jpg",
+    "x": 430,
+    "y": 345,
+    "w": 400,
+    "h": 494,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.035
+   }
+  },
+  {
+   "id": "n4",
+   "type": "text",
+   "track": "textos",
+   "label": "Nome",
+   "start": 26.2,
+   "dur": 5.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PLÍNIO, O VELHO",
+    "x": 930,
+    "y": 325,
+    "w": 560,
+    "size": 40,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".3em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "s4",
+   "type": "text",
+   "track": "textos",
+   "label": "Descrição",
+   "start": 26.5,
+   "dur": 5.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "comandante da frota em Miseno",
+    "x": 930,
+    "y": 385,
+    "w": 560,
+    "size": 30,
+    "font": "Cormorant",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".04em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "c4",
+   "type": "text",
+   "track": "textos",
+   "label": "Crédito do quadro",
+   "start": 26.5,
+   "dur": 5.2,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "gravura do século XIX",
+    "x": 430,
+    "y": 634.0,
+    "w": 640,
+    "size": 24,
+    "font": "Cormorant",
+    "color": "#7d7566",
+    "weight": 400,
+    "letter": ".05em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "i5",
+   "type": "image",
+   "track": "fundo",
+   "label": "Wright of Derby — baía de Nápoles",
+   "start": 31.6,
+   "dur": 5.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/e_wright_baia.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_right",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "i6",
+   "type": "image",
+   "track": "fundo",
+   "label": "Volaire — o vulcão visto do mar",
+   "start": 36.9,
+   "dur": 4.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_volaire_noite.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.08
+   }
+  },
+  {
+   "id": "i7",
+   "type": "image",
+   "track": "fundo",
+   "label": "Fundo escurecido da citação",
+   "start": 41.6,
+   "dur": 6.3,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/g_volaire_noite.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "zoom_in",
+    "motion_amount": 0.04,
+    "brilho": 0.28,
+    "blur": 3
+   }
+  },
+  {
+   "id": "q7",
+   "type": "text",
+   "track": "textos",
+   "label": "Citação",
+   "start": 42.0,
+   "dur": 5.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "“A SORTE AJUDA\nOS CORAJOSOS.”",
+    "x": 640,
+    "y": 300,
+    "w": 1100,
+    "size": 52,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".26em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "q7c",
+   "type": "text",
+   "track": "textos",
+   "label": "Fonte da citação",
+   "start": 42.6,
+   "dur": 5.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PLÍNIO, O JOVEM  —  CARTAS, LIVRO VI, 16",
+    "x": 640,
+    "y": 470,
+    "w": 1100,
+    "size": 24,
+    "font": "Cinzel",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".28em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "cap8",
+   "type": "html",
+   "track": "fundo",
+   "label": "Fundo capítulo II",
+   "start": 47.75,
+   "dur": 2.25,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "html": "<div class=\"pr\"></div>",
+    "css": ".pr{position:absolute;inset:0;background:radial-gradient(ellipse at center,#161512 0%,#060606 78%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "cap8a",
+   "type": "text",
+   "track": "textos",
+   "label": "Capítulo II — número",
+   "start": 47.9,
+   "dur": 2.1,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "PARTE II",
+    "x": 640,
+    "y": 318,
+    "w": 1100,
+    "size": 26,
+    "font": "Cinzel",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".5em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "cap8b",
+   "type": "text",
+   "track": "textos",
+   "label": "Capítulo II — título",
+   "start": 48.05,
+   "dur": 1.95,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ESTÁBIA",
+    "x": 640,
+    "y": 376,
+    "w": 1100,
+    "size": 50,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".42em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "i9",
+   "type": "image",
+   "track": "fundo",
+   "label": "Bryullov — O último dia de Pompeia",
+   "start": 49.9,
+   "dur": 9.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/f_bryullov.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "t9",
+   "type": "text",
+   "track": "textos",
+   "label": "Local",
+   "start": 50.6,
+   "dur": 4.4,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ESTÁBIA  ·  GOLFO DE NÁPOLES",
+    "x": 640,
+    "y": 650,
+    "w": 1100,
+    "size": 26,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".32em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "i10",
+   "type": "image",
+   "track": "fundo",
+   "label": "Kauffman — detalhe do jovem com o livro",
+   "start": 59.3,
+   "dur": 7.0,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/c_kauffman.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_up",
+    "motion_amount": 0.12
+   }
+  },
+  {
+   "id": "t10",
+   "type": "text",
+   "track": "textos",
+   "label": "Legenda cartas",
+   "start": 61.3,
+   "dur": 4.8,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "DUAS CARTAS  ·  A TÁCITO",
+    "x": 640,
+    "y": 640,
+    "w": 1100,
+    "size": 26,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".32em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "i11",
+   "type": "image",
+   "track": "fundo",
+   "label": "Volaire — final",
+   "start": 66.3,
+   "dur": 6.9,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "src": "img/a_volaire.jpg",
+    "fill": true,
+    "fit": "cover",
+    "motion": "pan_left",
+    "motion_amount": 0.1
+   }
+  },
+  {
+   "id": "t11",
+   "type": "text",
+   "track": "textos",
+   "label": "Termo final",
+   "start": 68.4,
+   "dur": 4.7,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "ERUPÇÃO PLINIANA",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 54,
+    "font": "Cinzel",
+    "color": "#e9e2d4",
+    "weight": 400,
+    "letter": ".42em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "fim",
+   "type": "html",
+   "track": "fundo",
+   "label": "Fundo final",
+   "start": 72.9,
+   "dur": 2.7,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "html": "<div class=\"pr\"></div>",
+    "css": ".pr{position:absolute;inset:0;background:radial-gradient(ellipse at center,#161512 0%,#060606 78%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "fim1",
+   "type": "text",
+   "track": "textos",
+   "label": "Título final",
+   "start": 73.1,
+   "dur": 2.5,
+   "in": "fade",
+   "out": "fade",
+   "props": {
+    "text": "O HOMEM QUE NAVEGOU RUMO AO VESÚVIO",
+    "x": 640,
+    "y": 360,
+    "w": 1100,
+    "size": 30,
+    "font": "Cinzel",
+    "color": "#a39a8a",
+    "weight": 400,
+    "letter": ".34em",
+    "align": "center",
+    "shadow": true,
+    "line": 1.35
+   }
+  },
+  {
+   "id": "rodape",
+   "type": "html",
+   "track": "visual",
+   "label": "Escurecer rodapé (legibilidade)",
+   "start": 0,
+   "dur": 75.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class=\"rd\"></div>",
+    "css": ".rd{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 18%,rgba(0,0,0,0) 34%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "vinheta",
+   "type": "html",
+   "track": "legenda",
+   "label": "Vinheta",
+   "start": 0,
+   "dur": 75.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<div class=\"vg\"></div>",
+    "css": ".vg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 52%,rgba(0,0,0,.62) 100%)}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  },
+  {
+   "id": "grao",
+   "type": "html",
+   "track": "legenda",
+   "label": "Grão de filme",
+   "start": 0,
+   "dur": 75.6,
+   "in": "none",
+   "out": "none",
+   "props": {
+    "html": "<svg class='gr' viewBox='0 0 1280 720' preserveAspectRatio='none'><filter id='gn'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='1280' height='720' filter='url(#gn)'/></svg>",
+    "css": ".gr{position:absolute;inset:0;width:100%;height:100%;opacity:.06;mix-blend-mode:overlay}",
+    "x": 640,
+    "y": 360,
+    "w": 1280,
+    "h": 720
+   }
+  }
+ ]
+}

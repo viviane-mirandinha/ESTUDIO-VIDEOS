@@ -1,0 +1,645 @@
+{
+ "version": 1,
+ "name": "01 - SAGA SOBREVIVENCIA 2D - Ataque nuclear - o bunker do avo - Parte 1",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Saga sobrevivência 2D (série)",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#E9C9A0"
+ },
+ "duration": 87.46,
+ "template": "local",
+ "fonts": {
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "referencia": {
+  "canal": "@sobreviventeend",
+  "canal_url": "https://www.instagram.com/sobreviventeend/",
+  "video": "https://www.instagram.com/reel/Dep0Ev7xo79/",
+  "titulo": "Ataque nuclear — ep. 1 (270 mil views)",
+  "nota": "também https://www.instagram.com/reel/Dep0Nj7xizD/ ; personagem e cenários originais em SVG"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Cenas 2D"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "c01",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Sirene / rua",
+   "start": 0.0,
+   "dur": 3.78,
+   "props": {
+    "cena": "rua_sirene",
+    "textos": {
+     "selo": "15 MIN"
+    },
+    "t": {
+     "min15": 2.34
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c02",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "15 min x estrada",
+   "start": 3.78,
+   "dur": 2.62,
+   "props": {
+    "cena": "cronometro",
+    "textos": {
+     "selo": "15 MIN • QUALQUER ESTRADA",
+     "relogio": "15:00"
+    },
+    "t": {},
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c03",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Pra onde correr",
+   "start": 6.4,
+   "dur": 3.78,
+   "props": {
+    "cena": "encruzilhada",
+    "textos": {
+     "p1": "ESTRADA",
+     "p2": "CENTRO",
+     "p3": "ABRIGO?"
+    },
+    "t": {
+     "onde": 8.9
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c04",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Alerta no celular",
+   "start": 10.18,
+   "dur": 4.02,
+   "props": {
+    "cena": "alerta",
+    "textos": {
+     "topo": "ALERTA DE EMERGÊNCIA",
+     "titulo": "ATAQUE NUCLEAR",
+     "sub": "PROCURE ABRIGO IMEDIATAMENTE",
+     "hora": "18:40"
+    },
+    "t": {
+     "hora": 12.22
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c05",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Avenida parada",
+   "start": 14.2,
+   "dur": 3.78,
+   "props": {
+    "cena": "avenida",
+    "textos": {
+     "selo": "AVENIDA TRAVADA",
+     "selo2": "+10 MIN"
+    },
+    "t": {
+     "parada": 16.9
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c06",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Carro = caixa de lata",
+   "start": 17.98,
+   "dur": 4.48,
+   "props": {
+    "cena": "carro",
+    "textos": {
+     "rotulo": "CAIXA DE LATA"
+    },
+    "t": {
+     "lata": 20.1,
+     "chuva": 21.06
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c07",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Rafa corre pro quintal",
+   "start": 22.46,
+   "dur": 1.72,
+   "props": {
+    "cena": "corrida",
+    "textos": {},
+    "t": {},
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c08",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Bunker do avô 1982",
+   "start": 24.18,
+   "dur": 5.28,
+   "props": {
+    "cena": "bunker",
+    "textos": {
+     "ano": "1982",
+     "rotulo": "BUNKER DO AVÔ"
+    },
+    "t": {
+     "bunker": 25.46,
+     "ano": 27.42
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c09",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Rafa olha o muro",
+   "start": 29.46,
+   "dur": 2.32,
+   "props": {
+    "cena": "muro",
+    "textos": {},
+    "t": {
+     "muro": 31.2
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c10",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Janela acesa da vizinha",
+   "start": 31.78,
+   "dur": 2.7,
+   "props": {
+    "cena": "janela",
+    "textos": {},
+    "t": {
+     "luz": 32.06
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c11",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Coragem de falar",
+   "start": 34.48,
+   "dur": 2.3,
+   "props": {
+    "cena": "espiada",
+    "textos": {},
+    "t": {
+     "coragem": 35.12
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c12",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Pensa em pular",
+   "start": 36.78,
+   "dur": 3.14,
+   "props": {
+    "cena": "pular",
+    "textos": {},
+    "t": {
+     "pular": 38.46
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c13",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Clarão",
+   "start": 39.92,
+   "dur": 1.32,
+   "props": {
+    "cena": "flash",
+    "textos": {},
+    "t": {
+     "clarao": 40.64
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c14",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Não olhe. Conte.",
+   "start": 41.24,
+   "dur": 1.74,
+   "props": {
+    "cena": "nao_olhe",
+    "textos": {
+     "t1": "NÃO OLHE.",
+     "t2": "CONTE."
+    },
+    "t": {
+     "conte": 42.16
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c15",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Luz vs som",
+   "start": 42.98,
+   "dur": 2.92,
+   "props": {
+    "cena": "cogumelo",
+    "textos": {
+     "a": "0 S",
+     "a2": "LUZ",
+     "b": "+30 S",
+     "b2": "SOM"
+    },
+    "t": {
+     "luz": 43.06,
+     "estrondo": 44.56
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c16",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "3 s = 1 km",
+   "start": 45.9,
+   "dur": 4.08,
+   "props": {
+    "cena": "regra3s",
+    "textos": {
+     "f1": "3 S",
+     "f2": "1 KM",
+     "rodape": "SILÊNCIO = DISTÂNCIA"
+    },
+    "t": {},
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c17",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Conta 31 = 10 km",
+   "start": 49.98,
+   "dur": 2.92,
+   "props": {
+    "cena": "contagem",
+    "textos": {
+     "n": "31",
+     "km": "= 10 KM",
+     "rotulo": "SEGUNDOS"
+    },
+    "t": {
+     "n31": 50.54,
+     "km": 51.46
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c18",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Fecha a escotilha",
+   "start": 52.9,
+   "dur": 2.62,
+   "props": {
+    "cena": "escotilha",
+    "textos": {
+     "selo": "TRAVADO"
+    },
+    "t": {
+     "gira": 54.2,
+     "travas": 54.66
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c19",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Poeira cai",
+   "start": 55.52,
+   "dur": 4.12,
+   "props": {
+    "cena": "poeira",
+    "textos": {
+     "selo1": "POEIRA EM ~20 MIN",
+     "selo2": "REGRA DO BUNKER"
+    },
+    "t": {
+     "min20": 57.02,
+     "regra": 58.94
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c20",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Gráfico radiação",
+   "start": 59.64,
+   "dur": 6.08,
+   "props": {
+    "cena": "grafico",
+    "textos": {
+     "l1": "7 H • ÷10",
+     "l2": "2 DIAS • ÷100",
+     "eixo": "TEMPO DEPOIS DA EXPLOSÃO",
+     "topo": "100%"
+    },
+    "t": {
+     "h7": 60.24,
+     "depois2": 63.14,
+     "d2": 63.68,
+     "c100": 64.6
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c21",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "14 dias",
+   "start": 65.72,
+   "dur": 4.36,
+   "props": {
+    "cena": "calendario",
+    "textos": {
+     "cab": "14 DIAS",
+     "topo": "NÃO PODE SAIR"
+    },
+    "t": {
+     "d14": 68.54
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c22",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Estoque 16 dias",
+   "start": 70.08,
+   "dur": 4.62,
+   "props": {
+    "cena": "estoque",
+    "textos": {
+     "titulo": "ESTOQUE",
+     "l1": "ÁGUA",
+     "l2": "COMIDA",
+     "dias": "16 DIAS",
+     "so": "SÓ PRA ELE"
+    },
+    "t": {
+     "d16": 72.32,
+     "so": 73.76
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c23",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Um problema",
+   "start": 74.7,
+   "dur": 1.82,
+   "props": {
+    "cena": "problema",
+    "textos": {
+     "t": "UM PROBLEMA."
+    },
+    "t": {},
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c24",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "3 batidas na escotilha",
+   "start": 76.52,
+   "dur": 4.4,
+   "props": {
+    "cena": "batidas",
+    "textos": {
+     "hora": "23:00",
+     "b": "3×",
+     "b2": "BATIDAS"
+    },
+    "t": {
+     "hora": 76.86,
+     "bateu": 78.2,
+     "b3": 79.68
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c25",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Medidor letal",
+   "start": 80.92,
+   "dur": 3.34,
+   "props": {
+    "cena": "medidor",
+    "textos": {
+     "r": "LETAL",
+     "topo": "RADIAÇÃO"
+    },
+    "t": {
+     "letal": 83.4
+    },
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "c26",
+   "type": "html",
+   "track": "fundo",
+   "by": "template",
+   "label": "Parte 2",
+   "start": 84.26,
+   "dur": 3.2,
+   "props": {
+    "cena": "fim",
+    "textos": {
+     "t": "PARTE 2",
+     "s": "QUEM ESTÁ LÁ FORA?"
+    },
+    "t": {},
+    "html": "",
+    "fill": true
+   }
+  },
+  {
+   "id": "leg",
+   "type": "caption",
+   "track": "legenda",
+   "label": "Legenda",
+   "start": 0,
+   "dur": 87.46,
+   "props": {
+    "words_file": "words.json",
+    "per_group": 3,
+    "x": 540,
+    "y": 1330,
+    "size": 70,
+    "font": "Oswald",
+    "weight": 400,
+    "color": "#ffffff",
+    "dim": "#ffffff",
+    "hl_color": "#E8B23A",
+    "bg": "rgba(12,12,12,.74)",
+    "shadow": false,
+    "keywords": [
+     "sirene",
+     "15",
+     "estrada",
+     "alerta",
+     "parada",
+     "chuva",
+     "radioativa",
+     "bunker",
+     "1982",
+     "muro",
+     "vizinha",
+     "coragem",
+     "clarão",
+     "olhe",
+     "conte",
+     "estrondo",
+     "silêncio",
+     "31",
+     "km",
+     "quilômetro",
+     "escotilha",
+     "travas",
+     "poeira",
+     "regra",
+     "radiação",
+     "vezes",
+     "14",
+     "16",
+     "problema",
+     "bateu",
+     "letal"
+    ]
+   }
+  },
+  {
+   "id": "leg_vermelho",
+   "type": "param",
+   "label": "Legenda: palavras em vermelho",
+   "props": {
+    "value": "sirene,alerta,parada,chuva,radioativa,clarão,olhe,estrondo,radiação,problema,bateu,letal"
+   }
+  }
+ ]
+}

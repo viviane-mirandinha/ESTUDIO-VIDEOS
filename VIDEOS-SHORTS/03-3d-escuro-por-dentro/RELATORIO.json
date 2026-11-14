@@ -1,0 +1,11 @@
+{
+ "video": 3,
+ "estilo": "3D escuro por dentro (objeto em corte)",
+ "inicio": "2026-10-22T19:11:31-03:00",
+ "fim": "2026-10-22T19:30:27-03:00",
+ "render_segundos": 157,
+ "voz": "usuario",
+ "observacoes": "Mesmo template _template-palco3d do 04 (base.html + palco.py), cena.js própria: bomba+carro com LCD 199,07->200,00, bico em corte com furinho, tubinho de ar, partículas de gasolina e ar, nível subindo no gargalo, mola/válvula fechando, tanque em corte com espaço de cima, mangueira transparente até cânister com carvão instanced (fica amarelo ao encharcar), motor com brilho. Câmera contínua entre os sets; tudo cronometrado por at() no words.json da voz real.",
+ "ponto_fraco": "Bico e carro são geometria bem simples (caixas/tubos) e as transições longas entre bomba e cânister passam rápido pelo cenário vazio.",
+ "minutos": 18.9
+}

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#0B0B0C;}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0B0B0C;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}.drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}.esc{width:100%;height:100%;background:rgba(11,11,12,.55)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="65.36" data-width="1080" data-height="1920">
+<div id="bg_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:11;"><div id="bg" class="clip" data-start="0.000" data-duration="65.360" data-track-index="1" style="width:100%;height:100%"><div class='drbg'></div></div></div>
+<div id="md0_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:660.0px;height:800.0px;z-index:21;"><div id="md0_mv" class="ed-mv"><video id="md0" class="clip" data-start="0.000" data-duration="3.340" data-track-index="2" src="m/clips/03_santa_manto_bordado_closeup.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md3_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:960.0px;height:565.0px;z-index:21;"><div id="md3_mv" class="ed-mv"><img id="md3" class="clip" data-start="8.430" data-duration="1.610" data-track-index="3" src="m/img/06_imagem_santa_quebrada_pedacos.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md5_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:754.0px;height:800.0px;z-index:21;"><div id="md5_mv" class="ed-mv"><video id="md5" class="clip" data-start="10.040" data-duration="1.560" data-track-index="4" src="m/clips/01_homem_quebrando_imagem_santa.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md7_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:754.0px;height:800.0px;z-index:21;"><div id="md7_mv" class="ed-mv"><video id="md7" class="clip" data-start="11.600" data-duration="5.900" data-track-index="5" src="m/clips/02_santa_aparecida_manto_azul_dourado.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md9_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:960.0px;height:779.0px;z-index:21;"><div id="md9_mv" class="ed-mv"><video id="md9" class="clip" data-start="17.500" data-duration="5.320" data-track-index="6" src="m/clips/11_pregador_video_antigo_igreja.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md11_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:754.0px;height:800.0px;z-index:21;"><div id="md11_mv" class="ed-mv"><img id="md11" class="clip" data-start="22.820" data-duration="3.200" data-track-index="7" src="m/img/09_pastor_comunidade_das_nacoes.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md14_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:660.0px;height:800.0px;z-index:21;"><div id="md14_mv" class="ed-mv"><video id="md14" class="clip" data-start="30.200" data-duration="4.820" data-track-index="8" src="m/clips/04_tv_antiga_chute_na_santa.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md16_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:660.0px;height:800.0px;z-index:21;"><div id="md16_mv" class="ed-mv"><video id="md16" class="clip" data-start="35.020" data-duration="6.100" data-track-index="9" src="m/clips/05_incendio_noite.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="md18_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:874.0px;height:800.0px;z-index:21;"><div id="md18_mv" class="ed-mv"><img id="md18" class="clip" data-start="41.120" data-duration="3.120" data-track-index="10" src="m/img/13_manchete_fundador_igreja_flavio.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md20_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:788.0px;height:800.0px;z-index:21;"><div id="md20_mv" class="ed-mv"><img id="md20" class="clip" data-start="44.240" data-duration="2.510" data-track-index="11" src="m/img/12_foto_batismo_rio.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md22_box" class="ed-box" style="left:300.0px;top:840.0px;transform:translate(-50%,-50%);width:450.0px;height:640.0px;z-index:21;"><div id="md22_mv" class="ed-mv"><img id="md22" class="clip" data-start="46.750" data-duration="1.870" data-track-index="12" src="m/img/09_pastor_comunidade_das_nacoes.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md23_box" class="ed-box" style="left:780.0px;top:840.0px;transform:translate(-50%,-50%);width:450.0px;height:640.0px;z-index:21;"><div id="md23_mv" class="ed-mv"><img id="md23" class="clip" data-start="46.900" data-duration="1.720" data-track-index="13" src="m/img/10_pastor_jaqueta_verde.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md25_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:693.0px;height:800.0px;z-index:21;"><div id="md25_mv" class="ed-mv"><img id="md25" class="clip" data-start="48.620" data-duration="3.160" data-track-index="14" src="m/img/14_manchete_metropoles_pastor_flavio.jpg" style="width:100%;height:100%;object-fit:cover;" /></div></div>
+<div id="md28_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:754.0px;height:800.0px;z-index:21;"><div id="md28_mv" class="ed-mv"><video id="md28" class="clip" data-start="57.280" data-duration="8.080" data-track-index="15" src="m/clips/02_santa_aparecida_manto_azul_dourado.mp4" muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div>
+<div id="sc1_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc1_clip" class="clip" data-start="0.000" data-duration="3.340" data-track-index="16" style="width:100%;height:100%;position:relative">
+<div id="sc1" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Por que uma santa</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">assusta quem quer mandar no país?</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc2_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc2_clip" class="clip" data-start="3.340" data-duration="5.090" data-track-index="17" style="width:100%;height:100%;position:relative">
+<div id="sc2" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Não importa a sua religião</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase"></div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">católico · evangélico · espírita · sem religião</div></div>
+
+</div></div>
+<div id="sc4_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc4_clip" class="clip" data-start="8.430" data-duration="1.610" data-track-index="18" style="width:100%;height:100%;position:relative">
+<div id="sc4" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Uma imagem frágil</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px"></div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc6_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc6_clip" class="clip" data-start="10.040" data-duration="1.560" data-track-index="19" style="width:100%;height:100%;position:relative">
+<div id="sc6" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Nascida</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px"></div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc8_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc8_clip" class="clip" data-start="11.600" data-duration="5.900" data-track-index="20" style="width:100%;height:100%;position:relative">
+<div id="sc8" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Nossa Senhora Aparecida</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px"></div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc10_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc10_clip" class="clip" data-start="17.500" data-duration="5.320" data-track-index="21" style="width:100%;height:100%;position:relative">
+<div id="sc10" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Bispo JB Carvalho</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">chamou a santa de</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc12_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc12_clip" class="clip" data-start="22.820" data-duration="3.200" data-track-index="22" style="width:100%;height:100%;position:relative">
+<div id="sc12" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">E ainda pediu</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px"></div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc13_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc13_clip" class="clip" data-start="26.020" data-duration="4.180" data-track-index="23" style="width:100%;height:100%;position:relative">
+<div id="sc13" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Toda fé</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase"></div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">e quem não tem fé nenhuma também</div></div>
+
+</div></div>
+<div id="sc15_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc15_clip" class="clip" data-start="30.200" data-duration="4.820" data-track-index="24" style="width:100%;height:100%;position:relative">
+<div id="sc15" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">De onde vem</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">tanta raiva?</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc17_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc17_clip" class="clip" data-start="35.020" data-duration="6.100" data-track-index="25" style="width:100%;height:100%;position:relative">
+<div id="sc17" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Alimentada de cima</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">por gente poderosa</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc19_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc19_clip" class="clip" data-start="41.120" data-duration="3.120" data-track-index="26" style="width:100%;height:100%;position:relative">
+<div id="sc19" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Repara numa coisa</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">a igreja desse bispo</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc21_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc21_clip" class="clip" data-start="44.240" data-duration="2.510" data-track-index="27" style="width:100%;height:100%;position:relative">
+<div id="sc21" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Flávio Bolsonaro</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">escolheu ser batizado ali</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc24_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc24_clip" class="clip" data-start="46.750" data-duration="1.870" data-track-index="28" style="width:100%;height:100%;position:relative">
+<div id="sc24" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Entre tantos pastores</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px"></div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc26_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc26_clip" class="clip" data-start="48.620" data-duration="3.160" data-track-index="29" style="width:100%;height:100%;position:relative">
+<div id="sc26" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Por que ficar perto</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">de quem espalha ódio?</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="sc27_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc27_clip" class="clip" data-start="51.780" data-duration="5.500" data-track-index="30" style="width:100%;height:100%;position:relative">
+<div id="sc27" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Quem sonha com um país de</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase"></div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">não aguenta uma mãe que não escolhe lado</div></div>
+
+</div></div>
+<div id="sc29_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc29_clip" class="clip" data-start="57.280" data-duration="4.900" data-track-index="31" style="width:100%;height:100%;position:relative">
+<div id="sc29" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;pointer-events:none">
+<div class="hd" style="position:absolute;left:70px;right:70px;top:240px;text-align:center"><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:76px;line-height:1.02;color:#F5C518;text-transform:uppercase">Todo mundo</div><div class="s" style="font-size:36px;color:#b4b4ba;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:8px">na mesma mesa</div></div>
+<div class="qs"></div><div class="tg"></div><div class="aq"></div></div>
+
+</div></div>
+<div id="escuro_box" class="ed-box" style="left:540.0px;top:840.0px;transform:translate(-50%,-50%);width:754.0px;height:800.0px;z-index:31;"><div id="escuro" class="clip" data-start="62.080" data-duration="3.280" data-track-index="32" style="width:100%;height:100%"><div class='esc'></div></div></div>
+<div id="sc31_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:31;"><div id="sc31_clip" class="clip" data-start="62.180" data-duration="3.180" data-track-index="33" style="width:100%;height:100%;position:relative">
+<div id="sc31" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">E mesmo assim, é ela que</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase">A GENTE</div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase"></div></div>
+
+</div></div>
+<div id="lg0_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg0" class="clip" data-start="-0.080" data-duration="3.570" data-track-index="34" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Por que uma <span class="ed-hl" style="color:#F5C518">santa</span> assusta quem quer <span class="ed-hl" style="color:#F5C518">mandar no país</span>?</div></div>
+<div id="lg1_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg1" class="clip" data-start="3.460" data-duration="4.050" data-track-index="35" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Olha só, você que tá me assistindo, não importa a sua <span class="ed-hl" style="color:#F5C518">religião</span>.</div></div>
+<div id="lg2_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg2" class="clip" data-start="7.480" data-duration="1.090" data-track-index="36" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Pensa comigo:</div></div>
+<div id="lg3_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg3" class="clip" data-start="8.540" data-duration="3.210" data-track-index="37" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">uma <span class="ed-hl" style="color:#F5C518">imagem frágil</span>, nascida <span class="ed-hl" style="color:#F5C518">partida em duas</span>.</div></div>
+<div id="lg4_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg4" class="clip" data-start="11.720" data-duration="3.010" data-track-index="38" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Pra muita gente, ela é <span class="ed-hl" style="color:#F5C518">Nossa Senhora Aparecida</span>,</div></div>
+<div id="lg5_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg5" class="clip" data-start="14.700" data-duration="2.950" data-track-index="39" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">a <span class="ed-hl" style="color:#F5C518">padroeira do Brasil</span>, a <span class="ed-hl" style="color:#F5C518">mãe de Jesus</span>.</div></div>
+<div id="lg6_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg6" class="clip" data-start="17.620" data-duration="5.310" data-track-index="40" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Mas um bispo chamado <span class="ed-hl" style="color:#F5C518">JB Carvalho</span> a chamou de <span class="ed-hl" style="color:#F5C518">braço direito de Satanás</span>.</div></div>
+<div id="lg7_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg7" class="clip" data-start="22.900" data-duration="3.010" data-track-index="41" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">E ainda pediu que ela deixasse de ser a <span class="ed-hl" style="color:#F5C518">padroeira do Brasil</span>.</div></div>
+<div id="lg8_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg8" class="clip" data-start="25.880" data-duration="2.470" data-track-index="42" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Eu respeito <span class="ed-hl" style="color:#F5C518">toda fé</span>, sabia?</div></div>
+<div id="lg9_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg9" class="clip" data-start="28.320" data-duration="2.030" data-track-index="43" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">E quem não tem <span class="ed-hl" style="color:#F5C518">fé nenhuma</span> também.</div></div>
+<div id="lg10_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg10" class="clip" data-start="30.320" data-duration="0.970" data-track-index="44" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Então me diz:</div></div>
+<div id="lg11_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg11" class="clip" data-start="31.260" data-duration="2.190" data-track-index="45" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">de onde vem <span class="ed-hl" style="color:#F5C518">tanta raiva</span>?</div></div>
+<div id="lg12_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg12" class="clip" data-start="33.420" data-duration="1.730" data-track-index="46" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Não nasceu entre os <span class="ed-hl" style="color:#F5C518">fiéis</span>.</div></div>
+<div id="lg13_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg13" class="clip" data-start="35.120" data-duration="1.570" data-track-index="47" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Foi alimentada <span class="ed-hl" style="color:#F5C518">de cima</span>,</div></div>
+<div id="lg14_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg14" class="clip" data-start="36.660" data-duration="4.510" data-track-index="48" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">por <span class="ed-hl" style="color:#F5C518">gente poderosa</span> que viu vantagem em <span class="ed-hl" style="color:#F5C518">dividir o povo</span> usando a fé.</div></div>
+<div id="lg15_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg15" class="clip" data-start="41.140" data-duration="1.410" data-track-index="49" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">E repara numa coisa:</div></div>
+<div id="lg16_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg16" class="clip" data-start="42.520" data-duration="4.350" data-track-index="50" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">foi na igreja desse bispo que <span class="ed-hl" style="color:#F5C518">Flávio Bolsonaro</span> escolheu ser <span class="ed-hl" style="color:#F5C518">batizado</span>.</div></div>
+<div id="lg17_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg17" class="clip" data-start="46.840" data-duration="1.850" data-track-index="51" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Entre <span class="ed-hl" style="color:#F5C518">tantos pastores</span>,</div></div>
+<div id="lg18_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg18" class="clip" data-start="48.660" data-duration="3.130" data-track-index="52" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">por que ficar perto de quem espalha <span class="ed-hl" style="color:#F5C518">ódio</span> contra a fé dos outros?</div></div>
+<div id="lg19_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg19" class="clip" data-start="51.760" data-duration="5.670" data-track-index="53" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Quem sonha com um país de <span class="ed-hl" style="color:#F5C518">uma só igreja</span> não aguenta <span class="ed-hl" style="color:#F5C518">uma mãe</span> que não escolhe <span class="ed-hl" style="color:#F5C518">lado</span>.</div></div>
+<div id="lg20_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg20" class="clip" data-start="57.400" data-duration="2.850" data-track-index="54" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Porque ela senta todo mundo na <span class="ed-hl" style="color:#F5C518">mesma mesa</span>.</div></div>
+<div id="lg21_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg21" class="clip" data-start="60.220" data-duration="2.030" data-track-index="55" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">Partida em duas desde o começo,</div></div>
+<div id="lg22_box" class="ed-box" style="left:540.0px;top:1370.0px;transform:translate(-50%,-50%);width:980.0px;z-index:41;"><div id="lg22" class="clip" data-start="62.220" data-duration="3.140" data-track-index="56" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.22;text-shadow:0 3px 14px rgba(0,0,0,.55);">e mesmo assim, é ela que <span class="ed-hl" style="color:#F5C518">junta a gente</span>.</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:65.36,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+tl.fromTo("#md0_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},0.000);
+tl.to("#md0_box",{...{opacity:0},duration:0.350,ease:"power2.in"},2.990);
+tl.fromTo("#md0_mv",{scale:1},{...{scale:1.07},duration:3.340,ease:"none",immediateRender:false},0.000);
+tl.fromTo("#md3_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},8.430);
+tl.set("#md3_box",{opacity:0},0);
+tl.to("#md3_box",{...{opacity:0},duration:0.350,ease:"power2.in"},9.690);
+tl.fromTo("#md3_mv",{scale:1},{...{scale:1.07},duration:1.610,ease:"none",immediateRender:false},8.430);
+tl.set("#md3_mv",{scale:1},0);
+tl.fromTo("#md5_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},10.040);
+tl.set("#md5_box",{opacity:0},0);
+tl.to("#md5_box",{...{opacity:0},duration:0.350,ease:"power2.in"},11.250);
+tl.fromTo("#md7_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.600);
+tl.set("#md7_box",{opacity:0},0);
+tl.to("#md7_box",{...{opacity:0},duration:0.350,ease:"power2.in"},17.150);
+tl.fromTo("#md7_mv",{scale:1},{...{scale:1.07},duration:5.900,ease:"none",immediateRender:false},11.600);
+tl.set("#md7_mv",{scale:1},0);
+tl.fromTo("#md9_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},17.500);
+tl.set("#md9_box",{opacity:0},0);
+tl.to("#md9_box",{...{opacity:0},duration:0.350,ease:"power2.in"},22.470);
+tl.fromTo("#md11_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},22.820);
+tl.set("#md11_box",{opacity:0},0);
+tl.to("#md11_box",{...{opacity:0},duration:0.350,ease:"power2.in"},25.670);
+tl.fromTo("#md11_mv",{scale:1},{...{scale:1.07},duration:3.200,ease:"none",immediateRender:false},22.820);
+tl.set("#md11_mv",{scale:1},0);
+tl.fromTo("#md14_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},30.200);
+tl.set("#md14_box",{opacity:0},0);
+tl.to("#md14_box",{...{opacity:0},duration:0.350,ease:"power2.in"},34.670);
+tl.fromTo("#md16_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.020);
+tl.set("#md16_box",{opacity:0},0);
+tl.to("#md16_box",{...{opacity:0},duration:0.350,ease:"power2.in"},40.770);
+tl.fromTo("#md16_mv",{scale:1},{...{scale:1.07},duration:6.100,ease:"none",immediateRender:false},35.020);
+tl.set("#md16_mv",{scale:1},0);
+tl.fromTo("#md18_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},41.120);
+tl.set("#md18_box",{opacity:0},0);
+tl.to("#md18_box",{...{opacity:0},duration:0.350,ease:"power2.in"},43.890);
+tl.fromTo("#md18_mv",{scale:1},{...{scale:1.07},duration:3.120,ease:"none",immediateRender:false},41.120);
+tl.set("#md18_mv",{scale:1},0);
+tl.fromTo("#md20_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},44.240);
+tl.set("#md20_box",{opacity:0},0);
+tl.to("#md20_box",{...{opacity:0},duration:0.350,ease:"power2.in"},46.400);
+tl.fromTo("#md20_mv",{scale:1},{...{scale:1.07},duration:2.510,ease:"none",immediateRender:false},44.240);
+tl.set("#md20_mv",{scale:1},0);
+tl.fromTo("#md22_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.750);
+tl.set("#md22_box",{opacity:0},0);
+tl.to("#md22_box",{...{opacity:0},duration:0.350,ease:"power2.in"},48.270);
+tl.fromTo("#md22_mv",{scale:1},{...{scale:1.07},duration:1.870,ease:"none",immediateRender:false},46.750);
+tl.set("#md22_mv",{scale:1},0);
+tl.fromTo("#md23_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.900);
+tl.set("#md23_box",{opacity:0},0);
+tl.to("#md23_box",{...{opacity:0},duration:0.350,ease:"power2.in"},48.270);
+tl.fromTo("#md23_mv",{scale:1},{...{scale:1.07},duration:1.720,ease:"none",immediateRender:false},46.900);
+tl.set("#md23_mv",{scale:1},0);
+tl.fromTo("#md25_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},48.620);
+tl.set("#md25_box",{opacity:0},0);
+tl.to("#md25_box",{...{opacity:0},duration:0.350,ease:"power2.in"},51.430);
+tl.fromTo("#md25_mv",{scale:1},{...{scale:1.07},duration:3.160,ease:"none",immediateRender:false},48.620);
+tl.set("#md25_mv",{scale:1},0);
+tl.fromTo("#md28_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},57.280);
+tl.set("#md28_box",{opacity:0},0);
+tl.fromTo("#md28_mv",{scale:1},{...{scale:1.07},duration:8.080,ease:"none",immediateRender:false},57.280);
+tl.set("#md28_mv",{scale:1},0);
+
+(function(tl, P){ const S=0.0, D=3.34, id="#sc1";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Por que uma santa", "sub": "assusta quem quer mandar no país?", "t_tit": 0, "quadros": [{"x": 540, "y": 840, "w": 660, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "ASSUSTA?", "t": 1.16}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=3.34, D=5.09, id="#sc2";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Não importa a sua religião", "valor": "VOCÊ", "unidade": "", "sub": "católico · evangélico · espírita · sem religião", "foto": "", "ini": "", "icone": "", "t_valor": 3.3899999999999997, "t_sub": 6.6, "t_rot": 6.0, "tam": 300, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=8.43, D=1.61, id="#sc4";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Uma imagem frágil", "sub": "", "t_tit": 0, "quadros": [{"x": 540, "y": 840, "w": 960, "h": 565}], "borda": "#F5C518", "tags": [], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=10.04, D=1.56, id="#sc6";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Nascida", "sub": "", "t_tit": 0, "quadros": [{"x": 540, "y": 840, "w": 754, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "PARTIDA EM DUAS", "t": 10.56}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=11.6, D=5.9, id="#sc8";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Nossa Senhora Aparecida", "sub": "", "t_tit": 13.2, "quadros": [{"x": 540, "y": 840, "w": 754, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "PADROEIRA DO BRASIL", "t": 14.98}, {"txt": "MÃE DE JESUS", "t": 16.52}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=17.5, D=5.32, id="#sc10";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Bispo JB Carvalho", "sub": "chamou a santa de", "t_tit": 18.12, "quadros": [{"x": 540, "y": 840, "w": 960, "h": 779}], "borda": "#F5C518", "tags": [], "aspas": "Braço direito de Satanás", "t_aspas": 21.06});
+
+
+(function(tl, P){ const S=22.82, D=3.2, id="#sc12";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "E ainda pediu", "sub": "", "t_tit": 22.92, "quadros": [{"x": 540, "y": 840, "w": 754, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "TIRAR O TÍTULO DE PADROEIRA", "t": 25.06}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=26.02, D=4.18, id="#sc13";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Toda fé", "valor": "RESPEITO", "unidade": "", "sub": "e quem não tem fé nenhuma também", "foto": "", "ini": "", "icone": "", "t_valor": 26.07, "t_sub": 29.16, "t_rot": 27.06, "tam": 210, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=30.2, D=4.82, id="#sc15";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "De onde vem", "sub": "tanta raiva?", "t_tit": 31.56, "quadros": [{"x": 540, "y": 840, "w": 660, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "NÃO NASCEU ENTRE OS FIÉIS", "t": 33.62}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=35.02, D=6.1, id="#sc17";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Alimentada de cima", "sub": "por gente poderosa", "t_tit": 35.32, "quadros": [{"x": 540, "y": 840, "w": 660, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "DIVIDIR O POVO USANDO A FÉ", "t": 39.14}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=41.12, D=3.12, id="#sc19";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Repara numa coisa", "sub": "a igreja desse bispo", "t_tit": 41.42, "quadros": [{"x": 540, "y": 840, "w": 874, "h": 800}], "borda": "#F5C518", "tags": [], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=44.24, D=2.51, id="#sc21";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Flávio Bolsonaro", "sub": "escolheu ser batizado ali", "t_tit": 0, "quadros": [{"x": 540, "y": 840, "w": 788, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "BATIZADO", "t": 45.96}], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=46.75, D=1.87, id="#sc24";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Entre tantos pastores", "sub": "", "t_tit": 0, "quadros": [{"x": 300, "y": 840, "w": 450, "h": 640}, {"x": 780, "y": 840, "w": 450, "h": 640}], "borda": "#F5C518", "tags": [], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=48.62, D=3.16, id="#sc26";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Por que ficar perto", "sub": "de quem espalha ódio?", "t_tit": 48.92, "quadros": [{"x": 540, "y": 840, "w": 693, "h": 800}], "borda": "#F5C518", "tags": [], "aspas": "", "t_aspas": 0});
+
+
+(function(tl, P){ const S=51.78, D=5.5, id="#sc27";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Quem sonha com um país de", "valor": "UMA SÓ IGREJA", "unidade": "", "sub": "não aguenta uma mãe que não escolhe lado", "foto": "", "ini": "", "icone": "", "t_valor": 51.82999999999999, "t_sub": 55.04, "t_rot": 52.48, "tam": 150, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=57.28, D=4.9, id="#sc29";
+const q=s=>document.querySelector(id+" "+s), qs=q(".qs"), tg=q(".tg"), aq=q(".aq"), hd=q(".hd");
+if(!P.sub) q(".s").remove();
+const QD=(P.quadros&&P.quadros.length)?P.quadros:[{x:540,y:840,w:960,h:800}];
+let bot=0, cx=540, cw=960;
+QD.forEach((f,i)=>{const d=document.createElement("div");
+  d.style.cssText=`position:absolute;left:${f.x-f.w/2}px;top:${f.y-f.h/2}px;width:${f.w}px;height:${f.h}px;border:4px solid ${P.borda};box-sizing:border-box;box-shadow:0 0 50px rgba(245,197,24,.18),inset 0 -160px 120px -60px rgba(0,0,0,.55)`;
+  qs.appendChild(d); bot=Math.max(bot,f.y+f.h/2);
+  tl.fromTo(d,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.45,ease:"power2.out",immediateRender:false},S+.05+i*.12);tl.set(d,{opacity:0},0);});
+if(QD.length===1){cx=QD[0].x;cw=QD[0].w;}
+const tags=(P.tags||[]).filter(t=>t&&t.txt);
+tags.forEach((t,i)=>{const d=document.createElement("div");
+  d.textContent=t.txt;
+  d.style.cssText=`position:absolute;left:${cx}px;top:${bot-70}px;transform:translate(-50%,-50%);max-width:${Math.max(cw,900)-40}px;width:max-content;background:#F5C518;color:#0B0B0C;font:700 54px/1.08 Oswald,Inter;text-transform:uppercase;padding:12px 26px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.6)`;
+  tg.appendChild(d); const t0=Math.max(S+.1,t.t||S+.3), t1=(i+1<tags.length)?Math.max(t0+.3,tags[i+1].t||0):S+D;
+  tl.fromTo(d,{opacity:0,y:24},{opacity:1,y:0,duration:.35,ease:"power3.out",immediateRender:false},t0);tl.set(d,{opacity:0},0);
+  if(i+1<tags.length) tl.to(d,{opacity:0,duration:.2},t1-.2);});
+if(P.aspas){const a=document.createElement("div");
+  a.innerHTML=`<div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:110px">&ldquo;</div><div class="aqt" style="font:700 78px/1.05 Oswald,Inter;text-transform:uppercase;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.9)"></div><div style="font:700 210px/0.7 Oswald,Georgia,serif;color:#F5C518;height:90px;text-align:right;margin-top:18px">&rdquo;</div>`;
+  a.querySelector(".aqt").textContent=P.aspas;
+  a.style.cssText=`position:absolute;left:${cx-cw/2+40}px;width:${cw-80}px;top:${bot-460}px;background:rgba(11,11,12,.78);padding:26px 34px 10px;box-sizing:border-box;border-left:10px solid #F5C518`;
+  aq.appendChild(a);
+  const ta=P.t_aspas||S+.5; tl.fromTo(a,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},ta);tl.set(a,{opacity:0},0);}
+tl.fromTo(hd,{opacity:0,y:-20},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},P.t_tit||S+.05);tl.set(hd,{opacity:0},0);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.25,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.25},S+D-.25);
+})(window.__timelines.main, {"titulo": "Todo mundo", "sub": "na mesma mesa", "t_tit": 57.74, "quadros": [{"x": 540, "y": 840, "w": 754, "h": 800}], "borda": "#F5C518", "tags": [{"txt": "NA MESMA MESA", "t": 59.02}, {"txt": "PARTIDA EM DUAS DESDE O COMEÇO", "t": 60.3}], "aspas": "", "t_aspas": 0});
+
+tl.fromTo("#escuro_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.080);
+tl.set("#escuro_box",{opacity:0},0);
+
+(function(tl, P){ const S=62.18, D=3.18, id="#sc31";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "E mesmo assim, é ela que", "valor": "JUNTA", "unidade": "A GENTE", "sub": "", "foto": "", "ini": "", "icone": "", "t_valor": 62.28, "t_sub": 0, "t_rot": 62.48, "tam": 280, "cor": "#F5C518"});
+
+tl.fromTo("#lg0_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},-0.080);
+tl.fromTo("#lg1_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},3.460);
+tl.set("#lg1_box",{opacity:0},0);
+tl.fromTo("#lg2_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},7.480);
+tl.set("#lg2_box",{opacity:0},0);
+tl.fromTo("#lg3_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},8.540);
+tl.set("#lg3_box",{opacity:0},0);
+tl.fromTo("#lg4_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},11.720);
+tl.set("#lg4_box",{opacity:0},0);
+tl.fromTo("#lg5_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},14.700);
+tl.set("#lg5_box",{opacity:0},0);
+tl.fromTo("#lg6_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},17.620);
+tl.set("#lg6_box",{opacity:0},0);
+tl.fromTo("#lg7_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},22.900);
+tl.set("#lg7_box",{opacity:0},0);
+tl.fromTo("#lg8_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},25.880);
+tl.set("#lg8_box",{opacity:0},0);
+tl.fromTo("#lg9_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},28.320);
+tl.set("#lg9_box",{opacity:0},0);
+tl.fromTo("#lg10_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},30.320);
+tl.set("#lg10_box",{opacity:0},0);
+tl.fromTo("#lg11_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},31.260);
+tl.set("#lg11_box",{opacity:0},0);
+tl.fromTo("#lg12_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},33.420);
+tl.set("#lg12_box",{opacity:0},0);
+tl.fromTo("#lg13_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},35.120);
+tl.set("#lg13_box",{opacity:0},0);
+tl.fromTo("#lg14_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},36.660);
+tl.set("#lg14_box",{opacity:0},0);
+tl.fromTo("#lg15_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},41.140);
+tl.set("#lg15_box",{opacity:0},0);
+tl.fromTo("#lg16_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},42.520);
+tl.set("#lg16_box",{opacity:0},0);
+tl.fromTo("#lg17_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.840);
+tl.set("#lg17_box",{opacity:0},0);
+tl.fromTo("#lg18_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},48.660);
+tl.set("#lg18_box",{opacity:0},0);
+tl.fromTo("#lg19_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},51.760);
+tl.set("#lg19_box",{opacity:0},0);
+tl.fromTo("#lg20_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},57.400);
+tl.set("#lg20_box",{opacity:0},0);
+tl.fromTo("#lg21_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},60.220);
+tl.set("#lg21_box",{opacity:0},0);
+tl.fromTo("#lg22_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.220);
+tl.set("#lg22_box",{opacity:0},0);
+})();</script>
+</body></html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style>
+@font-face{font-family:'Inter';src:url('m/fonts/Inter.ttf');font-weight:100 900;}@font-face{font-family:'Oswald';src:url('m/fonts/Oswald-Bold.ttf');font-weight:100 900;}
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#0B0B0C;}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0B0B0C;font-family:Inter,Arial,sans-serif;color:#fff;}
+.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}.drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="83.59" data-width="1080" data-height="1920">
+<div id="bg_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:11;"><div id="bg" class="clip" data-start="0.000" data-duration="83.590" data-track-index="1" style="width:100%;height:100%"><div class='drbg'></div></div></div>
+<div id="sc0_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc0_clip" class="clip" data-start="0.000" data-duration="4.690" data-track-index="2" style="width:100%;height:100%;position:relative">
+<div id="sc0" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Deputado federal</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">os mais votados da história</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc1_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc1_clip" class="clip" data-start="4.690" data-duration="4.250" data-track-index="3" style="width:100%;height:100%;position:relative">
+<div id="sc1" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Nikolas Ferreira · votos na urna</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase">milhões</div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">de votos</div></div>
+
+</div></div>
+<div id="sc2_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc2_clip" class="clip" data-start="8.940" data-duration="6.540" data-track-index="4" style="width:100%;height:100%;position:relative">
+<div id="sc2" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Recorde de votos</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">votos na urna</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc3_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc3_clip" class="clip" data-start="15.480" data-duration="6.320" data-track-index="5" style="width:100%;height:100%;position:relative">
+<div id="sc3" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="mp" style="position:absolute;left:160px;top:400px;width:760px;height:770px"><img class="b" src="m/img/brasil_mg.svg" style="position:absolute;inset:0;width:100%;height:100%"><img class="d" src="m/img/mg_pontos.svg" style="position:absolute;inset:0;width:100%;height:100%"></div><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Votos em Minas Gerais</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">Nikolas Ferreira</div></div></div><div class="vv" style="position:absolute;left:70px;top:430px;text-shadow:0 4px 30px #000,0 0 12px #000"><div class="v" style="font:700 210px/1 Oswald,Inter;color:#F5C518"></div><div class="vr" style="font:700 40px/1.1 Inter;color:#fff;text-transform:uppercase;max-width:520px">a mais que o recorde</div></div><div class="nt" style="position:absolute;left:0;right:0;top:1090px;text-align:center"><span style="display:inline-block;font:700 40px/1.2 Inter;color:#111;background:#F5C518;padding:12px 26px;border-radius:12px;text-transform:uppercase">com menos da metade dos eleitores</span></div></div>
+
+</div></div>
+<div id="sc4_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc4_clip" class="clip" data-start="21.800" data-duration="3.360" data-track-index="6" style="width:100%;height:100%;position:relative">
+<div id="sc4" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Instagram</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase">milhões</div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">de seguidores</div></div>
+
+</div></div>
+<div id="sc5_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc5_clip" class="clip" data-start="25.160" data-duration="6.300" data-track-index="7" style="width:100%;height:100%;position:relative">
+<div id="sc5" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Mais seguidos no Instagram</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">políticos no mundo</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc6_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc6_clip" class="clip" data-start="31.460" data-duration="8.020" data-track-index="8" style="width:100%;height:100%;position:relative">
+<div id="sc6" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Seguidores no Instagram</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">ganho acumulado · 11 meses</div></div></div><div class="card" style="position:absolute;left:60px;right:60px;top:440px;height:640px;background:#141416;border:2px solid #2a2a2e;border-radius:22px;overflow:hidden"><svg class="g" width="960" height="640" viewBox="0 0 960 640" style="position:absolute;left:0;top:0"></svg><div class="p1" style="position:absolute;font:700 50px/1 Oswald,Inter;color:#111;background:#F5C518;padding:10px 20px;border-radius:10px;white-space:nowrap"></div><div class="p2" style="position:absolute;font:700 46px/1 Oswald,Inter;color:#111;background:#ffffff;padding:10px 20px;border-radius:10px;white-space:nowrap"></div></div></div>
+
+</div></div>
+<div id="sc7_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc7_clip" class="clip" data-start="39.480" data-duration="6.980" data-track-index="9" style="width:100%;height:100%;position:relative">
+<div id="sc7" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Mais seguidos no TikTok</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">políticos no mundo</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc8_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc8_clip" class="clip" data-start="46.460" data-duration="4.940" data-track-index="10" style="width:100%;height:100%;position:relative">
+<div id="sc8" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Seguidores no TikTok</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">brasileiros</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc9_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc9_clip" class="clip" data-start="51.400" data-duration="14.460" data-track-index="11" style="width:100%;height:100%;position:relative">
+<div id="sc9" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">Curtidas acumuladas</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">no TikTok</div></div></div><div class="rows" style="position:absolute;left:70px;right:70px;top:475px"></div></div>
+
+</div></div>
+<div id="sc10_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc10_clip" class="clip" data-start="65.860" data-duration="10.040" data-track-index="12" style="width:100%;height:100%;position:relative">
+<div id="sc10" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff"><div class="hd" style="position:absolute;left:80px;right:80px;top:250px;display:flex;align-items:center;gap:24px"><div class="ic"></div><div><div class="t" style="font-family:Oswald,Inter;font-weight:700;font-size:72px;line-height:1.02;color:#F5C518;text-transform:uppercase">30 dias no Instagram</div><div class="s" style="font-size:34px;color:#a2a2a8;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:6px">setembro → outubro</div></div></div><div class="gr" style="position:absolute;left:80px;top:440px;width:920px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px"></div><div class="ct" style="position:absolute;left:0;right:0;top:560px;text-align:center;text-shadow:0 6px 40px #000"><span class="cn" style="font:700 220px/1 Oswald,Inter;color:#F5C518"></span><div style="font:700 60px/1 Oswald,Inter;color:#fff">POSTS</div></div><div class="vv" style="position:absolute;left:0;right:0;top:930px;text-align:center"><div class="v" style="font:700 150px/1 Oswald,Inter;color:#F5C518"></div><div class="sv" style="font:600 38px/1.2 Inter;color:#a8a8ae;text-transform:uppercase;margin-top:10px">de curtidas e comentários</div></div></div>
+
+</div></div>
+<div id="sc11_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc11_clip" class="clip" data-start="75.900" data-duration="3.560" data-track-index="13" style="width:100%;height:100%;position:relative">
+<div id="sc11" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Por post · em média</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase">milhões</div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase">de curtidas e comentários</div></div>
+
+</div></div>
+<div id="sc12_box" class="ed-box" style="left:0;top:0;width:1080px;height:1920px;z-index:21;"><div id="sc12_clip" class="clip" data-start="79.460" data-duration="4.130" data-track-index="14" style="width:100%;height:100%;position:relative">
+<div id="sc12" style="position:absolute;inset:0;font-family:Inter,Arial,sans-serif;color:#fff;text-align:center">
+<div class="top" style="position:absolute;left:0;right:0;top:270px;height:330px;display:flex;align-items:center;justify-content:center"></div>
+<div class="rot" style="position:absolute;left:60px;right:60px;top:630px;font:700 40px/1.2 Inter;color:#e6e6ea;text-transform:uppercase;letter-spacing:.02em">Esses números te surpreenderam?</div>
+<div class="val" style="position:absolute;left:0;right:0;top:700px;font-family:Oswald,Inter;font-weight:700;line-height:1;color:#F5C518"></div>
+<div class="uni" style="position:absolute;left:0;right:0;font:700 128px/1 Oswald,Inter;color:#F5C518;text-transform:uppercase"></div>
+<div class="sub" style="position:absolute;left:60px;right:60px;font:600 40px/1.2 Inter;color:#a8a8ae;text-transform:uppercase"></div></div>
+
+</div></div>
+<div id="lg0_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg0" class="clip" data-start="-0.080" data-duration="4.970" data-track-index="15" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">O deputado mais votado da história do Brasil não cabe nem no gráfico.</div></div>
+<div id="lg1_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg1" class="clip" data-start="4.860" data-duration="4.250" data-track-index="16" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Nikolas Ferreira teve <span class="ed-hl" style="color:#F5C518">3,1 milhões</span> de votos na urna.</div></div>
+<div id="lg2_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg2" class="clip" data-start="9.080" data-duration="4.510" data-track-index="17" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">O recorde anterior era de <span class="ed-hl" style="color:#F5C518">1,84 milhão</span> em São Paulo,</div></div>
+<div id="lg3_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg3" class="clip" data-start="13.560" data-duration="2.170" data-track-index="18" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">o maior eleitorado do país.</div></div>
+<div id="lg4_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg4" class="clip" data-start="15.700" data-duration="6.210" data-track-index="19" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Nikolas fez <span class="ed-hl" style="color:#F5C518">69%</span> a mais em Minas Gerais, com menos da metade dos eleitores.</div></div>
+<div id="lg5_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg5" class="clip" data-start="21.880" data-duration="3.390" data-track-index="20" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">No Instagram são <span class="ed-hl" style="color:#F5C518">25 milhões</span> de seguidores.</div></div>
+<div id="lg6_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg6" class="clip" data-start="25.240" data-duration="2.450" data-track-index="21" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">No mundo, só <span class="ed-hl" style="color:#F5C518">seis</span> políticos têm mais.</div></div>
+<div id="lg7_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg7" class="clip" data-start="27.660" data-duration="3.970" data-track-index="22" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Lula tem <span class="ed-hl" style="color:#F5C518">18 milhões</span>, Flávio Bolsonaro <span class="ed-hl" style="color:#F5C518">15</span>.</div></div>
+<div id="lg8_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg8" class="clip" data-start="31.600" data-duration="4.850" data-track-index="23" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Em <span class="ed-hl" style="color:#F5C518">11</span> meses, Nikolas ganhou <span class="ed-hl" style="color:#F5C518">6,2 milhões</span> de seguidores.</div></div>
+<div id="lg9_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg9" class="clip" data-start="36.420" data-duration="3.130" data-track-index="24" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Só em outubro, <span class="ed-hl" style="color:#F5C518">2,7 milhões</span>.</div></div>
+<div id="lg10_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg10" class="clip" data-start="39.520" data-duration="3.850" data-track-index="25" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">No TikTok, ele é o <span class="ed-hl" style="color:#F5C518">quinto</span> político mais seguido do mundo,</div></div>
+<div id="lg11_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg11" class="clip" data-start="43.340" data-duration="3.370" data-track-index="26" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">a frente do presidente da França e da presidente do México.</div></div>
+<div id="lg12_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg12" class="clip" data-start="46.680" data-duration="4.870" data-track-index="27" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Lula tem <span class="ed-hl" style="color:#F5C518">6,2 milhões</span>, Flávio Bolsonaro <span class="ed-hl" style="color:#F5C518">2,5</span>.</div></div>
+<div id="lg13_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg13" class="clip" data-start="51.520" data-duration="5.970" data-track-index="28" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Em curtidas acumuladas, Nikolas soma <span class="ed-hl" style="color:#F5C518">205 milhões</span> em <span class="ed-hl" style="color:#F5C518">705</span> vídeos.</div></div>
+<div id="lg14_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg14" class="clip" data-start="57.460" data-duration="4.630" data-track-index="29" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Lula, <span class="ed-hl" style="color:#F5C518">87 milhões</span> em <span class="ed-hl" style="color:#F5C518">1.327</span>.</div></div>
+<div id="lg15_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg15" class="clip" data-start="62.060" data-duration="3.870" data-track-index="30" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Flávio, <span class="ed-hl" style="color:#F5C518">36 milhões</span> em <span class="ed-hl" style="color:#F5C518">1.712</span>.</div></div>
+<div id="lg16_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg16" class="clip" data-start="65.900" data-duration="2.890" data-track-index="31" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Em <span class="ed-hl" style="color:#F5C518">30</span> dias, entre setembro e outubro,</div></div>
+<div id="lg17_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg17" class="clip" data-start="68.760" data-duration="7.390" data-track-index="32" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Nikolas publicou <span class="ed-hl" style="color:#F5C518">23</span> vezes no Instagram e somou <span class="ed-hl" style="color:#F5C518">58,8 milhões</span> de curtidas e comentários.</div></div>
+<div id="lg18_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg18" class="clip" data-start="76.120" data-duration="3.510" data-track-index="33" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Por post, <span class="ed-hl" style="color:#F5C518">2,5 milhões</span> em média.</div></div>
+<div id="lg19_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg19" class="clip" data-start="79.600" data-duration="2.750" data-track-index="34" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">E aí, esses números te surpreenderam?</div></div>
+<div id="lg20_box" class="ed-box" style="left:540.0px;top:1330.0px;transform:translate(-50%,-50%);width:960.0px;z-index:31;"><div id="lg20" class="clip" data-start="82.320" data-duration="1.270" data-track-index="35" style="font-size:56.0px;color:#ffffff;font-weight:600;text-align:center;font-family:'Inter',Inter,Arial,sans-serif;line-height:1.25;">Comenta.</div></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:83.59,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+(function(tl, P){ const S=0.0, D=4.69, id="#sc0";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Deputado federal", "sub": "os mais votados da história", "icone": "urna", "max": 3.1, "linhas": [{"nome": "Recorde anterior", "sub": "São Paulo", "valor": 1.84, "txt": "", "ini": "SP", "cor": "#5a5a5e", "t": 0.25}, {"nome": "Nikolas Ferreira", "sub": "Minas Gerais", "foto": "m/img/nikolas.jpg", "over": true, "dest": true, "t": 3.04}]});
+
+
+(function(tl, P){ const S=4.69, D=4.25, id="#sc1";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Nikolas Ferreira · votos na urna", "valor": "3,1", "unidade": "milhões", "sub": "de votos", "foto": "m/img/nikolas.jpg", "ini": "", "icone": "", "t_valor": 6.04, "t_sub": 7.94, "t_rot": 0, "tam": 280, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=8.94, D=6.54, id="#sc2";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Recorde de votos", "sub": "votos na urna", "icone": "urna", "max": 0, "linhas": [{"nome": "Recorde anterior", "sub": "SP · maior eleitorado", "ini": "SP", "valor": 1.84, "txt": "1,84 MI", "cor": "#9a9aa0", "t": 10.76}, {"nome": "Nikolas Ferreira", "sub": "Minas Gerais", "foto": "m/img/nikolas.jpg", "valor": 3.1, "txt": "3,1 MI", "dest": true, "t": 13.16}]});
+
+
+(function(tl, P){ const S=15.48, D=6.32, id="#sc3";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const mp=document.querySelector(id+" .mp"), dd=document.querySelector(id+" .d"), o=P.cx+"% "+P.cy+"%";
+tl.fromTo(mp,{scale:1,transformOrigin:o},{scale:P.zoom||1.7,transformOrigin:o,duration:D,ease:"power1.inOut",immediateRender:false},S);tl.set(mp,{scale:1,transformOrigin:o},0);
+const tp=P.t_pontos||S+.4;
+tl.fromTo(dd,{clipPath:`circle(0% at ${o})`},{clipPath:`circle(40% at ${o})`,duration:2.2,ease:"power1.out",immediateRender:false},tp);tl.set(dd,{clipPath:`circle(0% at ${o})`},0);
+const vv=document.querySelector(id+" .vv"), v=vv.querySelector(".v");
+if(P.valor){const t=P.t_valor||S+.8;tl.fromTo(vv,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},t);tl.set(vv,{opacity:0},0);COUNT(tl,v,P.valor,t,.8);} else vv.remove();
+const nt=document.querySelector(id+" .nt");
+if(P.nota){tl.fromTo(nt,{opacity:0,y:20},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_nota||S+2);tl.set(nt,{opacity:0},0);} else nt.remove();
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Votos em Minas Gerais", "sub": "Nikolas Ferreira", "icone": "mapa", "base": "m/img/brasil_mg.svg", "pontos": "m/img/mg_pontos.svg", "cx": 71.9, "cy": 60.8, "zoom": 1.7, "t_pontos": 15.78, "valor": "+69%", "t_valor": 16.46, "rot_valor": "a mais que o recorde", "nota": "com menos da metade dos eleitores", "t_nota": 19.72});
+
+
+(function(tl, P){ const S=21.8, D=3.36, id="#sc4";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Instagram", "valor": "25", "unidade": "milhões", "sub": "de seguidores", "foto": "", "ini": "", "icone": "ig", "t_valor": 22.9, "t_sub": 24.44, "t_rot": 0, "tam": 280, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=25.16, D=6.3, id="#sc5";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Mais seguidos no Instagram", "sub": "políticos no mundo", "icone": "ig", "max": 0, "linhas": [{"pos": "1º–6º", "grupo": 6, "nome": "6 políticos à frente", "t": 26.38}, {"pos": "7º", "nome": "Nikolas Ferreira", "sub": "Brasil", "foto": "m/img/nikolas.jpg", "valor": 25, "txt": "25 MI", "dest": true, "sobe": true, "t": 27.08}, {"nome": "Lula", "sub": "Brasil", "foto": "m/img/lula.jpg", "valor": 18, "txt": "18 MI", "cor": "#e04848", "t": 28.6}, {"nome": "Flávio Bolsonaro", "sub": "Brasil", "foto": "m/img/flavio.jpg", "valor": 15, "txt": "15 MI", "cor": "#3f7fe0", "t": 30.94}]});
+
+
+(function(tl, P){ const S=31.46, D=8.02, id="#sc6";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const svg=document.querySelector(id+" .g"), V=P.valores, n=V.length, mx=Math.max(...V)*1.08, X0=70, X1=900, Y0=560, Y1=80;
+const px=i=>X0+(X1-X0)*i/(n-1), py=v=>Y0-(Y0-Y1)*v/mx, NS="http://www.w3.org/2000/svg";
+let h='';for(let k=0;k<=4;k++){const y=Y0-(Y0-Y1)*k/4;h+=`<line x1="${X0}" x2="${X1}" y1="${y}" y2="${y}" stroke="#2a2a2e" stroke-width="2"/>`}
+const pts=V.map((v,i)=>px(i)+","+py(v)), d="M"+pts.join("L"), di="M"+pts.slice(P.dest_ini).join("L");
+h+=`<defs><linearGradient id="gasc6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5C518" stop-opacity=".35"/><stop offset="1" stop-color="#F5C518" stop-opacity="0"/></linearGradient></defs>`;
+h+=`<path class="ar" d="${d}L${px(n-1)},${Y0}L${X0},${Y0}Z" fill="url(#gasc6)"/><path class="ln" d="${d}" fill="none" stroke="#F5C518" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path class="dl" d="${di}" fill="none" stroke="#fff3b0" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/><circle class="dot" cx="${px(n-1)}" cy="${py(V[n-1])}" r="14" fill="#F5C518" stroke="#141416" stroke-width="5"/>`;
+(P.labels||[]).forEach((l,i)=>{if(l)h+=`<text x="${px(i)}" y="${Y0+52}" fill="#a2a2a8" font-family="Inter" font-weight="600" font-size="32" text-anchor="${i===0?"start":i===n-1?"end":"middle"}">${l}</text>`});
+svg.innerHTML=h;
+const ln=svg.querySelector(".ln"), L=ln.getTotalLength(), dl=svg.querySelector(".dl"), L2=dl.getTotalLength();
+const t0=P.t_ini||S+.3, t1=P.t_fim||t0+2.5;
+tl.fromTo(ln,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,duration:t1-t0,ease:"power1.inOut",immediateRender:false},t0);tl.set(ln,{strokeDasharray:L,strokeDashoffset:L},0);
+tl.fromTo(svg.querySelector(".ar"),{opacity:0},{opacity:1,duration:.8,immediateRender:false},t1-.3);tl.set(svg.querySelector(".ar"),{opacity:0},0);
+const dot=svg.querySelector(".dot");tl.fromTo(dot,{opacity:0,scale:0,transformOrigin:"50% 50%"},{opacity:1,scale:1,duration:.35,ease:"back.out(2)",immediateRender:false},t1);tl.set(dot,{opacity:0},0);
+const p1=document.querySelector(id+" .p1"),p2=document.querySelector(id+" .p2");
+if(P.rot_fim){p1.textContent=P.rot_fim;p1.style.right="40px";p1.style.top="40px";const tr=P.t_rot||t1;tl.fromTo(p1,{opacity:0,y:-14},{opacity:1,y:0,duration:.4,immediateRender:false},tr);tl.set(p1,{opacity:0},0);COUNT(tl,p1,P.rot_fim,tr,.8);} else p1.remove();
+tl.set(dl,{strokeDasharray:L2,strokeDashoffset:L2},0);
+if(P.t_dest){tl.to(dl,{strokeDashoffset:0,duration:.7,ease:"power2.out"},P.t_dest);}
+if(P.rot_dest){p2.textContent=P.rot_dest;p2.style.left=(px(P.dest_ini)-330)+"px";p2.style.top=(py(V[P.dest_ini])-120)+"px";const t2=P.t_dest2||P.t_dest+.5;tl.fromTo(p2,{opacity:0,x:-20},{opacity:1,x:0,duration:.4,immediateRender:false},t2);tl.set(p2,{opacity:0},0);COUNT(tl,p2,P.rot_dest,t2,.7);} else p2.remove();
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Seguidores no Instagram", "sub": "ganho acumulado · 11 meses", "icone": "ig", "valores": [0, 0.35, 0.7, 1.05, 1.4, 1.75, 2.1, 2.45, 2.8, 3.15, 3.5, 6.2], "labels": ["11 meses atrás", "", "", "", "", "", "", "", "", "", "", "outubro"], "t_ini": 31.96, "t_fim": 33.96, "rot_fim": "+6,2 MI", "t_rot": 33.76, "dest_ini": 10, "t_dest": 36.8, "rot_dest": "+2,7 MI EM OUTUBRO", "t_dest2": 37.72});
+
+
+(function(tl, P){ const S=39.48, D=6.98, id="#sc7";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Mais seguidos no TikTok", "sub": "políticos no mundo", "icone": "tt", "max": 0, "linhas": [{"pos": "1º–4º", "grupo": 4, "nome": "4 políticos à frente", "t": 40.76}, {"pos": "5º", "nome": "Nikolas Ferreira", "sub": "Brasil", "foto": "m/img/nikolas.jpg", "dest": true, "sobe": true, "t": 41.26}, {"nome": "Emmanuel Macron", "sub": "presidente da França", "foto": "m/img/macron.jpg", "t": 44.64}, {"nome": "Claudia Sheinbaum", "sub": "presidenta do México", "foto": "m/img/sheinbaum.jpg", "t": 45.92}]});
+
+
+(function(tl, P){ const S=46.46, D=4.94, id="#sc8";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Seguidores no TikTok", "sub": "brasileiros", "icone": "tt", "max": 0, "linhas": [{"nome": "Nikolas Ferreira", "sub": "5º político do mundo", "foto": "m/img/nikolas.jpg", "dest": true, "t": 46.660000000000004}, {"nome": "Lula", "sub": "presidente", "foto": "m/img/lula.jpg", "valor": 6.2, "txt": "6,2 MI", "cor": "#e04848", "t": 47.28}, {"nome": "Flávio Bolsonaro", "sub": "senador", "foto": "m/img/flavio.jpg", "valor": 2.5, "txt": "2,5 MI", "cor": "#3f7fe0", "t": 50.42}]});
+
+
+(function(tl, P){ const S=51.4, D=14.46, id="#sc9";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const box=document.querySelector(id+" .rows"), L=P.linhas||[], hasPos=L.some(r=>r.pos), X0=hasPos?100:0;
+const mx=P.max||Math.max(1,...L.filter(r=>!r.over&&r.valor).map(r=>r.valor));
+L.forEach((r,i)=>{const t=r.t||S+.3+i*.3, c=r.cor||"#F5C518", grey=/^#(3a3a3a|5a5a5e|6a6a70)$/i.test(c);
+  const row=document.createElement("div");row.style.cssText="position:relative;height:150px;margin-bottom:30px";
+  if(r.dest){const o=document.createElement("div");o.style.cssText="position:absolute;left:"+(X0-18)+"px;right:-18px;top:-16px;bottom:-14px;border:4px solid #F5C518;border-radius:16px;box-shadow:0 0 34px rgba(245,197,24,.28);background:rgba(245,197,24,.06)";row.appendChild(o);}
+  if(r.pos){const p=document.createElement("div");p.textContent=r.pos;p.style.cssText="position:absolute;left:0;top:"+(r.grupo?16:24)+"px;width:"+(X0-16)+"px;text-align:right;font:700 "+(r.pos.length>3?36:50)+"px Oswald,Inter;color:"+(r.dest?"#F5C518":"#8d8d93");row.appendChild(p);}
+  const tx=X0+128;
+  if(r.grupo){const g=document.createElement("div");g.style.cssText="position:absolute;left:"+X0+"px;top:0;display:flex;gap:14px";
+    for(let k=0;k<r.grupo;k++){const d=FOTO("","?",90,"#4a4a4e");g.appendChild(d);tl.fromTo(d,{opacity:0,scale:.6},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t+k*.09);tl.set(d,{opacity:0},0);}
+    row.appendChild(g);const n=document.createElement("div");n.textContent=r.nome;n.style.cssText="position:absolute;left:"+X0+"px;top:104px;font:600 34px Inter;color:#c9c9ce;text-transform:uppercase;white-space:nowrap";row.appendChild(n);
+    tl.fromTo(n,{opacity:0},{opacity:1,duration:.4,immediateRender:false},t+.3);tl.set(n,{opacity:0},0);box.appendChild(row);return;}
+  const ph=FOTO(r.foto,r.ini,110,r.dest?"#F5C518":"#4a4a4e");ph.style.position="absolute";ph.style.left=X0+"px";ph.style.top="4px";row.appendChild(ph);
+  const nm=document.createElement("div");nm.textContent=r.nome;nm.style.cssText="position:absolute;left:"+tx+"px;top:0;font:700 46px/1.05 Oswald,Inter;text-transform:uppercase;white-space:nowrap";row.appendChild(nm);
+  let sb=null;if(r.sub){sb=document.createElement("div");sb.textContent=r.sub;sb.style.cssText="position:absolute;left:"+tx+"px;top:56px;font:500 32px Inter;color:#a2a2a8;white-space:nowrap";row.appendChild(sb);}
+  let vl=null;if(r.txt){vl=document.createElement("div");vl.style.cssText="position:absolute;right:0;top:0;font:700 54px/1 Oswald,Inter;color:"+(grey?"#ffffff":c);row.appendChild(vl);}
+  if(r.barra!==false&&(r.valor||r.over)){const tr=document.createElement("div");tr.style.cssText="position:absolute;left:"+tx+"px;right:0;top:108px;height:24px;border-radius:12px;background:#232326";
+    const b=document.createElement("div");const f=r.over?1.6:Math.max(.02,r.valor/mx);b.style.cssText="height:100%;border-radius:12px;background:"+c+";transform-origin:0 50%;width:"+(f*100)+"%";tr.appendChild(b);row.appendChild(tr);
+    tl.fromTo(b,{scaleX:0},{scaleX:1,duration:r.over?1.3:.9,ease:r.over?"power1.in":"power3.out",immediateRender:false},t+.15);tl.set(b,{scaleX:0},0);}
+  box.appendChild(row);
+  const up=r.dest&&r.sobe;
+  tl.fromTo(row,{opacity:0,x:up?0:-40,y:up?160:0},{opacity:1,x:0,y:0,duration:up?.8:.45,ease:"power3.out",immediateRender:false},t);tl.set(row,{opacity:0},0);
+  if(vl)COUNT(tl,vl,r.txt,t+.15,.9);
+  if(sb&&r.t_sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.35,immediateRender:false},r.t_sub);tl.set(sb,{opacity:0},0);}
+});
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "Curtidas acumuladas", "sub": "no TikTok", "icone": "tt", "max": 0, "linhas": [{"nome": "Nikolas Ferreira", "sub": "em 705 vídeos", "foto": "m/img/nikolas.jpg", "valor": 205, "txt": "205 MI", "dest": true, "t": 54.0, "t_sub": 55.98}, {"nome": "Lula", "sub": "em 1.327 vídeos", "foto": "m/img/lula.jpg", "valor": 87, "txt": "87 MI", "cor": "#e04848", "t": 58.68, "t_sub": 60.18}, {"nome": "Flávio Bolsonaro", "sub": "em 1.712 vídeos", "foto": "m/img/flavio.jpg", "valor": 36, "txt": "36 MI", "cor": "#3f7fe0", "t": 62.86, "t_sub": 64.16}]});
+
+
+(function(tl, P){ const S=65.86, D=10.04, id="#sc10";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const hd=document.querySelector(id+" .hd");if(P.icone)hd.querySelector(".ic").innerHTML=ICON(P.icone,96);else hd.querySelector(".ic").remove();if(!P.sub)hd.querySelector(".s").remove();
+tl.fromTo(hd,{opacity:0,y:-24},{opacity:1,y:0,duration:.5,ease:"power2.out",immediateRender:false},S+.05);tl.set(hd,{opacity:0},0);
+const gr=document.querySelector(id+" .gr"), t0=P.t_ini||S+.3, tc=P.t_cont||t0+1;
+for(let k=0;k<P.n;k++){const c=document.createElement("div");const l=22+((k*37)%19);c.style.cssText=`height:150px;border-radius:10px;background:linear-gradient(160deg,hsl(${(k*47)%360},14%,${l+8}%),hsl(${(k*47+40)%360},10%,${l-8}%));position:relative;border:2px solid #2e2e32`;
+  c.innerHTML='<svg width="34" height="34" viewBox="0 0 10 10" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"><path d="M3 2l5 3-5 3z" fill="rgba(255,255,255,.85)"/></svg><div style="position:absolute;left:8px;bottom:8px;width:44px;height:8px;border-radius:4px;background:rgba(245,197,24,.8)"></div>';
+  gr.appendChild(c);tl.fromTo(c,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.3,ease:"back.out(2)",immediateRender:false},t0+k*Math.min(.06,(tc-t0+.4)/P.n));tl.set(c,{opacity:0},0);}
+const ct=document.querySelector(id+" .ct"), cn=ct.querySelector(".cn");
+tl.fromTo(ct,{opacity:0,scale:.8},{opacity:1,scale:1,duration:.4,ease:"power3.out",immediateRender:false},tc);tl.set(ct,{opacity:0},0);COUNT(tl,cn,String(P.n),tc,.6);
+tl.to(gr,{opacity:.3,duration:.3},tc);
+const vv=document.querySelector(id+" .vv"), v=vv.querySelector(".v");
+if(P.valor){const t=P.t_valor;v.textContent=P.valor;tl.to(ct,{y:-60,scale:.7,duration:.4},t-.2);tl.to(gr,{opacity:.55,duration:.4},t-.2);
+  tl.fromTo(vv,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},t);tl.set(vv,{opacity:0},0);COUNT(tl,v,P.valor,t,.9);
+  const sv=vv.querySelector(".sv");if(P.sub_valor){tl.fromTo(sv,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||t+.6);tl.set(sv,{opacity:0},0);}} else vv.remove();
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"titulo": "30 dias no Instagram", "sub": "setembro → outubro", "icone": "ig", "n": 23, "t_ini": 66.36, "t_cont": 69.7, "rot": "POSTS", "valor": "58,8 MILHÕES", "unidade": "", "t_valor": 72.14, "sub_valor": "de curtidas e comentários", "t_sub": 74.7});
+
+
+(function(tl, P){ const S=75.9, D=3.56, id="#sc11";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Por post · em média", "valor": "2,5", "unidade": "milhões", "sub": "de curtidas e comentários", "foto": "", "ini": "", "icone": "ig", "t_valor": 77.3, "t_sub": 78.8, "t_rot": 0, "tam": 280, "cor": "#F5C518"});
+
+
+(function(tl, P){ const S=79.46, D=4.13, id="#sc12";
+const ICON=(n,s)=>{s=s||80;const P1="M56 22v38a12 12 0 1 1-10-11.8V36a26 26 0 1 0 24 25V40c4 3 9 5 14 5V33c-8 0-14-5-15-11z";const g={
+ig:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><defs><linearGradient id="igg${s}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#f9a23b"/><stop offset=".5" stop-color="#e1306c"/><stop offset="1" stop-color="#7b3fe4"/></linearGradient></defs><rect x="4" y="4" width="92" height="92" rx="26" fill="url(#igg${s})"/><rect x="24" y="24" width="52" height="52" rx="16" fill="none" stroke="#fff" stroke-width="7"/><circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="7"/><circle cx="68" cy="32" r="4.5" fill="#fff"/></svg>`,
+tt:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="24" fill="#111" stroke="#333" stroke-width="2"/><path d="${P1}" fill="#25f4ee" transform="translate(-3,-2)"/><path d="${P1}" fill="#fe2c55" transform="translate(3,2)"/><path d="${P1}" fill="#fff"/></svg>`,
+urna:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="40" rx="3" fill="#fff"/><path d="M38 20h24M38 30h18" stroke="#111" stroke-width="5"/><rect x="10" y="40" width="80" height="52" rx="8" fill="#F5C518"/><rect x="26" y="46" width="48" height="7" rx="3" fill="#111"/></svg>`,
+chat:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M14 18h72a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H44L24 92V74H14a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#F5C518"/><circle cx="32" cy="46" r="6" fill="#111"/><circle cx="50" cy="46" r="6" fill="#111"/><circle cx="68" cy="46" r="6" fill="#111"/></svg>`,
+mapa:`<svg width="${s}" height="${s}" viewBox="0 0 100 100"><path d="M50 6a30 30 0 0 0-30 30c0 24 30 58 30 58s30-34 30-58A30 30 0 0 0 50 6z" fill="#F5C518"/><circle cx="50" cy="36" r="11" fill="#111"/></svg>`};return g[n]||""};
+const PARSE=t=>{const m=String(t).match(/^([^\d]*)(\d[\d.,]*)(.*)$/);if(!m)return null;let r=m[2],tail="";while(/[.,]$/.test(r)){tail=r.slice(-1)+tail;r=r.slice(0,-1)}const dec=r.includes(",")?r.split(",")[1].length:0;return{pre:m[1],num:parseFloat(r.replace(/\./g,"").replace(",",".")),dec,thou:r.includes("."),suf:tail+m[3]}};
+const FMT=(p,v)=>p.pre+v.toLocaleString("pt-BR",{minimumFractionDigits:p.dec,maximumFractionDigits:p.dec,useGrouping:p.thou})+p.suf;
+const COUNT=(tl,el,txt,t,d)=>{const p=PARSE(txt);el.textContent=txt;if(!p)return;const o={v:0};tl.to(o,{v:p.num,duration:d||.8,ease:"power2.out",onUpdate:()=>{el.textContent=FMT(p,o.v)},immediateRender:false},t);tl.set(o,{v:0},0)};
+const FOTO=(f,ini,sz,brd)=>{const d=document.createElement("div");d.style.cssText=`width:${sz}px;height:${sz}px;border-radius:50%;overflow:hidden;border:${Math.max(3,Math.round(sz/28))}px solid ${brd};background:#2c2c30;display:flex;align-items:center;justify-content:center;font:700 ${Math.round(sz*.36)}px Oswald,Inter;color:#d8d8dc;flex:none;box-sizing:border-box`;if(f){d.innerHTML=`<img src="${f}" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%">`}else d.textContent=ini||"";return d};
+const q=s=>document.querySelector(id+" "+s), top=q(".top"), v=q(".val"), u=q(".uni"), sb=q(".sub"), rt=q(".rot");
+let tp=null; if(P.foto||P.ini){tp=FOTO(P.foto,P.ini,300,"#F5C518");tp.style.boxShadow="0 0 60px rgba(245,197,24,.25)";top.appendChild(tp);} else if(P.icone){top.innerHTML=ICON(P.icone,250);tp=top.firstChild;} else {top.remove();rt.style.top="430px";v.style.top="510px";}
+if(!P.rotulo)rt.remove();
+const tam=P.tam||280; v.style.fontSize=tam+"px"; const vt=parseFloat(v.style.top); u.style.top=(vt+tam+6)+"px"; sb.style.top=(vt+tam+(P.unidade?160:30))+"px"; if(!P.unidade)u.remove(); if(!P.sub)sb.remove();
+if(tp){tl.fromTo(tp,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.55,ease:"back.out(1.6)",immediateRender:false},S+.05);tl.set(tp,{opacity:0},0);}
+if(P.rotulo){tl.fromTo(rt,{opacity:0,y:16},{opacity:1,y:0,duration:.4,immediateRender:false},P.t_rot||S+.15);tl.set(rt,{opacity:0},0);}
+const tv=P.t_valor||S+.4; tl.fromTo(v,{opacity:0,scale:.85},{opacity:1,scale:1,duration:.45,ease:"power3.out",immediateRender:false},tv);tl.set(v,{opacity:0},0); COUNT(tl,v,P.valor,tv,.9);
+if(P.unidade){tl.fromTo(u,{opacity:0,y:30},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},tv+.35);tl.set(u,{opacity:0},0);}
+if(P.sub){tl.fromTo(sb,{opacity:0},{opacity:1,duration:.4,immediateRender:false},P.t_sub||tv+.6);tl.set(sb,{opacity:0},0);}
+if(tp)tl.fromTo(tp,{scale:1},{scale:1.06,duration:Math.max(.5,S+D-tv-.6),ease:"none",immediateRender:false},tv+.5);
+tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,immediateRender:false},S);tl.set(id,{opacity:0},0);tl.to(id,{opacity:0,duration:.3},S+D-.3);
+})(window.__timelines.main, {"rotulo": "Esses números te surpreenderam?", "valor": "COMENTA", "unidade": "", "sub": "", "foto": "", "ini": "", "icone": "chat", "t_valor": 75.4, "t_sub": 0, "t_rot": 80.46, "tam": 210, "cor": "#F5C518"});
+
+tl.fromTo("#lg0_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},-0.080);
+tl.fromTo("#lg1_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},4.860);
+tl.set("#lg1_box",{opacity:0},0);
+tl.fromTo("#lg2_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},9.080);
+tl.set("#lg2_box",{opacity:0},0);
+tl.fromTo("#lg3_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},13.560);
+tl.set("#lg3_box",{opacity:0},0);
+tl.fromTo("#lg4_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},15.700);
+tl.set("#lg4_box",{opacity:0},0);
+tl.fromTo("#lg5_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},21.880);
+tl.set("#lg5_box",{opacity:0},0);
+tl.fromTo("#lg6_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},25.240);
+tl.set("#lg6_box",{opacity:0},0);
+tl.fromTo("#lg7_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},27.660);
+tl.set("#lg7_box",{opacity:0},0);
+tl.fromTo("#lg8_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},31.600);
+tl.set("#lg8_box",{opacity:0},0);
+tl.fromTo("#lg9_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},36.420);
+tl.set("#lg9_box",{opacity:0},0);
+tl.fromTo("#lg10_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},39.520);
+tl.set("#lg10_box",{opacity:0},0);
+tl.fromTo("#lg11_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},43.340);
+tl.set("#lg11_box",{opacity:0},0);
+tl.fromTo("#lg12_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},46.680);
+tl.set("#lg12_box",{opacity:0},0);
+tl.fromTo("#lg13_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},51.520);
+tl.set("#lg13_box",{opacity:0},0);
+tl.fromTo("#lg14_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},57.460);
+tl.set("#lg14_box",{opacity:0},0);
+tl.fromTo("#lg15_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},62.060);
+tl.set("#lg15_box",{opacity:0},0);
+tl.fromTo("#lg16_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},65.900);
+tl.set("#lg16_box",{opacity:0},0);
+tl.fromTo("#lg17_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},68.760);
+tl.set("#lg17_box",{opacity:0},0);
+tl.fromTo("#lg18_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},76.120);
+tl.set("#lg18_box",{opacity:0},0);
+tl.fromTo("#lg19_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},79.600);
+tl.set("#lg19_box",{opacity:0},0);
+tl.fromTo("#lg20_box",{opacity:0},{opacity:1,x:0,y:0,scale:1,duration:0.450,ease:"power2.out",immediateRender:false},82.320);
+tl.set("#lg20_box",{opacity:0},0);
+})();</script>
+</body></html>

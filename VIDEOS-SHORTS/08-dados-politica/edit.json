@@ -1,0 +1,1233 @@
+{
+ "version": 1,
+ "name": "08 - DADOS RANKING ESCURO - Votar contra o Lula nao e torcer por ninguem",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0B0B0C"
+ },
+ "duration": 61.25,
+ "template": "generic",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Dados ranking escuro amarelo",
+ "referencia": {
+  "canal": "@nikolasferreiradm",
+  "canal_url": "https://www.instagram.com/nikolasferreiradm/",
+  "video": "https://www.instagram.com/p/De0HLIExn-n/",
+  "nota": "formato preto/amarelo do short 06 + recortes de gráficos/manchetes da referência em moldura amarela; sem logo/@ do perfil"
+ },
+ "fonts": {
+  "Inter": "fonts/Inter.ttf",
+  "Oswald": "fonts/Oswald-Bold.ttf"
+ },
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "fundo",
+   "name": "Fundo"
+  },
+  {
+   "id": "midia",
+   "name": "B-roll"
+  },
+  {
+   "id": "visual",
+   "name": "Gráficos"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "bg",
+   "type": "html",
+   "track": "fundo",
+   "label": "fundo preto",
+   "start": 0,
+   "dur": 61.25,
+   "props": {
+    "fill": true,
+    "html": "<div class='drbg'></div>",
+    "css": ".drbg{width:100%;height:100%;background:radial-gradient(ellipse at 50% 35%,#151517 0%,#0B0B0C 65%)}"
+   }
+  },
+  {
+   "id": "sc0",
+   "type": "scene",
+   "track": "visual",
+   "label": "voto contra o Lula",
+   "start": 0,
+   "dur": 1.49,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Meu voto",
+     "foto": "img/lula.jpg",
+     "valor": "CONTRA",
+     "tam": 230,
+     "unidade": "o Lula",
+     "t_rot": 0.05,
+     "t_valor": 0.46
+    }
+   }
+  },
+  {
+   "id": "sc1",
+   "type": "scene",
+   "track": "visual",
+   "label": "não torço por Flávio nem Bolsonaro",
+   "start": 1.49,
+   "dur": 2.95,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "FLÁVIO",
+       "t": 2.76,
+       "cor": "#ffffff",
+       "tam": 200
+      },
+      {
+       "txt": "NEM",
+       "t": 3.2,
+       "cor": "#F5C518",
+       "tam": 120
+      },
+      {
+       "txt": "BOLSONARO",
+       "t": 3.44,
+       "cor": "#ffffff",
+       "tam": 200
+      }
+     ],
+     "titulo": "NÃO TORÇO POR",
+     "t_tit": 1.54,
+     "bgimg": "img/flavio.jpg",
+     "bg_fit": "topo",
+     "bg_top": 230,
+     "bg_op": 0.38
+    }
+   }
+  },
+  {
+   "id": "sc2",
+   "type": "scene",
+   "track": "visual",
+   "label": "por quê?",
+   "start": 4.44,
+   "dur": 2.33,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "POR QUÊ?",
+       "t": 4.82,
+       "cor": "#F5C518",
+       "tam": 240
+      },
+      {
+       "txt": "PENSA COMIGO",
+       "t": 5.76,
+       "cor": "#ffffff",
+       "tam": 120
+      }
+     ],
+     "bgimg": "img/01_feminicidio.jpg",
+     "bg_op": 0.24
+    }
+   }
+  },
+  {
+   "id": "sc3",
+   "type": "scene",
+   "track": "visual",
+   "label": "FEMINICÍDIO",
+   "start": 6.77,
+   "dur": 2.74,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "FEMINICÍDIO",
+     "sub": "aumentando",
+     "t_tit": 7.62,
+     "img": "img/01_feminicidio.jpg",
+     "ar": 0.773,
+     "t_img": 6.82,
+     "t_sub": 8.32
+    }
+   }
+  },
+  {
+   "id": "sc4",
+   "type": "scene",
+   "track": "visual",
+   "label": "ESTATAIS",
+   "start": 9.51,
+   "dur": 4.34,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "ESTATAIS",
+     "sub": "prejuízo recorde",
+     "t_tit": 10.08,
+     "img": "img/02_estatais.jpg",
+     "ar": 0.777,
+     "t_img": 9.56,
+     "t_sub": 10.92
+    }
+   }
+  },
+  {
+   "id": "sc5",
+   "type": "scene",
+   "track": "visual",
+   "label": "QUEIMADAS",
+   "start": 13.85,
+   "dur": 2.65,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "QUEIMADAS",
+     "sub": "vegetação pegando fogo",
+     "t_tit": 14.96,
+     "img": "img/03_queimadas.jpg",
+     "ar": 0.779,
+     "t_img": 13.9,
+     "t_sub": 15.52
+    }
+   }
+  },
+  {
+   "id": "sc6",
+   "type": "scene",
+   "track": "visual",
+   "label": "Amazônia",
+   "start": 16.5,
+   "dur": 3.38,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "SÓ QUANDO",
+       "t": 18.62,
+       "cor": "#ffffff",
+       "tam": 170
+      },
+      {
+       "txt": "O ANO VIRAR",
+       "t": 18.94,
+       "cor": "#F5C518",
+       "tam": 170
+      }
+     ],
+     "titulo": "AMAZÔNIA",
+     "t_tit": 18.02,
+     "bgimg": "img/03_queimadas.jpg",
+     "bg_op": 0.28
+    }
+   }
+  },
+  {
+   "id": "sc7",
+   "type": "scene",
+   "track": "visual",
+   "label": "conveniente",
+   "start": 19.88,
+   "dur": 1.07,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "CONVENIENTE,",
+       "t": 20.08,
+       "cor": "#F5C518",
+       "tam": 160
+      },
+      {
+       "txt": "NÉ?",
+       "t": 20.66,
+       "cor": "#ffffff",
+       "tam": 200
+      }
+     ],
+     "bgimg": "img/03_queimadas.jpg",
+     "bg_op": 0.24
+    }
+   }
+  },
+  {
+   "id": "sc8",
+   "type": "scene",
+   "track": "visual",
+   "label": "o que vem agora",
+   "start": 20.95,
+   "dur": 1.7,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "OLHA SÓ",
+       "t": 21.3,
+       "cor": "#ffffff",
+       "tam": 140
+      },
+      {
+       "txt": "O QUE VEM AGORA",
+       "t": 21.98,
+       "cor": "#F5C518",
+       "tam": 128
+      }
+     ],
+     "escurecer": 0.75
+    }
+   }
+  },
+  {
+   "id": "br_fac",
+   "type": "video",
+   "track": "midia",
+   "label": "b-roll facções",
+   "start": 20.95,
+   "dur": 5.24,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "src": "img/04_faccoes_lento.mp4",
+    "fill": true,
+    "fit": "cover",
+    "volume": 0
+   }
+  },
+  {
+   "id": "sc10",
+   "type": "scene",
+   "track": "visual",
+   "label": "FACÇÕES",
+   "start": 22.65,
+   "dur": 3.54,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "FACÇÕES",
+     "sub": "PCC e Comando Vermelho",
+     "t_tit": 24.0,
+     "img": "img/05_faccoes_oglobo_manchete.jpg",
+     "ar": 2.75,
+     "t_img": 24.62,
+     "t_sub": 24.62,
+     "escurecer": 0.6,
+     "area_top": 600,
+     "area_h": 760
+    }
+   }
+  },
+  {
+   "id": "sc11",
+   "type": "scene",
+   "track": "visual",
+   "label": "JUROS",
+   "start": 26.19,
+   "dur": 4.54,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "JUROS",
+     "sub": "maior juro real do mundo",
+     "t_tit": 27.34,
+     "img": "img/06_juros.jpg",
+     "ar": 0.852,
+     "t_img": 26.24,
+     "t_sub": 28.82
+    }
+   }
+  },
+  {
+   "id": "sc12",
+   "type": "scene",
+   "track": "visual",
+   "label": "IMPOSTOS",
+   "start": 30.73,
+   "dur": 2.56,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "IMPOSTOS",
+     "sub": "cobra mais imposto",
+     "t_tit": 31.96,
+     "img": "img/07_impostos.jpg",
+     "ar": 0.802,
+     "t_img": 30.78,
+     "t_sub": 32.72
+    }
+   }
+  },
+  {
+   "id": "sc13",
+   "type": "scene",
+   "track": "visual",
+   "label": "GASTOS",
+   "start": 33.29,
+   "dur": 3.22,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "GASTOS",
+     "sub": "até quebrar o país",
+     "t_tit": 33.39,
+     "img": "img/08_gastos.jpg",
+     "ar": 0.83,
+     "t_img": 33.34,
+     "t_sub": 35.46
+    }
+   }
+  },
+  {
+   "id": "sc14",
+   "type": "scene",
+   "track": "visual",
+   "label": "cadê o dinheiro",
+   "start": 36.51,
+   "dur": 2.34,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "AÍ ME EXPLICA",
+       "t": 36.66,
+       "cor": "#ffffff",
+       "tam": 110
+      },
+      {
+       "txt": "CADÊ O",
+       "t": 37.76,
+       "cor": "#F5C518",
+       "tam": 190
+      },
+      {
+       "txt": "DINHEIRO?",
+       "t": 38.28,
+       "cor": "#F5C518",
+       "tam": 190,
+       "caixa": true
+      }
+     ],
+     "bgimg": "img/09_corrupcao.jpg",
+     "bg_op": 0.22
+    }
+   }
+  },
+  {
+   "id": "sc15",
+   "type": "scene",
+   "track": "visual",
+   "label": "CORRUPÇÃO",
+   "start": 38.85,
+   "dur": 3.06,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "CORRUPÇÃO",
+     "sub": "e impunidade",
+     "t_tit": 39.84,
+     "imgs": [
+      {
+       "src": "img/09_corrupcao_a.jpg",
+       "ar": 6.449,
+       "t": 39.0
+      },
+      {
+       "src": "img/09_corrupcao_b.jpg",
+       "ar": 6.449,
+       "t": 39.4
+      },
+      {
+       "src": "img/09_corrupcao_c.jpg",
+       "ar": 6.512,
+       "t": 39.8
+      },
+      {
+       "src": "img/09_corrupcao_d.jpg",
+       "ar": 6.449,
+       "t": 40.2
+      },
+      {
+       "src": "img/09_corrupcao_e.jpg",
+       "ar": 6.512,
+       "t": 40.6
+      }
+     ],
+     "t_sub": 41.1
+    }
+   }
+  },
+  {
+   "id": "sc16",
+   "type": "scene",
+   "track": "visual",
+   "label": "EMPRESAS",
+   "start": 41.91,
+   "dur": 3.48,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "EMPRESAS",
+     "sub": "morrendo",
+     "t_tit": 42.4,
+     "img": "img/10_empresas.jpg",
+     "ar": 1.833,
+     "t_img": 41.96,
+     "t_sub": 42.88
+    }
+   }
+  },
+  {
+   "id": "sc17",
+   "type": "scene",
+   "track": "visual",
+   "label": "o pior vem agora",
+   "start": 45.39,
+   "dur": 1.49,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "O PIOR",
+       "t": 45.84,
+       "cor": "#F5C518",
+       "tam": 240
+      },
+      {
+       "txt": "VEM AGORA",
+       "t": 46.04,
+       "cor": "#ffffff",
+       "tam": 150
+      }
+     ],
+     "bgimg": "img/11_stf.jpg",
+     "bg_op": 0.25
+    }
+   }
+  },
+  {
+   "id": "sc18",
+   "type": "scene",
+   "track": "visual",
+   "label": "4 ministros STF",
+   "start": 46.88,
+   "dur": 4.21,
+   "props": {
+    "scene": "dr_numero",
+    "params": {
+     "rotulo": "Os próximos",
+     "foto": "img/lula.jpg",
+     "valor": "4",
+     "tam": 300,
+     "unidade": "ministros",
+     "sub": "do STF · escolhidos por ele",
+     "t_rot": 46.98,
+     "t_valor": 47.78,
+     "t_sub": 49.0
+    }
+   }
+  },
+  {
+   "id": "sc19",
+   "type": "scene",
+   "track": "visual",
+   "label": "STF",
+   "start": 51.09,
+   "dur": 2.87,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "STF",
+     "sub": "mais ao PT do que ao Brasil",
+     "t_tit": 51.19,
+     "imgs": [
+      {
+       "src": "img/11_stf_a.jpg",
+       "ar": 6.449,
+       "t": 51.19
+      },
+      {
+       "src": "img/11_stf_b.jpg",
+       "ar": 6.449,
+       "t": 51.64
+      },
+      {
+       "src": "img/11_stf_c.jpg",
+       "ar": 6.449,
+       "t": 52.09
+      }
+     ],
+     "t_sub": 52.9
+    }
+   }
+  },
+  {
+   "id": "sc20",
+   "type": "scene",
+   "track": "visual",
+   "label": "20 ANOS",
+   "start": 53.96,
+   "dur": 3.57,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "titulo": "20 ANOS",
+     "sub": "já devia dar sombra",
+     "t_tit": 55.28,
+     "img": "img/12_arvore.jpg",
+     "ar": 1.451,
+     "t_img": 54.01,
+     "t_sub": 56.34
+    }
+   }
+  },
+  {
+   "id": "sc21",
+   "type": "scene",
+   "track": "visual",
+   "label": "não tô falando de planta",
+   "start": 57.53,
+   "dur": 3.72,
+   "props": {
+    "scene": "dr_moldura",
+    "params": {
+     "frase": [
+      {
+       "txt": "NÃO TÔ FALANDO",
+       "t": 58.96,
+       "cor": "#ffffff",
+       "tam": 137
+      },
+      {
+       "txt": "DE PLANTA.",
+       "t": 59.9,
+       "cor": "#F5C518",
+       "tam": 170,
+       "caixa": true
+      }
+     ],
+     "bgimg": "img/13_arvore_lula_chapeu.jpg",
+     "bg_fit": "topo",
+     "bg_top": 250,
+     "bg_op": 0.42,
+     "area_top": 800,
+     "area_h": 440
+    }
+   }
+  },
+  {
+   "id": "lg0",
+   "type": "text",
+   "track": "legenda",
+   "label": "Voto contra o Lula, mas não to",
+   "start": 0,
+   "dur": 4.59,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Voto contra o Lula, mas não torço por Flávio nem Bolsonaro.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "contra o Lula",
+     "Flávio",
+     "Bolsonaro"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "track": "legenda",
+   "label": "Então por quê?",
+   "start": 4.56,
+   "dur": 1.15,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Então por quê?",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg2",
+   "type": "text",
+   "track": "legenda",
+   "label": "Pensa comigo.",
+   "start": 5.68,
+   "dur": 1.19,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Pensa comigo.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero ver o feminicídio",
+   "start": 6.84,
+   "dur": 2.77,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero ver o feminicídio aumentando, cara.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "feminicídio"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg4",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero estatais com prej",
+   "start": 9.58,
+   "dur": 1.85,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero estatais com prejuízo",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "estatais"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg5",
+   "type": "text",
+   "track": "legenda",
+   "label": "recorde e a conta sobrando pra",
+   "start": 11.4,
+   "dur": 2.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "recorde e a conta sobrando pra gente.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg6",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não aguento ver a vegetação",
+   "start": 13.92,
+   "dur": 2.73,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não aguento ver a vegetação pegando fogo.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "vegetação",
+     "fogo"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg7",
+   "type": "text",
+   "track": "legenda",
+   "label": "Tem gente que só vai ligar pra",
+   "start": 16.62,
+   "dur": 3.41,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Tem gente que só vai ligar pra Amazônia quando o ano virar.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "Amazônia"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg8",
+   "type": "text",
+   "track": "legenda",
+   "label": "Conveniente, né?",
+   "start": 20.0,
+   "dur": 1.05,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Conveniente, né?",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "Conveniente"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg9",
+   "type": "text",
+   "track": "legenda",
+   "label": "Mas olha só o que vem agora.",
+   "start": 21.02,
+   "dur": 1.73,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Mas olha só o que vem agora.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg10",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero o meu país na mão",
+   "start": 22.72,
+   "dur": 3.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero o meu país na mão do PCC e do Comando Vermelho.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "PCC",
+     "Comando Vermelho"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg11",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero família endividad",
+   "start": 26.26,
+   "dur": 4.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero família endividada no país do maior juro real do mundo.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "endividada",
+     "maior juro real do mundo"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg12",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero governo que cobra",
+   "start": 30.8,
+   "dur": 2.59,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero governo que cobra mais imposto e",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "imposto"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg13",
+   "type": "text",
+   "track": "legenda",
+   "label": "gasta sem responsabilidade até",
+   "start": 33.36,
+   "dur": 3.25,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "gasta sem responsabilidade até quebrar o país.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "sem responsabilidade"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg14",
+   "type": "text",
+   "track": "legenda",
+   "label": "Aí me explica: cadê o dinheiro",
+   "start": 36.58,
+   "dur": 2.37,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Aí me explica: cadê o dinheiro?",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "cadê o dinheiro"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg15",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero tanta corrupção e",
+   "start": 38.92,
+   "dur": 3.09,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero tanta corrupção e tanta impunidade.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "corrupção",
+     "impunidade"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg16",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero empresa morrendo ",
+   "start": 41.98,
+   "dur": 3.51,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero empresa morrendo porque o governo só atrapalha.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "empresa morrendo"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg17",
+   "type": "text",
+   "track": "legenda",
+   "label": "E o pior vem agora.",
+   "start": 45.46,
+   "dur": 1.57,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "E o pior vem agora.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "o pior"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg18",
+   "type": "text",
+   "track": "legenda",
+   "label": "Os próximos quatro ministros d",
+   "start": 47.0,
+   "dur": 4.19,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Os próximos quatro ministros do STF serão escolhidos por ele.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "quatro ministros",
+     "STF"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg19",
+   "type": "text",
+   "track": "legenda",
+   "label": "Eu não quero que eles sirvam m",
+   "start": 51.16,
+   "dur": 2.95,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Eu não quero que eles sirvam mais ao PT do que ao Brasil.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "PT",
+     "Brasil"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg20",
+   "type": "text",
+   "track": "legenda",
+   "label": "Uma árvore de vinte anos já de",
+   "start": 54.08,
+   "dur": 3.55,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Uma árvore de vinte anos já devia dar sombra.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "árvore de vinte anos",
+     "sombra"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  },
+  {
+   "id": "lg21",
+   "type": "text",
+   "track": "legenda",
+   "label": "Só que, cara, eu não tô faland",
+   "start": 57.6,
+   "dur": 3.65,
+   "in": "fade",
+   "out": "none",
+   "props": {
+    "text": "Só que, cara, eu não tô falando de planta.",
+    "x": 540,
+    "y": 1340,
+    "w": 960,
+    "size": 56,
+    "color": "#ffffff",
+    "font": "Inter",
+    "weight": 700,
+    "align": "center",
+    "shadow": true,
+    "highlight": [
+     "planta"
+    ],
+    "hl_color": "#F5C518",
+    "line": 1.25
+   }
+  }
+ ]
+}

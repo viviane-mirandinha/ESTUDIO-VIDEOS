@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#0d1014;}
+#root{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:#0d1014;font-family:Montserrat,Inter,Arial,sans-serif;}
+#scenes{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.sc{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;visibility:hidden;}
+.sc.first{visibility:visible;}
+.cam{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:50% 42%;}
+.cam svg{position:absolute;left:0;top:0;}
+.lay{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+.w{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;}
+.hud{position:absolute;left:64px;top:92px;color:#E9EDF2;font-family:Montserrat,Arial;line-height:1;}
+.hud .n{font-family:Inter,Arial;font-weight:800;font-size:30px;letter-spacing:.14em;color:#FF4D4D;display:flex;align-items:center;gap:12px;}
+.hud .n i{display:inline-block;width:16px;height:16px;border-radius:50%;background:#FF4D4D;}
+.hud .t{font-size:104px;font-weight:900;margin-top:10px;letter-spacing:-.02em;}
+.hud .t small{font-size:40px;margin-left:10px;letter-spacing:.04em;color:#AEB6C2;}
+.hud .l{font-family:Inter,Arial;font-weight:700;font-size:28px;letter-spacing:.28em;color:#7F8A99;margin-top:12px;}
+.parte{position:absolute;right:60px;top:104px;font-family:Montserrat;font-weight:900;font-size:30px;color:#0d1014;background:#FFD23F;padding:10px 20px;border-radius:10px;letter-spacing:.06em;}
+.selo{font-family:Montserrat;font-weight:900;white-space:nowrap;padding:12px 26px;border-radius:12px;letter-spacing:.04em;line-height:1;color:#fff;background:#E23B3B;box-shadow:0 8px 0 rgba(0,0,0,.35);}
+.bub{position:absolute;left:44px;font-family:Inter,Arial;font-weight:700;font-size:36px;color:#F4F6F8;background:#2A313C;padding:20px 28px;border-radius:30px 30px 30px 8px;max-width:340px;line-height:1.2;white-space:normal;}
+.bub.old{opacity:.38;}
+.bub.red{background:#E23B3B;color:#fff;font-family:Montserrat;font-weight:900;font-size:46px;}
+.vig{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 42%,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 100%);}
+#leg .ed-cg{letter-spacing:-.005em;text-shadow:0 5px 0 #000,0 0 22px rgba(0,0,0,.9),0 0 4px #000;}
+#leg .ed-w.on[data-g]{color:#3DDC7A !important;}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2230"/><stop offset="1" stop-color="#121722"/></linearGradient>
+  <linearGradient id="gFloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F131A"/><stop offset="1" stop-color="#07090C"/></linearGradient>
+  <linearGradient id="gBeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FB8DE" stop-opacity=".16"/><stop offset="1" stop-color="#9FB8DE" stop-opacity="0"/></linearGradient>
+  <radialGradient id="gPhone"><stop offset="0" stop-color="#CFE4FF" stop-opacity=".85"/><stop offset="1" stop-color="#CFE4FF" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gWarm"><stop offset="0" stop-color="#FFE3A3" stop-opacity=".9"/><stop offset="1" stop-color="#FFE3A3" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gRed"><stop offset="0" stop-color="#FF3B3B" stop-opacity=".55"/><stop offset="1" stop-color="#FF3B3B" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gGap" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFE3A3" stop-opacity="0"/><stop offset=".5" stop-color="#FFE3A3"/><stop offset="1" stop-color="#FFE3A3" stop-opacity="0"/></linearGradient>
+ </defs>
+</svg>
+<div id="scenes"></div>
+<div class="vig"></div>
+<!--__ITEMS__-->
+</div>
+<script>
+const EDIT = __EDIT__;
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.to({v:0},{v:1,duration:__DUR__,ease:"none"},0);
+window.__timelines["main"] = tl;
+const ED = Object.fromEntries(EDIT.items.map(i => [i.id, i]));
+const PV = id => ((ED[id] || {}).props || {}).value || "";
+const C = {wh:"#F4F4F2", ink:"#0d1014", yel:"#FFD23F", grn:"#3DDC7A", red:"#E23B3B", blu:"#CFE4FF"};
+const ROOT = document.getElementById("scenes");
+
+/* ---------- helpers de animação ---------- */
+function hide(sel){ tl.set(sel, {opacity:0}, 0); }
+function pop(sel, t, from=0.6){ tl.fromTo(sel, {opacity:0, scale:from, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.28, ease:"back.out(2)", immediateRender:false}, t); }
+function fadeIn(sel, t, d=0.35, y=0){ tl.fromTo(sel, {opacity:0, y:y}, {opacity:1, y:0, duration:d, ease:"power2.out", immediateRender:false}, t); }
+function shake(sel, t, dur=0.3, amp=8){ const n = Math.max(2, Math.round(dur/0.05)); for (let k=0;k<n;k++) tl.to(sel, {x:(k%2?-1:1)*amp*(1-k/n), duration:0.05, ease:"none"}, t + k*0.05); tl.to(sel, {x:0, duration:0.05}, t + n*0.05); }
+
+/* ---------- HUD (relógio no topo, como série) ---------- */
+function hud(X, I){
+  return `<div class="hud" id="${I("hud")}"><div class="n"><i id="${I("rec")}"></i>${PV("hud_noite")}</div>
+   <div class="t"><span>${X.hora||""}</span><small>${X.ampm||""}</small></div><div class="l">${X.local||""}</div></div>
+   <div class="parte">${PV("hud_parte")}</div>`;
+}
+function hudAnim(I, s, e){ for (let t = s + 0.5; t < e; t += 1.0) tl.to("#"+I("rec"), {opacity:0.15, duration:0.08, yoyo:true, repeat:1}, t); }
+
+/* ---------- boneco original (cabeça redonda branca, traço grosso) ---------- */
+function stick(id, x, y, sc, pose="stand", mood="calm"){
+  const W = C.wh, sw = 16;
+  let arms = ["M0,-160 L-52,-72","M0,-160 L52,-72"], legs = ["M0,-40 L-36,84","M0,-40 L36,84"], extra = "";
+  if (pose === "phone"){ arms = ["M0,-160 L-46,-70","M0,-160 L52,-118 L30,-196"];
+    extra = `<circle cx="26" cy="-226" r="120" fill="url(#gPhone)" opacity=".55" id="${id}_glow"/><rect x="6" y="-262" width="40" height="66" rx="9" fill="#202734" stroke="#0a0c10" stroke-width="4"/><rect x="11" y="-256" width="30" height="52" rx="5" fill="${C.blu}"/>`; }
+  if (pose === "fear"){ arms = ["M0,-160 L-62,-112 L-74,-178","M0,-160 L62,-112 L74,-178"]; }
+  if (pose === "reach"){ arms = ["M0,-160 L-48,-72","M0,-160 L70,-180 L132,-196"]; }
+  const eyes = mood === "scared"
+    ? `<circle cx="-17" cy="-242" r="11" fill="${C.ink}"/><circle cx="17" cy="-242" r="11" fill="${C.ink}"/><ellipse cx="0" cy="-212" rx="8" ry="10" fill="${C.ink}"/>`
+    : mood === "smile" ? `<circle cx="-17" cy="-244" r="7" fill="${C.ink}"/><circle cx="17" cy="-244" r="7" fill="${C.ink}"/><path d="M-16,-220 q16,14 32,0" stroke="${C.ink}" stroke-width="6" fill="none" stroke-linecap="round"/>`
+    : `<circle cx="-17" cy="-242" r="7" fill="${C.ink}"/><circle cx="17" cy="-242" r="7" fill="${C.ink}"/>`;
+  return `<g transform="translate(${x},${y}) scale(${sc})"><g id="${id}">${extra}
+   <g stroke="${W}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M0,-186 L0,-40"/>${legs.map(d => `<path d="${d}"/>`).join("")}<g id="${id}_arms">${arms.map(d => `<path d="${d}"/>`).join("")}</g></g>
+   <g id="${id}_head"><circle cx="0" cy="-236" r="52" fill="${W}"/>${eyes}</g></g></g>`;
+}
+
+/* ---------- quarto ---------- */
+function room(I, o={}){
+  return `<rect width="1080" height="1920" fill="url(#gWall)"/>
+   ${o.win===false ? "" : `<g><rect x="110" y="360" width="300" height="360" rx="8" fill="#22324A"/><circle cx="330" cy="440" r="42" fill="#DDE6F2" opacity=".85"/>
+    <rect x="110" y="360" width="300" height="360" rx="8" fill="none" stroke="#0B0E14" stroke-width="18"/><path d="M260,360 V720 M110,540 H410" stroke="#0B0E14" stroke-width="14"/></g>
+   <polygon points="110,720 410,720 640,1130 230,1130" fill="url(#gBeam)"/>`}
+   <rect y="1120" width="1080" height="800" fill="url(#gFloor)"/>
+   <g stroke="#161B24" stroke-width="4">${[1210,1330,1480,1660].map(y => `<path d="M0,${y} H1080"/>`).join("")}</g>
+   ${o.bed===false ? "" : `<rect x="120" y="850" width="40" height="280" rx="10" fill="#2B3342"/>
+   <rect x="150" y="1000" width="620" height="90" rx="14" fill="#2E3747"/><rect x="150" y="1080" width="620" height="40" fill="#1E2430"/>
+   <rect x="740" y="1060" width="28" height="70" fill="#1E2430"/>
+   <rect x="175" y="955" width="160" height="56" rx="26" fill="#C9CFD8"/>`}
+   ${o.stand===false ? "" : `<rect x="805" y="1000" width="170" height="130" rx="10" fill="#262E3C"/><rect x="820" y="1050" width="140" height="8" rx="4" fill="#161B24"/>
+   <g id="${I("lamp")}"><path d="M905,1000 V930" stroke="#3A4456" stroke-width="10"/><path d="M860,935 L950,935 L930,880 L880,880Z" fill="#3A4456"/></g>`}`;
+}
+function blanket(x0, x1, y){ return `<path d="M${x0},${y} Q${(x0+x1)/2},${y-40} ${x1},${y+10} L${x1},1090 L${x0},1090Z" fill="#46557A"/><path d="M${x0},${y} Q${(x0+x1)/2},${y-40} ${x1},${y+10}" stroke="#5C6E98" stroke-width="10" fill="none"/>`; }
+
+/* ---------- celular (chat com "VOCÊ") ---------- */
+function phone(I, X, bubbles, o={}){
+  const cx = o.cx || 540, cy = o.cy || 770, w = o.w || 500, h = o.h || 860, sc = o.sc || 1;
+  const bh = bubbles.map((b, k) => `<div class="bub ${b.cls||""}" id="${I("b"+k)}" style="top:${b.top}px">${b.text}</div>`).join("");
+  return `<div class="w" style="left:${cx}px;top:${cy}px"><div id="${I("ph")}" style="transform:scale(${sc});position:relative;width:${w}px;height:${h}px;border-radius:58px;background:#05070A;border:10px solid #2C3442;box-shadow:0 0 120px rgba(160,200,255,.28),0 30px 60px rgba(0,0,0,.6);overflow:hidden">
+   <div style="position:absolute;left:0;top:0;right:0;height:150px;background:#151A22;border-bottom:2px solid #252C38"></div>
+   <div style="position:absolute;left:50%;top:14px;transform:translateX(-50%);width:120px;height:30px;border-radius:16px;background:#000"></div>
+   <div style="position:absolute;left:30px;top:16px;font:800 24px Inter;color:#C8CED8">${X.hora||""}</div>
+   <div id="${I("av")}" style="position:absolute;left:34px;top:62px;width:72px;height:72px;border-radius:50%;background:#F4F4F2;box-shadow:0 0 0 4px #151A22,0 0 0 8px #3a4252">
+     <i style="position:absolute;left:22px;top:28px;width:9px;height:9px;border-radius:50%;background:#0d1014"></i><i style="position:absolute;left:42px;top:28px;width:9px;height:9px;border-radius:50%;background:#0d1014"></i></div>
+   <div style="position:absolute;left:124px;top:66px;font:900 38px Montserrat;color:#fff" id="${I("nm")}">${X.remetente||""}</div>
+   <div style="position:absolute;left:124px;top:110px;font:700 22px Inter;color:#8E97A5" id="${I("nu")}">${X.numero||"+55 (11) 9 8471-2207"}</div>
+   ${bh}
+   <div class="bub" id="${I("dots")}" style="top:${o.dotsTop||640}px;font-size:44px;letter-spacing:6px;padding:8px 26px 18px">•••</div>
+  </div></div>`;
+}
+function phoneAnim(I, s, list){
+  tl.fromTo("#"+I("ph"), {y:60, opacity:0}, {y:0, opacity:1, duration:0.35, ease:"power2.out", immediateRender:true}, s + 0.02);
+  hide("#"+I("dots"));
+  list.forEach(([k, t]) => { hide("#"+I("b"+k)); if (t == null) return;
+    tl.set("#"+I("dots"), {opacity:1}, Math.max(s + 0.2, t - 0.55)); tl.set("#"+I("dots"), {opacity:0}, t - 0.02);
+    for (let j = 0; j < 3; j++) tl.to("#"+I("dots"), {opacity:0.5, duration:0.08, yoyo:true, repeat:1}, Math.max(s + 0.2, t - 0.55) + j*0.18);
+    tl.fromTo("#"+I("b"+k), {opacity:0, y:24, scale:0.92, transformOrigin:"0% 100%"}, {opacity:1, y:0, scale:1, duration:0.25, ease:"back.out(1.8)", immediateRender:false}, t);
+    shake("#"+I("ph"), t, 0.25, 6); });
+}
+function selo(id, x, y, txt, bg=C.red, fg="#fff", fs=34){ return `<div class="w" style="left:${x}px;top:${y}px"><div id="${id}" class="selo" style="background:${bg};color:${fg};font-size:${fs}px">${txt}</div></div>`; }
+
+/* ================= CENAS ================= */
+const SC = {};
+SC.quarto = (it, X, T, s, e, I) => ({
+  svg: room(I) + `<circle id="${I("pg")}" cx="850" cy="992" r="200" fill="url(#gPhone)" opacity="0"/>`
+   + `<g transform="translate(250,1000)"><circle cx="0" cy="-12" r="52" fill="${C.wh}"/><path d="M-30,-18 q10,6 20,0 M12,-18 q10,6 20,0" stroke="${C.ink}" stroke-width="6" fill="none" stroke-linecap="round"/></g>`
+   + blanket(300, 770, 990)
+   + `<g id="${I("ph")}"><rect x="826" y="982" width="66" height="20" rx="6" fill="#202734"/><rect id="${I("scr")}" x="832" y="985" width="54" height="13" rx="3" fill="#2C3442"/></g>`
+   + `<g id="${I("vb")}" stroke="${C.blu}" stroke-width="6" stroke-linecap="round" opacity="0"><path d="M812,960 l-14,-14 M906,960 l14,-14 M859,948 v-20"/></g>`,
+  html: hud(X, I),
+  anim(){ hudAnim(I, s, e);
+    tl.to("#"+I("scr"), {attr:{fill:C.blu}, duration:0.05}, T.vibra - 0.05);
+    tl.to("#"+I("pg"), {opacity:1, duration:0.2}, T.vibra - 0.05);
+    for (let k = 0; k < 3; k++){ shake("#"+I("ph"), T.vibra + k*0.5, 0.3, 5); tl.fromTo("#"+I("vb"), {opacity:1}, {opacity:0, duration:0.3, immediateRender:false}, T.vibra + k*0.5); } }
+});
+SC.celular = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:X.msg, top:200}]) + selo(I("selo"), 820, 300, X.selo)
+   + `<div class="w" style="left:540px;top:1160px"><div id="${I("hl")}" style="font:900 34px Montserrat;color:${C.ink};background:${C.yel};padding:10px 20px;border-radius:10px">MESMO NÚMERO • MESMA FOTO</div></div>`,
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[0, T.msg]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.4);
+    tl.set("#"+I("nm"), {opacity:0}, 0); tl.set("#"+I("nm"), {opacity:1, color:C.yel}, T.voce);
+    hide("#"+I("hl")); pop("#"+I("hl"), T.numero - 0.1);
+    tl.fromTo("#"+I("nu"), {color:"#8E97A5"}, {color:C.yel, duration:0.15, immediateRender:false}, T.numero - 0.1);
+    tl.fromTo("#"+I("av"), {scale:1}, {scale:1.25, duration:0.18, yoyo:true, repeat:3, ease:"power1.inOut", immediateRender:false}, T.foto - 0.2);
+    tl.to("#"+I("hl"), {opacity:0, duration:0.2}, T.msg - 0.4); }
+});
+SC.rindo = (it, X, T, s, e, I) => ({
+  svg: room(I) + stick(I("p"), 400, 1010, 1.15, "phone", "smile") + blanket(300, 770, 1000)
+   + `<g id="${I("ha")}" opacity="0" font-family="Montserrat" font-weight="900" font-size="54" fill="${C.wh}"><text x="500" y="640" transform="rotate(-12 500 640)">ha</text><text x="560" y="590" transform="rotate(8 560 590)">ha</text></g>`,
+  html: hud(X, I) + `<div class="w" style="left:760px;top:540px"><div id="${I("bal")}" style="font:900 72px Montserrat;color:${C.ink};background:${C.yel};padding:18px 34px;border-radius:40px 40px 40px 8px">${X.balao}</div></div>`,
+  anim(){ hudAnim(I, s, e);
+    for (let k = 0; k < 6; k++) tl.to("#"+I("p")+"_head", {y:(k%2?0:-8), duration:0.12}, s + 0.2 + k*0.13);
+    tl.fromTo("#"+I("ha"), {opacity:0}, {opacity:1, duration:0.1, yoyo:true, repeat:5, immediateRender:false}, s + 0.2);
+    tl.to("#"+I("p")+"_glow", {opacity:0.9, duration:0.4, yoyo:true, repeat:-1}, s);
+    hide("#"+I("bal")); pop("#"+I("bal"), T.golpe - 0.15); }
+});
+SC.celular2 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Não acende a luz.", top:200, cls:"old"}, {text:X.msg, top:330}], {dotsTop:330}) + selo(I("selo"), 820, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[1, T.msg]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3); }
+});
+SC.porta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="url(#gWall)"/><rect y="1120" width="1080" height="800" fill="url(#gFloor)"/>
+   <rect x="300" y="360" width="480" height="770" fill="#0B0E14"/><rect x="320" y="380" width="440" height="740" rx="4" fill="#2A3242"/>
+   <rect x="360" y="430" width="360" height="280" rx="6" fill="none" stroke="#222938" stroke-width="10"/><rect x="360" y="760" width="360" height="300" rx="6" fill="none" stroke="#222938" stroke-width="10"/>
+   <circle cx="700" cy="760" r="20" fill="#7E8899"/>
+   <rect id="${I("gap")}" x="320" y="1118" width="440" height="14" fill="url(#gGap)" opacity=".85"/>
+   <polygon id="${I("spill")}" points="320,1132 760,1132 900,1300 180,1300" fill="#FFE3A3" opacity=".07"/>
+   <g fill="#05070A"><rect id="${I("f1")}" x="430" y="1116" width="70" height="18" rx="6"/><rect id="${I("f2")}" x="560" y="1116" width="70" height="18" rx="6"/></g>
+   <g id="${I("cr")}" stroke="${C.yel}" stroke-width="7" fill="none" stroke-linecap="round" opacity="0"><path d="M220,1160 q20,-20 40,0 t40,0"/><path d="M800,1160 q20,-20 40,0 t40,0"/><path d="M240,1210 q20,-20 40,0 t40,0"/><path d="M780,1210 q20,-20 40,0 t40,0"/></g>`
+   + `<g opacity=".95">${stick(I("p"), 950, 1225, 0.85, "fear", "scared")}</g>`,
+  html: hud(X, I),
+  anim(){ hudAnim(I, s, e); hide(["#"+I("f1"), "#"+I("f2")]);
+    tl.to("#"+I("p")+"_arms", {y:-4, duration:0.5, yoyo:true, repeat:-1, ease:"sine.inOut"}, s);
+    tl.fromTo("#"+I("cr"), {opacity:0}, {opacity:1, duration:0.12, yoyo:true, repeat:5, immediateRender:false}, T.range - 0.3);
+    shake("#"+I("p"), T.range - 0.2, 0.3, 4);
+    fadeIn("#"+I("f1"), T.uma - 0.2, 0.25); fadeIn("#"+I("f2"), T.duas - 0.1, 0.25);
+    tl.to("#"+I("gap"), {opacity:0.4, duration:0.2}, T.uma - 0.2); }
+});
+SC.macaneta = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#232B3A"/><g stroke="#1A202C" stroke-width="12" fill="none"><rect x="90" y="300" width="900" height="420" rx="10"/><rect x="90" y="1350" width="900" height="460" rx="10"/></g>
+   <circle cx="540" cy="900" r="520" fill="url(#gRed)" opacity=".5"/>
+   <rect x="440" y="640" width="200" height="520" rx="100" fill="#5E6878"/><rect x="460" y="660" width="160" height="480" rx="80" fill="#788396"/>
+   <g id="${I("lv")}"><circle cx="540" cy="900" r="70" fill="#9AA5B6"/><rect x="540" y="868" width="340" height="64" rx="32" fill="#9AA5B6"/><circle cx="540" cy="900" r="34" fill="#7E8899"/></g>
+   <circle cx="540" cy="1060" r="16" fill="#2a303c"/>`,
+  html: hud(X, I) + selo(I("st"), 540, 1180, "PAROU.", C.red),
+  anim(){ hudAnim(I, s, e); hide("#"+I("st"));
+    tl.fromTo("#"+I("lv"), {rotation:0, svgOrigin:"540 900"}, {rotation:34, svgOrigin:"540 900", duration:Math.max(0.6, T.para - T.girar), ease:"none", immediateRender:true}, T.girar - 0.1);
+    shake("#"+I("lv"), T.para, 0.2, 3); pop("#"+I("st"), T.para + 0.05); }
+});
+SC.celular3 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Não acende a luz.", top:200, cls:"old"}, {text:"Tem alguém no corredor.", top:320, cls:"old"}, {text:X.msg, top:480}, {text:X.msg2, top:600}], {dotsTop:520}) + selo(I("selo"), 820, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[2, T.msg], [3, T.msg2]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3); }
+});
+SC.relogio = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#06080B"/><circle id="${I("gl")}" cx="540" cy="900" r="700" fill="url(#gPhone)" opacity="0"/>`,
+  html: `<div class="w" style="left:540px;top:820px;text-align:center"><div id="${I("old")}" style="font:900 280px Montserrat;color:#3a4252;letter-spacing:-.04em">3:08</div></div>
+   <div class="w" style="left:540px;top:820px;text-align:center"><div id="${I("new")}" style="font:900 280px Montserrat;color:${C.yel};letter-spacing:-.04em">${X.grande}<span style="font-size:80px;color:#E9EDF2;margin-left:12px">AM</span></div></div>
+   <div class="w" style="left:540px;top:1040px"><div id="${I("sub")}" style="font:800 34px Inter;letter-spacing:.3em;color:#8E97A5">${PV("hud_noite")} • ${X.local}</div></div>`,
+  anim(){ hide(["#"+I("new"), "#"+I("sub")]);
+    tl.to("#"+I("old"), {opacity:0, y:-60, duration:0.25}, s + 0.5);
+    tl.fromTo("#"+I("new"), {opacity:0, y:60}, {opacity:1, y:0, duration:0.3, ease:"power3.out", immediateRender:false}, s + 0.5);
+    fadeIn("#"+I("sub"), s + 0.8);
+    tl.to("#"+I("gl"), {opacity:0.9, duration:0.25}, T.tela - 0.1); tl.to("#"+I("gl"), {opacity:0.45, duration:0.8}, T.tela + 0.2); }
+});
+SC.celular4 = (it, X, T, s, e, I) => ({
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle id="${I("rg")}" cx="540" cy="770" r="700" fill="url(#gRed)" opacity="0"/><circle cx="540" cy="770" r="620" fill="url(#gPhone)" opacity=".14"/>`,
+  html: hud(X, I) + phone(I, X, [{text:"Tem alguém no corredor.", top:200, cls:"old"}, {text:"No escuro, ele não te encontra.", top:330, cls:"old"}, {text:X.msg, top:500}, {text:X.msg2, top:620, cls:"red"}], {dotsTop:500}) + selo(I("selo"), 790, 300, X.selo),
+  anim(){ hudAnim(I, s, e); phoneAnim(I, s, [[2, T.msg], [3, T.agora]]); hide("#"+I("selo")); pop("#"+I("selo"), s + 0.3);
+    tl.fromTo("#"+I("rg"), {opacity:0}, {opacity:1, duration:0.12, yoyo:true, repeat:5, immediateRender:false}, T.agora); }
+});
+SC.duas = (it, X, T, s, e, I) => {
+  const mk = (k, cx, txt) => phone(n => I(k+n), {hora:X.hora, remetente:"VOCÊ"}, [{text:txt, top:200}], {cx, cy:760, w:430, h:720});
+  return {
+  svg: `<rect width="1080" height="1920" fill="#0A0D12"/><circle cx="540" cy="760" r="640" fill="url(#gPhone)" opacity=".12"/>
+   <circle id="${I("ra")}" cx="290" cy="760" r="330" fill="url(#gRed)" opacity="0"/><circle id="${I("rb")}" cx="790" cy="760" r="330" fill="url(#gRed)" opacity="0"/>`,
+  html: hud(X, I) + `<div style="position:absolute;left:0;top:0;width:1080px;height:1920px;transform:scale(1)">` + mk("A", 290, X.a) + mk("B", 790, X.b) + `</div>`
+   + `<div class="w" style="left:540px;top:1180px"><div id="${I("num")}" style="font:900 40px Montserrat;color:${C.ink};background:${C.yel};padding:12px 26px;border-radius:12px">= ${X.num} =</div></div>`
+   + `<div class="w" style="left:290px;top:520px"><div id="${I("qa")}" style="font:900 120px Montserrat;color:${C.red}">?</div></div><div class="w" style="left:790px;top:520px"><div id="${I("qb")}" style="font:900 120px Montserrat;color:${C.red}">?</div></div>`
+   + selo(I("selo"), 540, 300, X.selo),
+  anim(){ hudAnim(I, s, e);
+    phoneAnim(n => I("A"+n), s, [[0, s + 0.35]]); phoneAnim(n => I("B"+n), s + 0.15, [[0, s + 0.6]]);
+    hide(["#"+I("num"), "#"+I("selo"), "#"+I("qa"), "#"+I("qb")]); pop("#"+I("num"), T.numero - 0.15);
+    pop("#"+I("selo"), T.delas - 0.2); pop("#"+I("qa"), T.delas); pop("#"+I("qb"), T.delas + 0.15);
+    for (let k = 0; k < 6; k++){ const L = k % 2 === 0; const tt = T.delas + 0.4 + k*0.35;
+      shake("#"+I((L?"A":"B")+"ph"), tt, 0.2, 9); tl.fromTo("#"+I(L?"ra":"rb"), {opacity:1}, {opacity:0, duration:0.3, immediateRender:false}, tt); } }
+  };
+};
+SC.escolha = (it, X, T, s, e, I) => ({
+  svg: room(I, {bed:false, stand:false, win:false})
+   + `<rect x="80" y="420" width="250" height="710" fill="#05070A"/><rect x="80" y="420" width="120" height="710" fill="#2A3242"/>
+   <g id="${I("eyes")}" opacity="0"><circle cx="248" cy="640" r="9" fill="#F4F4F2"/><circle cx="278" cy="640" r="9" fill="#F4F4F2"/></g>
+   <rect x="820" y="720" width="90" height="140" rx="12" fill="#D8DDE5"/><rect id="${I("sw")}" x="850" y="748" width="30" height="46" rx="6" fill="#8C96A6"/>
+   <circle id="${I("warm")}" cx="600" cy="700" r="900" fill="url(#gWarm)" opacity="0"/>`
+   + stick(I("p"), 640, 1130, 1.25, "reach", "scared"),
+  html: hud(X, I)
+   + `<div class="w" style="left:540px;top:440px"><div id="${I("tit")}" style="font:900 86px Montserrat;color:#fff;letter-spacing:-.01em">${X.titulo}<span style="color:${C.yel}">?</span></div></div>`
+   + `<div class="w" style="left:285px;top:1560px"><div id="${I("A")}" style="width:430px;height:250px;border-radius:30px;background:#123222;border:6px solid ${C.grn};text-align:center;font-family:Montserrat;font-weight:900">
+       <div style="font-size:110px;color:${C.grn};line-height:1.2">A</div><div style="font-size:40px;color:#fff">${X.a}</div></div></div>`
+   + `<div class="w" style="left:795px;top:1560px"><div id="${I("B")}" style="width:430px;height:250px;border-radius:30px;background:#2B2610;border:6px solid ${C.yel};text-align:center;font-family:Montserrat;font-weight:900">
+       <div style="font-size:110px;color:${C.yel};line-height:1.2">B</div><div style="font-size:40px;color:#fff">${X.b}</div></div></div>`
+   + `<div class="w" style="left:540px;top:1790px"><div id="${I("fim")}" class="selo" style="font-size:36px">${X.fim} ↓</div></div>`,
+  anim(){ hudAnim(I, s, e);
+    hide(["#"+I("tit"), "#"+I("A"), "#"+I("B"), "#"+I("fim")]); pop("#"+I("tit"), s + 0.15);
+    tl.to("#"+I("p")+"_arms", {rotation:-3, svgOrigin:"0 -160", duration:0.6, yoyo:true, repeat:-1, ease:"sine.inOut"}, s);
+    fadeIn("#"+I("A"), T.comenta - 0.4, 0.3, 80); fadeIn("#"+I("B"), T.comenta - 0.25, 0.3, 80);
+    tl.to("#"+I("A"), {scale:1.08, boxShadow:"0 0 60px rgba(61,220,122,.8)", duration:0.2}, T.A);
+    tl.to("#"+I("warm"), {opacity:0.55, duration:0.08}, T.A); tl.set("#"+I("sw"), {attr:{y:770}}, T.A);
+    tl.to("#"+I("A"), {scale:1, boxShadow:"0 0 0 rgba(0,0,0,0)", duration:0.2}, T.B - 0.1);
+    tl.to("#"+I("warm"), {opacity:0, duration:0.08}, T.B - 0.1); tl.set("#"+I("sw"), {attr:{y:748}}, T.B - 0.1);
+    tl.to("#"+I("B"), {scale:1.08, boxShadow:"0 0 60px rgba(255,210,63,.8)", duration:0.2}, T.B);
+    tl.to("#"+I("eyes"), {opacity:1, duration:0.4}, T.B + 0.3);
+    tl.to("#"+I("B"), {scale:1, boxShadow:"0 0 0 rgba(0,0,0,0)", duration:0.2}, T.parte - 0.4);
+    pop("#"+I("fim"), T.parte - 0.2);
+    tl.to(["#"+I("A"), "#"+I("B")], {scale:1.04, duration:0.35, yoyo:true, repeat:5, ease:"sine.inOut"}, T.parte + 0.3); }
+});
+
+/* ---------------- montagem ---------------- */
+const SCN = EDIT.items.filter(i => i.by === "template" && i.type === "html");
+SCN.forEach((it) => {
+  const P = it.props || {}, X = P.textos || {}, T = P.t || {}, s = +it.start, e = s + (+it.dur), I = n => `${it.id}_${n}`;
+  const f = SC[P.cena]; if (!f) return;
+  const r = f(it, X, T, s, e, I);
+  const d = document.createElement("div"); d.className = "sc" + (s <= 0.01 ? " first" : ""); d.id = it.id + "_S";
+  d.innerHTML = `<div class="cam"><svg viewBox="0 0 1080 1920" width="1080" height="1920" xmlns="http://www.w3.org/2000/svg">${r.svg || ""}</svg><div class="lay">${r.html || ""}</div></div>`;
+  ROOT.appendChild(d);
+  if (it.hidden) return;
+  if (s > 0.01) tl.set(d, {visibility:"visible"}, s);
+  tl.set(d, {visibility:"hidden"}, e);
+  tl.fromTo(d.querySelector(".cam"), {scale:1.0}, {scale:1.05, duration:e - s, ease:"none", immediateRender:false}, s);
+  r.anim && r.anim();
+});
+</script>
+<!--__ITEMS_SCRIPT__-->
+<script>
+(function(){ /* legenda: tira pontuação e marca palavras verdes (param leg_verde) */
+  const prm = (EDIT.items.find(i => i.id === "leg_verde") || {props:{value:""}}).props.value.toLowerCase().split(",").map(x => x.trim()).filter(Boolean);
+  document.querySelectorAll("#leg .ed-w").forEach(w => { w.textContent = w.textContent.replace(/[.,;:!?…]+$/, "");
+    const t = w.textContent.toLowerCase(); if (prm.some(k => t === k)) w.setAttribute("data-g", "1"); });
+})();
+</script>
+</body></html>
