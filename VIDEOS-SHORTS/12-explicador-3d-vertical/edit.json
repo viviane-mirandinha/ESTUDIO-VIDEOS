@@ -1,0 +1,2233 @@
+{
+ "version": 1,
+ "name": "12 - 24-10-2026 - EXPLICADOR 3D VERTICAL - Como funciona um relogio de corda sem bateria",
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30,
+  "bg": "#0d0f15"
+ },
+ "duration": 66.89,
+ "template": "local",
+ "grupo": "ESTILOS SHORTS",
+ "estilo": "Explicador 3D vertical",
+ "referencia": {
+  "perfis": [
+   "@peraexplica",
+   "@explicandodireito.br",
+   "@garagemexplicativa",
+   "@thingsopened",
+   "@oclaud1n"
+  ],
+  "nota": "yt-dlp bloqueado no Instagram (sem login); estilo pelos prints do usuário: fundo escuro, objeto 3D central, pílulas de rótulo, legenda branca com palavra colorida"
+ },
+ "fonts": {
+  "Montserrat": "fonts/Montserrat-Black.ttf"
+ },
+ "build_script": "gerar_edit.py (palco.py + cena.js + _template-palco3d/base.html + camada CSS do estilo 12)",
+ "audio": {
+  "voice": {
+   "src": "voz.mp3",
+   "volume": 1.0,
+   "start": 0
+  }
+ },
+ "tracks": [
+  {
+   "id": "cena",
+   "name": "Cenas 3D"
+  },
+  {
+   "id": "camera",
+   "name": "Câmera"
+  },
+  {
+   "id": "rotulos",
+   "name": "Rótulos/valores"
+  },
+  {
+   "id": "adesivos",
+   "name": "Adesivos"
+  },
+  {
+   "id": "capitulo",
+   "name": "Capítulo (chip)"
+  },
+  {
+   "id": "legenda",
+   "name": "Legenda"
+  }
+ ],
+ "items": [
+  {
+   "id": "breadcrumb",
+   "type": "param",
+   "label": "Cabeçalho (perfil · tema)",
+   "props": {
+    "value": "@explica.em3d · RELÓGIO DE CORDA"
+   }
+  },
+  {
+   "id": "estrelas",
+   "type": "param",
+   "label": "Qtd. de estrelas",
+   "props": {
+    "value": 0
+   }
+  },
+  {
+   "id": "fog_ini",
+   "type": "param",
+   "label": "Névoa início",
+   "props": {
+    "value": 40
+   }
+  },
+  {
+   "id": "fog_fim",
+   "type": "param",
+   "label": "Névoa fim",
+   "props": {
+    "value": 95
+   }
+  },
+  {
+   "id": "cor_fundo",
+   "type": "param",
+   "label": "Cor do fundo",
+   "props": {
+    "value": "#0d0f15"
+   }
+  },
+  {
+   "id": "cor_chao",
+   "type": "param",
+   "label": "Cor do chão",
+   "props": {
+    "value": "#171a23"
+   }
+  },
+  {
+   "id": "cor_destaque",
+   "type": "param",
+   "label": "Cor da palavra destacada",
+   "props": {
+    "value": "#FFD23F"
+   }
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: mostrador abre",
+   "start": 6.3,
+   "dur": 1.5,
+   "props": {
+    "html": ""
+   },
+   "id": "c_abre"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: coroa gira e aperta a mola",
+   "start": 11.52,
+   "dur": 2.36,
+   "props": {
+    "html": ""
+   },
+   "id": "c_corda"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: mola brilha (energia)",
+   "start": 14.14,
+   "dur": 2.74,
+   "props": {
+    "html": ""
+   },
+   "id": "c_energia"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: mola solta e gira o tambor",
+   "start": 16.68,
+   "dur": 12.86,
+   "props": {
+    "html": ""
+   },
+   "id": "c_solta"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: fila de engrenagens acende",
+   "start": 20.82,
+   "dur": 6.6,
+   "props": {
+    "html": ""
+   },
+   "id": "c_fila"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: ponteiro na roda central",
+   "start": 26.0,
+   "dur": 1.92,
+   "props": {
+    "html": ""
+   },
+   "id": "c_ponteiros"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: sem escape: mola desenrola",
+   "start": 29.54,
+   "dur": 3.78,
+   "props": {
+    "html": ""
+   },
+   "id": "c_problema"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: escape acende",
+   "start": 33.32,
+   "dur": 10.06,
+   "props": {
+    "html": ""
+   },
+   "id": "c_escape"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: âncora acende",
+   "start": 36.9,
+   "dur": 1.58,
+   "props": {
+    "html": ""
+   },
+   "id": "c_ancora"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: volante acende",
+   "start": 38.48,
+   "dur": 3.56,
+   "props": {
+    "html": ""
+   },
+   "id": "c_volante"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: espiral acende",
+   "start": 41.12,
+   "dur": 2.76,
+   "props": {
+    "html": ""
+   },
+   "id": "c_espiral"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: volante a 4 Hz (8 alternâncias/s)",
+   "start": 51.1,
+   "dur": 1.18,
+   "props": {
+    "html": ""
+   },
+   "id": "c_oito"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: rubis brilham",
+   "start": 53.34,
+   "dur": 6.2,
+   "props": {
+    "html": ""
+   },
+   "id": "c_rubis"
+  },
+  {
+   "type": "html",
+   "track": "cena",
+   "by": "template",
+   "label": "3D: mostrador fecha",
+   "start": 62.52,
+   "dur": 4.37,
+   "props": {
+    "html": ""
+   },
+   "id": "c_fecha"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: relógio inteiro",
+   "start": 0,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -10.76,
+     3.64,
+     20.24
+    ],
+    "look": [
+     0,
+     1.8,
+     0
+    ],
+    "trans": 0,
+    "drift": 0.35
+   },
+   "id": "cam21"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: gira devagar",
+   "start": 2.72,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     4.35,
+     3.61,
+     20.48
+    ],
+    "look": [
+     0,
+     1.93,
+     0
+    ],
+    "trans": 2.2,
+    "drift": 0.35
+   },
+   "id": "cam22"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: aproxima (abre)",
+   "start": 5.28,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.77,
+     3.65,
+     16.85
+    ],
+    "look": [
+     0,
+     2.29,
+     0
+    ],
+    "trans": 1.4,
+    "drift": 0.35
+   },
+   "id": "cam23"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tambor (mola)",
+   "start": 7.6,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -3.84,
+     3.41,
+     6.9
+    ],
+    "look": [
+     -1.05,
+     2.51,
+     0
+    ],
+    "trans": 1.2,
+    "drift": 0.35
+   },
+   "id": "cam24"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: coroa",
+   "start": 11.0,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     7.11,
+     3.52,
+     6.28
+    ],
+    "look": [
+     2.2,
+     2.88,
+     0
+    ],
+    "trans": 1.1,
+    "drift": 0.35
+   },
+   "id": "cam25"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: mola apertando",
+   "start": 12.42,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.88,
+     3.09,
+     5.92
+    ],
+    "look": [
+     -1.05,
+     2.61,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam26"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: energia",
+   "start": 14.14,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.02,
+     3.44,
+     5.03
+    ],
+    "look": [
+     -1.05,
+     2.66,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam27"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tambor + roda central",
+   "start": 16.68,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.86,
+     3.33,
+     8.32
+    ],
+    "look": [
+     -0.5,
+     2.62,
+     0
+    ],
+    "trans": 1.1,
+    "drift": 0.35
+   },
+   "id": "cam28"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: fila de engrenagens",
+   "start": 21.02,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -3.65,
+     3.84,
+     8.65
+    ],
+    "look": [
+     0.2,
+     3.08,
+     0
+    ],
+    "trans": 1.1,
+    "drift": 0.35
+   },
+   "id": "cam29"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: cada vez mais rápido",
+   "start": 22.68,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     3.64,
+     4.01,
+     6.83
+    ],
+    "look": [
+     0.6,
+     3.41,
+     0
+    ],
+    "trans": 1.1,
+    "drift": 0.35
+   },
+   "id": "cam30"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: ponteiros",
+   "start": 25.12,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.0,
+     5.24,
+     8.72
+    ],
+    "look": [
+     0,
+     3.02,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam31"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: problema (afasta)",
+   "start": 27.42,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -4.12,
+     3.62,
+     14.37
+    ],
+    "look": [
+     0,
+     2.42,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam32"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: sem freio",
+   "start": 29.54,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.89,
+     3.58,
+     11.61
+    ],
+    "look": [
+     0,
+     2.62,
+     0
+    ],
+    "trans": 1.3,
+    "drift": 0.35
+   },
+   "id": "cam33"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: escape",
+   "start": 33.32,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.65,
+     4.64,
+     5.75
+    ],
+    "look": [
+     0,
+     4.16,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam34"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: roda de escape",
+   "start": 35.3,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     2.17,
+     4.51,
+     3.88
+    ],
+    "look": [
+     0.6,
+     4.18,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam35"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: âncora",
+   "start": 36.9,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -0.77,
+     4.81,
+     4.1
+    ],
+    "look": [
+     0.1,
+     4.48,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam36"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: volante",
+   "start": 38.48,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -3.34,
+     4.77,
+     4.14
+    ],
+    "look": [
+     -0.95,
+     4.39,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam37"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: espiral",
+   "start": 41.12,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -0.72,
+     5.2,
+     3.32
+    ],
+    "look": [
+     -0.95,
+     4.53,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam38"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: ida e volta",
+   "start": 43.38,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     1.33,
+     4.68,
+     5.17
+    ],
+    "look": [
+     -0.15,
+     4.25,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam39"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: tic-tac",
+   "start": 46.74,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -1.05,
+     4.66,
+     3.56
+    ],
+    "look": [
+     0.25,
+     4.35,
+     0
+    ],
+    "trans": 0.9,
+    "drift": 0.35
+   },
+   "id": "cam40"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: 8x por segundo",
+   "start": 49.2,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     0.92,
+     4.82,
+     4.19
+    ],
+    "look": [
+     -0.95,
+     4.45,
+     0
+    ],
+    "trans": 1.0,
+    "drift": 0.35
+   },
+   "id": "cam41"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: rubis",
+   "start": 52.28,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -2.49,
+     5.27,
+     6.83
+    ],
+    "look": [
+     0,
+     3.41,
+     0
+    ],
+    "trans": 1.1,
+    "drift": 0.35
+   },
+   "id": "cam42"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: corda cheia (afasta)",
+   "start": 59.54,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     5.97,
+     3.64,
+     14.79
+    ],
+    "look": [
+     0,
+     2.36,
+     0
+    ],
+    "trans": 1.4,
+    "drift": 0.35
+   },
+   "id": "cam43"
+  },
+  {
+   "type": "html",
+   "track": "camera",
+   "by": "template",
+   "label": "câmera: fecha",
+   "start": 62.52,
+   "dur": 0.1,
+   "props": {
+    "html": "",
+    "pos": [
+     -4.56,
+     3.63,
+     21.45
+    ],
+    "look": [
+     0,
+     1.87,
+     0
+    ],
+    "trans": 1.6,
+    "drift": 0.35
+   },
+   "id": "cam44"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: 0 BATERIA",
+   "start": 1.15,
+   "dur": 1.57,
+   "props": {
+    "text": "0 BATERIA",
+    "estilo": "pr",
+    "dx": 0,
+    "dy": -10,
+    "anchor": "dialTop"
+   },
+   "id": "rot45"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: NÃO PARA",
+   "start": 3.78,
+   "dur": 1.5,
+   "props": {
+    "text": "NÃO PARA",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -10,
+    "anchor": "dialTop"
+   },
+   "id": "rot46"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MOLA REAL",
+   "start": 7.6,
+   "dur": 3.4,
+   "props": {
+    "text": "MOLA REAL",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "barrel"
+   },
+   "id": "rot47"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: TAMBOR",
+   "start": 9.62,
+   "dur": 1.38,
+   "props": {
+    "text": "TAMBOR",
+    "estilo": "py",
+    "dx": -40,
+    "dy": 60,
+    "anchor": "barrelEdge"
+   },
+   "id": "rot48"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: COROA",
+   "start": 11.9,
+   "dur": 0.52,
+   "props": {
+    "text": "COROA",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -20,
+    "anchor": "crown"
+   },
+   "id": "rot49"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MOLA APERTADA",
+   "start": 12.66,
+   "dur": 1.48,
+   "props": {
+    "text": "MOLA APERTADA",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "barrel"
+   },
+   "id": "rot50"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ENERGIA GUARDADA",
+   "start": 15.52,
+   "dur": 1.16,
+   "props": {
+    "text": "ENERGIA GUARDADA",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "barrel"
+   },
+   "id": "rot51"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: TAMBOR GIRA",
+   "start": 19.46,
+   "dur": 0.84,
+   "props": {
+    "text": "TAMBOR GIRA",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "barrel"
+   },
+   "id": "rot52"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ENGRENAGENS",
+   "start": 21.02,
+   "dur": 1.66,
+   "props": {
+    "text": "ENGRENAGENS",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "w4"
+   },
+   "id": "rot53"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: + RÁPIDO A CADA UMA",
+   "start": 23.66,
+   "dur": 1.46,
+   "props": {
+    "text": "+ RÁPIDO A CADA UMA",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -40,
+    "anchor": "w4"
+   },
+   "id": "rot54"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: PONTEIROS",
+   "start": 26.3,
+   "dur": 1.12,
+   "props": {
+    "text": "PONTEIROS",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "hand"
+   },
+   "id": "rot55"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: SEM FREIO",
+   "start": 29.54,
+   "dur": 3.78,
+   "props": {
+    "text": "SEM FREIO",
+    "estilo": "pr",
+    "dx": 0,
+    "dy": 0,
+    "x": 540,
+    "y": 430
+   },
+   "id": "rot56"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ESCAPE",
+   "start": 34.0,
+   "dur": 1.3,
+   "props": {
+    "text": "ESCAPE",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "escape"
+   },
+   "id": "rot57"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: RODA DE ESCAPE",
+   "start": 35.3,
+   "dur": 1.6,
+   "props": {
+    "text": "RODA DE ESCAPE",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "escape"
+   },
+   "id": "rot58"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ÂNCORA",
+   "start": 37.04,
+   "dur": 1.44,
+   "props": {
+    "text": "ÂNCORA",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "pallet"
+   },
+   "id": "rot59"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: VOLANTE",
+   "start": 38.74,
+   "dur": 3.3,
+   "props": {
+    "text": "VOLANTE",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "balance"
+   },
+   "id": "rot60"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ESPIRAL",
+   "start": 42.04,
+   "dur": 1.34,
+   "props": {
+    "text": "ESPIRAL",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -60,
+    "anchor": "hair"
+   },
+   "id": "rot61"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: 1 DENTE POR VEZ",
+   "start": 44.98,
+   "dur": 1.76,
+   "props": {
+    "text": "1 DENTE POR VEZ",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "escape"
+   },
+   "id": "rot62"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: TIC-TAC",
+   "start": 47.26,
+   "dur": 1.94,
+   "props": {
+    "text": "TIC-TAC",
+    "estilo": "pr",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "pallet"
+   },
+   "id": "rot63"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: 8x POR SEGUNDO",
+   "start": 51.1,
+   "dur": 1.18,
+   "props": {
+    "text": "8x POR SEGUNDO",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "balance"
+   },
+   "id": "rot64"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: RUBIS SINTÉTICOS",
+   "start": 53.34,
+   "dur": 4.44,
+   "props": {
+    "text": "RUBIS SINTÉTICOS",
+    "estilo": "pr",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "ruby"
+   },
+   "id": "rot65"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: MENOS ATRITO",
+   "start": 58.52,
+   "dur": 1.02,
+   "props": {
+    "text": "MENOS ATRITO",
+    "estilo": "pw",
+    "dx": 0,
+    "dy": -30,
+    "anchor": "ruby"
+   },
+   "id": "rot66"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: ~40 HORAS",
+   "start": 61.92,
+   "dur": 1.6,
+   "props": {
+    "text": "~40 HORAS",
+    "estilo": "py",
+    "dx": 0,
+    "dy": -10,
+    "anchor": "dialTop"
+   },
+   "id": "rot67"
+  },
+  {
+   "type": "text",
+   "track": "rotulos",
+   "by": "template",
+   "label": "rótulo: SEGUE PRA VER POR DENTRO",
+   "start": 63.52,
+   "dur": 3.37,
+   "props": {
+    "text": "SEGUE PRA VER POR DENTRO",
+    "estilo": "py",
+    "dx": 0,
+    "dy": 0,
+    "x": 540,
+    "y": 430
+   },
+   "id": "rot68"
+  },
+  {
+   "id": "legenda",
+   "type": "caption",
+   "track": "legenda",
+   "by": "template",
+   "label": "Legenda grande (palavra destacada)",
+   "start": 0,
+   "dur": 66.89,
+   "props": {
+    "words": [
+     {
+      "w": "Esse",
+      "s": 0.0,
+      "e": 0.44
+     },
+     {
+      "w": "relógio",
+      "s": 0.44,
+      "e": 0.9
+     },
+     {
+      "w": "não",
+      "s": 0.9,
+      "e": 1.06
+     },
+     {
+      "w": "tem",
+      "s": 1.06,
+      "e": 1.2
+     },
+     {
+      "w": "bateria",
+      "s": 1.2,
+      "e": 1.56
+     },
+     {
+      "w": "nenhuma.",
+      "s": 1.56,
+      "e": 1.92
+     },
+     {
+      "w": "E",
+      "s": 2.72,
+      "e": 2.88
+     },
+     {
+      "w": "mesmo",
+      "s": 2.88,
+      "e": 3.16
+     },
+     {
+      "w": "assim,",
+      "s": 3.16,
+      "e": 3.48
+     },
+     {
+      "w": "ele",
+      "s": 3.58,
+      "e": 3.78
+     },
+     {
+      "w": "não",
+      "s": 3.78,
+      "e": 3.94
+     },
+     {
+      "w": "para",
+      "s": 3.94,
+      "e": 4.1
+     },
+     {
+      "w": "de",
+      "s": 4.1,
+      "e": 4.26
+     },
+     {
+      "w": "andar.",
+      "s": 4.26,
+      "e": 4.58
+     },
+     {
+      "w": "Como?",
+      "s": 5.28,
+      "e": 5.54
+     },
+     {
+      "w": "Tudo",
+      "s": 6.3,
+      "e": 6.52
+     },
+     {
+      "w": "começa",
+      "s": 6.52,
+      "e": 6.88
+     },
+     {
+      "w": "aqui",
+      "s": 6.88,
+      "e": 7.1
+     },
+     {
+      "w": "dentro:",
+      "s": 7.1,
+      "e": 7.36
+     },
+     {
+      "w": "uma",
+      "s": 7.6,
+      "e": 7.84
+     },
+     {
+      "w": "mola",
+      "s": 7.84,
+      "e": 8.12
+     },
+     {
+      "w": "de",
+      "s": 8.12,
+      "e": 8.26
+     },
+     {
+      "w": "aço",
+      "s": 8.26,
+      "e": 8.4
+     },
+     {
+      "w": "enrolada,",
+      "s": 8.4,
+      "e": 8.88
+     },
+     {
+      "w": "guardada",
+      "s": 9.18,
+      "e": 9.46
+     },
+     {
+      "w": "num",
+      "s": 9.46,
+      "e": 9.62
+     },
+     {
+      "w": "tamborzinho.",
+      "s": 9.62,
+      "e": 10.28
+     },
+     {
+      "w": "Quando",
+      "s": 11.0,
+      "e": 11.22
+     },
+     {
+      "w": "você",
+      "s": 11.22,
+      "e": 11.52
+     },
+     {
+      "w": "gira",
+      "s": 11.52,
+      "e": 11.76
+     },
+     {
+      "w": "a",
+      "s": 11.76,
+      "e": 11.9
+     },
+     {
+      "w": "coroa,",
+      "s": 11.9,
+      "e": 12.14
+     },
+     {
+      "w": "você",
+      "s": 12.42,
+      "e": 12.66
+     },
+     {
+      "w": "aperta",
+      "s": 12.66,
+      "e": 12.98
+     },
+     {
+      "w": "essa",
+      "s": 12.98,
+      "e": 13.18
+     },
+     {
+      "w": "mola.",
+      "s": 13.18,
+      "e": 13.58
+     },
+     {
+      "w": "É",
+      "s": 14.14,
+      "e": 14.36
+     },
+     {
+      "w": "ali",
+      "s": 14.36,
+      "e": 14.56
+     },
+     {
+      "w": "que",
+      "s": 14.56,
+      "e": 14.76
+     },
+     {
+      "w": "fica",
+      "s": 14.76,
+      "e": 14.9
+     },
+     {
+      "w": "guardada",
+      "s": 14.9,
+      "e": 15.4
+     },
+     {
+      "w": "a",
+      "s": 15.4,
+      "e": 15.52
+     },
+     {
+      "w": "energia.",
+      "s": 15.52,
+      "e": 15.88
+     },
+     {
+      "w": "A",
+      "s": 16.68,
+      "e": 16.86
+     },
+     {
+      "w": "mola",
+      "s": 16.86,
+      "e": 17.1
+     },
+     {
+      "w": "quer",
+      "s": 17.1,
+      "e": 17.3
+     },
+     {
+      "w": "se",
+      "s": 17.3,
+      "e": 17.5
+     },
+     {
+      "w": "soltar,",
+      "s": 17.5,
+      "e": 17.9
+     },
+     {
+      "w": "e,",
+      "s": 18.14,
+      "e": 18.28
+     },
+     {
+      "w": "ao",
+      "s": 18.4,
+      "e": 18.54
+     },
+     {
+      "w": "se",
+      "s": 18.54,
+      "e": 18.7
+     },
+     {
+      "w": "soltar,",
+      "s": 18.7,
+      "e": 19.14
+     },
+     {
+      "w": "ela",
+      "s": 19.32,
+      "e": 19.46
+     },
+     {
+      "w": "gira",
+      "s": 19.46,
+      "e": 19.62
+     },
+     {
+      "w": "o",
+      "s": 19.62,
+      "e": 19.72
+     },
+     {
+      "w": "tambor,",
+      "s": 19.72,
+      "e": 20.14
+     },
+     {
+      "w": "que",
+      "s": 20.3,
+      "e": 20.48
+     },
+     {
+      "w": "empurra",
+      "s": 20.48,
+      "e": 20.76
+     },
+     {
+      "w": "uma",
+      "s": 20.76,
+      "e": 21.02
+     },
+     {
+      "w": "fila",
+      "s": 21.02,
+      "e": 21.2
+     },
+     {
+      "w": "de",
+      "s": 21.2,
+      "e": 21.34
+     },
+     {
+      "w": "engrenagens.",
+      "s": 21.34,
+      "e": 21.84
+     },
+     {
+      "w": "Cada",
+      "s": 22.68,
+      "e": 22.88
+     },
+     {
+      "w": "engrenagem",
+      "s": 22.88,
+      "e": 23.42
+     },
+     {
+      "w": "gira",
+      "s": 23.42,
+      "e": 23.66
+     },
+     {
+      "w": "mais",
+      "s": 23.66,
+      "e": 23.88
+     },
+     {
+      "w": "rápido",
+      "s": 23.88,
+      "e": 24.14
+     },
+     {
+      "w": "que",
+      "s": 24.14,
+      "e": 24.32
+     },
+     {
+      "w": "a",
+      "s": 24.32,
+      "e": 24.44
+     },
+     {
+      "w": "anterior,",
+      "s": 24.44,
+      "e": 24.76
+     },
+     {
+      "w": "e",
+      "s": 25.04,
+      "e": 25.12
+     },
+     {
+      "w": "no",
+      "s": 25.12,
+      "e": 25.22
+     },
+     {
+      "w": "caminho",
+      "s": 25.22,
+      "e": 25.46
+     },
+     {
+      "w": "uma",
+      "s": 25.46,
+      "e": 25.72
+     },
+     {
+      "w": "delas",
+      "s": 25.72,
+      "e": 26.0
+     },
+     {
+      "w": "leva",
+      "s": 26.0,
+      "e": 26.14
+     },
+     {
+      "w": "os",
+      "s": 26.14,
+      "e": 26.3
+     },
+     {
+      "w": "ponteiros.",
+      "s": 26.3,
+      "e": 26.84
+     },
+     {
+      "w": "Só",
+      "s": 27.42,
+      "e": 27.86
+     },
+     {
+      "w": "que",
+      "s": 27.86,
+      "e": 28.02
+     },
+     {
+      "w": "tem",
+      "s": 28.02,
+      "e": 28.14
+     },
+     {
+      "w": "um",
+      "s": 28.14,
+      "e": 28.3
+     },
+     {
+      "w": "problema.",
+      "s": 28.3,
+      "e": 28.8
+     },
+     {
+      "w": "Se",
+      "s": 29.54,
+      "e": 29.68
+     },
+     {
+      "w": "nada",
+      "s": 29.68,
+      "e": 29.96
+     },
+     {
+      "w": "segurasse,",
+      "s": 29.96,
+      "e": 30.54
+     },
+     {
+      "w": "a",
+      "s": 30.72,
+      "e": 30.88
+     },
+     {
+      "w": "mola",
+      "s": 30.88,
+      "e": 31.06
+     },
+     {
+      "w": "desenrolaria",
+      "s": 31.06,
+      "e": 31.66
+     },
+     {
+      "w": "inteira",
+      "s": 31.66,
+      "e": 31.96
+     },
+     {
+      "w": "num",
+      "s": 31.96,
+      "e": 32.16
+     },
+     {
+      "w": "instante.",
+      "s": 32.16,
+      "e": 32.62
+     },
+     {
+      "w": "Quem",
+      "s": 33.32,
+      "e": 33.48
+     },
+     {
+      "w": "segura",
+      "s": 33.48,
+      "e": 33.9
+     },
+     {
+      "w": "é",
+      "s": 33.9,
+      "e": 34.0
+     },
+     {
+      "w": "o",
+      "s": 34.0,
+      "e": 34.18
+     },
+     {
+      "w": "escape.",
+      "s": 34.18,
+      "e": 34.48
+     },
+     {
+      "w": "Uma",
+      "s": 35.3,
+      "e": 35.52
+     },
+     {
+      "w": "roda",
+      "s": 35.52,
+      "e": 35.82
+     },
+     {
+      "w": "de",
+      "s": 35.82,
+      "e": 35.96
+     },
+     {
+      "w": "dentes",
+      "s": 35.96,
+      "e": 36.24
+     },
+     {
+      "w": "em",
+      "s": 36.24,
+      "e": 36.4
+     },
+     {
+      "w": "gancho,",
+      "s": 36.4,
+      "e": 36.7
+     },
+     {
+      "w": "uma",
+      "s": 36.9,
+      "e": 37.04
+     },
+     {
+      "w": "âncora",
+      "s": 37.04,
+      "e": 37.32
+     },
+     {
+      "w": "que",
+      "s": 37.32,
+      "e": 37.56
+     },
+     {
+      "w": "trava",
+      "s": 37.56,
+      "e": 37.74
+     },
+     {
+      "w": "e",
+      "s": 37.74,
+      "e": 37.9
+     },
+     {
+      "w": "destrava,",
+      "s": 37.9,
+      "e": 38.26
+     },
+     {
+      "w": "e",
+      "s": 38.48,
+      "e": 38.56
+     },
+     {
+      "w": "um",
+      "s": 38.56,
+      "e": 38.74
+     },
+     {
+      "w": "volante",
+      "s": 38.74,
+      "e": 39.08
+     },
+     {
+      "w": "que",
+      "s": 39.08,
+      "e": 39.22
+     },
+     {
+      "w": "vai",
+      "s": 39.22,
+      "e": 39.34
+     },
+     {
+      "w": "e",
+      "s": 39.34,
+      "e": 39.52
+     },
+     {
+      "w": "volta",
+      "s": 39.52,
+      "e": 39.68
+     },
+     {
+      "w": "sem",
+      "s": 39.68,
+      "e": 39.92
+     },
+     {
+      "w": "parar,",
+      "s": 39.92,
+      "e": 40.26
+     },
+     {
+      "w": "puxado",
+      "s": 40.56,
+      "e": 40.86
+     },
+     {
+      "w": "por",
+      "s": 40.86,
+      "e": 41.04
+     },
+     {
+      "w": "uma",
+      "s": 41.04,
+      "e": 41.12
+     },
+     {
+      "w": "molinha",
+      "s": 41.12,
+      "e": 41.42
+     },
+     {
+      "w": "fininha,",
+      "s": 41.42,
+      "e": 41.86
+     },
+     {
+      "w": "o",
+      "s": 42.04,
+      "e": 42.26
+     },
+     {
+      "w": "espiral.",
+      "s": 42.26,
+      "e": 42.56
+     },
+     {
+      "w": "A",
+      "s": 43.38,
+      "e": 43.58
+     },
+     {
+      "w": "cada",
+      "s": 43.58,
+      "e": 43.74
+     },
+     {
+      "w": "ida",
+      "s": 43.74,
+      "e": 43.94
+     },
+     {
+      "w": "e",
+      "s": 43.94,
+      "e": 44.08
+     },
+     {
+      "w": "volta,",
+      "s": 44.08,
+      "e": 44.32
+     },
+     {
+      "w": "a",
+      "s": 44.54,
+      "e": 44.62
+     },
+     {
+      "w": "âncora",
+      "s": 44.62,
+      "e": 44.98
+     },
+     {
+      "w": "solta",
+      "s": 44.98,
+      "e": 45.3
+     },
+     {
+      "w": "um",
+      "s": 45.3,
+      "e": 45.46
+     },
+     {
+      "w": "dente",
+      "s": 45.46,
+      "e": 45.76
+     },
+     {
+      "w": "só.",
+      "s": 45.76,
+      "e": 46.0
+     },
+     {
+      "w": "Esse",
+      "s": 46.74,
+      "e": 47.04
+     },
+     {
+      "w": "é",
+      "s": 47.04,
+      "e": 47.16
+     },
+     {
+      "w": "o",
+      "s": 47.16,
+      "e": 47.26
+     },
+     {
+      "w": "tic-tac",
+      "s": 47.26,
+      "e": 47.64
+     },
+     {
+      "w": "que",
+      "s": 47.64,
+      "e": 47.8
+     },
+     {
+      "w": "você",
+      "s": 47.8,
+      "e": 48.1
+     },
+     {
+      "w": "escuta.",
+      "s": 48.1,
+      "e": 48.44
+     },
+     {
+      "w": "Em",
+      "s": 49.2,
+      "e": 49.38
+     },
+     {
+      "w": "muitos",
+      "s": 49.38,
+      "e": 49.76
+     },
+     {
+      "w": "relógios,",
+      "s": 49.76,
+      "e": 50.3
+     },
+     {
+      "w": "isso",
+      "s": 50.48,
+      "e": 50.68
+     },
+     {
+      "w": "acontece",
+      "s": 50.68,
+      "e": 51.1
+     },
+     {
+      "w": "oito",
+      "s": 51.1,
+      "e": 51.4
+     },
+     {
+      "w": "vezes",
+      "s": 51.4,
+      "e": 51.7
+     },
+     {
+      "w": "por",
+      "s": 51.7,
+      "e": 51.9
+     },
+     {
+      "w": "segundo.",
+      "s": 51.9,
+      "e": 52.28
+     },
+     {
+      "w": "E",
+      "s": 52.28,
+      "e": 53.18
+     },
+     {
+      "w": "os",
+      "s": 53.18,
+      "e": 53.34
+     },
+     {
+      "w": "rubis",
+      "s": 53.34,
+      "e": 53.6
+     },
+     {
+      "w": "lá",
+      "s": 53.6,
+      "e": 53.8
+     },
+     {
+      "w": "dentro?",
+      "s": 53.8,
+      "e": 54.08
+     },
+     {
+      "w": "São",
+      "s": 54.88,
+      "e": 55.1
+     },
+     {
+      "w": "pedrinhas",
+      "s": 55.1,
+      "e": 55.54
+     },
+     {
+      "w": "sintéticas",
+      "s": 55.54,
+      "e": 56.12
+     },
+     {
+      "w": "que",
+      "s": 56.12,
+      "e": 56.34
+     },
+     {
+      "w": "servem",
+      "s": 56.34,
+      "e": 56.64
+     },
+     {
+      "w": "de",
+      "s": 56.64,
+      "e": 56.78
+     },
+     {
+      "w": "apoio",
+      "s": 56.78,
+      "e": 56.98
+     },
+     {
+      "w": "pros",
+      "s": 56.98,
+      "e": 57.26
+     },
+     {
+      "w": "eixos,",
+      "s": 57.26,
+      "e": 57.6
+     },
+     {
+      "w": "pra",
+      "s": 57.78,
+      "e": 57.94
+     },
+     {
+      "w": "diminuir",
+      "s": 57.94,
+      "e": 58.32
+     },
+     {
+      "w": "o",
+      "s": 58.32,
+      "e": 58.52
+     },
+     {
+      "w": "atrito.",
+      "s": 58.52,
+      "e": 58.82
+     },
+     {
+      "w": "Com",
+      "s": 59.54,
+      "e": 59.74
+     },
+     {
+      "w": "a",
+      "s": 59.74,
+      "e": 59.88
+     },
+     {
+      "w": "corda",
+      "s": 59.88,
+      "e": 60.18
+     },
+     {
+      "w": "cheia,",
+      "s": 60.18,
+      "e": 60.6
+     },
+     {
+      "w": "muitos",
+      "s": 60.76,
+      "e": 60.94
+     },
+     {
+      "w": "aguentam",
+      "s": 60.94,
+      "e": 61.3
+     },
+     {
+      "w": "por",
+      "s": 61.3,
+      "e": 61.5
+     },
+     {
+      "w": "volta",
+      "s": 61.5,
+      "e": 61.72
+     },
+     {
+      "w": "de",
+      "s": 61.72,
+      "e": 61.92
+     },
+     {
+      "w": "quarenta",
+      "s": 61.92,
+      "e": 62.16
+     },
+     {
+      "w": "horas.",
+      "s": 62.16,
+      "e": 62.64
+     },
+     {
+      "w": "Segue",
+      "s": 63.52,
+      "e": 63.76
+     },
+     {
+      "w": "pra",
+      "s": 63.76,
+      "e": 63.92
+     },
+     {
+      "w": "ver",
+      "s": 63.92,
+      "e": 64.12
+     },
+     {
+      "w": "por",
+      "s": 64.12,
+      "e": 64.34
+     },
+     {
+      "w": "dentro",
+      "s": 64.34,
+      "e": 64.6
+     },
+     {
+      "w": "de",
+      "s": 64.6,
+      "e": 64.86
+     },
+     {
+      "w": "outras",
+      "s": 64.86,
+      "e": 65.06
+     },
+     {
+      "w": "coisas.",
+      "s": 65.06,
+      "e": 65.4
+     }
+    ],
+    "max_words": 3,
+    "hl": [
+     "bateria",
+     "andar",
+     "dentro",
+     "aco",
+     "coroa",
+     "energia",
+     "soltar",
+     "engrenagens",
+     "rapido",
+     "ponteiros",
+     "problema",
+     "instante",
+     "escape",
+     "gancho",
+     "ancora",
+     "volante",
+     "espiral",
+     "dente",
+     "tictac",
+     "oito",
+     "rubis",
+     "atrito",
+     "quarenta"
+    ]
+   }
+  }
+ ]
+}

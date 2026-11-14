@@ -1,0 +1,13 @@
+{"video":13,"estilo":"Futebol stats rápido (prime/punch neon)","inicio":"2026-10-24T03:40:00-03:00","fim":"2026-10-24T04:25:00-03:00","minutos":45,"render_segundos":42,
+"fontes_fatos":{
+"Copas: Pelé 3 (1958/62/70), Maradona 1 (1986)":"FIFA — fifa.com (World Cup winners)",
+"Gols em Copas: Pelé 12 em 14 jogos; Maradona 8 em 21":"FIFA World Cup records / en.wikipedia.org/wiki/FIFA_World_Cup_top_goalscorers",
+"Seleção: Pelé 77 em 92; Maradona 34 em 91":"RSSSF (rsssf.org/miscellaneous/pele-intlg.html; rsssf.org/miscellaneous/maradona-intlg.html)",
+"Pelé 643 gols pelo Santos":"BBC Sport, dez/2020 (Messi supera recorde de Pelé de 643 por um clube)",
+"Maradona 115 gols pelo Napoli, maior artilheiro até Hamšík (dez/2017)":"BBC/ESPN dez/2017; en.wikipedia.org/wiki/List_of_SSC_Napoli_records_and_statistics",
+"Pelé 1.279 gols em 1.363 jogos":"Guinness World Records — most career goals (football)",
+"Gol do Século (vs Inglaterra, México 1986), votação FIFA 2002":"FIFA.com 2002 / en.wikipedia.org/wiki/Goal_of_the_Century",
+"Jogador do Século FIFA 2000 dividido entre os dois":"en.wikipedia.org/wiki/FIFA_Player_of_the_Century",
+"0,86 e 0,38 gols/jogo e placar 4x0":"calculados a partir dos números acima (12/14, 8/21; 4 categorias comparadas)"},
+"observacoes":"template local (GSAP + renderAt(t)), silhuetas SVG próprias, zero foto. Ref 16:9 clara e lenta; o punch/neon veio do gênero pedido.",
+"ponto_fraco":"As silhuetas são bonecos de traço, não perfis realistas. O placar final deixa um vazio no topo."}

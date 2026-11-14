@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<!-- ESTILO 13 — FUTEBOL STATS RÁPIDO (prime/punch neon, 9:16).
+     Tudo desenhado em função do tempo (renderAt(t)), lendo os itens do edit.json (track "cenas", by:template).
+     Tipos de cena: abertura | duelo | solo | divide | final. Silhuetas = SVG próprio (bonecos de traço grosso), sem fotos. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+html,body{margin:0;padding:0;width:1080px;height:1920px;overflow:hidden;background:#05060a;}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;background:#05060a;font-family:Barlow,Arial,sans-serif;color:#fff;}
+#bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 45% at 22% 48%,color-mix(in srgb,var(--ca) 16%,transparent),transparent 70%),
+  radial-gradient(ellipse 70% 45% at 78% 48%,color-mix(in srgb,var(--cb) 16%,transparent),transparent 70%),
+  linear-gradient(#05060a,#090b12 60%,#05060a);}
+#grid{position:absolute;inset:-40px;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.35) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.35) 2px,transparent 2px);background-size:90px 90px;}
+#lines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 2px,transparent 2px 5px);pointer-events:none}
+#stage{position:absolute;inset:0;transform-origin:50% 48%}
+.sc{position:absolute;inset:0;display:none}
+.tit{position:absolute;left:50%;top:250px;transform:translate(-50%,-50%);font-family:Anton,Impact,sans-serif;font-size:118px;line-height:1;white-space:nowrap;
+  letter-spacing:.01em;color:#fff;text-shadow:0 0 26px rgba(255,255,255,.35),0 8px 0 #000;padding:18px 40px 22px;}
+.tit::after{content:"";position:absolute;left:40px;right:40px;bottom:0;height:12px;background:var(--hl);box-shadow:0 0 22px var(--hl);transform-origin:0 50%;transform:scaleX(var(--u,1))}
+.fig{position:absolute;width:420px;height:620px;transform-origin:50% 100%}
+.fig svg{width:100%;height:100%;overflow:visible}
+.nm{position:absolute;font-family:Barlow,Arial,sans-serif;font-size:66px;letter-spacing:.06em;transform:translate(-50%,-50%);white-space:nowrap}
+.num{position:absolute;font-family:Anton,Impact,sans-serif;font-size:270px;line-height:1;transform:translate(-50%,-50%);white-space:nowrap;color:#fff}
+.num.a{text-shadow:0 0 40px var(--ca),0 0 90px var(--ca),0 10px 0 #000}
+.num.b{text-shadow:0 0 40px var(--cb),0 0 90px var(--cb),0 10px 0 #000}
+.sub{position:absolute;font-family:Barlow,Arial,sans-serif;font-size:50px;letter-spacing:.05em;transform:translate(-50%,-50%);white-space:nowrap;color:#d8dbe6}
+.vs{position:absolute;left:540px;top:760px;transform:translate(-50%,-50%);font-family:Anton,Impact,sans-serif;font-size:170px;color:var(--hl);
+  text-shadow:0 0 30px var(--hl),0 8px 0 #000;font-style:italic}
+.bars{position:absolute;left:90px;right:90px;top:1300px}
+.bars .rl{font-family:Barlow,Arial,sans-serif;font-size:42px;letter-spacing:.14em;color:#9aa0b4;margin-bottom:14px}
+.bar{position:relative;height:74px;margin:0 0 18px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:10px}
+.bar.a i{background:var(--ca);box-shadow:0 0 30px var(--ca)}
+.bar.b i{background:var(--cb);box-shadow:0 0 30px var(--cb)}
+.bar span{position:absolute;left:22px;top:50%;transform:translateY(-50%);font-family:Anton,Impact,sans-serif;font-size:46px;color:#05060a;white-space:nowrap}
+.bar em{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-style:normal;font-family:Anton,Impact,sans-serif;font-size:50px;color:#fff;text-shadow:0 3px 0 #000}
+.selo{position:absolute;left:50%;transform:translate(-50%,-50%) rotate(-4deg);font-family:Anton,Impact,sans-serif;font-size:76px;line-height:1.05;white-space:nowrap;
+  padding:14px 34px 18px;background:var(--hl);color:#05060a;border-radius:10px;box-shadow:0 0 40px color-mix(in srgb,var(--hl) 60%,transparent),8px 10px 0 #000;text-align:center}
+.selo.out{background:#05060a;color:var(--hl);border:6px solid var(--hl)}
+.cups{position:absolute;transform:translate(-50%,-50%);display:flex;gap:16px}
+.cups svg{width:78px;height:96px}
+.big{position:absolute;left:540px;transform:translate(-50%,-50%);font-family:Anton,Impact,sans-serif;font-size:330px;line-height:1;white-space:nowrap}
+.plac{position:absolute;left:540px;top:820px;transform:translate(-50%,-50%);font-family:Anton,Impact,sans-serif;font-size:300px;line-height:1;white-space:nowrap;display:flex;gap:46px;align-items:center}
+.plac b{font-weight:400}.plac i{font-style:normal;font-size:150px;color:#6d7286}
+#cap{position:absolute;left:50%;top:1690px;transform:translate(-50%,-50%);font-family:Anton,Impact,sans-serif;font-size:92px;line-height:1;white-space:nowrap;text-transform:uppercase;letter-spacing:.01em}
+#cap span{display:inline-block;margin:0 14px;color:#fff;paint-order:stroke fill;-webkit-text-stroke:12px #000;text-shadow:0 7px 0 #000}
+#cap span.hl{color:var(--hl)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+#vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.7) 100%)}
+@font-face{font-family:'Anton';src:url('m/fonts/Anton-Regular.ttf');font-weight:100 900;}@font-face{font-family:'Barlow';src:url('m/fonts/BarlowCondensed-Bold.ttf');font-weight:100 900;}.ed-box{position:absolute;overflow:visible}.ed-mv{width:100%;height:100%;overflow:hidden}.ed-box>.clip{position:static;inset:auto}.ed-box img,.ed-box video{display:block}</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="53.36" data-width="1080" data-height="1920">
+ <div id="bg"></div><div id="grid"></div>
+ <div id="stage"></div>
+ <div id="lines"></div><div id="vig"></div>
+ <div id="cap"></div>
+ 
+ <div id="flash"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true, onUpdate:()=>{ if(window.__hfRender) window.__hfRender(tl.time()); }});
+tl.to({v:0},{v:1,duration:53.36,ease:"none"},0);
+window.__timelines["main"] = tl;
+</script>
+<script>
+const EDIT={"version": 1, "name": "13 - 24-10-2026 - FUTEBOL STATS RAPIDO - Pele vs Maradona em numeros", "canvas": {"w": 1080, "h": 1920, "fps": 30, "bg": "#05060a"}, "duration": 53.36, "template": "local", "grupo": "ESTILOS SHORTS", "estilo": "Futebol stats rápido (prime/punch neon)", "referencia": {"canal": "Factual Animation - Ultimate Football Stats Channel", "canal_url": "https://www.youtube.com/@FactualAnimation", "video": "https://youtu.be/uUEM5TCjsAg", "titulo": "Messi vs Ronaldo: Who is BETTER in Big Games? - Stats Comparison", "nota": "estrutura lado a lado (jogador | VS + categoria | jogador, número embaixo de cada um). 2ª ref de ritmo: Football Daily https://youtu.be/xOToL-SSkKI. Sem fotos, sem logo, sem nome dos canais; visual punch/neon pedido pelo gênero."}, "fonts": {"Anton": "fonts/Anton-Regular.ttf", "Barlow": "fonts/BarlowCondensed-Bold.ttf"}, "audio": {"voice": {"src": "voz.mp3", "volume": 1.0, "start": 0}, "music": {"src": "musica.mp3", "volume": 0.16, "start": 0, "fade_out": 1.5, "duck": true}, "extra": [{"id": "w0", "src": "sfx/whoosh.wav", "start": 4.08, "volume": 0.22, "label": "whoosh"}, {"id": "w1", "src": "sfx/whoosh.wav", "start": 16.18, "volume": 0.22, "label": "whoosh"}, {"id": "w2", "src": "sfx/whoosh.wav", "start": 32.38, "volume": 0.22, "label": "whoosh"}, {"id": "w3", "src": "sfx/whoosh.wav", "start": 41.58, "volume": 0.22, "label": "whoosh"}, {"id": "w4", "src": "sfx/whoosh.wav", "start": 46.48, "volume": 0.22, "label": "whoosh"}]}, "tracks": [{"id": "cenas", "name": "Cenas (template)"}, {"id": "legenda", "name": "Legenda"}], "items": [{"id": "cor_a", "type": "param", "label": "Cor do Pelé (neon)", "props": {"value": "#39FF6A"}}, {"id": "cor_b", "type": "param", "label": "Cor do Maradona (neon)", "props": {"value": "#3EC8FF"}}, {"id": "cor_destaque", "type": "param", "label": "Cor de destaque", "props": {"value": "#FFE600"}}, {"id": "nome_a", "type": "param", "label": "Nome lado esquerdo", "props": {"value": "PELÉ"}}, {"id": "nome_b", "type": "param", "label": "Nome lado direito", "props": {"value": "MARADONA"}}, {"id": "c0", "type": "html", "track": "cenas", "label": "Gancho: Pelé vs Maradona", "by": "template", "start": 0, "dur": 4.2, "props": {"tipo": "abertura", "titulo": "PELÉ VS MARADONA", "t_vs": 0.72, "selo1": "SÓ NÚMEROS", "t_s1": 1.8, "selo2": "SEM OPINIÃO", "t_s2": 2.84}}, {"id": "c1", "type": "html", "track": "cenas", "label": "Copas do Mundo 3 x 1", "by": "template", "start": 4.2, "dur": 5.1, "props": {"tipo": "duelo", "titulo": "COPAS DO MUNDO", "icone": "taca", "a": {"valor": 3, "t": 6.26, "sub": "1958 · 1962 · 1970", "ts": 6.76}, "b": {"valor": 1, "t": 8.3, "sub": "1986", "ts": 8.700000000000001}}}, {"id": "c2", "type": "html", "track": "cenas", "label": "Gols em Copas 12 x 8", "by": "template", "start": 9.3, "dur": 7.0, "props": {"tipo": "duelo", "titulo": "GOLS EM COPAS", "a": {"valor": 12, "t": 11.36, "sub": "EM 14 JOGOS", "ts": 12.0}, "b": {"valor": 8, "t": 14.44, "sub": "EM 21 JOGOS", "ts": 15.14}, "barra": {"rotulo": "GOLS POR JOGO", "a": "0,86", "b": "0,38", "va": 0.8571428571428571, "vb": 0.38095238095238093, "t": 15.440000000000001}}}, {"id": "c3", "type": "html", "track": "cenas", "label": "Gols pela seleção 77 x 34", "by": "template", "start": 16.3, "dur": 6.1, "props": {"tipo": "duelo", "titulo": "GOLS PELA SELEÇÃO", "a": {"valor": 77, "t": 18.84, "sub": "EM 92 JOGOS", "ts": 19.28}, "b": {"valor": 34, "t": 21.14, "sub": "EM 91 JOGOS", "ts": 21.5}, "barra": {"rotulo": "GOLS", "a": "77", "b": "34", "va": 77, "vb": 34, "t": 21.14}}}, {"id": "c4", "type": "html", "track": "cenas", "label": "Gols por um clube 643 x 115", "by": "template", "start": 22.4, "dur": 10.1, "props": {"tipo": "duelo", "titulo": "GOLS POR UM CLUBE", "a": {"valor": 643, "t": 25.02, "t1": 26.34, "sub": "SANTOS", "ts": 26.34}, "b": {"valor": 115, "t": 28.42, "t1": 29.08, "sub": "NAPOLI", "ts": 29.08}, "barra": {"rotulo": "GOLS", "a": "643", "b": "115", "va": 643, "vb": 115, "t": 28.42}, "selo": "MAIOR ARTILHEIRO DO NAPOLI POR +20 ANOS", "t_selo": 30.18}}, {"id": "c5", "type": "html", "track": "cenas", "label": "1.279 gols (Guinness)", "by": "template", "start": 32.5, "dur": 4.5, "props": {"tipo": "solo", "lado": "a", "titulo": "GOLS NA CARREIRA", "valor": 1279, "t": 34.5, "t1": 35.66, "selo": "RECORDE GUINNESS", "t_selo": 33.82, "sub": "PELÉ · 1.363 JOGOS", "ts": 35.94}}, {"id": "c6", "type": "html", "track": "cenas", "label": "Gol do século (FIFA 2002)", "by": "template", "start": 37.0, "dur": 4.7, "props": {"tipo": "solo", "lado": "b", "titulo": "O GOL DO SÉCULO", "t_tit": 38.1, "selo": "VOTAÇÃO DA FIFA · 2002", "t_selo": 40.14, "sub": "MÉXICO 1986 · VS INGLATERRA", "ts": 40.48}}, {"id": "c7", "type": "html", "track": "cenas", "label": "Jogador do século: os dois", "by": "template", "start": 41.7, "dur": 4.9, "props": {"tipo": "divide", "titulo": "JOGADOR DO SÉCULO", "t_tit": 44.34, "selo": "FIFA · 2000", "t_selo": 42.34, "selo2": "OS DOIS", "t_s2": 45.18}}, {"id": "c8", "type": "html", "track": "cenas", "label": "Placar final + CTA", "by": "template", "start": 46.6, "dur": 6.76, "props": {"tipo": "final", "titulo": "PLACAR DOS NÚMEROS", "placar_a": 4, "placar_b": 0, "t_placar": 46.82, "pergunta": "QUEM FOI O MAIOR?", "t_perg": 49.56, "cta": "COMENTA AÍ", "t_cta": 51.08}}, {"id": "leg", "type": "caption", "track": "legenda", "label": "Legenda 2 palavras", "by": "template", "start": 0, "dur": 53.36, "props": {"words": [{"w": "Pelé", "s": 0.0, "e": 0.44}, {"w": "contra", "s": 0.44, "e": 0.72}, {"w": "Maradona.", "s": 0.72, "e": 1.78}, {"w": "Só", "s": 1.8, "e": 2.22}, {"w": "números,", "s": 2.22, "e": 2.72}, {"w": "sem", "s": 2.84, "e": 3.02}, {"w": "opinião.", "s": 3.02, "e": 4.18}, {"w": "Copas", "s": 4.34, "e": 4.56}, {"w": "do", "s": 4.56, "e": 4.72}, {"w": "Mundo.", "s": 4.72, "e": 5.64}, {"w": "Pelé:", "s": 5.8, "e": 6.22}, {"w": "três.", "s": 6.26, "e": 6.9}, {"w": "Maradona:", "s": 7.52, "e": 8.12}, {"w": "uma.", "s": 8.3, "e": 8.7}, {"w": "Gols", "s": 9.38, "e": 9.62}, {"w": "em", "s": 9.62, "e": 9.78}, {"w": "Copas.", "s": 9.78, "e": 10.54}, {"w": "Pelé", "s": 11.0, "e": 11.16}, {"w": "fez", "s": 11.16, "e": 11.36}, {"w": "doze,", "s": 11.36, "e": 11.78}, {"w": "em", "s": 11.84, "e": 12.0}, {"w": "catorze", "s": 12.0, "e": 12.46}, {"w": "jogos.", "s": 12.46, "e": 12.88}, {"w": "Maradona,", "s": 13.72, "e": 14.22}, {"w": "oito,", "s": 14.44, "e": 14.78}, {"w": "em", "s": 14.92, "e": 15.14}, {"w": "vinte", "s": 15.14, "e": 15.42}, {"w": "e", "s": 15.42, "e": 15.48}, {"w": "um.", "s": 15.48, "e": 15.8}, {"w": "Gols", "s": 16.42, "e": 16.66}, {"w": "pela", "s": 16.66, "e": 16.88}, {"w": "seleção.", "s": 16.88, "e": 17.48}, {"w": "Pelé:", "s": 18.16, "e": 18.66}, {"w": "setenta", "s": 18.84, "e": 19.22}, {"w": "e", "s": 19.22, "e": 19.28}, {"w": "sete.", "s": 19.28, "e": 20.1}, {"w": "Maradona:", "s": 20.42, "e": 20.96}, {"w": "trinta", "s": 21.14, "e": 21.36}, {"w": "e", "s": 21.36, "e": 21.5}, {"w": "quatro.", "s": 21.5, "e": 21.8}, {"w": "Gols", "s": 22.54, "e": 22.76}, {"w": "por", "s": 22.76, "e": 22.92}, {"w": "um", "s": 22.92, "e": 23.06}, {"w": "clube", "s": 23.06, "e": 23.32}, {"w": "só.", "s": 23.32, "e": 23.7}, {"w": "Pelé,", "s": 24.3, "e": 24.88}, {"w": "seiscentos", "s": 25.02, "e": 25.58}, {"w": "e", "s": 25.58, "e": 25.64}, {"w": "quarenta", "s": 25.64, "e": 26.02}, {"w": "e", "s": 26.02, "e": 26.04}, {"w": "três", "s": 26.04, "e": 26.14}, {"w": "pelo", "s": 26.14, "e": 26.34}, {"w": "Santos.", "s": 26.34, "e": 26.82}, {"w": "Maradona,", "s": 27.74, "e": 28.14}, {"w": "cento", "s": 28.42, "e": 28.68}, {"w": "e", "s": 28.68, "e": 28.76}, {"w": "quinze", "s": 28.76, "e": 28.92}, {"w": "pelo", "s": 28.92, "e": 29.08}, {"w": "Napoli,", "s": 29.08, "e": 29.52}, {"w": "onde", "s": 29.74, "e": 29.86}, {"w": "foi", "s": 29.86, "e": 30.04}, {"w": "o", "s": 30.04, "e": 30.18}, {"w": "maior", "s": 30.18, "e": 30.3}, {"w": "artilheiro", "s": 30.3, "e": 30.68}, {"w": "por", "s": 30.68, "e": 30.92}, {"w": "mais", "s": 30.92, "e": 31.1}, {"w": "de", "s": 31.1, "e": 31.28}, {"w": "vinte", "s": 31.28, "e": 31.5}, {"w": "anos.", "s": 31.5, "e": 31.92}, {"w": "Na", "s": 32.66, "e": 32.8}, {"w": "carreira", "s": 32.8, "e": 33.14}, {"w": "inteira,", "s": 33.14, "e": 33.5}, {"w": "o", "s": 33.68, "e": 33.82}, {"w": "Guinness", "s": 33.82, "e": 34.06}, {"w": "reconhece", "s": 34.06, "e": 34.5}, {"w": "mil", "s": 34.5, "e": 34.74}, {"w": "duzentos", "s": 34.74, "e": 35.24}, {"w": "e", "s": 35.24, "e": 35.26}, {"w": "setenta", "s": 35.26, "e": 35.5}, {"w": "e", "s": 35.5, "e": 35.64}, {"w": "nove", "s": 35.64, "e": 35.66}, {"w": "gols", "s": 35.66, "e": 35.94}, {"w": "do", "s": 35.94, "e": 36.1}, {"w": "Pelé.", "s": 36.1, "e": 36.36}, {"w": "Mas", "s": 37.16, "e": 37.3}, {"w": "o", "s": 37.3, "e": 37.44}, {"w": "Maradona", "s": 37.44, "e": 37.84}, {"w": "tem", "s": 37.84, "e": 37.98}, {"w": "o", "s": 37.98, "e": 38.1}, {"w": "gol", "s": 38.1, "e": 38.24}, {"w": "do", "s": 38.24, "e": 38.44}, {"w": "século,", "s": 38.44, "e": 38.8}, {"w": "eleito", "s": 39.1, "e": 39.32}, {"w": "numa", "s": 39.32, "e": 39.48}, {"w": "votação", "s": 39.48, "e": 39.94}, {"w": "da", "s": 39.94, "e": 40.14}, {"w": "FIFA", "s": 40.14, "e": 40.3}, {"w": "em", "s": 40.3, "e": 40.48}, {"w": "dois", "s": 40.48, "e": 40.62}, {"w": "mil", "s": 40.62, "e": 40.78}, {"w": "e", "s": 40.78, "e": 40.9}, {"w": "dois.", "s": 40.9, "e": 41.1}, {"w": "E", "s": 41.86, "e": 42.02}, {"w": "no", "s": 42.02, "e": 42.16}, {"w": "ano", "s": 42.16, "e": 42.34}, {"w": "dois", "s": 42.34, "e": 42.58}, {"w": "mil,", "s": 42.58, "e": 42.74}, {"w": "a", "s": 43.04, "e": 43.22}, {"w": "FIFA", "s": 43.22, "e": 43.38}, {"w": "dividiu", "s": 43.38, "e": 43.78}, {"w": "o", "s": 43.78, "e": 43.96}, {"w": "prêmio", "s": 43.96, "e": 44.18}, {"w": "de", "s": 44.18, "e": 44.34}, {"w": "jogador", "s": 44.34, "e": 44.7}, {"w": "do", "s": 44.7, "e": 44.88}, {"w": "século", "s": 44.88, "e": 45.18}, {"w": "entre", "s": 45.18, "e": 45.38}, {"w": "os", "s": 45.38, "e": 45.5}, {"w": "dois.", "s": 45.5, "e": 45.74}, {"w": "Nos", "s": 45.74, "e": 45.74}, {"w": "números,", "s": 46.82, "e": 47.22}, {"w": "dá", "s": 47.36, "e": 47.5}, {"w": "Pelé.", "s": 47.5, "e": 47.94}, {"w": "Mas", "s": 48.56, "e": 48.76}, {"w": "pra", "s": 48.76, "e": 48.96}, {"w": "você,", "s": 48.96, "e": 49.32}, {"w": "quem", "s": 49.56, "e": 49.72}, {"w": "foi", "s": 49.72, "e": 49.9}, {"w": "o", "s": 49.9, "e": 50.04}, {"w": "maior?", "s": 50.04, "e": 50.34}, {"w": "Comenta", "s": 51.08, "e": 51.46}, {"w": "aí.", "s": 51.46, "e": 51.76}], "per_group": 2, "y": 1690, "size": 92, "keywords": ["PELÉ", "MARADONA", "TRÊS", "UMA", "DOZE", "OITO", "SETENTA", "TRINTA", "SEISCENTOS", "CENTO", "MIL", "GUINNESS", "SÉCULO", "FIFA", "MAIOR", "COMENTA"]}}]};
+const ED=Object.fromEntries(EDIT.items.map(i=>[i.id,i]));
+const PV=(id,d)=>ED[id]?ED[id].props.value:d;
+const CA=PV("cor_a","#39FF6A"), CB=PV("cor_b","#3EC8FF"), HL=PV("cor_destaque","#FFE600");
+const NA=PV("nome_a","PELÉ"), NB=PV("nome_b","MARADONA");
+const R=document.getElementById("root"); R.style.setProperty("--ca",CA);R.style.setProperty("--cb",CB);R.style.setProperty("--hl",HL);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), seg=(t,a,b)=>clamp((t-a)/(b-a),0,1);
+const oc=k=>1-Math.pow(1-k,3), back=k=>{k=clamp(k,0,1);const c=1.9;return 1+(c+1)*Math.pow(k-1,3)+c*Math.pow(k-1,2);};
+const fmt=n=>Math.round(n).toLocaleString("pt-BR");
+const esc=s=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+// ---------- silhuetas (traço grosso, pose por juntas) ----------
+const POSES={
+ chute:{head:[205,92],neck:[200,150],hip:[198,320],le:[128,205],lh:[70,250],re:[262,198],rh:[318,160],lk:[178,438],lf:[168,566],rk:[272,392],rf:[352,330],ball:[384,318]},
+ drible:{head:[228,104],neck:[214,160],hip:[196,330],le:[150,222],lh:[104,292],re:[276,212],rh:[328,262],lk:[146,442],lf:[104,552],rk:[252,432],rf:[276,560],ball:[318,572]},
+ braco:{head:[200,92],neck:[200,150],hip:[200,322],le:[132,108],lh:[110,30],re:[268,108],rh:[290,30],lk:[166,440],lf:[150,566],rk:[236,440],rf:[252,566],ball:null}
+};
+function figSVG(pose,cor,id,flip){const P=POSES[pose];const L=(a,b,w)=>`<line x1="${P[a][0]}" y1="${P[a][1]}" x2="${P[b][0]}" y2="${P[b][1]}" stroke-width="${w}"/>`;
+ const body=L("neck","hip",74)+L("neck","le",34)+L("le","lh",30)+L("neck","re",34)+L("re","rh",30)+L("hip","lk",42)+L("lk","lf",36)+L("hip","rk",42)+L("rk","rf",36);
+ const mx=(P.neck[0]+P.hip[0])/2,my=(P.neck[1]+P.hip[1])/2-10;
+ return `<svg viewBox="0 0 420 620"><defs><filter id="g${id}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <ellipse cx="210" cy="600" rx="170" ry="16" fill="${cor}" opacity=".25"/>
+ <g filter="url(#g${id})" stroke="${cor}" stroke-linecap="round" fill="none">${body.replace(/stroke-width="(\d+)"/g,(m,w)=>`stroke-width="${+w+12}"`)}<circle cx="${P.head[0]}" cy="${P.head[1]}" r="50" fill="${cor}"/></g>
+ <g stroke="#0b0d14" stroke-linecap="round" fill="none">${body}</g>
+ <circle cx="${P.head[0]}" cy="${P.head[1]}" r="40" fill="#0b0d14"/>
+ <text x="${mx}" y="${my+26}" text-anchor="middle" font-family="Anton,Impact" font-size="62" fill="${cor}" transform="rotate(${(Math.atan2(P.neck[0]-P.hip[0],P.hip[1]-P.neck[1])*57.3).toFixed(1)} ${mx} ${my})${flip?` translate(${2*mx} 0) scale(-1 1)`:""}">10</text>
+ ${P.ball?`<g class="ball"><circle cx="${P.ball[0]}" cy="${P.ball[1]}" r="30" fill="#fff" stroke="${cor}" stroke-width="6"/><circle cx="${P.ball[0]}" cy="${P.ball[1]}" r="11" fill="#0b0d14"/></g>`:""}
+ </svg>`;}
+const cupSVG=c=>`<svg viewBox="0 0 78 96"><path d="M14 6h50v18c0 18-11 30-25 32C25 54 14 42 14 24z" fill="${c}"/><path d="M14 12H4c0 14 6 20 14 22M64 12h10c0 14-6 20-14 22" stroke="${c}" stroke-width="6" fill="none"/><rect x="33" y="55" width="12" height="18" fill="${c}"/><rect x="20" y="73" width="38" height="12" rx="3" fill="${c}"/></svg>`;
+
+// ---------- monta cenas ----------
+const ST=document.getElementById("stage"); const SC=[];
+let fid=0;
+function fig(pose,cor,x,y,s,flip){const d=document.createElement("div");d.className="fig";d.innerHTML=figSVG(pose,cor,fid++,flip);
+ d.dataset.x=x;d.dataset.y=y;d.dataset.s=s;d.dataset.f=flip?-1:1;return d;}
+for(const it of EDIT.items.filter(i=>i.track==="cenas")){
+ const p=it.props, el=document.createElement("div"); el.className="sc"; el.id=it.id; ST.appendChild(el);
+ const o={it,p,el,a:it.start,b:it.start+it.dur,n:{}};
+ const add=(k,html,cls)=>{const d=document.createElement("div");if(cls)d.className=cls;d.innerHTML=html;el.appendChild(d);o.n[k]=d;return d;};
+ if(p.tipo==="abertura"){
+  o.n.fa=fig("chute",CA,300,1180,1.25,false); o.n.fb=fig("drible",CB,780,1180,1.25,true); el.append(o.n.fa,o.n.fb);
+  add("na",esc(NA),"nm").style.cssText+=`left:270px;top:1270px;color:${CA};font-size:84px`;
+  add("nb",esc(NB),"nm").style.cssText+=`left:800px;top:1270px;color:${CB};font-size:84px`;
+  add("vs","VS","vs").style.top="760px";
+  add("s1",esc(p.selo1),"selo").style.top="300px";
+  add("s2",esc(p.selo2),"selo out").style.top="440px";
+ } else if(p.tipo==="duelo"){
+  add("tit",esc(p.titulo),"tit");
+  o.n.fa=fig("chute",CA,250,900,.82,false); o.n.fb=fig("drible",CB,830,900,.82,true); el.append(o.n.fa,o.n.fb);
+  add("vs","VS","vs").style.cssText+="top:640px;font-size:120px";
+  add("na",esc(NA),"nm").style.cssText+=`left:270px;top:960px;color:${CA}`;
+  add("nb",esc(NB),"nm").style.cssText+=`left:810px;top:960px;color:${CB}`;
+  add("va","0","num a").style.cssText+="left:270px;top:1110px";
+  add("vb","0","num b").style.cssText+="left:810px;top:1110px";
+  add("sa",esc(p.a.sub||""),"sub").style.cssText+="left:270px;top:1250px";
+  add("sb",esc(p.b.sub||""),"sub").style.cssText+="left:810px;top:1250px";
+  if(p.icone==="taca"){add("ca",Array.from({length:p.a.valor},()=>cupSVG(CA)).join(""),"cups").style.cssText+="left:270px;top:1400px";
+   add("cb",Array.from({length:p.b.valor},()=>cupSVG(CB)).join(""),"cups").style.cssText+="left:810px;top:1400px";}
+  if(p.barra){add("bars",`<div class="rl">${esc(p.barra.rotulo)}</div><div class="bar a"><i></i><span>${esc(NA)}</span><em>${esc(p.barra.a)}</em></div><div class="bar b"><i></i><span>${esc(NB)}</span><em>${esc(p.barra.b)}</em></div>`,"bars");}
+  if(p.selo){const s=add("selo",esc(p.selo).replace(" POR ","<br>POR "),"selo");s.style.top="1500px";s.style.fontSize="58px";}
+ } else if(p.tipo==="solo"){
+  const c=p.lado==="a"?CA:CB;
+  add("tit",esc(p.titulo),"tit");
+  o.n.fa=fig(p.lado==="a"?"chute":"drible",c,540,1060,1.15,p.lado==="b"); el.append(o.n.fa);
+  if(p.valor){add("big","0","big").style.cssText+=`top:1230px;text-shadow:0 0 50px ${c},0 0 110px ${c},0 12px 0 #000`;}
+  add("selo",esc(p.selo),"selo").style.top=p.valor?"470px":"1180px";
+  add("sub",esc(p.sub||""),"sub").style.cssText+=`left:540px;top:${p.valor?1430:1340}px;font-size:56px;color:${c}`;
+ } else if(p.tipo==="divide"){
+  add("tit",esc(p.titulo),"tit");
+  o.n.fa=fig("braco",CA,300,1180,1.0,false); o.n.fb=fig("braco",CB,780,1180,1.0,true); el.append(o.n.fa,o.n.fb);
+  add("selo",esc(p.selo),"selo out").style.top="420px";
+  add("na",esc(NA),"nm").style.cssText+=`left:300px;top:1250px;color:${CA};font-size:76px`;
+  add("nb",esc(NB),"nm").style.cssText+=`left:780px;top:1250px;color:${CB};font-size:76px`;
+  add("s2",esc(p.selo2),"selo").style.cssText+="top:1420px;font-size:110px";
+ } else if(p.tipo==="final"){
+  add("tit",esc(p.titulo),"tit");
+  add("plac",`<b style="color:${CA};text-shadow:0 0 40px ${CA},0 10px 0 #000">0</b><i>x</i><b style="color:${CB};text-shadow:0 0 40px ${CB},0 10px 0 #000">0</b>`,"plac");
+  add("na",esc(NA),"nm").style.cssText+=`left:330px;top:1010px;color:${CA}`;
+  add("nb",esc(NB),"nm").style.cssText+=`left:750px;top:1010px;color:${CB}`;
+  add("perg",esc(p.pergunta),"selo out").style.cssText+="top:1240px;font-size:96px";
+  add("cta",esc(p.cta),"selo").style.cssText+="top:1420px;font-size:100px";
+ }
+ SC.push(o);
+}
+// ---------- legenda (2 palavras) ----------
+const LEG=ED.leg, CAP=document.getElementById("cap");
+const KW=new Set(((LEG&&LEG.props.keywords)||[]).map(k=>k.toUpperCase()));
+const WD=(LEG&&!LEG.hidden)?LEG.props.words:[]; const GR=[];
+{const n=(LEG&&LEG.props.per_group)||2;let g=[];
+ WD.forEach((w,i)=>{g.push(w);const end=/[.,!?:]$/.test(w.w);if(g.length>=n||end||i===WD.length-1){GR.push(g);g=[];}});}
+if(LEG){CAP.style.top=(LEG.props.y||1690)+"px";CAP.style.fontSize=(LEG.props.size||92)+"px";}
+const clean=w=>w.replace(/[.,!?:;]/g,"").toUpperCase();
+
+// ---------- render ----------
+function placeFig(d,t,k,bob){const x=+d.dataset.x,y=+d.dataset.y,s=+d.dataset.s,f=+d.dataset.f;
+ d.style.left=(x-210)+"px";d.style.top=(y-620)+"px";
+ d.style.transform=`translateY(${(1-k)*260+Math.sin(t*4+x)*bob}px) scale(${s*f},${s})`;d.style.opacity=k;}
+function land(n,t,t0,dur=.22){const k=seg(t,t0,t0+dur);if(t<t0){n.style.opacity=0;return 0;}
+ n.style.opacity=1;const sc=1+.9*(1-back(k));n.style.transform=`translate(-50%,-50%) scale(${sc})`;return 1;}
+function stamp(n,t,t0,rot=-4){if(t<t0){n.style.opacity=0;return;}const k=seg(t,t0,t0+.18);
+ n.style.opacity=1;n.style.transform=`translate(-50%,-50%) rotate(${rot}deg) scale(${1+1.2*(1-oc(k))})`;}
+function count(n,t,t0,t1,v){if(t<t0){n.style.opacity=0;return;}const k=oc(seg(t,t0,Math.max(t1,t0+.35)));n.textContent=fmt(v*k);
+ n.style.opacity=1;const kk=seg(t,t0,t0+.2);const sc=1+.6*(1-back(kk))+(k>=1?.08*Math.max(0,1-(t-Math.max(t1,t0+.35))/.25):0);
+ n.style.transform=`translate(-50%,-50%) scale(${sc})`;}
+let shakeT=[];
+for(const o of SC){const p=o.p;[p.t,p.t1,p.a&&p.a.t,p.b&&p.b.t,p.t_vs,p.t_placar].forEach(x=>{if(x!==undefined&&x!==null)shakeT.push(x);});}
+const cuts=SC.map(o=>o.a).filter(a=>a>0);
+function renderAt(t){
+ // punch da câmera: corte seco + zoom curto + tremor nos números
+ let z=1,sx=0,sy=0;
+ for(const c of cuts){const k=seg(t,c,c+.28);if(t>=c&&k<1)z=Math.max(z,1+.09*(1-oc(k)));}
+ for(const s of shakeT){const dt=t-s;if(dt>=0&&dt<.25){const a=22*(1-dt/.25);sx+=Math.sin(dt*90)*a;sy+=Math.cos(dt*77)*a;}}
+ ST.style.transform=`translate(${sx}px,${sy}px) scale(${z+.012*Math.sin(t*1.3)})`;
+ document.getElementById("grid").style.transform=`translateY(${(t*40)%90}px)`;
+ let fl=0;for(const c of cuts){const dt=t-c;if(dt>=0&&dt<.1)fl=Math.max(fl,.85*(1-dt/.1));}
+ document.getElementById("flash").style.opacity=fl;
+ for(const o of SC){const on=t>=o.a&&t<o.b&&!o.it.hidden;o.el.style.display=on?"block":"none";if(!on)continue;
+  const p=o.p,n=o.n,a=o.a,lt=t-a;
+  if(n.tit){const u=seg(t,p.t_tit!==undefined?p.t_tit-.1:a,(p.t_tit!==undefined?p.t_tit:a)+.25);
+   if(p.t_tit!==undefined&&t<p.t_tit-.1){n.tit.style.opacity=0;}else{n.tit.style.opacity=1;
+   n.tit.style.transform=`translate(-50%,-50%) scale(${1+.5*(1-back(seg(t,(p.t_tit!==undefined?p.t_tit-.1:a),(p.t_tit!==undefined?p.t_tit-.1:a)+.2)))})`;n.tit.style.setProperty("--u",oc(u));}}
+  if(p.tipo==="abertura"){
+   placeFig(n.fa,t,oc(seg(t,a,a+.35)),8);placeFig(n.fb,t,oc(seg(t,a+.25,a+.6)),8);
+   n.fa.style.transform+=` translateX(${-(1-oc(seg(t,a,a+.35)))*500}px)`;
+   n.na.style.opacity=seg(t,a+.1,a+.3);n.nb.style.opacity=seg(t,p.t_vs-.1,p.t_vs+.1);
+   land(n.vs,t,p.t_vs,.25);stamp(n.s1,t,p.t_s1,-4);stamp(n.s2,t,p.t_s2,3);
+  } else if(p.tipo==="duelo"){
+   placeFig(n.fa,t,oc(seg(t,a,a+.3)),6);placeFig(n.fb,t,oc(seg(t,a+.1,a+.4)),6);
+   n.vs.style.opacity=seg(t,a+.1,a+.25);
+   count(n.va,t,p.a.t-.05,p.a.t1||p.a.t+.35,p.a.valor);count(n.vb,t,p.b.t-.05,p.b.t1||p.b.t+.35,p.b.valor);
+   n.sa.style.opacity=seg(t,p.a.ts,p.a.ts+.15);n.sb.style.opacity=seg(t,p.b.ts,p.b.ts+.15);
+   if(n.ca){[...n.ca.children].forEach((c,i)=>{const k=back(seg(t,p.a.t+i*.12,p.a.t+i*.12+.25));c.style.transform=`scale(${k})`;c.style.opacity=t>=p.a.t+i*.12?1:0;});
+    [...n.cb.children].forEach((c,i)=>{const k=back(seg(t,p.b.t+i*.12,p.b.t+i*.12+.25));c.style.transform=`scale(${k})`;c.style.opacity=t>=p.b.t+i*.12?1:0;});}
+   if(n.bars){const B=p.barra,m=Math.max(B.va,B.vb),k=oc(seg(t,B.t,B.t+.7));n.bars.style.opacity=seg(t,B.t-.15,B.t)*(p.t_selo?1-seg(t,p.t_selo-.1,p.t_selo):1);
+    const is=n.bars.querySelectorAll("i");is[0].style.width=(B.va/m*100*k)+"%";is[1].style.width=(B.vb/m*100*k)+"%";}
+   if(n.selo)stamp(n.selo,t,p.t_selo,-3);
+  } else if(p.tipo==="solo"){
+   placeFig(n.fa,t,oc(seg(t,a,a+.3)),6);
+   if(n.big){count(n.big,t,p.t,p.t1,p.valor);n.fa.style.opacity=.55;}
+   stamp(n.selo,t,p.t_selo,-4);n.sub.style.opacity=seg(t,p.ts,p.ts+.15);
+  } else if(p.tipo==="divide"){
+   placeFig(n.fa,t,oc(seg(t,a,a+.3)),10);placeFig(n.fb,t,oc(seg(t,a+.1,a+.4)),10);
+   n.na.style.opacity=seg(t,a+.2,a+.4);n.nb.style.opacity=seg(t,a+.3,a+.5);
+   stamp(n.selo,t,p.t_selo,-3);stamp(n.s2,t,p.t_s2,-4);
+  } else if(p.tipo==="final"){
+   const bs=n.plac.querySelectorAll("b");const k=oc(seg(t,p.t_placar,p.t_placar+.6));
+   bs[0].textContent=t<p.t_placar?0:Math.round(p.placar_a*k);bs[1].textContent=Math.round(p.placar_b*k);
+   n.plac.style.transform=`translate(-50%,-50%) scale(${1+.3*(1-back(seg(t,p.t_placar,p.t_placar+.25)))})`;
+   n.na.style.opacity=n.nb.style.opacity=seg(t,a,a+.2);
+   stamp(n.perg,t,p.t_perg,-3);stamp(n.cta,t,p.t_cta,3);
+   n.cta.style.transform+=` scale(${t>p.t_cta+.3?1+.05*Math.sin((t-p.t_cta)*9):1})`;
+  }
+ }
+ // legenda
+ let g=null;for(const G of GR){if(t>=G[0].s-.05&&t<G[G.length-1].e+.25){g=G;}}
+ if(!g||!LEG||t<LEG.start||t>LEG.start+LEG.dur){CAP.style.opacity=0;}
+ else{const key=g.map(w=>w.w).join("|");if(CAP.dataset.k!==key){CAP.dataset.k=key;
+   CAP.innerHTML=g.map(w=>`<span class="${KW.has(clean(w.w))?"hl":""}">${esc(w.w.replace(/[.,:;]$/,""))}</span>`).join("");}
+  const k=seg(t,g[0].s-.05,g[0].s+.08);CAP.style.opacity=1;CAP.style.transform=`translate(-50%,-50%) scale(${1+.25*(1-oc(k))})`;}
+}
+window.__hfRender=renderAt;
+window.addEventListener("hf-seek",ev=>renderAt(ev.detail.time));
+renderAt(0);
+</script>
+<script>(function(){const tl=window.__timelines&&window.__timelines.main;if(!tl)return;
+
+})();</script>
+</body></html>
