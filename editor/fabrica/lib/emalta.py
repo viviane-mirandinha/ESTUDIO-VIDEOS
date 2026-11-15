@@ -50,6 +50,25 @@ def _ytdlp(url, limite=20):
     return out
 
 
+_PT = set("não nao você voce uma são sao pelo pela isso também tambem ele ela seu sua mais foi com para os as dos das em um ao aos há ja já muito como quando porque era fez tinha nunca todos mesmo história histórias historias reais ninguém segredo".split())
+_ES = set("no que el los las una es con para por del su sus más mas fue esto también tambien ella pero muy como cuando porque era hizo tenía nunca todos mismo historias reales nadie cómo qué secreto lo se al un y".split())
+_EN = set("the of and to in is for on with you your how why what this that was are his her they their from an it be not about".split())
+
+
+def idioma_titulo(t, padrao):
+    """Idioma pelo título (PT/ES/EN). Em dúvida, devolve o padrão (idioma da busca)."""
+    t = (t or "").lower()
+    pt = 2 * len(re.findall(r"[ãõç]", t)); es = 2 * len(re.findall(r"[ñ¿¡]", t)); en = 0
+    for w in re.findall(r"[a-záéíóúâêôãõçñü]+", t):
+        pt += w in _PT and w not in _ES
+        es += w in _ES and w not in _PT
+        en += w in _EN
+    # palavras comuns às duas (como, historia, que...) não pontuam; precisa vencer com folga
+    melhor = max((pt, "PT"), (es, "ES"), (en, "EN"))
+    seg = sorted((pt, es, en), reverse=True)[1]
+    return melhor[1] if melhor[0] >= 2 and melhor[0] > seg else padrao
+
+
 def _num(v):
     try:
         return float(v)
@@ -65,6 +84,7 @@ def _item(x, idioma, nicho, origem, agora):
     if horas > JANELA_H or horas < 0:
         return None
     dur = _num(x["dur"])
+    idioma = idioma_titulo(x["titulo"], idioma)
     canal_url = x["canal_url"] if x["canal_url"] not in ("NA", "") else x["uploader_url"]
     return {"id": x["id"], "titulo": x["titulo"], "canal": x["canal"] if x["canal"] != "NA" else "",
             "canal_url": canal_url if canal_url != "NA" else "", "url": f"https://www.youtube.com/watch?v={x['id']}",
@@ -138,7 +158,10 @@ def coletar(prog=None, estilos_novos=None, pausa=2.0):
 def ler():
     if CACHE.exists():
         try:
-            return json.loads(CACHE.read_text(encoding="utf-8"))
+            d = json.loads(CACHE.read_text(encoding="utf-8"))
+            for it in d.get("itens", []):   # conserta etiquetas de listas antigas
+                it["idioma"] = idioma_titulo(it.get("titulo"), it.get("idioma"))
+            return d
         except Exception:
             pass
     return {"atualizado": "", "itens": [], "nichos": list(NICHOS) + ["Canais do catálogo"], "vazio": True}

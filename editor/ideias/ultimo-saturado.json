@@ -1,323 +1,305 @@
 {
- "entrada": "https://www.youtube.com/shorts/NSDr_ioG6FY",
- "origem": "vídeo: Why Spain Stayed Out of WW2 #history #didyouknow #ww2",
- "nicho": "História WW2 Espanha",
- "nota": 7.5,
- "veredito": "SATURADO — só entre se tiver um diferencial forte",
+ "entrada": "receitas de bolo caseiro",
+ "origem": "tema",
+ "nicho": "receitas de bolo caseiro",
+ "nota": 6.0,
+ "veredito": "DISPUTADO, MAS DÁ — entre com um jeito diferente",
  "explicacao": [
-  "Muita gente fazendo: 21 canais diferentes nos 25 primeiros resultados.",
-  "Só 2 vídeo(s) do último mês na busca — pouca gente postando agora (ou o tema esfriou).",
+  "Só 0 vídeo(s) do último mês na busca — pouca gente postando agora (ou o tema esfriou).",
   "Nenhum canal pequeno com boas views entre os olhados — quem pega views aqui já é grande.",
-  "3 canais com mais de 1 milhão de inscritos dominam a busca.",
-  "Vídeos recentes fazem em média 3 views por hora."
+  "5 canais com mais de 1 milhão de inscritos dominam a busca."
  ],
  "numeros": {
-  "canais_distintos": 21,
-  "videos_ultimo_mes": 2,
-  "vph_recentes": 3,
+  "canais_distintos": 17,
+  "videos_ultimo_mes": 0,
+  "vph_recentes": 0,
   "canais_pequenos_fortes": 0,
-  "canais_gigantes": 3
+  "canais_gigantes": 5
  },
  "canais": [
   {
-   "canal": "El Historiador",
-   "canal_url": "https://www.youtube.com/@elHistoriadooor",
-   "inscritos": 57300,
-   "mediana_views": 47000,
-   "mediana_vph": 31.5,
-   "views_por_inscrito": 0.82,
+   "canal": "Receitinhas da Méia ",
+   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
+   "inscritos": 162000,
+   "mediana_views": 26000,
+   "mediana_vph": 116.2,
+   "views_por_inscrito": 0.16,
    "outliers": [
     {
-     "titulo": "Los 20 años más oscuros de la historia de España",
-     "views": 367000,
-     "x": 7.8,
-     "url": "https://www.youtube.com/watch?v=NXIR0JnLp14"
+     "titulo": "🔥SUPER CRUNCHY CORNMEAL COOKIES: Makes a Big Batch and Stays Fresh for Days!",
+     "views": 100000,
+     "x": 3.8,
+     "url": "https://www.youtube.com/watch?v=qwis19uLn9o"
+    },
+    {
+     "titulo": "🔥NO-KNEAD HEAVY CREAM BREAD Super Soft and Easy to Make!",
+     "views": 307000,
+     "x": 11.8,
+     "url": "https://www.youtube.com/watch?v=78wi64on_40"
     }
    ],
    "n_videos": 15,
-   "uploads_30d": 2,
-   "mais_antigo_dias": 153,
-   "na_busca": 1,
-   "vph_na_busca": 487.2
+   "uploads_30d": 15,
+   "mais_antigo_dias": 27,
+   "na_busca": 5,
+   "vph_na_busca": 857.3
   },
   {
-   "canal": "Hoje na Segunda Guerra Mundial",
-   "canal_url": "https://www.youtube.com/@HojenaSegundaGuerraMundial",
-   "inscritos": 838000,
-   "mediana_views": 97000,
-   "mediana_vph": 122.3,
-   "views_por_inscrito": 0.12,
+   "canal": "Dicas e Receitas da Celly",
+   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
+   "inscritos": 1280000,
+   "mediana_views": 49000,
+   "mediana_vph": 270.3,
+   "views_por_inscrito": 0.04,
    "outliers": [
     {
-     "titulo": "What happened to the leftovers of the war?",
-     "views": 728000,
-     "x": 7.5,
-     "url": "https://www.youtube.com/watch?v=juu6ac0UiOE"
+     "titulo": "DELICIOUS AND SUPER EASY TRADITIONAL PINEAPPLE DESSERT",
+     "views": 429000,
+     "x": 8.8,
+     "url": "https://www.youtube.com/watch?v=SEM4bSPxtvU"
+    }
+   ],
+   "n_videos": 15,
+   "uploads_30d": 15,
+   "mais_antigo_dias": 20,
+   "na_busca": 2,
+   "vph_na_busca": 844.3
+  },
+  {
+   "canal": "Letícia Sweet Cake",
+   "canal_url": "https://www.youtube.com/@LetíciaSweetCake",
+   "inscritos": 2390000,
+   "mediana_views": 38000,
+   "mediana_vph": 80.7,
+   "views_por_inscrito": 0.02,
+   "outliers": [
+    {
+     "titulo": "Easy and Creamy Ninho Milk Fudge Cake | Quick and Delicious Dessert",
+     "views": 132000,
+     "x": 3.5,
+     "url": "https://www.youtube.com/watch?v=-sbQZVAa0zE"
+    }
+   ],
+   "n_videos": 15,
+   "uploads_30d": 9,
+   "mais_antigo_dias": 30,
+   "na_busca": 2,
+   "vph_na_busca": 721.1
+  },
+  {
+   "canal": "Isamara Amâncio",
+   "canal_url": "https://www.youtube.com/@isamaraamancio",
+   "inscritos": 10700000,
+   "mediana_views": 113000,
+   "mediana_vph": 226.2,
+   "views_por_inscrito": 0.01,
+   "outliers": [
+    {
+     "titulo": "Ninho milk powder and guava paste sandwich cookie, melts in your mouth! Super easy to make! - Isa...",
+     "views": 610000,
+     "x": 5.4,
+     "url": "https://www.youtube.com/watch?v=bKf7LrfxxYc"
     }
    ],
    "n_videos": 15,
    "uploads_30d": 5,
-   "mais_antigo_dias": 365,
+   "mais_antigo_dias": 30,
    "na_busca": 2,
-   "vph_na_busca": 147.3
+   "vph_na_busca": 383.5
   },
   {
-   "canal": "EconoSimples",
-   "canal_url": "https://www.youtube.com/@EconoSimples",
-   "inscritos": 247000,
-   "mediana_views": 34000,
-   "mediana_vph": 85.4,
-   "views_por_inscrito": 0.14,
+   "canal": "Receitas Da Cris",
+   "canal_url": "https://www.youtube.com/@receitasdacris",
+   "inscritos": 7630000,
+   "mediana_views": 55000,
+   "mediana_vph": 79.4,
+   "views_por_inscrito": 0.01,
    "outliers": [
     {
-     "titulo": "Trinidad and Tobago",
-     "views": 331000,
-     "x": 9.7,
-     "url": "https://www.youtube.com/watch?v=hIFufdA7K_g"
-    },
-    {
-     "titulo": "Is Germany Preparing to Face Russia?",
-     "views": 211000,
-     "x": 6.2,
-     "url": "https://www.youtube.com/watch?v=wBCfaICx3vA"
-    },
-    {
-     "titulo": "History of Turkmenistan: What Is the World's Strangest Country Like? | Historical Documentary",
-     "views": 529000,
-     "x": 15.6,
-     "url": "https://www.youtube.com/watch?v=SfzDB-qLQ_g"
-    },
-    {
-     "titulo": "What is hidden in the jungle of New Guinea?",
-     "views": 138000,
-     "x": 4.1,
-     "url": "https://www.youtube.com/watch?v=lHOdiwSB9Ew"
-    },
-    {
-     "titulo": "History of Spain: How Did the Iberian Peninsula Divide? | Historical Documentary",
-     "views": 126000,
-     "x": 3.7,
-     "url": "https://www.youtube.com/watch?v=bCCzP3W5uDM"
+     "titulo": "THE REAL 80s AND 90s BIRTHDAY CAKE - ALMOST 44 LBS OF CAKE - COMPLETE STEP-BY-STEP",
+     "views": 527000,
+     "x": 9.6,
+     "url": "https://www.youtube.com/watch?v=U6kMYMQssRE"
     }
    ],
    "n_videos": 15,
    "uploads_30d": 6,
-   "mais_antigo_dias": 61,
+   "mais_antigo_dias": 30,
    "na_busca": 1,
-   "vph_na_busca": 85.5
+   "vph_na_busca": 279.9
   },
   {
-   "canal": "The Armchair Historian",
-   "canal_url": "https://www.youtube.com/@TheArmchairHistorian",
-   "inscritos": 2540000,
-   "mediana_views": 414000,
-   "mediana_vph": 72.5,
-   "views_por_inscrito": 0.16,
-   "outliers": [],
-   "n_videos": 15,
-   "uploads_30d": 1,
-   "mais_antigo_dias": 245,
-   "na_busca": 1,
-   "vph_na_busca": 79.8
-  },
-  {
-   "canal": "Débora Aladim",
-   "canal_url": "https://www.youtube.com/@deboraaladim",
-   "inscritos": 4340000,
-   "mediana_views": 79000,
-   "mediana_vph": 32.5,
-   "views_por_inscrito": 0.02,
+   "canal": "Receitas de Pai",
+   "canal_url": "https://www.youtube.com/@ReceitasdePai",
+   "inscritos": 13100000,
+   "mediana_views": 164000,
+   "mediana_vph": 511.2,
+   "views_por_inscrito": 0.01,
    "outliers": [
     {
-     "titulo": "TODA A HISTÓRIA DO MUNDO PARA O ENEM (Débora Aladim)",
-     "views": 3000000,
-     "x": 38.0,
-     "url": "https://www.youtube.com/watch?v=-8gzAYNfeXM"
+     "titulo": "Restaurant-Style Breaded Bananas - Crispy - Easy - Delicious - Dad's Recipes",
+     "views": 540000,
+     "x": 3.3,
+     "url": "https://www.youtube.com/watch?v=EQyHmRztgrg"
     },
     {
-     "titulo": "IMPERIALISMO: A AULA MAIS COMPLETA DE TODOS OS TEMPOS (Débora Aladim)",
-     "views": 238000,
-     "x": 3.0,
-     "url": "https://www.youtube.com/watch?v=hApq0SEfJOE"
+     "titulo": "NHOC DOCE MINEIRO - FÁCIL E DELICIOSO - BOLACHINHA DE VÓ - Receitas de pai",
+     "views": 1200000,
+     "x": 7.3,
+     "url": "https://www.youtube.com/watch?v=RkDtOu9Qe9I"
     },
     {
-     "titulo": "HISTÓRIA DO RACISMO ESTRUTURAL E AÇÕES AFIRMATIVAS: AULA COMPLETA (Débora Aladim)",
-     "views": 242000,
-     "x": 3.1,
-     "url": "https://www.youtube.com/watch?v=UdcKVhu_ilk"
-    },
-    {
-     "titulo": "EGITO ANTIGO: AULA COMPLETA COM CURIOSIDADES! (Débora Aladim)",
-     "views": 316000,
-     "x": 4.0,
-     "url": "https://www.youtube.com/watch?v=9weu53jUEPw"
+     "titulo": "NO MORE DRY STEAK!! THE SECRET TO THE PERFECT STEAK - JUICY AND DELICIOUS - Dad's Recipes",
+     "views": 1200000,
+     "x": 7.3,
+     "url": "https://www.youtube.com/watch?v=Ic7SfmzkHxI"
     }
    ],
    "n_videos": 15,
-   "uploads_30d": 1,
-   "mais_antigo_dias": 153,
-   "na_busca": 1,
-   "vph_na_busca": 41.3
-  },
-  {
-   "canal": "Impérios AD",
-   "canal_url": "https://www.youtube.com/@ImperiosAD",
-   "inscritos": 1040000,
-   "mediana_views": 666000,
-   "mediana_vph": 15.2,
-   "views_por_inscrito": 0.64,
-   "outliers": [
-    {
-     "titulo": "The Story of Hitler",
-     "views": 2100000,
-     "x": 3.2,
-     "url": "https://www.youtube.com/watch?v=SI8fs5eqe74"
-    }
-   ],
-   "n_videos": 15,
-   "uploads_30d": 0,
-   "mais_antigo_dias": 1826,
+   "uploads_30d": 10,
+   "mais_antigo_dias": 30,
    "na_busca": 2,
-   "vph_na_busca": 36.1
+   "vph_na_busca": 274.2
   }
  ],
  "videos": [
   {
-   "id": "NXIR0JnLp14",
-   "titulo": "Los 20 años más oscuros de la historia de España",
-   "canal": "El Historiador",
-   "canal_url": "https://www.youtube.com/@elHistoriadooor",
-   "views": 367838,
-   "duracao": 2590,
-   "ts": 1791849600,
-   "vph": 487.2,
-   "url": "https://www.youtube.com/watch?v=NXIR0JnLp14",
+   "id": "AKDRNvQfhHs",
+   "titulo": "EASY AND DELICIOUS MILK CAKE - HUSBAND SAFETY CAKE",
+   "canal": "Dicas e Receitas da Celly",
+   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
+   "views": 5026987,
+   "duracao": 327,
+   "ts": 1763164800,
+   "vph": 573.9,
+   "url": "https://www.youtube.com/watch?v=AKDRNvQfhHs",
    "short": false,
    "outlier": true,
-   "x_canal": 7.8
+   "x_canal": 102.6
   },
   {
-   "id": "gEhwUGnG0DI",
-   "titulo": "The Spanish Civil War – The Rehearsal for WWII",
-   "canal": "Hoje na Segunda Guerra Mundial",
-   "canal_url": "https://www.youtube.com/@HojenaSegundaGuerraMundial",
-   "views": 103344,
-   "duracao": 782,
-   "ts": 1791849600,
-   "vph": 136.9,
-   "url": "https://www.youtube.com/watch?v=gEhwUGnG0DI",
+   "id": "QFMxJWh3mqE",
+   "titulo": "QUICK AND EASY CHOCOLATE CAKE | FLUFFY and MOIST Dough",
+   "canal": "Letícia Sweet Cake",
+   "canal_url": "https://www.youtube.com/@LetíciaSweetCake",
+   "views": 18919893,
+   "duracao": 458,
+   "ts": 1668470400,
+   "vph": 539.6,
+   "url": "https://www.youtube.com/watch?v=QFMxJWh3mqE",
    "short": false,
    "outlier": true,
-   "x_canal": 1.1
+   "x_canal": 497.9
   },
   {
-   "id": "bCCzP3W5uDM",
-   "titulo": "History of Spain: How Did the Iberian Peninsula Divide? | Historical Documentary",
-   "canal": "EconoSimples",
-   "canal_url": "https://www.youtube.com/@EconoSimples",
-   "views": 126176,
-   "duracao": 3679,
-   "ts": 1789257600,
-   "vph": 85.5,
-   "url": "https://www.youtube.com/watch?v=bCCzP3W5uDM",
+   "id": "j2CU2eV5SpA",
+   "titulo": "🔥The TRUE Old-Fashioned Birthday Cake with that perfect buttery crumb!",
+   "canal": "Receitinhas da Méia ",
+   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
+   "views": 1647161,
+   "duracao": 1257,
+   "ts": 1781481600,
+   "vph": 448.7,
+   "url": "https://www.youtube.com/watch?v=j2CU2eV5SpA",
    "short": false,
    "outlier": true,
-   "x_canal": 3.7
+   "x_canal": 63.4
   },
   {
-   "id": "zIrOhD5YPMQ",
-   "titulo": "Spanish Civil War",
-   "canal": "The Armchair Historian",
-   "canal_url": "https://www.youtube.com/@TheArmchairHistorian",
-   "views": 582781,
-   "duracao": 1207,
-   "ts": 1768262400,
-   "vph": 79.8,
-   "url": "https://www.youtube.com/watch?v=zIrOhD5YPMQ",
+   "id": "V3rgpmqLJug",
+   "titulo": "FLUFFY SIMPLE WHEAT CAKE, FAMILY SIZE | CRIS' RECIPES",
+   "canal": "Receitas Da Cris",
+   "canal_url": "https://www.youtube.com/@receitasdacris",
+   "views": 14715345,
+   "duracao": 455,
+   "ts": 1605398400,
+   "vph": 279.9,
+   "url": "https://www.youtube.com/watch?v=V3rgpmqLJug",
    "short": false,
    "outlier": true,
-   "x_canal": 1.4
+   "x_canal": 267.6
   },
   {
-   "id": "Mzb-TIfKeW0",
-   "titulo": "Resumo de História: NAZISMO e FASCISMO - Período entre Guerras (Débora Aladim)",
-   "canal": "Débora Aladim",
-   "canal_url": "https://www.youtube.com/@deboraaladim",
-   "views": 3623342,
-   "duracao": 1814,
-   "ts": 1478995200,
-   "vph": 41.3,
-   "url": "https://www.youtube.com/watch?v=Mzb-TIfKeW0",
+   "id": "Sb867CfXCwU",
+   "titulo": "FLUFFY, EASY AND ECONOMICAL 5-CUP CAKE",
+   "canal": "Dicas e Receitas da Celly",
+   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
+   "views": 2368158,
+   "duracao": 402,
+   "ts": 1763164800,
+   "vph": 270.4,
+   "url": "https://www.youtube.com/watch?v=Sb867CfXCwU",
    "short": false,
    "outlier": true,
-   "x_canal": 45.9
+   "x_canal": 48.3
   },
   {
-   "id": "ZffDTZTmLGI",
-   "titulo": "SEGUNDA GUERRA MUNDIAL | Resumão",
-   "canal": "Toda Matéria",
-   "canal_url": "https://www.youtube.com/@TodaMateriaOficial",
-   "views": 547014,
-   "duracao": 545,
-   "ts": 1731456000,
-   "vph": 31.2,
-   "url": "https://www.youtube.com/watch?v=ZffDTZTmLGI",
+   "id": "k9huuq2OBP4",
+   "titulo": "🔥SIMPLE AND SUPER FLUFFY CAKE! The easiest recipe for afternoon tea.",
+   "canal": "Receitinhas da Méia ",
+   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
+   "views": 678746,
+   "duracao": 774,
+   "ts": 1784073600,
+   "vph": 230.0,
+   "url": "https://www.youtube.com/watch?v=k9huuq2OBP4",
    "short": false,
-   "outlier": true
+   "outlier": false,
+   "x_canal": 26.1
   },
   {
-   "id": "v9aau5onflo",
-   "titulo": "The Second World War (Part 1)",
-   "canal": "Impérios AD",
-   "canal_url": "https://www.youtube.com/@ImperiosAD",
-   "views": 1528397,
-   "duracao": 571,
-   "ts": 1573603200,
-   "vph": 24.9,
-   "url": "https://www.youtube.com/watch?v=v9aau5onflo",
+   "id": "d-cpV7o5V9k",
+   "titulo": "SIMPLE CAKE - THIS IS THE NEXT ONE YOU'LL HAVE TO MAKE - FLUFFY - ECONOMICAL - EASY - Isamara Amâ...",
+   "canal": "Isamara Amâncio",
+   "canal_url": "https://www.youtube.com/@isamaraamancio",
+   "views": 10859932,
+   "duracao": 497,
+   "ts": 1605398400,
+   "vph": 206.5,
+   "url": "https://www.youtube.com/watch?v=d-cpV7o5V9k",
    "short": false,
-   "outlier": true,
-   "x_canal": 2.3
+   "outlier": false,
+   "x_canal": 96.1
   },
   {
-   "id": "0Q2ezhf_wsc",
-   "titulo": "A Guerra Civil Espanhola",
-   "canal": "MysterionLL",
-   "canal_url": "https://www.youtube.com/@MysterionLL-",
-   "views": 158973,
-   "duracao": 3806,
-   "ts": 1768262400,
-   "vph": 21.8,
-   "url": "https://www.youtube.com/watch?v=0Q2ezhf_wsc",
+   "id": "aYUGDpHXG8g",
+   "titulo": "BOLO MESCLADO SIMPLES E FOFINHO",
+   "canal": "Juarez Receitas Caseiras",
+   "canal_url": "https://www.youtube.com/@juarezreceitascaseiras",
+   "views": 1748720,
+   "duracao": 235,
+   "ts": 1763164800,
+   "vph": 199.7,
+   "url": "https://www.youtube.com/watch?v=aYUGDpHXG8g",
    "short": false,
-   "outlier": true
+   "outlier": false
   },
   {
-   "id": "F7C3KZ2Tmi0",
-   "titulo": "Why was Spain Neutral in WW2?",
-   "canal": "Knowledgia",
-   "canal_url": "https://www.youtube.com/@Knowledgia",
-   "views": 1105629,
-   "duracao": 709,
-   "ts": 1605225600,
-   "vph": 21.0,
-   "url": "https://www.youtube.com/watch?v=F7C3KZ2Tmi0",
+   "id": "leDdB1b67p4",
+   "titulo": "🔥 WITHOUT WHEAT FLOUR - COTTON CAKE WITH CONDENSED MILK ❤️ Simoniramos",
+   "canal": "SIMONI RAMOS RECEITAS",
+   "canal_url": "https://www.youtube.com/@simoniramosReceitas",
+   "views": 1693645,
+   "duracao": 197,
+   "ts": 1763164800,
+   "vph": 193.4,
+   "url": "https://www.youtube.com/watch?v=leDdB1b67p4",
    "short": false,
-   "outlier": true
+   "outlier": false
   },
   {
-   "id": "MbBoCkOBSmQ",
-   "titulo": "FRANCISCO FRANCO AND FRANQUISM",
-   "canal": "Vogalizando a História",
-   "canal_url": "https://www.youtube.com/@VogalizandoaHistória",
-   "views": 113610,
-   "duracao": 1299,
-   "ts": 1762992000,
-   "vph": 13.0,
-   "url": "https://www.youtube.com/watch?v=MbBoCkOBSmQ",
+   "id": "SPf7eSs47WA",
+   "titulo": "COTTON CAKE - 3 INGREDIENTS - NO WHEAT FLOUR - MELTS IN YOUR MOUTH!!!",
+   "canal": "DIARIO DE RECEITAS DA MIH",
+   "canal_url": "https://www.youtube.com/@diariodereceitasdamih",
+   "views": 1684606,
+   "duracao": 555,
+   "ts": 1763164800,
+   "vph": 192.3,
+   "url": "https://www.youtube.com/watch?v=SPf7eSs47WA",
    "short": false,
-   "outlier": true
+   "outlier": false
   }
  ],
- "quando": "13/11/2026 08:05"
+ "quando": "14/11/2026 19:38"
 }
