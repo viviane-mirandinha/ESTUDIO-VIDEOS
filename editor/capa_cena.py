@@ -1,7 +1,7 @@
 # capa_cena.py — acha NO VÍDEO o quadro que mostra o que a pessoa pediu (ex.: "a cama", "a casa vista de frente").
 # Tudo local: ffmpeg tira os quadros e um modelo de VISÃO do Ollama (qwen2.5vl, gemma3, llava, moondream…) avalia cada um.
-# 1) O modelo de texto separa o pedido em ASSUNTO ("floating city") e ÂNGULO ("from above"), em inglês.
-# 2) ~16 quadros espalhados pelo vídeo → 3 notas (assunto visível, ângulo certo, assunto em foco) + se tem legenda por cima.
+# 1) O pedido é separado em ASSUNTO (traduzido p/ inglês pela IA de texto) e ÂNGULO (reconhecido por regras: de cima, de frente…).
+# 2) ~16 quadros espalhados pelo vídeo → a IA de visão dá nota ao assunto e ao foco, descreve o ângulo (comparado ao pedido) e diz se há legenda.
 # 3) Mais quadros em volta dos 3 melhores momentos.  4) Os 3 finalistas são reavaliados em resolução maior; o melhor vence.
 # Legenda por cima só desempata (o pedido manda). Sem modelo de visão ou nada parecido com o pedido → None + aviso (capa automática).
 import base64
@@ -42,23 +42,46 @@ def modelo_visao():
     return ve[0] if ve else None
 
 
+# ângulo pedido → rótulos aceitos (o modelo de visão escolhe UM rótulo ao descrever o quadro; o 1º da lista vale nota máxima)
+_ANGULOS = (
+    (r"de cima|por cima|do alto|de topo|aere[oa]|from above|top.?down|bird|overhead|aerial|\bcima\b", "de cima", ["top-down", "high-angle"]),
+    (r"de frente|frontal|front", "de frente", ["front"]),
+    (r"de lado|lateral|\bside\b", "de lado", ["side"]),
+    (r"de tras|por tras|traseira|\bback\b|\brear\b", "de trás", ["back"]),
+    (r"de baixo|por baixo|from below|low.?angle", "de baixo", ["low-angle"]),
+    (r"de perto|close.?up|detalhe|zoom", "de perto", ["close-up"]),
+    (r"por dentro|interior|\bdentro\b|inside", "por dentro", ["inside"]),
+)
+ROTULOS = "top-down, high-angle, front, side, back, low-angle, close-up, inside"
+
+
 def _entender(pedido, modelo_texto):
-    """Pedido (PT) → (assunto_en, angulo_en, descricao_en). Os modelos de visão entendem muito melhor em inglês,
-    e separar assunto de ângulo deixa a nota mais justa. Plano B: o pedido inteiro como assunto."""
+    """Pedido (PT) → (assunto_en, nome_do_angulo, rotulos_aceitos). O ângulo é reconhecido por regras; o assunto é traduzido
+    para inglês pela IA de texto (os modelos de visão entendem melhor), sem as palavras de ângulo. Plano B: o pedido como está."""
+    import unicodedata
+    norm = "".join(c for c in unicodedata.normalize("NFD", pedido.lower()) if unicodedata.category(c) != "Mn")
+    angulo, aceitos, resto = "", [], pedido
+    for rx, nome, rot in _ANGULOS:
+        m = re.search(rx, norm)
+        if m:
+            angulo, aceitos = nome, rot
+            resto = norm[:m.start()] + " " + norm[m.end():]
+            resto = re.sub(r"\b(vist[oa]s?|visao|imagem|foto|quadro|cena|angulo|ponto de vista)\b", " ", resto)
+            resto = re.sub(r"\s+", " ", resto).strip()
+            resto = re.sub(r"\b(de|do|da|por|em|com|um|uma|a|o)$", "", resto).strip() or pedido
+            break
+    sujeito = resto
     try:
         OL = _ol()
-        d = OL._json_seguro(OL.gerar(
-            "Translate the user's request about a video frame into English and split it. Reply ONLY JSON: "
-            '{"subject": "what must be visible, short noun phrase", "view": "camera angle/viewpoint if the request mentions one '
-            '(e.g. from above, front view, side view, close-up, inside), otherwise empty string"}.\n'
-            f"Request: {pedido}", modelo_texto, json_mode=True, temperatura=0.1, num_predict=80, timeout=300))
-        sj = str(d.get("subject") or "").strip()[:120]
-        vw = str(d.get("view") or "").strip()[:60]
-        if len(sj) >= 2:
-            return sj, vw, (f"{sj}, {vw}" if vw else sj)
+        t = OL.gerar("Translate this Portuguese phrase into English. Reply with ONLY the English phrase, nothing else, no quotes.\n"
+                     "Example: a cama do quarto -> the bed in the bedroom\n"
+                     f"Phrase: {resto}", modelo_texto, temperatura=0.0, num_predict=40, timeout=300)
+        t = t.strip().strip("\"'").splitlines()[0].strip().rstrip(".")
+        if 2 <= len(t) <= 100:
+            sujeito = t
     except Exception:
         pass
-    return pedido, "", pedido
+    return sujeito, angulo, aceitos
 
 
 def _quadro_bytes(video, t, largura=448):
@@ -89,25 +112,29 @@ def _num(v, padrao=0.0):
         return padrao
 
 
-def _avaliar_ia(jpg, sujeito, angulo, modelo):
-    """(assunto, angulo, foco, tem_legenda): 3 notas 0-10 + bool, tudo pelo modelo de visão."""
+def _avaliar_ia(jpg, sujeito, aceitos, modelo):
+    """(assunto, angulo, foco, tem_legenda). O modelo dá notas 0-10 de assunto e foco e DESCREVE o ângulo com um rótulo fixo;
+    a nota de ângulo = 10 se bate com o pedido (8 se é o 2º rótulo aceito), 1,5 se não bate (10 se nenhum ângulo foi pedido)."""
     OL = _ol()
-    ang = f'Requested camera view: "{angulo}".' if angulo else "No specific camera view was requested."
-    prompt = (f'Target to find in this image: "{sujeito}". {ang}\n'
-              "Look carefully at the image and reply ONLY with JSON, using numbers 0-10:\n"
-              '{"subject": how clearly the target is visible (0 = not there at all, 10 = unmistakable), '
-              '"view": how well the camera angle matches the requested view (10 if none was requested), '
-              '"focus": how much the target is the main thing in the picture (0 = tiny or hidden, 10 = it fills the frame), '
+    prompt = (f'Target to find in this image: "{sujeito}".\n'
+              "Look carefully at the image and reply ONLY with JSON:\n"
+              '{"subject": number 0-10, how clearly the target is visible (0 = not there at all, 10 = unmistakable), '
+              '"viewpoint": the camera viewpoint, exactly ONE of: ' + ROTULOS + " "
+              "(top-down = looking straight down like a map; high-angle = looking down from above at an angle; front/side/back = of the target itself; "
+              "low-angle = looking up; close-up = very near; inside = interior view), "
+              '"focus": number 0-10, how much the target is the main thing in the picture (0 = tiny or hidden, 10 = it fills the frame), '
               '"caption": true if large subtitle/caption text is written over the picture, else false}')
     body = {"model": modelo, "prompt": prompt, "images": [base64.b64encode(jpg).decode()], "stream": False, "format": "json",
-            "options": {"temperature": 0, "num_predict": 80, "num_ctx": 4096}, "keep_alive": OL.KEEP}
+            "options": {"temperature": 0, "num_predict": 90, "num_ctx": 4096}, "keep_alive": OL.KEEP}
     req = urllib.request.Request(OL.base() + "/api/generate", data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=900) as r:
         txt = json.load(r).get("response", "")
     d = OL._json_seguro(txt)
     cap = d.get("caption")
     cap = cap if isinstance(cap, bool) else str(cap).strip().lower() in ("true", "yes", "1")
-    return _num(d.get("subject")), _num(d.get("view"), 5.0 if not angulo else 0.0), _num(d.get("focus")), cap
+    vp = str(d.get("viewpoint") or "").strip().lower()
+    ang = 10.0 if not aceitos else (10.0 if vp == aceitos[0] else 8.0 if vp in aceitos else 1.5)
+    return _num(d.get("subject")), ang, _num(d.get("focus")), cap
 
 
 def _pontos(s, a, f, cap, nit, tem_angulo):
@@ -135,8 +162,8 @@ def achar(pasta, duracao, pedido, modelo_texto, prog=None, n_grosso=16):
         return None, ("Nenhum modelo de visão do Ollama está instalado, então usei o modo automático. "
                       "Para procurar cenas, rode no terminal:  ollama pull qwen2.5vl:7b  e crie a capa de novo.")
     prog(20, f"Entendendo o pedido “{pedido[:40]}”…")
-    sujeito, angulo, _ = _entender(pedido, modelo_texto)
-    entendi = f"Entendi: «{sujeito}»" + (f", visto «{angulo}»" if angulo else "")
+    sujeito, angulo, aceitos = _entender(pedido, modelo_texto)
+    entendi = f"Entendi: «{sujeito}»" + (f", visto «{angulo}»" if angulo else " (sem ângulo específico)")
 
     notas = {}   # segundo → dict(base, final, jpg, grosso)
 
@@ -147,7 +174,7 @@ def achar(pasta, duracao, pedido, modelo_texto, prog=None, n_grosso=16):
         jpg = _quadro_bytes(vid, t, largura)
         if not jpg:
             return 0.0
-        s, a, f, cap = _avaliar_ia(jpg, sujeito, angulo, modelo)
+        s, a, f, cap = _avaliar_ia(jpg, sujeito, aceitos, modelo)
         base, fin = _pontos(s, a, f, cap, _nitidez(jpg), bool(angulo))
         notas[t] = {"base": base, "final": fin, "cap": cap}
         return fin
@@ -174,7 +201,7 @@ def achar(pasta, duracao, pedido, modelo_texto, prog=None, n_grosso=16):
             prog(72 + i * 2, f"Conferindo os finalistas ({i + 1}/{len(final)})…")
             jpg = _quadro_bytes(vid, t, 896)
             if jpg:
-                s, a, f, cap = _avaliar_ia(jpg, sujeito, angulo, modelo)
+                s, a, f, cap = _avaliar_ia(jpg, sujeito, aceitos, modelo)
                 base, fin = _pontos(s, a, f, cap, _nitidez(jpg), bool(angulo))
                 v["base"], v["final"], v["cap"] = (v["base"] + base) / 2, (v["final"] + fin) / 2, cap
         vencedor = max((kv for kv in final), key=lambda kv: kv[1]["final"])
