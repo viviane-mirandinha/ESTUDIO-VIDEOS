@@ -84,3 +84,4 @@ editor/.cache/
 
 # arquivo grande demais para o GitHub (>100 MB)
 VIDEOS-NOVOS/32-documentario-mapa-3d-sem-gelo/voz.wav
+editor/voicestudio-instalacao/baixado/*.exe
