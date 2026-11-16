@@ -1,0 +1,10 @@
+{
+ "acao": "transcrever",
+ "url": "https://youtube.com/shorts/W6AaM9PY95s?si=879U8TZ1InljFZkY",
+ "tema": "",
+ "duracao": 300.0,
+ "texto": "",
+ "notas": "",
+ "modelo": "qwen2.5:14b",
+ "idioma": "pt-BR"
+}

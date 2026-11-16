@@ -1,17 +1,18 @@
 RELATÓRIO DA INSTALAÇÃO — Estúdio de Vídeos
-Data: 10/11/2026 18:34
-Pasta: C:\Users\acer\Downloads\ESTUDIO-VIDEOS (ATUALIZADO 07-11)\ESTUDIO-VIDEOS
+Data: 14/11/2026 12:08
+Pasta: C:\Users\user\Documents\ESTUDIO-VIDEOS
 
 ✅ Sistema: Windows 11 AMD64
-✅ Python do pacote: 3.12.10 em C:\Users\acer\Downloads\ESTUDIO-VIDEOS (ATUALIZADO 07-11)\ESTUDIO-VIDEOS\.venv\Scripts\python.exe
+✅ Python do pacote: 3.14.7 em C:\Users\user\Documents\ESTUDIO-VIDEOS\.venv\Scripts\python.exe
 ✅ Bibliotecas Python: ok
-✅ ffmpeg: ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg 
-✅ Node.js: v24.21.0
+✅ ffmpeg: ffmpeg version N-117642-g08b1bffa49-20241025 Copyright (c) 2000-2024 the FFmpeg 
+✅ yt-dlp (Bombando / referências): 2026.10.26
+✅ Node.js: v26.13.1
 ✅ HyperFrames (render): 0.7.111
-✅ Chrome do render: C:\Users\acer\.cache\hyperframes\chrome\chrome-headless-shell\win64-152.0.7928.2
-✅ Placa de vídeo: sem NVIDIA (whisper na CPU, mais lento)
-✅ Ollama (roteiro grátis): llama3.2:3b ok
+✅ Chrome do render: C:\Users\user\.cache\hyperframes\chrome\chrome-headless-shell\win64-152.0.7928.2
+✅ Placa de vídeo: NVIDIA GeForce RTX 5070 Ti, 16303 MiB
+✅ Ollama (roteiro grátis): qwen2.5:7b ok
 ✅ Voz edge-tts: voz Microsoft ok (precisa de internet)
-✅ Vídeo de teste (voz + whisper + render): C:\Users\acer\Downloads\ESTUDIO-VIDEOS (ATUALIZADO 07-11)\ESTUDIO-VIDEOS\VIDEOS\54-fabrica-historia-simples-teste-de-instalacao\54 - 10-11-2026 - TESTE - Este é um vídeo de teste do Estúdio.mp4 (134 s)
+✅ Vídeo de teste (voz + whisper + render): C:\Users\user\Documents\ESTUDIO-VIDEOS\VIDEOS\54-fabrica-historia-simples-teste-de-instalacao\54 - 14-11-2026 - TESTE - Este é um vídeo de teste do Estúdio.mp4 (62 s)
 
 RESULTADO: TUDO OK — abra o editor com iniciar.bat / bash iniciar.sh

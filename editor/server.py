@@ -1575,7 +1575,9 @@ def job_fabrica(ped, prog):
         else:
             cmd += ["--tema", ped["tema"]]
         voz = ped.get("voz") or aj.get("voz")
-        if voz:
+        if ped.get("audio"):   # narração pronta: pula o TTS (a fábrica sincroniza pelo Whisper)
+            cmd += ["--voz", ped["audio"]]
+        elif voz:
             motor, _, nome = voz.partition(":")
             cmd += ["--tts", motor]
             if nome:
@@ -1794,6 +1796,10 @@ def job_pedido_claude(ped, est, prog):
     pasta.mkdir(parents=True, exist_ok=True)
     PED_FALHAS[sig] = str(pasta)
     _gravar_marca(pasta, ped.get("marca"))
+    if ped.get("audio") and Path(ped["audio"]).exists():
+        shutil.copy2(ped["audio"], pasta / ("narracao" + Path(ped["audio"]).suffix.lower()))
+    else:
+        ped["audio"] = ""
     mus_cfg, mus_linha = None, "- Música de fundo: **nenhuma** — NÃO adicione música de fundo (`audio.music` fica vazio). Só whoosh suave, se quiser."
     mu = ped.get("musica") or {}
     if mu.get("modo") in ("auto", "minha"):
@@ -1841,7 +1847,10 @@ def job_pedido_claude(ped, est, prog):
         f"- Duração alvo: {int(ped['duracao'])} segundos",
         f"- Voz: {ped.get('voz') or 'padrão (TTS local)'}",
         mus_linha,
-        _tts_instrucao(ped.get("voz"), pasta),
+        (f"- NARRAÇÃO PRONTA (voz já gravada pelo aluno): `{pasta / ('narracao' + Path(ped['audio']).suffix.lower())}` — use EXATAMENTE este áudio como locução "
+         "do vídeo inteiro (NÃO gere TTS, não regrave, não corte frases). Ele diz o mesmo que o roteiro abaixo: transcreva com tempos (Whisper: "
+         f"`{FABRICA / 'lib' / 'whisper_run.py'}`) e sincronize cenas, textos e legenda com a fala. Duração do vídeo = duração do áudio (+ respiro curto no fim). "
+         "Coloque o áudio em `audio.voice` do edit.json." if ped.get("audio") else _tts_instrucao(ped.get("voz"), pasta)),
         f"- Pasta do projeto: `{pasta}`",
         *([f"- Suas regras (guarda de densidade): {json.dumps(ped['regras'], ensure_ascii=False)} — respeite no edit.json (menos gráfico/animação; legenda e footage intactos)."] if ped.get("regras") else []), "",
         "## Roteiro APROVADO pelo aluno (texto fixo — NÃO reescreva)" if ped.get("roteiro") else "## Roteiro",
@@ -1946,6 +1955,13 @@ def pedido(data: dict = Body(...)):
         raise HTTPException(400, "Duração inválida.")
     if not 15 <= dur <= 10800:
         raise HTTPException(400, "Duração precisa ficar entre 15 segundos e 3 horas.")
+    audio = ""
+    if g("audio_id"):   # narração pronta subida pelo aluno (mp3/wav/m4a): vale no lugar da voz do PC
+        a = PEDIDOS_TMP / Path(g("audio_id")).name
+        if not a.exists():
+            raise HTTPException(400, "O áudio que você enviou não está mais aqui. Suba o arquivo de novo.")
+        audio = str(a)
+        dur = float(probe(a) or dur)
     url_ok = lambda u: not u or re.match(r"^https?://\S+\.\S+", u)
     if not url_ok(g("ref_video")) or not url_ok(g("ref_canal")):
         raise HTTPException(400, "Link inválido — cole o link completo (começa com https://).")
@@ -1958,7 +1974,8 @@ def pedido(data: dict = Body(...)):
            "formato": g("formato") or est.get("formato") or "longo", "so_pedido": bool(data.get("so_pedido")),
            "marca": g("marca")[:60],   # QA: só cria a pasta/PEDIDO.md, sem rodar o Claude
            # 🧠 opcional (só fábrica, precisa da chave em Ajustes): o Claude escreve o roteiro / escolhe as buscas de imagem
-           "claude_roteiro": bool(data.get("claude_roteiro")) and not roteiro, "claude_busca": bool(data.get("claude_busca"))}
+           "claude_roteiro": bool(data.get("claude_roteiro")) and not roteiro, "claude_busca": bool(data.get("claude_busca")),
+           "audio": audio}
     ped["musica"] = _musica_do_pedido(data.get("musica"))   # 🎵 nenhuma / automática / a minha (+ volume + abaixar quando o narrador fala)
     rg = _limpar_regras(data.get("regras"))   # "Suas regras" do formulário → viram edit["regras"] (guarda de densidade) antes de gerar
     if rg:
