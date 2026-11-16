@@ -1,0 +1,21 @@
+{
+ "acao": "transcrever",
+ "criado": "2026-11-15T03:50:29-08:00",
+ "modelo": "qwen2.5:14b",
+ "idioma": "pt-BR",
+ "tokens_claude": 0,
+ "video": {
+  "url": "https://youtube.com/shorts/W6AaM9PY95s?si=879U8TZ1InljFZkY",
+  "titulo": "Como Fugir do Muro de Berlim? 🐔😭",
+  "canal": "Criador de Mundos",
+  "canal_url": "https://www.youtube.com/channel/UCH3j4xGNhaW-5B5Z_v9Xi0Q",
+  "duracao": 95.0,
+  "views": 2134626,
+  "palavras": 285,
+  "ppm": 180,
+  "fonte_transcricao": "legenda do YouTube (pt-orig)",
+  "capitulos": []
+ },
+ "transcricao": "Se você estivesse preso atrás do muro de Berlim, não se preocupe. É só cavar um buraco por baixo. Mas espera, tem soldado na torre com o holofote olhando o muro a noite inteira. Então você se afasta e começa a cavar dentro do galinheiro do seu quintal.\n\nE as galinhas fazem tanto barulho que ninguém escuta a pá. Mas a terra de Berlim é areia e o teto desaba na sua cabeça. Então você escora tudo com tábuas, uma a cada metro. E isso se chama escoramento.\n\nSó que agora sobra uma montanha de areia e areia nova no quintal entrega tudo. Então você esconde a terra dentro de casa, no sótão, no guarda-roupa e até debaixo da cama. Mas lá no fundo a vela começa a apagar, falta de ar. Então você enfia um cano até a superfície e sopra ar com o fole.\n\nSó que os soldados escutam o chão com microfones. Então você cava devagar. E quando passa um caminhão você aproveita e bate com força. E o túnel ficou com 1,75 m de altura, porque quem cavou foi um grupo de idosos, o mais velho com 81 anos.\n\nE eles queriam atravessar andando de pé e de chapéu. Mas como avisar quem vai fugir sem a polícia descobrir? Então você combina uma senha, Tóquio. E quem não souber a senha não entra.\n\nE a entrada fica dentro de um banheiro velho, porque ninguém desconfia de quem passa muito tempo no banheiro. E um túnel assim com 145 m levou 57 pessoas para o outro lado em duas noites. Agora é só adicionar uma escada, uma lanterna e uma galinha de estimação. Parabéns, você acaba de fugir do muro de Berlim.",
+ "segundos": 2
+}
