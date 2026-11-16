@@ -1882,7 +1882,9 @@ function acompanhar(job, titulo, onDone, onErr) {
       return modalErro("❌ Deu erro", j.error, { acao: titulo.replace(/…$/, ""), semCorrigir: titulo.startsWith("🛠") });
     }
     $("#mBar").style.width = "100%"; $("#mBtns").innerHTML = "";
-    onDone(j.result, fechado);
+    try { await onDone(j.result, fechado); } catch (e) { }
+    // se quem chamou não deixou nenhum botão, o modal ficaria preso: põe um Fechar
+    if (!fechado && !$("#mBtns").children.length) mbtn("Fechar", closeModal);
   };
   tick();
 }
@@ -2786,7 +2788,7 @@ function renderCacar(d) {
     <h4>🎬 Vídeos (mais views por hora primeiro)</h4><div class="tblW"><table class="tbl"><tr><th>Vídeo</th><th>Canal</th><th>Views</th><th>Views/hora</th><th></th></tr>
     ${d.videos.map((v) => `<tr><td>${ytLink(v.url, v.titulo)}${v.short ? ' <span class="tag">short</span>' : ""}</td><td>${esc(v.canal)}</td><td>${fmtNum(v.views)}</td><td>${fmtNum(v.vph)}</td><td>${v.outlier ? '<span class="gtag auto" title="3x+ a mediana da busca">🔥 fora da curva</span>' : ""}${v.x_canal >= 3 ? ` <span class="tag" title="vezes a mediana do canal">${v.x_canal}x o canal</span>` : ""}</td></tr>`).join("")}</table></div>`;
 }
-$("#idCacar").onclick = () => { const kw = $("#idKw").value.trim(); if (!kw) return erroCampo("#idKw", "Escreva uma palavra-chave"); rodarIdeia("/api/ideias/cacar", { kw, formato: $("#idFmt").value }, "🔎 Caçando nicho: " + kw, renderCacar); };
+$("#idCacar").onclick = () => { const kw = $("#idKw").value.trim(); if (!kw) return erroCampo("#idKw", "Escreva uma palavra-chave"); rodarIdeia("/api/ideias/cacar", { kw, formato: $("#idFmt").value, idioma: ID.idioma }, "🔎 Caçando nicho: " + kw, renderCacar); };
 $("#idKw").onkeydown = (e) => { if (e.key === "Enter") $("#idCacar").click(); };
 function renderSat(d) {
   if (!d) return;
@@ -2795,7 +2797,7 @@ function renderSat(d) {
     <div><h4>${esc(d.veredito)}</h4><p class="mu">Nicho: “${esc(d.nicho)}” (${esc(d.origem)}) · ${esc(d.quando)}</p><ul>${d.explicacao.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>
     <p class="mu">0 = livre · 10 = lotado. É uma estimativa pelos primeiros resultados da busca, não uma garantia.</p></div></div>`;
 }
-$("#idSatBtn").onclick = () => { const v = $("#idSat").value.trim(); if (!v) return erroCampo("#idSat", "Cole um link ou escreva o tema"); rodarIdeia("/api/ideias/saturado", { entrada: v }, "🌡 Medindo o nicho…", renderSat); };
+$("#idSatBtn").onclick = () => { const v = $("#idSat").value.trim(); if (!v) return erroCampo("#idSat", "Cole um link ou escreva o tema"); rodarIdeia("/api/ideias/saturado", { entrada: v, idioma: ID.idioma }, "🌡 Medindo o nicho…", renderSat); };
 function renderPub(d) {
   if (!d) return;
   const lst = (t, a) => (a && a.length ? `<h4>${t}</h4><ul>${a.map((x) => `<li>${esc(typeof x === "string" ? x : JSON.stringify(x))}</li>`).join("")}</ul>` : "");

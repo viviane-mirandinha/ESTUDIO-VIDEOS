@@ -1,0 +1,10 @@
+{
+ "acao": "transcrever",
+ "url": "https://www.youtube.com/shorts/NSDr_ioG6FY",
+ "tema": "Como Portugal Sobreviveu à Segunda Guerra Mundial",
+ "duracao": 300.0,
+ "texto": "",
+ "notas": "",
+ "modelo": "qwen2.5:14b",
+ "idioma": "pt-BR"
+}

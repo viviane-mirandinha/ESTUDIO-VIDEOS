@@ -1,0 +1,91 @@
+{
+ "canal": "https://www.youtube.com/@historia.e.filosofiaa",
+ "videos": [
+  {
+   "id": "tfD0VnryCRE",
+   "titulo": "Unabomber: Gênio, Professor e um dos Maiores Terroristas da História",
+   "views": 4,
+   "data": 1794679200.0,
+   "dur": 459.0,
+   "vph": 0.3333333333333333,
+   "idade_h": 4.52998549203078,
+   "short": false,
+   "razao": 1.25,
+   "classe": "novo"
+  },
+  {
+   "id": "J58CNakFsrQ",
+   "titulo": "UM DIA COMUM NA IDADE MÉDIA",
+   "views": 6,
+   "data": 1794614400.0,
+   "dur": 518.0,
+   "vph": 0.26631175604273233,
+   "idade_h": 22.52998549203078,
+   "short": false,
+   "razao": 1.0,
+   "classe": "normal"
+  }
+ ],
+ "stats": {
+  "mediana_vph": 0.26631175604273233,
+  "n": 2,
+  "winners": 0,
+  "flops": 0
+ },
+ "aprendido": {
+  "palavras_titulo": [
+   {
+    "palavra": "gênio",
+    "winners": 1
+   },
+   {
+    "palavra": "história",
+    "winners": 1
+   },
+   {
+    "palavra": "maiores",
+    "winners": 1
+   },
+   {
+    "palavra": "professor",
+    "winners": 1
+   },
+   {
+    "palavra": "terroristas",
+    "winners": 1
+   },
+   {
+    "palavra": "unabomber",
+    "winners": 1
+   }
+  ],
+  "faixa_duracao_campea": "3-10min",
+  "cadencia_dias": 0.8,
+  "short_vs_longo": {
+   "shorts": 0,
+   "longos": 2,
+   "winners_short": 0,
+   "winners_total": 1
+  },
+  "resumo": "Títulos que estouraram usam muito: gênio, história, maiores, professor, terroristas, unabomber. A duração campeã é 3-10min. Você posta a cada ~0.8 dias. Os winners são vídeos longos."
+ },
+ "historico": [
+  {
+   "t": 1794695437.180807,
+   "mediana_vph": 0.2665443235074214,
+   "views": {
+    "tfD0VnryCRE": 4,
+    "J58CNakFsrQ": 6
+   }
+  },
+  {
+   "t": 1794695507.9487712,
+   "mediana_vph": 0.26631175604273233,
+   "views": {
+    "tfD0VnryCRE": 4,
+    "J58CNakFsrQ": 6
+   }
+  }
+ ],
+ "atualizado": 1794695507.9487712
+}

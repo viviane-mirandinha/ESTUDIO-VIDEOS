@@ -1721,6 +1721,8 @@ def _canvas_modelo(est, fonte, short):
         if est.get("tipo") == "claude" and fonte:
             c = json.loads((Path(fonte) / "edit.json").read_text(encoding="utf-8-sig")).get("canvas") or {}
             nat = (int(c["w"]), int(c["h"]))
+            if short != (nat[1] > nat[0]):   # o aluno pediu outro formato (ex.: 9:16 num modelo 16:9): vale o pedido
+                return pedido[0], pedido[1], nat
             return nat[0], nat[1], nat
     except Exception:
         pass
@@ -1767,7 +1769,10 @@ def _regras_fidelidade(est, fonte, cw, ch, nativo):
               "animadas prontas (garrafa, relogio, bateria, sinal, calendario, medidor, grafico, barra, contador, lista, carimbo, pulso, rafa). "
               "Os segundos vêm sempre da fala (`v.at(\"palavra\")`)."]
     L += ["- Fotos: reais de domínio público/CC (Wikimedia) com créditos em `img/creditos.json`. Música baixa + whoosh suave como no modelo; nunca 'impact' nem 'pop'.",
-          f"- Formato: este estilo foi feito em {nativo[0]}x{nativo[1]}. Mantenha o formato nativo do modelo (a pasta já foi criada com {cw}x{ch}); se o aluno pediu outro formato, avise em `DECISOES.md`, mas NÃO simplifique o estilo.",
+          (f"- Formato: o modelo foi feito em {nativo[0]}x{nativo[1]}, mas o aluno pediu {cw}x{ch}. FAÇA NO FORMATO PEDIDO ({cw}x{ch}, `canvas` do edit.json já está assim): "
+           "adapte o template/script do modelo para esse enquadramento (reposicione HUD, rótulos, painéis e câmera; textos maiores; nada cortado nas bordas/zona segura de Reels), "
+           "sem simplificar o estilo. O `data-width`/`data-height` do template também precisam ser " + f"{cw}x{ch}." if (cw, ch) != tuple(nativo) else
+           f"- Formato: este estilo foi feito em {nativo[0]}x{nativo[1]}. Mantenha o formato nativo do modelo (a pasta já foi criada com {cw}x{ch})."),
           "- Antes de entregar: gere o contact-sheet do mp4 e compare com `sheet.jpg` do modelo. Se não parecer o mesmo estilo, refaça até parecer."]
     return L + [""]
 
@@ -3785,7 +3790,7 @@ def ideias_cacar(data: dict = Body(...)):
     fmt = data.get("formato") if data.get("formato") in IDEIAS.FILTRO else "todos"
 
     def job(prog):
-        r = IDEIAS.cacar(kw, fmt, int(data.get("canais") or 8), bool(data.get("atualizar")), prog=prog)
+        r = IDEIAS.cacar(kw, fmt, int(data.get("canais") or 8), bool(data.get("atualizar")), prog=prog, idioma=_idioma_ok(data.get("idioma")))
         _ideias_salvar("ultimo-cacar", r)
         return r
     return start_job(job, tipo="ideias", titulo=f"Caçador de nicho: {kw[:50]}", pesado=False)
@@ -3798,7 +3803,7 @@ def ideias_saturado(data: dict = Body(...)):
         raise HTTPException(400, "Cole o link de um vídeo/canal ou escreva o tema.")
 
     def job(prog):
-        r = IDEIAS.saturacao(e, AJ.ler()["modelo_ollama"], prog=prog)
+        r = IDEIAS.saturacao(e, AJ.ler()["modelo_ollama"], prog=prog, idioma=_idioma_ok(data.get("idioma")))
         _ideias_salvar("ultimo-saturado", r)
         return r
     return start_job(job, tipo="ideias", titulo=f"Nicho tá saturado? {e[:50]}", pesado=False)
@@ -4435,10 +4440,34 @@ def _ski_fonte():
 
 def _claude_exe():
     """Acha o Claude Code (CLI) sozinho: PATH, instalações comuns e o que vem com o app Claude do Windows."""
+    ov = os.environ.get("CLAUDE_EXE", "").strip().strip('"')   # escape manual: set CLAUDE_EXE=C:\caminho\claude.exe
+    if ov and Path(ov).is_file():
+        return ov
     w = shutil.which("claude")
     if w:
         return w
-    cands = [Path.home() / ".local" / "bin" / "claude.exe", Path.home() / ".local" / "bin" / "claude",
+    # o painel pode ter sido aberto ANTES da instalação (PATH velho): lê o PATH atual do Windows (máquina + usuário)
+    if os.name == "nt":
+        try:
+            import winreg
+            partes = []
+            for raiz, sub in ((winreg.HKEY_CURRENT_USER, "Environment"),
+                              (winreg.HKEY_LOCAL_MACHINE, r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment")):
+                try:
+                    with winreg.OpenKey(raiz, sub) as k:
+                        partes.append(os.path.expandvars(winreg.QueryValueEx(k, "Path")[0]))
+                except OSError:
+                    pass
+            w = shutil.which("claude", path=os.pathsep.join(partes))
+            if w:
+                return w
+        except Exception:
+            pass
+    cands = [Path.home() / ".local" / "bin" / "claude.exe",
+             Path(os.environ.get("ProgramFiles", "")) / "nodejs" / "claude.cmd", Path(os.environ.get("ProgramFiles", "")) / "Claude" / "claude.exe",
+             Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "claude" / "claude.exe",
+             Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Links" / "claude.exe",
+             Path.home() / "scoop" / "shims" / "claude.exe", Path("/opt/homebrew/bin/claude"), Path("/usr/local/bin/claude"), Path.home() / ".local" / "bin" / "claude",
              Path.home() / ".claude" / "local" / "claude.exe", Path.home() / ".claude" / "local" / "claude",
              Path(os.environ.get("APPDATA", "")) / "npm" / "claude.cmd"]
     # App Claude (desktop/Store): ...\Claude-Data\claude_xxx\claude-code\<versão>\<hash>\claude.exe  (pega a versão mais nova)

@@ -12,7 +12,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from . import ollama, rede_yt
+from . import emalta, ollama, rede_yt
 from .util import log
 
 NOWIN = getattr(subprocess, "CREATE_NO_WINDOW", 0)
@@ -55,10 +55,14 @@ def _ytdlp_json_linhas(args, timeout=180):
                 out.append(json.loads(ln))
             except Exception:
                 pass
-    if not out and r.returncode:
+    if not out:
         err = ((r.stderr or "").strip().splitlines() or [""])[-1]
         if "confirm you" in err.lower() or "bot" in err.lower():
             raise RuntimeError("O YouTube pediu verificação (bot-check). Espere uns minutos e tente de novo.")
+        if "winerror 2" in err.lower() or "no such file" in err.lower():
+            raise RuntimeError("O yt-dlp não foi encontrado. Rode o instalador (setup) de novo.")
+        if err:
+            raise RuntimeError("A busca no YouTube falhou: " + err[:200])
     return out
 
 
@@ -77,24 +81,32 @@ def _num(x):
 
 
 # ------------------------------------------------------------------ busca + canais
-def buscar_videos(kw, n=40, formato="todos", atualizar=False):
-    nome = f"busca-{_sl(kw)}-{formato}-{n}"
+def buscar_videos(kw, n=40, formato="todos", atualizar=False, idioma=None):
+    """idioma = 'pt-BR'/'en-US'/'es-MX' (ou None): pede a busca nesse idioma e descarta vídeo cujo título é claramente de outro."""
+    cod = (idioma or "")[:2].upper() or None
+    nome = f"busca-{_sl(kw)}-{formato}-{n}" + (f"-{cod}" if cod else "")
     if not atualizar:
         c = _cache_get(nome, 24)
-        if c is not None:
+        if c:   # cache vazio ([]) de tentativa antiga que falhou não vale: busca de novo
             return c
     url = "https://www.youtube.com/results?search_query=" + urllib.parse.quote(kw)
     if FILTRO.get(formato):
         url += "&sp=" + FILTRO[formato]
     vids = []
-    for d in _ytdlp_json_linhas(["--flat-playlist", "--playlist-end", str(n), "--extractor-args", "youtubetab:approximate_date", "-j", url]):
+    extra = ["--extractor-args", f"youtube:lang={cod.lower()}"] if cod else []
+    for d in _ytdlp_json_linhas(["--flat-playlist", "--playlist-end", str(n * 2 if cod else n), "--extractor-args", "youtubetab:approximate_date", *extra, "-j", url]):
         if d.get("ie_key") not in (None, "Youtube") or not d.get("id"):
             continue
+        if cod and emalta.idioma_titulo(d.get("title"), None) not in (None, cod):
+            continue   # título claramente em outro idioma (ex.: inglês numa busca PT)
         views, ts = _num(d.get("view_count")), d.get("timestamp")
         vids.append({"id": d["id"], "titulo": d.get("title") or "", "canal": d.get("channel") or d.get("uploader") or "",
                      "canal_url": d.get("uploader_url") or d.get("channel_url") or "", "views": views, "duracao": _num(d.get("duration")),
                      "ts": ts, "vph": _vph(views, ts), "url": f"https://www.youtube.com/watch?v={d['id']}",
                      "short": (_num(d.get("duration")) or 999) <= 180})
+    vids = vids[:n]
+    if not vids:   # busca vazia (bloqueio/erro passageiro) não vai pro cache, senão ficaria vazia por 24 h
+        return vids
     return _cache_put(nome, vids)
 
 
@@ -135,10 +147,10 @@ def info_canal(canal_url, atualizar=False):
     return _cache_put(nome, info)
 
 
-def cacar(kw, formato="todos", n_canais=8, atualizar=False, prog=None):
+def cacar(kw, formato="todos", n_canais=8, atualizar=False, prog=None, idioma=None):
     prog = prog or (lambda p, m: None)
     prog(5, f"Buscando “{kw}” no YouTube…")
-    vids = buscar_videos(kw, 40, formato, atualizar)
+    vids = buscar_videos(kw, 40, formato, atualizar, idioma)
     if not vids:
         raise RuntimeError("A busca não trouxe nada. Tente outra palavra (ou espere uns minutos, o YouTube pode ter bloqueado).")
     vph_ok = [v["vph"] for v in vids if v["vph"]]
@@ -206,7 +218,7 @@ Responda SOMENTE JSON: {{"nicho": "..."}}""", modelo or ollama.MODELO_PADRAO, js
     return " ".join(w for w, _ in sorted(cont.items(), key=lambda x: -x[1])[:3]) or (textos[0] if textos else "")
 
 
-def saturacao(entrada, modelo=None, prog=None):
+def saturacao(entrada, modelo=None, prog=None, idioma=None):
     prog = prog or (lambda p, m: None)
     entrada = entrada.strip()
     kw, origem = entrada, "tema"
@@ -227,7 +239,7 @@ def saturacao(entrada, modelo=None, prog=None):
                 raise RuntimeError("Não consegui ler esse canal. Confira o link (ex.: https://www.youtube.com/@canal).")
             kw, origem = _palavras_nicho(tits, modelo), "canal: " + ((inf or {}).get("canal") or entrada)
     prog(10, f"Nicho: “{kw}” — medindo a concorrência…")
-    res = cacar(kw, "todos", 6, prog=lambda p, m: prog(10 + p * 0.85, m))
+    res = cacar(kw, "todos", 6, prog=lambda p, m: prog(10 + p * 0.85, m), idioma=idioma)
     vids, canais = res["videos"], res["canais"]
     agora = time.time()
     recentes = [v for v in vids if v["ts"] and agora - v["ts"] < 30 * 86400]
