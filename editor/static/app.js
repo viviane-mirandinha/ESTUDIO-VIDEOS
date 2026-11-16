@@ -392,6 +392,7 @@ $("#pFazer").onclick = async () => {
   if ($("#pTemRoteiro").checked && !roteiro) { $("#pRoteiro").focus(); return toast("Cole o roteiro ou desmarque a opção de roteiro próprio", 4000); }
   try { localStorage.setItem("pedido_canal", canal); } catch (x) { }
   const body = { estilo: e.id, tema, roteiro, canal_nome: canal, marca: marcaVal("#pMarca"), duracao: PED.dur, ref_canal: refCanal, ref_video: refVideo, voz: $("#pVoz").value, formato: PED.fmt || e.formato };
+  if (PED.audio && VZ.p.modo === "fora") body.audio_id = PED.audio.id;   // narração pronta (mp3/wav/m4a) no lugar da voz do PC
   const regras = pedColherRegras(); if (Object.keys(regras).length) body.regras = regras;
   if (MUS.modo === "minha" && !MUS.arq) { $("#pMusArq").scrollIntoView({ behavior: "smooth", block: "center" }); return toast("Envie o arquivo da sua música (espere aparecer ✅) ou escolha Automática/Nenhuma", 4500); }
   body.musica = { modo: MUS.modo, nivel: MUS.nivel, duck: MUS.nivel === "baixa" ? true : MUS.duck, arquivo_id: MUS.modo === "minha" ? MUS.arq : "" };
@@ -1984,6 +1985,11 @@ function escreverRoteiro(body) {
   });
 }
 
+// com áudio pronto subido, o botão 🎬 Fazer vídeo volta a aparecer (some só enquanto você ainda não subiu o áudio)
+function pedAudioUi(m) {
+  const fora = m === "fora", com = fora && !!PED.audio, el = $("#pedido");
+  el.classList.toggle("modoFora", fora && !com); el.classList.toggle("comAudio", com);
+}
 VZ.p = vozEscolha("#pVz", {
   roteiro: () => ($("#pTemRoteiro").checked ? $("#pRoteiro").value : ""),
   podeEscrever: () => !$("#pTemRoteiro").checked,
@@ -1997,7 +2003,13 @@ VZ.p = vozEscolha("#pVz", {
     $("#pRoteiro").scrollIntoView({ block: "center", behavior: "smooth" });
     return r.roteiro;
   },
-  onModo: (m) => $("#pedido").classList.toggle("modoFora", m === "fora"),
+  onModo: (m) => pedAudioUi(m),
+  // áudio pronto: fica NESTE pedido (no estilo que você escolheu) — não manda mais pro "Vídeo com imagens"
+  onAudio: (pre) => {
+    PED.audio = pre.audio; pedAudioUi("fora");
+    if (pre.audio.dur) { PED.dur = Math.max(15, Math.round(pre.audio.dur)); try { pedDurs(); } catch (x) { } }
+    toast("✅ Narração recebida! O vídeo usa a sua voz no estilo escolhido. Confira o roteiro e clique em Fazer vídeo.", 7000);
+  },
 });
 
 // ======================================================= VÍDEO COM IMAGENS
