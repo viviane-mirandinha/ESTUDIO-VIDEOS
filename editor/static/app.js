@@ -1038,7 +1038,7 @@ async function capaGerar(pid, titulo, canal, tipo, cena = "") {
       if (fechado) return toast("✅ Capa e descricao.txt prontas na pasta do vídeo.", 6000);
       $("#mTitle").textContent = "✅ Capa pronta!";
       const t = res.texto || {};
-      $("#mMsg").textContent = `Tipo de capa: ${(CAPA_TIPOS.find((x) => x.id === tipo) || CAPA_TIPOS[0]).nome}\ncapa_instagram.jpg + descricao.txt\n${res.aviso_cena ? "\n🔎 " + res.aviso_cena + "\n" : ""}\nTítulos:\n${(t.titulos || []).map((x) => "• " + x).join("\n")}\n\n${(t.hashtags || []).join(" ")}\n\n📁 ${amigavel(res.folder)}`;
+      $("#mMsg").textContent = `Tipo de capa: ${(CAPA_TIPOS.find((x) => x.id === tipo) || CAPA_TIPOS[0]).nome}\ncapa_instagram.jpg + descricao.txt\n${res.cena ? "\n🔎 Você pediu: “" + res.cena + "”\n" + (res.aviso_cena || "") + "\n" : (cena ? "\n⚠ O pedido de cena não chegou ao servidor (recarregue a página com Ctrl+F5).\n" : "")}\nTítulos:\n${(t.titulos || []).map((x) => "• " + x).join("\n")}\n\n${(t.hashtags || []).join(" ")}\n\n📁 ${amigavel(res.folder)}`;
       const im = document.createElement("img"); im.src = res.capa_url + "?t=" + Date.now(); im.alt = "capa"; im.className = "capaPrev"; im.style.cssText = "max-height:340px;max-width:100%;border-radius:10px;margin:8px auto;display:block";
       $("#mBtns").before(im);
       mlink("⬇ Baixar capa", `/api/baixar/${pid}/capa`, "capa.jpg", "go");

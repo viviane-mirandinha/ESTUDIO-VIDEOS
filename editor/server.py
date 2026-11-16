@@ -926,7 +926,7 @@ def capa_criar(pid: str, data: dict = Body(default={})):
     def fazer(prog):
         aj = AJ.ler()
         r = CAPA.criar(p, aj["modelo_ollama"], aj["idioma"], prog, titulo=(data or {}).get("titulo"), canal=(data or {}).get("canal"), tipo=(data or {}).get("tipo"), cena=(data or {}).get("cena"))
-        return {"pid": pid, "folder": str(p), "capa_url": f"/p/{pid}/capa_instagram.jpg", "texto": r["texto"], "aviso_cena": r.get("aviso_cena", "")}
+        return {"pid": pid, "folder": str(p), "capa_url": f"/p/{pid}/capa_instagram.jpg", "texto": r["texto"], "aviso_cena": r.get("aviso_cena", ""), "cena": str((data or {}).get("cena") or "").strip()}
     return start_job(fazer, tipo="capa", titulo="🖼 Criando a capa", pesado=False)
 
 
