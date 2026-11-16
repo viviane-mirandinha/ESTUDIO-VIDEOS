@@ -140,7 +140,7 @@ def _avaliar_ia(jpg, sujeito, aceitos, modelo):
 def _pontos(s, a, f, cap, nit, tem_angulo):
     """Nota 0-10 do pedido (base) e nota final (base + bônus pequenos que só desempatam)."""
     base = (0.45 * s + 0.30 * a + 0.25 * f) if tem_angulo else (0.65 * s + 0.35 * f)
-    return base, base + (0.0 if cap else 0.4) + 0.3 * nit
+    return base, base + (0.0 if cap else 1.0) + 0.3 * nit   # sem legenda por cima ganha até 1 ponto: desempata quadros que já batem com o pedido
 
 
 def achar(pasta, duracao, pedido, modelo_texto, prog=None, n_grosso=16):
