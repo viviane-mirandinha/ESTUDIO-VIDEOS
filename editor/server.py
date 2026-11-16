@@ -919,12 +919,14 @@ def capa_criar(pid: str, data: dict = Body(default={})):
     import capa as CAPA
     import capa_arte as _CA
     importlib.reload(_CA)
+    import capa_cena as _CC
+    importlib.reload(_CC)
     importlib.reload(CAPA)   # pega mudanças no código de capa sem precisar reiniciar o editor
 
     def fazer(prog):
         aj = AJ.ler()
-        r = CAPA.criar(p, aj["modelo_ollama"], aj["idioma"], prog, titulo=(data or {}).get("titulo"), canal=(data or {}).get("canal"), tipo=(data or {}).get("tipo"))
-        return {"pid": pid, "folder": str(p), "capa_url": f"/p/{pid}/capa_instagram.jpg", "texto": r["texto"]}
+        r = CAPA.criar(p, aj["modelo_ollama"], aj["idioma"], prog, titulo=(data or {}).get("titulo"), canal=(data or {}).get("canal"), tipo=(data or {}).get("tipo"), cena=(data or {}).get("cena"))
+        return {"pid": pid, "folder": str(p), "capa_url": f"/p/{pid}/capa_instagram.jpg", "texto": r["texto"], "aviso_cena": r.get("aviso_cena", "")}
     return start_job(fazer, tipo="capa", titulo="🖼 Criando a capa", pesado=False)
 
 
@@ -2013,7 +2015,8 @@ def musica_sugerir(tema: str = "", roteiro: str = "", estilo: str = ""):
     e = MUS.escolher(f"{tema} {roteiro}", estilo)
     if not e:
         return {"ok": False}
-    return {"ok": True, "titulo": e["titulo"], "motivo": e["motivo"], "url": "/api/musica/ouvir/" + e["arquivo"]}
+    return {"ok": True, "titulo": e["titulo"], "motivo": e["motivo"],
+            "url": e["url"] if e.get("remoto") else "/api/musica/ouvir/" + e["arquivo"]}
 
 
 @app.get("/api/musica/ouvir/{arq}")

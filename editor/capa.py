@@ -746,8 +746,9 @@ def _desenhar(quadro, d, canal, destino: Path, horizontal=False):
     cv.save(destino, "JPEG", quality=94)
 
 
-def criar(pasta, modelo="llama3.2:3b", idioma="pt-BR", prog=None, titulo=None, canal=None, tipo="investigacao"):
-    """titulo: texto da capa digitado pela pessoa (vazio/None = automático). canal: @ no canto (vazio/None = nada)."""
+def criar(pasta, modelo="llama3.2:3b", idioma="pt-BR", prog=None, titulo=None, canal=None, tipo="investigacao", cena=None):
+    """titulo: texto da capa digitado pela pessoa (vazio/None = automático). canal: @ no canto (vazio/None = nada).
+    cena: o que a pessoa quer ver na imagem ("a cama", "a casa vista de frente"); a IA de visão acha o quadro no vídeo."""
     prog = prog or (lambda p, m: None)
     pasta = Path(pasta)
     ed = json.loads((pasta / "edit.json").read_text(encoding="utf-8-sig"))
@@ -759,11 +760,20 @@ def criar(pasta, modelo="llama3.2:3b", idioma="pt-BR", prog=None, titulo=None, c
         d["titulo_capa"] = titulo
         pal = [w.strip("?.,!:;") for w in titulo.split()]
         d["destaque"] = max(pal, key=len) if pal else ""
-    quadro, temp = None, False
-    try:
-        quadro = _foto_sujeito(pasta, d, tema, prog)   # 1º: foto do assunto (a água-viva, o Ted, o gerador…)
-    except Exception:
-        quadro = None
+    quadro, temp, aviso_cena = None, False, ""
+    cena = re.sub(r"\s+", " ", str(cena or "")).strip()[:200]
+    if cena:   # a pessoa disse o que quer ver: a IA de visão (local) procura esse quadro dentro do vídeo
+        try:
+            import capa_cena
+            quadro, aviso_cena = capa_cena.achar(pasta, ed.get("duration"), cena, modelo, prog)
+            temp = bool(quadro)
+        except Exception as e:
+            quadro, aviso_cena = None, f"A busca de cena falhou ({type(e).__name__}); usei o modo automático."
+    if not quadro:
+        try:
+            quadro = _foto_sujeito(pasta, d, tema, prog)   # 1º: foto do assunto (a água-viva, o Ted, o gerador…)
+        except Exception:
+            quadro = None
     if not quadro:                                      # 2º: quadro do momento em que a narração fala do ponto-chave
         prog(66, "Achando o momento principal do vídeo…")
         try:
@@ -797,7 +807,7 @@ def criar(pasta, modelo="llama3.2:3b", idioma="pt-BR", prog=None, titulo=None, c
     txt = ("TÍTULOS PARA O VÍDEO\n" + "\n".join(f"{i}. {t}" for i, t in enumerate(d["titulos"], 1)) +
            "\n\nDESCRIÇÃO\n" + d["descricao"] + "\n\nHASHTAGS\n" + " ".join(d["hashtags"]) + "\n")
     (pasta / "descricao.txt").write_text(txt, encoding="utf-8")
-    return {"capa": str(capa), "descricao": str(pasta / "descricao.txt"), "texto": d}
+    return {"capa": str(capa), "descricao": str(pasta / "descricao.txt"), "texto": d, "aviso_cena": aviso_cena}
 
 
 if __name__ == "__main__":

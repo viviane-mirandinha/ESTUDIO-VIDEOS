@@ -1015,28 +1015,29 @@ function criarCapa(pid) {
   f.innerHTML = `<label>Tipo de capa<select id="capaTipo">${CAPA_TIPOS.map((t) => `<option value="${t.id}">${t.nome}</option>`).join("")}</select></label>
     <div class="capaEx" id="capaEx"></div>
     <label>Título da capa <small>(deixe vazio para o título automático)</small><input id="capaTitulo" type="text" maxlength="140" placeholder="Ex.: Por que a água-viva nunca morre?"></label>
-    <label>Nome do canal <small>(aparece no canto superior direito, do jeito que você escrever; vazio = nada)</small><input id="capaCanal" type="text" maxlength="40" placeholder="Ex.: História e Filosofia"></label>`;
+    <label>Nome do canal <small>(aparece no canto superior direito, do jeito que você escrever; vazio = nada)</small><input id="capaCanal" type="text" maxlength="40" placeholder="Ex.: História e Filosofia"></label>
+    <label>O que aparece na imagem <small>(a IA local procura essa cena dentro do vídeo — ex.: "a cama", "a casa vista de frente"; vazio = automático)</small><input id="capaCena" type="text" maxlength="200" placeholder="Ex.: a casa vista de cima"></label>`;
   $("#mBtns").before(f);
   const mostrarEx = () => {   // exemplo 16:9 e 9:16 do tipo escolhido
     const t = CAPA_TIPOS.find((x) => x.id === $("#capaTipo").value) || CAPA_TIPOS[0];
     $("#capaEx").innerHTML = `<figure><img src="/static/capa-exemplos/${t.id}-16x9.jpg" alt="Exemplo 16:9"><figcaption>Exemplo 16:9</figcaption></figure><figure class="v"><img src="/static/capa-exemplos/${t.id}-9x16.jpg" alt="Exemplo 9:16"><figcaption>Exemplo 9:16</figcaption></figure>`;
   };
   $("#capaTipo").onchange = mostrarEx; mostrarEx();
-  const ir = () => { const tipo = $("#capaTipo").value, titulo = $("#capaTitulo").value.trim(), canal = $("#capaCanal").value.trim(); f.remove(); capaGerar(pid, titulo, canal, tipo); };
+  const ir = () => { const tipo = $("#capaTipo").value, titulo = $("#capaTitulo").value.trim(), canal = $("#capaCanal").value.trim(), cena = $("#capaCena").value.trim(); f.remove(); capaGerar(pid, titulo, canal, tipo, cena); };
   mbtn("Cancelar", closeModal, "capaNo");
   mbtn("Confirmar", ir, "capaSim");
   f.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); ir(); } });
   setTimeout(() => $("#capaTitulo").focus(), 30);
 }
-async function capaGerar(pid, titulo, canal, tipo) {
+async function capaGerar(pid, titulo, canal, tipo, cena = "") {
   {
     $("#modal").classList.remove("semBarra");
-    let r; try { r = await jpost(`/api/capa/${pid}`, { titulo, canal, tipo }); } catch (e) { return toast("❌ " + errTxt(e), 6000); }
+    let r; try { r = await jpost(`/api/capa/${pid}`, { titulo, canal, tipo, cena }); } catch (e) { return toast("❌ " + errTxt(e), 6000); }
     acompanhar(r.job, "🖼 Criando a capa…", (res, fechado) => {
       if (fechado) return toast("✅ Capa e descricao.txt prontas na pasta do vídeo.", 6000);
       $("#mTitle").textContent = "✅ Capa pronta!";
       const t = res.texto || {};
-      $("#mMsg").textContent = `Tipo de capa: ${(CAPA_TIPOS.find((x) => x.id === tipo) || CAPA_TIPOS[0]).nome}\ncapa_instagram.jpg + descricao.txt\n\nTítulos:\n${(t.titulos || []).map((x) => "• " + x).join("\n")}\n\n${(t.hashtags || []).join(" ")}\n\n📁 ${amigavel(res.folder)}`;
+      $("#mMsg").textContent = `Tipo de capa: ${(CAPA_TIPOS.find((x) => x.id === tipo) || CAPA_TIPOS[0]).nome}\ncapa_instagram.jpg + descricao.txt\n${res.aviso_cena ? "\n🔎 " + res.aviso_cena + "\n" : ""}\nTítulos:\n${(t.titulos || []).map((x) => "• " + x).join("\n")}\n\n${(t.hashtags || []).join(" ")}\n\n📁 ${amigavel(res.folder)}`;
       const im = document.createElement("img"); im.src = res.capa_url + "?t=" + Date.now(); im.alt = "capa"; im.className = "capaPrev"; im.style.cssText = "max-height:340px;max-width:100%;border-radius:10px;margin:8px auto;display:block";
       $("#mBtns").before(im);
       mlink("⬇ Baixar capa", `/api/baixar/${pid}/capa`, "capa.jpg", "go");

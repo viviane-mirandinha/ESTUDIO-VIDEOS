@@ -2,7 +2,9 @@
 
 Três modos (escolhidos na hora de pedir o vídeo):
   nenhuma  → nada é adicionado
-  auto     → escolhe sozinho na biblioteca (recursos/musicas/catalogo.json) pelo assunto, roteiro e estilo
+  auto     → escolhe sozinho pelo assunto, roteiro e estilo. 1º busca ONLINE (musica_api.py: Internet Archive, só CC0,
+             sem crédito, baixa direto pra pasta do vídeo e grava musica-licenca.txt). Se falhar, usa a biblioteca local
+             (recursos/musicas/catalogo.json), mas SÓ faixas que não pedem crédito.
   minha    → usa o arquivo de áudio que a pessoa enviou
 
 Em qualquer modo com música, o arquivo é NORMALIZADO (mesma altura em todas as faixas, mesmo a da própria
@@ -17,7 +19,9 @@ import random
 import re
 import shutil
 import subprocess
+import time
 import unicodedata
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -94,10 +98,48 @@ def _marcar(nome):
         pass
 
 
+_CACHE = {}   # (texto, estilo) -> (hora, resultado): a prévia do painel e a música final são a MESMA faixa
+
+
 def escolher(texto, estilo="", duracao=0, marcar=False):
-    """Melhor faixa da biblioteca pro assunto. Devolve {arquivo, titulo, climas, motivo, ...} ou None (biblioteca vazia).
-    Evita repetir as últimas faixas usadas, pra vídeos seguidos não ficarem com a mesma música."""
-    cat = catalogo()
+    """Escolhe a música de fundo SEM obrigação de crédito. 1º tenta a busca online (CC0, musica_api.py);
+    se não der, usa a biblioteca local, mas só faixas que não pedem crédito. Devolve {arquivo, titulo, motivo, ...} ou None.
+    Evita repetir as últimas faixas usadas."""
+    chave = (str(texto)[:3000], estilo)
+    c = _CACHE.get(chave)
+    if c and time.time() - c[0] < 900 and c[1]:
+        e = c[1]
+    else:
+        e = _escolher_online(texto, estilo) or _escolher_local(texto, estilo)
+        _CACHE[chave] = (time.time(), e)
+    if e and marcar:
+        _marcar(e["arquivo"])
+        _CACHE.pop(chave, None)   # a próxima vez escolhe outra
+    return e
+
+
+def _escolher_online(texto, estilo):
+    try:
+        from lib import musica_api as API
+    except ImportError:
+        import musica_api as API
+    pts = pontuar(texto, estilo)
+    if max(pts.values()) <= 0:
+        pts["calmo"] = 1.0
+    climas = [c for c, p in sorted(pts.items(), key=lambda x: -x[1]) if p > 0][:2]
+    try:
+        f = API.buscar(climas, ja_usadas=set(_recentes()))
+    except Exception:
+        return None
+    if not f:
+        return None
+    return {"arquivo": f"{f['identificador']}/{f['arquivo_remoto']}", "caminho": None, "url": f["url"], "remoto": True,
+            "titulo": f["titulo"], "motivo": f"{CLIMA_NOME.get(f['clima'], f['clima'])} — CC0, sem crédito ({f.get('fonte', 'Internet Archive')})",
+            "clima": f["clima"], "credito": "", "duracao": f["duracao"], "fonte": f.get("fonte", ""), "comprovante": API.comprovante(f)}
+
+
+def _escolher_local(texto, estilo):
+    cat = {k: v for k, v in catalogo().items() if not v.get("credito")}   # faixa que pede crédito nunca entra sozinha
     if not cat:
         return None
     pts = pontuar(texto, estilo)
@@ -116,8 +158,6 @@ def escolher(texto, estilo="", duracao=0, marcar=False):
     info = cat[nome]
     clima = max(info.get("climas", ["calmo"]), key=lambda c: pts.get(c, 0))
     motivo = f"{CLIMA_NOME.get(clima, clima)}" + (f" — {info['uso']}" if info.get("uso") else "")
-    if marcar:
-        _marcar(nome)
     return {"arquivo": nome, "caminho": str(BIB / nome), "titulo": info["titulo"], "motivo": motivo, "clima": clima,
             "credito": info.get("credito", ""), "duracao": info.get("duracao")}
 
@@ -163,7 +203,20 @@ def preparar(pasta, modo, texto="", estilo="", nivel="baixa", duck=True, arquivo
         e = escolher(texto, estilo, duracao, marcar=True)
         if not e:
             return None
-        origem, info = Path(e["caminho"]), e
+        info = e
+        pasta.mkdir(parents=True, exist_ok=True)
+        if e.get("remoto"):   # baixa direto pra pasta do vídeo (nada fica numa biblioteca)
+            origem = pasta / "_musica_baixada.mp3"
+            try:
+                req = urllib.request.Request(e["url"], headers={"User-Agent": "EstudioVideos-local/1.0 (musica de fundo CC0)"})
+                with urllib.request.urlopen(req, timeout=120) as r, open(origem, "wb") as fh:
+                    shutil.copyfileobj(r, fh)
+            except Exception:
+                origem.unlink(missing_ok=True)
+                return None
+            (pasta / "musica-licenca.txt").write_text(e["comprovante"], encoding="utf-8")
+        else:
+            origem = Path(e["caminho"])
     else:
         return None
     pasta.mkdir(parents=True, exist_ok=True)
@@ -171,7 +224,10 @@ def preparar(pasta, modo, texto="", estilo="", nivel="baixa", duck=True, arquivo
     for velho in pasta.glob("musica.*"):
         if velho.suffix.lower() in (".mp3", ".wav", ".m4a", ".ogg", ".flac", ".aac", ".opus"):
             velho.unlink(missing_ok=True)
-    if not _normalizar(origem, dst):
+    ok = _normalizar(origem, dst)
+    if info.get("remoto"):
+        origem.unlink(missing_ok=True)   # só fica a versão normalizada
+    if not ok:
         dst = next(pasta.glob("musica.*"), dst)
     if not dst.exists():
         return None
