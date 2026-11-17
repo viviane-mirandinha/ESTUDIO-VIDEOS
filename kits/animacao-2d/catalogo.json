@@ -1,0 +1,843 @@
+{
+ "_leia": "Ficha de cada tipo de cena: local, vista do personagem, ação e câmera. checar_variedade.py usa isto para impedir repetição. Ao criar uma cena nova em cenas.js, ADICIONE a ficha aqui.",
+ "titulo": {
+  "local": "palco-escuro",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "estante": {
+  "local": "biblioteca",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "livro": {
+  "local": "mesa-livro",
+  "vista": "objeto",
+  "acao": "virar-pagina",
+  "camera": "zoom-in"
+ },
+ "escadaria": {
+  "local": "palacio",
+  "vista": "costas",
+  "acao": "andar",
+  "camera": "zoom-in"
+ },
+ "carimbo": {
+  "local": "palacio",
+  "vista": "frente",
+  "acao": "reagir",
+  "camera": "zoom-out"
+ },
+ "rico": {
+  "local": "palco-ouro",
+  "vista": "frente",
+  "acao": "gesticular",
+  "camera": "zoom-in"
+ },
+ "tablado": {
+  "local": "palco-ouro",
+  "vista": "frente",
+  "acao": "discursar",
+  "camera": "zoom-out"
+ },
+ "mercado": {
+  "local": "mercado",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "pan"
+ },
+ "tigela": {
+  "local": "mesa-vela",
+  "vista": "objeto",
+  "acao": "alcancar",
+  "camera": "zoom-in"
+ },
+ "rosto": {
+  "local": "fundo-quente",
+  "vista": "close",
+  "acao": "emocao",
+  "camera": "zoom-in"
+ },
+ "amanhecer": {
+  "local": "colina-atenas",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "zoom-out"
+ },
+ "contempla": {
+  "local": "estrada-atenas",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "zoom-in"
+ },
+ "palacio": {
+  "local": "palacio",
+  "vista": "costas",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "pulpito": {
+  "local": "palco-ouro",
+  "vista": "frente",
+  "acao": "discursar",
+  "camera": "fixa"
+ },
+ "celular": {
+  "local": "escuro-celular",
+  "vista": "objeto",
+  "acao": "acender",
+  "camera": "fixa"
+ },
+ "chat": {
+  "local": "tela-chat",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "cochicho": {
+  "local": "rua-noite",
+  "vista": "costas",
+  "acao": "cochichar",
+  "camera": "fixa"
+ },
+ "relogio": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "contar",
+  "camera": "fixa"
+ },
+ "cabeca": {
+  "local": "escuro-mente",
+  "vista": "close",
+  "acao": "pensar",
+  "camera": "fixa"
+ },
+ "calma": {
+  "local": "cafe-claro",
+  "vista": "frente",
+  "acao": "beber",
+  "camera": "fixa"
+ },
+ "varanda": {
+  "local": "varanda-imperial",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "zoom-in"
+ },
+ "semInsta": {
+  "local": "fundo-quente",
+  "vista": "frente",
+  "acao": "reagir",
+  "camera": "fixa"
+ },
+ "simbolos": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "sentado": {
+  "local": "quarto-vela",
+  "vista": "lado",
+  "acao": "escrever",
+  "camera": "zoom-in"
+ },
+ "citacao": {
+  "local": "pergaminho",
+  "vista": "objeto",
+  "acao": "escrever",
+  "camera": "fixa"
+ },
+ "busto": {
+  "local": "escuro-azul",
+  "vista": "objeto",
+  "acao": "flutuar",
+  "camera": "zoom-in"
+ },
+ "trio": {
+  "local": "palco-luz",
+  "vista": "frente",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "data": {
+  "local": "fundo-pedra",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "comerciante": {
+  "local": "loja",
+  "vista": "frente",
+  "acao": "gesticular",
+  "camera": "fixa"
+ },
+ "naufragio": {
+  "local": "mar",
+  "vista": "objeto",
+  "acao": "afundar",
+  "camera": "fixa"
+ },
+ "chegada": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "reagir",
+  "camera": "fixa"
+ },
+ "livraria": {
+  "local": "livraria",
+  "vista": "lado",
+  "acao": "ler",
+  "camera": "zoom-in"
+ },
+ "dialogo": {
+  "local": "livraria",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "ruajanela": {
+  "local": "livraria-janela",
+  "vista": "lado",
+  "acao": "apontar",
+  "camera": "fixa"
+ },
+ "crates": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "posar",
+  "camera": "fixa"
+ },
+ "acompanha": {
+  "local": "rua-atenas",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "rastreio"
+ },
+ "abandono": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "largar",
+  "camera": "fixa"
+ },
+ "stoa": {
+  "local": "portico",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "fixa"
+ },
+ "portico": {
+  "local": "portico",
+  "vista": "objeto",
+  "acao": "panoramica",
+  "camera": "pan"
+ },
+ "nome": {
+  "local": "fundo-escuro",
+  "vista": "objeto",
+  "acao": "transformar",
+  "camera": "fixa"
+ },
+ "pedra": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "mostrar",
+  "camera": "fixa"
+ },
+ "montanha": {
+  "local": "montanha",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "dicot": {
+  "local": "painel-duplo",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "epicteto": {
+  "local": "parede-clara",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "fixa"
+ },
+ "escravizado": {
+  "local": "escuro-quente",
+  "vista": "frente",
+  "acao": "reagir",
+  "camera": "fixa"
+ },
+ "semLiberdade": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "professor": {
+  "local": "escola",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "fixa"
+ },
+ "domo": {
+  "local": "noite-azul",
+  "vista": "frente",
+  "acao": "proteger",
+  "camera": "fixa"
+ },
+ "comparar": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "acorda": {
+  "local": "quarto-escuro",
+  "vista": "frente",
+  "acao": "olhar-celular",
+  "camera": "fixa"
+ },
+ "notificacoes": {
+  "local": "tela-celular",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "orbita": {
+  "local": "noite-azul",
+  "vista": "frente",
+  "acao": "girar",
+  "camera": "fixa"
+ },
+ "contraste": {
+  "local": "painel-duplo",
+  "vista": "objeto",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "entrega": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "entregar",
+  "camera": "fixa"
+ },
+ "segundo": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "degraus": {
+  "local": "escada",
+  "vista": "objeto",
+  "acao": "subir",
+  "camera": "fixa"
+ },
+ "seneca": {
+  "local": "parede-clara",
+  "vista": "frente",
+  "acao": "posar",
+  "camera": "fixa"
+ },
+ "titulos": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "listar",
+  "camera": "fixa"
+ },
+ "perigo": {
+  "local": "palco-luz",
+  "vista": "frente",
+  "acao": "alertar",
+  "camera": "fixa"
+ },
+ "obra": {
+  "local": "mesa-livro",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "paginaAberta": {
+  "local": "mesa-livro",
+  "vista": "objeto",
+  "acao": "virar-pagina",
+  "camera": "fixa"
+ },
+ "ampulheta": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "esvaziar",
+  "camera": "fixa"
+ },
+ "calendario": {
+  "local": "parede",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "tarde": {
+  "local": "celular-ceu",
+  "vista": "objeto",
+  "acao": "rolar",
+  "camera": "fixa"
+ },
+ "infinito": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "desenhar",
+  "camera": "fixa"
+ },
+ "ocupado": {
+  "local": "painel-duplo2",
+  "vista": "frente",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "trabalho": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "acumular",
+  "camera": "fixa"
+ },
+ "encruzilhada": {
+  "local": "encruzilhada",
+  "vista": "frente",
+  "acao": "duvidar",
+  "camera": "fixa"
+ },
+ "umano": {
+  "local": "parede",
+  "vista": "objeto",
+  "acao": "contar",
+  "camera": "fixa"
+ },
+ "pergunta": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "nuvem": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "aliviar",
+  "camera": "fixa"
+ },
+ "recuperar": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "retrato": {
+  "local": "parede-clara",
+  "vista": "frente",
+  "acao": "posar",
+  "camera": "fixa"
+ },
+ "listaChar": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "listar",
+  "camera": "fixa"
+ },
+ "riscados": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "cartao": {
+  "local": "fundo-pedra",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "multidao": {
+  "local": "palco-luz",
+  "vista": "frente",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "globo": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "alcancar",
+  "camera": "fixa"
+ },
+ "contrario": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "contraste2": {
+  "local": "painel-duplo",
+  "vista": "objeto",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "pergunta2": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "marcar",
+  "camera": "fixa"
+ },
+ "estatua": {
+  "local": "palco-luz",
+  "vista": "frente",
+  "acao": "posar",
+  "camera": "fixa"
+ },
+ "insulto": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "discutir",
+  "camera": "fixa"
+ },
+ "linhaTempo": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "desenhar",
+  "camera": "fixa"
+ },
+ "post": {
+  "local": "tela-celular",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "varandaTxt": {
+  "local": "varanda-imperial",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "zoom-in"
+ },
+ "pos_biblioteca_frente": {
+  "local": "biblioteca",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_biblioteca_frente": {
+  "local": "biblioteca",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_biblioteca_lado": {
+  "local": "biblioteca",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_biblioteca_lado": {
+  "local": "biblioteca",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_biblioteca": {
+  "local": "biblioteca",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_biblioteca": {
+  "local": "biblioteca",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_biblioteca": {
+  "local": "biblioteca",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_rua_frente": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_rua_frente": {
+  "local": "rua-atenas",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_rua_lado": {
+  "local": "rua-atenas",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_rua_lado": {
+  "local": "rua-atenas",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_rua": {
+  "local": "rua-atenas",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_rua": {
+  "local": "rua-atenas",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_rua": {
+  "local": "rua-atenas",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_portico_frente": {
+  "local": "portico",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_portico_frente": {
+  "local": "portico",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_portico_lado": {
+  "local": "portico",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_portico_lado": {
+  "local": "portico",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_portico": {
+  "local": "portico",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_portico": {
+  "local": "portico",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_portico": {
+  "local": "portico",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_palacio_frente": {
+  "local": "palacio",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_palacio_frente": {
+  "local": "palacio",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_palacio_lado": {
+  "local": "palacio",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_palacio_lado": {
+  "local": "palacio",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_palacio": {
+  "local": "palacio",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_palacio": {
+  "local": "palacio",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_palacio": {
+  "local": "palacio",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_mercado_frente": {
+  "local": "mercado",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_mercado_frente": {
+  "local": "mercado",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_mercado_lado": {
+  "local": "mercado",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_mercado_lado": {
+  "local": "mercado",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_mercado": {
+  "local": "mercado",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_mercado": {
+  "local": "mercado",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_mercado": {
+  "local": "mercado",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_montanha_frente": {
+  "local": "montanha",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_montanha_frente": {
+  "local": "montanha",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_montanha_lado": {
+  "local": "montanha",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_montanha_lado": {
+  "local": "montanha",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_montanha": {
+  "local": "montanha",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "dial_montanha": {
+  "local": "montanha",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_noite_frente": {
+  "local": "noite-azul",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_noite_frente": {
+  "local": "noite-azul",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_noite_lado": {
+  "local": "noite-azul",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_noite_lado": {
+  "local": "noite-azul",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "cost_noite": {
+  "local": "noite-azul",
+  "vista": "costas",
+  "acao": "observar",
+  "camera": "fixa"
+ },
+ "anda_noite": {
+  "local": "noite-azul",
+  "vista": "lado",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "dial_noite": {
+  "local": "noite-azul",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "pos_papel_frente": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_papel_frente": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "pos_papel_lado": {
+  "local": "fundo-papel",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ },
+ "expl_papel_lado": {
+  "local": "fundo-papel",
+  "vista": "lado",
+  "acao": "ensinar",
+  "camera": "zoom-in"
+ },
+ "dial_papel": {
+  "local": "fundo-papel",
+  "vista": "lado",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "abertura": {
+  "local": "palco-escuro",
+  "vista": "lado",
+  "acao": "ficar",
+  "camera": "fixa"
+ }
+}

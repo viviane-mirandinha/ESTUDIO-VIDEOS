@@ -1,0 +1,17 @@
+{
+ "nome": "Animação filosófica 2D (personagem desenhado)",
+ "descricao": "O estilo do vídeo “O estoicismo” (Marco Aurélio): ilustração plana com personagens recortados em código, cenários em camadas (biblioteca, pórtico, palácio, rua, noite…), cortes calmos a cada ~4–6 s, frases-chave na tela e cartões de texto. Funciona com QUALQUER roteiro: o computador transforma a sua narração em cenas. Deitado (16:9) ou em pé (9:16).",
+ "bom_para": ["filosofia", "história", "psicologia", "reflexões e ensaios", "vídeos longos narrados"],
+ "palavras_tema": ["filosof", "estoic", "sabedoria", "virtude", "mente", "vida", "reflex", "histor", "pensador", "psicolog"],
+ "formatos": ["longo", "short"],
+ "imagens": "nenhuma",
+ "sem_imagens": true,
+ "fatos": "conferir",
+ "shot_min": 3.6,
+ "shot_max": 6.0,
+ "palavras_por_minuto": 125,
+ "origem": "VIDEOS/102-exemplo-animacao-filosofica",
+ "roteiro_prompt": "ensaio filosófico calmo e reflexivo, narrado devagar, em frases curtas; cada trecho traz uma ideia clara que dá para ilustrar com uma cena (um personagem num lugar, uma pergunta, um contraste, uma lista de 3 itens, uma citação entre aspas); comece com uma pergunta ou promessa forte; sem inventar fatos nem datas",
+ "regras_roteiro": ["Use apenas fatos verdadeiros e conhecidos; na dúvida, fale em termos gerais.", "Frases curtas, uma ideia por frase.", "Quando citar um pensador, coloque a frase entre aspas."],
+ "copiar": []
+}

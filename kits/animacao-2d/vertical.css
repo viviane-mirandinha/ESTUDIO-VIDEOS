@@ -1,0 +1,6 @@
+/* formato em pé 1080x1920: o palco 16:9 (1280x720) é reduzido a 84,4 % e fica no meio; título em cima, legenda palavra a palavra embaixo */
+#stage,.vig,.grao{transform-origin:0 0;transform:translate(0px,420px) scale(.84375)}
+.vtop{position:absolute;left:60px;top:150px;width:960px;text-align:center;font-family:CinzelX,serif;font-weight:700;color:#f1e8d6;letter-spacing:.1em;font-size:46px;line-height:1.25}
+.vln{position:absolute;left:340px;top:1090px;width:400px;height:3px;background:#8a6a3a;opacity:.8}
+.vcap{position:absolute;left:50px;top:1180px;width:980px;height:420px}
+.vcap span{position:absolute;left:0;top:50%;width:980px;transform:translateY(-50%);text-align:center;font-family:CinzelX,serif;font-weight:700;color:#f1e8d6;font-size:68px;line-height:1.2;opacity:0;text-shadow:0 4px 18px rgba(0,0,0,.6)}

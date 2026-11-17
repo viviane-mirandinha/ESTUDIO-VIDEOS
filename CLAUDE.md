@@ -26,6 +26,8 @@ explique em 1-2 frases o que fez e mostre sempre o **caminho completo** do víde
 | `checar_pc.ps1` / `checar_pc.sh` | Checagem do PC (só leitura) usada pelo instalador guiado. |
 | `kits/clay-retencao/` | Kit 3D "massinha" (Three.js) vertical. |
 | `kits/saga-2d/` | Kit do estilo Saga sobrevivência 2D: peças animadas prontas (`widgets.js`), `lib_edit.py`, `embutir.py`. Ver `README.md`. |
+| `kits/animacao-2d/` | **Modelo base de animação 2D com personagem** (recorte em código: andar, perfil, costas, close, cenários em camadas). Rode SEMPRE `python kits/animacao-2d/construir.py <pasta> [--render]` — ele checa movimento e variedade antes de renderizar. Leia o `README.md` (regras de ouro). Exemplo: `VIDEOS/100-teste-marco-aurelio-estoicismo`. |
+| `editor/fabrica/estilos/animacao-filosofica/` | Estilo da fábrica (aparece em Estilos prontos): qualquer narração vira animação 2D com personagem (usa `kits/animacao-2d/planejador.py` + `cenas_base.js`; 16:9 ou 9:16; roda as guardas de movimento/variedade antes do render). Exemplo: `VIDEOS/102-exemplo-animacao-filosofica`. |
 | `editor/checar_ritmo.py` | Guarda de qualidade: confere ritmo, animação, roteiro fiel e som antes de entregar. |
 | `recursos/` | Fontes Google (OFL), whoosh próprio, mapa-múndi Natural Earth (domínio público). |
 | `estoque/gameplay/` | Coloque aqui vídeos de gameplay **livres** (.mp4) para o estilo `reddit-story`. |
