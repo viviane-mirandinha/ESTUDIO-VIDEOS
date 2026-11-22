@@ -70,6 +70,13 @@ jaqueta, varsity), `cabelo` (tigela, topete, cacheado, mullet), `barba` (nenhuma
 `estilizar: true` aplica o material do render (massinha/desenho) também ao modelo. Se o modelo vier com animação, ela toca desde o começo do vídeo.
 Esses modelos não mexem a boca nem os braços sozinhos: a fala só anima o personagem do kit.
 
+## Pelo painel (aba Criar → Blender 3D)
+- **Criar:** tema ou roteiro, voz e predefinição. Em *Personalizar personagem, cores e estilo* dá para mudar estilo do corpo, roupa, cabelo, barba, acessórios, as 10 cores, o tamanho e o estilo do render, com **prévia na hora** ("Ver como fica", ~10 s na máquina de render).
+- **Predefinições salvas:** *Salvar como predefinição* grava em `predefinicoes/` (as 4 que vêm com o kit não podem ser apagadas; as suas têm ★).
+- **Meus modelos 3D:** envie arquivos `.glb` (ficam em `modelos/`, ignorados pelo git, só neste PC). Na revisão de cada cena, marque o modelo, escolha esquerda/centro/direita e o tamanho, e se o personagem do kit deve sumir. **Só use modelos que você tem direito de usar.**
+- **Revisão:** *Visual do personagem e do estilo (vídeo todo)* troca tudo de uma vez; depois use *Atualizar todos os quadros*.
+- **Modo Claude:** o Claude escreve o plano e, se precisar, peças novas e a `cena3d.tsx`. Em cena escrita à mão, as mudanças são pedidas por texto.
+
 ## Peças disponíveis (`lib/`, importe de `@estudio3d`)
 `Personagem` (estilos massinha/vinil/desenho; poses e expressões em `gestos.ts`), `Gato`, `CarroDetalhado`, `Galao`, `Vasilha`, `Fogo`,
 `Fumaca`, `JatoLiquido`, `Bicicleta`, `Volante`, cenários `Garagem`/`Atelie`/`Infinito`, câmera (`cameraEm` com planos) e tempo

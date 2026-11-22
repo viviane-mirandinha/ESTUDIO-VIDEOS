@@ -122,6 +122,9 @@ def planejar(pasta: Path, usar_ia: bool = True, refazer: bool = False) -> Path:
     plano = {"cenas": cenas}
     if pedido.get("predefinicao"):
         plano["predefinicao"] = pedido["predefinicao"]
+    for k in ("personagem", "render"):   # ajustes feitos na tela de criar (por cima da predefinição)
+        if isinstance(pedido.get(k), dict) and pedido[k]:
+            plano[k] = pedido[k]
     destino.write_text(json.dumps(plano, ensure_ascii=False, indent=2), encoding="utf-8")
     origem = "Ollama + regras" if escolhas else "regras"
     print(f"plano.json: {n} cenas ({origem}), cenário '{cenario}' -> {destino}")

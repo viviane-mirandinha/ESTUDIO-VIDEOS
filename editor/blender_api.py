@@ -9,7 +9,11 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from fastapi import Body, HTTPException
+import hashlib
+import threading
+import uuid
+
+from fastapi import Body, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 
 REPO = Path(__file__).resolve().parent.parent
@@ -18,6 +22,18 @@ sys.path.insert(0, str(KIT))   # gerar_cena (valores aceitos, validação do pla
 import gerar_cena as GC  # noqa: E402
 
 TIPO = "blender"
+MODELOS_DIR = KIT / "modelos"
+PRE_DIR = KIT / "predefinicoes"
+BUILTIN = {"padrao", "massinha-colorido", "desenho-hq", "vinil-elegante"}
+VISUAL_LOCK = threading.Lock()
+# valores do personagem padrão do kit (espelha lib/personagemPadrao.ts e CORES_PADRAO de lib/Personagem.tsx), para a tela mostrar o ponto de partida
+PADRAO_PERSONAGEM = {
+    "estilo": "vinil", "roupa": "varsity", "cabelo": "mullet", "barba": "cavanhaque", "escala": 1,
+    "acessorios": {"brinco": True, "tatuagem": True, "bolsa": True, "bolsosCargo": True, "cadarcos": True},
+    "cores": {"pele": "#e8bb96", "roupa": "#f1ead9", "baixo": "#ffffff", "calca": "#1d1d22", "tenis": "#18181c", "sola": "#d9d6cf",
+              "cabelo": "#1a120e", "listraA": "#c8332b", "listraB": "#1d2a4a", "cadarco": "#ffffff"},
+}
+ACESSORIOS = ["brinco", "tatuagem", "bolsa", "bolsosCargo", "cadarcos"]
 ETAPAS = ("preparando", "plano", "previas", "revisao", "aprovado", "renderizando", "pronto", "erro")
 
 
@@ -187,9 +203,10 @@ def registrar(app, G):
         pre = []
         for f in sorted((KIT / "predefinicoes").glob("*.json")):
             d = _ler_json(f, {}) or {}
-            pre.append({"id": f.stem, "nome": d.get("nome") or f.stem, "personagem": d.get("personagem", {}), "render": d.get("render", {})})
+            pre.append({"id": f.stem, "nome": d.get("nome") or f.stem, "personagem": d.get("personagem", {}), "render": d.get("render", {}), "builtin": f.stem in BUILTIN})
         return {"cena": {k: v for k, v in GC.ENUMS.items()}, "personagem": GC.PERSONAGEM_ENUMS, "cores": GC.CORES_CHAVES, "render": GC.RENDER_ENUMS,
-                "predefinicoes": pre, "modos": ["gratis", "claude"], "claude": bool(G["_claude_exe"]())}
+                "predefinicoes": pre, "modos": ["gratis", "claude"], "claude": bool(G["_claude_exe"]()),
+                "padrao_personagem": PADRAO_PERSONAGEM, "acessorios": ACESSORIOS}
 
     @app.get("/api/blender/maquina")
     def blender_maquina():
@@ -252,6 +269,168 @@ def registrar(app, G):
             res["erro"] = "A máquina responde, mas não achei o Blender no caminho configurado."
         return res
 
+
+    # ------------------------------------------------------------------ predefinições salvas
+    def _slug(nome: str) -> str:
+        return G["slug"](nome, 40) or "minha-predefinicao"
+
+    @app.post("/api/blender/predefinicoes")
+    def blender_pre_salvar(data: dict = Body(...)):
+        nome = str(data.get("nome") or "").strip()
+        if not nome:
+            raise HTTPException(400, "Dê um nome para a predefinição.")
+        pid_ = _slug(nome)
+        if pid_ in BUILTIN:
+            raise HTTPException(400, "Esse nome é de uma predefinição que já vem com o kit. Escolha outro nome.")
+        pers, rend = data.get("personagem") or {}, data.get("render") or {}
+        erros = []
+        GC.validar_personagem(pers, "personagem", erros)
+        for campo, validos in GC.RENDER_ENUMS.items():
+            if rend.get(campo) not in (None, *validos):
+                erros.append(f"render: {campo} inválido.")
+        if erros:
+            raise HTTPException(400, "; ".join(erros))
+        PRE_DIR.mkdir(exist_ok=True)
+        (PRE_DIR / f"{pid_}.json").write_text(json.dumps({"nome": nome, "personagem": pers, "render": rend}, ensure_ascii=False, indent=2), encoding="utf-8")
+        return {"id": pid_, "opcoes": blender_opcoes()}
+
+    @app.delete("/api/blender/predefinicoes/{pre}")
+    def blender_pre_apagar(pre: str):
+        pre = _slug(pre)
+        if pre in BUILTIN:
+            raise HTTPException(400, "Essa predefinição vem com o kit e não pode ser apagada.")
+        f = PRE_DIR / f"{pre}.json"
+        if not f.exists():
+            raise HTTPException(404, "Predefinição não encontrada.")
+        f.unlink()
+        return {"opcoes": blender_opcoes()}
+
+    # ------------------------------------------------------------------ prévia do personagem (1 quadro, na máquina de render)
+    @app.post("/api/blender/previa-personagem")
+    def blender_previa_personagem(data: dict = Body(...)):
+        pers, rend = data.get("personagem") or {}, data.get("render") or {}
+        enq = data.get("enquadramento") if data.get("enquadramento") in GC.ENUMS["enquadramento"] else "medio"
+        pose = data.get("pose") if data.get("pose") in GC.ENUMS["pose"] else "parado"
+        expr = data.get("expressao") if data.get("expressao") in GC.ENUMS["expressao"] else "feliz"
+        erros = []
+        GC.validar_personagem(pers, "personagem", erros)
+        if erros:
+            raise HTTPException(400, "; ".join(erros))
+        plano = {"personagem": pers, "render": rend or {"material": "vinil", "luz": "suave"},
+                 "cenas": [{"de": 0, "ate": 1.2, "texto": "Prévia", "cenario": "infinito", "pose": pose, "expressao": expr, "enquadramento": enq, "lado": "centro", "objeto": "nenhum"}]}
+        h = hashlib.sha1(json.dumps(plano, sort_keys=True).encode()).hexdigest()[:16]
+        base = G["CACHE_DIR"] / "blender-visual"
+        d = base / h
+        img = d / "previa" / "cena-01.jpg"
+        if not img.exists():
+            with VISUAL_LOCK:
+                d.mkdir(parents=True, exist_ok=True)
+                (d / "plano.json").write_text(json.dumps(plano, ensure_ascii=False), encoding="utf-8")
+                p = subprocess.run([PY, str(KIT / "construir.py"), str(d), "--previa-cenas"], cwd=str(REPO), capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=240)
+                if p.returncode != 0 or not img.exists():
+                    raise HTTPException(500, "A prévia não saiu: " + "\n".join((p.stdout + p.stderr).strip().splitlines()[-6:]))
+            pastas = sorted([x for x in base.iterdir() if x.is_dir()], key=lambda x: x.stat().st_mtime)   # guarda só as 40 mais novas
+            for x in pastas[:-40]:
+                shutil.rmtree(x, ignore_errors=True)
+        return {"url": f"/api/blender/previa-personagem/{h}.jpg"}
+
+    @app.get("/api/blender/previa-personagem/{h}.jpg")
+    def blender_previa_personagem_img(h: str):
+        if not re.fullmatch(r"[0-9a-f]{16}", h):
+            raise HTTPException(404)
+        f = G["CACHE_DIR"] / "blender-visual" / h / "previa" / "cena-01.jpg"
+        if not f.exists():
+            raise HTTPException(404)
+        return FileResponse(f, media_type="image/jpeg", headers={"Cache-Control": "max-age=3600"})
+
+    # ------------------------------------------------------------------ visual de um vídeo
+    @app.get("/api/blender/{pid}/visual")
+    def blender_visual(pid: str):
+        proj = pasta_do_pid(pid)
+        try:
+            p = GC.carregar_plano(proj)
+        except SystemExit as e:
+            raise HTTPException(400, str(e))
+        return {"personagem": p.get("personagem") or {}, "render": p.get("render") or {}, "predefinicao": (p.get("predefinicao") or ""), "cena_manual": _manual(proj)}
+
+    @app.put("/api/blender/{pid}/visual")
+    def blender_visual_salvar(pid: str, data: dict = Body(...)):
+        """Troca o visual (personagem + estilo do render) do vídeo todo. Os quadros de teste ficam desatualizados."""
+        proj = pasta_do_pid(pid)
+        f = proj / "plano.json"
+        plano = _ler_json(f)
+        if not plano:
+            raise HTTPException(400, "Sem plano.")
+        antes = f.read_text(encoding="utf-8")
+        plano["personagem"] = data.get("personagem") or {}
+        plano["render"] = data.get("render") or {}
+        if data.get("predefinicao") is not None:
+            if data["predefinicao"]:
+                plano["predefinicao"] = data["predefinicao"]
+            else:
+                plano.pop("predefinicao", None)
+        f.write_text(json.dumps(plano, ensure_ascii=False, indent=2), encoding="utf-8")
+        try:
+            GC.carregar_plano(proj)
+        except SystemExit as e:
+            f.write_text(antes, encoding="utf-8")
+            raise HTTPException(400, str(e))
+        a = aprovacao(proj)
+        n = len(plano.get("cenas") or [])
+        a["cenas"] = {str(i): "ajustar" for i in range(1, n + 1)}   # visual mudou: todas as cenas precisam ser vistas de novo
+        gravar_aprovacao(proj, a)
+        return estado(proj)
+
+    # ------------------------------------------------------------------ biblioteca de modelos .glb
+    def _modelos():
+        MODELOS_DIR.mkdir(exist_ok=True)
+        return [{"id": f.stem, "arquivo": f.name, "mb": round(f.stat().st_size / 1e6, 1)} for f in sorted(MODELOS_DIR.iterdir()) if f.suffix.lower() in (".glb", ".gltf") and f.is_file()]
+
+    @app.get("/api/blender/modelos")
+    def blender_modelos():
+        return {"modelos": _modelos()}
+
+    @app.post("/api/blender/modelos")
+    async def blender_modelos_subir(file: UploadFile = File(...)):
+        ext = Path(file.filename or "").suffix.lower()
+        if ext != ".glb":
+            raise HTTPException(400, "Envie um arquivo .glb (modelo 3D com tudo dentro). Para .gltf com pastas, converta para .glb no Blender.")
+        MODELOS_DIR.mkdir(exist_ok=True)
+        nome = G["slug"](Path(file.filename).stem, 40) or "modelo"
+        dst = MODELOS_DIR / f"{nome}.glb"
+        if dst.exists():
+            dst = MODELOS_DIR / f"{nome}-{uuid.uuid4().hex[:4]}.glb"
+        total, primeiro = 0, True
+        try:
+            with open(dst, "wb") as fh:
+                while True:
+                    ch = await file.read(4 << 20)
+                    if not ch:
+                        break
+                    if primeiro:
+                        primeiro = False
+                        if ch[:4] != b"glTF":
+                            raise HTTPException(400, "Esse arquivo não é um .glb válido.")
+                    total += len(ch)
+                    if total > 300 << 20:
+                        raise HTTPException(400, "Modelo grande demais (máximo 300 MB).")
+                    fh.write(ch)
+        except BaseException:
+            dst.unlink(missing_ok=True)
+            raise
+        if total < 100:
+            dst.unlink(missing_ok=True)
+            raise HTTPException(400, "Arquivo vazio.")
+        return {"id": dst.stem, "modelos": _modelos()}
+
+    @app.delete("/api/blender/modelos/{mid}")
+    def blender_modelos_apagar(mid: str):
+        f = MODELOS_DIR / f"{G['slug'](mid, 60)}.glb"
+        if not f.exists():
+            raise HTTPException(404, "Modelo não encontrado.")
+        f.unlink()
+        return {"modelos": _modelos()}
+
     # ------------------------------------------------------------------ projetos
     @app.get("/api/blender/lista")
     def blender_lista():
@@ -291,6 +470,16 @@ def registrar(app, G):
         ped = {"tipo": TIPO, "modo": modo, "tema": g("tema"), "roteiro": g("roteiro"), "voz": g("voz") or aj["voz"], "predefinicao": pre,
                "duracao": dur, "canal": g("canal"), "modelo_ollama": aj["modelo_ollama"], "idioma": aj["idioma"],
                "usar_ia": data.get("usar_ia") is not False, "criado": datetime.now().isoformat(timespec="seconds")}
+        for k in ("personagem", "render"):   # ajustes da tela de criar (por cima da predefinição)
+            if isinstance(data.get(k), dict) and data[k]:
+                ped[k] = data[k]
+        erros = []
+        GC.validar_personagem(ped.get("personagem") or {}, "personagem", erros)
+        for campo, validos in GC.RENDER_ENUMS.items():
+            if (ped.get("render") or {}).get(campo) not in (None, *validos):
+                erros.append(f"render: {campo} inválido.")
+        if erros:
+            raise HTTPException(400, "; ".join(erros))
         if g("cenario") in GC.ENUMS["cenario"]:
             ped["cenario"] = g("cenario")
         (proj / "pedido.json").write_text(json.dumps(ped, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -357,7 +546,23 @@ def registrar(app, G):
             raise HTTPException(404, "Cena não encontrada.")
         antes = f.read_text(encoding="utf-8")
         for k, v in campos.items():
-            if v is None or v == "":
+            if k == "modelos":   # lista de modelos da biblioteca nesta cena: declara no plano o que ainda não estiver
+                itens = []
+                for it in v or []:
+                    it = {"id": it} if isinstance(it, str) else dict(it)
+                    if "x" in it:
+                        it["pos"] = [float(it.pop("x")), float(it.get("y", 0)), float(it.get("z", 0))]
+                        it.pop("y", None)
+                        it.pop("z", None)
+                    arq = next((m["arquivo"] for m in _modelos() if m["id"] == it.get("id")), None)
+                    if not arq:
+                        raise HTTPException(400, f"Modelo '{it.get('id')}' não está na biblioteca.")
+                    decl = plano.setdefault("modelos", [])
+                    if not any(m.get("id") == it["id"] for m in decl):
+                        decl.append({"id": it["id"], "arquivo": arq})
+                    itens.append(it)
+                alvo["modelos"] = itens
+            elif v is None or v == "":
                 alvo.pop(k, None)
             else:
                 alvo[k] = v

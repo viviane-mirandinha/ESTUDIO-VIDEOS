@@ -66,7 +66,15 @@
       <h3><span class="num">3</span> Visual: personagem e estilo</h3>
       <p class="help">Cada predefinição já traz personagem, roupa, cores e estilo de render (vinil, massinha ou desenho). Depois dá pra mudar cena por cena.</p>
       <div class="bzPres" id="bzPres"></div>
+      <details class="bzDet" id="bzVisCriar"><summary>🎨 Personalizar personagem, cores e estilo <small class="mu">(opcional)</small></summary><div id="bzVedCriar"></div></details>
       <div class="row"><label></label><button class="btn big go" id="bzFazer">🧊 Preparar as cenas</button><span class="mu" id="bzFazerNota">Roteiro → voz → plano de cenas (uns 2–4 min). Nada é renderizado ainda.</span></div>
+    </div>
+
+    <div class="card pstep">
+      <h3><span class="num">📦</span> Meus modelos 3D <small class="mu">(.glb)</small></h3>
+      <p class="help">Traga personagens, cenários ou objetos 3D seus (arquivo <b>.glb</b>). Depois, na revisão de cada cena, você escolhe onde usar. <b>Só use modelos que você tem direito de usar.</b> Eles ficam só neste computador.</p>
+      <div id="bzModelos" class="bzModelos"></div>
+      <div class="row"><label></label><input type="file" id="bzModeloArq" accept=".glb" hidden /><button class="btn" id="bzModeloSubir">⬆ Enviar um modelo .glb</button><span class="mu" id="bzModeloMsg"></span></div>
     </div>
 
     <h4 class="grp">🎞 Seus vídeos Blender 3D <span id="bzN"></span></h4>
@@ -115,7 +123,7 @@
       <b>${esc(p.nome)}</b><div class="bzSw">${(cores(p).length ? cores(p) : ["#e8bb96", "#f1ead9", "#1d1d22", "#1a120e"]).map((c) => `<i style="background:${c}"></i>`).join("")}</div>
       <small>${estilo(p)} · luz ${esc((p.render || {}).luz || "suave")}</small></button>`).join("");
   }
-  el("#bzPres").onclick = (e) => { const b = e.target.closest("[data-bzp]"); if (!b) return; BZ.pre = b.dataset.bzp; bzOpcoes(); };
+  el("#bzPres").onclick = (e) => { const b = e.target.closest("[data-bzp]"); if (!b) return; BZ.pre = b.dataset.bzp; bzOpcoes(); if (window.__vedCriarReset) window.__vedCriarReset(); };
   el("#bzModo").onclick = (e) => {
     const b = e.target.closest("[data-bzm]"); if (!b || b.disabled) return;
     BZ.modo = b.dataset.bzm; modosOn("#bzModo", "bzm", BZ.modo);
@@ -133,7 +141,7 @@
     if (BZ.tm === "tema" && !tema) return erroCampo("#bzTema", "Escreva o tema do vídeo");
     if (BZ.tm === "roteiro" && roteiro.split(/\s+/).length < 8) return erroCampo("#bzRoteiro", "Cole o roteiro (pelo menos algumas frases)");
     let r;
-    try { r = await jpost("/api/blender/criar", { modo: BZ.modo, tema: BZ.tm === "tema" ? tema : "", roteiro: BZ.tm === "roteiro" ? roteiro : "", duracao: BZ.dur, voz: el("#bzVoz").value, predefinicao: BZ.pre }); }
+    try { r = await jpost("/api/blender/criar", { modo: BZ.modo, tema: BZ.tm === "tema" ? tema : "", roteiro: BZ.tm === "roteiro" ? roteiro : "", duracao: BZ.dur, voz: el("#bzVoz").value, predefinicao: BZ.pre, ...(VED.criar && VED.criar.tocado ? { personagem: VED.criar.pers, render: VED.criar.render } : {}) }); }
     catch (e) { return toast("❌ " + errTxt(e), 6000); }
     BZ.cena = 1; BZ.velhas = new Set();
     await bzAbrir(r.pid);
@@ -154,7 +162,7 @@
     carregarVozes().catch(() => { });
     renderDurs("#bzDurs", BZ.dur, (d) => (BZ.dur = d), null, [[20, "20 s"], [30, "30 s"], [45, "45 s"], [60, "1 min"], [90, "1:30"], [120, "2 min"], [180, "3 min"]]);
     await bzOpcoes().catch(() => { });
-    bzMaq(true); bzLista();
+    bzMaq(true); bzLista(); bzModelos();
     if (pid) return bzAbrir(pid);
     el("#bzCriar").classList.remove("hidden"); el("#bzRevisao").classList.add("hidden");
   }
@@ -164,7 +172,7 @@
   // ------------------------------------------------------------------ revisão cena a cena
   async function bzCarregar() { BZ.e = await api("/api/blender/" + BZ.pid); return BZ.e; }
   async function bzAbrir(pid) {
-    BZ.pid = pid;
+    BZ.pid = pid; delete VED.rev;
     el("#bzCriar").classList.add("hidden"); el("#bzRevisao").classList.remove("hidden");
     try { await bzCarregar(); } catch (e) { toast("❌ " + errTxt(e), 5000); return bzVoltar(); }
     bzDesenhar(); bzPoll();
@@ -218,9 +226,11 @@
         <div><div class="mu">Cena ${n} de ${cenas.length} · ${Number(c.de || 0).toFixed(1)}s → ${Number(c.ate || 0).toFixed(1)}s</div>
           <div class="bzTexto">“${esc(c.texto || "")}”</div>
           ${e.cena_manual ? `<div class="bzAviso">🧠 Esta cena foi escrita à mão pelo Claude, então os campos prontos não valem aqui. Para mudar algo, peça ao Claude abaixo.</div>` : `<div class="bzCampos">${CAMPOS.map(([k]) => sel(k, c[k], n)).join("")}</div>`}
+          ${e.cena_manual ? "" : bzModelosCena(c, n)}
           ${(e.pedido && e.pedido.modo === "claude") ? `<div class="bzClaude"><label>🧠 Pedir uma mudança ao Claude <small>(gasta tokens; ele refaz os quadros de teste)</small></label><textarea id="bzPedirTxt" rows="2" placeholder="Ex.: na cena ${n}, deixe o personagem mais perto e com cara de espanto; troque o cenário por uma cozinha"></textarea><button class="btn" data-bzx="pedir" ${ocupado ? "disabled" : ""}>🧠 Pedir ao Claude</button></div>` : ""}
           <div class="bzAcoes">
             <button class="btn" data-bzx="atualizar" ${ocupado ? "disabled" : ""}>🔄 Atualizar quadro desta cena</button>
+            <button class="btn" data-bzx="atualizar_todas" ${ocupado ? "disabled" : ""}>🔄 Atualizar todos os quadros</button>
           </div>
           <div class="bzAcoes">
             ${e.etapa === "aprovado" && !ocupado ? `<button class="btn go big" data-bzx="renderizar">🎬 Renderizar o vídeo agora</button>` : ""}
@@ -229,9 +239,11 @@
           </div>
           <p class="mu">“Fazer tudo” aprova esta e todas as cenas que faltam e já começa o render completo.</p></div></div></div>`;
     }
+    h += `<div class="card"><details class="bzDet" id="bzVisRev"><summary><b>🎨 Visual do personagem e do estilo (vídeo todo)</b></summary><div id="bzVedRev"></div></details></div>`;
     if (e.resumo_claude) h += `<div class="card"><details><summary><b>🧠 O que o Claude fez</b></summary><pre style="white-space:pre-wrap;margin:8px 0 0">${esc(e.resumo_claude)}</pre></details></div>`;
     box.innerHTML = h;
     bzJobBarra();
+    bzVisRevLigar();
   }
 
   async function acao(a) {
@@ -241,6 +253,7 @@
       if (a === "ver") return api(`/api/open/${e.pid}?what=final`, { method: "POST" });
       if (a === "pasta") return api(`/api/open/${e.pid}?what=folder`, { method: "POST" });
       if (a === "previas") await jpost(`/api/blender/${e.pid}/previas`, {});
+      else if (a === "atualizar_todas") { await jpost(`/api/blender/${e.pid}/previas`, {}); BZ.velhas = new Set(); }
       else if (a === "atualizar") { await jpost(`/api/blender/${e.pid}/previas`, { cenas: [n] }); BZ.velhas.delete(n); }
       else if (a === "renderizar") await jpost(`/api/blender/${e.pid}/renderizar`, {});
       else if (a === "pedir") {
@@ -272,10 +285,189 @@
     const x = ev.target.closest("[data-bzx]"); if (x && !x.disabled) acao(x.dataset.bzx);
   };
   el("#bzRevisao").onchange = async (ev) => {
+    const mt = ev.target.closest("[data-bzmc],[data-bzmx],[data-bzme],[data-bzsp]");
+    if (mt) return bzSalvaModelosCena(+mt.dataset.n);
     const s = ev.target.closest("[data-bzc]"); if (!s) return;
     const n = +s.dataset.n;
     try { await jpost(`/api/blender/${BZ.pid}/ajustar`, { cena: n, campos: { [s.dataset.bzc]: s.value } }); BZ.velhas.add(n); }
     catch (x) { toast("❌ " + errTxt(x), 6000); }
     await bzCarregar(); bzDesenhar();
   };
+
+
+  // ---- modelos .glb dentro da cena
+  function bzModelosCena(c, n) {
+    const lib = BZ.modelos || [];
+    const nos = {}; (c.modelos || []).forEach((m) => { const o = typeof m === "string" ? { id: m } : m; nos[o.id] = o; });
+    const lista = lib.length ? lib.map((m) => {
+      const on = !!nos[m.id], o = nos[m.id] || {}, x = (o.pos || [0])[0];
+      return `<div class="bzModCena"><label class="chk"><input type="checkbox" data-bzmc="${esc(m.id)}" data-n="${n}" ${on ? "checked" : ""}> 📦 ${esc(m.id)}</label>
+        ${on ? `<select data-bzmx="${esc(m.id)}" data-n="${n}"><option value="-1.5" ${x < -0.5 ? "selected" : ""}>Esquerda</option><option value="0" ${x >= -0.5 && x <= 0.5 ? "selected" : ""}>Centro</option><option value="1.5" ${x > 0.5 ? "selected" : ""}>Direita</option></select>
+        <label class="mu">tamanho <input type="number" step="0.1" min="0.05" max="20" value="${o.escala || 1}" data-bzme="${esc(m.id)}" data-n="${n}" style="width:70px"></label>` : ""}</div>`;
+    }).join("") : '<div class="mu">Você ainda não enviou modelos .glb (veja “Meus modelos 3D” na tela de criar).</div>';
+    return `<details class="bzDet" ${Object.keys(nos).length || c.sem_personagem ? "open" : ""}><summary>📦 Modelos 3D nesta cena</summary>${lista}
+      <label class="chk" style="margin-top:8px"><input type="checkbox" data-bzsp="1" data-n="${n}" ${c.sem_personagem ? "checked" : ""}> Esconder o personagem do kit nesta cena</label></details>`;
+  }
+  async function bzSalvaModelosCena(n) {
+    const box = el("#bzRevisao"), itens = [];
+    box.querySelectorAll(`[data-bzmc][data-n="${n}"]`).forEach((cb) => {
+      if (!cb.checked) return; const id = cb.dataset.bzmc;
+      const x = box.querySelector(`[data-bzmx="${CSS.escape(id)}"][data-n="${n}"]`), es = box.querySelector(`[data-bzme="${CSS.escape(id)}"][data-n="${n}"]`);
+      itens.push({ id, x: x ? parseFloat(x.value) : 0, escala: es ? parseFloat(es.value) || 1 : 1 });
+    });
+    try { await jpost(`/api/blender/${BZ.pid}/ajustar`, { cena: n, campos: { modelos: itens, sem_personagem: !!box.querySelector(`[data-bzsp][data-n="${n}"]`).checked || "" } }); BZ.velhas.add(n); }
+    catch (x) { toast("❌ " + errTxt(x), 6000); }
+    await bzCarregar(); bzDesenhar();
+  }
+
+  // ---- editor visual dentro da revisão
+  function bzVisRevLigar() {
+    const det = el("#bzVisRev"); if (!det) return;
+    const cbRev = async (acao) => { if (acao === "aplicar") await bzAplicarVisual(); };
+    det.addEventListener("toggle", async () => {
+      if (!det.open) return;
+      const box = el("#bzVedRev");
+      if (VED.rev) { VED.rev.box = box; box.innerHTML = vedHtml("rev"); return vedEventos(box, "rev", cbRev); }   // a tela foi redesenhada: volta com o que já estava editado
+      box.innerHTML = '<div class="mu">Carregando…</div>';
+      try {
+        const v = await api(`/api/blender/${BZ.pid}/visual`);
+        vedMontar("rev", box, v.personagem, v.render, v.predefinicao || (BZ.e.pedido || {}).predefinicao || "padrao",
+          `${v.cena_manual ? '<div class="bzAviso">🧠 Esta cena foi escrita à mão pelo Claude: o personagem vem do código dela. Aqui vale só o <b>estilo do render</b>. Para mudar o personagem, peça ao Claude.</div>' : ""}
+           <div class="bzAcoes"><button class="btn ok big" data-vx="aplicar">✅ Aplicar a este vídeo</button></div><p class="mu">Ao aplicar, todos os quadros de teste ficam desatualizados e você revisa as cenas de novo.</p>`);
+        vedEventos(box, "rev", cbRev);
+      } catch (x) { box.innerHTML = '<div class="bzAviso">❌ ' + esc(errTxt(x)) + "</div>"; }
+    });
+  }
+  async function bzAplicarVisual() {
+    const V = VED.rev; if (!V) return;
+    if (!confirm("Aplicar este visual ao vídeo todo? Os quadros de teste vão precisar ser atualizados.")) return;
+    try { await jpost(`/api/blender/${BZ.pid}/visual`, { personagem: V.pers, render: V.render, predefinicao: V.pre }, "PUT"); }
+    catch (x) { return toast("❌ " + errTxt(x), 6000); }
+    delete VED.rev; BZ.velhas = new Set(((BZ.e.plano || {}).cenas || []).map((_, i) => i + 1));
+    await bzCarregar(); bzDesenhar(); toast("✅ Visual aplicado. Clique em “Atualizar todos os quadros”.", 5000);
+  }
+
+  // ================================================================== EDITOR VISUAL (personagem + estilo do render)
+  const COR_ROT = { pele: "Pele", roupa: "Roupa (cima)", baixo: "Camiseta por baixo", calca: "Calça", tenis: "Tênis", sola: "Sola", cabelo: "Cabelo", listraA: "Listra A", listraB: "Listra B", cadarco: "Cadarço" };
+  const OPC = {
+    estilo: { vinil: "Vinil", massinha: "Massinha", desenho: "Desenho" }, roupa: { camiseta: "Camiseta", moletom: "Moletom", jardineira: "Jardineira", jaqueta: "Jaqueta", varsity: "Jaqueta varsity" },
+    cabelo: { tigela: "Tigela", topete: "Topete", cacheado: "Cacheado", mullet: "Mullet" }, barba: { nenhuma: "Nenhuma", cavanhaque: "Cavanhaque" },
+    material: { vinil: "Vinil (brilhante)", massinha: "Massinha (fosco)", desenho: "Desenho (contorno)" }, luz: { suave: "Suave", dura: "Dura", neutra: "Neutra" },
+    acessorio: { brinco: "Brinco", tatuagem: "Tatuagem", bolsa: "Bolsa", bolsosCargo: "Bolsos cargo", cadarcos: "Cadarços" },
+  };
+  const clone = (o) => JSON.parse(JSON.stringify(o));
+  const juntaP = (a, b) => { const r = clone(a); for (const [k, v] of Object.entries(b || {})) r[k] = v && typeof v === "object" && !Array.isArray(v) ? { ...(r[k] || {}), ...v } : v; return r; };
+  const VED = {};   // estado de cada editor: { pers, render, pre, ult }
+
+  function vedHtml(k) {
+    const o = (m, cur) => Object.entries(m).map(([v, l]) => `<option value="${v}" ${v === cur ? "selected" : ""}>${l}</option>`).join("");
+    const V = VED[k], P = V.pers, R = V.render;
+    const pres = BZ.op.predefinicoes;
+    return `<div class="bzVed" data-ved="${k}">
+      <div class="bzVedTop"><label>Começar de</label><select data-vp="pre">${pres.map((p) => `<option value="${esc(p.id)}" ${p.id === V.pre ? "selected" : ""}>${esc(p.nome)}${p.builtin ? "" : " ★"}</option>`).join("")}</select>
+        <button class="btn" data-vx="salvar">💾 Salvar como predefinição</button>${(pres.find((p) => p.id === V.pre) || {}).builtin === false ? `<button class="btn danger" data-vx="apagar">🗑 Apagar esta</button>` : ""}</div>
+      <div class="bzVedGrid">
+        <div>
+          <h5>Personagem</h5>
+          <div class="bzCampos">
+            <div><label>Estilo do corpo</label><select data-vp="estilo">${o(OPC.estilo, P.estilo)}</select></div>
+            <div><label>Roupa</label><select data-vp="roupa">${o(OPC.roupa, P.roupa)}</select></div>
+            <div><label>Cabelo</label><select data-vp="cabelo">${o(OPC.cabelo, P.cabelo)}</select></div>
+            <div><label>Barba</label><select data-vp="barba">${o(OPC.barba, P.barba)}</select></div>
+            <div><label>Tamanho (${Number(P.escala || 1).toFixed(2)}×)</label><input type="range" min="0.6" max="1.6" step="0.05" value="${P.escala || 1}" data-vp="escala"></div>
+          </div>
+          <div class="bzAcess">${Object.entries(OPC.acessorio).map(([a, l]) => `<label class="chk"><input type="checkbox" data-va="${a}" ${(P.acessorios || {})[a] ? "checked" : ""}> ${l}</label>`).join("")}</div>
+          <div class="bzCores">${Object.entries(COR_ROT).map(([c, l]) => `<label title="${l}"><input type="color" data-vc="${c}" value="${(P.cores || {})[c] || "#888888"}"><span>${l}</span></label>`).join("")}</div>
+          <h5>Estilo do render</h5>
+          <div class="bzCampos">
+            <div><label>Material</label><select data-vr="material">${o(OPC.material, R.material || "vinil")}</select></div>
+            <div><label>Luz</label><select data-vr="luz">${o(OPC.luz, R.luz || "suave")}</select></div>
+            <div><label>&nbsp;</label><label class="chk"><input type="checkbox" data-vr="contorno" ${R.contorno || (R.material === "desenho" && R.contorno !== false) ? "checked" : ""}> Contorno preto</label></div>
+          </div>
+        </div>
+        <div class="bzVedPrev"><div class="bzImg"><img alt="Prévia do personagem" ${V.img ? `src="${V.img}"` : ""} style="${V.img ? "" : "display:none"}"><div class="velha" style="background:#2a2c33;${V.img ? "display:none" : ""}">Clique em “Ver como fica”</div></div>
+          <div class="bzAcoes"><select data-vq="enq"><option value="medio">Meio corpo</option><option value="geral">Corpo inteiro</option><option value="close">Rosto</option></select><button class="btn go" data-vx="ver">🔄 Ver como fica</button></div>
+          <div class="mu" data-vmsg></div></div>
+      </div>
+      ${V.rodape || ""}
+    </div>`;
+  }
+  function vedMontar(k, box, pers, render, pre, rodape) {
+    VED[k] = { pers: juntaP(BZ.op.padrao_personagem, pers || {}), render: clone(render || {}), pre: pre || "padrao", img: "", rodape: rodape || "", box, tocado: false };
+    box.innerHTML = vedHtml(k);
+  }
+  function vedAtualiza(k) { const V = VED[k]; const img = V.box.querySelector("img"), velha = V.box.querySelector(".velha"); img.style.display = V.img ? "" : "none"; if (V.img) img.src = V.img; velha.style.display = V.img ? "none" : ""; }
+  async function vedPrevia(k) {
+    const V = VED[k], msg = V.box.querySelector("[data-vmsg]");
+    msg.textContent = "⏳ Gerando a prévia na máquina de render…";
+    try {
+      const r = await jpost("/api/blender/previa-personagem", { personagem: V.pers, render: V.render, enquadramento: V.box.querySelector("[data-vq=enq]").value });
+      V.img = r.url; vedAtualiza(k); msg.textContent = "";
+    } catch (e) { msg.textContent = "❌ " + errTxt(e); }
+  }
+  function vedEventos(box, k, onMudou) {
+    box.addEventListener("change", async (ev) => {
+      const t = ev.target, V = VED[k]; if (!V || !t.closest(".bzVed")) return;
+      if (t.dataset.vp === "pre") {
+        const pr = BZ.op.predefinicoes.find((p) => p.id === t.value); if (!pr) return;
+        V.pre = pr.id; V.pers = juntaP(BZ.op.padrao_personagem, pr.personagem); V.render = clone(pr.render || {}); V.tocado = true; box.innerHTML = vedHtml(k); onMudou && onMudou(); return vedPrevia(k);
+      }
+      if (t.dataset.vp) { V.pers[t.dataset.vp] = t.dataset.vp === "escala" ? parseFloat(t.value) : t.value; V.tocado = true; if (t.dataset.vp === "escala") box.querySelector("[data-vp=escala]").previousElementSibling.textContent = `Tamanho (${(+t.value).toFixed(2)}×)`; }
+      else if (t.dataset.va) { (V.pers.acessorios = V.pers.acessorios || {})[t.dataset.va] = t.checked; V.tocado = true; }
+      else if (t.dataset.vc) { (V.pers.cores = V.pers.cores || {})[t.dataset.vc] = t.value; V.tocado = true; }
+      else if (t.dataset.vr) { V.render[t.dataset.vr] = t.type === "checkbox" ? t.checked : t.value; V.tocado = true; if (t.dataset.vr === "material" && t.value === "desenho" && V.render.contorno === undefined) V.render.contorno = true; }
+      else return;
+      onMudou && onMudou();
+    });
+    box.addEventListener("click", async (ev) => {
+      const b = ev.target.closest("[data-vx]"); if (!b) return; const V = VED[k];
+      if (b.dataset.vx === "ver") return vedPrevia(k);
+      if (b.dataset.vx === "salvar") {
+        const nome = (prompt("Nome da predefinição (ex.: Meu herói de massinha):") || "").trim(); if (!nome) return;
+        try { const r = await jpost("/api/blender/predefinicoes", { nome, personagem: V.pers, render: V.render }); BZ.op = r.opcoes; V.pre = r.id; box.innerHTML = vedHtml(k); bzOpcoes(); toast("✅ Predefinição salva: " + nome); }
+        catch (e) { toast("❌ " + errTxt(e), 5000); }
+      }
+      if (b.dataset.vx === "apagar") {
+        if (!confirm("Apagar esta predefinição?")) return;
+        try { const r = await jpost("/api/blender/predefinicoes/" + encodeURIComponent(V.pre), {}, "DELETE"); BZ.op = r.opcoes; V.pre = "padrao"; box.innerHTML = vedHtml(k); bzOpcoes(); toast("Predefinição apagada."); }
+        catch (e) { toast("❌ " + errTxt(e), 5000); }
+      }
+      if (b.dataset.vx === "aplicar" && onMudou) onMudou("aplicar");
+    });
+  }
+
+  // ---- editor na tela de criar
+  function vedCriarIniciar() {
+    const pr = BZ.op.predefinicoes.find((p) => p.id === BZ.pre) || BZ.op.predefinicoes[0];
+    vedMontar("criar", el("#bzVedCriar"), pr.personagem, pr.render, pr.id);
+  }
+  window.__vedCriarReset = () => { delete VED.criar; el("#bzVedCriar").innerHTML = ""; if (el("#bzVisCriar").open) vedCriarIniciar(); };
+  el("#bzVisCriar").addEventListener("toggle", () => { if (el("#bzVisCriar").open && BZ.op && !VED.criar) { vedCriarIniciar(); } });
+  vedEventos(el("#bzVedCriar"), "criar", () => { });
+
+  // ================================================================== MODELOS .glb (biblioteca)
+  async function bzModelos() {
+    let l = []; try { l = (await api("/api/blender/modelos")).modelos; } catch (e) { }
+    BZ.modelos = l;
+    el("#bzModelos").innerHTML = l.length ? l.map((m) => `<div class="bzMod"><b>📦 ${esc(m.id)}</b><span class="mu">${m.mb} MB</span><button class="btn danger" data-bzmd="${esc(m.id)}">🗑</button></div>`).join("") : '<div class="mu">Nenhum modelo ainda.</div>';
+  }
+  el("#bzModelos").onclick = async (e) => {
+    const b = e.target.closest("[data-bzmd]"); if (!b) return;
+    if (!confirm("Apagar o modelo “" + b.dataset.bzmd + "” da biblioteca?")) return;
+    try { await jpost("/api/blender/modelos/" + encodeURIComponent(b.dataset.bzmd), {}, "DELETE"); } catch (x) { toast("❌ " + errTxt(x), 5000); }
+    bzModelos();
+  };
+  el("#bzModeloSubir").onclick = () => el("#bzModeloArq").click();
+  el("#bzModeloArq").onchange = async () => {
+    const f = el("#bzModeloArq").files[0]; if (!f) return;
+    const msg = el("#bzModeloMsg"); msg.textContent = "⏳ Enviando " + f.name + "…";
+    const fd = new FormData(); fd.append("file", f);
+    try {
+      const r = await fetch("/api/blender/modelos", { method: "POST", body: fd });
+      if (!r.ok) throw new Error(await r.text());
+      msg.textContent = "✅ Enviado."; toast("✅ Modelo enviado!");
+    } catch (x) { msg.textContent = "❌ " + errTxt(x); }
+    el("#bzModeloArq").value = ""; bzModelos();
+  };
+
 })();
