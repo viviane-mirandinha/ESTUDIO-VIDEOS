@@ -1,0 +1,30 @@
+/* Aba "Blender 3D" — estilos próprios (o resto usa o style.css do painel) */
+#blender .bzTop{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.bzMaq{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bzChip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-size:14px;font-weight:700;background:var(--pn2);color:var(--tx)}
+.bzChip.ok{background:#1d7a4a;color:#fff}.bzChip.no{background:#b23a3a;color:#fff}.bzChip.wait{background:var(--pn2);color:var(--tx);border:1px solid var(--ac)}
+.bzMaqEdit{display:none;margin-top:10px}.bzMaqEdit.on{display:block}
+.bzMaqEdit .row{display:flex;gap:10px;align-items:center;margin:6px 0}.bzMaqEdit label{width:120px;flex:none;font-weight:600}.bzMaqEdit input{flex:1;padding:8px}
+.bzPres{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:8px}
+.bzPre{border:2px solid transparent;background:var(--pn2);border-radius:12px;padding:12px;cursor:pointer;text-align:left;color:var(--tx);font:inherit}
+.bzPre.on{border-color:var(--ok);background:rgba(47,191,113,.16)}
+.bzPre b{display:block;font-size:16px;margin-bottom:4px}.bzPre small{color:var(--mu);display:block;margin-top:6px}
+.bzSw{display:flex;gap:5px}.bzSw i{width:22px;height:22px;border-radius:50%;border:2px solid rgba(0,0,0,.35);display:inline-block}
+.bzStep{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.bzStep .btn{min-width:44px;padding:8px 12px}
+.bzStep .btn.ok{border-color:var(--ok);background:rgba(47,191,113,.18);color:var(--tx)} .bzStep .btn.aj{border-color:var(--ac);background:rgba(255,176,32,.18);color:var(--tx)} .bzStep .btn.on{outline:2px solid var(--tx)}
+.bzRev{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:20px;align-items:start}
+@media(max-width:780px){.bzRev{grid-template-columns:1fr}}
+.bzImg{position:relative;background:#111;border-radius:12px;overflow:hidden;aspect-ratio:9/16;width:100%}
+.bzImg img{width:100%;height:100%;object-fit:cover;display:block}
+.bzImg .velha{position:absolute;inset:0;background:#000a;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-weight:700}
+.bzCampos{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:12px 0}
+.bzCampos label{display:block;font-size:13px;color:var(--mu);margin-bottom:3px}.bzCampos select{width:100%;padding:8px;font-size:15px}
+.bzTexto{font-size:18px;line-height:1.4;background:var(--pn2);padding:12px 14px;border-radius:10px;margin:8px 0}
+.bzAcoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.bzAcoes .btn.big{font-size:17px;padding:13px 20px}
+.bzJob{background:var(--pn2);border:1px solid var(--ac);border-radius:12px;padding:12px 14px;margin:12px 0}
+.bzJob .bar{height:10px;background:rgba(0,0,0,.25);border-radius:6px;overflow:hidden;margin-top:8px;display:block;padding:0;border:0}.bzJob .bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .4s}
+.bzAviso{background:rgba(255,176,32,.18);color:var(--tx);border-left:4px solid var(--ac);padding:10px 14px;border-radius:8px;margin:10px 0}
+.bzLista .proj{cursor:pointer}
+.bzVolt{margin:10px 16px 0}
