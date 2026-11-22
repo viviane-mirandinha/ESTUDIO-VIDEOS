@@ -5612,3 +5612,7 @@ if __name__ == "__main__":
                 raise
             print("IPv6 ::1 indisponível:", e)
     uvicorn.Server(uvicorn.Config(app, log_level="warning")).run(sockets=socks)
+import blender_api  # noqa: E402  (opção Blender 3D: rotas em arquivo separado)
+blender_api.registrar(app, globals())
+
+

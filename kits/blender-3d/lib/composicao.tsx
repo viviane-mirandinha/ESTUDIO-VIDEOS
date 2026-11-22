@@ -83,6 +83,8 @@ const enquadrar = (tipo: Enquadramento, lado: Lado, objeto: ObjetoNome): Omit<Pl
     case 'close':
       return {pos: [px + 0.4, 2.4, PZ + 4.4], alvo: [px, 2.15, PZ], fov: 30};
     case 'medio':
+      // com objeto (carro, gato) o plano médio abre o suficiente para os dois aparecerem
+      if (ox !== px) return {pos: [cx + 0.4, 2.6, PZ + Math.max(7, dist * 0.8)], alvo: [cx, 1.8, PZ], fov: 32};
       return {pos: [px + 0.4, 2.5, PZ + 6.2], alvo: [px, 2.1, PZ], fov: 32};
     case 'lado':
       return {pos: [cx + dist * 0.8, 2.6, PZ + dist * 0.55], alvo: [cx, 1.6, PZ - 0.3], fov: 32};

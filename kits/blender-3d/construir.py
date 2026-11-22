@@ -89,7 +89,7 @@ def montar_edit(pasta: Path, dur_cena: float, largura: int, altura: int):
     print("edit.json criado (o vídeo aparece no editor).")
 
 
-def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list):
+def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list, so_cenas=None):
     """Um quadro de cada cena do plano (o do meio da cena) -> previa/cena-NN.jpg + previa/previas.json."""
     pj = bl / "plano.normalizado.json"
     if not pj.exists():
@@ -100,12 +100,19 @@ def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list):
     for c in cenas:
         f = min(total, max(1, int(round((c["de"] + c["ate"]) / 2 * fps)) + 1))
         alvo.append((c, f))
+    if so_cenas:   # só algumas cenas (depois de ajustar): as outras prévias ficam como estão
+        alvo = [(c, f) for c, f in alvo if c["id"] in so_cenas]
+        if not alvo:
+            sys.exit("Nenhuma dessas cenas existe no plano.")
     lista = ",".join(str(f) for _, f in alvo)
     passo(f"2/2 quadros de teste das {len(cenas)} cenas", [PY, str(KIT / "render_quadros.py"), str(bl), "--quadros", lista, *extra])
     pv = pasta / "previa"
     pv.mkdir(exist_ok=True)
+    antigas = []
+    if so_cenas and (pv / "previas.json").exists():
+        antigas = [i for i in json.loads((pv / "previas.json").read_text(encoding="utf-8")) if i["cena"] not in so_cenas]
     for velho in pv.glob("*"):   # limpa as prévias antigas (sem apagar a pasta: no Windows ela pode estar aberta)
-        if velho.is_file():
+        if velho.is_file() and not (so_cenas and any(velho.name == i["arquivo"] for i in antigas)):
             velho.unlink()
     itens = []
     for c, f in alvo:
@@ -115,6 +122,7 @@ def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list):
         dst = pv / f"cena-{c['id']:02d}{src.suffix}"
         shutil.copy(src, dst)
         itens.append({"cena": c["id"], "quadro": f, "arquivo": dst.name, "de": c["de"], "ate": c["ate"], "texto": c.get("texto", "")})
+    itens = sorted(antigas + itens, key=lambda i: i["cena"])
     (pv / "previas.json").write_text(json.dumps(itens, ensure_ascii=False, indent=2), encoding="utf-8")
     shutil.rmtree(bl / "quadros", ignore_errors=True)
     print(f"\nPrévias das cenas em {pv} ({len(itens)} imagens).")
@@ -148,7 +156,10 @@ def main():
     if "--local" in a:
         extra.append("--local")
     if "--previa-cenas" in a:
-        return previa_cenas(pasta, bl, info, extra)
+        so = None
+        if "--cenas" in a and a.index("--cenas") + 1 < len(a):
+            so = {int(x) for x in a[a.index("--cenas") + 1].split(",") if x.strip().isdigit()}
+        return previa_cenas(pasta, bl, info, extra, so)
     if "--teste" in a:
         qs = f"{max(1, total // 8)},{total // 2},{max(1, total - total // 8)}"
         passo("2/4 render de teste (3 quadros)", [PY, str(KIT / "render_quadros.py"), str(bl), "--quadros", qs, *extra])
