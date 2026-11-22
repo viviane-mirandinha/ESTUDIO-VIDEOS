@@ -43,6 +43,33 @@ Em vez de escrever o `cena3d.tsx`, descreva o vídeo em **cenas** num `plano.jso
 - Um `cena3d.tsx` escrito à mão nunca é sobrescrito pelo gerador (o gerador só mexe em arquivos com a marca "GERADO DO PLANO").
 - Limite: o céu do ateliê sai de cor lisa no Blender (sem degradê).
 
+## Personalização: personagem, cenários, estilo e modelos próprios
+Tudo é opcional e vai no `plano.json` (ou numa **predefinição** salva).
+
+**Predefinição** (`"predefinicao": "massinha-colorido"`): pacote pronto de personagem + estilo de render. Ficam em `predefinicoes/*.json`
+(inclusas: `padrao`, `massinha-colorido`, `desenho-hq`, `vinil-elegante`). Crie as suas copiando um arquivo; uma predefinição na pasta do vídeo
+(`<pasta>/predefinicoes/`) vale só para ele. O que estiver no plano sempre vence a predefinição.
+
+**Personagem** (`"personagem": {...}`, no plano todo ou numa cena só): `estilo` (massinha, vinil, desenho), `roupa` (camiseta, moletom, jardineira,
+jaqueta, varsity), `cabelo` (tigela, topete, cacheado, mullet), `barba` (nenhuma, cavanhaque), `acessorios` (brinco, tatuagem, bolsa, bolsosCargo, cadarcos),
+`cores` (pele, roupa, baixo, calca, tenis, sola, cabelo, listraA, listraB, cadarco — sempre `#rrggbb`) e `escala` (0,3 a 3).
+
+**Estilo do render** (`"render": {...}`): `material` = `vinil` (brilhante), `massinha` (fosco) ou `desenho` (cores em degraus + contorno preto);
+`luz` = `suave`, `dura` ou `neutra`; `contorno` (true/false) e `contorno_espessura`.
+
+**Cenário:** `cenario` (garagem, ateliê, infinito), `fundo` (cor) e `luz` (força) por cena. Cenário novo = peça nova em `lib/Cenarios.tsx`
+(modo Claude) **ou** um modelo `.glb`.
+
+**Modelos .glb próprios** (personagem, cenário, objeto — de qualquer fonte que você tenha direito de usar): ponha o arquivo na pasta do vídeo
+(ou em `kits/blender-3d/modelos/`) e declare:
+```json
+"modelos": [{"id": "robo", "arquivo": "modelos/robo.glb", "escala": 1, "pos": [0,0,0], "giro": 0, "estilizar": true}],
+"cenas": [{"de": 0, "ate": 3, "sem_personagem": true, "modelos": ["robo"]}]
+```
+`sem_personagem` esconde o personagem do kit naquela cena; `modelos` lista o que aparece (cada item pode ser `{"id","pos","giro","escala"}` para mudar a posição só ali).
+`estilizar: true` aplica o material do render (massinha/desenho) também ao modelo. Se o modelo vier com animação, ela toca desde o começo do vídeo.
+Esses modelos não mexem a boca nem os braços sozinhos: a fala só anima o personagem do kit.
+
 ## Peças disponíveis (`lib/`, importe de `@estudio3d`)
 `Personagem` (estilos massinha/vinil/desenho; poses e expressões em `gestos.ts`), `Gato`, `CarroDetalhado`, `Galao`, `Vasilha`, `Fogo`,
 `Fumaca`, `JatoLiquido`, `Bicicleta`, `Volante`, cenários `Garagem`/`Atelie`/`Infinito`, câmera (`cameraEm` com planos) e tempo

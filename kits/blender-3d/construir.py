@@ -91,7 +91,7 @@ def montar_edit(pasta: Path, dur_cena: float, largura: int, altura: int):
 
 def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list):
     """Um quadro de cada cena do plano (o do meio da cena) -> previa/cena-NN.jpg + previa/previas.json."""
-    pj = pasta / "plano.json"
+    pj = bl / "plano.normalizado.json"
     if not pj.exists():
         sys.exit("--previa-cenas precisa de plano.json (modo por cenas).")
     cenas = json.loads(pj.read_text(encoding="utf-8"))["cenas"]

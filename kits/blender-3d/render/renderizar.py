@@ -31,6 +31,12 @@ def opcao(nome, padrao=None):
 
 
 dados = json.load(open(os.path.join(pasta, "quadros.json")))
+# estilo do render escolhido no plano (material, luz, contorno); sem arquivo = padrão (vinil, luz suave)
+_rj = os.path.join(pasta, "render.json")
+ESTILO = json.load(open(_rj)) if os.path.exists(_rj) else {}
+MATERIAL = ESTILO.get("material", "vinil")
+LUZ_MODO = ESTILO.get("luz", "suave")
+CONTORNO = bool(ESTILO.get("contorno", MATERIAL == "desenho"))
 fps = dados["fps"]
 total = dados["total"]
 
@@ -56,22 +62,124 @@ def cor(hexa):
     return [((int(h[i : i + 2], 16) / 255) ** 2.2) for i in (0, 2, 4)]
 
 
+# ------------------------------------------------------------- modelos .glb importados (personagem, cenário, objeto)
+
+_mj = os.path.join(pasta, "modelos.json")
+MODELOS = json.load(open(_mj)) if os.path.exists(_mj) else {"modelos": [], "cenas": []}
+raizes = {}
+mats_livres = set()   # materiais de modelos que pediram "estilizar": false (ficam como vieram)
+for m in MODELOS["modelos"]:
+    antes = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=os.path.join(pasta, m["arquivo"]))
+    novos = [o for o in bpy.data.objects if o not in antes]
+    raiz = bpy.data.objects.new("modelo_" + m["id"], None)
+    cena.collection.objects.link(raiz)
+    for o in novos:
+        if o.parent is None or o.parent not in novos:
+            o.parent = raiz
+    raizes[m["id"]] = raiz
+    if not m.get("estilizar", True):
+        for o in novos:
+            for slot in getattr(o, "material_slots", []):
+                if slot.material:
+                    mats_livres.add(slot.material)
+# em cada cena, cada modelo entra (posição, giro, escala) ou some (escala 0); o valor anterior segura até o corte
+_prev = {}
+for cm in MODELOS["cenas"]:
+    f0 = cm["f0"]
+    ativos = {it["id"]: it for it in cm["itens"]}
+    for mid, raiz in raizes.items():
+        it = ativos.get(mid)
+        novo = (b(it["pos"]), it["giro"], it["escala"]) if it else (Vector((0, 0, 0)), 0.0, 0.0)
+        if mid in _prev and f0 > 0:
+            raiz.location, raiz.rotation_euler, raiz.scale = _prev[mid][0], (0, 0, _prev[mid][1]), (_prev[mid][2],) * 3
+            for caminho in ("location", "rotation_euler", "scale"):
+                raiz.keyframe_insert(caminho, frame=f0 - 1)
+        raiz.location, raiz.rotation_euler, raiz.scale = novo[0], (0, 0, novo[1]), (novo[2],) * 3
+        for caminho in ("location", "rotation_euler", "scale"):
+            raiz.keyframe_insert(caminho, frame=f0)
+        _prev[mid] = novo
+
 # ------------------------------------------------------------- materiais com acabamento de filme
 
-for mat in bpy.data.materials:
-    if not mat.use_nodes:
-        continue
-    pbr = next((n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
-    if not pbr:
-        continue
+def _entrada(no, *nomes):
+    for n in nomes:
+        if n in no.inputs:
+            return no.inputs[n]
+    return None
+
+
+def material_vinil(mat, pbr):
     # vinil e plástico: um pouco de verniz e brilho suave nas bordas
     if "Coat Weight" in pbr.inputs and pbr.inputs["Coat Weight"].default_value < 0.05 and pbr.inputs["Roughness"].default_value < 0.5:
         pbr.inputs["Coat Weight"].default_value = 0.3
     if "Sheen Weight" in pbr.inputs and pbr.inputs["Roughness"].default_value > 0.7:
         pbr.inputs["Sheen Weight"].default_value = 0.15
-    # vidro: transparência de verdade
+
+
+def material_massinha(mat, pbr):
+    # massinha de modelar: fosca, sem verniz, com um véu macio nas bordas
+    pbr.inputs["Roughness"].default_value = max(0.8, pbr.inputs["Roughness"].default_value)
+    for nome, valor in (("Coat Weight", 0.0), ("Sheen Weight", 0.35), ("Metallic", 0.0)):
+        if nome in pbr.inputs:
+            pbr.inputs[nome].default_value = valor
+    esp = _entrada(pbr, "Specular IOR Level", "Specular")
+    if esp is not None:
+        esp.default_value = 0.15
+
+
+def material_desenho(mat, pbr):
+    """Cor chapada em degraus (3 tons) com sombra marcada: estilo desenho/quadrinho."""
+    nt = mat.node_tree
+    cor_base = tuple(pbr.inputs["Base Color"].default_value)
+    saida = next((n for n in nt.nodes if n.type == "OUTPUT_MATERIAL"), None)
+    if not saida:
+        return
+    # luz do desenho = quanto a superfície aponta para a luz principal (não depende do motor de luz do Blender)
+    geo = nt.nodes.new("ShaderNodeNewGeometry")
+    ponto = nt.nodes.new("ShaderNodeVectorMath")
+    ponto.operation = "DOT_PRODUCT"
+    ponto.inputs[1].default_value = (0.42, -0.5, 0.70)
+    rampa = nt.nodes.new("ShaderNodeValToRGB")
+    rampa.color_ramp.interpolation = "CONSTANT"
+    rampa.color_ramp.elements[0].position = 0.0
+    rampa.color_ramp.elements[0].color = (0.5, 0.5, 0.5, 1)
+    e1 = rampa.color_ramp.elements.new(0.22)
+    e1.color = (0.78, 0.78, 0.78, 1)
+    e2 = rampa.color_ramp.elements.new(0.58)
+    e2.color = (1, 1, 1, 1)
+    nt.links.new(geo.outputs["Normal"], ponto.inputs[0])
+    mistura = nt.nodes.new("ShaderNodeMix")
+    mistura.data_type = "RGBA"
+    mistura.blend_type = "MULTIPLY"
+    mistura.inputs["Factor"].default_value = 1.0
+    a = next(i for i in mistura.inputs if i.identifier == "A_Color")
+    b = next(i for i in mistura.inputs if i.identifier == "B_Color")
+    b.default_value = cor_base
+    emissao = nt.nodes.new("ShaderNodeEmission")
+    nt.links.new(ponto.outputs["Value"], rampa.inputs["Fac"])
+    nt.links.new(rampa.outputs["Color"], a)
+    res = next(o for o in mistura.outputs if o.identifier == "Result_Color")
+    nt.links.new(res, emissao.inputs["Color"])
+    nt.links.new(emissao.outputs["Emission"], saida.inputs["Surface"])
+
+
+for mat in bpy.data.materials:
+    if not mat.use_nodes or mat in mats_livres:
+        continue
+    pbr = next((n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED"), None)
+    if not pbr:
+        continue
     alpha = pbr.inputs["Alpha"].default_value
-    if alpha < 0.6:
+    vidro = alpha < 0.6
+    if MATERIAL == "massinha":
+        material_massinha(mat, pbr)
+    elif MATERIAL == "desenho" and not vidro:
+        material_desenho(mat, pbr)
+    else:
+        material_vinil(mat, pbr)
+    # vidro: transparência de verdade
+    if vidro and MATERIAL != "desenho":
         pbr.inputs["Transmission Weight"].default_value = 0.9
         pbr.inputs["Roughness"].default_value = 0.04
         pbr.inputs["Alpha"].default_value = max(alpha, 0.35)
@@ -105,7 +213,7 @@ mundo.use_nodes = True
 fundo = mundo.node_tree.nodes["Background"]
 for i, q in enumerate(dados["quadros"]):
     fundo.inputs[0].default_value = (*cor(q["fundo"]), 1)
-    fundo.inputs[1].default_value = 0.55 * q["luz"]
+    fundo.inputs[1].default_value = (0.55 if LUZ_MODO == "suave" else 0.35 if LUZ_MODO == "dura" else 0.7) * q["luz"]
     fundo.inputs[0].keyframe_insert("default_value", frame=i)
     fundo.inputs[1].keyframe_insert("default_value", frame=i)
 
@@ -126,13 +234,19 @@ def luz(nome, tipo, energia, cor_hex, pos, alvo, tamanho):
     return d
 
 
-# principal quente e macia, preenchimento frio, contraluz para separar do fundo
-principal = luz("principal", "SUN", 3.2, "#fff1dc", [6, 10, 7], [0, 0, 0], 8)
-luz("preenchimento", "AREA", 900, "#d6e6ff", [-8, 5, 9], [0, 1.5, 0], 9)
-luz("contraluz", "AREA", 1200, "#ffe2c0", [2, 7, -7], [0, 1.5, 0], 6)
+# principal, preenchimento e contraluz (separa do fundo); o modo de luz muda força, cor e dureza
+LUZES = {
+    "suave": dict(sol=3.2, sol_cor="#fff1dc", sol_ang=8, fill=900, contra=1200),
+    "dura": dict(sol=4.6, sol_cor="#fff6e8", sol_ang=1.5, fill=350, contra=1200),
+    "neutra": dict(sol=3.0, sol_cor="#ffffff", sol_ang=6, fill=1100, contra=800),
+}
+L = LUZES.get(LUZ_MODO, LUZES["suave"])
+principal = luz("principal", "SUN", L["sol"], L["sol_cor"], [6, 10, 7], [0, 0, 0], L["sol_ang"])
+luz("preenchimento", "AREA", L["fill"], "#d6e6ff" if LUZ_MODO != "neutra" else "#ffffff", [-8, 5, 9], [0, 1.5, 0], 9)
+luz("contraluz", "AREA", L["contra"], "#ffe2c0" if LUZ_MODO != "neutra" else "#ffffff", [2, 7, -7], [0, 1.5, 0], 6)
 # a força da luz acompanha a "luz" de cada quadro (noite, dia)
 for i, q in enumerate(dados["quadros"]):
-    principal.energy = 3.2 * q["luz"]
+    principal.energy = L["sol"] * q["luz"]
     principal.keyframe_insert("energy", frame=i)
 
 # cenas com teto: INTERIOR=1 liga luzes dentro do cômodo, conforme a "luz" passa de 1.1
@@ -175,6 +289,22 @@ try:
     cena.view_settings.look = "AgX - Punchy"
 except Exception:
     pass
+
+if CONTORNO:
+    cena.render.use_freestyle = True
+    cena.render.line_thickness_mode = "ABSOLUTE"
+    cena.render.line_thickness = float(ESTILO.get("contorno_espessura", 2.2))
+    vl = bpy.context.view_layer
+    vl.use_freestyle = True
+    for ls in list(vl.freestyle_settings.linesets):
+        vl.freestyle_settings.linesets.remove(ls)
+    ls = vl.freestyle_settings.linesets.new("contorno")
+    ls.select_silhouette = True
+    ls.select_border = True
+    ls.select_crease = False
+    ls.select_by_visibility = True
+    ls.linestyle.color = (0.04, 0.03, 0.03)
+    ls.linestyle.thickness = 1.0
 
 saida = os.path.abspath(opcao("saida", os.path.join(pasta, "quadros")))
 os.makedirs(saida, exist_ok=True)

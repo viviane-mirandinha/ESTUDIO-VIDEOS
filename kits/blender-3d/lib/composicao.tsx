@@ -1,6 +1,6 @@
 import React from 'react';
 import {Personagem} from './Personagem';
-import type {Expressao, Pose} from './Personagem';
+import type {Acessorios, Barba, Cabelo, Cores, Estilo, Expressao, Pose, Roupa} from './Personagem';
 import {PERSONAGEM_KIRMASK} from './personagemPadrao';
 import {Gato} from './Gato';
 import {ALCA_GALAO, CarroDetalhado, Galao} from './Objetos';
@@ -23,6 +23,18 @@ export type ObjetoNome = 'nenhum' | 'carro' | 'galao' | 'gato';
 export type Enquadramento = 'geral' | 'medio' | 'close' | 'lado' | 'alto';
 export type Lado = 'esq' | 'centro' | 'dir';
 
+/** Visual do personagem (tudo opcional; o que faltar vem do personagem padrão). */
+export type PersonagemConfig = {
+  estilo?: Estilo;
+  roupa?: Roupa;
+  cabelo?: Cabelo;
+  barba?: Barba;
+  acessorios?: Acessorios;
+  cores?: Partial<Cores>;
+  escala?: number;
+  rostoNovo?: boolean;
+};
+
 export type CenaPlano = {
   id: number;
   /** segundos em que a cena começa e termina */
@@ -37,8 +49,12 @@ export type CenaPlano = {
   objeto?: ObjetoNome;
   enquadramento?: Enquadramento;
   lado?: Lado;
+  /** muda o visual do personagem só nesta cena (ex.: outra roupa) */
+  personagem?: PersonagemConfig;
+  /** esconde o personagem do kit (a cena usa só modelos .glb importados) */
+  sem_personagem?: boolean;
 };
-export type PlanoVideo = {cenas: CenaPlano[]};
+export type PlanoVideo = {cenas: CenaPlano[]; personagem?: PersonagemConfig; render?: Record<string, unknown>};
 export type Palavra = {w?: string; s: number; e: number};
 
 export const CENARIOS: Record<Cenario, {fundo: string; luz: number}> = {
@@ -100,6 +116,16 @@ const poseDe = (nome: PoseNome, s: number, objeto: ObjetoNome): Pose => {
 };
 
 /** Boca no ritmo da fala: abre e fecha enquanto há uma palavra sendo dita. */
+const juntaPersonagem = (...cfgs: (PersonagemConfig | undefined)[]) => {
+  let r: Required<Pick<PersonagemConfig, 'cores' | 'acessorios'>> & PersonagemConfig = {...PERSONAGEM_KIRMASK, cores: {}, acessorios: {}};
+  r = {...r, cores: {...PERSONAGEM_KIRMASK.cores}, acessorios: {...PERSONAGEM_KIRMASK.acessorios}};
+  for (const c of cfgs) {
+    if (!c) continue;
+    r = {...r, ...c, cores: {...r.cores, ...(c.cores ?? {})}, acessorios: {...r.acessorios, ...(c.acessorios ?? {})}};
+  }
+  return r;
+};
+
 const falaEm = (s: number, palavras: Palavra[]): number => {
   for (const p of palavras) {
     if (s >= p.s && s <= p.e) return 0.3 + 0.7 * Math.abs(Math.sin((s - p.s) * 13));
@@ -140,8 +166,8 @@ export const criarCena = (plano: PlanoVideo, palavras: Palavra[] = []) => {
       cena: (
         <>
           {cenario === 'garagem' ? <Garagem /> : cenario === 'atelie' ? <Atelie /> : <Infinito cor={c.fundo ?? padrao.fundo} />}
-          <Personagem
-            {...PERSONAGEM_KIRMASK}
+          {c.sem_personagem ? null : <Personagem
+            {...juntaPersonagem(plano.personagem, c.personagem)}
             position={[px, 0, PZ]}
             rotation={[0, GIRO[lado], 0]}
             pose={pose}
@@ -149,7 +175,7 @@ export const criarCena = (plano: PlanoVideo, palavras: Palavra[] = []) => {
             tempo={s}
             fala={falaEm(s, palavras)}
             naMao={objeto === 'galao' ? <group position={naMao}><Galao /></group> : null}
-          />
+          />}
           {objeto === 'carro' ? (
             <group position={[o.x, 0, o.z]} rotation={[0, o.giro, 0]}>
               <CarroDetalhado />

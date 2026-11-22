@@ -85,10 +85,18 @@ def remoto(pasta: Path, extra: dict):
     rc, o = ps_remoto(opts, alvo, f"New-Item -ItemType Directory -Force '{dir_r}' | Out-Null\n")
     if rc:
         sys.exit("Não consegui criar a pasta na máquina de render: " + o[-300:])
-    for arq in (pasta / "cena.glb", pasta / "quadros.json", RENDER_PY):
+    for arq in [pasta / "cena.glb", pasta / "quadros.json", RENDER_PY] + [f for f in (pasta / "render.json",) if f.exists()]:
         c = subprocess.run(["scp", *opts, str(arq), f"{alvo}:{dir_scp}/"], capture_output=True, text=True)
         if c.returncode:
             sys.exit(f"Falha ao enviar {arq.name}: {c.stderr[-300:]}")
+    # modelos .glb importados (pasta blender/modelos + modelos.json)
+    if (pasta / "modelos.json").exists():
+        ps_remoto(opts, alvo, f"New-Item -ItemType Directory -Force '{dir_r}\\modelos' | Out-Null\n")
+        for arq in [pasta / "modelos.json"] + sorted((pasta / "modelos").glob("*")):
+            destino = f"{alvo}:{dir_scp}/modelos/" if arq.parent.name == "modelos" else f"{alvo}:{dir_scp}/"
+            c = subprocess.run(["scp", *opts, str(arq), destino], capture_output=True, text=True)
+            if c.returncode:
+                sys.exit(f"Falha ao enviar {arq.name}: {c.stderr[-300:]}")
     q = CONFIG["quadros"]
     ex = " ".join(f"--{k}={extra[k]}" for k in ("de", "ate", "quadros") if extra.get(k))
     script = f"""$ErrorActionPreference = 'Continue'

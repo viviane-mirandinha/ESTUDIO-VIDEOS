@@ -77,6 +77,9 @@ async function main() {
     c.traverse((o) => {
       const m = o as THREE.Mesh;
       if (!m.isMesh) return;
+      // contorno "casca preta" do estilo desenho (material virado para dentro): o Blender refaz o contorno sozinho
+      const mat0 = Array.isArray(m.material) ? m.material[0] : m.material;
+      if (mat0 && mat0.side === THREE.BackSide) return;
       // só conta se ela e todos os "pais" estão visíveis
       for (let p: THREE.Object3D | null = o; p; p = p.parent) if (!p.visible) return;
       // a mesma peça pode trocar de tamanho a cada quadro (gota, fumaça): vira escala
@@ -86,7 +89,14 @@ async function main() {
       const chave = `${m.uuid}:${m.geometry.type}`;
       let r = registros.get(chave);
       if (!r) {
-        const mat = (Array.isArray(m.material) ? m.material[0] : m.material).clone() as unknown as Record<string, unknown>;
+        let base = Array.isArray(m.material) ? m.material[0] : m.material;
+        // o estilo "desenho" do personagem usa material de desenho (MeshToon), que o .glb não entende:
+        // vira material comum com a mesma cor (o desenho de verdade é refeito no Blender)
+        if ((base as unknown as {isMeshToonMaterial?: boolean}).isMeshToonMaterial) {
+          const t = base as unknown as THREE.MeshToonMaterial;
+          base = new THREE.MeshStandardMaterial({color: t.color, roughness: 1, metalness: 0, transparent: t.transparent, opacity: t.opacity});
+        }
+        const mat = base.clone() as unknown as Record<string, unknown>;
         // fora do navegador o R3F às vezes guarda a cor como texto ("#a9a6a0"): vira cor de verdade
         for (const k of ['color', 'emissive', 'specularColor', 'sheenColor', 'attenuationColor']) {
           const v = mat[k];

@@ -13,4 +13,4 @@ export * from './gestosGato';
 export {CarroDetalhado, BAIA_MOTOR, Galao, bicoDoGalao, ALCA_GALAO, Vasilha, Fogo, Fumaca, JatoLiquido, Bicicleta, Volante} from './Objetos';
 export {Garagem, Atelie, Infinito} from './Cenarios';
 export {criarCena, CENARIOS} from './composicao';
-export type {PlanoVideo, CenaPlano, Palavra, Cenario, PoseNome, ObjetoNome, Enquadramento, Lado} from './composicao';
+export type {PersonagemConfig, PlanoVideo, CenaPlano, Palavra, Cenario, PoseNome, ObjetoNome, Enquadramento, Lado} from './composicao';
