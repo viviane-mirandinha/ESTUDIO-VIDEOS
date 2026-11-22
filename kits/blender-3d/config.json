@@ -1,0 +1,20 @@
+{
+  "modo": "remoto",
+  "remoto": {
+    "host": "100.107.205.27",
+    "usuario": "user",
+    "chave": "~/.ssh/id_ed25519_render",
+    "blender": "C:\\Program Files\\Blender Foundation\\Blender 5.3\\blender.exe",
+    "pasta": "C:\\render-estudio"
+  },
+  "local": {
+    "blender": ""
+  },
+  "quadros": {
+    "formato": "jpg",
+    "qualidade": 95,
+    "largura": 1080,
+    "altura": 1920,
+    "amostras": 48
+  }
+}

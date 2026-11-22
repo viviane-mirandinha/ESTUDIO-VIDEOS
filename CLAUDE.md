@@ -27,6 +27,7 @@ explique em 1-2 frases o que fez e mostre sempre o **caminho completo** do víde
 | `kits/clay-retencao/` | Kit 3D "massinha" (Three.js) vertical. |
 | `kits/saga-2d/` | Kit do estilo Saga sobrevivência 2D: peças animadas prontas (`widgets.js`), `lib_edit.py`, `embutir.py`. Ver `README.md`. |
 | `kits/animacao-2d/` | **Modelo base de animação 2D com personagem** (recorte em código: andar, perfil, costas, close, cenários em camadas). Rode SEMPRE `python kits/animacao-2d/construir.py <pasta> [--render]` — ele checa movimento e variedade antes de renderizar. Leia o `README.md` (regras de ouro). Exemplo: `VIDEOS/100-teste-marco-aurelio-estoicismo`. |
+| `kits/blender-3d/` | **3ª opção: vídeo 3D renderizado no Blender** (personagem/objetos em código → `.glb` → Blender na máquina de render por SSH → voz + legenda pelo Estúdio). Independente: tudo está nesta pasta. Rode SEMPRE `python kits/blender-3d/construir.py <pasta> --preparar`, depois `--teste` (olhe `blender/teste.jpg`) e só então `--render`. Leia o `README.md` (regras, peças, máquina de render). Exemplo pronto: `VIDEOS/105-exemplo-blender-3d`. |
 | `editor/fabrica/estilos/animacao-filosofica/` | Estilo da fábrica (aparece em Estilos prontos): qualquer narração vira animação 2D com personagem (usa `kits/animacao-2d/planejador.py` + `cenas_base.js`; 16:9 ou 9:16; roda as guardas de movimento/variedade antes do render). Exemplo: `VIDEOS/102-exemplo-animacao-filosofica`. |
 | `editor/checar_ritmo.py` | Guarda de qualidade: confere ritmo, animação, roteiro fiel e som antes de entregar. |
 | `recursos/` | Fontes Google (OFL), whoosh próprio, mapa-múndi Natural Earth (domínio público). |
@@ -83,6 +84,13 @@ Máquina na nuvem: editor com `ESTUDIO_HOST=0.0.0.0 bash iniciar.sh` + liberar/e
 - Roteiro: peça ao Ollama (zero token, padrão da fábrica) ou escreva você se o usuário quiser qualidade máxima.
 - Sempre termine com o vídeo em `VIDEOS/NN-.../NN - DD-MM-AAAA - CANAL - TITULO.mp4` (≤200 caracteres) e um `edit.json`
   na pasta, para ele aparecer no editor.
+
+### "faz um vídeo com Blender / em 3D / estilo Blender 3D sobre Y"
+Use o kit `kits/blender-3d/` (leia o `README.md` dele antes). Passos: pasta `VIDEOS/NN-nome/` → roteiro + voz (`voz.mp3`; TTS grátis da fábrica
+serve) → `construir.py <pasta> --preparar` (gera `words.json`) → escrever `cena3d.tsx` no tempo da fala (modelo em
+`kits/blender-3d/exemplos/vitrine/cena3d.tsx`) → `--teste` e **olhar** `blender/teste.jpg` → `--render` (em segundo plano: ~25 min por minuto de vídeo).
+O render pesado roda na **máquina de render** (`kits/blender-3d/config.json`, via SSH). Se ela estiver desligada/fora da rede, **avise o usuário** (não
+renderize no PC local sem ele pedir: leva horas). Avise o tempo estimado antes de começar o render completo.
 
 ### "copia o estilo deste vídeo <link>"
 Siga `METODO-COPIAR-ESTILO.md`: baixar SÓ um trecho (90 s) da referência em `ref/`, 1 contact-sheet,

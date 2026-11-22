@@ -1,0 +1,13 @@
+{
+  "name": "estudio-blender-3d",
+  "private": true,
+  "description": "Kit Blender do Estúdio de Vídeos: cena 3D em código -> .glb -> Blender (máquina local ou remota).",
+  "type": "module",
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "esbuild": "0.25.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "0.170.0"
+  }
+}
