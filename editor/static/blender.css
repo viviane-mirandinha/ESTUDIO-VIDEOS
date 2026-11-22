@@ -28,3 +28,4 @@
 .bzAviso{background:rgba(255,176,32,.18);color:var(--tx);border-left:4px solid var(--ac);padding:10px 14px;border-radius:8px;margin:10px 0}
 .bzLista .proj{cursor:pointer}
 .bzVolt{margin:10px 16px 0}
+.bzClaude{margin:14px 0;padding:12px;border:1px dashed var(--ac);border-radius:10px}.bzClaude label{display:block;font-weight:700;margin-bottom:6px}.bzClaude textarea{width:100%;margin-bottom:8px}

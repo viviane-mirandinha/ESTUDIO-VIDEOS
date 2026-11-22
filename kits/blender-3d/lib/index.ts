@@ -11,6 +11,7 @@ export {Gato, GATO_LARANJA, GATO_CINZA} from './Gato';
 export type {PoseGato, ExpressaoGato, CoresGato} from './Gato';
 export * from './gestosGato';
 export {CarroDetalhado, BAIA_MOTOR, Galao, bicoDoGalao, ALCA_GALAO, Vasilha, Fogo, Fumaca, JatoLiquido, Bicicleta, Volante} from './Objetos';
+export {BicicletaPedal, EIXO_PEDAL, pedalEm} from './BicicletaPedal';
 export {Garagem, Atelie, Infinito} from './Cenarios';
 export {criarCena, CENARIOS} from './composicao';
 export type {PersonagemConfig, PlanoVideo, CenaPlano, Palavra, Cenario, PoseNome, ObjetoNome, Enquadramento, Lado} from './composicao';

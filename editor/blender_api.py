@@ -65,6 +65,10 @@ def registrar(app, G):
         f = proj / "final.mp4"
         return str(f) if f.exists() else None
 
+    def _manual(proj: Path) -> bool:
+        f = proj / "cena3d.tsx"
+        return f.exists() and GC.MARCA not in f.read_text(encoding="utf-8")
+
     def estado(proj: Path) -> dict:
         pid = G["pid_of"](proj)
         job = job_ativo(proj)
@@ -82,6 +86,8 @@ def registrar(app, G):
             etapa = "preparando"
         elif job and job["tipo"] == TIPO + "_previas":
             etapa = "previas"
+        elif job and job["tipo"] == TIPO + "_claude":
+            etapa = "claude"
         elif not plano:
             etapa = "erro" if ultimo_erro(proj) else "preparando"
         elif not pv:
@@ -94,13 +100,66 @@ def registrar(app, G):
         previas = [{**i, "url": f"/api/blender/{pid}/previa/{i['cena']}?v={mt(proj / 'previa' / i['arquivo'])}"} for i in pv]
         return {"pid": pid, "nome": proj.name, "pasta": str(proj), "etapa": etapa, "pedido": _ler_json(proj / "pedido.json", {}),
                 "plano": plano, "plano_normalizado": norm, "previas": previas, "aprovacao": ap, "job": job, "erro": ultimo_erro(proj),
-                "video": video_final(proj), "tem_voz": any((proj / n).exists() for n in ("voz.mp3", "voz.wav", "voz.m4a")),
+                "video": video_final(proj), "cena_manual": _manual(proj),
+                "resumo_claude": (proj / "CLAUDE-RESUMO.md").read_text(encoding="utf-8") if (proj / "CLAUDE-RESUMO.md").exists() else "", "tem_voz": any((proj / n).exists() for n in ("voz.mp3", "voz.wav", "voz.m4a")),
                 "avisos": [l[2:].strip() for l in (proj / "DECISOES.md").read_text(encoding="utf-8").splitlines() if l.startswith("- ")] if (proj / "DECISOES.md").exists() else [],
                 "roteiro": (proj / "roteiro.txt").read_text(encoding="utf-8") if (proj / "roteiro.txt").exists() else ""}
 
     # ------------------------------------------------------------------ jobs
+    def sub(prog, lo, hi):
+        """Progresso de uma etapa dentro de um trabalho maior (lo..hi)."""
+        def f(p, m):
+            prog(lo + p * (hi - lo) / 100, m)
+        f.job = prog.job
+        return f
+
+    def cena_manual(proj: Path) -> bool:
+        f = proj / "cena3d.tsx"
+        return f.exists() and GC.MARCA not in f.read_text(encoding="utf-8")
+
+    def claude_escreve(proj: Path, prog, tarefa: str, extra: str = ""):
+        """Roda o Claude Code (1 por vez no PC) para escrever/ajustar plano.json e, se preciso, peças e cena3d.tsx."""
+        modelo = (KIT / "PEDIDO-CLAUDE.md").read_text(encoding="utf-8")
+        # o pedido completo vai num arquivo na pasta do vídeo; a linha de comando leva só uma frase
+        # (prompt com várias linhas é cortado na primeira linha quando o claude é chamado por um atalho .cmd no Windows)
+        pedido_md = proj / "PEDIDO-CLAUDE.md"
+        pedido_md.write_text(modelo.format(pasta=str(proj), tarefa=tarefa, extra=extra), encoding="utf-8")
+        prompt = f"Leia o arquivo {pedido_md} e faça exatamente o que ele pede (siga o CLAUDE.md do ESTUDIO-VIDEOS)."
+        perm = ["--permission-mode", "acceptEdits", "--allowedTools", "Bash", "Read", "Glob", "Grep", "Write", "Edit"]
+        r = G["_claude_rodar"](proj, prog, "Claude escrevendo a cena 3D…", prompt, cwd=REPO, perm_args=perm)
+        fim = r.get("fim") or {}
+        if not fim or fim.get("is_error"):
+            raise RuntimeError("O Claude não terminou o trabalho.\n" + "\n".join(r.get("resto") or [str(fim.get("result") or "sem resposta")])[-1200:])
+        resumo = str(fim.get("result") or "").strip()
+        if resumo:
+            with open(proj / "CLAUDE-RESUMO.md", "a", encoding="utf-8") as f:
+                f.write(f"## {datetime.now().strftime('%d/%m %H:%M')} — {tarefa[:80]}\n\n{resumo}\n\n")
+        try:
+            GC.carregar_plano(proj)   # o plano que o Claude deixou precisa estar válido
+        except SystemExit as e:
+            raise RuntimeError("O plano que o Claude escreveu não é válido:\n" + str(e))
+        return r
+
+    def previas_todas(proj: Path, prog):
+        G["rodar_proc"]([PY, KIT / "construir.py", proj, "--previa-cenas"], prog, cwd=REPO, lo=0, hi=100)
+
     def job_preparar(proj: Path, prog):
-        G["rodar_proc"]([PY, KIT / "preparar.py", proj], prog, cwd=REPO, lo=0, hi=100)
+        ped = _ler_json(proj / "pedido.json", {}) or {}
+        if ped.get("modo") != "claude":
+            G["rodar_proc"]([PY, KIT / "preparar.py", proj], prog, cwd=REPO, lo=0, hi=100)
+            return {"pid": G["pid_of"](proj), "name": proj.name}
+        # modo Claude: o mesmo preparo grátis (roteiro, voz, palavras, rascunho do plano) + Claude refaz o plano/cena + quadros de teste
+        G["rodar_proc"]([PY, KIT / "preparar.py", proj], prog, cwd=REPO, lo=0, hi=35)
+        claude_escreve(proj, sub(prog, 35, 88), "Escrever a cena 3D deste vídeo (plano de cenas e, se precisar, peças e cena3d.tsx).")
+        prog(88, "Gerando os quadros de teste das cenas…")
+        previas_todas(proj, sub(prog, 88, 100))
+        return {"pid": G["pid_of"](proj), "name": proj.name}
+
+    def job_claude_ajuste(proj: Path, texto: str, cena: int, prog):
+        extra = f"\n## Pedido do usuário (ajuste)\n{texto}\n" + (f"\nCena em foco: {cena}.\n" if cena else "")
+        claude_escreve(proj, sub(prog, 0, 75), "Ajustar a cena 3D conforme o pedido do usuário (mantenha o resto como está).", extra)
+        prog(75, "Atualizando os quadros de teste…")
+        previas_todas(proj, sub(prog, 75, 100))
         return {"pid": G["pid_of"](proj), "name": proj.name}
 
     def job_previas(proj: Path, cenas, prog):
@@ -130,7 +189,7 @@ def registrar(app, G):
             d = _ler_json(f, {}) or {}
             pre.append({"id": f.stem, "nome": d.get("nome") or f.stem, "personagem": d.get("personagem", {}), "render": d.get("render", {})})
         return {"cena": {k: v for k, v in GC.ENUMS.items()}, "personagem": GC.PERSONAGEM_ENUMS, "cores": GC.CORES_CHAVES, "render": GC.RENDER_ENUMS,
-                "predefinicoes": pre, "modos": ["gratis", "claude"]}
+                "predefinicoes": pre, "modos": ["gratis", "claude"], "claude": bool(G["_claude_exe"]())}
 
     @app.get("/api/blender/maquina")
     def blender_maquina():
@@ -208,8 +267,10 @@ def registrar(app, G):
     def blender_criar(data: dict = Body(...)):
         g = lambda k: str(data.get(k) or "").strip()
         modo = g("modo") or "gratis"
-        if modo != "gratis":
-            raise HTTPException(400, "O modo Claude ainda não está ligado (chega numa próxima fase). Use o modo grátis.")
+        if modo not in ("gratis", "claude"):
+            raise HTTPException(400, "Modo inválido.")
+        if modo == "claude" and not G["_claude_exe"]():
+            raise HTTPException(400, "Falta o app do Claude neste PC (claude.ai/download). Use o modo grátis ou instale o Claude.")
         if not g("tema") and len(g("roteiro").split()) < 8:
             raise HTTPException(400, "Escreva o tema ou cole o roteiro (pelo menos algumas frases).")
         pre = g("predefinicao") or "padrao"
@@ -280,6 +341,8 @@ def registrar(app, G):
     def blender_ajustar(pid: str, data: dict = Body(...)):
         """Muda campos de UMA cena (expressão, pose, enquadramento…). Depois é só pedir as prévias dessa cena de novo."""
         proj = pasta_do_pid(pid)
+        if _manual(proj):
+            raise HTTPException(400, "Esta cena foi escrita à mão pelo Claude: peça a mudança por texto (“Pedir ajuste ao Claude”).")
         n = int(data.get("cena") or 0)
         campos = data.get("campos") or {}
         f = proj / "plano.json"
@@ -308,6 +371,26 @@ def registrar(app, G):
         a["cenas"][str(n)] = "ajustar"
         gravar_aprovacao(proj, a)
         return estado(proj)
+
+    @app.post("/api/blender/{pid}/pedir-ajuste")
+    def blender_pedir_ajuste(pid: str, data: dict = Body(...)):
+        """Modo Claude: o usuário descreve a mudança em texto; o Claude mexe no plano/cena e os quadros de teste são refeitos."""
+        proj = pasta_do_pid(pid)
+        texto = str(data.get("texto") or "").strip()
+        if len(texto) < 5:
+            raise HTTPException(400, "Descreva o que você quer mudar (pelo menos uma frase curta).")
+        if not G["_claude_exe"]():
+            raise HTTPException(400, "Falta o app do Claude neste PC (claude.ai/download).")
+        if job_ativo(proj):
+            raise HTTPException(409, "Este vídeo já tem um trabalho rodando.")
+        cena = int(data.get("cena") or 0)
+        a = aprovacao(proj)
+        if cena:
+            a["cenas"][str(cena)] = "ajustar"
+        else:
+            a["cenas"] = {}
+        gravar_aprovacao(proj, a)
+        return iniciar("claude", proj.name[:60] + " · ajuste pelo Claude", job_claude_ajuste, proj, texto, cena)
 
     @app.post("/api/blender/{pid}/aprovar")
     def blender_aprovar(pid: str, data: dict = Body(...)):

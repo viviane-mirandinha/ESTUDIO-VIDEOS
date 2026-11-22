@@ -176,8 +176,7 @@ def gerar(pasta: Path) -> Path:
     if wf.exists():
         palavras = [{"s": round(float(w["s"]), 3), "e": round(float(w["e"]), 3)} for w in json.loads(wf.read_text(encoding="utf-8")) if "s" in w and "e" in w]
     out = pasta / "cena3d.tsx"
-    if out.exists() and MARCA not in out.read_text(encoding="utf-8"):
-        sys.exit(f"{out} foi escrito à mão (não tem a marca do gerador); não vou sobrescrever. Apague o arquivo para gerar do plano.")
+    manual = out.exists() and MARCA not in out.read_text(encoding="utf-8")
     texto = f"""{MARCA}
 import {{criarCena}} from '@estudio3d';
 
@@ -188,7 +187,11 @@ const cena = criarCena(PLANO, PALAVRAS);
 export const DURACAO = cena.duracao;
 export const quadro3D = cena.quadro3D;
 """
-    out.write_text(texto, encoding="utf-8")
+    if manual:
+        # cena escrita à mão (ex.: pelo Claude): nunca sobrescreve; o plano só serve de roteiro das cenas para a revisão
+        print(f"{out.name} foi escrito à mão: mantido. (O plano só define as cenas da revisão.)")
+    else:
+        out.write_text(texto, encoding="utf-8")
     preparar_modelos(pasta, plano)
     # plano.json é seu e não é reescrito. A versão arrumada (cenas coladas, predefinição aplicada) vai para blender/
     (pasta / "blender").mkdir(exist_ok=True)

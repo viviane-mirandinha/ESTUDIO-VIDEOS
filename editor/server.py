@@ -4674,8 +4674,10 @@ def _ski_pedido_md(ped, sk, pasta, tem_video, tem_ref, audio=None):
 
 def _ski_progresso(ev, n):
     """Evento do claude --output-format stream-json → frase curta pro usuário."""
-    for c in (ev.get("message") or {}).get("content") or []:
-        if c.get("type") != "tool_use":
+    msg = ev.get("message")
+    conteudo = msg.get("content") if isinstance(msg, dict) else None
+    for c in conteudo if isinstance(conteudo, list) else []:   # versões novas do Claude Code mandam "message" como texto em alguns eventos
+        if not isinstance(c, dict) or c.get("type") != "tool_use":
             continue
         nome, inp = c.get("name") or "", c.get("input") or {}
         if nome == "Bash":
@@ -4746,8 +4748,9 @@ def _claude_rodar(pasta: Path, prog, msg_ini, prompt, cwd=None, perm_args=None):
                 if frase:
                     n += 1
                     prog(min(95, 8 + 87 * (1 - pow(2.718, -n / 45))), frase)
-        except Cancelado:
-            _matar(p)
+        except BaseException:   # cancelado OU qualquer erro no meio: mata o Claude (antes só no Cancelado: ficava rodando e gastando tokens)
+            if p.poll() is None:
+                _matar(p)
             raise
         finally:
             vigia.cancel()
