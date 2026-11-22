@@ -72,6 +72,8 @@ export const Garagem: React.FC = () => (
 
 const usaCeu = () =>
   useMemo(() => {
+    // fora do navegador (o "assar" do Blender roda no Node) não há canvas: o céu vira cor lisa
+    if (typeof document === 'undefined') return null;
     const c = document.createElement('canvas');
     c.width = 16;
     c.height = 256;
@@ -106,7 +108,7 @@ export const Atelie: React.FC = () => {
       {/* céu e cidade lá fora */}
       <mesh position={[0, 4, -9]}>
         <planeGeometry args={[20, 12]} />
-        <meshBasicMaterial map={ceu} />
+        <meshBasicMaterial map={ceu} color={ceu ? '#ffffff' : '#f3d9b8'} />
       </mesh>
       {Array.from({length: 26}, (_, i) => (
         <mesh key={i} position={[-6 + i * 0.5, (1.5 + sorteio(i, 1) * 3.5) / 2 + 0.8, -8.5 + sorteio(i, 2)]}>

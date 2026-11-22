@@ -25,6 +25,24 @@ verdade. Depois o Estúdio junta **voz + legenda** (HyperFrames) e o vídeo apar
 
 Opções: `--local` (renderiza neste PC, lentíssimo), `--so-assar`, `--sem-assar` (reusa `blender/cena.glb`), `--manter-quadros`.
 
+## Modo por cenas (sem escrever código 3D) — `plano.json`
+Em vez de escrever o `cena3d.tsx`, descreva o vídeo em **cenas** num `plano.json` (modelo: `exemplos/plano-exemplo.json`). Cada cena tem `de`/`ate` (segundos),
+`texto` e as escolhas abaixo (o que faltar usa o padrão):
+
+| campo | valores |
+|---|---|
+| `cenario` | `garagem`, `atelie`, `infinito` |
+| `pose` | `parado`, `pensando`, `apontando`, `comemorando`, `andando` |
+| `expressao` | `feliz`, `orgulhoso`, `triste`, `surpreso`, `cansado`, `bravo`, `pensativo`, `animado` |
+| `objeto` | `nenhum`, `carro`, `galao`, `gato` |
+| `enquadramento` | `geral`, `medio`, `close`, `lado`, `alto` |
+| `lado` | `esq`, `centro`, `dir` (onde o personagem fica) |
+
+- `construir.py <pasta>` gera o `cena3d.tsx` sozinho a partir do plano (`gerar_cena.py`); a boca do personagem mexe no ritmo da fala (`words.json`).
+- **Um quadro de teste de cada cena:** `construir.py <pasta> --previa-cenas` → `previa/cena-NN.jpg` + `previa/previas.json`. Serve para revisar cena a cena antes do render completo.
+- Um `cena3d.tsx` escrito à mão nunca é sobrescrito pelo gerador (o gerador só mexe em arquivos com a marca "GERADO DO PLANO").
+- Limite: o céu do ateliê sai de cor lisa no Blender (sem degradê).
+
 ## Peças disponíveis (`lib/`, importe de `@estudio3d`)
 `Personagem` (estilos massinha/vinil/desenho; poses e expressões em `gestos.ts`), `Gato`, `CarroDetalhado`, `Galao`, `Vasilha`, `Fogo`,
 `Fumaca`, `JatoLiquido`, `Bicicleta`, `Volante`, cenários `Garagem`/`Atelie`/`Infinito`, câmera (`cameraEm` com planos) e tempo

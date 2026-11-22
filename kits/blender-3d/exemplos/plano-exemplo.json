@@ -1,0 +1,64 @@
+{
+  "cenas": [
+    {
+      "de": 0.0,
+      "ate": 2.0,
+      "texto": "O carro estava sem motor.",
+      "cenario": "garagem",
+      "pose": "parado",
+      "expressao": "animado",
+      "enquadramento": "medio",
+      "lado": "centro",
+      "objeto": "nenhum",
+      "id": 1
+    },
+    {
+      "de": 2.0,
+      "ate": 4.0,
+      "texto": "O mecânico despeja o combustível.",
+      "cenario": "garagem",
+      "pose": "apontando",
+      "expressao": "pensativo",
+      "enquadramento": "geral",
+      "lado": "esq",
+      "objeto": "carro",
+      "id": 2
+    },
+    {
+      "de": 4.0,
+      "ate": 6.0,
+      "texto": "Quando liga, é pura alegria.",
+      "cenario": "infinito",
+      "pose": "comemorando",
+      "expressao": "feliz",
+      "enquadramento": "geral",
+      "lado": "dir",
+      "objeto": "gato",
+      "id": 3
+    },
+    {
+      "de": 6.0,
+      "ate": 8.0,
+      "texto": "Close de rosto",
+      "cenario": "infinito",
+      "pose": "pensando",
+      "expressao": "surpreso",
+      "enquadramento": "close",
+      "lado": "centro",
+      "objeto": "nenhum",
+      "id": 4
+    },
+    {
+      "de": 8.0,
+      "ate": 10.0,
+      "texto": "Fim.",
+      "cenario": "atelie",
+      "pose": "parado",
+      "expressao": "orgulhoso",
+      "enquadramento": "medio",
+      "lado": "centro",
+      "objeto": "galao",
+      "id": 5
+    }
+  ]
+}

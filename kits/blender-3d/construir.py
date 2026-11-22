@@ -89,13 +89,49 @@ def montar_edit(pasta: Path, dur_cena: float, largura: int, altura: int):
     print("edit.json criado (o vídeo aparece no editor).")
 
 
+def previa_cenas(pasta: Path, bl: Path, info: dict, extra: list):
+    """Um quadro de cada cena do plano (o do meio da cena) -> previa/cena-NN.jpg + previa/previas.json."""
+    pj = pasta / "plano.json"
+    if not pj.exists():
+        sys.exit("--previa-cenas precisa de plano.json (modo por cenas).")
+    cenas = json.loads(pj.read_text(encoding="utf-8"))["cenas"]
+    fps, total = info["fps"], info["total"]
+    alvo = []   # (cena, número do quadro 1..total)
+    for c in cenas:
+        f = min(total, max(1, int(round((c["de"] + c["ate"]) / 2 * fps)) + 1))
+        alvo.append((c, f))
+    lista = ",".join(str(f) for _, f in alvo)
+    passo(f"2/2 quadros de teste das {len(cenas)} cenas", [PY, str(KIT / "render_quadros.py"), str(bl), "--quadros", lista, *extra])
+    pv = pasta / "previa"
+    pv.mkdir(exist_ok=True)
+    for velho in pv.glob("*"):   # limpa as prévias antigas (sem apagar a pasta: no Windows ela pode estar aberta)
+        if velho.is_file():
+            velho.unlink()
+    itens = []
+    for c, f in alvo:
+        src = next((bl / "quadros").glob(f"q{f:04d}.*"), None)
+        if not src:
+            sys.exit(f"Faltou o quadro {f} da cena {c['id']}.")
+        dst = pv / f"cena-{c['id']:02d}{src.suffix}"
+        shutil.copy(src, dst)
+        itens.append({"cena": c["id"], "quadro": f, "arquivo": dst.name, "de": c["de"], "ate": c["ate"], "texto": c.get("texto", "")})
+    (pv / "previas.json").write_text(json.dumps(itens, ensure_ascii=False, indent=2), encoding="utf-8")
+    shutil.rmtree(bl / "quadros", ignore_errors=True)
+    print(f"\nPrévias das cenas em {pv} ({len(itens)} imagens).")
+
+
 def main():
     a = sys.argv[1:]
     if not a or a[0].startswith("--"):
         sys.exit(__doc__)
     pasta = Path(a[0]).resolve()
+    if (pasta / "plano.json").exists():
+        sys.path.insert(0, str(KIT))
+        import gerar_cena
+        print("\n==> plano.json -> cena3d.tsx", flush=True)
+        gerar_cena.gerar(pasta)
     if not (pasta / "cena3d.tsx").exists():
-        sys.exit(f"Falta {pasta / 'cena3d.tsx'}. Copie e adapte kits/blender-3d/exemplos/vitrine/cena3d.tsx.")
+        sys.exit(f"Falta {pasta / 'cena3d.tsx'} (ou plano.json). Copie e adapte kits/blender-3d/exemplos/vitrine/cena3d.tsx.")
     if "--preparar" in a:
         return preparar(pasta)
     preparar(pasta)
@@ -111,6 +147,8 @@ def main():
     extra = []
     if "--local" in a:
         extra.append("--local")
+    if "--previa-cenas" in a:
+        return previa_cenas(pasta, bl, info, extra)
     if "--teste" in a:
         qs = f"{max(1, total // 8)},{total // 2},{max(1, total - total // 8)}"
         passo("2/4 render de teste (3 quadros)", [PY, str(KIT / "render_quadros.py"), str(bl), "--quadros", qs, *extra])
