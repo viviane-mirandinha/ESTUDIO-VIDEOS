@@ -1,3 +1,28 @@
 {
- "ideias": []
+ "ideias": [
+  {
+   "id": "940fa281",
+   "ideia": "Filosofia e Arte",
+   "nota": 7.0,
+   "porque": "A ideia é interessante, mas pode ser mais específica para atrair um público maior.",
+   "titulo": "Filosofia e Arte: Reflexões sobre a Conexão entre Mente e Criatividade",
+   "idioma": "pt-BR",
+   "nicho": "",
+   "criado": "19/11/2026",
+   "views": null,
+   "status": "ideia"
+  },
+  {
+   "id": "1544828c",
+   "ideia": "A Filosofia Moderna",
+   "nota": 3.0,
+   "porque": "Tema muito amplo e abstrato, dificilmente atrairá grande interesse sem um foco específico.",
+   "titulo": "Uma Introdução à Filosofia Moderna",
+   "idioma": "pt-BR",
+   "nicho": "",
+   "criado": "19/11/2026",
+   "views": null,
+   "status": "ideia"
+  }
+ ]
 }

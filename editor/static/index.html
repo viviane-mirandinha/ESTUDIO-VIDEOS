@@ -421,6 +421,7 @@
     <div class="modos" id="ctFonte"><button class="modo on" data-ctf="pc"><b>📁 Do meu PC</b><small>mp4, mov, mkv (pode ser grande)</small></button><button class="modo" data-ctf="link"><b>🔗 Link</b><small>YouTube e outros (o PC baixa)</small></button></div>
     <div class="row" data-ctf="pc"><label>Vídeo</label><div class="upl"><input type="file" id="ctArq" accept="video/*,.mp4,.mov,.mkv,.webm" /><span id="ctArqInfo" class="mu"></span></div></div>
     <div class="row hidden" data-ctf="link"><label>Link</label><input type="text" id="ctUrl" placeholder="https://youtu.be/XXXXXXXX" /></div>
+    <div class="row hidden" data-ctf="link"><label></label><div class="avisoLink">⚠ <b>Pelo link a qualidade é menor.</b> O PC baixa em até 720p (e só 360p se o YouTube bloquear), então o corte em pé pode sair meio borrado. Para o melhor resultado, baixe o vídeo você mesmo na maior qualidade e use <b>📁 Do meu PC</b>.</div></div>
     <div class="row hidden" data-ctf="link"><label>Só um pedaço <small>(opcional)</small></label><input type="text" id="ctDe" class="curto" placeholder="de 10:00" /><input type="text" id="ctAte" class="curto" placeholder="até 25:00" /><span class="mu">deixe vazio pra usar o vídeo todo</span></div>
   </div>
   <div class="card pstep">
@@ -434,6 +435,9 @@
       <button class="modo on" data-cte="desfocado"><b>🔲 Vídeo inteiro + fundo desfocado</b><small>Ninguém fica cortado (bom pra 2 pessoas)</small></button>
       <button class="modo" data-cte="centro"><b>📱 Tela cheia</b><small>Corta as laterais e mostra o centro</small></button></div></div>
     <div class="row"><label>Nome do canal na tela <small>(opcional)</small></label><input type="text" id="ctCanal" placeholder="Vazio = não escreve nenhum nome no vídeo" autocomplete="off" /></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="ctSil" checked /> 🤐 Tirar silêncios e frases repetidas dentro de cada corte <small class="mu">(fica mais dinâmico)</small></label></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="ctZoom" checked /> 🔍 Zoom de ênfase <small class="mu">(aproxima e afasta a cada poucos segundos pra prender a atenção)</small></label></div>
+    <div class="row"><label></label><label class="chk"><input type="checkbox" id="ctRev" checked /> 👀 Eu quero conferir os momentos antes de montar <small class="mu">(recomendado: troca trecho, ajusta começo e fim)</small></label></div>
     <div class="row"><label></label><label class="chk"><input type="checkbox" id="ctIntro" /> 🎬 Também fazer uma intro com os 3 melhores momentos (3-5 s cada)</label></div>
     <div class="row hidden" id="ctProgRow"><label>Nome do programa</label><input type="text" id="ctPrograma" placeholder="Título da intro (ex.: OS MELHORES MOMENTOS)" /></div>
     <div class="row"><label></label><button class="btn big go" id="ctFazer">✂ Fazer cortes</button></div>
@@ -961,6 +965,6 @@
 <audio id="audTeste" class="hidden"></audio>
 <script src="/static/app.js"></script>
 <script src="/static/rede.js"></script>
+<script src="/static/blender.js"></script>
 </body>
 </html>
-<script src="/static/blender.js"></script>

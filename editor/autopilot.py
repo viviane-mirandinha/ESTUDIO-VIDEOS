@@ -64,14 +64,77 @@ def _url_videos(url: str) -> str:
 
 
 def buscar_videos(url: str, n: int = 30, timeout: int = 150) -> list[dict]:
+    """Sem aba na URL: junta a aba Vídeos e a aba Shorts (canal só de Shorts não tem aba Vídeos)."""
+    u = (url or "").strip().rstrip("/")
+    if re.search(r"/(videos|shorts|streams|featured)$", u):
+        return _buscar_aba(u, n, timeout)
+    vids, vistos, erro = [], set(), None
+    for aba in ("videos", "shorts"):
+        try:
+            for v in _buscar_aba(f"{u}/{aba}", n, timeout):
+                if v["id"] not in vistos:
+                    vistos.add(v["id"])
+                    vids.append(v)
+        except RuntimeError as e:
+            if "does not have" not in str(e):
+                erro = e
+    if not vids and erro:
+        raise erro
+    _completar(vids)
+    vids.sort(key=lambda v: -(v.get("data") or 0))
+    return vids[:n]
+
+
+def _completar(vids: list[dict], timeout: int = 300):
+    """A lista de Shorts vem sem data/duração: busca esses dois dados vídeo a vídeo (só leitura, sem baixar)."""
+    falta = [v for v in vids if not v.get("data") or not v.get("dur")]
+    for i in range(0, len(falta), 10):
+        lote = falta[i:i + 10]
+        try:
+            r = subprocess.run(
+                [_ytdlp_exe(), "--no-warnings", "--skip-download", "--ignore-errors",
+                 "--print", "%(id)s	%(timestamp)s	%(duration)s"] + [f"https://www.youtube.com/watch?v={v['id']}" for v in lote],
+                capture_output=True, text=True, encoding="utf-8", errors="replace",
+                timeout=timeout, creationflags=getattr(subprocess, NO_FLAGS, 0))
+        except Exception:
+            continue
+        info = {}
+        for ln in r.stdout.splitlines():
+            p = ln.split("	")
+            if len(p) == 3:
+                info[p[0]] = p
+        for v in lote:
+            p = info.get(v["id"])
+            if not p:
+                continue
+            try:
+                v["data"] = v.get("data") or float(p[1])
+            except ValueError:
+                pass
+            try:
+                v["dur"] = v.get("dur") or float(p[2])
+            except ValueError:
+                pass
+
+
+def _buscar_aba(url: str, n: int = 30, timeout: int = 150) -> list[dict]:
     """Lista pública dos últimos vídeos do canal — SÓ --flat-playlist (não abre vídeo, não baixa, não loga).
     Devolve [{id, titulo, views, data(ts), dur}]. Data aproximada do youtubetab."""
-    u = _url_videos(url)
-    r = subprocess.run(
-        [_ytdlp_exe(), "--no-warnings", "--flat-playlist", "--extractor-args", "youtubetab:approximate_date",
-         "-I", f"1:{int(n)}", "--print", "%(id)s\t%(view_count)s\t%(timestamp)s\t%(duration)s\t%(title)s", u],
-        capture_output=True, text=True, encoding="utf-8", errors="replace",
-        timeout=timeout, creationflags=getattr(subprocess, NO_FLAGS, 0))
+    u = url
+    try:
+        r = subprocess.run(
+            [_ytdlp_exe(), "--no-warnings", "--flat-playlist", "--extractor-args", "youtubetab:approximate_date",
+             "-I", f"1:{int(n)}", "--print", "%(id)s\t%(view_count)s\t%(timestamp)s\t%(duration)s\t%(title)s", u],
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
+            timeout=timeout, creationflags=getattr(subprocess, NO_FLAGS, 0))
+    except FileNotFoundError:
+        raise RuntimeError("O programa yt-dlp não foi encontrado. Rode o instalador (setup) de novo.")
+    except subprocess.TimeoutExpired:
+        raise RuntimeError("O YouTube demorou demais para responder. Tente de novo em alguns minutos.")
+    if not r.stdout.strip() and r.stderr.strip():
+        # mostra o motivo real (ex.: bloqueio, canal inexistente, yt-dlp desatualizado) em vez de erro genérico
+        ult = [l for l in r.stderr.strip().splitlines() if l.strip()][-1][:300]
+        raise RuntimeError(f"Não consegui ler os vídeos públicos desse canal. O yt-dlp disse: {ult}")
     vids = []
     for ln in r.stdout.splitlines():
         p = ln.split("\t", 4)

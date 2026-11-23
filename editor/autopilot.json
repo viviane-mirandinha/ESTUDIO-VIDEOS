@@ -1,73 +1,261 @@
 {
- "canal": "https://www.youtube.com/@historia.e.filosofiaa",
+ "canal": "https://youtube.com/@cotidiano.explicado",
  "videos": [
   {
-   "id": "tfD0VnryCRE",
-   "titulo": "Unabomber: Gênio, Professor e um dos Maiores Terroristas da História",
-   "views": 4,
-   "data": 1794679200.0,
-   "dur": 459.0,
-   "vph": 0.3333333333333333,
-   "idade_h": 4.52998549203078,
-   "short": false,
-   "razao": 1.25,
+   "id": "WYv-iKLiFEg",
+   "titulo": "E se você tentasse construir um submarino do zero?#cotidianoexpliacdo #submarino",
+   "views": 853,
+   "data": 1795086583.0,
+   "dur": 90.0,
+   "vph": 71.08333333333333,
+   "idade_h": 4.354892095658514,
+   "short": true,
+   "razao": 5.43,
    "classe": "novo"
   },
   {
-   "id": "J58CNakFsrQ",
-   "titulo": "UM DIA COMUM NA IDADE MÉDIA",
+   "id": "wu8uxVQCr00",
+   "titulo": "Sonho dentro de um sonho#cotidianoexplicado #falsodespertar #sonhos #cerebro #sonhar",
+   "views": 1300,
+   "data": 1795017563.0,
+   "dur": 95.0,
+   "vph": 55.25539521912353,
+   "idade_h": 23.527114317880738,
+   "short": true,
+   "razao": 4.22,
+   "classe": "winner"
+  },
+  {
+   "id": "nAF4-mOY_m0",
+   "titulo": "18 de novembro de 2026",
+   "views": 1300,
+   "data": 1794950406.0,
+   "dur": 57.0,
+   "vph": 30.818952104279976,
+   "idade_h": 42.18183654010296,
+   "short": true,
+   "razao": 2.36,
+   "classe": "winner"
+  },
+  {
+   "id": "kntjNbbrwm0",
+   "titulo": "sobrevivendo em uma ilha deserta",
+   "views": 1100,
+   "data": 1794863664.0,
+   "dur": 140.0,
+   "vph": 16.597050454187098,
+   "idade_h": 66.27683654010296,
+   "short": true,
+   "razao": 1.27,
+   "classe": "normal"
+  },
+  {
+   "id": "C1GE_18QHlE",
+   "titulo": "cidade flutuante para sobreviver à uma inundação mundial",
+   "views": 1100,
+   "data": 1794842032.0,
+   "dur": 122.0,
+   "vph": 15.217388958495803,
+   "idade_h": 72.28572542899185,
+   "short": true,
+   "razao": 1.16,
+   "classe": "normal"
+  },
+  {
+   "id": "DY-YuLOeEXA",
+   "titulo": "como fugir da Alemanha oriental",
+   "views": 1100,
+   "data": 1794827204.0,
+   "dur": 112.0,
+   "vph": 14.397036223800036,
+   "idade_h": 76.40461431788074,
+   "short": true,
+   "razao": 1.1,
+   "classe": "normal"
+  },
+  {
+   "id": "-9R8Ur46K-4",
+   "titulo": "Bunker para sobreviver à uma guerra#cidadesubterranea #preparacaoguerra",
+   "views": 1200,
+   "data": 1794780096.0,
+   "dur": 119.0,
+   "vph": 13.409294022987442,
+   "idade_h": 89.49016987343629,
+   "short": true,
+   "razao": 1.02,
+   "classe": "normal"
+  },
+  {
+   "id": "f5nipegX710",
+   "titulo": "Sobrevivência ao 17 de Novembro",
    "views": 6,
-   "data": 1794614400.0,
-   "dur": 518.0,
-   "vph": 0.26631175604273233,
-   "idade_h": 22.52998549203078,
-   "short": false,
-   "razao": 1.0,
+   "data": 1794757741.0,
+   "dur": 129.0,
+   "vph": 0.06269599545632293,
+   "idade_h": 95.69989209565851,
+   "short": true,
+   "razao": 0.0,
+   "classe": "flop"
+  },
+  {
+   "id": "eTGKcZ7ZQAk",
+   "titulo": "como o vento resfria a casa?",
+   "views": 1200,
+   "data": 1794744288.0,
+   "dur": 95.0,
+   "vph": 12.067962354333739,
+   "idade_h": 99.43683654010296,
+   "short": true,
+   "razao": 0.92,
+   "classe": "normal"
+  },
+  {
+   "id": "jvbpVsRwLn4",
+   "titulo": "Como o polvo muda de cor tão rápido?",
+   "views": 1500,
+   "data": 1794679025.0,
+   "dur": 83.0,
+   "vph": 12.758850750520745,
+   "idade_h": 117.56544765121407,
+   "short": true,
+   "razao": 0.98,
+   "classe": "normal"
+  },
+  {
+   "id": "6cozvJobrzg",
+   "titulo": "O Conde Drácula realmente existiu?",
+   "views": 1,
+   "data": 1794606205.0,
+   "dur": 110.0,
+   "vph": 0.007257250832809077,
+   "idade_h": 137.79322542899186,
+   "short": true,
+   "razao": 0.0,
+   "classe": "flop"
+  },
+  {
+   "id": "YBRCrwGphIg",
+   "titulo": "13 de novembro de 2026",
+   "views": 1400,
+   "data": 1794582343.0,
+   "dur": 65.0,
+   "vph": 9.693843578464504,
+   "idade_h": 144.4215587623252,
+   "short": true,
+   "razao": 0.74,
+   "classe": "normal"
+  },
+  {
+   "id": "l6DQLJ2wXcA",
+   "titulo": "Axolote: o animal que reconstrói o próprio corpo. #cotidianoexplicado #axolote #curiosidades",
+   "views": 1300,
+   "data": 1794518943.0,
+   "dur": 72.0,
+   "vph": 8.023073377828249,
+   "idade_h": 162.0326698734363,
+   "short": true,
+   "razao": 0.61,
+   "classe": "normal"
+  },
+  {
+   "id": "MSXArLCUJcE",
+   "titulo": "Por que o céu é azul?#cotidianoexplicado  #ceuazul #comofunciona #ciencia #curiosidades",
+   "views": 1500,
+   "data": 1794481255.0,
+   "dur": 67.0,
+   "vph": 8.695573598072345,
+   "idade_h": 172.50155876232517,
+   "short": true,
+   "razao": 0.66,
+   "classe": "normal"
+  },
+  {
+   "id": "mo0fCllC1qo",
+   "titulo": "Por que os gatos tomam banho usando a língua? #cotidianoexplicado #gatos #curiosidades",
+   "views": 3000,
+   "data": 1794404399.0,
+   "dur": 60.0,
+   "vph": 15.475847677162747,
+   "idade_h": 193.85044765121407,
+   "short": true,
+   "razao": 1.18,
+   "classe": "normal"
+  },
+  {
+   "id": "fUAVf27FAm4",
+   "titulo": "Por que os gatos enterram o próprio cocô?#gatos #curiosidades #comportamentofelino #pets",
+   "views": 3100,
+   "data": 1794404370.0,
+   "dur": 60.0,
+   "vph": 15.991044750270962,
+   "idade_h": 193.85850320676963,
+   "short": true,
+   "razao": 1.22,
+   "classe": "normal"
+  },
+  {
+   "id": "d3RVhzxvPw4",
+   "titulo": "Por que flamingos são rosa ficam em uma perna só? #cotidianoexplicado #flamingo #curiosidades",
+   "views": 1300,
+   "data": 1794404033.0,
+   "dur": 99.0,
+   "vph": 6.702685374542221,
+   "idade_h": 193.95211431788073,
+   "short": true,
+   "razao": 0.51,
    "classe": "normal"
   }
  ],
  "stats": {
-  "mediana_vph": 0.26631175604273233,
-  "n": 2,
-  "winners": 0,
-  "flops": 0
+  "mediana_vph": 13.084072386754094,
+  "n": 17,
+  "winners": 2,
+  "flops": 2
  },
  "aprendido": {
   "palavras_titulo": [
    {
-    "palavra": "gênio",
+    "palavra": "cerebro",
     "winners": 1
    },
    {
-    "palavra": "história",
+    "palavra": "cotidianoexplicado",
     "winners": 1
    },
    {
-    "palavra": "maiores",
+    "palavra": "dentro",
     "winners": 1
    },
    {
-    "palavra": "professor",
+    "palavra": "falsodespertar",
     "winners": 1
    },
    {
-    "palavra": "terroristas",
+    "palavra": "novembro",
     "winners": 1
    },
    {
-    "palavra": "unabomber",
+    "palavra": "sonhar",
+    "winners": 1
+   },
+   {
+    "palavra": "sonho",
+    "winners": 1
+   },
+   {
+    "palavra": "sonhos",
     "winners": 1
    }
   ],
-  "faixa_duracao_campea": "3-10min",
-  "cadencia_dias": 0.8,
+  "faixa_duracao_campea": "1-3min (short)",
+  "cadencia_dias": 0.5,
   "short_vs_longo": {
-   "shorts": 0,
-   "longos": 2,
-   "winners_short": 0,
-   "winners_total": 1
+   "shorts": 17,
+   "longos": 0,
+   "winners_short": 2,
+   "winners_total": 2
   },
-  "resumo": "Títulos que estouraram usam muito: gênio, história, maiores, professor, terroristas, unabomber. A duração campeã é 3-10min. Você posta a cada ~0.8 dias. Os winners são vídeos longos."
+  "resumo": "Títulos que estouraram usam muito: cerebro, cotidianoexplicado, dentro, falsodespertar, novembro, sonhar. A duração campeã é 1-3min (short). Você posta a cada ~0.5 dias. Os winners são mais shorts — invista em short."
  },
  "historico": [
   {
@@ -85,7 +273,83 @@
     "tfD0VnryCRE": 4,
     "J58CNakFsrQ": 6
    }
+  },
+  {
+   "t": 1795102144.544546,
+   "mediana_vph": 13.088238868675722,
+   "views": {
+    "WYv-iKLiFEg": 848,
+    "wu8uxVQCr00": 1300,
+    "nAF4-mOY_m0": 1300,
+    "kntjNbbrwm0": 1100,
+    "C1GE_18QHlE": 1100,
+    "DY-YuLOeEXA": 1100,
+    "-9R8Ur46K-4": 1200,
+    "f5nipegX710": 6,
+    "eTGKcZ7ZQAk": 1200,
+    "jvbpVsRwLn4": 1500,
+    "6cozvJobrzg": 1,
+    "YBRCrwGphIg": 1400,
+    "l6DQLJ2wXcA": 1300,
+    "MSXArLCUJcE": 1500,
+    "mo0fCllC1qo": 3000,
+    "fUAVf27FAm4": 3100,
+    "d3RVhzxvPw4": 1300
+   }
+  },
+  {
+   "t": 1795102260.613069,
+   "mediana_vph": 13.084072386754094,
+   "views": {
+    "WYv-iKLiFEg": 853,
+    "wu8uxVQCr00": 1300,
+    "nAF4-mOY_m0": 1300,
+    "kntjNbbrwm0": 1100,
+    "C1GE_18QHlE": 1100,
+    "DY-YuLOeEXA": 1100,
+    "-9R8Ur46K-4": 1200,
+    "f5nipegX710": 6,
+    "eTGKcZ7ZQAk": 1200,
+    "jvbpVsRwLn4": 1500,
+    "6cozvJobrzg": 1,
+    "YBRCrwGphIg": 1400,
+    "l6DQLJ2wXcA": 1300,
+    "MSXArLCUJcE": 1500,
+    "mo0fCllC1qo": 3000,
+    "fUAVf27FAm4": 3100,
+    "d3RVhzxvPw4": 1300
+   }
   }
  ],
- "atualizado": 1794695507.9487712
+ "atualizado": 1795102260.613069,
+ "estilo": "meu-animacao-detalhada-e-explicati",
+ "voz": "vsremoto:idosa",
+ "producoes": [
+  {
+   "t": 1795102929.4468954,
+   "tema": "História secreta: Os impactos sociais e econômicos do tabaco",
+   "titulo": "Tabaco: O Invasor Silencioso que Moldou Civilizações",
+   "titulo_ref": "VOCÊ SABIA QUE CIGARRO FAZ MAL?",
+   "origem_url": "https://www.youtube.com/watch?v=AeClcKCdXYA",
+   "estilo": "animacao-filosofica",
+   "feed": "Curiosidades",
+   "pid": "QzpcVXNlcnNcYWNlclxWaWRlb3NcdsOtZGVvcyBnZXJhZG9zXDA2LWZhYnJpY2EtYW5pbWFjYW8tZmlsb3NvZmljYS1oaXN0b3JpYS1zZWNyZXRhLW9zLWltcGFjdG9z",
+   "folder": "C:\\Users\\acer\\Videos\\vídeos gerados\\06-fabrica-animacao-filosofica-historia-secreta-os-impactos",
+   "rendered": true,
+   "tem_kit": true
+  },
+  {
+   "t": 1795103638.4401643,
+   "tema": "Histórias de sucesso viral que deram errado",
+   "titulo": "Você Sabia? Sucesso Viral que Virou Fiasco",
+   "titulo_ref": "YTPBR || Você Sabia MAIS BUGADO do que nunca",
+   "origem_url": "https://www.youtube.com/watch?v=KFwZQ7ZNMN8",
+   "estilo": "meu-animacao-detalhada-e-explicati",
+   "feed": "Curiosidades",
+   "pid": "QzpcVXNlcnNcYWNlclxWaWRlb3NcdsOtZGVvcyBnZXJhZG9zXDA3LWZhYnJpY2EtbWV1LWFuaW1hY2FvLWRldGFsaGEtaGlzdG9yaWFzLWRlLXN1Y2Vzc28tdmlyYWwtcQ",
+   "folder": "C:\\Users\\acer\\Videos\\vídeos gerados\\07-fabrica-meu-animacao-detalha-historias-de-sucesso-viral-q",
+   "rendered": true,
+   "tem_kit": true
+  }
+ ]
 }

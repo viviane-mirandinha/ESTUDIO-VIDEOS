@@ -839,5 +839,2855 @@
   "vista": "lado",
   "acao": "ficar",
   "camera": "fixa"
+ },
+ "taoCama": {
+  "local": "quarto-amanhecer",
+  "vista": "frente",
+  "acao": "acordar",
+  "camera": "fixa"
+ },
+ "taoPensar": {
+  "local": "quarto-amanhecer",
+  "vista": "close",
+  "acao": "pensar",
+  "camera": "fixa"
+ },
+ "taoFeed": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "olhar-celular",
+  "camera": "fixa"
+ },
+ "taoPromessas": {
+  "local": "caderno",
+  "vista": "objeto",
+  "acao": "escrever",
+  "camera": "fixa"
+ },
+ "taoExausto": {
+  "local": "sala-noite",
+  "vista": "frente",
+  "acao": "exausto",
+  "camera": "fixa"
+ },
+ "taoEmpurrar": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "empurrar-pedra",
+  "camera": "fixa"
+ },
+ "taoIdeia": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "desenrolar",
+  "camera": "zoom-in"
+ },
+ "taoCorrente": {
+  "local": "rio-nevoa",
+  "vista": "frente",
+  "acao": "empurrar-corrente",
+  "camera": "fixa"
+ },
+ "taoChina": {
+  "local": "montanha-nevoa",
+  "vista": "frente",
+  "acao": "escrever",
+  "camera": "fixa"
+ },
+ "taoExistiu": {
+  "local": "montanha-noite",
+  "vista": "frente",
+  "acao": "piscar",
+  "camera": "fixa"
+ },
+ "taoLivros": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "multiplicar",
+  "camera": "fixa"
+ },
+ "taoNome": {
+  "local": "montanha-nevoa",
+  "vista": "frente",
+  "acao": "apresentar",
+  "camera": "zoom-in"
+ },
+ "taoTrio": {
+  "local": "montanha-noite",
+  "vista": "frente",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "taoMapa": {
+  "local": "mapa-antigo",
+  "vista": "objeto",
+  "acao": "desenhar",
+  "camera": "zoom-in"
+ },
+ "taoRiscados": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "taoCaos": {
+  "local": "ceu-vermelho",
+  "vista": "panorama",
+  "acao": "queimar",
+  "camera": "fixa"
+ },
+ "taoSeculos": {
+  "local": "linha-do-tempo",
+  "vista": "objeto",
+  "acao": "preencher",
+  "camera": "fixa"
+ },
+ "taoReinos": {
+  "local": "mapa-antigo",
+  "vista": "objeto",
+  "acao": "dividir",
+  "camera": "fixa"
+ },
+ "taoExercitos": {
+  "local": "campo-batalha",
+  "vista": "panorama",
+  "acao": "avancar",
+  "camera": "fixa"
+ },
+ "taoPovo": {
+  "local": "aldeia",
+  "vista": "frente",
+  "acao": "pagar",
+  "camera": "fixa"
+ },
+ "taoPensadores": {
+  "local": "colina-nevoa",
+  "vista": "frente",
+  "acao": "pensar",
+  "camera": "fixa"
+ },
+ "taoMundo": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "rachar",
+  "camera": "fixa"
+ },
+ "taoDuas": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "taoArquivo": {
+  "local": "arquivo-madeira",
+  "vista": "frente",
+  "acao": "ler",
+  "camera": "fixa"
+ },
+ "taoReis": {
+  "local": "degraus",
+  "vista": "frente",
+  "acao": "subir-cair",
+  "camera": "fixa"
+ },
+ "taoPortao": {
+  "local": "muralha-nevoa",
+  "vista": "frente",
+  "acao": "observar",
+  "camera": "zoom-in"
+ },
+ "taoBufalo": {
+  "local": "estrada-paralaxe",
+  "vista": "perfil",
+  "acao": "cavalgar",
+  "camera": "paralaxe"
+ },
+ "taoPassagem": {
+  "local": "fronteira",
+  "vista": "frente",
+  "acao": "conversar",
+  "camera": "fixa"
+ },
+ "taoEntrega": {
+  "local": "fronteira",
+  "vista": "frente",
+  "acao": "entregar",
+  "camera": "zoom-in"
+ },
+ "taoTitulo": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "taoDebate": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "discutir",
+  "camera": "fixa"
+ },
+ "taoBalanca": {
+  "local": "montanha-nevoa",
+  "vista": "objeto",
+  "acao": "oscilar",
+  "camera": "fixa"
+ },
+ "taoFogueira": {
+  "local": "noite-fogueira",
+  "vista": "frente",
+  "acao": "contar",
+  "camera": "fixa"
+ },
+ "taoPaginaVazia": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "escrever",
+  "camera": "fixa"
+ },
+ "taoFrase": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "revelar-texto",
+  "camera": "fixa"
+ },
+ "taoCaminho": {
+  "local": "montanha-nevoa",
+  "vista": "panorama",
+  "acao": "desenhar-trilha",
+  "camera": "fixa"
+ },
+ "taoRio": {
+  "local": "rio-montanha",
+  "vista": "panorama",
+  "acao": "fluir",
+  "camera": "fixa"
+ },
+ "taoCiclo": {
+  "local": "ceu-colina",
+  "vista": "panorama",
+  "acao": "crescer",
+  "camera": "fixa"
+ },
+ "taoPeso": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "cair",
+  "camera": "fixa"
+ },
+ "taoBarco": {
+  "local": "rio-nevoa",
+  "vista": "frente",
+  "acao": "navegar",
+  "camera": "paralaxe"
+ },
+ "taoDia": {
+  "local": "ceu-arco",
+  "vista": "objeto",
+  "acao": "passar-sol",
+  "camera": "fixa"
+ },
+ "taoBrigaA": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "brigar",
+  "camera": "fixa"
+ },
+ "taoBrigaB": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "brigar-2",
+  "camera": "fixa"
+ },
+ "taoJarra": {
+  "local": "fundo-papel",
+  "vista": "objeto",
+  "acao": "esvaziar",
+  "camera": "fixa"
+ },
+ "taoNaoDesistir": {
+  "local": "fundo-papel",
+  "vista": "frente",
+  "acao": "negar",
+  "camera": "fixa"
+ },
+ "taoVeleiros": {
+  "local": "mar-claro",
+  "vista": "panorama",
+  "acao": "navegar",
+  "camera": "fixa"
+ },
+ "taoSimbolos": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "escolher",
+  "camera": "fixa"
+ },
+ "taoAgua": {
+  "local": "lago-nevoa",
+  "vista": "panorama",
+  "acao": "pingar",
+  "camera": "fixa"
+ },
+ "taoBeneficia": {
+  "local": "riacho-flores",
+  "vista": "frente",
+  "acao": "servir",
+  "camera": "fixa"
+ },
+ "taoBaixo": {
+  "local": "morro-vale",
+  "vista": "panorama",
+  "acao": "subir-descer",
+  "camera": "fixa"
+ },
+ "taoMole": {
+  "local": "papel-frio",
+  "vista": "objeto",
+  "acao": "ceder",
+  "camera": "fixa"
+ },
+ "taoGotaPedra": {
+  "local": "rocha-papel",
+  "vista": "objeto",
+  "acao": "gotejar",
+  "camera": "fixa"
+ },
+ "taoAguaPedra": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "bater",
+  "camera": "fixa"
+ },
+ "taoAtravessa": {
+  "local": "montanha-corte",
+  "vista": "panorama",
+  "acao": "atravessar",
+  "camera": "giro"
+ },
+ "taoContorna": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "contornar",
+  "camera": "fixa"
+ },
+ "taoCanyon": {
+  "local": "canion",
+  "vista": "panorama",
+  "acao": "transformar",
+  "camera": "zoom-out"
+ },
+ "taoProblema": {
+  "local": "quarto-amanhecer",
+  "vista": "frente",
+  "acao": "reagir",
+  "camera": "fixa"
+ },
+ "taoDureza": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "endurecer",
+  "camera": "fixa"
+ },
+ "taoAbertura": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "achar-vao",
+  "camera": "fixa"
+ },
+ "taoWuWei": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "taoPortaLeve": {
+  "local": "montanha-noite",
+  "vista": "objeto",
+  "acao": "empurrar-leve",
+  "camera": "fixa"
+ },
+ "taoErro": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "alertar",
+  "camera": "fixa"
+ },
+ "taoNada": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "encolher-ombros",
+  "camera": "fixa"
+ },
+ "taoPreguica": {
+  "local": "praia-rede",
+  "vista": "panorama",
+  "acao": "descansar",
+  "camera": "fixa"
+ },
+ "taoNaoEIsso": {
+  "local": "papel-quente-x",
+  "vista": "objeto",
+  "acao": "negar",
+  "camera": "fixa"
+ },
+ "taoMomentoJeito": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "encaixar",
+  "camera": "fixa"
+ },
+ "taoQuantidade": {
+  "local": "papel-frio",
+  "vista": "objeto",
+  "acao": "medir",
+  "camera": "fixa"
+ },
+ "taoDormir": {
+  "local": "quarto-dividido",
+  "vista": "frente",
+  "acao": "comparar",
+  "camera": "fixa"
+ },
+ "taoOlho": {
+  "local": "noite-azul",
+  "vista": "objeto",
+  "acao": "abrir-olho",
+  "camera": "fixa"
+ },
+ "taoLembrar1": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "lembrar",
+  "camera": "fixa"
+ },
+ "taoLembrar2": {
+  "local": "papel-quente",
+  "vista": "frente",
+  "acao": "relaxar",
+  "camera": "fixa"
+ },
+ "taoSolta": {
+  "local": "rio-nevoa",
+  "vista": "objeto",
+  "acao": "soltar",
+  "camera": "fixa"
+ },
+ "taoForcando": {
+  "local": "papel-quente",
+  "vista": "perfil",
+  "acao": "empurrar",
+  "camera": "fixa"
+ },
+ "taoFacil": {
+  "local": "papel-quente",
+  "vista": "perfil",
+  "acao": "empurrar-leve",
+  "camera": "paralaxe"
+ },
+ "taoAreas": {
+  "local": "papel-frio",
+  "vista": "objeto",
+  "acao": "alinhar",
+  "camera": "fixa"
+ },
+ "taoGarantia": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "carimbar",
+  "camera": "fixa"
+ },
+ "taoPoupar": {
+  "local": "colina-nevoa",
+  "vista": "panorama",
+  "acao": "rolar",
+  "camera": "fixa"
+ },
+ "taoSegundoNome": {
+  "local": "galeria-escura",
+  "vista": "frente",
+  "acao": "revelar",
+  "camera": "fixa"
+ },
+ "taoEscritas": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "escrever-2",
+  "camera": "fixa"
+ },
+ "taoChuang": {
+  "local": "colina-nevoa-2",
+  "vista": "frente",
+  "acao": "apresentar-2",
+  "camera": "fixa"
+ },
+ "taoDuzentos": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "medir-tempo",
+  "camera": "fixa"
+ },
+ "taoLaoSerio": {
+  "local": "montanha-noite",
+  "vista": "frente",
+  "acao": "sondar",
+  "camera": "fixa"
+ },
+ "taoIronico": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "contar",
+  "camera": "fixa"
+ },
+ "taoQuadro": {
+  "local": "papel-frio-2",
+  "vista": "objeto",
+  "acao": "riscar",
+  "camera": "fixa"
+ },
+ "taoQuadrinhos": {
+  "local": "papel-quente",
+  "vista": "frente",
+  "acao": "imaginar",
+  "camera": "fixa"
+ },
+ "taoNumeroHist": {
+  "local": "escuro-verde",
+  "vista": "objeto",
+  "acao": "titular",
+  "camera": "fixa"
+ },
+ "taoArvoreGigante": {
+  "local": "campo-nevoa",
+  "vista": "panorama",
+  "acao": "abrigar",
+  "camera": "zoom-out"
+ },
+ "taoPassaDireto": {
+  "local": "campo-nevoa-2",
+  "vista": "frente",
+  "acao": "andar",
+  "camera": "fixa"
+ },
+ "taoAprendiz": {
+  "local": "campo-nevoa",
+  "vista": "frente",
+  "acao": "perguntar",
+  "camera": "fixa"
+ },
+ "taoNaoServe": {
+  "local": "papel-quente",
+  "vista": "frente",
+  "acao": "negar-2",
+  "camera": "fixa"
+ },
+ "taoMadeiraRuim": {
+  "local": "lago-nevoa-2",
+  "vista": "panorama",
+  "acao": "afundar-quebrar",
+  "camera": "fixa"
+ },
+ "taoCarimbo": {
+  "local": "papel-quente",
+  "vista": "objeto",
+  "acao": "carimbar-2",
+  "camera": "fixa"
+ },
+ "taoSonho": {
+  "local": "quarto-amanhecer",
+  "vista": "frente",
+  "acao": "sonhar",
+  "camera": "fixa"
+ },
+ "taoArvoreFala": {
+  "local": "noite-nevoa",
+  "vista": "frente",
+  "acao": "falar",
+  "camera": "fixa"
+ },
+ "taoUteisCortadas": {
+  "local": "campo-nevoa",
+  "vista": "panorama",
+  "acao": "cortar",
+  "camera": "fixa"
+ },
+ "taoInutilUtil": {
+  "local": "campo-nevoa-3",
+  "vista": "panorama",
+  "acao": "brilhar",
+  "camera": "fixa"
+ },
+ "taoProduz": {
+  "local": "papel-frio",
+  "vista": "frente",
+  "acao": "produzir",
+  "camera": "fixa"
+ },
+ "taoChuangPergunta": {
+  "local": "papel-quente",
+  "vista": "frente",
+  "acao": "perguntar-2",
+  "camera": "fixa"
+ },
+ "taoHorasSuas": {
+  "local": "ceu-colina-2",
+  "vista": "frente",
+  "acao": "relaxar-2",
+  "camera": "fixa"
+ },
+ "taoCortaDanca": {
+  "local": "L-taoCortaDanca",
+  "vista": "frente",
+  "acao": "A-taoCortaDanca",
+  "camera": "fixa"
+ },
+ "taoPrincipe": {
+  "local": "L-taoPrincipe",
+  "vista": "frente",
+  "acao": "A-taoPrincipe",
+  "camera": "fixa"
+ },
+ "taoBoiInteiro": {
+  "local": "L-taoBoiInteiro",
+  "vista": "frente",
+  "acao": "A-taoBoiInteiro",
+  "camera": "fixa"
+ },
+ "taoJuntas": {
+  "local": "L-taoJuntas",
+  "vista": "objeto",
+  "acao": "A-taoJuntas",
+  "camera": "fixa"
+ },
+ "taoFacaAno": {
+  "local": "L-taoFacaAno",
+  "vista": "objeto",
+  "acao": "A-taoFacaAno",
+  "camera": "fixa"
+ },
+ "taoFacaMes": {
+  "local": "L-taoFacaMes",
+  "vista": "close",
+  "acao": "A-taoFacaMes",
+  "camera": "fixa"
+ },
+ "taoFacaNova": {
+  "local": "L-taoFacaNova",
+  "vista": "objeto",
+  "acao": "A-taoFacaNova",
+  "camera": "fixa"
+ },
+ "taoFacaOsso": {
+  "local": "L-taoFacaOsso",
+  "vista": "close",
+  "acao": "A-taoFacaOsso",
+  "camera": "fixa"
+ },
+ "taoFacaEspaco": {
+  "local": "L-taoFacaEspaco",
+  "vista": "objeto",
+  "acao": "A-taoFacaEspaco",
+  "camera": "fixa"
+ },
+ "taoOuvirBoi": {
+  "local": "L-taoOuvirBoi",
+  "vista": "frente",
+  "acao": "A-taoOuvirBoi",
+  "camera": "fixa"
+ },
+ "taoBorboletaFlores": {
+  "local": "L-taoBorboletaFlores",
+  "vista": "panorama",
+  "acao": "A-taoBorboletaFlores",
+  "camera": "fixa"
+ },
+ "taoAcorda": {
+  "local": "L-taoAcorda",
+  "vista": "frente",
+  "acao": "A-taoAcorda",
+  "camera": "fixa"
+ },
+ "taoPensaBorb1": {
+  "local": "L-taoPensaBorb1",
+  "vista": "frente",
+  "acao": "A-taoPensaBorb1",
+  "camera": "fixa"
+ },
+ "taoPensaBorb2": {
+  "local": "L-taoPensaBorb2",
+  "vista": "objeto",
+  "acao": "A-taoPensaBorb2",
+  "camera": "fixa"
+ },
+ "taoVaiVem": {
+  "local": "L-taoVaiVem",
+  "vista": "objeto",
+  "acao": "A-taoVaiVem",
+  "camera": "fixa"
+ },
+ "taoParedeRacha": {
+  "local": "L-taoParedeRacha",
+  "vista": "objeto",
+  "acao": "A-taoParedeRacha",
+  "camera": "fixa"
+ },
+ "taoCarteira": {
+  "local": "L-taoCarteira",
+  "vista": "objeto",
+  "acao": "A-taoCarteira",
+  "camera": "fixa"
+ },
+ "taoChuvaRotulos": {
+  "local": "L-taoChuvaRotulos",
+  "vista": "frente",
+  "acao": "A-taoChuvaRotulos",
+  "camera": "fixa"
+ },
+ "taoRotulos": {
+  "local": "L-taoRotulos",
+  "vista": "frente",
+  "acao": "A-taoRotulos",
+  "camera": "fixa"
+ },
+ "taoRotulosBorb": {
+  "local": "L-taoRotulosBorb",
+  "vista": "frente",
+  "acao": "A-taoRotulosBorb",
+  "camera": "fixa"
+ },
+ "taoHistoriaAdotada": {
+  "local": "L-taoHistoriaAdotada",
+  "vista": "objeto",
+  "acao": "A-taoHistoriaAdotada",
+  "camera": "fixa"
+ },
+ "taoFazFugiu": {
+  "local": "L-taoFazFugiu",
+  "vista": "panorama",
+  "acao": "A-taoFazFugiu",
+  "camera": "fixa"
+ },
+ "taoVizAzar": {
+  "local": "L-taoVizAzar",
+  "vista": "frente",
+  "acao": "A-taoVizAzar",
+  "camera": "fixa"
+ },
+ "taoCavaloVolta": {
+  "local": "L-taoCavaloVolta",
+  "vista": "panorama",
+  "acao": "A-taoCavaloVolta",
+  "camera": "fixa"
+ },
+ "taoVizSorte": {
+  "local": "L-taoVizSorte",
+  "vista": "frente",
+  "acao": "A-taoVizSorte",
+  "camera": "fixa"
+ },
+ "taoFilhoCai": {
+  "local": "L-taoFilhoCai",
+  "vista": "panorama",
+  "acao": "A-taoFilhoCai",
+  "camera": "fixa"
+ },
+ "taoVizAzar2": {
+  "local": "L-taoVizAzar2",
+  "vista": "frente",
+  "acao": "A-taoVizAzar2",
+  "camera": "fixa"
+ },
+ "taoRecruta": {
+  "local": "L-taoRecruta",
+  "vista": "panorama",
+  "acao": "A-taoRecruta",
+  "camera": "fixa"
+ },
+ "taoDispensado": {
+  "local": "L-taoDispensado",
+  "vista": "frente",
+  "acao": "A-taoDispensado",
+  "camera": "fixa"
+ },
+ "taoSorteAzar": {
+  "local": "L-taoSorteAzar",
+  "vista": "objeto",
+  "acao": "A-taoSorteAzar",
+  "camera": "fixa"
+ },
+ "taoFim": {
+  "local": "L-taoFim",
+  "vista": "frente",
+  "acao": "A-taoFim",
+  "camera": "fixa"
+ },
+ "taoCaminhoAbriu": {
+  "local": "L-taoCaminhoAbriu",
+  "vista": "frente",
+  "acao": "A-taoCaminhoAbriu",
+  "camera": "fixa"
+ },
+ "taoVeredito": {
+  "local": "L-taoVeredito",
+  "vista": "objeto",
+  "acao": "A-taoVeredito",
+  "camera": "fixa"
+ },
+ "taoYinYang": {
+  "local": "L-taoYinYang",
+  "vista": "objeto",
+  "acao": "A-taoYinYang",
+  "camera": "fixa"
+ },
+ "taoYinYangPartes": {
+  "local": "L-taoYinYangPartes",
+  "vista": "objeto",
+  "acao": "A-taoYinYangPartes",
+  "camera": "fixa"
+ },
+ "taoYin": {
+  "local": "L-taoYin",
+  "vista": "panorama",
+  "acao": "A-taoYin",
+  "camera": "fixa"
+ },
+ "taoYang": {
+  "local": "L-taoYang",
+  "vista": "panorama",
+  "acao": "A-taoYang",
+  "camera": "fixa"
+ },
+ "taoInimigos": {
+  "local": "L-taoInimigos",
+  "vista": "objeto",
+  "acao": "A-taoInimigos",
+  "camera": "fixa"
+ },
+ "taoPares": {
+  "local": "L-taoPares",
+  "vista": "objeto",
+  "acao": "A-taoPares",
+  "camera": "fixa"
+ },
+ "taoPontinhos": {
+  "local": "L-taoPontinhos",
+  "vista": "objeto",
+  "acao": "A-taoPontinhos",
+  "camera": "fixa"
+ },
+ "taoNadaFixo": {
+  "local": "L-taoNadaFixo",
+  "vista": "objeto",
+  "acao": "A-taoNadaFixo",
+  "camera": "fixa"
+ },
+ "taoSoYang": {
+  "local": "L-taoSoYang",
+  "vista": "frente",
+  "acao": "A-taoSoYang",
+  "camera": "fixa"
+ },
+ "taoSoYin": {
+  "local": "L-taoSoYin",
+  "vista": "frente",
+  "acao": "A-taoSoYin",
+  "camera": "fixa"
+ },
+ "taoRioTrechos": {
+  "local": "L-taoRioTrechos",
+  "vista": "panorama",
+  "acao": "A-taoRioTrechos",
+  "camera": "fixa"
+ },
+ "taoPergunta": {
+  "local": "L-taoPergunta",
+  "vista": "frente",
+  "acao": "A-taoPergunta",
+  "camera": "fixa"
+ },
+ "taoQuatroHist": {
+  "local": "L-taoQuatroHist",
+  "vista": "objeto",
+  "acao": "A-taoQuatroHist",
+  "camera": "fixa"
+ },
+ "taoComentario": {
+  "local": "L-taoComentario",
+  "vista": "objeto",
+  "acao": "A-taoComentario",
+  "camera": "fixa"
+ },
+ "taoNumero1": {
+  "local": "L-taoNumero1",
+  "vista": "objeto",
+  "acao": "A-taoNumero1",
+  "camera": "fixa"
+ },
+ "taoNumero2": {
+  "local": "L-taoNumero2",
+  "vista": "objeto",
+  "acao": "A-taoNumero2",
+  "camera": "fixa"
+ },
+ "taoNumero3": {
+  "local": "L-taoNumero3",
+  "vista": "objeto",
+  "acao": "A-taoNumero3",
+  "camera": "fixa"
+ },
+ "taoNumero4": {
+  "local": "L-taoNumero4",
+  "vista": "objeto",
+  "acao": "A-taoNumero4",
+  "camera": "fixa"
+ },
+ "taoContasPrazos": {
+  "local": "L-taoContasPrazos",
+  "vista": "frente",
+  "acao": "A-taoContasPrazos",
+  "camera": "fixa"
+ },
+ "taoMontanhaNao": {
+  "local": "L-taoMontanhaNao",
+  "vista": "frente",
+  "acao": "A-taoMontanhaNao",
+  "camera": "fixa"
+ },
+ "taoPostura": {
+  "local": "L-taoPostura",
+  "vista": "frente",
+  "acao": "A-taoPostura",
+  "camera": "fixa"
+ },
+ "taoMensagemIrrita": {
+  "local": "L-taoMensagemIrrita",
+  "vista": "frente",
+  "acao": "A-taoMensagemIrrita",
+  "camera": "fixa"
+ },
+ "taoSemResposta": {
+  "local": "L-taoSemResposta",
+  "vista": "frente",
+  "acao": "A-taoSemResposta",
+  "camera": "fixa"
+ },
+ "taoCrescemDevagar": {
+  "local": "L-taoCrescemDevagar",
+  "vista": "objeto",
+  "acao": "A-taoCrescemDevagar",
+  "camera": "fixa"
+ },
+ "taoRegarPuxar": {
+  "local": "L-taoRegarPuxar",
+  "vista": "frente",
+  "acao": "A-taoRegarPuxar",
+  "camera": "fixa"
+ },
+ "taoMetaFoge": {
+  "local": "L-taoMetaFoge",
+  "vista": "objeto",
+  "acao": "A-taoMetaFoge",
+  "camera": "fixa"
+ },
+ "taoChegar": {
+  "local": "L-taoChegar",
+  "vista": "frente",
+  "acao": "A-taoChegar",
+  "camera": "fixa"
+ },
+ "taoJornada": {
+  "local": "L-taoJornada",
+  "vista": "panorama",
+  "acao": "A-taoJornada",
+  "camera": "fixa"
+ },
+ "taoPassoHoje": {
+  "local": "L-taoPassoHoje",
+  "vista": "objeto",
+  "acao": "A-taoPassoHoje",
+  "camera": "fixa"
+ },
+ "taoPerfis": {
+  "local": "L-taoPerfis",
+  "vista": "objeto",
+  "acao": "A-taoPerfis",
+  "camera": "fixa"
+ },
+ "taoInstaLao": {
+  "local": "L-taoInstaLao",
+  "vista": "objeto",
+  "acao": "A-taoInstaLao",
+  "camera": "fixa"
+ },
+ "taoInstaChuang": {
+  "local": "L-taoInstaChuang",
+  "vista": "objeto",
+  "acao": "A-taoInstaChuang",
+  "camera": "fixa"
+ },
+ "taoInstaTim": {
+  "local": "L-taoInstaTim",
+  "vista": "objeto",
+  "acao": "A-taoInstaTim",
+  "camera": "fixa"
+ },
+ "taoHipnotizados": {
+  "local": "L-taoHipnotizados",
+  "vista": "frente",
+  "acao": "A-taoHipnotizados",
+  "camera": "fixa"
+ },
+ "taoNaoSerVisto": {
+  "local": "L-taoNaoSerVisto",
+  "vista": "frente",
+  "acao": "A-taoNaoSerVisto",
+  "camera": "fixa"
+ },
+ "taoDoisMilAnos": {
+  "local": "L-taoDoisMilAnos",
+  "vista": "objeto",
+  "acao": "A-taoDoisMilAnos",
+  "camera": "fixa"
+ },
+ "taoBarulho": {
+  "local": "L-taoBarulho",
+  "vista": "panorama",
+  "acao": "A-taoBarulho",
+  "camera": "fixa"
+ },
+ "taoNumero5": {
+  "local": "L-taoNumero5",
+  "vista": "objeto",
+  "acao": "A-taoNumero5",
+  "camera": "fixa"
+ },
+ "taoPergunta1": {
+  "local": "L-taoPergunta1",
+  "vista": "objeto",
+  "acao": "A-taoPergunta1",
+  "camera": "fixa"
+ },
+ "taoPergunta2": {
+  "local": "L-taoPergunta2",
+  "vista": "close",
+  "acao": "A-taoPergunta2",
+  "camera": "fixa"
+ },
+ "taoPergunta3": {
+  "local": "L-taoPergunta3",
+  "vista": "objeto",
+  "acao": "A-taoPergunta3",
+  "camera": "fixa"
+ },
+ "taoRegra": {
+  "local": "L-taoRegra",
+  "vista": "objeto",
+  "acao": "A-taoRegra",
+  "camera": "fixa"
+ },
+ "taoCarregaRio": {
+  "local": "L-taoCarregaRio",
+  "vista": "frente",
+  "acao": "A-taoCarregaRio",
+  "camera": "fixa"
+ },
+ "taoLike": {
+  "local": "L-taoLike",
+  "vista": "objeto",
+  "acao": "A-taoLike",
+  "camera": "fixa"
+ },
+ "taoInscreve": {
+  "local": "L-taoInscreve",
+  "vista": "panorama",
+  "acao": "A-taoInscreve",
+  "camera": "fixa"
+ },
+ "taoDespedida": {
+  "local": "L-taoDespedida",
+  "vista": "objeto",
+  "acao": "A-taoDespedida",
+  "camera": "fixa"
+ },
+ "epiA01": {
+  "local": "L-epiA01",
+  "vista": "panorama",
+  "acao": "A-epiA01",
+  "camera": "fixa"
+ },
+ "epiA02": {
+  "local": "L-epiA02",
+  "vista": "perfil",
+  "acao": "A-epiA02",
+  "camera": "fixa"
+ },
+ "epiA03": {
+  "local": "L-epiA03",
+  "vista": "objeto",
+  "acao": "A-epiA03",
+  "camera": "fixa"
+ },
+ "epiA04": {
+  "local": "L-epiA04",
+  "vista": "frente",
+  "acao": "A-epiA04",
+  "camera": "fixa"
+ },
+ "epiA05": {
+  "local": "L-epiA05",
+  "vista": "panorama",
+  "acao": "A-epiA05",
+  "camera": "fixa"
+ },
+ "epiA06": {
+  "local": "L-epiA06",
+  "vista": "perfil",
+  "acao": "A-epiA06",
+  "camera": "fixa"
+ },
+ "epiA07": {
+  "local": "L-epiA07",
+  "vista": "objeto",
+  "acao": "A-epiA07",
+  "camera": "fixa"
+ },
+ "epiA08": {
+  "local": "L-epiA08",
+  "vista": "frente",
+  "acao": "A-epiA08",
+  "camera": "fixa"
+ },
+ "epiA09": {
+  "local": "L-epiA09",
+  "vista": "panorama",
+  "acao": "A-epiA09",
+  "camera": "fixa"
+ },
+ "epiA10": {
+  "local": "L-epiA10",
+  "vista": "perfil",
+  "acao": "A-epiA10",
+  "camera": "fixa"
+ },
+ "epiA11": {
+  "local": "L-epiA11",
+  "vista": "objeto",
+  "acao": "A-epiA11",
+  "camera": "fixa"
+ },
+ "epiA12": {
+  "local": "L-epiA12",
+  "vista": "frente",
+  "acao": "A-epiA12",
+  "camera": "fixa"
+ },
+ "epiA13": {
+  "local": "L-epiA13",
+  "vista": "panorama",
+  "acao": "A-epiA13",
+  "camera": "fixa"
+ },
+ "epiA14": {
+  "local": "L-epiA14",
+  "vista": "perfil",
+  "acao": "A-epiA14",
+  "camera": "fixa"
+ },
+ "epiA15": {
+  "local": "L-epiA15",
+  "vista": "objeto",
+  "acao": "A-epiA15",
+  "camera": "fixa"
+ },
+ "epiA16": {
+  "local": "L-epiA16",
+  "vista": "frente",
+  "acao": "A-epiA16",
+  "camera": "fixa"
+ },
+ "epiA17": {
+  "local": "L-epiA17",
+  "vista": "panorama",
+  "acao": "A-epiA17",
+  "camera": "fixa"
+ },
+ "epiA18": {
+  "local": "L-epiA18",
+  "vista": "perfil",
+  "acao": "A-epiA18",
+  "camera": "fixa"
+ },
+ "epiA19": {
+  "local": "L-epiA19",
+  "vista": "objeto",
+  "acao": "A-epiA19",
+  "camera": "fixa"
+ },
+ "epiA20": {
+  "local": "L-epiA20",
+  "vista": "frente",
+  "acao": "A-epiA20",
+  "camera": "fixa"
+ },
+ "epiA21": {
+  "local": "L-epiA21",
+  "vista": "panorama",
+  "acao": "A-epiA21",
+  "camera": "fixa"
+ },
+ "epiA22": {
+  "local": "L-epiA22",
+  "vista": "perfil",
+  "acao": "A-epiA22",
+  "camera": "fixa"
+ },
+ "epiA23": {
+  "local": "L-epiA23",
+  "vista": "objeto",
+  "acao": "A-epiA23",
+  "camera": "fixa"
+ },
+ "epiA24": {
+  "local": "L-epiA24",
+  "vista": "frente",
+  "acao": "A-epiA24",
+  "camera": "fixa"
+ },
+ "epiA25": {
+  "local": "L-epiA25",
+  "vista": "panorama",
+  "acao": "A-epiA25",
+  "camera": "fixa"
+ },
+ "epiA26": {
+  "local": "L-epiA26",
+  "vista": "perfil",
+  "acao": "A-epiA26",
+  "camera": "fixa"
+ },
+ "epiA27": {
+  "local": "L-epiA27",
+  "vista": "objeto",
+  "acao": "A-epiA27",
+  "camera": "fixa"
+ },
+ "epiA28": {
+  "local": "L-epiA28",
+  "vista": "frente",
+  "acao": "A-epiA28",
+  "camera": "fixa"
+ },
+ "epiA29": {
+  "local": "L-epiA29",
+  "vista": "panorama",
+  "acao": "A-epiA29",
+  "camera": "fixa"
+ },
+ "epiA30": {
+  "local": "L-epiA30",
+  "vista": "perfil",
+  "acao": "A-epiA30",
+  "camera": "fixa"
+ },
+ "epiL01": {
+  "local": "L-epiL01",
+  "vista": "objeto",
+  "acao": "A-epiL01",
+  "camera": "fixa"
+ },
+ "epiF01": {
+  "local": "L-epiF01",
+  "vista": "close",
+  "acao": "A-epiF01",
+  "camera": "fixa"
+ },
+ "epiV01": {
+  "local": "L-epiV01",
+  "vista": "close",
+  "acao": "A-epiV01",
+  "camera": "fixa"
+ },
+ "epiL02": {
+  "local": "L-epiL02",
+  "vista": "objeto",
+  "acao": "A-epiL02",
+  "camera": "fixa"
+ },
+ "epiF02": {
+  "local": "L-epiF02",
+  "vista": "close",
+  "acao": "A-epiF02",
+  "camera": "fixa"
+ },
+ "epiV02": {
+  "local": "L-epiV02",
+  "vista": "close",
+  "acao": "A-epiV02",
+  "camera": "fixa"
+ },
+ "epiL03": {
+  "local": "L-epiL03",
+  "vista": "objeto",
+  "acao": "A-epiL03",
+  "camera": "fixa"
+ },
+ "epiF03": {
+  "local": "L-epiF03",
+  "vista": "close",
+  "acao": "A-epiF03",
+  "camera": "fixa"
+ },
+ "epiV03": {
+  "local": "L-epiV03",
+  "vista": "close",
+  "acao": "A-epiV03",
+  "camera": "fixa"
+ },
+ "epiL04": {
+  "local": "L-epiL04",
+  "vista": "objeto",
+  "acao": "A-epiL04",
+  "camera": "fixa"
+ },
+ "epiF04": {
+  "local": "L-epiF04",
+  "vista": "close",
+  "acao": "A-epiF04",
+  "camera": "fixa"
+ },
+ "epiV04": {
+  "local": "L-epiV04",
+  "vista": "close",
+  "acao": "A-epiV04",
+  "camera": "fixa"
+ },
+ "epiL05": {
+  "local": "L-epiL05",
+  "vista": "objeto",
+  "acao": "A-epiL05",
+  "camera": "fixa"
+ },
+ "epiF05": {
+  "local": "L-epiF05",
+  "vista": "close",
+  "acao": "A-epiF05",
+  "camera": "fixa"
+ },
+ "epiV05": {
+  "local": "L-epiV05",
+  "vista": "close",
+  "acao": "A-epiV05",
+  "camera": "fixa"
+ },
+ "epiL06": {
+  "local": "L-epiL06",
+  "vista": "objeto",
+  "acao": "A-epiL06",
+  "camera": "fixa"
+ },
+ "epiF06": {
+  "local": "L-epiF06",
+  "vista": "close",
+  "acao": "A-epiF06",
+  "camera": "fixa"
+ },
+ "epiV06": {
+  "local": "L-epiV06",
+  "vista": "close",
+  "acao": "A-epiV06",
+  "camera": "fixa"
+ },
+ "epiL07": {
+  "local": "L-epiL07",
+  "vista": "objeto",
+  "acao": "A-epiL07",
+  "camera": "fixa"
+ },
+ "epiF07": {
+  "local": "L-epiF07",
+  "vista": "close",
+  "acao": "A-epiF07",
+  "camera": "fixa"
+ },
+ "epiV07": {
+  "local": "L-epiV07",
+  "vista": "close",
+  "acao": "A-epiV07",
+  "camera": "fixa"
+ },
+ "epiL08": {
+  "local": "L-epiL08",
+  "vista": "objeto",
+  "acao": "A-epiL08",
+  "camera": "fixa"
+ },
+ "epiF08": {
+  "local": "L-epiF08",
+  "vista": "close",
+  "acao": "A-epiF08",
+  "camera": "fixa"
+ },
+ "epiV08": {
+  "local": "L-epiV08",
+  "vista": "close",
+  "acao": "A-epiV08",
+  "camera": "fixa"
+ },
+ "epiL09": {
+  "local": "L-epiL09",
+  "vista": "objeto",
+  "acao": "A-epiL09",
+  "camera": "fixa"
+ },
+ "epiF09": {
+  "local": "L-epiF09",
+  "vista": "close",
+  "acao": "A-epiF09",
+  "camera": "fixa"
+ },
+ "epiV09": {
+  "local": "L-epiV09",
+  "vista": "close",
+  "acao": "A-epiV09",
+  "camera": "fixa"
+ },
+ "epiL10": {
+  "local": "L-epiL10",
+  "vista": "objeto",
+  "acao": "A-epiL10",
+  "camera": "fixa"
+ },
+ "epiF10": {
+  "local": "L-epiF10",
+  "vista": "close",
+  "acao": "A-epiF10",
+  "camera": "fixa"
+ },
+ "epiV10": {
+  "local": "L-epiV10",
+  "vista": "close",
+  "acao": "A-epiV10",
+  "camera": "fixa"
+ },
+ "epiL11": {
+  "local": "L-epiL11",
+  "vista": "objeto",
+  "acao": "A-epiL11",
+  "camera": "fixa"
+ },
+ "epiF11": {
+  "local": "L-epiF11",
+  "vista": "close",
+  "acao": "A-epiF11",
+  "camera": "fixa"
+ },
+ "epiV11": {
+  "local": "L-epiV11",
+  "vista": "close",
+  "acao": "A-epiV11",
+  "camera": "fixa"
+ },
+ "epiL12": {
+  "local": "L-epiL12",
+  "vista": "objeto",
+  "acao": "A-epiL12",
+  "camera": "fixa"
+ },
+ "epiF12": {
+  "local": "L-epiF12",
+  "vista": "close",
+  "acao": "A-epiF12",
+  "camera": "fixa"
+ },
+ "epiV12": {
+  "local": "L-epiV12",
+  "vista": "close",
+  "acao": "A-epiV12",
+  "camera": "fixa"
+ },
+ "epiN01": {
+  "local": "L-epiN01",
+  "vista": "objeto",
+  "acao": "A-epiN01",
+  "camera": "fixa"
+ },
+ "epiN02": {
+  "local": "L-epiN02",
+  "vista": "objeto",
+  "acao": "A-epiN02",
+  "camera": "fixa"
+ },
+ "epiN03": {
+  "local": "L-epiN03",
+  "vista": "objeto",
+  "acao": "A-epiN03",
+  "camera": "fixa"
+ },
+ "epiN04": {
+  "local": "L-epiN04",
+  "vista": "objeto",
+  "acao": "A-epiN04",
+  "camera": "fixa"
+ },
+ "epiN05": {
+  "local": "L-epiN05",
+  "vista": "objeto",
+  "acao": "A-epiN05",
+  "camera": "fixa"
+ },
+ "epiN06": {
+  "local": "L-epiN06",
+  "vista": "objeto",
+  "acao": "A-epiN06",
+  "camera": "fixa"
+ },
+ "epiN07": {
+  "local": "L-epiN07",
+  "vista": "objeto",
+  "acao": "A-epiN07",
+  "camera": "fixa"
+ },
+ "epiN08": {
+  "local": "L-epiN08",
+  "vista": "objeto",
+  "acao": "A-epiN08",
+  "camera": "fixa"
+ },
+ "epiT01": {
+  "local": "L-epiT01",
+  "vista": "panorama",
+  "acao": "A-epiT01",
+  "camera": "fixa"
+ },
+ "epiT02": {
+  "local": "L-epiT02",
+  "vista": "panorama",
+  "acao": "A-epiT02",
+  "camera": "fixa"
+ },
+ "epiT03": {
+  "local": "L-epiT03",
+  "vista": "panorama",
+  "acao": "A-epiT03",
+  "camera": "fixa"
+ },
+ "epiT04": {
+  "local": "L-epiT04",
+  "vista": "panorama",
+  "acao": "A-epiT04",
+  "camera": "fixa"
+ },
+ "epiChegada": {
+  "local": "L-epiChegada",
+  "vista": "perfil",
+  "acao": "A-epiChegada",
+  "camera": "fixa"
+ },
+ "epiA31": {
+  "local": "L-epiA31",
+  "vista": "objeto",
+  "acao": "A-epiA31",
+  "camera": "fixa"
+ },
+ "epiA32": {
+  "local": "L-epiA32",
+  "vista": "frente",
+  "acao": "A-epiA32",
+  "camera": "fixa"
+ },
+ "epiA33": {
+  "local": "L-epiA33",
+  "vista": "panorama",
+  "acao": "A-epiA33",
+  "camera": "fixa"
+ },
+ "epiA34": {
+  "local": "L-epiA34",
+  "vista": "perfil",
+  "acao": "A-epiA34",
+  "camera": "fixa"
+ },
+ "epiA35": {
+  "local": "L-epiA35",
+  "vista": "objeto",
+  "acao": "A-epiA35",
+  "camera": "fixa"
+ },
+ "epiA36": {
+  "local": "L-epiA36",
+  "vista": "frente",
+  "acao": "A-epiA36",
+  "camera": "fixa"
+ },
+ "epiA37": {
+  "local": "L-epiA37",
+  "vista": "panorama",
+  "acao": "A-epiA37",
+  "camera": "fixa"
+ },
+ "epiA38": {
+  "local": "L-epiA38",
+  "vista": "perfil",
+  "acao": "A-epiA38",
+  "camera": "fixa"
+ },
+ "epiA39": {
+  "local": "L-epiA39",
+  "vista": "objeto",
+  "acao": "A-epiA39",
+  "camera": "fixa"
+ },
+ "epiA40": {
+  "local": "L-epiA40",
+  "vista": "frente",
+  "acao": "A-epiA40",
+  "camera": "fixa"
+ },
+ "epiA41": {
+  "local": "L-epiA41",
+  "vista": "panorama",
+  "acao": "A-epiA41",
+  "camera": "fixa"
+ },
+ "epiA42": {
+  "local": "L-epiA42",
+  "vista": "perfil",
+  "acao": "A-epiA42",
+  "camera": "fixa"
+ },
+ "epiA43": {
+  "local": "L-epiA43",
+  "vista": "objeto",
+  "acao": "A-epiA43",
+  "camera": "fixa"
+ },
+ "epiA44": {
+  "local": "L-epiA44",
+  "vista": "frente",
+  "acao": "A-epiA44",
+  "camera": "fixa"
+ },
+ "epiA45": {
+  "local": "L-epiA45",
+  "vista": "panorama",
+  "acao": "A-epiA45",
+  "camera": "fixa"
+ },
+ "epiA46": {
+  "local": "L-epiA46",
+  "vista": "perfil",
+  "acao": "A-epiA46",
+  "camera": "fixa"
+ },
+ "epiA47": {
+  "local": "L-epiA47",
+  "vista": "objeto",
+  "acao": "A-epiA47",
+  "camera": "fixa"
+ },
+ "epiA48": {
+  "local": "L-epiA48",
+  "vista": "frente",
+  "acao": "A-epiA48",
+  "camera": "fixa"
+ },
+ "epiA49": {
+  "local": "L-epiA49",
+  "vista": "panorama",
+  "acao": "A-epiA49",
+  "camera": "fixa"
+ },
+ "epiA50": {
+  "local": "L-epiA50",
+  "vista": "perfil",
+  "acao": "A-epiA50",
+  "camera": "fixa"
+ },
+ "epiA51": {
+  "local": "L-epiA51",
+  "vista": "objeto",
+  "acao": "A-epiA51",
+  "camera": "fixa"
+ },
+ "epiA52": {
+  "local": "L-epiA52",
+  "vista": "frente",
+  "acao": "A-epiA52",
+  "camera": "fixa"
+ },
+ "epiA53": {
+  "local": "L-epiA53",
+  "vista": "panorama",
+  "acao": "A-epiA53",
+  "camera": "fixa"
+ },
+ "epiA54": {
+  "local": "L-epiA54",
+  "vista": "perfil",
+  "acao": "A-epiA54",
+  "camera": "fixa"
+ },
+ "epiA55": {
+  "local": "L-epiA55",
+  "vista": "objeto",
+  "acao": "A-epiA55",
+  "camera": "fixa"
+ },
+ "epiA56": {
+  "local": "L-epiA56",
+  "vista": "frente",
+  "acao": "A-epiA56",
+  "camera": "fixa"
+ },
+ "epiA57": {
+  "local": "L-epiA57",
+  "vista": "panorama",
+  "acao": "A-epiA57",
+  "camera": "fixa"
+ },
+ "epiA58": {
+  "local": "L-epiA58",
+  "vista": "perfil",
+  "acao": "A-epiA58",
+  "camera": "fixa"
+ },
+ "epiA59": {
+  "local": "L-epiA59",
+  "vista": "objeto",
+  "acao": "A-epiA59",
+  "camera": "fixa"
+ },
+ "epiA60": {
+  "local": "L-epiA60",
+  "vista": "frente",
+  "acao": "A-epiA60",
+  "camera": "fixa"
+ },
+ "epiA61": {
+  "local": "L-epiA61",
+  "vista": "panorama",
+  "acao": "A-epiA61",
+  "camera": "fixa"
+ },
+ "epiA62": {
+  "local": "L-epiA62",
+  "vista": "perfil",
+  "acao": "A-epiA62",
+  "camera": "fixa"
+ },
+ "epiA63": {
+  "local": "L-epiA63",
+  "vista": "objeto",
+  "acao": "A-epiA63",
+  "camera": "fixa"
+ },
+ "epiA64": {
+  "local": "L-epiA64",
+  "vista": "frente",
+  "acao": "A-epiA64",
+  "camera": "fixa"
+ },
+ "epiA65": {
+  "local": "L-epiA65",
+  "vista": "panorama",
+  "acao": "A-epiA65",
+  "camera": "fixa"
+ },
+ "epiA66": {
+  "local": "L-epiA66",
+  "vista": "perfil",
+  "acao": "A-epiA66",
+  "camera": "fixa"
+ },
+ "epiA67": {
+  "local": "L-epiA67",
+  "vista": "objeto",
+  "acao": "A-epiA67",
+  "camera": "fixa"
+ },
+ "epiA68": {
+  "local": "L-epiA68",
+  "vista": "frente",
+  "acao": "A-epiA68",
+  "camera": "fixa"
+ },
+ "epiA69": {
+  "local": "L-epiA69",
+  "vista": "panorama",
+  "acao": "A-epiA69",
+  "camera": "fixa"
+ },
+ "epiA70": {
+  "local": "L-epiA70",
+  "vista": "perfil",
+  "acao": "A-epiA70",
+  "camera": "fixa"
+ },
+ "epiA71": {
+  "local": "L-epiA71",
+  "vista": "objeto",
+  "acao": "A-epiA71",
+  "camera": "fixa"
+ },
+ "epiA72": {
+  "local": "L-epiA72",
+  "vista": "frente",
+  "acao": "A-epiA72",
+  "camera": "fixa"
+ },
+ "epiA73": {
+  "local": "L-epiA73",
+  "vista": "panorama",
+  "acao": "A-epiA73",
+  "camera": "fixa"
+ },
+ "epiA74": {
+  "local": "L-epiA74",
+  "vista": "perfil",
+  "acao": "A-epiA74",
+  "camera": "fixa"
+ },
+ "epiA75": {
+  "local": "L-epiA75",
+  "vista": "objeto",
+  "acao": "A-epiA75",
+  "camera": "fixa"
+ },
+ "epiA76": {
+  "local": "L-epiA76",
+  "vista": "frente",
+  "acao": "A-epiA76",
+  "camera": "fixa"
+ },
+ "epiA77": {
+  "local": "L-epiA77",
+  "vista": "panorama",
+  "acao": "A-epiA77",
+  "camera": "fixa"
+ },
+ "epiA78": {
+  "local": "L-epiA78",
+  "vista": "perfil",
+  "acao": "A-epiA78",
+  "camera": "fixa"
+ },
+ "epiA79": {
+  "local": "L-epiA79",
+  "vista": "objeto",
+  "acao": "A-epiA79",
+  "camera": "fixa"
+ },
+ "epiA80": {
+  "local": "L-epiA80",
+  "vista": "frente",
+  "acao": "A-epiA80",
+  "camera": "fixa"
+ },
+ "epiA81": {
+  "local": "L-epiA81",
+  "vista": "panorama",
+  "acao": "A-epiA81",
+  "camera": "fixa"
+ },
+ "epiA82": {
+  "local": "L-epiA82",
+  "vista": "perfil",
+  "acao": "A-epiA82",
+  "camera": "fixa"
+ },
+ "epiA83": {
+  "local": "L-epiA83",
+  "vista": "objeto",
+  "acao": "A-epiA83",
+  "camera": "fixa"
+ },
+ "epiA84": {
+  "local": "L-epiA84",
+  "vista": "frente",
+  "acao": "A-epiA84",
+  "camera": "fixa"
+ },
+ "epiA85": {
+  "local": "L-epiA85",
+  "vista": "panorama",
+  "acao": "A-epiA85",
+  "camera": "fixa"
+ },
+ "epiA86": {
+  "local": "L-epiA86",
+  "vista": "perfil",
+  "acao": "A-epiA86",
+  "camera": "fixa"
+ },
+ "epiA87": {
+  "local": "L-epiA87",
+  "vista": "objeto",
+  "acao": "A-epiA87",
+  "camera": "fixa"
+ },
+ "epiA88": {
+  "local": "L-epiA88",
+  "vista": "frente",
+  "acao": "A-epiA88",
+  "camera": "fixa"
+ },
+ "epiA89": {
+  "local": "L-epiA89",
+  "vista": "panorama",
+  "acao": "A-epiA89",
+  "camera": "fixa"
+ },
+ "epiA90": {
+  "local": "L-epiA90",
+  "vista": "perfil",
+  "acao": "A-epiA90",
+  "camera": "fixa"
+ },
+ "epiA91": {
+  "local": "L-epiA91",
+  "vista": "objeto",
+  "acao": "A-epiA91",
+  "camera": "fixa"
+ },
+ "epiA92": {
+  "local": "L-epiA92",
+  "vista": "frente",
+  "acao": "A-epiA92",
+  "camera": "fixa"
+ },
+ "epiA93": {
+  "local": "L-epiA93",
+  "vista": "panorama",
+  "acao": "A-epiA93",
+  "camera": "fixa"
+ },
+ "epiA94": {
+  "local": "L-epiA94",
+  "vista": "perfil",
+  "acao": "A-epiA94",
+  "camera": "fixa"
+ },
+ "epiA95": {
+  "local": "L-epiA95",
+  "vista": "objeto",
+  "acao": "A-epiA95",
+  "camera": "fixa"
+ },
+ "epiA96": {
+  "local": "L-epiA96",
+  "vista": "frente",
+  "acao": "A-epiA96",
+  "camera": "fixa"
+ },
+ "epiA97": {
+  "local": "L-epiA97",
+  "vista": "panorama",
+  "acao": "A-epiA97",
+  "camera": "fixa"
+ },
+ "epiA98": {
+  "local": "L-epiA98",
+  "vista": "perfil",
+  "acao": "A-epiA98",
+  "camera": "fixa"
+ },
+ "epiA99": {
+  "local": "L-epiA99",
+  "vista": "objeto",
+  "acao": "A-epiA99",
+  "camera": "fixa"
+ },
+ "epiL13": {
+  "local": "L-epiL13",
+  "vista": "objeto",
+  "acao": "A-epiL13",
+  "camera": "fixa"
+ },
+ "epiF13": {
+  "local": "L-epiF13",
+  "vista": "close",
+  "acao": "A-epiF13",
+  "camera": "fixa"
+ },
+ "epiV13": {
+  "local": "L-epiV13",
+  "vista": "close",
+  "acao": "A-epiV13",
+  "camera": "fixa"
+ },
+ "epiL14": {
+  "local": "L-epiL14",
+  "vista": "objeto",
+  "acao": "A-epiL14",
+  "camera": "fixa"
+ },
+ "epiF14": {
+  "local": "L-epiF14",
+  "vista": "close",
+  "acao": "A-epiF14",
+  "camera": "fixa"
+ },
+ "epiV14": {
+  "local": "L-epiV14",
+  "vista": "close",
+  "acao": "A-epiV14",
+  "camera": "fixa"
+ },
+ "epiL15": {
+  "local": "L-epiL15",
+  "vista": "objeto",
+  "acao": "A-epiL15",
+  "camera": "fixa"
+ },
+ "epiF15": {
+  "local": "L-epiF15",
+  "vista": "close",
+  "acao": "A-epiF15",
+  "camera": "fixa"
+ },
+ "epiV15": {
+  "local": "L-epiV15",
+  "vista": "close",
+  "acao": "A-epiV15",
+  "camera": "fixa"
+ },
+ "epiL16": {
+  "local": "L-epiL16",
+  "vista": "objeto",
+  "acao": "A-epiL16",
+  "camera": "fixa"
+ },
+ "epiF16": {
+  "local": "L-epiF16",
+  "vista": "close",
+  "acao": "A-epiF16",
+  "camera": "fixa"
+ },
+ "epiV16": {
+  "local": "L-epiV16",
+  "vista": "close",
+  "acao": "A-epiV16",
+  "camera": "fixa"
+ },
+ "epiL17": {
+  "local": "L-epiL17",
+  "vista": "objeto",
+  "acao": "A-epiL17",
+  "camera": "fixa"
+ },
+ "epiF17": {
+  "local": "L-epiF17",
+  "vista": "close",
+  "acao": "A-epiF17",
+  "camera": "fixa"
+ },
+ "epiV17": {
+  "local": "L-epiV17",
+  "vista": "close",
+  "acao": "A-epiV17",
+  "camera": "fixa"
+ },
+ "epiL18": {
+  "local": "L-epiL18",
+  "vista": "objeto",
+  "acao": "A-epiL18",
+  "camera": "fixa"
+ },
+ "epiF18": {
+  "local": "L-epiF18",
+  "vista": "close",
+  "acao": "A-epiF18",
+  "camera": "fixa"
+ },
+ "epiV18": {
+  "local": "L-epiV18",
+  "vista": "close",
+  "acao": "A-epiV18",
+  "camera": "fixa"
+ },
+ "epiL19": {
+  "local": "L-epiL19",
+  "vista": "objeto",
+  "acao": "A-epiL19",
+  "camera": "fixa"
+ },
+ "epiF19": {
+  "local": "L-epiF19",
+  "vista": "close",
+  "acao": "A-epiF19",
+  "camera": "fixa"
+ },
+ "epiV19": {
+  "local": "L-epiV19",
+  "vista": "close",
+  "acao": "A-epiV19",
+  "camera": "fixa"
+ },
+ "epiL20": {
+  "local": "L-epiL20",
+  "vista": "objeto",
+  "acao": "A-epiL20",
+  "camera": "fixa"
+ },
+ "epiF20": {
+  "local": "L-epiF20",
+  "vista": "close",
+  "acao": "A-epiF20",
+  "camera": "fixa"
+ },
+ "epiV20": {
+  "local": "L-epiV20",
+  "vista": "close",
+  "acao": "A-epiV20",
+  "camera": "fixa"
+ },
+ "epiL21": {
+  "local": "L-epiL21",
+  "vista": "objeto",
+  "acao": "A-epiL21",
+  "camera": "fixa"
+ },
+ "epiF21": {
+  "local": "L-epiF21",
+  "vista": "close",
+  "acao": "A-epiF21",
+  "camera": "fixa"
+ },
+ "epiV21": {
+  "local": "L-epiV21",
+  "vista": "close",
+  "acao": "A-epiV21",
+  "camera": "fixa"
+ },
+ "epiL22": {
+  "local": "L-epiL22",
+  "vista": "objeto",
+  "acao": "A-epiL22",
+  "camera": "fixa"
+ },
+ "epiF22": {
+  "local": "L-epiF22",
+  "vista": "close",
+  "acao": "A-epiF22",
+  "camera": "fixa"
+ },
+ "epiV22": {
+  "local": "L-epiV22",
+  "vista": "close",
+  "acao": "A-epiV22",
+  "camera": "fixa"
+ },
+ "epiL23": {
+  "local": "L-epiL23",
+  "vista": "objeto",
+  "acao": "A-epiL23",
+  "camera": "fixa"
+ },
+ "epiF23": {
+  "local": "L-epiF23",
+  "vista": "close",
+  "acao": "A-epiF23",
+  "camera": "fixa"
+ },
+ "epiV23": {
+  "local": "L-epiV23",
+  "vista": "close",
+  "acao": "A-epiV23",
+  "camera": "fixa"
+ },
+ "epiL24": {
+  "local": "L-epiL24",
+  "vista": "objeto",
+  "acao": "A-epiL24",
+  "camera": "fixa"
+ },
+ "epiF24": {
+  "local": "L-epiF24",
+  "vista": "close",
+  "acao": "A-epiF24",
+  "camera": "fixa"
+ },
+ "epiV24": {
+  "local": "L-epiV24",
+  "vista": "close",
+  "acao": "A-epiV24",
+  "camera": "fixa"
+ },
+ "epiL25": {
+  "local": "L-epiL25",
+  "vista": "objeto",
+  "acao": "A-epiL25",
+  "camera": "fixa"
+ },
+ "epiF25": {
+  "local": "L-epiF25",
+  "vista": "close",
+  "acao": "A-epiF25",
+  "camera": "fixa"
+ },
+ "epiV25": {
+  "local": "L-epiV25",
+  "vista": "close",
+  "acao": "A-epiV25",
+  "camera": "fixa"
+ },
+ "epiL26": {
+  "local": "L-epiL26",
+  "vista": "objeto",
+  "acao": "A-epiL26",
+  "camera": "fixa"
+ },
+ "epiF26": {
+  "local": "L-epiF26",
+  "vista": "close",
+  "acao": "A-epiF26",
+  "camera": "fixa"
+ },
+ "epiV26": {
+  "local": "L-epiV26",
+  "vista": "close",
+  "acao": "A-epiV26",
+  "camera": "fixa"
+ },
+ "epiL27": {
+  "local": "L-epiL27",
+  "vista": "objeto",
+  "acao": "A-epiL27",
+  "camera": "fixa"
+ },
+ "epiF27": {
+  "local": "L-epiF27",
+  "vista": "close",
+  "acao": "A-epiF27",
+  "camera": "fixa"
+ },
+ "epiV27": {
+  "local": "L-epiV27",
+  "vista": "close",
+  "acao": "A-epiV27",
+  "camera": "fixa"
+ },
+ "epiL28": {
+  "local": "L-epiL28",
+  "vista": "objeto",
+  "acao": "A-epiL28",
+  "camera": "fixa"
+ },
+ "epiF28": {
+  "local": "L-epiF28",
+  "vista": "close",
+  "acao": "A-epiF28",
+  "camera": "fixa"
+ },
+ "epiV28": {
+  "local": "L-epiV28",
+  "vista": "close",
+  "acao": "A-epiV28",
+  "camera": "fixa"
+ },
+ "epiL29": {
+  "local": "L-epiL29",
+  "vista": "objeto",
+  "acao": "A-epiL29",
+  "camera": "fixa"
+ },
+ "epiF29": {
+  "local": "L-epiF29",
+  "vista": "close",
+  "acao": "A-epiF29",
+  "camera": "fixa"
+ },
+ "epiV29": {
+  "local": "L-epiV29",
+  "vista": "close",
+  "acao": "A-epiV29",
+  "camera": "fixa"
+ },
+ "epiL30": {
+  "local": "L-epiL30",
+  "vista": "objeto",
+  "acao": "A-epiL30",
+  "camera": "fixa"
+ },
+ "epiF30": {
+  "local": "L-epiF30",
+  "vista": "close",
+  "acao": "A-epiF30",
+  "camera": "fixa"
+ },
+ "epiV30": {
+  "local": "L-epiV30",
+  "vista": "close",
+  "acao": "A-epiV30",
+  "camera": "fixa"
+ },
+ "epiL31": {
+  "local": "L-epiL31",
+  "vista": "objeto",
+  "acao": "A-epiL31",
+  "camera": "fixa"
+ },
+ "epiF31": {
+  "local": "L-epiF31",
+  "vista": "close",
+  "acao": "A-epiF31",
+  "camera": "fixa"
+ },
+ "epiV31": {
+  "local": "L-epiV31",
+  "vista": "close",
+  "acao": "A-epiV31",
+  "camera": "fixa"
+ },
+ "epiL32": {
+  "local": "L-epiL32",
+  "vista": "objeto",
+  "acao": "A-epiL32",
+  "camera": "fixa"
+ },
+ "epiF32": {
+  "local": "L-epiF32",
+  "vista": "close",
+  "acao": "A-epiF32",
+  "camera": "fixa"
+ },
+ "epiV32": {
+  "local": "L-epiV32",
+  "vista": "close",
+  "acao": "A-epiV32",
+  "camera": "fixa"
+ },
+ "epiL33": {
+  "local": "L-epiL33",
+  "vista": "objeto",
+  "acao": "A-epiL33",
+  "camera": "fixa"
+ },
+ "epiF33": {
+  "local": "L-epiF33",
+  "vista": "close",
+  "acao": "A-epiF33",
+  "camera": "fixa"
+ },
+ "epiV33": {
+  "local": "L-epiV33",
+  "vista": "close",
+  "acao": "A-epiV33",
+  "camera": "fixa"
+ },
+ "epiL34": {
+  "local": "L-epiL34",
+  "vista": "objeto",
+  "acao": "A-epiL34",
+  "camera": "fixa"
+ },
+ "epiF34": {
+  "local": "L-epiF34",
+  "vista": "close",
+  "acao": "A-epiF34",
+  "camera": "fixa"
+ },
+ "epiV34": {
+  "local": "L-epiV34",
+  "vista": "close",
+  "acao": "A-epiV34",
+  "camera": "fixa"
+ },
+ "epiL35": {
+  "local": "L-epiL35",
+  "vista": "objeto",
+  "acao": "A-epiL35",
+  "camera": "fixa"
+ },
+ "epiF35": {
+  "local": "L-epiF35",
+  "vista": "close",
+  "acao": "A-epiF35",
+  "camera": "fixa"
+ },
+ "epiV35": {
+  "local": "L-epiV35",
+  "vista": "close",
+  "acao": "A-epiV35",
+  "camera": "fixa"
+ },
+ "epiL36": {
+  "local": "L-epiL36",
+  "vista": "objeto",
+  "acao": "A-epiL36",
+  "camera": "fixa"
+ },
+ "epiF36": {
+  "local": "L-epiF36",
+  "vista": "close",
+  "acao": "A-epiF36",
+  "camera": "fixa"
+ },
+ "epiV36": {
+  "local": "L-epiV36",
+  "vista": "close",
+  "acao": "A-epiV36",
+  "camera": "fixa"
+ },
+ "epiL37": {
+  "local": "L-epiL37",
+  "vista": "objeto",
+  "acao": "A-epiL37",
+  "camera": "fixa"
+ },
+ "epiF37": {
+  "local": "L-epiF37",
+  "vista": "close",
+  "acao": "A-epiF37",
+  "camera": "fixa"
+ },
+ "epiV37": {
+  "local": "L-epiV37",
+  "vista": "close",
+  "acao": "A-epiV37",
+  "camera": "fixa"
+ },
+ "epiL38": {
+  "local": "L-epiL38",
+  "vista": "objeto",
+  "acao": "A-epiL38",
+  "camera": "fixa"
+ },
+ "epiF38": {
+  "local": "L-epiF38",
+  "vista": "close",
+  "acao": "A-epiF38",
+  "camera": "fixa"
+ },
+ "epiV38": {
+  "local": "L-epiV38",
+  "vista": "close",
+  "acao": "A-epiV38",
+  "camera": "fixa"
+ },
+ "epiL39": {
+  "local": "L-epiL39",
+  "vista": "objeto",
+  "acao": "A-epiL39",
+  "camera": "fixa"
+ },
+ "epiF39": {
+  "local": "L-epiF39",
+  "vista": "close",
+  "acao": "A-epiF39",
+  "camera": "fixa"
+ },
+ "epiV39": {
+  "local": "L-epiV39",
+  "vista": "close",
+  "acao": "A-epiV39",
+  "camera": "fixa"
+ },
+ "epiL40": {
+  "local": "L-epiL40",
+  "vista": "objeto",
+  "acao": "A-epiL40",
+  "camera": "fixa"
+ },
+ "epiF40": {
+  "local": "L-epiF40",
+  "vista": "close",
+  "acao": "A-epiF40",
+  "camera": "fixa"
+ },
+ "epiV40": {
+  "local": "L-epiV40",
+  "vista": "close",
+  "acao": "A-epiV40",
+  "camera": "fixa"
+ },
+ "epiN09": {
+  "local": "L-epiN09",
+  "vista": "objeto",
+  "acao": "A-epiN09",
+  "camera": "fixa"
+ },
+ "epiN10": {
+  "local": "L-epiN10",
+  "vista": "objeto",
+  "acao": "A-epiN10",
+  "camera": "fixa"
+ },
+ "epiN11": {
+  "local": "L-epiN11",
+  "vista": "objeto",
+  "acao": "A-epiN11",
+  "camera": "fixa"
+ },
+ "epiN12": {
+  "local": "L-epiN12",
+  "vista": "objeto",
+  "acao": "A-epiN12",
+  "camera": "fixa"
+ },
+ "epiN13": {
+  "local": "L-epiN13",
+  "vista": "objeto",
+  "acao": "A-epiN13",
+  "camera": "fixa"
+ },
+ "epiN14": {
+  "local": "L-epiN14",
+  "vista": "objeto",
+  "acao": "A-epiN14",
+  "camera": "fixa"
+ },
+ "epiN15": {
+  "local": "L-epiN15",
+  "vista": "objeto",
+  "acao": "A-epiN15",
+  "camera": "fixa"
+ },
+ "epiN16": {
+  "local": "L-epiN16",
+  "vista": "objeto",
+  "acao": "A-epiN16",
+  "camera": "fixa"
+ },
+ "epiT05": {
+  "local": "L-epiT05",
+  "vista": "panorama",
+  "acao": "A-epiT05",
+  "camera": "fixa"
+ },
+ "epiT06": {
+  "local": "L-epiT06",
+  "vista": "panorama",
+  "acao": "A-epiT06",
+  "camera": "fixa"
+ },
+ "epiT07": {
+  "local": "L-epiT07",
+  "vista": "panorama",
+  "acao": "A-epiT07",
+  "camera": "fixa"
+ },
+ "epiT08": {
+  "local": "L-epiT08",
+  "vista": "panorama",
+  "acao": "A-epiT08",
+  "camera": "fixa"
+ },
+ "epiT09": {
+  "local": "L-epiT09",
+  "vista": "panorama",
+  "acao": "A-epiT09",
+  "camera": "fixa"
+ },
+ "epiT10": {
+  "local": "L-epiT10",
+  "vista": "panorama",
+  "acao": "A-epiT10",
+  "camera": "fixa"
+ },
+ "epiA100": {
+  "local": "L-epiA100",
+  "vista": "frente",
+  "acao": "A-epiA100",
+  "camera": "fixa"
+ },
+ "epiA101": {
+  "local": "L-epiA101",
+  "vista": "panorama",
+  "acao": "A-epiA101",
+  "camera": "fixa"
+ },
+ "epiA102": {
+  "local": "L-epiA102",
+  "vista": "perfil",
+  "acao": "A-epiA102",
+  "camera": "fixa"
+ },
+ "epiA103": {
+  "local": "L-epiA103",
+  "vista": "objeto",
+  "acao": "A-epiA103",
+  "camera": "fixa"
+ },
+ "epiA104": {
+  "local": "L-epiA104",
+  "vista": "frente",
+  "acao": "A-epiA104",
+  "camera": "fixa"
+ },
+ "epiA105": {
+  "local": "L-epiA105",
+  "vista": "panorama",
+  "acao": "A-epiA105",
+  "camera": "fixa"
+ },
+ "epiA106": {
+  "local": "L-epiA106",
+  "vista": "perfil",
+  "acao": "A-epiA106",
+  "camera": "fixa"
+ },
+ "epiA107": {
+  "local": "L-epiA107",
+  "vista": "objeto",
+  "acao": "A-epiA107",
+  "camera": "fixa"
+ },
+ "epiA108": {
+  "local": "L-epiA108",
+  "vista": "frente",
+  "acao": "A-epiA108",
+  "camera": "fixa"
+ },
+ "epiA109": {
+  "local": "L-epiA109",
+  "vista": "panorama",
+  "acao": "A-epiA109",
+  "camera": "fixa"
+ },
+ "epiA110": {
+  "local": "L-epiA110",
+  "vista": "perfil",
+  "acao": "A-epiA110",
+  "camera": "fixa"
+ },
+ "epiA111": {
+  "local": "L-epiA111",
+  "vista": "objeto",
+  "acao": "A-epiA111",
+  "camera": "fixa"
+ },
+ "epiA112": {
+  "local": "L-epiA112",
+  "vista": "frente",
+  "acao": "A-epiA112",
+  "camera": "fixa"
+ },
+ "epiA113": {
+  "local": "L-epiA113",
+  "vista": "panorama",
+  "acao": "A-epiA113",
+  "camera": "fixa"
+ },
+ "epiA114": {
+  "local": "L-epiA114",
+  "vista": "perfil",
+  "acao": "A-epiA114",
+  "camera": "fixa"
+ },
+ "epiA115": {
+  "local": "L-epiA115",
+  "vista": "objeto",
+  "acao": "A-epiA115",
+  "camera": "fixa"
+ },
+ "epiA116": {
+  "local": "L-epiA116",
+  "vista": "frente",
+  "acao": "A-epiA116",
+  "camera": "fixa"
+ },
+ "epiA117": {
+  "local": "L-epiA117",
+  "vista": "panorama",
+  "acao": "A-epiA117",
+  "camera": "fixa"
+ },
+ "epiA118": {
+  "local": "L-epiA118",
+  "vista": "perfil",
+  "acao": "A-epiA118",
+  "camera": "fixa"
+ },
+ "epiA119": {
+  "local": "L-epiA119",
+  "vista": "objeto",
+  "acao": "A-epiA119",
+  "camera": "fixa"
+ },
+ "epiA120": {
+  "local": "L-epiA120",
+  "vista": "frente",
+  "acao": "A-epiA120",
+  "camera": "fixa"
+ },
+ "epiA121": {
+  "local": "L-epiA121",
+  "vista": "panorama",
+  "acao": "A-epiA121",
+  "camera": "fixa"
+ },
+ "epiA122": {
+  "local": "L-epiA122",
+  "vista": "perfil",
+  "acao": "A-epiA122",
+  "camera": "fixa"
+ },
+ "epiA123": {
+  "local": "L-epiA123",
+  "vista": "objeto",
+  "acao": "A-epiA123",
+  "camera": "fixa"
+ },
+ "epiA124": {
+  "local": "L-epiA124",
+  "vista": "frente",
+  "acao": "A-epiA124",
+  "camera": "fixa"
+ },
+ "epiA125": {
+  "local": "L-epiA125",
+  "vista": "panorama",
+  "acao": "A-epiA125",
+  "camera": "fixa"
+ },
+ "epiA126": {
+  "local": "L-epiA126",
+  "vista": "perfil",
+  "acao": "A-epiA126",
+  "camera": "fixa"
+ },
+ "epiA127": {
+  "local": "L-epiA127",
+  "vista": "objeto",
+  "acao": "A-epiA127",
+  "camera": "fixa"
+ },
+ "epiA128": {
+  "local": "L-epiA128",
+  "vista": "frente",
+  "acao": "A-epiA128",
+  "camera": "fixa"
+ },
+ "epiA129": {
+  "local": "L-epiA129",
+  "vista": "panorama",
+  "acao": "A-epiA129",
+  "camera": "fixa"
+ },
+ "epiA130": {
+  "local": "L-epiA130",
+  "vista": "perfil",
+  "acao": "A-epiA130",
+  "camera": "fixa"
+ },
+ "epiA131": {
+  "local": "L-epiA131",
+  "vista": "objeto",
+  "acao": "A-epiA131",
+  "camera": "fixa"
+ },
+ "epiA132": {
+  "local": "L-epiA132",
+  "vista": "frente",
+  "acao": "A-epiA132",
+  "camera": "fixa"
+ },
+ "epiA133": {
+  "local": "L-epiA133",
+  "vista": "panorama",
+  "acao": "A-epiA133",
+  "camera": "fixa"
+ },
+ "epiA134": {
+  "local": "L-epiA134",
+  "vista": "perfil",
+  "acao": "A-epiA134",
+  "camera": "fixa"
+ },
+ "epiA135": {
+  "local": "L-epiA135",
+  "vista": "objeto",
+  "acao": "A-epiA135",
+  "camera": "fixa"
+ },
+ "epiA136": {
+  "local": "L-epiA136",
+  "vista": "frente",
+  "acao": "A-epiA136",
+  "camera": "fixa"
+ },
+ "epiA137": {
+  "local": "L-epiA137",
+  "vista": "panorama",
+  "acao": "A-epiA137",
+  "camera": "fixa"
+ },
+ "epiA138": {
+  "local": "L-epiA138",
+  "vista": "perfil",
+  "acao": "A-epiA138",
+  "camera": "fixa"
+ },
+ "epiA139": {
+  "local": "L-epiA139",
+  "vista": "objeto",
+  "acao": "A-epiA139",
+  "camera": "fixa"
+ },
+ "epiA140": {
+  "local": "L-epiA140",
+  "vista": "frente",
+  "acao": "A-epiA140",
+  "camera": "fixa"
+ },
+ "epiA141": {
+  "local": "L-epiA141",
+  "vista": "panorama",
+  "acao": "A-epiA141",
+  "camera": "fixa"
+ },
+ "epiA142": {
+  "local": "L-epiA142",
+  "vista": "perfil",
+  "acao": "A-epiA142",
+  "camera": "fixa"
+ },
+ "epiA143": {
+  "local": "L-epiA143",
+  "vista": "objeto",
+  "acao": "A-epiA143",
+  "camera": "fixa"
+ },
+ "epiA144": {
+  "local": "L-epiA144",
+  "vista": "frente",
+  "acao": "A-epiA144",
+  "camera": "fixa"
+ },
+ "epiA145": {
+  "local": "L-epiA145",
+  "vista": "panorama",
+  "acao": "A-epiA145",
+  "camera": "fixa"
+ },
+ "epiA146": {
+  "local": "L-epiA146",
+  "vista": "perfil",
+  "acao": "A-epiA146",
+  "camera": "fixa"
+ },
+ "epiA147": {
+  "local": "L-epiA147",
+  "vista": "objeto",
+  "acao": "A-epiA147",
+  "camera": "fixa"
+ },
+ "epiA148": {
+  "local": "L-epiA148",
+  "vista": "frente",
+  "acao": "A-epiA148",
+  "camera": "fixa"
+ },
+ "epiA149": {
+  "local": "L-epiA149",
+  "vista": "panorama",
+  "acao": "A-epiA149",
+  "camera": "fixa"
+ },
+ "epiA150": {
+  "local": "L-epiA150",
+  "vista": "perfil",
+  "acao": "A-epiA150",
+  "camera": "fixa"
  }
 }

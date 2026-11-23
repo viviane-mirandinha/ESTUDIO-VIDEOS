@@ -941,8 +941,9 @@ function delSel() {
 }
 $("#btnDel").onclick = delSel;
 function splitSel() {
+  if (S.sel && String(S.sel).startsWith("audio:")) return toast("Voz, música e sons não podem ser cortados aqui — selecione um bloco de texto, foto, vídeo ou cena");
   const it = S.sel && byId(S.sel);
-  if (!it) return toast("Selecione um bloco (texto, foto, vídeo, cena) e ponha a linha vermelha onde quer cortar");
+  if (!it) return toast("Clique num bloco (texto, foto, vídeo, cena) e ponha a linha vermelha onde quer cortar");
   if (it.by === "template") return toast("Elemento do modelo não pode ser cortado — mude início/duração");
   const t = +S.t.toFixed(3), s = +it.start, e = s + +it.dur;
   if (t <= s + 0.05 || t >= e - 0.05) return toast("Ponha a linha vermelha DENTRO do bloco para cortar");
@@ -1788,10 +1789,11 @@ function renderFila() {
       else if (j.status === "pronto") {
         if (r.conferir) acts += `<button class="btn mini go" data-jconf="${r.pid}">Conferir imagens</button>`;
         if (r.rid) acts += `<button class="btn mini go" data-jrot="${r.rid}">Ver roteiro</button>`;
-        if (r.pid && r.rendered) acts += `<button class="btn mini go" data-jver="${r.pid}">Ver vídeo</button>`;
+        if (r.pid && (r.rendered || r.video)) acts += `<button class="btn mini go" data-jver="${r.pid}">Ver vídeo</button>`;
         if (r.pid && r.medico && r.medico.corrigiveis > 0) acts += `<button class="btn mini" data-jmed="${r.pid}" title="Achei tela preta ou frame congelado que dá pra consertar sozinho">Consertar (${r.medico.corrigiveis})</button>`;
-        if (r.pid && !r.conferir) acts += `<button class="btn mini" data-jed="${r.pid}">Abrir no editor</button>`;
-        if (r.pid && r.rendered) acts += `<a class="btn mini go" href="/api/baixar/${r.pid}/leve" download title="Versão menor, boa para postar" onclick="event.stopPropagation()">Baixar leve</a><a class="btn mini" href="/api/baixar/${r.pid}/final" download title="Qualidade máxima" onclick="event.stopPropagation()">Baixar final</a>`;
+        if (r.pid && String(j.tipo || "").startsWith("blender_")) acts += `<button class="btn mini go" data-jbz="${r.pid}" title="Abre a revisão cena a cena na aba Blender 3D">🧊 Abrir no Blender 3D</button>`;
+        else if (r.pid && !r.conferir) acts += `<button class="btn mini" data-jed="${r.pid}">Abrir no editor</button>`;
+        if (r.pid && (r.rendered || r.video)) acts += `<a class="btn mini go" href="/api/baixar/${r.pid}/leve" download title="Versão menor, boa para postar" onclick="event.stopPropagation()">Baixar leve</a><a class="btn mini" href="/api/baixar/${r.pid}/final" download title="Qualidade máxima" onclick="event.stopPropagation()">Baixar final</a>`;
         if (j.tipo === "capa" && r.pid) acts += `<a class="btn mini go" href="/api/baixar/${r.pid}/capa" download title="Baixa a capa (funciona no celular)" onclick="event.stopPropagation()">Baixar capa</a><a class="btn mini go" href="/api/baixar/${r.pid}/descricao" download title="Baixa o descricao.txt (títulos, descrição e hashtags)" onclick="event.stopPropagation()">Baixar descrição</a>`;
         if (r.pid && r.rendered) acts += `<button class="btn mini" data-jcapa="${r.pid}" title="Cria a capa do Instagram e o descricao.txt">Criar capa</button>`;
         if (r.pid) acts += `<button class="btn mini" data-jpasta="${r.pid}" title="${esc(r.pasta_nome || "")}">Pasta</button>`;
@@ -1810,6 +1812,7 @@ function renderFila() {
   on("[data-jrot]", (b) => openRoteiro(b.dataset.jrot));
   on("[data-jver]", (b) => { const jb = FILA.list.find((x) => x.resultado && x.resultado.pid === b.dataset.jver && x.titulo); assistirAqui(b.dataset.jver, jb ? jb.titulo : "Vídeo pronto", true); });
   on("[data-jed]", (b) => openProject(b.dataset.jed));
+  on("[data-jbz]", (b) => window.openBlender && window.openBlender(b.dataset.jbz));
   on("[data-jmed]", (b) => { modal("🩺 Médico do render"); medicoConsertar(b.dataset.jmed); });
   on("[data-jcapa]", (b) => criarCapa(b.dataset.jcapa));
   on("[data-jpasta]", (b) => api(`/api/open/${b.dataset.jpasta}?what=folder`, { method: "POST" }));
@@ -2699,7 +2702,7 @@ async function openCortes(cid) {
   if (!showOnly("#cortes")) return;
   pills("#ctN", [[1, "1"], [3, "3"], [5, "5"], [8, "8"]], CT.n, "ctn"); pills("#ctDur", CT_DUR, CT.dur, "ctd");
   try { $("#ctCanal").value = $("#ctCanal").value || ""; } catch (e) { }
-  try { const l = await api("/api/cortes"); $("#ctAnteriores").innerHTML = '<option value="">📂 Cortes anteriores…</option>' + l.map((x) => `<option value="${esc(x.cid)}">${esc(x.nome)} · ${x.n} cortes · ${esc(x.quando)}</option>`).join(""); } catch (e) { }
+  try { const l = await api("/api/cortes"); $("#ctAnteriores").innerHTML = '<option value="">📂 Cortes anteriores…</option>' + l.map((x) => `<option value="${esc(x.cid)}">${esc(x.nome)} · ${x.revisar ? "conferir momentos" : x.n + " cortes"} · ${esc(x.quando)}</option>`).join(""); } catch (e) { }
   $("#cortes").classList.toggle("soRes", !!cid);   // aberto por um resultado: mostra só o resultado (botão pra fazer novos)
   if (cid) { mostrarCortes.semRolar = true; await mostrarCortes(cid); mostrarCortes.semRolar = false; }
 }
@@ -2717,27 +2720,93 @@ $("#ctFazer").onclick = async () => {
   if (CT.fonte === "link" && !urlOk(url)) return erroCampo("#ctUrl", "Cole o link do vídeo (começa com https://)");
   const [dmin, dmax] = CT.dur.split("-").map(Number);
   const body = { url: CT.fonte === "link" ? url : "", arquivo_id: CT.fonte === "pc" ? CT.arq.arquivo_id : "", arquivo_nome: CT.arq?.nome || "", de: $("#ctDe").value.trim(), ate: $("#ctAte").value.trim(),
-    n: CT.n, dur_min: dmin, dur_max: dmax, modo: CT.modo, enquadramento: CT.enq, intro: $("#ctIntro").checked, canal: $("#ctCanal").value.trim(), programa: $("#ctPrograma").value.trim() };
+    n: CT.n, dur_min: dmin, dur_max: dmax, modo: CT.modo, enquadramento: CT.enq, intro: $("#ctIntro").checked, canal: $("#ctCanal").value.trim(), programa: $("#ctPrograma").value.trim(),
+    silencio: $("#ctSil").checked, zoom: $("#ctZoom").checked, revisar: $("#ctRev").checked };
   let r; try { r = await jpost("/api/cortes/criar", body); } catch (e) { return toast("❌ " + errTxt(e), 6000); }
   CT.arq = null; $("#ctArqInfo").textContent = ""; $("#ctArq").value = "";
-  acompanhar(r.job, "✂ Fazendo os cortes…", (res, fechado) => { if (fechado) return toast(`✅ ${res.n} cortes prontos! Veja em ✂ Fábrica de cortes.`, 6000); closeModal(); mostrarCortes(res.cid); });
+  acompanhar(r.job, "✂ Fazendo os cortes…", (res, fechado) => {
+    if (res.fase === "revisar") { if (fechado) return toast("✅ Achei os momentos! Abra em ✂ Fábrica de cortes → Cortes anteriores pra conferir.", 7000); closeModal(); return mostrarRevisao(res.cid); }
+    if (fechado) return toast(`✅ ${res.n} cortes prontos! Veja em ✂ Fábrica de cortes.`, 6000); closeModal(); mostrarCortes(res.cid);
+  });
 };
 async function mostrarCortes(cid) {
   if ($("#cortes").classList.contains("hidden")) return openCortes(cid);
   $("#ctRes").innerHTML = '<div class="card">Carregando os cortes…</div>';
   let d; try { d = await api("/api/cortes/" + encodeURIComponent(cid)); } catch (e) { $("#ctRes").innerHTML = `<div class="card">❌ ${esc(errTxt(e))}</div>`; return; }
+  if (d.fase === "revisar") return mostrarRevisao(cid);
   TELA.video = d.nome;
   const card = (c, intro) => `<div class="ctC">
     <div class="ctV">${c.video_url ? `<video src="${c.leve_url || c.video_url}" ${c.thumb_url ? `poster="${c.thumb_url}"` : ""} controls preload="none" playsinline></video>` : '<div class="cfVazio">sem vídeo</div>'}</div>
     <div class="ctT">${intro ? '<span class="gtag auto">Intro</span>' : `<span class="ctNota ${c.nota >= 7 ? "boa" : c.nota >= 5 ? "media" : "fraca"}" title="Nota do trecho (0-10)">${Number(c.nota).toFixed(1)}</span>`}
       <b>${intro ? "Intro com os melhores momentos" : esc(c.titulo)}</b>
-      ${intro ? "" : `<small class="mu">${fmtSeg(c.duracao)} · do minuto ${fmtMS(c.inicio)} ao ${fmtMS(c.fim)}</small><p class="ctMot">💡 ${esc(c.motivo || "")}</p>`}
+      ${intro ? "" : `<small class="mu">${fmtSeg(c.duracao)} · do minuto ${fmtMS(c.inicio)} ao ${fmtMS(c.fim)}${c.tirou_s >= 1 ? ` · tirei ${Math.round(c.tirou_s)} s de pausa` : ""}${c.zoom ? " · com zoom" : ""}</small><p class="ctMot">💡 ${esc(c.motivo || "")}</p>`}
       <div class="ctA">${c.video_url ? `<a class="btn mini go" href="${c.video_url}" download>⬇ Baixar</a>` : ""}<button class="btn mini" data-cted="${esc(c.pid)}">✏ Abrir no editor</button><button class="btn mini" data-ctpasta="${esc(c.pid)}">📂 Pasta</button></div></div></div>`;
-  $("#ctRes").innerHTML = `<div class="card"><div class="ctHead"><b>✂ ${d.cortes.length} ${d.cortes.length === 1 ? "corte" : "cortes"}</b><button class="btn mini novoRes" onclick="document.querySelector('#cortes').classList.remove('soRes')">➕ Fazer novos cortes</button><span class="mu">${esc(d.nome)} · escolhidos por ${d.modo === "ia" ? "IA do seu PC + regras" : "regras (sem IA)"} · ${d.enquadramento === "centro" ? "tela cheia" : "fundo desfocado"}${d.minutos ? " · tempo de máquina " + d.minutos + " min" : ""} · de graça, no seu PC</span></div>
+  $("#ctRes").innerHTML = `<div class="card"><div class="ctHead"><b>✂ ${d.cortes.length} ${d.cortes.length === 1 ? "corte" : "cortes"}</b><button class="btn mini novoRes" onclick="document.querySelector('#cortes').classList.remove('soRes')">➕ Fazer novos cortes</button>${d.tem_plano ? `<button class="btn mini" id="ctVoltaRev">↩ Escolher outros momentos</button>` : ""}<span class="mu">${esc(d.nome)} · escolhidos por ${d.modo === "ia" ? "IA do seu PC + regras" : "regras (sem IA)"} · ${d.enquadramento === "centro" ? "tela cheia" : "fundo desfocado"}${d.minutos ? " · tempo de máquina " + d.minutos + " min" : ""} · de graça, no seu PC</span></div>
     <div class="ctGrid">${d.intro ? card(d.intro, true) : ""}${d.cortes.map((c) => card(c)).join("")}</div></div>`;
+  if ($("#ctVoltaRev")) $("#ctVoltaRev").onclick = () => mostrarRevisao(cid);
   $("#ctRes").querySelectorAll("[data-cted]").forEach((b) => (b.onclick = () => openProject(b.dataset.cted)));
   $("#ctRes").querySelectorAll("[data-ctpasta]").forEach((b) => (b.onclick = () => api(`/api/open/${b.dataset.ctpasta}?what=folder`, { method: "POST" })));
   if (!mostrarCortes.semRolar) $("#ctRes").scrollIntoView({ block: "start" });
+}
+
+// ---- ✂ conferir os momentos antes de montar
+const ctFmtT = (t) => { t = Math.max(0, +t || 0); const m = Math.floor(t / 60), sec = t - m * 60; return m + ":" + (sec < 10 ? "0" : "") + sec.toFixed(1); };
+const ctParseT = (v) => { const p = String(v).trim().replace(",", ".").split(":").map(Number); if (!p.length || p.some((x) => isNaN(x))) return NaN; return p.reduce((a, x) => a * 60 + x, 0); };
+async function mostrarRevisao(cid) {
+  if ($("#cortes").classList.contains("hidden")) { mostrarCortes.semRolar = true; await openCortes(cid); mostrarCortes.semRolar = false; return; }
+  $("#ctRes").innerHTML = '<div class="card">Carregando os momentos…</div>';
+  let d; try { d = await api("/api/cortes/" + encodeURIComponent(cid) + "/plano"); } catch (e) { $("#ctRes").innerHTML = `<div class="card">❌ ${esc(errTxt(e))}</div>`; return; }
+  TELA.video = d.nome;
+  const baixa = d.origem === "link" && d.fonte && d.fonte.h && d.fonte.h < 1000;
+  const linha = (c, i) => `<div class="rvC ${c.marcado ? "" : "off"}" data-i="${i}">
+    <label class="rvCk"><input type="checkbox" class="rvOn" ${c.marcado ? "checked" : ""} /></label>
+    <div class="rvLinha"><span class="ctNota ${c.nota >= 7 ? "boa" : c.nota >= 5 ? "media" : "fraca"}" title="Nota do trecho (0-10)">${Number(c.nota).toFixed(1)}</span><input type="text" class="rvTit" value="${esc(c.titulo)}" maxlength="70" title="Título que aparece no corte" /></div>
+    <div class="mu" style="grid-column:2">💡 ${esc(c.motivo || "")}</div>
+    <div style="grid-column:2">${d.fonte_url ? `<video class="rvVid" src="${d.fonte_url}#t=${c.s},${c.e}" controls preload="none" playsinline></video>` : ""}</div>
+    <div class="rvLinha" style="grid-column:2">começa em <input type="text" class="rvT rvS" value="${ctFmtT(c.s)}" /> <button class="btn mini" data-rvn="s-1">−1 s</button><button class="btn mini" data-rvn="s+1">+1 s</button>
+      termina em <input type="text" class="rvT rvE" value="${ctFmtT(c.e)}" /> <button class="btn mini" data-rvn="e-1">−1 s</button><button class="btn mini" data-rvn="e+1">+1 s</button><span class="rvDur"></span></div>
+    <details style="grid-column:2"><summary>ler o que é dito</summary><p>${esc(c.texto)}</p></details></div>`;
+  $("#ctRes").innerHTML = `<div class="card"><div class="ctHead"><b>👀 Confira os momentos</b><button class="btn mini novoRes" onclick="document.querySelector('#cortes').classList.remove('soRes')">➕ Fazer novos cortes</button>
+    <span class="mu">${esc(d.nome)} · achei ${d.candidatos.length} momentos e já marquei os ${d.n} melhores. Marque/desmarque, mude o título e ajuste começo e fim. Nada foi montado ainda.</span></div>
+    ${baixa ? `<div class="avisoLink">⚠ Esse vídeo veio do link em <b>${d.fonte.h}p</b>. Os cortes em pé vão sair com qualidade menor. Para ficar nítido, baixe o vídeo na maior qualidade e refaça por <b>📁 Do meu PC</b>.</div>` : ""}
+    <div class="rvTop"><label class="chk"><input type="checkbox" id="rvSil" ${d.silencio ? "checked" : ""} /> 🤐 Tirar silêncios e frases repetidas</label>
+      <label class="chk"><input type="checkbox" id="rvZoom" ${d.zoom ? "checked" : ""} /> 🔍 Zoom de ênfase</label>
+      <label class="chk"><input type="checkbox" id="rvIntro" ${d.intro ? "checked" : ""} /> 🎬 Intro com os 3 melhores</label></div>
+    <div class="rvLista">${d.candidatos.map(linha).join("")}</div>
+    <div class="rvAcoes"><button class="btn big go" id="rvFazer">✂ Montar os cortes marcados</button><span class="mu" id="rvResumo"></span></div></div>`;
+  const root = $("#ctRes"), cards = [...root.querySelectorAll(".rvC")];
+  const ler = (el) => { const i = +el.dataset.i, c = d.candidatos[i]; return { c, on: el.querySelector(".rvOn").checked, s: ctParseT(el.querySelector(".rvS").value), e: ctParseT(el.querySelector(".rvE").value), titulo: el.querySelector(".rvTit").value.trim() }; };
+  const atualizar = () => {
+    let n = 0;
+    cards.forEach((el) => {
+      const x = ler(el), dur = x.e - x.s, ok = !isNaN(dur) && dur >= 3 && dur <= 240, sp = el.querySelector(".rvDur");
+      el.classList.toggle("off", !x.on); if (x.on) n++;
+      sp.textContent = isNaN(dur) ? "tempo inválido" : `${Math.round(dur)} s` + (dur < 3 ? " (curto demais)" : dur > 240 ? " (passa de 4 min)" : "");
+      sp.classList.toggle("ruim", !ok);
+    });
+    $("#rvResumo").textContent = n ? `${n} ${n === 1 ? "corte marcado" : "cortes marcados"}` : "Marque pelo menos 1 momento";
+  };
+  root.addEventListener("input", (e) => { if (e.target.closest(".rvC")) atualizar(); });
+  root.addEventListener("change", (e) => {
+    const el = e.target.closest(".rvC"); if (!el) return; atualizar();
+    if (e.target.classList.contains("rvS") || e.target.classList.contains("rvE")) { const x = ler(el), v = el.querySelector(".rvVid"); if (v && x.e > x.s) { v.src = `${d.fonte_url}#t=${x.s},${x.e}`; } }
+  });
+  root.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-rvn]"); if (!b) return;
+    const el = b.closest(".rvC"), campo = el.querySelector(b.dataset.rvn[0] === "s" ? ".rvS" : ".rvE"), v = ctParseT(campo.value);
+    if (isNaN(v)) return; campo.value = ctFmtT(v + (b.dataset.rvn[1] === "+" ? 1 : -1)); campo.dispatchEvent(new Event("change", { bubbles: true }));
+  });
+  $("#rvFazer").onclick = async () => {
+    const marc = cards.map(ler).filter((x) => x.on);
+    if (!marc.length) return toast("Marque pelo menos 1 momento.", 4000);
+    if (marc.some((x) => isNaN(x.s) || isNaN(x.e) || x.e - x.s < 3 || x.e - x.s > 240)) return toast("Tem um momento com tempo inválido (precisa ter de 3 s a 4 min).", 5000);
+    const body = { cortes: marc.map((x) => ({ s: x.s, e: x.e, titulo: x.titulo || x.c.titulo, nota: x.c.nota, nota_regras: x.c.nota_regras, nota_ia: x.c.nota_ia, motivo: x.c.motivo })),
+      silencio: $("#rvSil").checked, zoom: $("#rvZoom").checked, intro: $("#rvIntro").checked, programa: $("#ctPrograma").value.trim() };
+    let r; try { r = await jpost("/api/cortes/" + encodeURIComponent(cid) + "/renderizar", body); } catch (er) { return toast("❌ " + errTxt(er), 6000); }
+    acompanhar(r.job, "✂ Montando os cortes…", (res, fechado) => { if (fechado) return toast(`✅ ${res.n} cortes prontos! Veja em ✂ Fábrica de cortes.`, 6000); closeModal(); mostrarCortes(res.cid); });
+  };
+  atualizar();
+  if (!mostrarCortes.semRolar) root.scrollIntoView({ block: "start" });
 }
 
 // ======================================================= 🎙 EDITOR DE VÍDEO FALADO
@@ -3644,7 +3713,7 @@ async function apCarregarOpcoes(st) {
       : `<option value="">— crie um Feed do seu nicho primeiro —</option>`;
   } catch (e) { }
   try {
-    const es = (await api("/api/estilos")).filter((e) => e.tipo === "fabrica");
+    const es = await api("/api/autopilot/estilos");
     $("#apEstilo").innerHTML = es.map((e) => `<option value="${esc(e.id)}" ${st.estilo === e.id ? "selected" : ""}>${esc(e.nome)}</option>`).join("");
   } catch (e) { }
 }
@@ -3747,9 +3816,38 @@ $("#apRastrear") && ($("#apRastrear").onclick = async () => {
 });
 $("#apFeed") && ($("#apFeed").onchange = () => jpost("/api/autopilot/config", { feed_id: $("#apFeed").value }).catch(() => { }));
 $("#apEstilo") && ($("#apEstilo").onchange = () => jpost("/api/autopilot/config", { estilo: $("#apEstilo").value }).catch(() => { }));
+// 🎬 "Fazer o vídeo de hoje": antes de agir, pergunta qual IA escreve o roteiro e qual voz narra
 $("#apLoop") && ($("#apLoop").onclick = async () => {
-  const body = { feed_id: $("#apFeed").value, estilo: $("#apEstilo").value, forcar: $("#apForcar").checked };
-  if (!body.feed_id) return toast("Crie um Feed do seu nicho primeiro (💡 Ideação → Meus Feeds).", 5000);
+  const base = { feed_id: $("#apFeed").value, estilo: $("#apEstilo").value, forcar: $("#apForcar").checked };
+  if (!base.feed_id) return toast("Crie um Feed do seu nicho primeiro (💡 Ideação → Meus Feeds).", 5000);
+  modal("🎬 Como fazer o vídeo de hoje?"); $("#modal").classList.add("semBarra");
+  $("#mMsg").textContent = "Carregando as opções…";
+  let ms = [], vs = [], aj = {}, st = {};
+  try { [ms, vs, aj, st] = await Promise.all([api("/api/ajustes/modelos").catch(() => []), api("/api/ajustes/vozes").catch(() => []), api("/api/ajustes").catch(() => ({})), api("/api/autopilot").catch(() => ({}))]); } catch (e) { }
+  const vozPadrao = st.voz || aj.voz || "auto";
+  const grupos = {}; vs.forEach((v) => (grupos[v.grupo || "Outras"] = grupos[v.grupo || "Outras"] || []).push(v));
+  const optVoz = Object.entries(grupos).map(([g, l]) => `<optgroup label="${esc(g)}">${l.map((v) => `<option value="${esc(v.id)}" ${v.id === vozPadrao ? "selected" : ""}>${esc(v.nome)}</option>`).join("")}</optgroup>`).join("");
+  const modPadrao = aj.modelo_ollama || "";
+  const optMod = ms.map((m) => `<option value="${esc(m.nome)}" ${m.nome === modPadrao ? "selected" : ""}>${esc(m.nome)}${m.gb ? ` (${m.gb} GB)` : ""}${m.nuvem ? " ☁" : ""}</option>`).join("")
+    || `<option value="${esc(modPadrao)}">${esc(modPadrao || "padrão")}</option>`;
+  const q = (id) => document.getElementById(id);
+  $("#mMsg").innerHTML = `
+    <div class="row"><label>IA do roteiro</label><select id="apmIA" style="flex:1"><option value="ollama">Ollama (grátis, no seu PC)</option><option value="claude">🧠 Claude (chave em Ajustes ou Claude instalado)</option></select></div>
+    <div class="row" id="apmModRow"><label>Modelo Ollama</label><select id="apmModelo" style="flex:1">${optMod}</select></div>
+    <div class="row"><label>Voz</label><select id="apmVoz" style="flex:1">${optVoz}</select></div>
+    <div class="row"><label>Duração (min)</label><input type="number" id="apmDur" min="0.5" step="0.5" style="width:90px" placeholder="auto" /></div>
+    <p class="help" id="apmAviso"></p>`;
+  const aviso = () => { q("apmAviso").textContent = String(q("apmVoz").value).startsWith("fish:") ? "⚠ Fish Audio é pago por crédito. Se acabou o crédito, o vídeo falha: escolha uma voz Microsoft (grátis)." : ""; };
+  q("apmVoz").onchange = aviso; aviso();
+  q("apmIA").onchange = () => q("apmModRow").classList.toggle("hidden", q("apmIA").value === "claude");
+  mbtn("🎬 Fazer o vídeo", async () => {
+    const body = { ...base, voz: q("apmVoz").value, modelo: q("apmModelo").value, claude_roteiro: q("apmIA").value === "claude" };
+    const d = parseFloat(q("apmDur").value); if (d > 0) body.duracao = Math.round(d * 60);
+    closeModal(); apFazerLoop(body);
+  }, "go");
+  mbtn("Cancelar", closeModal);
+});
+async function apFazerLoop(body) {
   let r; try { r = await jpost("/api/autopilot/loop", body); }
   catch (e) { return toast("❌ " + errTxt(e), 6000); }
   acompanhar(r.job, "🤖 Fazendo o vídeo de hoje…", async (res, fechado) => {
@@ -3764,7 +3862,7 @@ $("#apLoop") && ($("#apLoop").onclick = async () => {
       mbtn("Fechar", closeModal);
     } else { toast("✅ Pronto", 4000); }
   });
-});
+}
 $("#apCsvBtn") && ($("#apCsvBtn").onclick = async () => {
   const f = $("#apCsv").files[0];
   if (!f) return toast("Escolha o arquivo CSV do YouTube Studio.", 4000);

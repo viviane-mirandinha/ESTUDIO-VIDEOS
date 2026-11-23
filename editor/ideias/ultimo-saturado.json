@@ -1,305 +1,330 @@
 {
- "entrada": "receitas de bolo caseiro",
- "origem": "tema",
- "nicho": "receitas de bolo caseiro",
- "nota": 6.0,
+ "entrada": "https://www.youtube.com/@historia.e.filosofiaa",
+ "origem": "canal: História e Filosofia",
+ "nicho": "estoicismo filosofia",
+ "nota": 5.0,
  "veredito": "DISPUTADO, MAS DÁ — entre com um jeito diferente",
  "explicacao": [
   "Só 0 vídeo(s) do último mês na busca — pouca gente postando agora (ou o tema esfriou).",
-  "Nenhum canal pequeno com boas views entre os olhados — quem pega views aqui já é grande.",
-  "5 canais com mais de 1 milhão de inscritos dominam a busca."
+  "Nenhum canal pequeno com boas views entre os olhados — quem pega views aqui já é grande."
  ],
  "numeros": {
-  "canais_distintos": 17,
+  "canais_distintos": 14,
   "videos_ultimo_mes": 0,
   "vph_recentes": 0,
   "canais_pequenos_fortes": 0,
-  "canais_gigantes": 5
+  "canais_gigantes": 0
  },
  "canais": [
   {
-   "canal": "Receitinhas da Méia ",
-   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
+   "canal": "Sabedoria de Dentro",
+   "canal_url": "https://www.youtube.com/@SabedoriadeDentroLuz",
+   "inscritos": 58400,
+   "mediana_views": 111000,
+   "mediana_vph": 15.2,
+   "views_por_inscrito": 1.9,
+   "outliers": [
+    {
+     "titulo": "2 HORAS de Ensinamentos Estoicos Para Dormir Melhor | ESTOICISMO",
+     "views": 633000,
+     "x": 5.7,
+     "url": "https://www.youtube.com/watch?v=CwZqOtSfPwM"
+    },
+    {
+     "titulo": "NÃO LUTE, APENAS DURMA | Ensinamentos Estoicos Para Dormir Melhor",
+     "views": 338000,
+     "x": 3.0,
+     "url": "https://www.youtube.com/watch?v=JWmpehjX3KU"
+    }
+   ],
+   "n_videos": 15,
+   "uploads_30d": 0,
+   "mais_antigo_dias": 334,
+   "na_busca": 4,
+   "vph_na_busca": 0
+  },
+  {
+   "canal": "Escola da Filosofia",
+   "canal_url": "https://www.youtube.com/@escoladafilosofiabr",
    "inscritos": 162000,
-   "mediana_views": 26000,
-   "mediana_vph": 116.2,
-   "views_por_inscrito": 0.16,
+   "mediana_views": 15000,
+   "mediana_vph": 159.6,
+   "views_por_inscrito": 0.09,
    "outliers": [
     {
-     "titulo": "🔥SUPER CRUNCHY CORNMEAL COOKIES: Makes a Big Batch and Stays Fresh for Days!",
-     "views": 100000,
-     "x": 3.8,
-     "url": "https://www.youtube.com/watch?v=qwis19uLn9o"
-    },
-    {
-     "titulo": "🔥NO-KNEAD HEAVY CREAM BREAD Super Soft and Easy to Make!",
-     "views": 307000,
-     "x": 11.8,
-     "url": "https://www.youtube.com/watch?v=78wi64on_40"
+     "titulo": "HOW TO BECOME MENTALLY UNSHAKENABLE IN ANY SITUATION | STOICISM",
+     "views": 51000,
+     "x": 3.4,
+     "url": "https://www.youtube.com/watch?v=L0CyXce0NOg"
     }
    ],
    "n_videos": 15,
    "uploads_30d": 15,
-   "mais_antigo_dias": 27,
-   "na_busca": 5,
-   "vph_na_busca": 857.3
+   "mais_antigo_dias": 13,
+   "na_busca": 9,
+   "vph_na_busca": 0
   },
   {
-   "canal": "Dicas e Receitas da Celly",
-   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
-   "inscritos": 1280000,
-   "mediana_views": 49000,
-   "mediana_vph": 270.3,
-   "views_por_inscrito": 0.04,
+   "canal": "A Mente Estoica",
+   "canal_url": "https://www.youtube.com/@AMenteEstoica1",
+   "inscritos": 50700,
+   "mediana_views": 3200,
+   "mediana_vph": 20.0,
+   "views_por_inscrito": 0.06,
    "outliers": [
     {
-     "titulo": "DELICIOUS AND SUPER EASY TRADITIONAL PINEAPPLE DESSERT",
-     "views": 429000,
-     "x": 8.8,
-     "url": "https://www.youtube.com/watch?v=SEM4bSPxtvU"
+     "titulo": "BUILD A MIND SO STRONG IT SCARES PEOPLE: 7 STOIC LESSONS | STOICISM",
+     "views": 10000,
+     "x": 3.1,
+     "url": "https://www.youtube.com/watch?v=QvCbj0XwA7Y"
+    },
+    {
+     "titulo": "WHEN SOMEONE PULLS AWAY FROM YOU, DON'T CHASE THEM: DO THIS | STOICISM",
+     "views": 10000,
+     "x": 3.1,
+     "url": "https://www.youtube.com/watch?v=RGuhRFGia3Q"
     }
    ],
    "n_videos": 15,
    "uploads_30d": 15,
-   "mais_antigo_dias": 20,
+   "mais_antigo_dias": 13,
    "na_busca": 2,
-   "vph_na_busca": 844.3
+   "vph_na_busca": 0
   },
   {
-   "canal": "Letícia Sweet Cake",
-   "canal_url": "https://www.youtube.com/@LetíciaSweetCake",
-   "inscritos": 2390000,
-   "mediana_views": 38000,
-   "mediana_vph": 80.7,
-   "views_por_inscrito": 0.02,
+   "canal": "Ser Estoico",
+   "canal_url": "https://www.youtube.com/@ser.estoicismo",
+   "inscritos": 25400,
+   "mediana_views": 4800,
+   "mediana_vph": 15.4,
+   "views_por_inscrito": 0.19,
    "outliers": [
     {
-     "titulo": "Easy and Creamy Ninho Milk Fudge Cake | Quick and Delicious Dessert",
-     "views": 132000,
-     "x": 3.5,
-     "url": "https://www.youtube.com/watch?v=-sbQZVAa0zE"
-    }
-   ],
-   "n_videos": 15,
-   "uploads_30d": 9,
-   "mais_antigo_dias": 30,
-   "na_busca": 2,
-   "vph_na_busca": 721.1
-  },
-  {
-   "canal": "Isamara Amâncio",
-   "canal_url": "https://www.youtube.com/@isamaraamancio",
-   "inscritos": 10700000,
-   "mediana_views": 113000,
-   "mediana_vph": 226.2,
-   "views_por_inscrito": 0.01,
-   "outliers": [
-    {
-     "titulo": "Ninho milk powder and guava paste sandwich cookie, melts in your mouth! Super easy to make! - Isa...",
-     "views": 610000,
-     "x": 5.4,
-     "url": "https://www.youtube.com/watch?v=bKf7LrfxxYc"
-    }
-   ],
-   "n_videos": 15,
-   "uploads_30d": 5,
-   "mais_antigo_dias": 30,
-   "na_busca": 2,
-   "vph_na_busca": 383.5
-  },
-  {
-   "canal": "Receitas Da Cris",
-   "canal_url": "https://www.youtube.com/@receitasdacris",
-   "inscritos": 7630000,
-   "mediana_views": 55000,
-   "mediana_vph": 79.4,
-   "views_por_inscrito": 0.01,
-   "outliers": [
-    {
-     "titulo": "THE REAL 80s AND 90s BIRTHDAY CAKE - ALMOST 44 LBS OF CAKE - COMPLETE STEP-BY-STEP",
-     "views": 527000,
-     "x": 9.6,
-     "url": "https://www.youtube.com/watch?v=U6kMYMQssRE"
-    }
-   ],
-   "n_videos": 15,
-   "uploads_30d": 6,
-   "mais_antigo_dias": 30,
-   "na_busca": 1,
-   "vph_na_busca": 279.9
-  },
-  {
-   "canal": "Receitas de Pai",
-   "canal_url": "https://www.youtube.com/@ReceitasdePai",
-   "inscritos": 13100000,
-   "mediana_views": 164000,
-   "mediana_vph": 511.2,
-   "views_por_inscrito": 0.01,
-   "outliers": [
-    {
-     "titulo": "Restaurant-Style Breaded Bananas - Crispy - Easy - Delicious - Dad's Recipes",
-     "views": 540000,
-     "x": 3.3,
-     "url": "https://www.youtube.com/watch?v=EQyHmRztgrg"
+     "titulo": "PHILOSOPHY OF MIND: Consciousness, Reality, and Quantum Physics",
+     "views": 28000,
+     "x": 5.8,
+     "url": "https://www.youtube.com/watch?v=a0ng6_x1fiE"
     },
     {
-     "titulo": "NHOC DOCE MINEIRO - FÁCIL E DELICIOSO - BOLACHINHA DE VÓ - Receitas de pai",
-     "views": 1200000,
-     "x": 7.3,
-     "url": "https://www.youtube.com/watch?v=RkDtOu9Qe9I"
+     "titulo": "THE BURDEN OF LUCIDITY: Why Intelligent People Prefer Silence",
+     "views": 113000,
+     "x": 23.5,
+     "url": "https://www.youtube.com/watch?v=JgqjRFLtN7U"
     },
     {
-     "titulo": "NO MORE DRY STEAK!! THE SECRET TO THE PERFECT STEAK - JUICY AND DELICIOUS - Dad's Recipes",
-     "views": 1200000,
-     "x": 7.3,
-     "url": "https://www.youtube.com/watch?v=Ic7SfmzkHxI"
+     "titulo": "THE ETHICS OF CONFUCIUS: How to Build Unshakable Character",
+     "views": 32000,
+     "x": 6.7,
+     "url": "https://www.youtube.com/watch?v=fVCWK7xxt0E"
     }
    ],
    "n_videos": 15,
    "uploads_30d": 10,
    "mais_antigo_dias": 30,
-   "na_busca": 2,
-   "vph_na_busca": 274.2
+   "na_busca": 1,
+   "vph_na_busca": 0
+  },
+  {
+   "canal": "O Estoico Sábio",
+   "canal_url": "https://www.youtube.com/@OEstoicoSabio",
+   "inscritos": 300000,
+   "mediana_views": 31000,
+   "mediana_vph": 110.8,
+   "views_por_inscrito": 0.1,
+   "outliers": [
+    {
+     "titulo": "HEAR THIS and BECOME SO STRONG that THEY will TREMBLE | Stoicism",
+     "views": 106000,
+     "x": 3.4,
+     "url": "https://www.youtube.com/watch?v=UephTdtlsS0"
+    },
+    {
+     "titulo": "LISTEN TO THIS EVERY MORNING AND PURIFY YOUR MIND | Stoicism",
+     "views": 156000,
+     "x": 5.0,
+     "url": "https://www.youtube.com/watch?v=RcLrNNLG4jc"
+    },
+    {
+     "titulo": "Purify Your Mind: Listen to This Every Morning | Stoicism",
+     "views": 145000,
+     "x": 4.7,
+     "url": "https://www.youtube.com/watch?v=e9ukq2kixSA"
+    },
+    {
+     "titulo": "AO ACORDAR PENSE ASSIM e VEJA SUA VIDA MUDAR | Estoicismo",
+     "views": 103000,
+     "x": 3.3,
+     "url": "https://www.youtube.com/watch?v=Sbcnm079Z20"
+    }
+   ],
+   "n_videos": 15,
+   "uploads_30d": 12,
+   "mais_antigo_dias": 30,
+   "na_busca": 1,
+   "vph_na_busca": 0
+  },
+  {
+   "canal": "Mr. Estoico",
+   "canal_url": "https://www.youtube.com/@mrestoico",
+   "inscritos": 233000,
+   "mediana_views": 10000,
+   "mediana_vph": 30.2,
+   "views_por_inscrito": 0.04,
+   "outliers": [
+    {
+     "titulo": "LISTEN TO THIS EVERY MORNING AND CLEAR YOUR MIND | Stoicism",
+     "views": 61000,
+     "x": 6.1,
+     "url": "https://www.youtube.com/watch?v=eJtK3bkrhMQ"
+    }
+   ],
+   "n_videos": 15,
+   "uploads_30d": 12,
+   "mais_antigo_dias": 30,
+   "na_busca": 6,
+   "vph_na_busca": 0
   }
  ],
  "videos": [
   {
-   "id": "AKDRNvQfhHs",
-   "titulo": "EASY AND DELICIOUS MILK CAKE - HUSBAND SAFETY CAKE",
-   "canal": "Dicas e Receitas da Celly",
-   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
-   "views": 5026987,
-   "duracao": 327,
-   "ts": 1763164800,
-   "vph": 573.9,
-   "url": "https://www.youtube.com/watch?v=AKDRNvQfhHs",
-   "short": false,
-   "outlier": true,
-   "x_canal": 102.6
-  },
-  {
-   "id": "QFMxJWh3mqE",
-   "titulo": "QUICK AND EASY CHOCOLATE CAKE | FLUFFY and MOIST Dough",
-   "canal": "Letícia Sweet Cake",
-   "canal_url": "https://www.youtube.com/@LetíciaSweetCake",
-   "views": 18919893,
-   "duracao": 458,
-   "ts": 1668470400,
-   "vph": 539.6,
-   "url": "https://www.youtube.com/watch?v=QFMxJWh3mqE",
-   "short": false,
-   "outlier": true,
-   "x_canal": 497.9
-  },
-  {
-   "id": "j2CU2eV5SpA",
-   "titulo": "🔥The TRUE Old-Fashioned Birthday Cake with that perfect buttery crumb!",
-   "canal": "Receitinhas da Méia ",
-   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
-   "views": 1647161,
-   "duracao": 1257,
-   "ts": 1781481600,
-   "vph": 448.7,
-   "url": "https://www.youtube.com/watch?v=j2CU2eV5SpA",
-   "short": false,
-   "outlier": true,
-   "x_canal": 63.4
-  },
-  {
-   "id": "V3rgpmqLJug",
-   "titulo": "FLUFFY SIMPLE WHEAT CAKE, FAMILY SIZE | CRIS' RECIPES",
-   "canal": "Receitas Da Cris",
-   "canal_url": "https://www.youtube.com/@receitasdacris",
-   "views": 14715345,
-   "duracao": 455,
-   "ts": 1605398400,
-   "vph": 279.9,
-   "url": "https://www.youtube.com/watch?v=V3rgpmqLJug",
-   "short": false,
-   "outlier": true,
-   "x_canal": 267.6
-  },
-  {
-   "id": "Sb867CfXCwU",
-   "titulo": "FLUFFY, EASY AND ECONOMICAL 5-CUP CAKE",
-   "canal": "Dicas e Receitas da Celly",
-   "canal_url": "https://www.youtube.com/@dicasereceitasdacelly",
-   "views": 2368158,
-   "duracao": 402,
-   "ts": 1763164800,
-   "vph": 270.4,
-   "url": "https://www.youtube.com/watch?v=Sb867CfXCwU",
-   "short": false,
-   "outlier": true,
-   "x_canal": 48.3
-  },
-  {
-   "id": "k9huuq2OBP4",
-   "titulo": "🔥SIMPLE AND SUPER FLUFFY CAKE! The easiest recipe for afternoon tea.",
-   "canal": "Receitinhas da Méia ",
-   "canal_url": "https://www.youtube.com/@Receitinhasdaméia",
-   "views": 678746,
-   "duracao": 774,
-   "ts": 1784073600,
-   "vph": 230.0,
-   "url": "https://www.youtube.com/watch?v=k9huuq2OBP4",
+   "id": "CwZqOtSfPwM",
+   "titulo": "2 HORAS de Ensinamentos Estoicos Para Dormir Melhor | ESTOICISMO",
+   "canal": "Sabedoria de Dentro",
+   "canal_url": "https://www.youtube.com/@SabedoriadeDentroLuz",
+   "views": 633154,
+   "duracao": 7260,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=CwZqOtSfPwM",
    "short": false,
    "outlier": false,
-   "x_canal": 26.1
+   "x_canal": 5.7
   },
   {
-   "id": "d-cpV7o5V9k",
-   "titulo": "SIMPLE CAKE - THIS IS THE NEXT ONE YOU'LL HAVE TO MAKE - FLUFFY - ECONOMICAL - EASY - Isamara Amâ...",
-   "canal": "Isamara Amâncio",
-   "canal_url": "https://www.youtube.com/@isamaraamancio",
-   "views": 10859932,
-   "duracao": 497,
-   "ts": 1605398400,
-   "vph": 206.5,
-   "url": "https://www.youtube.com/watch?v=d-cpV7o5V9k",
+   "id": "Hd6YVSL3lik",
+   "titulo": "DESAPEGO EMOCIONAL: 10 LIÇÕES DO ESTOICISMO PARA SOLTAR ALGUÉM | ESTOICISMO",
+   "canal": "Escola da Filosofia",
+   "canal_url": "https://www.youtube.com/@escoladafilosofiabr",
+   "views": 163235,
+   "duracao": 3635,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=Hd6YVSL3lik",
    "short": false,
    "outlier": false,
-   "x_canal": 96.1
+   "x_canal": 10.9
   },
   {
-   "id": "aYUGDpHXG8g",
-   "titulo": "BOLO MESCLADO SIMPLES E FOFINHO",
-   "canal": "Juarez Receitas Caseiras",
-   "canal_url": "https://www.youtube.com/@juarezreceitascaseiras",
-   "views": 1748720,
-   "duracao": 235,
-   "ts": 1763164800,
-   "vph": 199.7,
-   "url": "https://www.youtube.com/watch?v=aYUGDpHXG8g",
+   "id": "-L6X5Plu3g0",
+   "titulo": "TUDO COMEÇA A DAR CERTO SE VOCÊ PENSA ASSIM | ESTOICISMO",
+   "canal": "Escola da Filosofia",
+   "canal_url": "https://www.youtube.com/@escoladafilosofiabr",
+   "views": 206706,
+   "duracao": 2123,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=-L6X5Plu3g0",
+   "short": false,
+   "outlier": false,
+   "x_canal": 13.8
+  },
+  {
+   "id": "--a__S8HVg4",
+   "titulo": "10 Segredos Estoicos Para Se Tornar EMOCIONALMENTE BLINDADO | Estoicismo",
+   "canal": "A Mente Estoica",
+   "canal_url": "https://www.youtube.com/@AMenteEstoica1",
+   "views": 634996,
+   "duracao": 1475,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=--a__S8HVg4",
+   "short": false,
+   "outlier": false,
+   "x_canal": 198.4
+  },
+  {
+   "id": "Z6SPylew59M",
+   "titulo": "APRENDA A CONTROLAR SUAS EMOÇÕES E NADA MAIS VAI TE ABALAR | ESTOICISMO",
+   "canal": "Escola da Filosofia",
+   "canal_url": "https://www.youtube.com/@escoladafilosofiabr",
+   "views": 338910,
+   "duracao": 2081,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=Z6SPylew59M",
+   "short": false,
+   "outlier": false,
+   "x_canal": 22.6
+  },
+  {
+   "id": "yjVl11PKY8w",
+   "titulo": "Estoicismo DISCIPLINA Inquebrável/ Neuroplasticidade",
+   "canal": "Ser Estoico",
+   "canal_url": "https://www.youtube.com/@ser.estoicismo",
+   "views": 298654,
+   "duracao": 5377,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=yjVl11PKY8w",
+   "short": false,
+   "outlier": false,
+   "x_canal": 62.2
+  },
+  {
+   "id": "7gkdxqk-7mk",
+   "titulo": "EVOLUA SOZINHO: FORTALEÇA-SE TODAS AS MANHÃS | Estoicismo",
+   "canal": "O Estoico Sábio",
+   "canal_url": "https://www.youtube.com/@OEstoicoSabio",
+   "views": 287615,
+   "duracao": 2031,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=7gkdxqk-7mk",
+   "short": false,
+   "outlier": false,
+   "x_canal": 9.3
+  },
+  {
+   "id": "zDnu4euUJP0",
+   "titulo": "A Arte Estoica de Viver em Paz | Estoicismo",
+   "canal": "Mr. Estoico",
+   "canal_url": "https://www.youtube.com/@mrestoico",
+   "views": 120485,
+   "duracao": 2491,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=zDnu4euUJP0",
+   "short": false,
+   "outlier": false,
+   "x_canal": 12.0
+  },
+  {
+   "id": "pWyE7092pkA",
+   "titulo": "Ensinamentos Estoicos Para Cultivar uma Mente Mais Tranquila | ESTOICISMO",
+   "canal": "Estoicismo Moderno",
+   "canal_url": "https://www.youtube.com/@EstoicismoModernobr",
+   "views": 42349,
+   "duracao": 5798,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=pWyE7092pkA",
    "short": false,
    "outlier": false
   },
   {
-   "id": "leDdB1b67p4",
-   "titulo": "🔥 WITHOUT WHEAT FLOUR - COTTON CAKE WITH CONDENSED MILK ❤️ Simoniramos",
-   "canal": "SIMONI RAMOS RECEITAS",
-   "canal_url": "https://www.youtube.com/@simoniramosReceitas",
-   "views": 1693645,
-   "duracao": 197,
-   "ts": 1763164800,
-   "vph": 193.4,
-   "url": "https://www.youtube.com/watch?v=leDdB1b67p4",
+   "id": "NkM_Ha7GxYY",
+   "titulo": "3 HORAS de VERDADES Estoicas Para Dormir em Paz sem Pensar Demais | ESTOICISMO",
+   "canal": "Sabedoria de Dentro",
+   "canal_url": "https://www.youtube.com/@SabedoriadeDentroLuz",
+   "views": 233609,
+   "duracao": 13345,
+   "ts": null,
+   "vph": null,
+   "url": "https://www.youtube.com/watch?v=NkM_Ha7GxYY",
    "short": false,
-   "outlier": false
-  },
-  {
-   "id": "SPf7eSs47WA",
-   "titulo": "COTTON CAKE - 3 INGREDIENTS - NO WHEAT FLOUR - MELTS IN YOUR MOUTH!!!",
-   "canal": "DIARIO DE RECEITAS DA MIH",
-   "canal_url": "https://www.youtube.com/@diariodereceitasdamih",
-   "views": 1684606,
-   "duracao": 555,
-   "ts": 1763164800,
-   "vph": 192.3,
-   "url": "https://www.youtube.com/watch?v=SPf7eSs47WA",
-   "short": false,
-   "outlier": false
+   "outlier": false,
+   "x_canal": 2.1
   }
  ],
- "quando": "14/11/2026 19:38"
+ "quando": "19/11/2026 12:53"
 }

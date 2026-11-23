@@ -1209,3 +1209,19 @@ body.gvAberto{overflow:hidden}
 /* 🎵 música de fundo (Pedir vídeo) */
 .musBox{display:flex;flex-direction:column;gap:8px;align-items:flex-start;max-width:640px}
 .musBox audio{width:100%;max-width:420px;height:36px}
+
+/* ✂ Fábrica de cortes — aviso do link + revisão dos momentos */
+.avisoLink{flex:1;background:rgba(255,190,60,.12);border:1px solid rgba(255,190,60,.55);border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5}
+.rvTop{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:8px 0 14px}
+.rvLista{display:grid;gap:12px}
+.rvC{border:1px solid var(--bd,#2b2f3a);border-radius:12px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:8px 12px}
+.rvC.off{opacity:.55}
+.rvC .rvCk{grid-row:span 3;align-self:start;padding-top:4px}
+.rvC video{width:100%;max-width:420px;border-radius:8px;background:#000;aspect-ratio:16/9}
+.rvLinha{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rvLinha input.rvTit{flex:1;min-width:220px}
+.rvLinha input.rvT{width:84px;text-align:center}
+.rvDur{font-size:13px;color:var(--mu)}
+.rvDur.ruim{color:var(--dg,#ff6b6b)}
+.rvC details{font-size:14px;color:var(--mu)}
+.rvAcoes{position:sticky;bottom:0;background:var(--bg,#12141a);padding:10px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}

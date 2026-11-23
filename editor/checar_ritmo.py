@@ -91,7 +91,8 @@ def _roteiro_pedido(txt):
     m = re.search(r"^## Roteiro APROVADO[^\n]*\n(.*?)(?=^## )", txt, flags=re.M | re.S)
     if not m:
         return ""
-    return " ".join(l for l in m.group(1).splitlines() if l.strip() and not l.lstrip().startswith(">"))
+    txt = " ".join(l for l in m.group(1).splitlines() if l.strip() and not l.lstrip().startswith(">"))
+    return re.sub(r"\[[^\]]*\]", " ", txt)   # [dicas de voz] não são faladas
 
 
 def checar(pasta, final=False):

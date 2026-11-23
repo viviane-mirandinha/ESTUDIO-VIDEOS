@@ -42,22 +42,56 @@ def _fonte(pasta: Path):
     return {}, "Impact"
 
 
-def edit_corte(pasta: Path, clip: str, info: dict, dur: float, titulo: str, enquadramento: str, canal: str, nome: str, kws=None):
+def partir_segmentos(manter, words, max_seg=4.0):
+    """Divide trechos longos (sem cortar o vídeo: o pedaço seguinte continua de onde o outro parou) pra o zoom poder mudar de tempos em tempos.
+    Corta só no vão entre duas palavras."""
+    out = []
+    for a, b in manter:
+        while b - a > max_seg * 1.45:
+            alvo = a + max_seg
+            melhor = None
+            for i, w in enumerate(words[:-1]):
+                if a + 2.0 < w["e"] < b - 1.6:
+                    meio = (w["e"] + words[i + 1]["s"]) / 2
+                    if melhor is None or abs(meio - alvo) < abs(melhor - alvo):
+                        melhor = meio
+            corte = melhor if melhor is not None else alvo
+            out.append((round(a, 3), round(corte, 3)))
+            a = corte
+        out.append((round(a, 3), round(b, 3)))
+    return out
+
+
+def edit_corte(pasta: Path, clip: str, info: dict, dur: float, titulo: str, enquadramento: str, canal: str, nome: str, kws=None, manter=None, zoom=False):
     """edit.json 9:16 de um corte. 'desfocado' = vídeo inteiro no meio + o mesmo vídeo desfocado no fundo;
-    'centro' = recorte do centro ocupando a tela toda. Legenda 2 palavras por vez, grande (≥ 84 px)."""
+    'centro' = recorte do centro ocupando a tela toda. Legenda 2 palavras por vez, grande (≥ 84 px).
+    manter = trechos [(início, fim)] do clip que ficam (silêncio e repetição já tirados); zoom = aproxima/afasta a cada trecho."""
     fonts, F = _fonte(pasta)
     items = []
     ar = (info["h"] / info["w"]) if info.get("w") else 9 / 16
-    if enquadramento == "centro" or ar >= 1.2:   # vídeo já em pé → tela cheia
-        items.append({"id": "v", "type": "video", "track": "fundo", "label": "Vídeo", "start": 0, "dur": dur, "in": "none", "out": "none",
-                      "props": {"src": clip, "fill": True, "fit": "cover", "volume": 1}})
+    manter = manter or [(0.0, dur)]
+    cheia = enquadramento == "centro" or ar >= 1.2   # vídeo já em pé → tela cheia
+    vh = round(W * ar)
+    t = 0.0
+    for k, (a, b) in enumerate(manter):
+        d = round(b - a, 3)
+        mo, amt = "none", 0.0
+        if zoom:
+            mo, amt = ("zoom_in", 0.04) if k % 2 == 0 else (("pan_left" if (k // 2) % 2 == 0 else "pan_right"), 0.13)
+        trim = round(a, 3)
+        if cheia:
+            items.append({"id": f"v{k}", "type": "video", "track": "fundo", "label": f"Trecho {k + 1}", "start": round(t, 3), "dur": d, "in": "none", "out": "none",
+                          "props": {"src": clip, "fill": True, "fit": "cover", "volume": 1, "trim": trim, "motion": mo, "motion_amount": amt}})
+        else:
+            items.append({"id": f"bg{k}", "type": "video", "track": "fundo", "label": f"Fundo {k + 1}", "start": round(t, 3), "dur": d, "in": "none", "out": "none",
+                          "props": {"src": clip, "fill": True, "fit": "cover", "volume": 0, "blur": 34, "brilho": 0.5, "trim": trim}})
+            items.append({"id": f"v{k}", "type": "video", "track": "video", "label": f"Trecho {k + 1}", "start": round(t, 3), "dur": d, "in": "none", "out": "none",
+                          "props": {"src": clip, "x": W / 2, "y": H / 2, "w": W, "h": vh, "fit": "cover", "volume": 1, "trim": trim, "motion": mo, "motion_amount": amt}})
+        t += d
+    dur = round(t, 3)
+    if cheia:
         tit_y, cap_y = 300, 1380
     else:
-        vh = round(W * ar)
-        items.append({"id": "bg", "type": "video", "track": "fundo", "label": "Fundo desfocado", "start": 0, "dur": dur, "in": "none", "out": "none",
-                      "props": {"src": clip, "fill": True, "fit": "cover", "volume": 0, "blur": 34, "brilho": 0.5}})
-        items.append({"id": "v", "type": "video", "track": "video", "label": "Vídeo", "start": 0, "dur": dur, "in": "none", "out": "none",
-                      "props": {"src": clip, "x": W / 2, "y": H / 2, "w": W, "h": vh, "fit": "cover", "volume": 1}})
         tit_y = max(330, round(H / 2 - vh / 2 - 210))
         cap_y = min(1560, round(H / 2 + vh / 2 + 190))
     items.append({"id": "titulo", "type": "text", "track": "textos", "label": "Título do corte", "start": 0, "dur": dur, "in": "pop", "out": "none",
@@ -124,18 +158,9 @@ def titulo_regra(texto):
     return t + ("…" if len(w) > 7 else "")
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--pasta", required=True)
-    a = ap.parse_args()
-    proj = Path(a.pasta)
-    ped = ler_json(proj / "pedido.json")
+def preparar_fonte(proj, ped, t_ini_min, precisa_wav=True):
+    """Baixa/copia o vídeo e transcreve (pula o que já existe). Devolve (fonte, info, words, wav)."""
     aj = ajustes.ler()
-    modelo = ped.get("modelo") or aj["modelo_ollama"]
-    t_ini = time.time()
-    minutos = {}
-
-    # 1) vídeo de origem --------------------------------------------------------
     t0 = time.time()
     fonte = proj / "fonte.mp4"
     if not fonte.exists():
@@ -156,9 +181,8 @@ def main():
     if not info["audio"]:
         raise SystemExit("Esse vídeo não tem som — a Fábrica de cortes precisa de fala.")
     log(f"fonte: {info}")
-    minutos["baixar"] = round((time.time() - t0) / 60, 2)
+    t_ini_min["baixar"] = round((time.time() - t0) / 60, 2)
 
-    # 2) transcrição --------------------------------------------------------------
     t0 = time.time()
     wav = proj / "audio.wav"
     if not (proj / "words.json").exists():
@@ -167,17 +191,22 @@ def main():
         prog(12, f"Transcrevendo {int(info['dur'] // 60)} min de fala (Whisper na placa de vídeo)…" if info['dur'] >= 60 else f"Transcrevendo {int(info['dur'])} s de fala (Whisper na placa de vídeo)…")
         idioma = ped.get("idioma") or aj["idioma"]
         transcrever(wav, proj / "words.json", idioma=fala.WHISPER_LANG.get(idioma, "pt"))
-    elif not wav.exists():
+    elif precisa_wav and not wav.exists():
         fala.extrair_audio(fonte, wav)
-    words = ler_json(proj / "words.json")
-    minutos["transcrever"] = round((time.time() - t0) / 60, 2)
+    t_ini_min["transcrever"] = round((time.time() - t0) / 60, 2)
+    return fonte, info, ler_json(proj / "words.json"), wav
 
-    # 3) escolher trechos -----------------------------------------------------------
+
+def escolher(proj, ped, info, words, wav, modelo, minutos):
+    """Acha os melhores momentos. Devolve a lista de candidatos (melhores primeiro), já com 'marcado' nos N pedidos."""
+    aj = ajustes.ler()
     t0 = time.time()
     prog(40, "Procurando os melhores momentos…")
     n_cortes = max(1, min(10, int(ped.get("n") or 3)))
     dmin, dmax = float(ped.get("dur_min") or 30), float(ped.get("dur_max") or 60)
     fr = fala.frases(words)
+    if not fr:
+        raise SystemExit("Não ouvi fala nesse vídeo — a Fábrica de cortes precisa de gente falando.")
     ener, passo = fala.energia(wav)
     base_db = float(sorted(ener)[len(ener) // 2]) if ener else -30
     cands = []
@@ -192,60 +221,126 @@ def main():
         cands = [{"s": jan[0]["s"], "e": jan[-1]["e"], "texto": " ".join(f["texto"] for f in jan), "nota_regras": nota, "nota": nota,
                   "motivos": motivos, "titulo": titulo_regra(jan[0]["texto"])}]
     modo = ped.get("modo") or "ia"
+    pool = cands
     if modo == "ia":
-        pre = fala.sem_sobrepor(cands, min(12, n_cortes * 3 + 3))
+        pre = fala.sem_sobrepor(cands, min(14, n_cortes * 3 + 3))
         prog(46, f"A IA local está avaliando {len(pre)} trechos (gancho, ideia completa, fecho)…")
         notas_ia(pre, modelo, ped.get("idioma") or aj["idioma"])
         for c in pre:
             if "nota_ia" in c:
                 c["nota"] = round(0.7 * c["nota_ia"] + 0.3 * c["nota_regras"], 1)
-        escolhidos = fala.sem_sobrepor(pre, n_cortes)
-    else:
-        escolhidos = fala.sem_sobrepor(cands, n_cortes)
-    escolhidos.sort(key=lambda c: -c["nota"])
+        pool = pre
+    # na revisão a pessoa vê mais opções do que pediu (os N melhores já vêm marcados)
+    revisar = ped.get("revisar", True)
+    lista = fala.sem_sobrepor(pool, min(12, n_cortes * 2 + 2) if revisar else n_cortes)
+    lista.sort(key=lambda c: -c["nota"])
+    for k, c in enumerate(lista):
+        c["marcado"] = k < n_cortes
+        c["motivo"] = c.get("motivo_ia") or (", ".join(c.get("motivos") or []) or "trecho completo")
     minutos["escolher"] = round((time.time() - t0) / 60, 2)
-    log("escolhidos: " + "; ".join(f"{c['s']:.0f}-{c['e']:.0f}s nota {c['nota']}" for c in escolhidos))
+    log("candidatos: " + "; ".join(f"{c['s']:.0f}-{c['e']:.0f}s nota {c['nota']}" for c in lista))
+    return lista, modo
 
-    # 4) montar e renderizar cada corte -------------------------------------------------
+
+def ajustar_trecho(words, s, e):
+    """Gruda o início e o fim nas palavras (nunca corta no meio de uma palavra). Devolve (s, e) ou None se não tem fala."""
+    ws = [w for w in words if w["s"] >= s - 0.05 and w["e"] <= e + 0.3]
+    if not ws:
+        return None
+    return ws[0]["s"], ws[-1]["e"]
+
+
+def tirar_pausas(clip, words_clip, dur, repetidas=True):
+    """Trechos [(ini, fim)] do corte que ficam: silêncios longos e frases repetidas saem (usa a mesma regra do Editor de vídeo falado)."""
+    import falado
+    sils, _ = fala.silencios(clip, 0.35)
+    fr = fala.frases(words_clip)
+    rt = fala.retakes(fr) if repetidas and fr else []
+    manter = falado.trechos_mantidos(words_clip, dur, sils, rt, fr, min_sil=0.5)
+    if rt:   # a regra de "frase repetida" pode confundir uma repetição de ênfase com erro → se tirar demais, não usa
+        sem = falado.trechos_mantidos(words_clip, dur, sils, [], fr, min_sil=0.5)
+        if sum(b - a for a, b in manter) < 0.85 * sum(b - a for a, b in sem):
+            manter, rt = sem, []
+    return manter or [(0.0, dur)], [fr[k]["texto"] for k in rt]
+
+
+def montar_cortes(proj, ped, info, words, fonte, selecao, modelo, modo, minutos, t_ini):
+    """Cada trecho escolhido vira um corte: recorta, tira pausas/repetições, põe zoom, legenda e título, renderiza."""
+    import falado
     t0 = time.time()
     canal = (ped.get("canal") or "").strip()
     enq = ped.get("enquadramento") or "desfocado"
+    tirar = bool(ped.get("silencio", True))
+    zoom = bool(ped.get("zoom", True))
+    # refazendo os cortes: some o que saiu da vez anterior
+    try:
+        ant = ler_json(proj / "cortes.json")
+        for c in ant.get("cortes") or []:
+            shutil.rmtree(proj / c["pasta"], ignore_errors=True)
+        if ant.get("intro"):
+            shutil.rmtree(proj / ant["intro"], ignore_errors=True)
+    except Exception:
+        pass
+    (proj / "cortes.json").unlink(missing_ok=True)
     lista = []
-    for k, c in enumerate(escolhidos):
-        base_pct = 52 + 44 * k / len(escolhidos)
-        prog(base_pct, f"Corte {k + 1} de {len(escolhidos)}: recortando…")
-        d = proj / f"corte-{k + 1:02d}-{slug(c['titulo'], 30) or 'corte'}"
+    for k, c in enumerate(selecao):
+        base_pct = 6 + 88 * k / len(selecao)
+        ab = ajustar_trecho(words, float(c["s"]), float(c["e"]))
+        if not ab:
+            log(f"trecho {c['s']}-{c['e']} sem fala, pulado")
+            continue
+        s, e = ab
+        prog(base_pct, f"Corte {k + 1} de {len(selecao)}: recortando…")
+        titulo = (c.get("titulo") or "").strip() or titulo_regra(" ".join(w["w"] for w in words if s <= w["s"] <= e))
+        d = proj / f"corte-{k + 1:02d}-{slug(titulo, 30) or 'corte'}"
         d.mkdir(exist_ok=True)
-        ini = max(0.0, c["s"] - 0.2)
-        dur = round(min(info["dur"], c["e"] + 0.45) - ini, 3)
+        ini = max(0.0, s - 0.2)
+        dur = round(min(info["dur"], e + 0.45) - ini, 3)
         fala.cortar(fonte, d / "clip.mp4", ini, dur)
-        ws = fala.palavras_no_trecho(words, c["s"], c["e"], ini)
-        salvar_json(d / "words.json", ws)
-        nome = f"Corte {k + 1:02d} - {c['titulo']}"
+        ws = fala.palavras_no_trecho(words, s, e, ini)
+        salvar_json(d / "words_clip.json", ws)
+        texto = " ".join(w["w"] for w in ws)
+        repetidas = []
+        if tirar:
+            prog(base_pct + 1, f"Corte {k + 1} de {len(selecao)}: tirando pausas e repetições…")
+            try:
+                manter, repetidas = tirar_pausas(d / "clip.mp4", ws, dur)
+            except Exception as ex:
+                log(f"pausas: {str(ex)[:150]}")
+                manter = [(0.0, dur)]
+        else:
+            manter = [(0.0, dur)]
+        novo = round(sum(b - a for a, b in manter), 2)
+        salvar_json(d / "words.json", falado.remapear(ws, manter))
+        segs = partir_segmentos(manter, ws) if zoom else manter
         kws = []
         try:
-            kws = ollama.palavras_chave(c["texto"], 5, modelo=modelo) if modo == "ia" else []
+            kws = ollama.palavras_chave(texto, 5, modelo=modelo) if modo == "ia" else []
         except Exception:
             kws = []
-        salvar_json(d / "edit.json", edit_corte(d, "clip.mp4", info, dur, c["titulo"], enq, canal, nome, kws))
-        prog(base_pct + 4, f"Corte {k + 1} de {len(escolhidos)}: renderizando (legenda + título)…")
+        nome = f"Corte {k + 1:02d} - {titulo}"
+        salvar_json(d / "edit.json", edit_corte(d, "clip.mp4", info, dur, titulo, enq, canal, nome, kws, manter=segs, zoom=zoom))
+        prog(base_pct + 3, f"Corte {k + 1} de {len(selecao)}: renderizando (legenda + título)…")
         run([sys.executable, BUILD, str(d), "--render"], timeout=3600)
-        motivo = c.get("motivo_ia") or (", ".join(c.get("motivos") or []) or "trecho completo")
-        lista.append({"n": k + 1, "pasta": d.name, "titulo": c["titulo"], "nota": c["nota"], "nota_regras": c["nota_regras"], "nota_ia": c.get("nota_ia"),
-                      "motivo": motivo, "inicio": round(c["s"], 2), "fim": round(c["e"], 2), "duracao": dur, "texto": c["texto"][:600]})
+        lista.append({"n": len(lista) + 1, "pasta": d.name, "titulo": titulo, "nota": c.get("nota"), "nota_regras": c.get("nota_regras"), "nota_ia": c.get("nota_ia"),
+                      "motivo": c.get("motivo") or "trecho escolhido por você", "inicio": round(s, 2), "fim": round(e, 2), "duracao": novo,
+                      "tirou_s": round(max(0.0, dur - novo), 1), "repeticoes": len(repetidas), "trechos": len(segs), "zoom": zoom, "texto": texto[:600]})
         salvar_json(proj / "cortes.json", {"cortes": lista, "modo": modo, "enquadramento": enq})
+    if not lista:
+        raise SystemExit("Nenhum dos trechos escolhidos tem fala. Escolha outros momentos.")
     minutos["montar_render"] = round((time.time() - t0) / 60, 2)
 
-    # 5) intro-gancho (opcional): começo dos 3 melhores cortes em sequência ---------------------
+    # intro-gancho (opcional): começo dos 3 melhores cortes em sequência ---------------------
     if ped.get("intro") and len(lista) >= 2:
         t0 = time.time()
         prog(96, "Montando a intro com os melhores momentos…")
         d = proj / "intro-melhores-momentos"
+        shutil.rmtree(d, ignore_errors=True)
         d.mkdir(exist_ok=True)
         fonts, F = _fonte(d)
         items, ws_all, t = [], [], 0.0
         for k, c in enumerate(lista[:3]):
-            cw = ler_json(proj / c["pasta"] / "words.json")
+            cw = ler_json(proj / c["pasta"] / "words_clip.json")
             fr_c = fala.frases(cw)
             fim = min(5.0, max(3.0, fr_c[0]["e"] + 0.25 if fr_c else 4.0))
             shutil.copy2(proj / c["pasta"] / "clip.mp4", d / f"m{k + 1}.mp4")
@@ -268,14 +363,53 @@ def main():
         run([sys.executable, BUILD, str(d), "--render"], timeout=3600)
         minutos["intro"] = round((time.time() - t0) / 60, 2)
         salvar_json(proj / "cortes.json", {"cortes": lista, "modo": modo, "enquadramento": enq, "intro": d.name})
-    wav.unlink(missing_ok=True)
+    (proj / "audio.wav").unlink(missing_ok=True)
+    tirou = sum(c["tirou_s"] for c in lista)
     rel = {"ferramenta": "Fábrica de cortes", "estilo": "Fábrica de cortes", "titulo": ped.get("titulo") or proj.name,
            "inicio": datetime.fromtimestamp(t_ini).astimezone().isoformat(timespec="seconds"), "fim": datetime.now().astimezone().isoformat(timespec="seconds"),
            "minutos": round((time.time() - t_ini) / 60, 2), "minutos_por_etapa": minutos, "duracao_fonte": round(info["dur"], 1),
            "cortes": len(lista), "tokens": 0, "custo_usd": 0,
            "observacoes": f"FÁBRICA DE CORTES (zero token Claude): whisper local + escolha por {'Ollama ' + modelo + ' + regras' if modo == 'ia' else 'regras (energia, gancho, pergunta, número)'}; "
-                          f"{len(lista)} cortes 9:16 ({enq}); render HyperFrames"}
+                          f"{len(lista)} cortes 9:16 ({enq}); pausas/repetições {'tiradas (' + str(round(tirou)) + ' s)' if tirar else 'mantidas'}; zoom {'ligado' if zoom else 'desligado'}; render HyperFrames"}
     salvar_json(proj / "RELATORIO.json", rel)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pasta", required=True)
+    ap.add_argument("--fase", choices=["tudo", "analisar", "renderizar"], default="tudo")
+    a = ap.parse_args()
+    proj = Path(a.pasta)
+    ped = ler_json(proj / "pedido.json")
+    aj = ajustes.ler()
+    modelo = ped.get("modelo") or aj["modelo_ollama"]
+    t_ini = time.time()
+    minutos = {}
+    fase = a.fase
+    if fase == "tudo" and ped.get("revisar", True):
+        fase = "analisar"   # com revisão ligada, o pedido novo para depois de escolher e espera a pessoa conferir
+
+    fonte, info, words, wav = preparar_fonte(proj, ped, minutos, precisa_wav=fase != "renderizar")
+
+    if fase in ("analisar", "tudo"):
+        lista, modo = escolher(proj, ped, info, words, wav, modelo, minutos)
+        if fase == "analisar":
+            plano = {"fonte": {"w": info.get("w"), "h": info.get("h"), "dur": round(info["dur"], 1)}, "origem": "link" if ped.get("url") else "arquivo",
+                     "modo": modo, "n": max(1, min(10, int(ped.get("n") or 3))), "dur_min": ped.get("dur_min"), "dur_max": ped.get("dur_max"),
+                     "candidatos": [{"id": k + 1, "s": round(c["s"], 2), "e": round(c["e"], 2), "titulo": c["titulo"], "nota": c["nota"], "nota_ia": c.get("nota_ia"),
+                                     "nota_regras": c["nota_regras"], "motivo": c["motivo"], "texto": c["texto"][:1500], "marcado": c["marcado"]}
+                                    for k, c in enumerate(lista)]}
+            salvar_json(proj / "plano.json", plano)
+            prog(100, "Momentos escolhidos — falta você conferir.")
+            print("PLANO PRONTO", flush=True)
+            return
+        selecao = [{"s": c["s"], "e": c["e"], "titulo": c["titulo"], "nota": c["nota"], "nota_regras": c["nota_regras"], "nota_ia": c.get("nota_ia"),
+                    "motivo": c["motivo"]} for c in lista]
+    else:   # renderizar o que a pessoa conferiu
+        selecao = ler_json(proj / "selecao.json")
+        modo = ped.get("modo") or "ia"
+        prog(4, "Montando os cortes que você escolheu…")
+    montar_cortes(proj, ped, info, words, fonte, selecao, modelo, modo, minutos, t_ini)
     prog(100, "Pronto!")
     print("CORTES PRONTOS", flush=True)
 

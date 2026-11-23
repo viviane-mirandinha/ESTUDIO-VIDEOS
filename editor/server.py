@@ -1548,7 +1548,7 @@ def job_fabrica(ped, prog):
         aj = AJ.ler()
         ref = completar_referencia(ped["referencia"], prog)
         cmd = [sys.executable, "fabrica.py", "--estilo", ped["estilo"], "--canal", ped["canal_nome"], "--duracao", str(ped["duracao"]),
-               "--out", str(out_dir()), "--modelo", aj["modelo_ollama"], "--ref-canal", ref.get("canal", ""), "--ref-canal-url", ref.get("canal_url", ""),
+               "--out", str(out_dir()), "--modelo", ped.get("modelo") or aj["modelo_ollama"], "--ref-canal", ref.get("canal", ""), "--ref-canal-url", ref.get("canal_url", ""),
                "--ref-video", ref.get("video", ""), "--ref-titulo", ref.get("titulo", "")]
         if ped.get("marca"):
             cmd += ["--marca", ped["marca"]]
@@ -2352,9 +2352,30 @@ def _ideia_faceless(titulo_ref, nicho, modelo):
     return {"tema": base[:80] or (nicho or "curiosidades"), "titulo": ""}
 
 
+def _estilos_faceless():
+    """Todo estilo da fábrica que roda sozinho (zero token) — inclui os que a ferramenta 'Vídeo com imagens' usa."""
+    vis = {e["id"]: e for e in catalogo_estilos() if e.get("tipo") == "fabrica"}
+    out = []
+    for d in sorted(ESTILOS_FAB.iterdir()) if ESTILOS_FAB.exists() else []:
+        if not (d / "preencher.py").exists():
+            continue
+        try:
+            cfg = json.loads((d / "estilo.json").read_text(encoding="utf-8-sig"))
+        except Exception:
+            cfg = {}
+        out.append({"id": d.name, "nome": (vis.get(d.name) or {}).get("nome") or cfg.get("nome") or d.name,
+                    "formatos": cfg.get("formatos") or ["longo"]})
+    return out
+
+
+@app.get("/api/autopilot/estilos")
+def autopilot_estilos():
+    return _estilos_faceless()
+
+
 def _autopilot_estilo_faceless(pedido):
     st = AP.status()
-    cand = [e for e in catalogo_estilos() if e.get("tipo") == "fabrica"]
+    cand = _estilos_faceless()
     ids = {e["id"] for e in cand}
     for v in ((pedido or {}).get("estilo"), st.get("estilo")):
         if v in ids:
@@ -2384,13 +2405,17 @@ def job_autopilot_loop(data, prog):
         raise RuntimeError("Não achei um vídeo em alta nesse feed pra inspirar a ideia de hoje.")
     prog(16, "Criando uma ideia faceless nova (sem copiar o título)…")
     aj = AJ.ler()
-    ideia = _ideia_faceless(winner.get("titulo", ""), feed.get("nome") or "", aj["modelo_ollama"])
+    modelo = str(data.get("modelo") or "").strip() or aj["modelo_ollama"]
+    ideia = _ideia_faceless(winner.get("titulo", ""), feed.get("nome") or "", modelo)
     plano = AP.plano_do_dia()
     estilo = _autopilot_estilo_faceless(data)
     ped = {"estilo": estilo, "tema": ideia["tema"], "roteiro": "",
            "canal_nome": data.get("canal_nome") or st.get("canal_nome") or aj.get("canal") or "",
-           "duracao": float(data.get("duracao") or plano["duracao"]), "voz": st.get("voz") or aj.get("voz") or "",
-           "referencia": {}, "formato": "longo", "regras": plano["regras"]}
+           "duracao": float(data.get("duracao") or plano["duracao"]), "voz": data.get("voz") or st.get("voz") or aj.get("voz") or "",
+           "referencia": {}, "formato": "longo", "regras": plano["regras"], "modelo": modelo,
+           "claude_roteiro": bool(data.get("claude_roteiro")),
+           # 🎵 música de fundo automática (CC0, baixinha, abaixa quando o narrador fala) — a menos que o pedido diga "nenhuma"
+           "musica": _musica_do_pedido(data.get("musica") if data.get("musica") else {"modo": "auto", "nivel": "baixa"})}
     prog(22, f"Fazendo o vídeo: {ideia['tema'][:50]}…")
     r = job_fabrica(ped, prog)       # encadeia roteiro → voz → imagens → render no MESMO trabalho
     kit = None
@@ -2418,6 +2443,8 @@ def autopilot_loop(data: dict = Body(...)):
     data = data or {}
     if not data.get("forcar") and AP.ja_feito_hoje():
         raise HTTPException(409, "O vídeo de hoje já foi feito. Marque “fazer mesmo assim” pra fazer outro.")
+    if data.get("voz") or data.get("estilo"):   # lembra as escolhas do modal pra próxima vez
+        AP.definir_config({k: data[k] for k in ("voz", "estilo") if data.get(k)})
     return start_job(job_autopilot_loop, data, tipo="autopilot_loop", titulo="🤖 Vídeo do dia", pesado=True)
 
 
@@ -3656,8 +3683,10 @@ def _projeto_info(p: Path):
 
 
 # ------------------------------------------------------------------ ✂ FÁBRICA DE CORTES
-def job_cortes(proj: Path, prog):
-    rodar_proc([sys.executable, FABRICA / "cortes.py", "--pasta", proj], prog, cwd=FABRICA)
+def job_cortes(proj: Path, fase, prog):
+    rodar_proc([sys.executable, FABRICA / "cortes.py", "--pasta", proj, "--fase", fase], prog, cwd=FABRICA)
+    if (proj / "plano.json").exists() and not (proj / "cortes.json").exists():   # parou pra pessoa conferir os momentos
+        return {"cid": pid_of(proj), "fase": "revisar", "folder": str(proj), "name": proj.name, "tokens": 0}
     d = cortes_get(pid_of(proj))
     primeiro = d["cortes"][0] if d["cortes"] else {}
     return {"cid": pid_of(proj), "pid": primeiro.get("pid"), "folder": str(proj), "name": proj.name, "rendered": bool(primeiro.get("rendered")),
@@ -3683,10 +3712,11 @@ def cortes_criar(data: dict = Body(...)):
     proj.mkdir(parents=True, exist_ok=True)
     ped = {"url": url, "arquivo": str(arq) if arq else "", "de": _segundos(g("de")), "ate": _segundos(g("ate")), "n": n,
            "modo": "regras" if g("modo") == "regras" else "ia", "enquadramento": "centro" if g("enquadramento") == "centro" else "desfocado",
-           "dur_min": dmin, "dur_max": dmax, "intro": bool(data.get("intro")), "canal": g("canal"), "programa": g("programa"), "titulo": base,
+           "dur_min": dmin, "dur_max": dmax, "intro": bool(data.get("intro")), "canal": g("canal"),
+           "revisar": bool(data.get("revisar", True)), "silencio": bool(data.get("silencio", True)), "zoom": bool(data.get("zoom", True)), "programa": g("programa"), "titulo": base,
            "idioma": g("idioma") or aj["idioma"], "modelo": aj["modelo_ollama"], "criado": datetime.now().isoformat(timespec="seconds")}
     (proj / "pedido.json").write_text(json.dumps(ped, ensure_ascii=False, indent=1), encoding="utf-8")
-    return {**start_job(job_cortes, proj, tipo="cortes", titulo=f"{base[:60]} · {n} {'corte' if n == 1 else 'cortes'}", pesado=True), "cid": pid_of(proj)}
+    return {**start_job(job_cortes, proj, "tudo", tipo="cortes", titulo=f"{base[:60]} · {n} {'corte' if n == 1 else 'cortes'}", pesado=True), "cid": pid_of(proj)}
 
 
 @app.get("/api/cortes/{cid}")
@@ -3694,6 +3724,8 @@ def cortes_get(cid: str):
     p = _decode_pid(cid)
     f = p / "cortes.json"
     if not f.exists():
+        if (p / "plano.json").exists():
+            return {"cid": cid, "nome": p.name, "fase": "revisar"}
         raise HTTPException(404, "Esses cortes ainda não ficaram prontos.")
     cj = json.loads(f.read_text(encoding="utf-8"))
     out = []
@@ -3707,20 +3739,65 @@ def cortes_get(cid: str):
         pass
     intro = _projeto_info(p / cj["intro"]) if cj.get("intro") and (p / cj["intro"]).exists() else None
     return {"cid": cid, "nome": p.name, "pasta_nome": amigavel(p), "modo": cj.get("modo"), "enquadramento": cj.get("enquadramento"), "cortes": out,
-            "intro": intro, "minutos": rel.get("minutos"), "duracao_fonte": rel.get("duracao_fonte"), "tokens": 0, "pronto": bool(rel)}
+            "intro": intro, "minutos": rel.get("minutos"), "duracao_fonte": rel.get("duracao_fonte"), "tokens": 0, "pronto": bool(rel),
+            "tem_plano": (p / "plano.json").exists()}
 
 
 @app.get("/api/cortes")
 def cortes_lista():
     out = []
-    for f in sorted(out_dir().glob("*/cortes.json"), key=lambda f: -f.stat().st_mtime)[:12]:
-        if (f.parent / "pedido.json").exists() and "cortes" in f.parent.name:
+    achados = {f.parent: f for f in out_dir().glob("*/cortes.json")}
+    for f in out_dir().glob("*/plano.json"):
+        achados.setdefault(f.parent, f)
+    for pasta, f in sorted(achados.items(), key=lambda kv: -kv[1].stat().st_mtime)[:12]:
+        if (pasta / "pedido.json").exists() and "cortes" in pasta.name:
             try:
-                n = len(json.loads(f.read_text(encoding="utf-8")).get("cortes") or [])
+                n = len(json.loads((pasta / "cortes.json").read_text(encoding="utf-8")).get("cortes") or []) if (pasta / "cortes.json").exists() else 0
             except Exception:
                 n = 0
-            out.append({"cid": pid_of(f.parent), "nome": f.parent.name, "n": n, "quando": datetime.fromtimestamp(f.stat().st_mtime).strftime("%d/%m %H:%M")})
+            out.append({"cid": pid_of(pasta), "nome": pasta.name, "n": n, "revisar": n == 0, "quando": datetime.fromtimestamp(f.stat().st_mtime).strftime("%d/%m %H:%M")})
     return out
+
+
+@app.get("/api/cortes/{cid}/plano")
+def cortes_plano(cid: str):
+    p = _decode_pid(cid)
+    f = p / "plano.json"
+    if not f.exists():
+        raise HTTPException(404, "Esse pedido não tem uma lista de momentos pra conferir.")
+    plano = json.loads(f.read_text(encoding="utf-8"))
+    try:
+        ped = json.loads((p / "pedido.json").read_text(encoding="utf-8"))
+    except Exception:
+        ped = {}
+    plano.update(cid=cid, nome=p.name, fonte_url=f"/p/{cid}/fonte.mp4" if (p / "fonte.mp4").exists() else None,
+                 silencio=ped.get("silencio", True), zoom=ped.get("zoom", True), intro=bool(ped.get("intro")), programa=ped.get("programa", ""))
+    return plano
+
+
+@app.post("/api/cortes/{cid}/renderizar")
+def cortes_renderizar(cid: str, data: dict = Body(...)):
+    p = _decode_pid(cid)
+    if not (p / "plano.json").exists() or not (p / "fonte.mp4").exists():
+        raise HTTPException(400, "Esse pedido não tem o vídeo de origem guardado. Faça os cortes de novo.")
+    sel = []
+    for c in data.get("cortes") or []:
+        try:
+            s, e = float(c.get("s")), float(c.get("e"))
+        except Exception:
+            raise HTTPException(400, "Tempo inválido em um dos trechos.")
+        if not (3 <= e - s <= 240):
+            raise HTTPException(400, f"Cada corte precisa ter entre 3 s e 4 min (um tem {e - s:.0f} s).")
+        sel.append({"s": s, "e": e, "titulo": str(c.get("titulo") or "").strip()[:70], "nota": c.get("nota"), "nota_regras": c.get("nota_regras"),
+                    "nota_ia": c.get("nota_ia"), "motivo": str(c.get("motivo") or "")[:200]})
+    if not 1 <= len(sel) <= 10:
+        raise HTTPException(400, "Marque de 1 a 10 cortes.")
+    ped = json.loads((p / "pedido.json").read_text(encoding="utf-8"))
+    ped.update(silencio=bool(data.get("silencio", True)), zoom=bool(data.get("zoom", True)), intro=bool(data.get("intro")),
+               programa=str(data.get("programa") or ped.get("programa") or "").strip())
+    (p / "pedido.json").write_text(json.dumps(ped, ensure_ascii=False, indent=1), encoding="utf-8")
+    (p / "selecao.json").write_text(json.dumps(sel, ensure_ascii=False, indent=1), encoding="utf-8")
+    return {**start_job(job_cortes, p, "renderizar", tipo="cortes", titulo=f"{p.name[:50]} · {len(sel)} {'corte' if len(sel) == 1 else 'cortes'}", pesado=True), "cid": cid}
 
 
 # ------------------------------------------------------------------ 🎙 EDITOR DE VÍDEO FALADO
@@ -5593,6 +5670,10 @@ def rede_liberar(data: dict = Body(...)):
     return {"ok": True, "pedida": c["rede_local"], "liberada": REDE["liberada"]}
 
 
+import blender_api  # noqa: E402  (opção Blender 3D: rotas em arquivo separado)
+blender_api.registrar(app, globals())
+
+
 if __name__ == "__main__":
     import socket
 
@@ -5615,7 +5696,3 @@ if __name__ == "__main__":
                 raise
             print("IPv6 ::1 indisponível:", e)
     uvicorn.Server(uvicorn.Config(app, log_level="warning")).run(sockets=socks)
-import blender_api  # noqa: E402  (opção Blender 3D: rotas em arquivo separado)
-blender_api.registrar(app, globals())
-
-

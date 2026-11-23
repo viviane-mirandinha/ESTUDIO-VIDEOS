@@ -112,6 +112,38 @@ function moderno(id,o){
   return envolve(id,o,perna(-1)+perna(1)+braco(1)+torso+cabeca+braco(-1));
 }
 
+// ---------------------------------------------------------------------
+//  MODERNO DE PERFIL (olhando para a DIREITA; flip:true = esquerda) — mesma "Você", mesmo esqueleto
+//  (.legA .legB .armA .armB .head .eyes .brows .boca .bob .esc). o.pernaB/o.pernaA = rotação ESTÁTICA das pernas e o.inclina = inclinação ESTÁTICA do corpo todo (pose; nunca animar: perna só mexe por andar()).
+// ---------------------------------------------------------------------
+function modernoLado(id,o){
+  o=Object.assign({pele:"#e9bd98",pele2:"#d4a07a",cabelo:"#3a2822",cabeloLuz:"#5e4338",olho:"#4a3224",camisa:"#f2eadb",jaqueta:"#4f7396",jaqueta2:"#3f5f80",calca:"#2f3b52",tenis:"#f4f1ea",solado:"#cfc8b8",escala:1,flip:false,x:0,y:0,pernaB:0,pernaA:0},o||{}); const S=ST;
+  const perna=(cls,cor,rot)=>`<g transform="translate(0,-126)"><g class="${cls}" transform="rotate(${rot})"><rect x="-11" y="0" width="22" height="110" rx="10" fill="${cor}" ${S}/><path d="M-12 106 h40 q8 0 8 10 v6 h-48 q-2 -10 2 -16z" fill="${o.tenis}" ${S}/><path d="M-14 119 h50" stroke="${o.solado}" stroke-width="6" stroke-linecap="round"/></g></g>`;
+  const braco=(cls,tun)=>`<g transform="translate(0,-244)"><g class="${cls}"><rect x="-10" y="-4" width="20" height="88" rx="10" fill="${o.pele}" ${S}/><rect x="-13" y="-8" width="26" height="60" rx="12" fill="${tun}" ${S}/><rect x="-13" y="42" width="26" height="12" rx="5" fill="${o.jaqueta2}" ${S}/><g transform="translate(0,84)">${mao(o.pele)}</g></g></g>`;
+  const torso=`<g class="torso"><path d="M-28 -254 q-8 72 -8 150 h62 q0 -80 -4 -150 q-24 -12 -50 0z" fill="${o.camisa}" ${S}/><path d="M-28 -254 q-8 72 -8 150 h24 q-2 -70 6 -128 q0 -14 -8 -22z" fill="${o.jaqueta}" ${S}/><path d="M26 -254 q4 70 4 150 h-20 q4 -74 -4 -128 q6 -14 20 -22z" fill="${o.jaqueta}" ${S}/><path d="M-36 -116 h66" stroke="${o.jaqueta2}" stroke-width="10" stroke-linecap="round"/></g>`;
+  const cab=`<g transform="translate(2,-262)"><g class="head"><path d="M-30 -62 q-26 50 -14 124 q24 10 40 -6 q-8 -64 8 -106z" fill="${o.cabelo}" ${S}/><rect x="-9" y="-2" width="18" height="24" fill="${o.pele2}" ${S}/>
+    <ellipse cx="0" cy="-38" rx="33" ry="40" fill="${o.pele}" ${S}/><path d="M30 -42 q16 4 10 16 q-4 5 -12 3z" fill="${o.pele}" ${S}/>
+    <ellipse cx="-8" cy="-34" rx="6" ry="9" fill="${o.pele2}" ${ST.replace('3.5','2.5')}/><ellipse cx="20" cy="-20" rx="7" ry="4.5" fill="#e88a7a" opacity=".28"/>
+    <g class="eyes"><ellipse cx="15" cy="-42" rx="6.5" ry="8" fill="#fff" stroke="${LN}" stroke-width="2"/><circle cx="17" cy="-41" r="3.8" fill="${o.olho}"/><circle cx="18.5" cy="-43" r="1.2" fill="#fff"/></g>
+    <g class="brows"><path d="M8 -54 q9 -6 18 0" stroke="${o.cabelo}" stroke-width="4.5" fill="none" stroke-linecap="round"/></g>
+    <path class="boca" d="M24 -10 q6 6 11 0" stroke="#8a3b3b" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M-35 -40 q0 -50 36 -50 q32 2 34 32 q-16 -16 -36 -10 q-20 6 -34 28z" fill="${o.cabelo}" ${S}/><path d="M-20 -78 q18 -12 40 -4" stroke="${o.cabeloLuz}" stroke-width="3.5" fill="none" stroke-linecap="round"/></g></g>`;
+  return envolve(id,o,`<g transform="rotate(${o.inclina||0})">`+perna("legB",o.calca,o.pernaB)+braco("armB",o.jaqueta2)+torso+perna("legA",o.calca,o.pernaA)+cab+braco("armA",o.jaqueta)+`</g>`);
+}
+// EXPRESSÕES — troca boca/sobrancelha e põe pálpebras caídas (tipo: "triste" | "cansada" | "esforco" | "bravo"; perfil=true para modernoLado)
+function cara(id,tipo,perfil,pele){
+  const q=(s)=>document.querySelector(`#${id} ${s}`); pele=pele||"#e9bd98";
+  const F={bravo:{b:"M-9 4 q9 -6 18 0",br:"M-24 -58 q9 1 18 9 M6 -49 q9 -8 18 -9",l:0},triste:{b:"M-9 3 q9 -10 18 0",br:"M-22 -47 q8 -2 16 -9 M6 -56 q8 7 16 9",l:.55},cansada:{b:"M-8 1 q8 -4 16 0",br:"M-22 -50 q8 2 16 -2 M6 -52 q8 -4 16 2",l:.75},esforco:{b:"M-10 0 q5 -4 10 0 q5 4 10 0",br:"M-22 -46 q8 -2 16 -8 M6 -54 q8 6 16 8",l:.7}};
+  const P={bravo:{b:"M22 -6 q6 -5 13 0",br:"M6 -58 q10 0 20 9",l:0},triste:{b:"M24 -5 q6 -7 11 0",br:"M8 -52 q9 -2 18 -9",l:.55},cansada:{b:"M24 -8 q6 -3 11 0",br:"M8 -54 q9 3 18 -1",l:.75},esforco:{b:"M22 -6 q6 -5 13 1",br:"M8 -58 q9 2 18 6",l:.7}};
+  const f=(perfil?P:F)[tipo]; if(!f) return; const b=q(".boca"), r=q(".brows path"); if(b) b.setAttribute("d",f.b); if(r) r.setAttribute("d",f.br);
+  const e=q(".eyes"); if(e&&f.l){ const lids=perfil?[[15,-42,6.5,8]]:[[-14,-40,6,7],[14,-40,6,7]];
+    e.insertAdjacentHTML("beforeend",lids.map(([x,y,rx,ry])=>{ const yb=(y-ry+2*ry*f.l).toFixed(1); return `<path d="M${x-rx} ${yb} L${x-rx} ${y} A${rx} ${ry} 0 0 1 ${x+rx} ${y} L${x+rx} ${yb} Q${x} ${(+yb+ry*.5).toFixed(1)} ${x-rx} ${yb}z" fill="${pele}" stroke="${LN}" stroke-width="2"/>`; }).join("")); }
+}
+// gota (suor/lágrima) PRESA à cabeça: acompanha o movimento dela. t0 = instante absoluto (s); x,y no espaço da cabeça.
+function gota(id,x,y,t0,cor){ const h=document.querySelector(`#${id} .head`); if(!h) return; const k="gt"+Math.abs(Math.round(x*13+y*7+t0*100));
+  h.insertAdjacentHTML("beforeend",`<g class="${k}" opacity="0"><path d="M${x} ${y} q-5 8 0 13 q5 -5 0 -13z" fill="${cor||"#8fc4e8"}" stroke="${LN}" stroke-width="1.6"/></g>`);
+  tl.fromTo(`#${id} .${k}`,{opacity:0,y:0},{opacity:1,duration:.15},t0); tl.to(`#${id} .${k}`,{y:30,duration:.9,ease:"power1.in"},t0+.15); tl.to(`#${id} .${k}`,{opacity:0,duration:.25},t0+.8); }
+
 // =====================================================================
 //  ANIMAÇÃO DE PERSONAGEM — as ÚNICAS funções que mexem em perna/braço/posição.
 //  (README.md explica por quê. Não crie animação de perna fora daqui.)
