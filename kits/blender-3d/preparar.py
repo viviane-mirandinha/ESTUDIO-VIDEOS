@@ -103,6 +103,22 @@ def main():
     # 4) plano de cenas
     prog(68, "Planejando as cenas…")
     planejar.planejar(pasta, usar_ia=bool(ped.get("usar_ia", True)), refazer=True)
+    por = ped.get("ambiente", "ollama")      # quem projeta o ambiente do vídeo: "ollama" (grátis), "claude" ou "nenhum" (sala pronta antiga)
+    (pasta / "ambiente.json").unlink(missing_ok=True)
+    if por != "nenhum":
+        prog(80, "Claude projetando o ambiente do vídeo…" if por == "claude" else "Projetando o ambiente do vídeo (IA local)…")
+        try:
+            import ambiente
+            ambiente.projetar(pasta, usar_ia=bool(ped.get("usar_ia", True)), por=por)
+        except Exception as e:   # noqa: BLE001  (o vídeo segue com a sala pronta)
+            print(f"(Não consegui projetar o ambiente: {str(e)[:120]} — usei a sala pronta.)", flush=True)
+    if ped.get("buscar_modelos", True):
+        prog(85, "Procurando modelos 3D livres (CC0) para o tema…")
+        try:
+            import buscar_modelos
+            buscar_modelos.aplicar(pasta, usar_ia=bool(ped.get("usar_ia", True)))
+        except Exception as e:   # sem internet ou site fora: o vídeo segue sem os modelos
+            print(f"(Não consegui buscar modelos 3D: {str(e)[:120]} — o vídeo segue sem eles.)", flush=True)
     prog(100, "Plano de cenas pronto.")
 
 

@@ -104,3 +104,22 @@ Se a máquina estiver fora da rede de casa, use Tailscale (o IP 100.x entra em `
 ## Pastas
 `bake/` (cena → .glb), `render/renderizar.py` (roda dentro do Blender), `render_quadros.py` (local ou SSH),
 `construir.py` (orquestra tudo), `lib/` (peças 3D), `exemplos/` (cena de exemplo; vídeo pronto: `VIDEOS/105-exemplo-blender-3d`).
+
+## Modelos 3D novos por vídeo (buscar_modelos.py)
+`python kits/blender-3d/buscar_modelos.py <pasta>` procura no poly.pizza (só licença **CC0**) objetos para cada cena, baixa os `.glb` (cache em `modelos/_poly/`, reaproveitado) e escreve `modelos` no `plano.json` (campos `auto`, `base`, `altura`; a cena ganha `alvo_x` para a câmera abrir). O preparo do painel chama isso sozinho (desligue com `"buscar_modelos": false` no `pedido.json`). Sem internet o vídeo segue sem os modelos.
+
+## Ambiente novo em todo vídeo (ambiente.py + polyhaven.py)
+
+Cada vídeo ganha o **seu** cenário, projetado a partir do roteiro (nada de salas pré-montadas):
+
+1. `ambiente.py projetar` — a IA escreve a *ficha do ambiente* (`<pasta>/ambiente.json`): lugar(es), tamanho da sala, piso, parede, céu (HDRI), luz e a lista de objetos.
+   **Quem projeta é escolha do usuário em cada vídeo** (painel → Blender 3D → "Cenário"): **Ollama** (grátis, padrão) ou **Claude** (gasta tokens; só este passo, curto).
+   Terminal: `python kits/blender-3d/ambiente.py <pasta> [--claude] [--sem-ia] [--so-empacotar]`.
+2. `ambiente.py empacotar` (chamado por `gerar_cena.preparar_modelos`) — baixa materiais, céus e modelos do **Poly Haven** (`polyhaven.py`) e, se faltar, do **Poly Pizza**
+   (`buscar_modelos.py`); tudo CC0. Sem modelo: o Blender monta uma peça simples no lugar. Coloca cada objeto numa "vaga" dentro da faixa que o quadro vertical mostra
+   e escreve `blender/ambiente.json` + arquivos em `blender/modelos/` (nomes `amb_*`). Os créditos ficam em `CREDITOS-3D.txt`.
+3. `render/renderizar.py` monta o lugar no Blender (piso, paredes altas, janelas, luz de teto, objetos, céu HDRI como mundo). Com 2–3 lugares (ex.: dentro/fora) cada cena mostra o seu.
+   As cenas do plano passam a ter `cenario: "nenhum"` (o `lib/Cenarios.tsx` antigo não desenha nada) e `lugar: "<id>"`.
+
+`pedido.json` → `"ambiente": "ollama" | "claude" | "nenhum"` (nenhum = sala pronta antiga). Cache dos downloads: `modelos/_ph/` (fora do git).
+Limites conhecidos: câmera ainda estática/longe nas cenas "geral"; a escolha de materiais é por palavras-chave (pode errar o tipo de piso).

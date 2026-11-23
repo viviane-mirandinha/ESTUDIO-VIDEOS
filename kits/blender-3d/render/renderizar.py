@@ -74,8 +74,26 @@ for m in MODELOS["modelos"]:
     novos = [o for o in bpy.data.objects if o not in antes]
     raiz = bpy.data.objects.new("modelo_" + m["id"], None)
     cena.collection.objects.link(raiz)
-    for o in novos:
-        if o.parent is None or o.parent not in novos:
+    topo = [o for o in novos if o.parent is None or o.parent not in novos]
+    if m.get("base"):
+        # modelo achado na internet: tamanho e posição variam → põe a base no chão, no centro, com a maior dimensão no tamanho pedido (m)
+        norm = bpy.data.objects.new("norm_" + m["id"], None)
+        cena.collection.objects.link(norm)
+        norm.parent = raiz
+        for o in topo:
+            o.parent = norm
+        bpy.context.view_layer.update()
+        pts = [o.matrix_world @ Vector(c) for o in novos if o.type == "MESH" for c in o.bound_box]
+        if pts:
+            xs, ys, zs = [p.x for p in pts], [p.y for p in pts], [p.z for p in pts]
+            alt = max(max(zs) - min(zs), max(xs) - min(xs), max(ys) - min(ys), 1e-4)   # maior dimensão = o tamanho pedido
+            k = (m.get("altura") or 1.0) / alt
+            k = min(max(k, 0.01), 100.0)
+            cx, cy = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
+            norm.scale = (k, k, k)
+            norm.location = Vector((-cx * k, -cy * k, -min(zs) * k))
+    else:
+        for o in topo:
             o.parent = raiz
     raizes[m["id"]] = raiz
     if not m.get("estilizar", True):
@@ -99,6 +117,198 @@ for cm in MODELOS["cenas"]:
         for caminho in ("location", "rotation_euler", "scale"):
             raiz.keyframe_insert(caminho, frame=f0)
         _prev[mid] = novo
+
+# ------------------------------------------------------------- ambiente do vídeo (ambiente.json, montado por ambiente.py)
+# Cada vídeo ganha o seu lugar: piso e paredes com materiais do Poly Haven, céu (HDRI), janelas, luzes e objetos.
+# Coordenadas deste arquivo: do Blender (Z para cima); o personagem fica perto de (0, -0,9, 0) e a câmera em Y negativo.
+
+_aj = os.path.join(pasta, "ambiente.json")
+AMB = json.load(open(_aj)) if os.path.exists(_aj) else None
+AMB_LUGARES = {}     # id -> {"raiz": objeto, "luzes": [(luz, energia)], "ceu": caminho ou None, "tipo": ..., "luz": ...}
+FUNDO_Y, FRENTE_Y = 4.5, -8.0
+
+
+def _img(arquivo, nao_cor=False):
+    im = bpy.data.images.load(os.path.join(pasta, arquivo), check_existing=True)
+    if nao_cor:
+        im.colorspace_settings.name = "Non-Color"
+    return im
+
+
+def material_ambiente(nome, cfg):
+    """Material de piso/parede: cor + rugosidade do Poly Haven, projetado em caixa (não precisa de UV)."""
+    mat = bpy.data.materials.new(nome)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    pbr = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
+    pbr.inputs["Base Color"].default_value = (*cor(cfg["cor"]), 1)
+    pbr.inputs["Roughness"].default_value = 0.7
+    if cfg.get("diff"):
+        coord = nt.nodes.new("ShaderNodeTexCoord")
+        mp = nt.nodes.new("ShaderNodeMapping")
+        k = 1.0 / max(cfg.get("tile", 2.0), 0.2)
+        mp.inputs["Scale"].default_value = (k, k, k)
+        nt.links.new(coord.outputs["Object"], mp.inputs["Vector"])
+        t = nt.nodes.new("ShaderNodeTexImage")
+        t.image = _img(cfg["diff"])
+        t.projection, t.projection_blend = "BOX", 0.25
+        nt.links.new(mp.outputs["Vector"], t.inputs["Vector"])
+        mix = nt.nodes.new("ShaderNodeMix")
+        mix.data_type, mix.blend_type = "RGBA", "MULTIPLY"
+        mix.inputs["Factor"].default_value = 0.3     # puxa um pouco para a cor que a IA escolheu
+        a = next(i for i in mix.inputs if i.identifier == "A_Color")
+        bb = next(i for i in mix.inputs if i.identifier == "B_Color")
+        bb.default_value = (*cor(cfg["cor"]), 1)
+        nt.links.new(t.outputs["Color"], a)
+        nt.links.new(next(o for o in mix.outputs if o.identifier == "Result_Color"), pbr.inputs["Base Color"])
+        if cfg.get("arm"):
+            ta = nt.nodes.new("ShaderNodeTexImage")
+            ta.image = _img(cfg["arm"], True)
+            ta.projection, ta.projection_blend = "BOX", 0.25
+            nt.links.new(mp.outputs["Vector"], ta.inputs["Vector"])
+            sep = nt.nodes.new("ShaderNodeSeparateColor")
+            nt.links.new(ta.outputs["Color"], sep.inputs["Color"])
+            nt.links.new(sep.outputs["Green"], pbr.inputs["Roughness"])
+    return mat
+
+
+def quadro_malha(nome, pontos, mat, pai):
+    me = bpy.data.meshes.new(nome)
+    me.from_pydata(pontos, [], [(0, 1, 2, 3)])
+    me.update()
+    ob = bpy.data.objects.new(nome, me)
+    cena.collection.objects.link(ob)
+    ob.data.materials.append(mat)
+    ob.parent = pai
+    return ob
+
+
+def importar_normalizado(arquivo, altura, pai, nome):
+    """Importa um .glb achado na internet: base no chão, centrado, maior dimensão = altura (m). Devolve o objeto-raiz."""
+    antes = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=os.path.join(pasta, arquivo))
+    novos = [o for o in bpy.data.objects if o not in antes]
+    raiz = bpy.data.objects.new("amb_" + nome, None)
+    cena.collection.objects.link(raiz)
+    raiz.parent = pai
+    norm = bpy.data.objects.new("ambn_" + nome, None)
+    cena.collection.objects.link(norm)
+    norm.parent = raiz
+    for o in [o for o in novos if o.parent is None or o.parent not in novos]:
+        o.parent = norm
+    bpy.context.view_layer.update()
+    pts = [o.matrix_world @ Vector(c) for o in novos if o.type == "MESH" for c in o.bound_box]
+    if pts:
+        xs, ys, zs = [p.x for p in pts], [p.y for p in pts], [p.z for p in pts]
+        alt = max(max(zs) - min(zs), max(xs) - min(xs), max(ys) - min(ys), 1e-4)
+        # o que for alto e fino (estante, árvore) usa a ALTURA como referência; o que for baixo e largo (balcão, carro) usa a maior dimensão
+        k = min(max(altura / alt, 0.01), 100.0)
+        norm.scale = (k, k, k)
+        norm.location = Vector((-(max(xs) + min(xs)) / 2 * k, -(max(ys) + min(ys)) / 2 * k, -min(zs) * k))
+    return raiz
+
+
+def peca_simples(nome, altura, cor_hex, pai):
+    """Sem modelo 3D: uma peça simples (caixa) do tamanho pedido, para a cena nunca ficar vazia."""
+    larg, prof = max(0.5, min(altura * 0.7, 2.2)), max(0.4, min(altura * 0.35, 1.0))
+    me = bpy.data.meshes.new("amb_" + nome)
+    x, y, z = larg / 2, prof / 2, altura
+    me.from_pydata([(-x, -y, 0), (x, -y, 0), (x, y, 0), (-x, y, 0), (-x, -y, z), (x, -y, z), (x, y, z), (-x, y, z)], [],
+                   [(0, 3, 2, 1), (4, 5, 6, 7), (0, 1, 5, 4), (1, 2, 6, 5), (2, 3, 7, 6), (3, 0, 4, 7)])
+    me.update()
+    ob = bpy.data.objects.new("amb_" + nome, me)
+    cena.collection.objects.link(ob)
+    m = bpy.data.materials.new("amb_mat_" + nome)
+    m.use_nodes = True
+    next(n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED").inputs["Base Color"].default_value = (*cor(cor_hex), 1)
+    ob.data.materials.append(m)
+    ob.parent = pai
+    return ob
+
+
+def luz_ambiente(nome, pos, alvo, energia, cor_hex, tamanho):
+    d = bpy.data.lights.new(nome, "AREA")
+    d.energy, d.size = energia, tamanho
+    d.color = cor(cor_hex)
+    o = bpy.data.objects.new(nome, d)
+    cena.collection.objects.link(o)
+    o.location = Vector(pos)
+    o.rotation_mode = "QUATERNION"
+    o.rotation_quaternion = (Vector(alvo) - Vector(pos)).to_track_quat("-Z", "Y")
+    return d
+
+
+if AMB:
+    for lug in AMB["lugares"]:
+        lid, ext = lug["id"], lug["tipo"] == "exterior"
+        W, H = lug["sala"]["largura"], lug["sala"]["altura"]
+        HP = lug["sala"].get("parede_altura", H)   # a parede sobe além do teto: o quadro é vertical e mostraria o céu por cima
+        raiz = bpy.data.objects.new("lugar_" + lid, None)
+        cena.collection.objects.link(raiz)
+        reg = {"raiz": raiz, "luzes": [], "ceu": (lug.get("ceu") or {}).get("arquivo"), "tipo": lug["tipo"], "luz": lug["luz"]}
+        AMB_LUGARES[lid] = reg
+        mp, mw = material_ambiente(f"piso_{lid}", lug["piso"]), material_ambiente(f"parede_{lid}", lug["parede"])
+        if MATERIAL != "desenho":
+            mats_livres.update([mp, mw])
+        meia = 45.0 if ext else W / 2
+        quadro_malha("piso_" + lid, [(-meia, -40.0, 0), (meia, -40.0, 0), (meia, 45.0 if ext else FUNDO_Y, 0), (-meia, 45.0 if ext else FUNDO_Y, 0)], mp, raiz)
+        if not ext:
+            quadro_malha("fundo_" + lid, [(-W / 2, FUNDO_Y, 0), (W / 2, FUNDO_Y, 0), (W / 2, FUNDO_Y, HP), (-W / 2, FUNDO_Y, HP)], mw, raiz)
+            quadro_malha("esq_" + lid, [(-W / 2, FRENTE_Y, 0), (-W / 2, FUNDO_Y, 0), (-W / 2, FUNDO_Y, HP), (-W / 2, FRENTE_Y, HP)], mw, raiz)
+            quadro_malha("dir_" + lid, [(W / 2, FUNDO_Y, 0), (W / 2, FRENTE_Y, 0), (W / 2, FRENTE_Y, HP), (W / 2, FUNDO_Y, HP)], mw, raiz)
+            # janelas na parede do fundo: moldura clara + vidro que brilha (luz do dia entrando)
+            n = lug.get("janelas", 0)
+            for i in range(n):
+                cx = -2.4 + 4.8 * (i + 0.5) / max(n, 1)   # dentro da faixa que o quadro vertical mostra
+                moldura = bpy.data.materials.new(f"moldura_{lid}{i}")
+                moldura.use_nodes = True
+                next(nd for nd in moldura.node_tree.nodes if nd.type == "BSDF_PRINCIPLED").inputs["Base Color"].default_value = (0.92, 0.92, 0.9, 1)
+                vidro = bpy.data.materials.new(f"vidro_{lid}{i}")
+                vidro.use_nodes = True
+                nt = vidro.node_tree
+                em = nt.nodes.new("ShaderNodeEmission")
+                em.inputs["Color"].default_value = (*cor("#cfe5ff" if lug["luz"] != "noite" else "#2a3a66"), 1)
+                em.inputs["Strength"].default_value = 1.6 if lug["luz"] != "noite" else 0.8
+                nt.links.new(em.outputs["Emission"], next(nd for nd in nt.nodes if nd.type == "OUTPUT_MATERIAL").inputs["Surface"])
+                z0, z1 = H - 0.6, H + 1.0      # janelas altas, acima das prateleiras
+                quadro_malha(f"moldura_{lid}{i}", [(cx - 1.15, FUNDO_Y - 0.02, z0 - 0.12), (cx + 1.15, FUNDO_Y - 0.02, z0 - 0.12), (cx + 1.15, FUNDO_Y - 0.02, z1 + 0.12), (cx - 1.15, FUNDO_Y - 0.02, z1 + 0.12)], moldura, raiz)
+                quadro_malha(f"vidro_{lid}{i}", [(cx - 1.0, FUNDO_Y - 0.04, z0), (cx + 1.0, FUNDO_Y - 0.04, z0), (cx + 1.0, FUNDO_Y - 0.04, z1), (cx - 1.0, FUNDO_Y - 0.04, z1)], vidro, raiz)
+            # luz de teto do cômodo (quente, fria…) no tom que a ficha pediu
+            e = 0.35 if lug["luz"] == "noite" else 2.6
+            for sx in (-W / 4, W / 4):
+                reg["luzes"].append((luz_ambiente(f"teto_{lid}", (sx, 0.0, H - 0.3), (sx, 0.0, 0.0), 650 * e, lug["luz_cor"], 4.0), 650 * e))
+        for k, o in enumerate(lug["objetos"]):
+            nome = f"{lid}_{k}"
+            if o.get("arquivo"):
+                try:
+                    ob = importar_normalizado(o["arquivo"], o["altura"], raiz, nome)
+                except Exception as e_imp:   # modelo quebrado: usa a peça simples
+                    print(f"(modelo {o['termo']} não abriu: {str(e_imp)[:80]})", flush=True)
+                    ob = peca_simples(nome, o["altura"], o["cor"], raiz)
+            else:
+                ob = peca_simples(nome, o["altura"], o["cor"], raiz)
+            ob.location = Vector(o["pos"])
+            ob.rotation_euler = (0, 0, o["giro"])
+    # só um lugar aparece em cada cena: os outros somem (escala 0) e as luzes deles apagam
+    _ativo_ant = None
+    for cm in AMB["cenas"]:
+        f0 = cm["f0"]
+        for lid, reg in AMB_LUGARES.items():
+            on = 1.0 if lid == cm["lugar"] else 0.0
+            if len(AMB_LUGARES) > 1:
+                if f0 > 0 and _ativo_ant is not None:
+                    ant = 1.0 if lid == _ativo_ant else 0.0
+                    reg["raiz"].scale = (ant,) * 3
+                    reg["raiz"].keyframe_insert("scale", frame=f0 - 1)
+                    for d, e in reg["luzes"]:
+                        d.energy = e * ant
+                        d.keyframe_insert("energy", frame=f0 - 1)
+                reg["raiz"].scale = (on,) * 3
+                reg["raiz"].keyframe_insert("scale", frame=f0)
+                for d, e in reg["luzes"]:
+                    d.energy = e * on
+                    d.keyframe_insert("energy", frame=f0)
+        _ativo_ant = cm["lugar"]
 
 # ------------------------------------------------------------- materiais com acabamento de filme
 
@@ -211,11 +421,49 @@ mundo = bpy.data.worlds.new("mundo")
 cena.world = mundo
 mundo.use_nodes = True
 fundo = mundo.node_tree.nodes["Background"]
-for i, q in enumerate(dados["quadros"]):
-    fundo.inputs[0].default_value = (*cor(q["fundo"]), 1)
-    fundo.inputs[1].default_value = (0.55 if LUZ_MODO == "suave" else 0.35 if LUZ_MODO == "dura" else 0.7) * q["luz"]
-    fundo.inputs[0].keyframe_insert("default_value", frame=i)
-    fundo.inputs[1].keyframe_insert("default_value", frame=i)
+_FORCA_MUNDO = 0.55 if LUZ_MODO == "suave" else 0.35 if LUZ_MODO == "dura" else 0.7
+if AMB and AMB_LUGARES:
+    # o céu do ambiente (HDRI do Poly Haven) vira o mundo; com mais de um lugar, o céu troca junto com a cena
+    nt_m = mundo.node_tree
+    saida_m = next(n for n in nt_m.nodes if n.type == "OUTPUT_WORLD")
+    nt_m.nodes.remove(fundo)
+    fundos_m = []
+    for lid, reg in AMB_LUGARES.items():
+        bg = nt_m.nodes.new("ShaderNodeBackground")
+        if reg["ceu"]:
+            env = nt_m.nodes.new("ShaderNodeTexEnvironment")
+            env.image = _img(reg["ceu"])
+            nt_m.links.new(env.outputs["Color"], bg.inputs["Color"])
+        else:
+            bg.inputs["Color"].default_value = (*cor("#d9dde6"), 1)
+        fundos_m.append((lid, bg, 1.3 if reg["tipo"] == "interior" else 1.0))
+    atual = fundos_m[0][1]
+    for idx in range(1, len(fundos_m)):
+        mx = nt_m.nodes.new("ShaderNodeMixShader")
+        nt_m.links.new(atual.outputs[0], mx.inputs[1])
+        nt_m.links.new(fundos_m[idx][1].outputs[0], mx.inputs[2])
+        ids = [x[0] for x in fundos_m]
+        _v_ant = None
+        for cm in AMB["cenas"]:    # fator 1 quando o lugar desta etapa é o idx (ou depois dele na cadeia); segura o valor até o corte
+            v = 1.0 if ids.index(cm["lugar"]) >= idx else 0.0
+            if _v_ant is not None and cm["f0"] > 0:
+                mx.inputs[0].default_value = _v_ant
+                mx.inputs[0].keyframe_insert("default_value", frame=cm["f0"] - 1)
+            mx.inputs[0].default_value = v
+            mx.inputs[0].keyframe_insert("default_value", frame=max(cm["f0"], 0))
+            _v_ant = v
+        atual = mx
+    nt_m.links.new(atual.outputs[0] if hasattr(atual, "outputs") else atual, saida_m.inputs["Surface"])
+    for i, q in enumerate(dados["quadros"]):
+        for lid, bg, k in fundos_m:
+            bg.inputs[1].default_value = _FORCA_MUNDO * k * q["luz"]
+            bg.inputs[1].keyframe_insert("default_value", frame=i)
+else:
+    for i, q in enumerate(dados["quadros"]):
+        fundo.inputs[0].default_value = (*cor(q["fundo"]), 1)
+        fundo.inputs[1].default_value = _FORCA_MUNDO * q["luz"]
+        fundo.inputs[0].keyframe_insert("default_value", frame=i)
+        fundo.inputs[1].keyframe_insert("default_value", frame=i)
 
 
 def luz(nome, tipo, energia, cor_hex, pos, alvo, tamanho):

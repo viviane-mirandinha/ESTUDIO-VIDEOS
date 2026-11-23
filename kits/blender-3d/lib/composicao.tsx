@@ -17,7 +17,7 @@ import type {Quadro3D} from './tipos';
  * o plano pode ser escrito por um modelo local (Ollama) ou à mão, sem escrever código 3D.
  */
 
-export type Cenario = 'garagem' | 'atelie' | 'infinito';
+export type Cenario = 'garagem' | 'atelie' | 'infinito' | 'nenhum';
 export type PoseNome = 'parado' | 'pensando' | 'apontando' | 'comemorando' | 'andando';
 export type ObjetoNome = 'nenhum' | 'carro' | 'galao' | 'gato';
 export type Enquadramento = 'geral' | 'medio' | 'close' | 'lado' | 'alto';
@@ -49,6 +49,8 @@ export type CenaPlano = {
   objeto?: ObjetoNome;
   enquadramento?: Enquadramento;
   lado?: Lado;
+  /** outro ponto (x) que precisa caber no quadro junto do personagem, ex.: um modelo .glb importado ao lado */
+  alvo_x?: number;
   /** muda o visual do personagem só nesta cena (ex.: outra roupa) */
   personagem?: PersonagemConfig;
   /** esconde o personagem do kit (a cena usa só modelos .glb importados) */
@@ -61,6 +63,7 @@ export const CENARIOS: Record<Cenario, {fundo: string; luz: number}> = {
   garagem: {fundo: '#3d424b', luz: 1.3},
   atelie: {fundo: '#e9dccb', luz: 1.15},
   infinito: {fundo: '#f2dcc2', luz: 1.1},
+  nenhum: {fundo: '#f2dcc2', luz: 1.1},   // o ambiente é montado no Blender (ambiente.json)
 };
 
 const PX: Record<Lado, number> = {esq: -1.5, centro: 0, dir: 1.5};
@@ -73,9 +76,9 @@ const posObjeto = (lado: Lado): {x: number; z: number; giro: number} => (lado ==
 const GATO_DX = 1.6;
 
 /** Câmera para um enquadramento. No vídeo vertical cabe pouca largura: a distância cresce com o que precisa aparecer. */
-const enquadrar = (tipo: Enquadramento, lado: Lado, objeto: ObjetoNome): Omit<Plano, 't'> => {
+const enquadrar = (tipo: Enquadramento, lado: Lado, objeto: ObjetoNome, alvoX?: number): Omit<Plano, 't'> => {
   const px = PX[lado];
-  const ox = objeto === 'carro' ? posObjeto(lado).x : objeto === 'gato' ? px + (lado === 'dir' ? -GATO_DX : GATO_DX) : px;
+  const ox = alvoX !== undefined ? alvoX : objeto === 'carro' ? posObjeto(lado).x : objeto === 'gato' ? px + (lado === 'dir' ? -GATO_DX : GATO_DX) : px;
   const cx = (px + ox) / 2;
   // largura vertical 9:16: a visão horizontal vale 0,3226 × a distância (fov 32)
   const dist = Math.min(18, Math.max(9, (Math.abs(px - ox) + 3.2) / 0.3226));
@@ -138,7 +141,7 @@ const falaEm = (s: number, palavras: Palavra[]): number => {
 export const criarCena = (plano: PlanoVideo, palavras: Palavra[] = []) => {
   const cenas = [...plano.cenas].sort((a, b) => a.de - b.de);
   const duracao = cenas.length ? Math.max(...cenas.map((c) => c.ate)) : 1;
-  const cam: Plano[] = cenas.map((c) => ({t: c.de, ...enquadrar(c.enquadramento ?? 'medio', c.lado ?? 'centro', c.objeto ?? 'nenhum')}));
+  const cam: Plano[] = cenas.map((c) => ({t: c.de, ...enquadrar(c.enquadramento ?? 'medio', c.lado ?? 'centro', c.objeto ?? 'nenhum', c.alvo_x)}));
   const indice = (s: number) => {
     let i = 0;
     while (i + 1 < cenas.length && cenas[i + 1].de <= s) i++;
@@ -167,7 +170,7 @@ export const criarCena = (plano: PlanoVideo, palavras: Palavra[] = []) => {
       luz: c.luz ?? padrao.luz,
       cena: (
         <>
-          {cenario === 'garagem' ? <Garagem /> : cenario === 'atelie' ? <Atelie /> : <Infinito cor={c.fundo ?? padrao.fundo} />}
+          {cenario === 'nenhum' ? null : cenario === 'garagem' ? <Garagem /> : cenario === 'atelie' ? <Atelie /> : <Infinito cor={c.fundo ?? padrao.fundo} />}
           {c.sem_personagem ? null : <Personagem
             {...juntaPersonagem(plano.personagem, c.personagem)}
             position={[px, 0, PZ]}

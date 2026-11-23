@@ -2,6 +2,7 @@
 # Fica em arquivo separado: o server.py só chama registrar(app, globals()) uma vez.
 # Fluxo: criar (roteiro → voz → palavras → plano de cenas) → prévias (1 quadro por cena) → revisar/aprovar → renderizar.
 import json
+import os
 import re
 import subprocess
 import sys
@@ -162,9 +163,13 @@ def registrar(app, G):
     def job_preparar(proj: Path, prog):
         ped = _ler_json(proj / "pedido.json", {}) or {}
         if ped.get("modo") != "claude":
+            if ped.get("ambiente") == "claude" and G["_claude_exe"]():
+                os.environ["CLAUDE_EXE"] = G["_claude_exe"]()    # o preparar.py chama o Claude só para projetar o ambiente
             G["rodar_proc"]([PY, KIT / "preparar.py", proj], prog, cwd=REPO, lo=0, hi=100)
             return {"pid": G["pid_of"](proj), "name": proj.name}
         # modo Claude: o mesmo preparo grátis (roteiro, voz, palavras, rascunho do plano) + Claude refaz o plano/cena + quadros de teste
+        if ped.get("ambiente") == "claude" and G["_claude_exe"]():
+            os.environ["CLAUDE_EXE"] = G["_claude_exe"]()
         G["rodar_proc"]([PY, KIT / "preparar.py", proj], prog, cwd=REPO, lo=0, hi=35)
         claude_escreve(proj, sub(prog, 35, 88), "Escrever a cena 3D deste vídeo (plano de cenas e, se precisar, peças e cena3d.tsx).")
         prog(88, "Gerando os quadros de teste das cenas…")
@@ -452,6 +457,11 @@ def registrar(app, G):
             raise HTTPException(400, "Falta o app do Claude neste PC (claude.ai/download). Use o modo grátis ou instale o Claude.")
         if not g("tema") and len(g("roteiro").split()) < 8:
             raise HTTPException(400, "Escreva o tema ou cole o roteiro (pelo menos algumas frases).")
+        amb = g("ambiente") or "ollama"      # quem projeta o cenário: ollama (grátis, padrão) | claude (gasta tokens) | nenhum (sala pronta)
+        if amb not in ("ollama", "claude", "nenhum"):
+            raise HTTPException(400, "Escolha inválida para o ambiente.")
+        if amb == "claude" and not G["_claude_exe"]():
+            raise HTTPException(400, "Falta o app do Claude neste PC (claude.ai/download). Escolha a IA do seu PC (grátis) para o ambiente.")
         pre = g("predefinicao") or "padrao"
         if not (KIT / "predefinicoes" / f"{pre}.json").exists():
             raise HTTPException(400, f"A predefinição '{pre}' não existe.")
@@ -469,7 +479,7 @@ def registrar(app, G):
         proj.mkdir(parents=True, exist_ok=True)
         ped = {"tipo": TIPO, "modo": modo, "tema": g("tema"), "roteiro": g("roteiro"), "voz": g("voz") or aj["voz"], "predefinicao": pre,
                "duracao": dur, "canal": g("canal"), "modelo_ollama": aj["modelo_ollama"], "idioma": aj["idioma"],
-               "usar_ia": data.get("usar_ia") is not False, "criado": datetime.now().isoformat(timespec="seconds")}
+               "usar_ia": data.get("usar_ia") is not False, "buscar_modelos": data.get("buscar_modelos") is not False, "ambiente": amb, "criado": datetime.now().isoformat(timespec="seconds")}
         for k in ("personagem", "render"):   # ajustes da tela de criar (por cima da predefinição)
             if isinstance(data.get(k), dict) and data[k]:
                 ped[k] = data[k]

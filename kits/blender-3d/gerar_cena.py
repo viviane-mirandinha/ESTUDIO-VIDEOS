@@ -10,7 +10,7 @@ KIT = Path(__file__).resolve().parent
 
 MARCA = "// GERADO DO PLANO (plano.json) — não edite à mão: mude o plano e rode gerar_cena.py. Para cena sob medida, apague esta linha."
 ENUMS = {
-    "cenario": ["garagem", "atelie", "infinito"],
+    "cenario": ["garagem", "atelie", "infinito", "nenhum"],
     "pose": ["parado", "pensando", "apontando", "comemorando", "andando"],
     "expressao": ["feliz", "orgulhoso", "triste", "surpreso", "cansado", "bravo", "pensativo", "animado"],
     "objeto": ["nenhum", "carro", "galao", "gato"],
@@ -104,6 +104,11 @@ def preparar_modelos(pasta: Path, plano: dict, fps: int = 30):
         for velho in pm.glob("*"):
             velho.unlink()
     (bl / "modelos.json").unlink(missing_ok=True)
+    try:   # ambiente do vídeo (ambiente.json): baixa o que ele pede e escreve blender/ambiente.json
+        import ambiente
+        ambiente.empacotar(pasta, plano, fps)
+    except Exception as e:   # noqa: BLE001
+        print(f"(ambiente não empacotado: {str(e)[:120]})", flush=True)
     if not plano.get("modelos"):
         return
     pm.mkdir(exist_ok=True)
@@ -111,7 +116,8 @@ def preparar_modelos(pasta: Path, plano: dict, fps: int = 30):
     for m in plano["modelos"]:
         nome = f"{m['id']}{Path(m['_arquivo_abs']).suffix.lower()}"
         shutil.copy(m["_arquivo_abs"], pm / nome)
-        lista.append({"id": m["id"], "arquivo": f"modelos/{nome}", "escala": m["escala"], "pos": m["pos"], "giro": m["giro"], "estilizar": m["estilizar"]})
+        lista.append({"id": m["id"], "arquivo": f"modelos/{nome}", "escala": m["escala"], "pos": m["pos"], "giro": m["giro"], "estilizar": m["estilizar"],
+                      "base": bool(m.get("base")), "altura": m.get("altura")})
     por_id = {m["id"]: m for m in plano["modelos"]}
     cenas = []
     for c in plano["cenas"]:

@@ -67,6 +67,14 @@
       <p class="help">Cada predefinição já traz personagem, roupa, cores e estilo de render (vinil, massinha ou desenho). Depois dá pra mudar cena por cena.</p>
       <div class="bzPres" id="bzPres"></div>
       <details class="bzDet" id="bzVisCriar"><summary>🎨 Personalizar personagem, cores e estilo <small class="mu">(opcional)</small></summary><div id="bzVedCriar"></div></details>
+      <h4 style="margin:14px 0 6px">🏠 Cenário: quem projeta o ambiente deste vídeo?</h4>
+      <p class="help">Todo vídeo ganha um cenário novo, feito para o roteiro: tamanho da sala, piso, parede, céu, luz e os objetos (materiais e modelos livres do Poly Haven e Poly Pizza). Escolha quem desenha esse cenário:</p>
+      <div class="modos m2" id="bzAmb">
+        <button class="modo on" data-bza="ollama"><b>🆓 IA do seu PC (Ollama) — padrão</b><small>Grátis, roda no seu computador. Bom, mas às vezes escolhe objetos que não combinam</small></button>
+        <button class="modo" data-bza="claude" id="bzAmbClaude"><b>🧠 Claude projeta o cenário</b><small>Cenário bem mais fiel ao roteiro. <u>Gasta tokens ou a sua assinatura</u> (só este passo, é curto)</small></button>
+      </div>
+      <div class="row"><label></label><label class="chk"><input type="checkbox" id="bzAmbNao" /> Não criar cenário novo (usar só a sala pronta antiga)</label></div>
+      <div class="row"><label></label><label class="chk"><input type="checkbox" id="bzBuscar" checked /> 🔎 Procurar modelos 3D novos para este tema <small class="mu">(objetos livres CC0 da internet, tipo geladeira, prateleira, árvore)</small></label></div>
       <div class="row"><label></label><button class="btn big go" id="bzFazer">🧊 Preparar as cenas</button><span class="mu" id="bzFazerNota">Roteiro → voz → plano de cenas (uns 2–4 min). Nada é renderizado ainda.</span></div>
     </div>
 
@@ -116,6 +124,7 @@
   // ------------------------------------------------------------------ criar
   async function bzOpcoes() {
     if (!BZ.op) BZ.op = await api("/api/blender/opcoes");
+    const ba = el("#bzAmbClaude"); if (ba && !BZ.op.claude) { ba.disabled = true; ba.title = "O app do Claude não foi encontrado neste PC"; ba.querySelector("small").textContent = "Precisa do app do Claude instalado neste PC (claude.ai/download)."; }
     const bc = el("#bzModoClaude"); if (bc && !BZ.op.claude) { bc.disabled = true; bc.title = "O app do Claude não foi encontrado neste PC"; bc.querySelector("small").textContent = "Precisa do app do Claude instalado neste PC (claude.ai/download)."; }
     const cores = (p) => ["roupa", "baixo", "calca", "pele", "cabelo"].map((k) => (p.personagem.cores || {})[k]).filter(Boolean);
     const estilo = (p) => ({ vinil: "Vinil brilhante", massinha: "Massinha fosca", desenho: "Desenho com contorno" })[(p.render || {}).material] || "Vinil brilhante";
@@ -131,6 +140,12 @@
       ? "Roteiro → voz → o Claude escreve a cena (vários minutos, gasta tokens) → quadros de teste. Nada é renderizado ainda."
       : "Roteiro → voz → plano de cenas (uns 2–4 min). Nada é renderizado ainda.";
   };
+  BZ.amb = "ollama";
+  el("#bzAmb").onclick = (e) => {
+    const b = e.target.closest("[data-bza]"); if (!b || b.disabled) return;
+    BZ.amb = b.dataset.bza; modosOn("#bzAmb", "bza", BZ.amb);
+  };
+  el("#bzAmbNao").onchange = () => { el("#bzAmb").style.opacity = el("#bzAmbNao").checked ? 0.4 : 1; };
   el("#bzTm").onclick = (e) => {
     const b = e.target.closest("[data-bztm]"); if (!b) return;
     BZ.tm = b.dataset.bztm; modosOn("#bzTm", "bztm", BZ.tm);
@@ -141,7 +156,7 @@
     if (BZ.tm === "tema" && !tema) return erroCampo("#bzTema", "Escreva o tema do vídeo");
     if (BZ.tm === "roteiro" && roteiro.split(/\s+/).length < 8) return erroCampo("#bzRoteiro", "Cole o roteiro (pelo menos algumas frases)");
     let r;
-    try { r = await jpost("/api/blender/criar", { modo: BZ.modo, tema: BZ.tm === "tema" ? tema : "", roteiro: BZ.tm === "roteiro" ? roteiro : "", duracao: BZ.dur, voz: el("#bzVoz").value, predefinicao: BZ.pre, ...(VED.criar && VED.criar.tocado ? { personagem: VED.criar.pers, render: VED.criar.render } : {}) }); }
+    try { r = await jpost("/api/blender/criar", { modo: BZ.modo, tema: BZ.tm === "tema" ? tema : "", roteiro: BZ.tm === "roteiro" ? roteiro : "", duracao: BZ.dur, voz: el("#bzVoz").value, predefinicao: BZ.pre, buscar_modelos: el("#bzBuscar").checked, ambiente: el("#bzAmbNao").checked ? "nenhum" : BZ.amb, ...(VED.criar && VED.criar.tocado ? { personagem: VED.criar.pers, render: VED.criar.render } : {}) }); }
     catch (e) { return toast("❌ " + errTxt(e), 6000); }
     BZ.cena = 1; BZ.velhas = new Set();
     await bzAbrir(r.pid);
@@ -250,7 +265,7 @@
     const e = BZ.e, n = BZ.cena, total = cenasDe(e).length;
     try {
       if (a === "editor") return openProject(e.pid);
-      if (a === "ver") return api(`/api/open/${e.pid}?what=final`, { method: "POST" });
+      if (a === "ver") return assistirAqui(e.pid, (e.pedido && e.pedido.tema) || e.nome || "Vídeo pronto", false);
       if (a === "pasta") return api(`/api/open/${e.pid}?what=folder`, { method: "POST" });
       if (a === "previas") await jpost(`/api/blender/${e.pid}/previas`, {});
       else if (a === "atualizar_todas") { await jpost(`/api/blender/${e.pid}/previas`, {}); BZ.velhas = new Set(); }

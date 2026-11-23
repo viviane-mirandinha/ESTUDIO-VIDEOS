@@ -90,9 +90,9 @@ def remoto(pasta: Path, extra: dict):
         if c.returncode:
             sys.exit(f"Falha ao enviar {arq.name}: {c.stderr[-300:]}")
     # modelos .glb importados (pasta blender/modelos + modelos.json)
-    if (pasta / "modelos.json").exists():
+    if (pasta / "modelos.json").exists() or (pasta / "ambiente.json").exists():
         ps_remoto(opts, alvo, f"New-Item -ItemType Directory -Force '{dir_r}\\modelos' | Out-Null\n")
-        for arq in [pasta / "modelos.json"] + sorted((pasta / "modelos").glob("*")):
+        for arq in [f for f in (pasta / "modelos.json", pasta / "ambiente.json") if f.exists()] + sorted((pasta / "modelos").glob("*")):
             destino = f"{alvo}:{dir_scp}/modelos/" if arq.parent.name == "modelos" else f"{alvo}:{dir_scp}/"
             c = subprocess.run(["scp", *opts, str(arq), destino], capture_output=True, text=True)
             if c.returncode:
